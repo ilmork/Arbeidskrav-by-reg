@@ -15,11 +15,7 @@ library(readxl)
 ```
 
 
-Laster inn dataene:
 
-```{r}
-load("knr.Rdata")
-```
 
 
 
