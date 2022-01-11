@@ -1,12 +1,25 @@
 ---
 title: "4. Pendling mellom de ulike kommunene i regionen."
+subtitle: "MSB 106 - Anvendt By- og Regionaløkonomi"
 output: html_notebook
 ---
 
-Token access: 
+```{r setup}
+suppressPackageStartupMessages({
+library(tidyverse)
+library(lubridate)
+library(PxWebApiData)
+library(readxl)
+})
+#knitr::opts_chunk$set(eval=FALSE)
+```
 
-test 1
 
+Laster inn dataene:
+
+```{r}
+load("knr.Rdata")
+```
 
 
 
