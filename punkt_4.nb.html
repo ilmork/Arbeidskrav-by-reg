@@ -231,11 +231,10 @@ library(readr)
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGFiXzAzMzIxIDwtIHJlYWRfZGVsaW0oXCJ+L0Rvd25sb2Fkcy8wMzMyMV8yMDIyMDExMS0xMzM4MDUuY3N2XCIsIFxuICAgIGRlbGltID0gXCI7XCIsIGVzY2FwZV9kb3VibGUgPSBGQUxTRSwgdHJpbV93cyA9IFRSVUUsIFxuICAgIHNraXAgPSAyKVxuXG5gYGAifQ== -->
-<pre class="r"><code>Tab_03321 &lt;- read_delim(&quot;~/Downloads/03321_20220111-133805.csv&quot;, 
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGFiXzAzMzIxIDwtIHJlYWRfZGVsaW0oXCIwMzMyMV8yMDIyMDExMS0xMzM4MDUuY3N2XCIsIFxuICAgIGRlbGltID0gXCI7XCIsIGVzY2FwZV9kb3VibGUgPSBGQUxTRSwgdHJpbV93cyA9IFRSVUUsIFxuICAgIHNraXAgPSAyKVxuYGBgIn0= -->
+<pre class="r"><code>Tab_03321 &lt;- read_delim(&quot;03321_20220111-133805.csv&quot;, 
     delim = &quot;;&quot;, escape_double = FALSE, trim_ws = TRUE, 
-    skip = 2)
-</code></pre>
+    skip = 2)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiUm93czogNjc2IENvbHVtbnM6IDI0XG7ilIDilIAgQ29sdW1uIHNwZWNpZmljYXRpb24g4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAXG5EZWxpbWl0ZXI6IFwiO1wiXG5jaHIgICgzKTogc3RhdGlzdGlra3ZhcmlhYmVsLCBhcmJlaWRzc3RlZHNrb21tdW5lLCBib3N0ZWRza29tbXVuZVxuZGJsICgyMSk6IDIwMDAsIDIwMDEsIDIwMDIsIDIwMDMsIDIwMDQsIDIwMDUsIDIwMDYsIDIwMDcsIDIwMDgsIDIwMDksIDIwMTAsIDIwMTEsIDIwMTIsIDIwMTMsIDIwMTQsIDIwMTUuLi5cblxu4oS5IFVzZSBgc3BlYygpYCB0byByZXRyaWV2ZSB0aGUgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbiBmb3IgdGhpcyBkYXRhLlxu4oS5IFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
 <pre><code>Rows: 676 Columns: 24
@@ -247,11 +246,14 @@ dbl (21): 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVmlldyhUYWJfMDMzMjEpXG5gYGAifQ== -->
+<pre class="r"><code>View(Tab_03321)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiNC4gUGVuZGxpbmcgbWVsbG9tIGRlIHVsaWtlIGtvbW11bmVuZSBpIHJlZ2lvbmVuLiIKc3VidGl0bGU6ICJNU0IgMTA2IC0gQW52ZW5kdCBCeS0gb2cgUmVnaW9uYWzDuGtvbm9taSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3Igc2V0dXB9CnN1cHByZXNzUGFja2FnZVN0YXJ0dXBNZXNzYWdlcyh7CmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKbGlicmFyeShQeFdlYkFwaURhdGEpCmxpYnJhcnkocmVhZHIpCn0pCiNrbml0cjo6b3B0c19jaHVuayRzZXQoZXZhbD1GQUxTRSkKYGBgCgpgYGB7cn0KVGFiXzAzMzIxIDwtIHJlYWRfZGVsaW0oIn4vRG93bmxvYWRzLzAzMzIxXzIwMjIwMTExLTEzMzgwNS5jc3YiLCAKICAgIGRlbGltID0gIjsiLCBlc2NhcGVfZG91YmxlID0gRkFMU0UsIHRyaW1fd3MgPSBUUlVFLCAKICAgIHNraXAgPSAyKQpgYGAKCgoKCgoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiNC4gUGVuZGxpbmcgbWVsbG9tIGRlIHVsaWtlIGtvbW11bmVuZSBpIHJlZ2lvbmVuLiIKc3VidGl0bGU6ICJNU0IgMTA2IC0gQW52ZW5kdCBCeS0gb2cgUmVnaW9uYWzDuGtvbm9taSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3Igc2V0dXB9CnN1cHByZXNzUGFja2FnZVN0YXJ0dXBNZXNzYWdlcyh7CmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKbGlicmFyeShQeFdlYkFwaURhdGEpCmxpYnJhcnkocmVhZHIpCn0pCiNrbml0cjo6b3B0c19jaHVuayRzZXQoZXZhbD1GQUxTRSkKYGBgCgoKYGBge3J9ClRhYl8wMzMyMSA8LSByZWFkX2RlbGltKCIwMzMyMV8yMDIyMDExMS0xMzM4MDUuY3N2IiwgCiAgICBkZWxpbSA9ICI7IiwgZXNjYXBlX2RvdWJsZSA9IEZBTFNFLCB0cmltX3dzID0gVFJVRSwgCiAgICBza2lwID0gMikKVmlldyhUYWJfMDMzMjEpCmBgYAoKCgoKCg==</div>
 
 
 

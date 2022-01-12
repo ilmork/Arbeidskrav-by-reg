@@ -1,0 +1,679 @@
+"03321: Sysselsatte (15-74 år) per 4. kvartal. Pendlingsstrømmer, etter statistikkvariabel, arbeidsstedskommune, bostedskommune og år"
+
+"statistikkvariabel";"arbeidsstedskommune";"bostedskommune";"2000";"2001";"2002";"2003";"2004";"2005";"2006";"2007";"2008";"2009";"2010";"2011";"2012";"2013";"2014";"2015";"2016";"2017";"2018";"2019";"2020"
+"Sysselsatte personer";"1106 Haugesund";"1106 Haugesund";10157;10148;10353;10353;10573;10650;11112;11760;11936;11947;12034;12295;12364;12416;12507;12126;12038;12102;12090;12086;11714
+"Sysselsatte personer";"1106 Haugesund";"1135 Sauda";60;57;56;53;54;38;43;51;42;38;36;34;41;41;37;31;34;49;38;32;31
+"Sysselsatte personer";"1106 Haugesund";"1145 Bokn";34;33;38;38;41;46;44;51;53;53;53;50;47;56;52;51;59;55;54;48;50
+"Sysselsatte personer";"1106 Haugesund";"1146 Tysvær";1234;1320;1369;1338;1416;1393;1502;1520;1539;1527;1566;1630;1635;1657;1645;1578;1560;1593;1560;1576;1540
+"Sysselsatte personer";"1106 Haugesund";"1149 Karmøy";4081;4179;4241;4270;4406;4456;4900;5015;5032;5005;5049;5101;5201;5215;5215;4984;4963;4985;4896;4991;4916
+"Sysselsatte personer";"1106 Haugesund";"1151 Utsira";2;5;5;7;8;2;4;7;7;7;10;9;6;7;5;8;6;5;5;3;4
+"Sysselsatte personer";"1106 Haugesund";"1154 Vindafjord (1965-2005)";201;224;206;204;211;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1106 Haugesund";"1159 Ølen (2002-2005)";97;116;103;94;102;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1106 Haugesund";"1160 Vindafjord";0;0;0;0;0;321;341;330;337;332;316;332;347;332;333;308;314;306;321;324;306
+"Sysselsatte personer";"1106 Haugesund";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;62
+"Sysselsatte personer";"1106 Haugesund";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;856
+"Sysselsatte personer";"1106 Haugesund";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;99
+"Sysselsatte personer";"1106 Haugesund";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;194
+"Sysselsatte personer";"1106 Haugesund";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;28
+"Sysselsatte personer";"1106 Haugesund";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;5
+"Sysselsatte personer";"1106 Haugesund";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;35
+"Sysselsatte personer";"1106 Haugesund";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;24
+"Sysselsatte personer";"1106 Haugesund";"1211 Etne (-2019)";56;49;57;53;63;65;75;79;77;72;70;76;86;90;76;54;47;57;60;64;0
+"Sysselsatte personer";"1106 Haugesund";"1216 Sveio (-2019)";680;736;756;755;744;788;828;844;855;824;816;888;904;876;865;805;813;833;811;854;0
+"Sysselsatte personer";"1106 Haugesund";"1219 Bømlo (1916-2019)";74;90;103;81;69;89;90;109;107;100;96;95;105;98;94;92;96;118;123;110;0
+"Sysselsatte personer";"1106 Haugesund";"1221 Stord (-2019)";67;80;95;75;97;130;149;180;174;122;126;123;132;157;167;144;173;193;196;196;0
+"Sysselsatte personer";"1106 Haugesund";"1222 Fitjar (-2019)";8;9;12;11;14;13;20;20;13;10;12;12;8;11;10;11;15;12;13;25;0
+"Sysselsatte personer";"1106 Haugesund";"1223 Tysnes (-2019)";3;1;4;3;3;4;5;5;8;5;2;4;4;3;4;2;1;2;4;5;0
+"Sysselsatte personer";"1106 Haugesund";"1224 Kvinnherad (-2019)";30;38;43;27;32;30;38;36;31;36;35;36;38;36;36;33;32;39;39;34;0
+"Sysselsatte personer";"1106 Haugesund";"1228 Odda (1913-2019)";27;26;33;19;23;26;26;24;43;42;22;22;24;23;22;20;14;40;23;21;0
+"Sysselsatte personer";"1106 Haugesund";"1231 Ullensvang (1977-2019)";6;6;9;3;7;9;9;9;9;8;6;6;9;9;4;5;2;1;2;4;0
+"Sysselsatte personer";"1135 Sauda";"1106 Haugesund";5;5;3;2;6;7;6;18;7;13;8;13;9;13;10;3;2;3;6;7;11
+"Sysselsatte personer";"1135 Sauda";"1135 Sauda";1952;1898;1887;1921;1917;1855;1919;1978;1999;2011;2005;1971;1933;1884;1907;1846;1829;1820;1797;1805;1789
+"Sysselsatte personer";"1135 Sauda";"1145 Bokn";0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1135 Sauda";"1146 Tysvær";2;0;0;1;1;1;1;4;2;2;3;4;3;5;7;4;2;1;1;1;1
+"Sysselsatte personer";"1135 Sauda";"1149 Karmøy";3;3;6;5;4;5;2;0;2;3;7;6;6;9;13;5;6;4;5;6;9
+"Sysselsatte personer";"1135 Sauda";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1135 Sauda";"1154 Vindafjord (1965-2005)";11;12;7;7;9;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1135 Sauda";"1159 Ølen (2002-2005)";1;2;1;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1135 Sauda";"1160 Vindafjord";0;0;0;0;0;13;13;16;10;15;15;13;13;11;12;6;7;7;6;8;10
+"Sysselsatte personer";"1135 Sauda";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"1135 Sauda";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;2
+"Sysselsatte personer";"1135 Sauda";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1135 Sauda";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"1135 Sauda";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1135 Sauda";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1135 Sauda";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"1135 Sauda";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;4
+"Sysselsatte personer";"1135 Sauda";"1211 Etne (-2019)";0;0;1;2;0;4;0;0;1;1;3;2;3;3;2;2;1;1;1;1;0
+"Sysselsatte personer";"1135 Sauda";"1216 Sveio (-2019)";1;1;0;0;0;0;1;0;0;0;0;2;3;2;1;0;0;0;0;2;0
+"Sysselsatte personer";"1135 Sauda";"1219 Bømlo (1916-2019)";0;0;0;0;0;0;0;1;0;0;1;0;1;0;0;1;1;0;0;0;0
+"Sysselsatte personer";"1135 Sauda";"1221 Stord (-2019)";0;0;0;0;0;1;0;0;1;1;0;0;0;0;0;0;0;0;0;1;0
+"Sysselsatte personer";"1135 Sauda";"1222 Fitjar (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1135 Sauda";"1223 Tysnes (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1135 Sauda";"1224 Kvinnherad (-2019)";0;0;1;2;2;6;2;2;2;5;5;4;4;3;1;2;2;1;1;1;0
+"Sysselsatte personer";"1135 Sauda";"1228 Odda (1913-2019)";0;0;1;1;3;1;1;1;2;2;1;3;5;5;5;5;5;4;3;2;0
+"Sysselsatte personer";"1135 Sauda";"1231 Ullensvang (1977-2019)";0;0;0;0;0;0;0;0;1;0;0;1;0;0;0;1;1;1;1;1;0
+"Sysselsatte personer";"1145 Bokn";"1106 Haugesund";15;24;19;27;21;21;26;22;26;27;23;22;28;32;30;18;28;27;23;19;22
+"Sysselsatte personer";"1145 Bokn";"1135 Sauda";0;0;0;0;0;0;0;0;0;1;1;0;1;2;2;1;1;0;0;0;0
+"Sysselsatte personer";"1145 Bokn";"1145 Bokn";256;235;222;211;200;199;213;208;212;205;200;206;208;213;223;217;216;217;204;229;223
+"Sysselsatte personer";"1145 Bokn";"1146 Tysvær";23;26;22;24;30;27;27;26;27;25;27;30;35;33;30;30;33;28;24;36;33
+"Sysselsatte personer";"1145 Bokn";"1149 Karmøy";14;18;18;19;9;8;8;13;11;12;18;19;30;30;32;26;18;23;28;32;31
+"Sysselsatte personer";"1145 Bokn";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1145 Bokn";"1154 Vindafjord (1965-2005)";3;2;1;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1145 Bokn";"1159 Ølen (2002-2005)";0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1145 Bokn";"1160 Vindafjord";0;0;0;0;0;3;3;3;2;1;1;0;0;0;0;1;1;1;2;1;1
+"Sysselsatte personer";"1145 Bokn";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1145 Bokn";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"1145 Bokn";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1145 Bokn";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1145 Bokn";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1145 Bokn";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1145 Bokn";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1145 Bokn";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1145 Bokn";"1211 Etne (-2019)";0;0;0;0;0;0;1;0;0;1;1;0;0;2;2;1;1;1;1;1;0
+"Sysselsatte personer";"1145 Bokn";"1216 Sveio (-2019)";3;4;5;6;4;5;5;5;6;6;7;3;5;4;4;3;3;3;0;1;0
+"Sysselsatte personer";"1145 Bokn";"1219 Bømlo (1916-2019)";0;0;0;0;0;0;0;1;1;1;1;2;2;1;1;1;1;2;1;0;0
+"Sysselsatte personer";"1145 Bokn";"1221 Stord (-2019)";0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1145 Bokn";"1222 Fitjar (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1145 Bokn";"1223 Tysnes (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1145 Bokn";"1224 Kvinnherad (-2019)";0;0;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1145 Bokn";"1228 Odda (1913-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1145 Bokn";"1231 Ullensvang (1977-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1146 Tysvær";"1106 Haugesund";593;595;637;646;671;720;755;777;803;811;874;872;894;883;892;865;867;948;954;991;1029
+"Sysselsatte personer";"1146 Tysvær";"1135 Sauda";2;3;2;4;10;7;4;5;7;3;2;1;1;2;3;1;1;2;2;3;2
+"Sysselsatte personer";"1146 Tysvær";"1145 Bokn";38;44;49;50;57;50;48;59;49;47;50;48;48;47;46;40;38;40;46;43;41
+"Sysselsatte personer";"1146 Tysvær";"1146 Tysvær";2165;2138;2107;2182;2182;2115;2193;2274;2325;2342;2324;2525;2394;2333;2381;2333;2306;2306;2309;2316;2270
+"Sysselsatte personer";"1146 Tysvær";"1149 Karmøy";351;348;356;344;373;391;429;516;488;516;504;524;569;555;574;572;599;650;651;679;712
+"Sysselsatte personer";"1146 Tysvær";"1151 Utsira";0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;2;2
+"Sysselsatte personer";"1146 Tysvær";"1154 Vindafjord (1965-2005)";97;98;96;92;91;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1146 Tysvær";"1159 Ølen (2002-2005)";41;29;39;41;36;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1146 Tysvær";"1160 Vindafjord";0;0;0;0;0;130;149;146;128;139;141;154;169;157;153;147;141;160;215;220;238
+"Sysselsatte personer";"1146 Tysvær";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;31
+"Sysselsatte personer";"1146 Tysvær";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;145
+"Sysselsatte personer";"1146 Tysvær";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;10
+"Sysselsatte personer";"1146 Tysvær";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;33
+"Sysselsatte personer";"1146 Tysvær";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;6
+"Sysselsatte personer";"1146 Tysvær";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1146 Tysvær";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;9
+"Sysselsatte personer";"1146 Tysvær";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;5
+"Sysselsatte personer";"1146 Tysvær";"1211 Etne (-2019)";20;22;23;20;20;22;24;20;21;18;18;23;21;19;20;20;24;23;32;32;0
+"Sysselsatte personer";"1146 Tysvær";"1216 Sveio (-2019)";71;85;73;81;102;97;97;101;95;106;121;126;131;112;120;129;128;143;143;137;0
+"Sysselsatte personer";"1146 Tysvær";"1219 Bømlo (1916-2019)";4;6;8;9;9;6;4;5;8;12;9;5;3;5;9;9;9;12;12;14;0
+"Sysselsatte personer";"1146 Tysvær";"1221 Stord (-2019)";9;4;6;4;3;9;17;14;10;9;22;21;20;20;16;12;12;26;21;32;0
+"Sysselsatte personer";"1146 Tysvær";"1222 Fitjar (-2019)";2;2;3;1;3;2;1;1;0;0;0;0;1;2;1;3;4;3;2;2;0
+"Sysselsatte personer";"1146 Tysvær";"1223 Tysnes (-2019)";0;0;1;0;1;0;1;0;1;2;1;0;0;1;1;0;0;1;1;0;0
+"Sysselsatte personer";"1146 Tysvær";"1224 Kvinnherad (-2019)";2;2;4;3;4;2;1;2;1;2;5;7;6;8;5;3;4;2;2;6;0
+"Sysselsatte personer";"1146 Tysvær";"1228 Odda (1913-2019)";3;1;3;4;10;6;5;2;2;4;5;2;4;3;4;3;3;4;5;1;0
+"Sysselsatte personer";"1146 Tysvær";"1231 Ullensvang (1977-2019)";0;0;0;1;1;1;0;1;2;2;0;0;1;1;1;3;2;1;1;0;0
+"Sysselsatte personer";"1149 Karmøy";"1106 Haugesund";1664;1705;1732;1748;1762;1778;1895;2048;2065;1908;1884;1991;2077;2221;2269;2234;2327;2405;2496;2545;2586
+"Sysselsatte personer";"1149 Karmøy";"1135 Sauda";4;5;2;2;5;7;6;9;5;9;13;16;13;16;15;14;8;7;8;7;6
+"Sysselsatte personer";"1149 Karmøy";"1145 Bokn";15;8;8;8;11;11;8;14;9;9;8;11;11;17;22;25;27;31;31;35;41
+"Sysselsatte personer";"1149 Karmøy";"1146 Tysvær";307;319;350;350;369;392;397;448;447;415;427;424;421;467;538;520;540;565;583;597;645
+"Sysselsatte personer";"1149 Karmøy";"1149 Karmøy";10592;10518;10513;10730;10744;10877;11107;11771;11966;11612;11444;11466;11598;11721;11858;11539;11602;11799;11759;11701;11637
+"Sysselsatte personer";"1149 Karmøy";"1151 Utsira";2;1;0;4;1;0;1;3;2;3;1;1;1;3;1;3;3;2;1;3;3
+"Sysselsatte personer";"1149 Karmøy";"1154 Vindafjord (1965-2005)";49;49;55;59;56;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1149 Karmøy";"1159 Ølen (2002-2005)";19;18;19;17;24;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1149 Karmøy";"1160 Vindafjord";0;0;0;0;0;74;73;87;84;76;72;88;78;73;83;73;82;85;97;95;103
+"Sysselsatte personer";"1149 Karmøy";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;25
+"Sysselsatte personer";"1149 Karmøy";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;195
+"Sysselsatte personer";"1149 Karmøy";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;28
+"Sysselsatte personer";"1149 Karmøy";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;76
+"Sysselsatte personer";"1149 Karmøy";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;10
+"Sysselsatte personer";"1149 Karmøy";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;6
+"Sysselsatte personer";"1149 Karmøy";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;14
+"Sysselsatte personer";"1149 Karmøy";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;9
+"Sysselsatte personer";"1149 Karmøy";"1211 Etne (-2019)";11;12;9;13;9;11;11;16;15;19;20;19;16;22;22;18;17;22;22;21;0
+"Sysselsatte personer";"1149 Karmøy";"1216 Sveio (-2019)";121;112;111;109;126;125;128;133;127;112;140;135;145;155;159;156;176;180;178;188;0
+"Sysselsatte personer";"1149 Karmøy";"1219 Bømlo (1916-2019)";25;30;25;19;21;23;52;70;33;33;37;33;34;29;37;35;32;36;41;24;0
+"Sysselsatte personer";"1149 Karmøy";"1221 Stord (-2019)";15;12;12;7;9;18;15;22;31;43;40;53;44;42;33;51;55;66;65;90;0
+"Sysselsatte personer";"1149 Karmøy";"1222 Fitjar (-2019)";2;2;1;2;1;1;1;3;9;7;7;10;13;10;10;6;7;6;10;13;0
+"Sysselsatte personer";"1149 Karmøy";"1223 Tysnes (-2019)";3;2;2;2;4;5;3;7;4;4;8;8;5;7;7;7;6;8;6;4;0
+"Sysselsatte personer";"1149 Karmøy";"1224 Kvinnherad (-2019)";23;26;24;24;25;22;13;37;13;11;13;17;18;14;11;11;15;17;17;14;0
+"Sysselsatte personer";"1149 Karmøy";"1228 Odda (1913-2019)";1;2;0;3;6;4;4;1;1;3;5;3;7;6;6;1;3;6;6;7;0
+"Sysselsatte personer";"1149 Karmøy";"1231 Ullensvang (1977-2019)";2;3;1;1;3;3;2;1;2;1;2;2;2;2;2;3;3;2;3;2;0
+"Sysselsatte personer";"1151 Utsira";"1106 Haugesund";4;4;5;1;0;3;3;1;0;2;2;2;1;1;1;4;3;5;3;2;3
+"Sysselsatte personer";"1151 Utsira";"1135 Sauda";0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"1145 Bokn";1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"1146 Tysvær";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+"Sysselsatte personer";"1151 Utsira";"1149 Karmøy";7;7;2;3;3;1;1;3;1;4;3;3;1;2;1;1;1;2;2;2;2
+"Sysselsatte personer";"1151 Utsira";"1151 Utsira";98;102;98;87;88;99;102;97;104;92;97;102;96;94;98;88;89;90;82;83;85
+"Sysselsatte personer";"1151 Utsira";"1154 Vindafjord (1965-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"1159 Ølen (2002-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"1160 Vindafjord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"1211 Etne (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"1216 Sveio (-2019)";0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"1219 Bømlo (1916-2019)";0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"1221 Stord (-2019)";1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"1222 Fitjar (-2019)";0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"1223 Tysnes (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"1224 Kvinnherad (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"1228 Odda (1913-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1151 Utsira";"1231 Ullensvang (1977-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"1106 Haugesund";61;70;74;74;80;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"1135 Sauda";11;7;10;10;9;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"1145 Bokn";2;3;3;3;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"1146 Tysvær";72;95;95;88;92;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"1149 Karmøy";29;32;25;30;37;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"1154 Vindafjord (1965-2005)";1616;1581;1562;1537;1521;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"1159 Ølen (2002-2005)";145;144;161;188;188;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"1160 Vindafjord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"1211 Etne (-2019)";59;66;56;51;61;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"1216 Sveio (-2019)";9;10;12;12;11;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"1219 Bømlo (1916-2019)";2;2;3;0;7;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"1221 Stord (-2019)";1;0;1;3;5;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"1222 Fitjar (-2019)";0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"1223 Tysnes (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"1224 Kvinnherad (-2019)";0;0;0;3;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"1228 Odda (1913-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1154 Vindafjord (1965-2005)";"1231 Ullensvang (1977-2019)";2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"1106 Haugesund";60;65;58;53;58;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"1135 Sauda";2;2;2;2;14;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"1145 Bokn";1;1;0;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"1146 Tysvær";32;42;32;30;31;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"1149 Karmøy";27;26;38;37;34;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"1154 Vindafjord (1965-2005)";232;221;244;267;274;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"1159 Ølen (2002-2005)";1068;1010;1030;1116;1119;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"1160 Vindafjord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"1211 Etne (-2019)";196;198;205;207;214;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"1216 Sveio (-2019)";13;16;19;16;17;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"1219 Bømlo (1916-2019)";3;6;5;3;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"1221 Stord (-2019)";11;15;13;13;11;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"1222 Fitjar (-2019)";4;3;3;4;5;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"1223 Tysnes (-2019)";0;2;2;2;3;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"1224 Kvinnherad (-2019)";14;13;9;9;11;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"1228 Odda (1913-2019)";2;0;4;1;5;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1159 Ølen (2002-2005)";"1231 Ullensvang (1977-2019)";3;2;0;0;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1160 Vindafjord";"1106 Haugesund";0;0;0;0;0;149;156;173;217;215;220;224;224;235;265;274;255;253;252;251;264
+"Sysselsatte personer";"1160 Vindafjord";"1135 Sauda";0;0;0;0;0;23;25;22;11;7;10;9;12;19;19;23;21;23;26;23;27
+"Sysselsatte personer";"1160 Vindafjord";"1145 Bokn";0;0;0;0;0;6;5;3;12;14;18;18;20;9;12;14;15;16;18;21;16
+"Sysselsatte personer";"1160 Vindafjord";"1146 Tysvær";0;0;0;0;0;117;135;139;212;210;225;244;242;230;241;253;266;265;243;250;267
+"Sysselsatte personer";"1160 Vindafjord";"1149 Karmøy";0;0;0;0;0;74;89;102;179;191;202;215;193;185;199;187;172;184;194;214;218
+"Sysselsatte personer";"1160 Vindafjord";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+"Sysselsatte personer";"1160 Vindafjord";"1154 Vindafjord (1965-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1160 Vindafjord";"1159 Ølen (2002-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1160 Vindafjord";"1160 Vindafjord";0;0;0;0;0;3120;3167;2970;3194;3182;3241;3331;3335;3412;3478;3452;3409;3407;3333;3295;3231
+"Sysselsatte personer";"1160 Vindafjord";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;389
+"Sysselsatte personer";"1160 Vindafjord";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;48
+"Sysselsatte personer";"1160 Vindafjord";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;10
+"Sysselsatte personer";"1160 Vindafjord";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;35
+"Sysselsatte personer";"1160 Vindafjord";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;5
+"Sysselsatte personer";"1160 Vindafjord";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"1160 Vindafjord";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;18
+"Sysselsatte personer";"1160 Vindafjord";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;9
+"Sysselsatte personer";"1160 Vindafjord";"1211 Etne (-2019)";0;0;0;0;0;275;280;304;343;344;338;353;391;384;408;372;366;372;371;381;0
+"Sysselsatte personer";"1160 Vindafjord";"1216 Sveio (-2019)";0;0;0;0;0;33;32;33;37;38;41;51;59;77;82;84;80;85;59;59;0
+"Sysselsatte personer";"1160 Vindafjord";"1219 Bømlo (1916-2019)";0;0;0;0;0;8;10;5;6;12;15;17;21;14;14;9;5;5;7;13;0
+"Sysselsatte personer";"1160 Vindafjord";"1221 Stord (-2019)";0;0;0;0;0;20;5;13;12;18;20;33;26;25;22;16;21;23;22;29;0
+"Sysselsatte personer";"1160 Vindafjord";"1222 Fitjar (-2019)";0;0;0;0;0;3;3;3;3;3;6;5;6;4;1;3;3;5;5;5;0
+"Sysselsatte personer";"1160 Vindafjord";"1223 Tysnes (-2019)";0;0;0;0;0;3;2;1;2;3;1;1;0;0;0;0;0;0;0;1;0
+"Sysselsatte personer";"1160 Vindafjord";"1224 Kvinnherad (-2019)";0;0;0;0;0;16;15;12;12;9;10;17;19;24;19;16;18;23;18;23;0
+"Sysselsatte personer";"1160 Vindafjord";"1228 Odda (1913-2019)";0;0;0;0;0;3;5;6;9;9;10;9;11;11;9;7;5;6;9;7;0
+"Sysselsatte personer";"1160 Vindafjord";"1231 Ullensvang (1977-2019)";0;0;0;0;0;2;1;2;2;3;0;1;1;2;1;0;2;1;1;1;0
+"Sysselsatte personer";"4611 Etne";"1106 Haugesund";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;26
+"Sysselsatte personer";"4611 Etne";"1135 Sauda";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;2
+"Sysselsatte personer";"4611 Etne";"1145 Bokn";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4611 Etne";"1146 Tysvær";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;6
+"Sysselsatte personer";"4611 Etne";"1149 Karmøy";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;9
+"Sysselsatte personer";"4611 Etne";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4611 Etne";"1154 Vindafjord (1965-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4611 Etne";"1159 Ølen (2002-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4611 Etne";"1160 Vindafjord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;166
+"Sysselsatte personer";"4611 Etne";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1306
+"Sysselsatte personer";"4611 Etne";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;6
+"Sysselsatte personer";"4611 Etne";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"4611 Etne";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;11
+"Sysselsatte personer";"4611 Etne";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4611 Etne";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"4611 Etne";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;32
+"Sysselsatte personer";"4611 Etne";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;10
+"Sysselsatte personer";"4611 Etne";"1211 Etne (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4611 Etne";"1216 Sveio (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4611 Etne";"1219 Bømlo (1916-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4611 Etne";"1221 Stord (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4611 Etne";"1222 Fitjar (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4611 Etne";"1223 Tysnes (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4611 Etne";"1224 Kvinnherad (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4611 Etne";"1228 Odda (1913-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4611 Etne";"1231 Ullensvang (1977-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4612 Sveio";"1106 Haugesund";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;203
+"Sysselsatte personer";"4612 Sveio";"1135 Sauda";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"4612 Sveio";"1145 Bokn";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"4612 Sveio";"1146 Tysvær";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;43
+"Sysselsatte personer";"4612 Sveio";"1149 Karmøy";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;57
+"Sysselsatte personer";"4612 Sveio";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4612 Sveio";"1154 Vindafjord (1965-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4612 Sveio";"1159 Ølen (2002-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4612 Sveio";"1160 Vindafjord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;17
+"Sysselsatte personer";"4612 Sveio";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"4612 Sveio";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1055
+"Sysselsatte personer";"4612 Sveio";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;35
+"Sysselsatte personer";"4612 Sveio";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;52
+"Sysselsatte personer";"4612 Sveio";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;8
+"Sysselsatte personer";"4612 Sveio";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;3
+"Sysselsatte personer";"4612 Sveio";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4612 Sveio";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4612 Sveio";"1211 Etne (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4612 Sveio";"1216 Sveio (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4612 Sveio";"1219 Bømlo (1916-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4612 Sveio";"1221 Stord (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4612 Sveio";"1222 Fitjar (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4612 Sveio";"1223 Tysnes (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4612 Sveio";"1224 Kvinnherad (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4612 Sveio";"1228 Odda (1913-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4612 Sveio";"1231 Ullensvang (1977-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4613 Bømlo";"1106 Haugesund";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;51
+"Sysselsatte personer";"4613 Bømlo";"1135 Sauda";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4613 Bømlo";"1145 Bokn";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4613 Bømlo";"1146 Tysvær";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;9
+"Sysselsatte personer";"4613 Bømlo";"1149 Karmøy";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;23
+"Sysselsatte personer";"4613 Bømlo";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4613 Bømlo";"1154 Vindafjord (1965-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4613 Bømlo";"1159 Ølen (2002-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4613 Bømlo";"1160 Vindafjord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;4
+"Sysselsatte personer";"4613 Bømlo";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4613 Bømlo";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;27
+"Sysselsatte personer";"4613 Bømlo";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;4277
+"Sysselsatte personer";"4613 Bømlo";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;280
+"Sysselsatte personer";"4613 Bømlo";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;20
+"Sysselsatte personer";"4613 Bømlo";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;4
+"Sysselsatte personer";"4613 Bømlo";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;24
+"Sysselsatte personer";"4613 Bømlo";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"4613 Bømlo";"1211 Etne (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4613 Bømlo";"1216 Sveio (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4613 Bømlo";"1219 Bømlo (1916-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4613 Bømlo";"1221 Stord (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4613 Bømlo";"1222 Fitjar (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4613 Bømlo";"1223 Tysnes (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4613 Bømlo";"1224 Kvinnherad (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4613 Bømlo";"1228 Odda (1913-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4613 Bømlo";"1231 Ullensvang (1977-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4614 Stord";"1106 Haugesund";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;108
+"Sysselsatte personer";"4614 Stord";"1135 Sauda";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"4614 Stord";"1145 Bokn";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;2
+"Sysselsatte personer";"4614 Stord";"1146 Tysvær";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;23
+"Sysselsatte personer";"4614 Stord";"1149 Karmøy";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;33
+"Sysselsatte personer";"4614 Stord";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4614 Stord";"1154 Vindafjord (1965-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4614 Stord";"1159 Ølen (2002-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4614 Stord";"1160 Vindafjord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;14
+"Sysselsatte personer";"4614 Stord";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;11
+"Sysselsatte personer";"4614 Stord";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;137
+"Sysselsatte personer";"4614 Stord";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;623
+"Sysselsatte personer";"4614 Stord";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;7314
+"Sysselsatte personer";"4614 Stord";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;472
+"Sysselsatte personer";"4614 Stord";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;66
+"Sysselsatte personer";"4614 Stord";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;178
+"Sysselsatte personer";"4614 Stord";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;7
+"Sysselsatte personer";"4614 Stord";"1211 Etne (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4614 Stord";"1216 Sveio (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4614 Stord";"1219 Bømlo (1916-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4614 Stord";"1221 Stord (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4614 Stord";"1222 Fitjar (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4614 Stord";"1223 Tysnes (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4614 Stord";"1224 Kvinnherad (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4614 Stord";"1228 Odda (1913-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4614 Stord";"1231 Ullensvang (1977-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4615 Fitjar";"1106 Haugesund";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"4615 Fitjar";"1135 Sauda";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4615 Fitjar";"1145 Bokn";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4615 Fitjar";"1146 Tysvær";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4615 Fitjar";"1149 Karmøy";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4615 Fitjar";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4615 Fitjar";"1154 Vindafjord (1965-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4615 Fitjar";"1159 Ølen (2002-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4615 Fitjar";"1160 Vindafjord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4615 Fitjar";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4615 Fitjar";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;2
+"Sysselsatte personer";"4615 Fitjar";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;25
+"Sysselsatte personer";"4615 Fitjar";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;169
+"Sysselsatte personer";"4615 Fitjar";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;819
+"Sysselsatte personer";"4615 Fitjar";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;5
+"Sysselsatte personer";"4615 Fitjar";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;4
+"Sysselsatte personer";"4615 Fitjar";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"4615 Fitjar";"1211 Etne (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4615 Fitjar";"1216 Sveio (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4615 Fitjar";"1219 Bømlo (1916-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4615 Fitjar";"1221 Stord (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4615 Fitjar";"1222 Fitjar (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4615 Fitjar";"1223 Tysnes (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4615 Fitjar";"1224 Kvinnherad (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4615 Fitjar";"1228 Odda (1913-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4615 Fitjar";"1231 Ullensvang (1977-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4616 Tysnes";"1106 Haugesund";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;4
+"Sysselsatte personer";"4616 Tysnes";"1135 Sauda";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4616 Tysnes";"1145 Bokn";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4616 Tysnes";"1146 Tysvær";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4616 Tysnes";"1149 Karmøy";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;9
+"Sysselsatte personer";"4616 Tysnes";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4616 Tysnes";"1154 Vindafjord (1965-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4616 Tysnes";"1159 Ølen (2002-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4616 Tysnes";"1160 Vindafjord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4616 Tysnes";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;4
+"Sysselsatte personer";"4616 Tysnes";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;6
+"Sysselsatte personer";"4616 Tysnes";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;7
+"Sysselsatte personer";"4616 Tysnes";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;32
+"Sysselsatte personer";"4616 Tysnes";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;5
+"Sysselsatte personer";"4616 Tysnes";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;948
+"Sysselsatte personer";"4616 Tysnes";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;36
+"Sysselsatte personer";"4616 Tysnes";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"4616 Tysnes";"1211 Etne (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4616 Tysnes";"1216 Sveio (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4616 Tysnes";"1219 Bømlo (1916-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4616 Tysnes";"1221 Stord (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4616 Tysnes";"1222 Fitjar (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4616 Tysnes";"1223 Tysnes (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4616 Tysnes";"1224 Kvinnherad (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4616 Tysnes";"1228 Odda (1913-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4616 Tysnes";"1231 Ullensvang (1977-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4617 Kvinnherad";"1106 Haugesund";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;15
+"Sysselsatte personer";"4617 Kvinnherad";"1135 Sauda";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;2
+"Sysselsatte personer";"4617 Kvinnherad";"1145 Bokn";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"4617 Kvinnherad";"1146 Tysvær";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4617 Kvinnherad";"1149 Karmøy";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;6
+"Sysselsatte personer";"4617 Kvinnherad";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4617 Kvinnherad";"1154 Vindafjord (1965-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4617 Kvinnherad";"1159 Ølen (2002-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4617 Kvinnherad";"1160 Vindafjord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;11
+"Sysselsatte personer";"4617 Kvinnherad";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;28
+"Sysselsatte personer";"4617 Kvinnherad";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"4617 Kvinnherad";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;8
+"Sysselsatte personer";"4617 Kvinnherad";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;33
+"Sysselsatte personer";"4617 Kvinnherad";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;2
+"Sysselsatte personer";"4617 Kvinnherad";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;24
+"Sysselsatte personer";"4617 Kvinnherad";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;5270
+"Sysselsatte personer";"4617 Kvinnherad";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;53
+"Sysselsatte personer";"4617 Kvinnherad";"1211 Etne (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4617 Kvinnherad";"1216 Sveio (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4617 Kvinnherad";"1219 Bømlo (1916-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4617 Kvinnherad";"1221 Stord (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4617 Kvinnherad";"1222 Fitjar (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4617 Kvinnherad";"1223 Tysnes (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4617 Kvinnherad";"1224 Kvinnherad (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4617 Kvinnherad";"1228 Odda (1913-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4617 Kvinnherad";"1231 Ullensvang (1977-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4618 Ullensvang";"1106 Haugesund";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;12
+"Sysselsatte personer";"4618 Ullensvang";"1135 Sauda";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;2
+"Sysselsatte personer";"4618 Ullensvang";"1145 Bokn";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4618 Ullensvang";"1146 Tysvær";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"4618 Ullensvang";"1149 Karmøy";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;7
+"Sysselsatte personer";"4618 Ullensvang";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4618 Ullensvang";"1154 Vindafjord (1965-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4618 Ullensvang";"1159 Ølen (2002-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4618 Ullensvang";"1160 Vindafjord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;11
+"Sysselsatte personer";"4618 Ullensvang";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;22
+"Sysselsatte personer";"4618 Ullensvang";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"4618 Ullensvang";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;3
+"Sysselsatte personer";"4618 Ullensvang";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;9
+"Sysselsatte personer";"4618 Ullensvang";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4618 Ullensvang";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+"Sysselsatte personer";"4618 Ullensvang";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;83
+"Sysselsatte personer";"4618 Ullensvang";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;4711
+"Sysselsatte personer";"4618 Ullensvang";"1211 Etne (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4618 Ullensvang";"1216 Sveio (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4618 Ullensvang";"1219 Bømlo (1916-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4618 Ullensvang";"1221 Stord (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4618 Ullensvang";"1222 Fitjar (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4618 Ullensvang";"1223 Tysnes (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4618 Ullensvang";"1224 Kvinnherad (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4618 Ullensvang";"1228 Odda (1913-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"4618 Ullensvang";"1231 Ullensvang (1977-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1211 Etne (-2019)";"1106 Haugesund";11;7;9;10;14;23;19;23;32;35;23;43;22;16;14;18;21;23;23;24;0
+"Sysselsatte personer";"1211 Etne (-2019)";"1135 Sauda";8;5;6;3;6;2;6;2;2;6;4;5;1;1;2;7;8;8;5;3;0
+"Sysselsatte personer";"1211 Etne (-2019)";"1145 Bokn";0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1211 Etne (-2019)";"1146 Tysvær";5;5;6;6;9;8;13;11;10;15;9;19;16;13;15;14;18;11;9;13;0
+"Sysselsatte personer";"1211 Etne (-2019)";"1149 Karmøy";6;12;8;8;16;8;8;7;11;17;14;23;13;15;17;22;15;21;16;13;0
+"Sysselsatte personer";"1211 Etne (-2019)";"1151 Utsira";0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1211 Etne (-2019)";"1154 Vindafjord (1965-2005)";21;24;25;24;24;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1211 Etne (-2019)";"1159 Ølen (2002-2005)";49;101;93;66;74;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1211 Etne (-2019)";"1160 Vindafjord";0;0;0;0;0;83;102;114;107;127;120;151;141;138;149;150;137;149;145;151;0
+"Sysselsatte personer";"1211 Etne (-2019)";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1211 Etne (-2019)";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1211 Etne (-2019)";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1211 Etne (-2019)";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1211 Etne (-2019)";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1211 Etne (-2019)";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1211 Etne (-2019)";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1211 Etne (-2019)";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1211 Etne (-2019)";"1211 Etne (-2019)";1317;1286;1278;1332;1292;1263;1347;1353;1394;1384;1356;1427;1384;1375;1406;1380;1372;1320;1314;1348;0
+"Sysselsatte personer";"1211 Etne (-2019)";"1216 Sveio (-2019)";2;4;3;1;4;2;3;4;8;10;8;12;7;6;4;5;9;13;6;8;0
+"Sysselsatte personer";"1211 Etne (-2019)";"1219 Bømlo (1916-2019)";2;2;2;3;1;2;4;3;3;1;1;0;0;1;0;2;1;1;0;1;0
+"Sysselsatte personer";"1211 Etne (-2019)";"1221 Stord (-2019)";1;3;4;2;4;8;8;8;8;7;11;6;4;4;5;13;11;18;8;9;0
+"Sysselsatte personer";"1211 Etne (-2019)";"1222 Fitjar (-2019)";1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;2;2;0;2;0;0
+"Sysselsatte personer";"1211 Etne (-2019)";"1223 Tysnes (-2019)";0;0;0;0;0;1;1;1;0;1;1;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1211 Etne (-2019)";"1224 Kvinnherad (-2019)";21;16;16;24;25;25;19;18;18;14;10;15;16;16;20;23;21;27;32;32;0
+"Sysselsatte personer";"1211 Etne (-2019)";"1228 Odda (1913-2019)";0;5;4;4;6;6;9;7;7;7;13;11;10;9;14;8;10;15;15;7;0
+"Sysselsatte personer";"1211 Etne (-2019)";"1231 Ullensvang (1977-2019)";1;2;2;1;2;4;2;0;0;0;1;3;1;2;1;0;0;2;2;1;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"1106 Haugesund";97;95;102;97;106;96;104;131;138;137;130;146;158;178;203;209;211;210;217;214;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"1135 Sauda";0;0;0;0;0;0;0;0;0;0;2;0;0;0;0;1;0;0;0;1;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"1145 Bokn";0;0;0;1;1;1;1;2;2;3;1;0;0;0;0;0;1;2;1;1;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"1146 Tysvær";19;20;16;14;16;19;15;22;26;33;32;35;34;34;38;42;38;41;37;45;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"1149 Karmøy";20;23;20;14;25;28;30;41;33;40;32;32;39;45;51;41;45;44;50;54;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"1151 Utsira";1;1;0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"1154 Vindafjord (1965-2005)";4;5;4;5;4;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"1159 Ølen (2002-2005)";4;0;1;0;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"1160 Vindafjord";0;0;0;0;0;8;9;10;9;9;9;5;4;5;8;11;11;13;14;15;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"1211 Etne (-2019)";2;1;1;1;0;0;1;1;2;0;2;1;3;2;1;2;1;3;3;1;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"1216 Sveio (-2019)";956;915;883;912;884;943;930;1016;1065;1089;1074;1054;1064;1101;1057;1105;1107;1087;1083;1069;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"1219 Bømlo (1916-2019)";9;14;9;19;21;17;18;26;30;28;26;36;31;40;31;48;43;37;37;35;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"1221 Stord (-2019)";1;2;0;9;14;17;27;22;31;26;27;26;30;30;29;36;42;38;53;57;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"1222 Fitjar (-2019)";0;0;0;0;2;2;2;2;2;2;3;2;2;4;6;6;6;6;7;8;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"1223 Tysnes (-2019)";1;1;0;0;0;0;1;0;0;0;0;0;0;0;0;1;1;2;3;3;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"1224 Kvinnherad (-2019)";0;0;0;0;0;1;0;2;3;1;1;1;1;0;2;1;0;0;0;4;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"1228 Odda (1913-2019)";0;1;7;8;5;2;8;10;1;1;0;0;0;0;0;0;1;0;0;0;0
+"Sysselsatte personer";"1216 Sveio (-2019)";"1231 Ullensvang (1977-2019)";0;0;0;0;1;1;0;0;0;0;0;1;1;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"1106 Haugesund";15;24;22;20;12;17;25;27;39;37;36;49;50;50;70;44;46;43;40;42;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"1135 Sauda";0;0;0;0;0;0;0;2;2;0;0;0;0;1;2;0;0;0;2;0;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"1145 Bokn";0;1;1;1;1;1;1;1;1;1;2;2;2;4;1;0;1;0;0;0;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"1146 Tysvær";1;1;4;6;3;5;6;6;5;5;2;8;8;12;9;6;6;7;7;7;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"1149 Karmøy";45;36;19;16;15;15;19;18;19;18;19;20;22;26;30;21;14;17;18;18;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;1;1;1;0;0;0;1;0;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"1154 Vindafjord (1965-2005)";1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"1159 Ølen (2002-2005)";0;0;2;2;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"1160 Vindafjord";0;0;0;0;0;2;2;3;2;3;2;1;2;1;2;3;5;4;3;5;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"1211 Etne (-2019)";1;3;1;1;1;2;2;1;0;0;1;1;0;1;1;1;0;0;0;0;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"1216 Sveio (-2019)";9;14;12;7;6;8;16;21;19;25;23;26;26;28;26;21;28;34;34;33;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"1219 Bømlo (1916-2019)";4005;4092;4056;3978;3969;3990;4131;4229;4360;4367;4364;4340;4376;4316;4331;4236;4186;4275;4316;4325;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"1221 Stord (-2019)";105;117;125;131;120;115;120;151;158;173;173;187;181;185;197;196;216;227;267;273;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"1222 Fitjar (-2019)";10;12;13;11;10;11;9;16;26;23;26;23;18;14;16;11;16;14;18;14;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"1223 Tysnes (-2019)";0;2;1;3;1;1;1;5;4;5;2;2;0;2;4;2;4;2;3;2;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"1224 Kvinnherad (-2019)";11;7;7;11;10;10;11;14;10;11;11;11;9;8;12;9;13;11;21;19;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"1228 Odda (1913-2019)";0;0;2;2;1;0;0;3;3;4;3;1;1;1;0;0;1;1;0;0;0
+"Sysselsatte personer";"1219 Bømlo (1916-2019)";"1231 Ullensvang (1977-2019)";0;0;1;2;0;0;2;2;4;1;0;0;0;0;0;0;0;2;1;1;0
+"Sysselsatte personer";"1221 Stord (-2019)";"1106 Haugesund";84;79;93;141;170;117;114;124;111;111;100;72;72;77;98;95;106;107;112;106;0
+"Sysselsatte personer";"1221 Stord (-2019)";"1135 Sauda";3;1;2;3;7;6;5;4;5;7;5;6;3;2;4;4;2;5;3;2;0
+"Sysselsatte personer";"1221 Stord (-2019)";"1145 Bokn";0;0;0;1;0;1;2;2;2;2;3;3;1;1;2;4;2;1;2;2;0
+"Sysselsatte personer";"1221 Stord (-2019)";"1146 Tysvær";11;15;16;28;29;16;25;27;18;19;17;19;12;12;18;20;18;18;16;25;0
+"Sysselsatte personer";"1221 Stord (-2019)";"1149 Karmøy";40;42;75;85;87;54;63;80;65;66;64;53;41;47;53;46;46;37;42;35;0
+"Sysselsatte personer";"1221 Stord (-2019)";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+"Sysselsatte personer";"1221 Stord (-2019)";"1154 Vindafjord (1965-2005)";11;17;18;15;14;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1221 Stord (-2019)";"1159 Ølen (2002-2005)";20;16;18;18;19;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1221 Stord (-2019)";"1160 Vindafjord";0;0;0;0;0;33;25;25;29;32;27;20;19;25;26;29;29;32;23;17;0
+"Sysselsatte personer";"1221 Stord (-2019)";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1221 Stord (-2019)";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1221 Stord (-2019)";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1221 Stord (-2019)";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1221 Stord (-2019)";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1221 Stord (-2019)";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1221 Stord (-2019)";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1221 Stord (-2019)";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1221 Stord (-2019)";"1211 Etne (-2019)";33;35;28;24;23;19;19;28;28;20;15;12;12;6;9;8;8;8;11;13;0
+"Sysselsatte personer";"1221 Stord (-2019)";"1216 Sveio (-2019)";86;81;99;82;83;76;88;100;93;92;80;79;90;100;121;126;115;129;150;142;0
+"Sysselsatte personer";"1221 Stord (-2019)";"1219 Bømlo (1916-2019)";375;374;402;399;462;472;507;517;509;519;513;551;566;609;628;614;561;595;626;637;0
+"Sysselsatte personer";"1221 Stord (-2019)";"1221 Stord (-2019)";6682;6686;6685;6688;6782;6749;6884;7316;7498;7440;7252;7363;7476;7718;7807;7610;7320;7400;7450;7430;0
+"Sysselsatte personer";"1221 Stord (-2019)";"1222 Fitjar (-2019)";446;435;455;416;420;414;434;449;434;442;419;427;432;434;466;460;428;451;461;470;0
+"Sysselsatte personer";"1221 Stord (-2019)";"1223 Tysnes (-2019)";69;70;81;68;68;72;73;84;89;83;73;78;76;79;81;85;80;76;67;71;0
+"Sysselsatte personer";"1221 Stord (-2019)";"1224 Kvinnherad (-2019)";237;214;252;233;228;249;240;208;214;193;181;177;182;193;193;223;190;210;187;186;0
+"Sysselsatte personer";"1221 Stord (-2019)";"1228 Odda (1913-2019)";15;9;9;19;16;21;16;12;24;20;21;18;18;15;12;9;9;6;5;3;0
+"Sysselsatte personer";"1221 Stord (-2019)";"1231 Ullensvang (1977-2019)";6;3;2;5;4;7;6;6;4;4;3;2;3;4;3;4;3;1;1;3;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"1106 Haugesund";1;4;1;2;4;5;3;2;4;3;1;1;3;2;5;2;5;3;2;1;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"1135 Sauda";1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"1145 Bokn";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"1146 Tysvær";0;0;0;1;2;2;2;1;1;1;1;1;0;1;0;0;1;0;0;0;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"1149 Karmøy";1;3;3;0;0;0;0;0;0;0;0;3;3;5;4;2;2;1;3;3;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"1154 Vindafjord (1965-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"1159 Ølen (2002-2005)";1;2;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"1160 Vindafjord";0;0;0;0;0;0;0;0;0;0;1;0;1;1;2;0;0;0;0;1;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"1211 Etne (-2019)";0;0;2;2;3;4;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"1216 Sveio (-2019)";1;1;2;4;4;4;2;2;1;3;0;0;0;0;2;4;3;5;4;3;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"1219 Bømlo (1916-2019)";19;22;19;20;20;23;15;14;14;13;20;22;21;24;23;22;23;25;23;24;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"1221 Stord (-2019)";130;155;150;137;140;164;176;195;180;192;210;217;226;228;233;219;226;223;201;177;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"1222 Fitjar (-2019)";819;817;787;807;827;805;818;885;882;889;895;923;913;934;917;899;932;902;871;835;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"1223 Tysnes (-2019)";12;11;13;10;14;12;2;2;2;2;3;4;5;4;4;3;4;3;5;5;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"1224 Kvinnherad (-2019)";33;45;42;46;27;22;7;6;8;8;9;7;7;2;4;4;4;7;4;5;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"1228 Odda (1913-2019)";0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1222 Fitjar (-2019)";"1231 Ullensvang (1977-2019)";0;0;0;0;0;0;0;0;0;0;0;0;1;1;1;0;0;0;0;0;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"1106 Haugesund";1;2;2;0;1;1;2;4;2;3;2;2;1;2;2;2;5;4;4;0;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"1135 Sauda";0;0;0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"1145 Bokn";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"1146 Tysvær";0;0;0;0;0;0;0;0;0;0;1;0;1;1;2;3;3;3;0;0;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"1149 Karmøy";0;0;0;2;1;1;1;3;1;1;2;2;4;4;3;1;4;5;7;7;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"1154 Vindafjord (1965-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"1159 Ølen (2002-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"1160 Vindafjord";0;0;0;0;0;0;0;1;0;0;0;1;1;1;0;0;0;0;0;0;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"1211 Etne (-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;2;2;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"1216 Sveio (-2019)";0;0;0;0;0;0;0;0;1;1;1;1;0;0;1;3;4;5;6;4;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"1219 Bømlo (1916-2019)";0;0;0;0;1;1;2;4;1;2;2;2;2;2;1;2;4;5;3;3;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"1221 Stord (-2019)";19;14;16;17;13;16;18;12;10;14;16;19;17;21;21;26;31;33;24;26;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"1222 Fitjar (-2019)";3;3;3;3;2;4;5;2;3;1;1;2;3;3;3;1;1;1;2;4;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"1223 Tysnes (-2019)";926;919;895;898;902;873;894;911;916;906;926;919;904;914;911;940;954;922;943;936;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"1224 Kvinnherad (-2019)";6;10;8;9;9;14;14;15;13;11;12;16;20;21;24;29;30;32;33;34;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"1228 Odda (1913-2019)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1223 Tysnes (-2019)";"1231 Ullensvang (1977-2019)";0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"1106 Haugesund";10;7;8;11;7;9;11;7;10;10;11;11;13;14;13;9;12;13;12;12;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"1135 Sauda";0;1;1;1;1;1;1;1;0;0;0;1;2;1;1;1;1;0;0;1;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"1145 Bokn";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;1;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"1146 Tysvær";0;0;0;1;1;1;3;2;1;0;1;0;3;2;0;2;1;1;1;0;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"1149 Karmøy";4;5;3;4;4;4;6;6;3;6;5;13;16;16;10;11;9;8;8;8;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"1154 Vindafjord (1965-2005)";2;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"1159 Ølen (2002-2005)";7;4;4;3;6;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"1160 Vindafjord";0;0;0;0;0;6;4;5;2;2;1;3;4;5;2;1;3;1;5;6;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"1211 Etne (-2019)";11;20;18;20;20;19;23;18;19;17;16;23;25;24;19;22;24;19;16;27;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"1216 Sveio (-2019)";7;5;4;4;4;3;3;3;3;3;2;4;2;2;2;3;4;1;4;5;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"1219 Bømlo (1916-2019)";1;4;6;8;8;5;7;5;4;4;5;12;10;7;5;7;4;4;5;9;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"1221 Stord (-2019)";63;40;35;41;46;33;43;54;63;58;62;64;37;36;31;26;31;34;29;28;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"1222 Fitjar (-2019)";1;2;3;2;3;2;3;6;4;8;8;5;2;2;1;6;5;5;3;2;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"1223 Tysnes (-2019)";15;21;19;21;20;13;13;22;27;27;21;16;16;17;19;18;15;21;27;26;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"1224 Kvinnherad (-2019)";5252;5332;5316;5295;5166;5136;5426;5488;5586;5518;5443;5480;5291;5238;5291;5177;5124;5115;5183;5206;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"1228 Odda (1913-2019)";22;27;46;34;34;31;19;18;26;22;28;28;24;21;26;18;13;17;22;22;0
+"Sysselsatte personer";"1224 Kvinnherad (-2019)";"1231 Ullensvang (1977-2019)";3;5;6;4;8;7;5;6;15;12;9;9;4;7;9;4;5;7;7;15;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"1106 Haugesund";13;8;9;6;8;10;10;7;7;8;6;3;8;3;5;1;3;6;2;8;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"1135 Sauda";1;2;2;1;1;2;2;3;2;2;1;0;0;0;2;2;2;1;1;0;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"1145 Bokn";0;0;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"1146 Tysvær";1;2;1;4;3;2;1;2;3;2;0;0;0;1;0;0;1;0;0;0;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"1149 Karmøy";18;6;3;4;3;7;8;6;6;4;6;4;5;5;10;4;4;3;4;5;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"1154 Vindafjord (1965-2005)";3;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"1159 Ølen (2002-2005)";7;2;2;3;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"1160 Vindafjord";0;0;0;0;0;5;3;2;7;6;5;4;4;5;4;4;2;7;8;7;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"1211 Etne (-2019)";38;24;27;21;21;24;25;23;28;27;29;26;31;28;29;24;23;26;20;17;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"1216 Sveio (-2019)";3;3;0;0;0;0;0;0;0;1;1;1;0;1;1;1;1;1;1;1;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"1219 Bømlo (1916-2019)";1;0;1;4;5;0;0;0;0;0;0;0;0;0;0;1;1;1;0;0;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"1221 Stord (-2019)";4;3;3;4;5;1;4;3;2;3;2;1;1;2;2;4;4;5;6;7;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"1222 Fitjar (-2019)";0;0;0;3;2;1;1;1;1;1;1;1;1;1;1;1;0;0;0;1;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"1223 Tysnes (-2019)";0;0;0;3;3;1;3;1;1;1;1;2;4;0;0;0;1;0;0;0;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"1224 Kvinnherad (-2019)";2;12;24;35;43;42;42;42;44;61;71;75;82;66;48;47;46;53;56;67;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"1228 Odda (1913-2019)";3245;3173;3059;3049;3027;2993;2981;3085;3082;3061;2991;2983;3005;2976;2938;2884;2923;2895;2853;2868;0
+"Sysselsatte personer";"1228 Odda (1913-2019)";"1231 Ullensvang (1977-2019)";369;342;369;358;336;329;354;374;361;362;355;361;351;347;354;363;353;344;368;354;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"1106 Haugesund";2;1;0;0;0;0;0;2;2;1;1;4;2;1;2;1;1;0;0;3;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"1135 Sauda";0;1;0;0;0;0;1;0;0;0;4;4;0;0;0;0;0;0;1;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"1145 Bokn";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"1146 Tysvær";0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"1149 Karmøy";1;0;0;0;2;1;0;1;1;0;1;1;1;1;0;0;0;0;1;1;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"1151 Utsira";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"1154 Vindafjord (1965-2005)";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"1159 Ølen (2002-2005)";0;1;1;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"1160 Vindafjord";0;0;0;0;0;2;2;0;1;1;3;3;1;1;1;1;2;1;2;2;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"4611 Etne";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"4612 Sveio";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"4613 Bømlo";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"4614 Stord";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"4615 Fitjar";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"4616 Tysnes";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"4617 Kvinnherad";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"4618 Ullensvang";0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"1211 Etne (-2019)";3;2;3;2;3;3;3;1;0;1;0;0;0;0;2;0;0;0;0;1;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"1216 Sveio (-2019)";0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"1219 Bømlo (1916-2019)";0;0;2;2;2;1;0;1;1;1;2;0;0;1;0;0;0;0;0;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"1221 Stord (-2019)";0;1;3;1;0;0;0;1;1;0;0;0;1;0;0;0;1;1;1;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"1222 Fitjar (-2019)";1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"1223 Tysnes (-2019)";0;0;0;0;0;0;0;0;1;2;2;2;0;0;0;0;0;0;0;0;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"1224 Kvinnherad (-2019)";1;3;5;5;3;3;5;6;3;4;8;5;4;2;1;1;2;2;2;3;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"1228 Odda (1913-2019)";28;39;32;27;46;39;49;54;61;59;70;58;46;47;54;59;56;66;63;68;0
+"Sysselsatte personer";"1231 Ullensvang (1977-2019)";"1231 Ullensvang (1977-2019)";1242;1203;1196;1155;1142;1124;1171;1178;1175;1175;1183;1139;1075;1060;1088;1060;1033;1044;1020;1025;0
