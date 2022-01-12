@@ -23,6 +23,21 @@ View(Tab_03321)
 ```
 
 
+```{r}
+Tab_03321_00 <- Tab_03321 %>% 
+  select(arbeidsstedskommune, bostedskommune, `2000`)
+```
+
+
+```{r}
+Tab_03321_00 <- Tab_03321_00 %>% 
+pivot_wider(
+    id_cols = bostedskommune,
+    names_from = arbeidsstedskommune,
+    values_from = `2000`
+  )
+```
+
 
 
 
