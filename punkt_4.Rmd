@@ -69,6 +69,27 @@ Tabell_03321_00 <- Tabell_03321_00$dataset %>%
   )
 ```
 
+```{r}
+Tabell_03321_00_Test <- Tabell_03321_00 %>% 
+  # Pedantisk
+  rename(Bokommune = Bokommuen) %>% 
+  # Kan ikke ha med navnene
+  select(-Bokommune) %>% 
+  # Lager variablene
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted, 4),
+         # Setter på navnene igjen
+         Bokommune = Tabell_03321_00$Bokommuen
+                    ) %>% 
+  # Flytter Bokommune lengst til venstre
+  select(Bokommune, everything())
+```
+
+
+
+
 
 # Tabell for år 2001
 
@@ -128,5 +149,8 @@ Tabell_03321_01 <- Tabell_03321_01$dataset %>%
 # Tabell for år 2002
 
 
+```{r, echo = FALSE}
+#siste
+```
 
 
