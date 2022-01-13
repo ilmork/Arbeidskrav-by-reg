@@ -25,6 +25,11 @@ Tab_03321 <- read_delim("03321_20220111-133805.csv",
 Tab_Test <- Tab_03321
 ```
 
+```{r}
+Tab_Test <- Tab_Test %>% 
+  mutate(
+    Etne = `4611 Etne` + `1211 Etne (-2019)`)
+```
 
 
 

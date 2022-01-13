@@ -257,6 +257,21 @@ dbl (21): 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGFiX1Rlc3QgPC0gVGFiX1Rlc3QgJT4lIFxuICBtdXRhdGUoXG4gICAgRXRuZSA9IGA0NjExIEV0bmVgICsgYDEyMTEgRXRuZSAoLTIwMTkpYClcbmBgYCJ9 -->
+<pre class="r"><code>Tab_Test &lt;- Tab_Test %&gt;% 
+  mutate(
+    Etne = `4611 Etne` + `1211 Etne (-2019)`)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3I6IFByb2JsZW0gd2l0aCBgbXV0YXRlKClgIGNvbHVtbiBgRXRuZWAuXG7ihLkgYEV0bmUgPSBgNDYxMSBFdG5lYCArIGAxMjExIEV0bmUgKC0yMDE5KWBgLlxueCBvYmplY3QgJzQ2MTEgRXRuZScgbm90IGZvdW5kXG5SdW4gYHJsYW5nOjpsYXN0X2Vycm9yKClgIHRvIHNlZSB3aGVyZSB0aGUgZXJyb3Igb2NjdXJyZWQuXG4ifQ== -->
+<pre><code>Error: Problem with `mutate()` column `Etne`.
+ℹ `Etne = `4611 Etne` + `1211 Etne (-2019)``.
+x object &#39;4611 Etne&#39; not found
+Run `rlang::last_error()` to see where the error occurred.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGFiXzAzMzIxXzAwIDwtIFRhYl8wMzMyMSAlPiUgXG4gIHNlbGVjdChhcmJlaWRzc3RlZHNrb21tdW5lLCBib3N0ZWRza29tbXVuZSwgYDIwMDBgKVxuYGBgIn0= -->
 <pre class="r"><code>Tab_03321_00 &lt;- Tab_03321 %&gt;% 
   select(arbeidsstedskommune, bostedskommune, `2000`)</code></pre>
@@ -277,7 +292,7 @@ pivot_wider(
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiNC4gUGVuZGxpbmcgbWVsbG9tIGRlIHVsaWtlIGtvbW11bmVuZSBpIHJlZ2lvbmVuLiIKc3VidGl0bGU6ICJNU0IgMTA2IC0gQW52ZW5kdCBCeS0gb2cgUmVnaW9uYWzDuGtvbm9taSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3Igc2V0dXB9CnN1cHByZXNzUGFja2FnZVN0YXJ0dXBNZXNzYWdlcyh7CmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKbGlicmFyeShQeFdlYkFwaURhdGEpCmxpYnJhcnkocmVhZHIpCn0pCiNrbml0cjo6b3B0c19jaHVuayRzZXQoZXZhbD1GQUxTRSkKYGBgCgoKYGBge3J9ClRhYl8wMzMyMSA8LSByZWFkX2RlbGltKCIwMzMyMV8yMDIyMDExMS0xMzM4MDUuY3N2IiwgCiAgICBkZWxpbSA9ICI7IiwgZXNjYXBlX2RvdWJsZSA9IEZBTFNFLCB0cmltX3dzID0gVFJVRSwgCiAgICBza2lwID0gMikKYGBgCgpgYGB7cn0KVGFiX1Rlc3QgPC0gVGFiXzAzMzIxCmBgYAoKCgoKCgoKCgoKCgoKCgoKYGBge3J9ClRhYl8wMzMyMV8wMCA8LSBUYWJfMDMzMjEgJT4lIAogIHNlbGVjdChhcmJlaWRzc3RlZHNrb21tdW5lLCBib3N0ZWRza29tbXVuZSwgYDIwMDBgKQpgYGAKCgpgYGB7cn0KVGFiXzAzMzIxXzAwIDwtIFRhYl8wMzMyMV8wMCAlPiUgCnBpdm90X3dpZGVyKAogICAgaWRfY29scyA9IGJvc3RlZHNrb21tdW5lLAogICAgbmFtZXNfZnJvbSA9IGFyYmVpZHNzdGVkc2tvbW11bmUsCiAgICB2YWx1ZXNfZnJvbSA9IGAyMDAwYAogICkKYGBgCgoKCgoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiNC4gUGVuZGxpbmcgbWVsbG9tIGRlIHVsaWtlIGtvbW11bmVuZSBpIHJlZ2lvbmVuLiIKc3VidGl0bGU6ICJNU0IgMTA2IC0gQW52ZW5kdCBCeS0gb2cgUmVnaW9uYWzDuGtvbm9taSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3Igc2V0dXB9CnN1cHByZXNzUGFja2FnZVN0YXJ0dXBNZXNzYWdlcyh7CmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKbGlicmFyeShQeFdlYkFwaURhdGEpCmxpYnJhcnkocmVhZHIpCn0pCiNrbml0cjo6b3B0c19jaHVuayRzZXQoZXZhbD1GQUxTRSkKYGBgCgoKYGBge3J9ClRhYl8wMzMyMSA8LSByZWFkX2RlbGltKCIwMzMyMV8yMDIyMDExMS0xMzM4MDUuY3N2IiwgCiAgICBkZWxpbSA9ICI7IiwgZXNjYXBlX2RvdWJsZSA9IEZBTFNFLCB0cmltX3dzID0gVFJVRSwgCiAgICBza2lwID0gMikKYGBgCgpgYGB7cn0KVGFiX1Rlc3QgPC0gVGFiXzAzMzIxCmBgYAoKYGBge3J9ClRhYl9UZXN0IDwtIFRhYl9UZXN0ICU+JSAKICBtdXRhdGUoCiAgICBFdG5lID0gYDQ2MTEgRXRuZWAgKyBgMTIxMSBFdG5lICgtMjAxOSlgKQpgYGAKCgoKCgoKCgoKCgoKCgoKYGBge3J9ClRhYl8wMzMyMV8wMCA8LSBUYWJfMDMzMjEgJT4lIAogIHNlbGVjdChhcmJlaWRzc3RlZHNrb21tdW5lLCBib3N0ZWRza29tbXVuZSwgYDIwMDBgKQpgYGAKCgpgYGB7cn0KVGFiXzAzMzIxXzAwIDwtIFRhYl8wMzMyMV8wMCAlPiUgCnBpdm90X3dpZGVyKAogICAgaWRfY29scyA9IGJvc3RlZHNrb21tdW5lLAogICAgbmFtZXNfZnJvbSA9IGFyYmVpZHNzdGVkc2tvbW11bmUsCiAgICB2YWx1ZXNfZnJvbSA9IGAyMDAwYAogICkKYGBgCgoKCgoK</div>
 
 
 
