@@ -1,0 +1,67 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+knitr::opts_chunk$set(eval=FALSE)
+```
+
+
+```{r}
+suppressPackageStartupMessages({
+library(PxWebApiData)
+library(tidyverse)
+library(lubridate)
+})
+knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+```
+
+# Sysselsatte personer etter arbeidssted
+
+```{r}
+Tabell1 <- ApiData(
+  urlToData= "07984",
+  Region = list("vs:KommunerS", c( "1106",
+          "1135",
+          "1145",
+          "1146",
+          "1149",
+          "1151",
+          "1160",
+          "4611",
+          "4612",
+          "4613",
+          "4614",
+          "4615",
+          "4616",
+          "4617",
+          "4618",
+          "1211",
+          "1216",
+          "1219",
+          "1221",
+          "1222",
+          "1223",
+          "1224",
+          "1228",
+          "1231")), 
+  NACE2007 = "00",
+  Kjonn = "0",
+  ContentsCode = "SysselsatteArb")
+  
+```
+
+## Fjerner tomme verdier 
+
+## Haugalandet, Sunnhordland inkludert Hardanger
+
+### H
+I følge 
+
+# Sysselsatte personer etter bosted
+
+```{r}
+
+```
+
