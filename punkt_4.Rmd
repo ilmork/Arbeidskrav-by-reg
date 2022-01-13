@@ -15,49 +15,117 @@ library(readr)
 ```
 
 
-```{r}
-Tab_03321 <- read_delim("03321_20220111-133805.csv", 
-    delim = ";", escape_double = FALSE, trim_ws = TRUE, 
-    skip = 2)
-```
+# Tabell for år 2000
 
 ```{r}
-Tab_Test <- Tab_03321
-```
-
-```{r}
-Tab_Test <- Tab_Test %>% 
-  mutate(
-    Etne = `4611 Etne` + `1211 Etne (-2019)`)
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-```{r}
-Tab_03321_00 <- Tab_03321 %>% 
-  select(arbeidsstedskommune, bostedskommune, `2000`)
-```
-
-
-```{r}
-Tab_03321_00 <- Tab_03321_00 %>% 
-pivot_wider(
-    id_cols = bostedskommune,
-    names_from = arbeidsstedskommune,
-    values_from = `2000`
+Tabell_03321_00 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151, 
+                           1154, 1159, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1154, 1159, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2000"
   )
 ```
 
+```{r}
+names(Tabell_03321_00)[[1]] <- "desc"
+```
+
+```{r}
+Tabell_03321_00 <- Tabell_03321_00$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tabell_03321_00$desc$arbeidsstedskommune,
+    NavnBokommuen = Tabell_03321_00$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+
+# Tabell for år 2001
+
+```{r}
+Tabell_03321_01 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151, 
+                           1154, 1159, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1154, 1159, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2001"
+  )
+```
+
+```{r}
+names(Tabell_03321_01)[[1]] <- "desc"
+```
+
+```{r}
+Tabell_03321_01 <- Tabell_03321_01$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tabell_03321_01$desc$arbeidsstedskommune,
+    NavnBokommuen = Tabell_03321_01$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+
+# Tabell for år 2002
 
 
 
