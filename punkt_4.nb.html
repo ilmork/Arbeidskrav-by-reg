@@ -217,82 +217,20 @@ pre code {
 
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VwcHJlc3NQYWNrYWdlU3RhcnR1cE1lc3NhZ2VzKHtcbmxpYnJhcnkodGlkeXZlcnNlKVxubGlicmFyeShsdWJyaWRhdGUpXG5saWJyYXJ5KFB4V2ViQXBpRGF0YSlcbmxpYnJhcnkocmVhZHIpXG59KVxuI2tuaXRyOjpvcHRzX2NodW5rJHNldChldmFsPUZBTFNFKVxuYGBgIn0= -->
-<pre class="r"><code>suppressPackageStartupMessages({
-library(tidyverse)
-library(lubridate)
-library(PxWebApiData)
-library(readr)
-})
-#knitr::opts_chunk$set(eval=FALSE)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGFiXzAzMzIxIDwtIHJlYWRfZGVsaW0oXCIwMzMyMV8yMDIyMDExMS0xMzM4MDUuY3N2XCIsIFxuICAgIGRlbGltID0gXCI7XCIsIGVzY2FwZV9kb3VibGUgPSBGQUxTRSwgdHJpbV93cyA9IFRSVUUsIFxuICAgIHNraXAgPSAyKVxuYGBgIn0= -->
-<pre class="r"><code>Tab_03321 &lt;- read_delim(&quot;03321_20220111-133805.csv&quot;, 
-    delim = &quot;;&quot;, escape_double = FALSE, trim_ws = TRUE, 
-    skip = 2)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUm93czogNjc2IENvbHVtbnM6IDI0XG7ilIDilIAgQ29sdW1uIHNwZWNpZmljYXRpb24g4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAXG5EZWxpbWl0ZXI6IFwiO1wiXG5jaHIgICgzKTogc3RhdGlzdGlra3ZhcmlhYmVsLCBhcmJlaWRzc3RlZHNrb21tdW5lLCBib3N0ZWRza29tbXVuZVxuZGJsICgyMSk6IDIwMDAsIDIwMDEsIDIwMDIsIDIwMDMsIDIwMDQsIDIwMDUsIDIwMDYsIDIwMDcsIDIwMDgsIDIwMDksIDIwMTAsIDIwMTEsIDIwMTIsIDIwMTMsIDIwMTQsIDIwMTUuLi5cblxu4oS5IFVzZSBgc3BlYygpYCB0byByZXRyaWV2ZSB0aGUgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbiBmb3IgdGhpcyBkYXRhLlxu4oS5IFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
-<pre><code>Rows: 676 Columns: 24
-── Column specification ────────────────────────────────────────────────────────────────────────────────────
-Delimiter: &quot;;&quot;
-chr  (3): statistikkvariabel, arbeidsstedskommune, bostedskommune
-dbl (21): 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGFiX1Rlc3QgPC0gVGFiXzAzMzIxXG5gYGAifQ== -->
-<pre class="r"><code>Tab_Test &lt;- Tab_03321</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGFiX1Rlc3QgPC0gVGFiX1Rlc3QgJT4lIFxuICBtdXRhdGUoXG4gICAgRXRuZSA9IGA0NjExIEV0bmVgICsgYDEyMTEgRXRuZSAoLTIwMTkpYClcbmBgYCJ9 -->
-<pre class="r"><code>Tab_Test &lt;- Tab_Test %&gt;% 
-  mutate(
-    Etne = `4611 Etne` + `1211 Etne (-2019)`)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3I6IFByb2JsZW0gd2l0aCBgbXV0YXRlKClgIGNvbHVtbiBgRXRuZWAuXG7ihLkgYEV0bmUgPSBgNDYxMSBFdG5lYCArIGAxMjExIEV0bmUgKC0yMDE5KWBgLlxueCBvYmplY3QgJzQ2MTEgRXRuZScgbm90IGZvdW5kXG5SdW4gYHJsYW5nOjpsYXN0X2Vycm9yKClgIHRvIHNlZSB3aGVyZSB0aGUgZXJyb3Igb2NjdXJyZWQuXG4ifQ== -->
-<pre><code>Error: Problem with `mutate()` column `Etne`.
-ℹ `Etne = `4611 Etne` + `1211 Etne (-2019)``.
-x object &#39;4611 Etne&#39; not found
-Run `rlang::last_error()` to see where the error occurred.</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGFiXzAzMzIxXzAwIDwtIFRhYl8wMzMyMSAlPiUgXG4gIHNlbGVjdChhcmJlaWRzc3RlZHNrb21tdW5lLCBib3N0ZWRza29tbXVuZSwgYDIwMDBgKVxuYGBgIn0= -->
-<pre class="r"><code>Tab_03321_00 &lt;- Tab_03321 %&gt;% 
-  select(arbeidsstedskommune, bostedskommune, `2000`)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGFiXzAzMzIxXzAwIDwtIFRhYl8wMzMyMV8wMCAlPiUgXG5waXZvdF93aWRlcihcbiAgICBpZF9jb2xzID0gYm9zdGVkc2tvbW11bmUsXG4gICAgbmFtZXNfZnJvbSA9IGFyYmVpZHNzdGVkc2tvbW11bmUsXG4gICAgdmFsdWVzX2Zyb20gPSBgMjAwMGBcbiAgKVxuYGBgIn0= -->
-<pre class="r"><code>Tab_03321_00 &lt;- Tab_03321_00 %&gt;% 
-pivot_wider(
-    id_cols = bostedskommune,
-    names_from = arbeidsstedskommune,
-    values_from = `2000`
-  )</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiNC4gUGVuZGxpbmcgbWVsbG9tIGRlIHVsaWtlIGtvbW11bmVuZSBpIHJlZ2lvbmVuLiIKc3VidGl0bGU6ICJNU0IgMTA2IC0gQW52ZW5kdCBCeS0gb2cgUmVnaW9uYWzDuGtvbm9taSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3Igc2V0dXB9CnN1cHByZXNzUGFja2FnZVN0YXJ0dXBNZXNzYWdlcyh7CmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKbGlicmFyeShQeFdlYkFwaURhdGEpCmxpYnJhcnkocmVhZHIpCn0pCiNrbml0cjo6b3B0c19jaHVuayRzZXQoZXZhbD1GQUxTRSkKYGBgCgoKYGBge3J9ClRhYl8wMzMyMSA8LSByZWFkX2RlbGltKCIwMzMyMV8yMDIyMDExMS0xMzM4MDUuY3N2IiwgCiAgICBkZWxpbSA9ICI7IiwgZXNjYXBlX2RvdWJsZSA9IEZBTFNFLCB0cmltX3dzID0gVFJVRSwgCiAgICBza2lwID0gMikKYGBgCgpgYGB7cn0KVGFiX1Rlc3QgPC0gVGFiXzAzMzIxCmBgYAoKYGBge3J9ClRhYl9UZXN0IDwtIFRhYl9UZXN0ICU+JSAKICBtdXRhdGUoCiAgICBFdG5lID0gYDQ2MTEgRXRuZWAgKyBgMTIxMSBFdG5lICgtMjAxOSlgKQpgYGAKCgoKCgoKCgoKCgoKCgoKYGBge3J9ClRhYl8wMzMyMV8wMCA8LSBUYWJfMDMzMjEgJT4lIAogIHNlbGVjdChhcmJlaWRzc3RlZHNrb21tdW5lLCBib3N0ZWRza29tbXVuZSwgYDIwMDBgKQpgYGAKCgpgYGB7cn0KVGFiXzAzMzIxXzAwIDwtIFRhYl8wMzMyMV8wMCAlPiUgCnBpdm90X3dpZGVyKAogICAgaWRfY29scyA9IGJvc3RlZHNrb21tdW5lLAogICAgbmFtZXNfZnJvbSA9IGFyYmVpZHNzdGVkc2tvbW11bmUsCiAgICB2YWx1ZXNfZnJvbSA9IGAyMDAwYAogICkKYGBgCgoKCgoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiNC4gUGVuZGxpbmcgbWVsbG9tIGRlIHVsaWtlIGtvbW11bmVuZSBpIHJlZ2lvbmVuLiIKc3VidGl0bGU6ICJNU0IgMTA2IC0gQW52ZW5kdCBCeS0gb2cgUmVnaW9uYWzDuGtvbm9taSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3Igc2V0dXB9CnN1cHByZXNzUGFja2FnZVN0YXJ0dXBNZXNzYWdlcyh7CmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKbGlicmFyeShQeFdlYkFwaURhdGEpCmxpYnJhcnkocmVhZHIpCn0pCiNrbml0cjo6b3B0c19jaHVuayRzZXQoZXZhbD1GQUxTRSkKYGBgCgoKYGBge3J9ClRhYl8wMzMyMSA8LSByZWFkX2RlbGltKCIwMzMyMV8yMDIyMDExMS0xMzM4MDUuY3N2IiwgCiAgICBkZWxpbSA9ICI7IiwgZXNjYXBlX2RvdWJsZSA9IEZBTFNFLCB0cmltX3dzID0gVFJVRSwgCiAgICBza2lwID0gMikKYGBgCgpgYGB7cn0KVGFiX1Rlc3QgPC0gVGFiXzAzMzIxCmBgYAoKYGBge3J9ClRhYl9UZXN0IDwtIFRhYl9UZXN0ICU+JSAKICBtdXRhdGUoCiAgICBFdG5lID0gYDQ2MTEgRXRuZWAgKyBgMTIxMSBFdG5lICgtMjAxOSlgKQpgYGAKCgoKCgoKCgoKCgoKCmBgYHtyfQpUYWJfMDMzMjFfMDAgPC0gVGFiXzAzMzIxICU+JSAKICBzZWxlY3QoYXJiZWlkc3N0ZWRza29tbXVuZSwgYm9zdGVkc2tvbW11bmUsIGAyMDAwYCkKYGBgCgoKYGBge3J9ClRhYl8wMzMyMV8wMCA8LSBUYWJfMDMzMjFfMDAgJT4lIApwaXZvdF93aWRlcigKICAgIGlkX2NvbHMgPSBib3N0ZWRza29tbXVuZSwKICAgIG5hbWVzX2Zyb20gPSBhcmJlaWRzc3RlZHNrb21tdW5lLAogICAgdmFsdWVzX2Zyb20gPSBgMjAwMGAKICApCmBgYAoKCgoKCg==</div>
 
 
 

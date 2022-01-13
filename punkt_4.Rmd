@@ -43,8 +43,6 @@ Tab_Test <- Tab_Test %>%
 
 
 
-
-
 ```{r}
 Tab_03321_00 <- Tab_03321 %>% 
   select(arbeidsstedskommune, bostedskommune, `2000`)
