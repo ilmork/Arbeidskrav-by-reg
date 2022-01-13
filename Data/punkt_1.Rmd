@@ -22,8 +22,9 @@ knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 ```{r}
 Tabell1 <- ApiData(
   urlToData= "07984",
-  Region = list("vs:KommunerS", c( "1106",
-          "1135",
+  Region = list("vs:KommunerS", c(
+    "1106",
+    "1135",
           "1145",
           "1146",
           "1149",
@@ -46,18 +47,79 @@ Tabell1 <- ApiData(
           "1224",
           "1228",
           "1231")), 
-  NACE2007 = "00",
+  NACE2007 = TRUE,
   Kjonn = "0",
   ContentsCode = "SysselsatteArb")
   
 ```
 
+```{r}
+Tabell1 <- Tabell1$dataset 
+```
+
+## Se på dette senere
+
+Tabell_03321_00 <- Tabell_03321_00$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tabell_03321_00$desc$arbeidsstedskommune,
+    NavnBokommuen = Tabell_03321_00$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
 ## Fjerner tomme verdier 
 
 ## Haugalandet, Sunnhordland inkludert Hardanger
 
-### H
-I følge 
+### Haugalandet 
+
+```{r}
+Haug <- ApiData(
+  url = "07984",
+  Region = list("vs:KommunerS", c(
+    "1106",
+    "1135",
+    "1145",
+    "1146",
+    "1149",
+    "1151",
+    "1160")), 
+  NACE2007 = "00",
+  Kjonn = "0",
+  ContentsCode = "SysselsatteArb"
+)
+```
+
+## Endre navn 
+
+```{r}
+Tabell1 <- Tabell1$dataset %>% 
+  rename(
+    Haugesund = 1106,
+    Sauda = 1135,
+    Bokn = 1145,
+    Tysvaer = 1146,
+    Karmoey = 1149,
+    Utsira = 1151,
+    Vindafjord = 1160
+  )
+```
+## Sunnhordland inkludert Hardanger
+
+
+## Endre navn
+
+## skal både beskrive situasjonen slik den er for det siste året dere har data, og for utviklingen over tid. Studer først sysselsettingsutviklingen for ulike næringer i ulike kommuner, og for regionen samlet.
+
+
+
+
+
 
 # Sysselsatte personer etter bosted
 
