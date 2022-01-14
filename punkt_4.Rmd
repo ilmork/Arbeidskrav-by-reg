@@ -71,8 +71,24 @@ Tabell_03321_00 <- Tabell_03321_00$dataset %>%
 
 ```{r}
 Tabell_03321_00_Test <- Tabell_03321_00 %>% 
+  # Pedantisk
+  rename(Bokommune = Bokommuen) %>% 
+  # Kan ikke ha med navnene
+  select(-Bokommune) %>% 
+  # Lager variablene
   mutate(
+<<<<<<< HEAD
          Tot_bosted = Haugesund_1106 + Sauda_1135 + Bokn_1145 + Tysvær_1146 + Karmøy_1149 + Utsira_1151 + `Vindafjord (1965-2005)_1154` + `Ølen (2002-2005)_1159` + `Etne (-2019)_1211` + `Sveio (-2019)_1216` + `Bømlo (1916-2019)_1219` + `Stord (-2019)_1221` + `Fitjar (-2019)_1222` + `Tysnes (-2019)_1223` + `Kvinnherad (-2019)_1224` + `Odda (1913-2019)_1228` + `Ullensvang (1977-2019)_1231`)
+=======
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted, 4),
+         # Setter på navnene igjen
+         Bokommune = Tabell_03321_00$Bokommuen
+                    ) %>% 
+  # Flytter Bokommune lengst til venstre
+  select(Bokommune, everything())
+>>>>>>> a5cc91714a37e0674f1b37a090abbed83605d154
 ```
 
 ```{r}
@@ -140,5 +156,8 @@ Tabell_03321_01 <- Tabell_03321_01$dataset %>%
 # Tabell for år 2002
 
 
+```{r, echo = FALSE}
+#siste
+```
 
 
