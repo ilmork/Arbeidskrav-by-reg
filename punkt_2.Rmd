@@ -1,0 +1,6 @@
+---
+title: "Punkt 2."
+output: html_notebook
+---
+
+2. Mål for beskrivelse av næringsstrukturen.
