@@ -20,42 +20,106 @@ knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 # Sysselsatte personer etter arbeidssted
 
 ```{r}
-Tabell1 <- ApiData(
+Tabell1_raw <- ApiData(
   urlToData= "07984",
   Region = list("vs:KommunerS", c(
     "1106",
     "1135",
-          "1145",
-          "1146",
-          "1149",
-          "1151",
-          "1160",
-          "4611",
-          "4612",
-          "4613",
-          "4614",
-          "4615",
-          "4616",
-          "4617",
-          "4618",
-          "1211",
-          "1216",
-          "1219",
-          "1221",
-          "1222",
-          "1223",
-          "1224",
-          "1228",
-          "1231")), 
+    "1145",
+    "1146",
+    "1149",
+    "1151",
+    "1160",
+    "4611",
+    "4612",
+    "4613",
+    "4614",
+    "4615",
+    "4616",
+    "4617",
+    "4618",
+    "1211",
+    "1216",
+    "1219",
+    "1221",
+    "1222",
+    "1223",
+    "1224",
+    "1228",
+    "1231")), 
   NACE2007 = TRUE,
   Kjonn = "0",
-  ContentsCode = "SysselsatteArb")
-  
+  ContentsCode = "SysselsatteArb",
+  Tid = c(as.character(2008:2020))
+  )
 ```
 
+## Kommentarer fra Thibiga 
+* Vi har ikke inkludert "Alder", men får det opp som en variabel. 
+* "NACE2007" bruke "00" eller TRUE
+* SSB - vi valgte "År", men ble ikke med på JSON-spørringen. Hva skjer hvis vi bruker tekststreng as.character().
+* HAr nå inkludert variablen "Tid"
+
 ```{r}
-Tabell1 <- Tabell1$dataset 
+Tabell1 <- Tabell1_raw$dataset %>% 
+  tibble() %>% 
+  rename(
+    Knr = Region, 
+    Naering = NACE2007,
+    Aar = Tid
+  )
 ```
+## Thibiga
+* Får en feilmelding når jeg prøver å rename. Feilmeldingen forsvant når jeg nytt navn til datasettet. 
+
+```{r}
+head(Tabell1)
+```
+## THIBIGA
+* Hva gjør denne chunken? Trenger vi den?
+
+```{r}
+names(Tabell1_raw)[[1]]<-"desc"
+```
+## THIBIGA
+* hentet fra arbeidskrav 4 "Vi skal også hente ut det offisielle kommunenavn fra det første elementet i pm2_raw. For å slippe å hanske
+med det uhåndterlig lange navnet på dette elementet skifter vi først navn på dette til “desc”."
+* Trenger vi denne?
+
+```{r}
+Tabell1 <- Tabell1 %>% 
+  mutate(knavn = Tabell1$desc$region)
+```
+## THIBIGA
+* Får advarsel når jeg kjører chunken. 
+
+```{r}
+Tabell1 <- Tabell1 %>%
+  select(-NAstatus)
+```
+## THIBIGA
+Nå gikk det an å fjerne NAstatus.
+* Trenger ikke denne variabelen siden den ikke inneholder noe verdier.
+
+```{r}
+Tabell1 <- Tabell1 %>% 
+  pivot_wider(
+    names_from = Naering,
+    values_from = value)
+```
+## THIBIGA
+* Hva mangler vi?? 
+
+
+```{r}
+rm(Tabell1_raw)
+```
+## Thibiga 
+Fjerner "Tabell1_raw" siden vi ikke har bruk for den. 
+
+
+
+
 
 ## Se på dette senere
 
