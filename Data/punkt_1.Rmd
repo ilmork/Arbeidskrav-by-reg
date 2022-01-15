@@ -105,6 +105,7 @@ Tabell1 <- Tabell1 %>%
     values_from = value)
 ```
 
+## Ingrid - blir denne pivot-wideren rett?
 
 ```{r}
 names(Tabell1)[[6]] <- "Alle naeringer"
@@ -157,7 +158,7 @@ rm(Tabell1_raw)
 ### Haugalandet 
 
 ```{r}
-Haug <- ApiData(
+Haug_raw <- ApiData(
   url = "07984",
   Region = list("vs:KommunerS", c(
     "1106",
@@ -167,25 +168,49 @@ Haug <- ApiData(
     "1149",
     "1151",
     "1160")), 
-  NACE2007 = "00",
+  NACE2007 = TRUE,
   Kjonn = "0",
-  ContentsCode = "SysselsatteArb"
+  ContentsCode = "SysselsatteArb",
+  Tid = c(as.character(2008:2020))
 )
 ```
 
 ## Endre navn 
 
 ```{r}
-Tabell1 <- Tabell1$dataset %>% 
+Haug <- Haug_raw$dataset %>% 
+  tibble() %>% 
   rename(
-    Haugesund = 1106,
-    Sauda = 1135,
-    Bokn = 1145,
-    Tysvaer = 1146,
-    Karmoey = 1149,
-    Utsira = 1151,
-    Vindafjord = 1160
+    Knr = Region, 
+    Naering = NACE2007,
+    Aar = Tid
   )
+```
+
+```{r}
+names(Haug_raw)[[1]]<-"desc1"
+```
+
+```{r}
+Haug <- Haug %>% 
+  mutate(knavn = Haug$desc1$region)
+```
+
+```{r}
+Haug <- Haug %>%
+  select(-NAstatus)
+```
+
+
+```{r}
+Haug <- Haug %>% 
+  pivot_wider(
+    names_from = Naering,
+    values_from = value)
+```
+
+```{r}
+rm(Haug_raw)
 ```
 
 ## Sunnhordland inkludert Hardanger
@@ -194,11 +219,6 @@ Tabell1 <- Tabell1$dataset %>%
 ## Endre navn
 
 ## skal både beskrive situasjonen slik den er for det siste året dere har data, og for utviklingen over tid. Studer først sysselsettingsutviklingen for ulike næringer i ulike kommuner, og for regionen samlet.
-
-
-
-
-
 
 # Sysselsatte personer etter bosted
 
