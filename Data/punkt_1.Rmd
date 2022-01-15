@@ -69,8 +69,7 @@ Tabell1 <- Tabell1_raw$dataset %>%
     Aar = Tid
   )
 ```
-## Thibiga
-* Får en feilmelding når jeg prøver å rename. Feilmeldingen forsvant når jeg nytt navn til datasettet. 
+
 
 ```{r}
 head(Tabell1)
@@ -97,9 +96,7 @@ Tabell1 <- Tabell1 %>%
 Tabell1 <- Tabell1 %>%
   select(-NAstatus)
 ```
-## THIBIGA
-Nå gikk det an å fjerne NAstatus.
-* Trenger ikke denne variabelen siden den ikke inneholder noe verdier.
+
 
 ```{r}
 Tabell1 <- Tabell1 %>% 
@@ -107,8 +104,6 @@ Tabell1 <- Tabell1 %>%
     names_from = Naering,
     values_from = value)
 ```
-## THIBIGA
-* Hva mangler vi?? 
 
 
 ```{r}
@@ -131,9 +126,7 @@ names(Tabell1)[[21]] <- "Helse- og sosialtjenester"
 names(Tabell1)[[22]] <- "Personlig tjenesteyting"
 names(Tabell1)[[23]] <- "Uoppgitt"
 ```
-## THIBIGA
-* Fikk ikke til å bruke "rename()", bruker heller "names()". 
-* Endret navnene på variablene 7-23. Gir bedre oversikt. 
+
 
 ```{r}
 Tabell1 <- Tabell1[Tabell1$`Alle naeringer` !=0,]
@@ -144,35 +137,20 @@ Tabell1 <- Tabell1[Tabell1$`Alle naeringer` !=0,]
 
 ```{r}
 Tabell1[1][(Tabell1)[1]=="1211"]<-"4611"
+Tabell1[1][(Tabell1)[1]=="1216"]<-"4612"
+Tabell1[1][(Tabell1)[1]=="1219"]<-"4613"
+Tabell1[1][(Tabell1)[1]=="1221"]<-"4614"
+Tabell1[1][(Tabell1)[1]=="1222"]<-"4615"
+Tabell1[1][(Tabell1)[1]=="1223"]<-"4616"
+Tabell1[1][(Tabell1)[1]=="1224"]<-"4617"
+Tabell1[1][(Tabell1)[1]=="1228+1231"]<-"4618"
 ```
 
+## INGRID - er siste rett "1228+1231"?
 
 ```{r}
 rm(Tabell1_raw)
 ```
-## Thibiga 
-Fjerner "Tabell1_raw" siden vi ikke har bruk for den. 
-
-
-
-
-
-## Se på dette senere
-
-Tabell_03321_00 <- Tabell_03321_00$dataset %>% 
-  mutate(
-    NavnArbstedKomm = Tabell_03321_00$desc$arbeidsstedskommune,
-    NavnBokommuen = Tabell_03321_00$desc$bostedskommune
-  ) %>% 
-  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
-  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
-  select(-ContentsCode, -Tid) %>% 
-  pivot_wider(
-    id_cols = Bokommuen,
-    names_from = ArbstedKomm,
-    values_from = value
-  )
-## Fjerner tomme verdier 
 
 ## Haugalandet, Sunnhordland inkludert Hardanger
 
@@ -209,6 +187,7 @@ Tabell1 <- Tabell1$dataset %>%
     Vindafjord = 1160
   )
 ```
+
 ## Sunnhordland inkludert Hardanger
 
 
