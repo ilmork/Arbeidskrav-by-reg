@@ -18,7 +18,7 @@ library(readr)
 # Tabell for år 2000
 
 ```{r}
-Tabell_03321_00 <- ApiData(
+Tab_03321_00 <- ApiData(
   urlToData = "03321",
   ArbstedKomm = c(paste0(c(1106, 1135, 
                            1145, 1146, 
@@ -50,14 +50,14 @@ Tabell_03321_00 <- ApiData(
 ```
 
 ```{r}
-names(Tabell_03321_00)[[1]] <- "desc"
+names(Tab_03321_00)[[1]] <- "desc"
 ```
 
 ```{r}
-Tabell_03321_00 <- Tabell_03321_00$dataset %>% 
+Tab_03321_00 <- Tab_03321_00$dataset %>% 
   mutate(
-    NavnArbstedKomm = Tabell_03321_00$desc$arbeidsstedskommune,
-    NavnBokommuen = Tabell_03321_00$desc$bostedskommune
+    NavnArbstedKomm = Tab_03321_00$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_00$desc$bostedskommune
   ) %>% 
   unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
   unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
@@ -69,11 +69,29 @@ Tabell_03321_00 <- Tabell_03321_00$dataset %>%
   )
 ```
 
+```{r}
+Tab_03321_00 <- Tab_03321_00 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_00$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
 
 # Tabell for år 2001
 
 ```{r}
-Tabell_03321_01 <- ApiData(
+Tab_03321_01 <- ApiData(
   urlToData = "03321",
   ArbstedKomm = c(paste0(c(1106, 1135, 
                            1145, 1146, 
@@ -105,14 +123,14 @@ Tabell_03321_01 <- ApiData(
 ```
 
 ```{r}
-names(Tabell_03321_01)[[1]] <- "desc"
+names(Tab_03321_01)[[1]] <- "desc"
 ```
 
 ```{r}
-Tabell_03321_01 <- Tabell_03321_01$dataset %>% 
+Tab_03321_01 <- Tab_03321_01$dataset %>% 
   mutate(
-    NavnArbstedKomm = Tabell_03321_01$desc$arbeidsstedskommune,
-    NavnBokommuen = Tabell_03321_01$desc$bostedskommune
+    NavnArbstedKomm = Tab_03321_01$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_01$desc$bostedskommune
   ) %>% 
   unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
   unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
@@ -124,8 +142,27 @@ Tabell_03321_01 <- Tabell_03321_01$dataset %>%
   )
 ```
 
+```{r}
+Tab_03321_01 <- Tab_03321_01 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_01$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
 
 # Tabell for år 2002
+
 
 
 
