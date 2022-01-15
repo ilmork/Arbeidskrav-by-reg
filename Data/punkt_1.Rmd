@@ -193,7 +193,7 @@ names(Haug_raw)[[1]]<-"desc1"
 
 ```{r}
 Haug <- Haug %>% 
-  mutate(knavn = Haug$desc1$region)
+  mutate(knavn = Sunn$desc2$region)
 ```
 
 ```{r}
@@ -213,7 +213,65 @@ Haug <- Haug %>%
 rm(Haug_raw)
 ```
 
+
 ## Sunnhordland inkludert Hardanger
+
+```{r}
+Sunn_raw <- ApiData(
+  url = "07984",
+  Region = list("vs:KommunerS", c(
+    "4611",
+    "4612",
+    "4613",
+    "4614",
+    "4615",
+    "4616",
+    "4617",
+    "4618")), 
+  NACE2007 = TRUE,
+  Kjonn = "0",
+  ContentsCode = "SysselsatteArb",
+  Tid = c(as.character(2008:2020))
+)
+```
+
+## Endre navn 
+
+```{r}
+Sunn <- Sunn_raw$dataset %>% 
+  tibble() %>% 
+  rename(
+    Knr = Region, 
+    Naering = NACE2007,
+    Aar = Tid
+  )
+```
+
+```{r}
+names(Sunn_raw)[[1]]<-"desc2"
+```
+
+```{r}
+Sunn <- Sunn %>% 
+  mutate(knavn = Sunn$desc2$region)
+```
+
+```{r}
+Sunn <- Sunn %>%
+  select(-NAstatus)
+```
+
+
+```{r}
+Sunn <- Sunn %>% 
+  pivot_wider(
+    names_from = Naering,
+    values_from = value)
+```
+
+```{r}
+rm(Sunn_raw)
+```
 
 
 ## Endre navn
