@@ -112,6 +112,42 @@ Tabell1 <- Tabell1 %>%
 
 
 ```{r}
+names(Tabell1)[[6]] <- "Alle naeringer"
+names(Tabell1)[[7]] <- "Jordbruk, skogbruk og fiske"
+names(Tabell1)[[8]] <- "Bergverksdrift og utvinning"
+names(Tabell1)[[9]] <- "Industri"
+names(Tabell1)[[10]] <- "Elektrisitet, vann og renevasjon"
+names(Tabell1)[[11]] <- "Bygge- og anleggsvirksomhet"
+names(Tabell1)[[12]] <- "Varehandel, reparasjon av motorvogner"
+names(Tabell1)[[13]] <- "Transport og lagring"
+names(Tabell1)[[14]] <- "Overnattings- og serveringsvriksomhet"
+names(Tabell1)[[15]] <- "Informasjon og kommunikasjon"
+names(Tabell1)[[16]] <- "Finansiering og forsikring "
+names(Tabell1)[[17]] <- "Teknisk tjenesteyting, eiendosmdrift"
+names(Tabell1)[[18]] <- "Forretningsmessig tjenesteyting"
+names(Tabell1)[[19]] <- "Off.adm., forsvar, sosialforsikring"
+names(Tabell1)[[20]] <- "Undervisning"
+names(Tabell1)[[21]] <- "Helse- og sosialtjenester"
+names(Tabell1)[[22]] <- "Personlig tjenesteyting"
+names(Tabell1)[[23]] <- "Uoppgitt"
+```
+## THIBIGA
+* Fikk ikke til å bruke "rename()", bruker heller "names()". 
+* Endret navnene på variablene 7-23. Gir bedre oversikt. 
+
+```{r}
+Tabell1 <- Tabell1[Tabell1$`Alle naeringer` !=0,]
+```
+## THIBIGA
+* Denne fjerner fjerner radene med verdi 0.
+* Nødvendig??
+
+```{r}
+Tabell1[1][(Tabell1)[1]=="1211"]<-"4611"
+```
+
+
+```{r}
 rm(Tabell1_raw)
 ```
 ## Thibiga 
