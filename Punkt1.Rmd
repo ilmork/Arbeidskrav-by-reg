@@ -29,9 +29,9 @@ show_col_types = FALSE
 
 ```{r} 
 Tabell1 %>% 
-select(Alder, variables, ContentsCode) %>% 
+select(Alder, Variables, ContentsCode) %>% 
   Filter(
-    variables %in% c("Alle naeringer", "Jordbruk, skogbruk og fiske", "Bergverksdrift og utvinning", "Industri", "Elektrisitet, vann og renevasjon", "Bygge- og anleggsvirksomhet","Varehandel, reparasjon av motorvogner", "Transport og lagring", "Overnattings- og serveringsvriksomhet", "Informasjon og kommunikasjon", "Finansiering og forsikring ", "Teknisk tjenesteyting, eiendosmdrift", "Forretningsmessig tjenesteyting", "Off.adm., forsvar, sosialforsikring", "Undervisning", "Helse- og sosialtjenester", "Personlig tjenesteyting", "Uoppgitt")
+    Variables %in% c("Alle naeringer", "Jordbruk, skogbruk og fiske", "Bergverksdrift og utvinning", "Industri", "Elektrisitet, vann og renevasjon", "Bygge- og anleggsvirksomhet","Varehandel, reparasjon av motorvogner", "Transport og lagring", "Overnattings- og serveringsvriksomhet", "Informasjon og kommunikasjon", "Finansiering og forsikring ", "Teknisk tjenesteyting, eiendosmdrift", "Forretningsmessig tjenesteyting", "Off.adm., forsvar, sosialforsikring", "Undervisning", "Helse- og sosialtjenester", "Personlig tjenesteyting", "Uoppgitt")
   ) %>% 
 ggplot(data = mpg, mapping = aes(x = Alder, y = ContentsCode)) + 
   geom_point(mapping = aes(color = class)) + 

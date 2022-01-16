@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 ```{r}
 Nas_arbeid_raw <- ApiData(
   urlToData = "07984",
-  Region = "0",
+  Region = list("vs:Landet", c("0"))
   NACE2007 = TRUE,
   Kjonn = "0",
   ContentsCode = "SysselsatteArb",
