@@ -17,6 +17,19 @@ library(lubridate)
 knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 ```
 
+# Sysselsatte personer etter arbeidssted - Nasjonalt
+
+```{r}
+Nas_arbeid_raw <- ApiData(
+  urlToData = "07984",
+  Region = "0",
+  NACE2007 = TRUE,
+  Kjonn = "0",
+  ContentsCode = "SysselsatteArb",
+  Tid = c(as.character(2008:2020))
+)
+```
+
 # Sysselsatte personer etter arbeidssted
 
 ```{r}
