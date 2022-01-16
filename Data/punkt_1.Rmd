@@ -40,6 +40,59 @@ Nas_arbeid <- Nas_arbeid_raw$dataset %>%
   )
 ```
 
+
+```{r}
+names(Nas_arbeid)[[1]]<-"desc6"
+```
+
+
+```{r}
+Nas_arbeid <- Nas_arbeid %>% 
+  mutate(knavn = Nas_arbeid$desc6$region)
+```
+## THIBIGA
+* Får advarsel når jeg kjører chunken. Hva er feil?
+
+```{r}
+Nas_arbeid <- Nas_arbeid %>%
+  select(-NAstatus)
+```
+
+
+```{r}
+Nas_arbeid <- Nas_arbeid %>% 
+  pivot_wider(
+    names_from = Naering,
+    values_from = value)
+```
+
+
+```{r}
+names(Nas_arbeid)[[6]] <- "Alle naeringer"
+names(Nas_arbeid)[[7]] <- "Jordbruk, skogbruk og fiske"
+names(Nas_arbeid)[[8]] <- "Bergverksdrift og utvinning"
+names(Nas_arbeid)[[9]] <- "Industri"
+names(Nas_arbeid)[[10]] <- "Elektrisitet, vann og renevasjon"
+names(Nas_arbeid)[[11]] <- "Bygge- og anleggsvirksomhet"
+names(Nas_arbeid)[[12]] <- "Varehandel, reparasjon av motorvogner"
+names(Nas_arbeid)[[13]] <- "Transport og lagring"
+names(Nas_arbeid)[[14]] <- "Overnattings- og serveringsvriksomhet"
+names(Nas_arbeid)[[15]] <- "Informasjon og kommunikasjon"
+names(Nas_arbeid)[[16]] <- "Finansiering og forsikring "
+names(Nas_arbeid)[[17]] <- "Teknisk tjenesteyting, eiendosmdrift"
+names(Nas_arbeid)[[18]] <- "Forretningsmessig tjenesteyting"
+names(Nas_arbeid)[[19]] <- "Off.adm., forsvar, sosialforsikring"
+names(Nas_arbeid)[[20]] <- "Undervisning"
+names(Nas_arbeid)[[21]] <- "Helse- og sosialtjenester"
+names(Nas_arbeid)[[22]] <- "Personlig tjenesteyting"
+names(Nas_arbeid)[[23]] <- "Uoppgitt"
+```
+
+
+```{r}
+Nas_arbeid <- Nas_arbeid[Nas_arbeid$`Alle naeringer` !=0,]
+```
+
 # Sysselsatte personer etter arbeidssted
 
 ```{r}
