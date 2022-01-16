@@ -3,3 +3,26 @@ title: "R Notebook"
 output: html_notebook
 ---
 
+```{r}
+suppressPackageStartupMessages({
+library(tidyverse)
+library(lubridate)
+library(modelr)
+library(broom)
+library(lmtest)
+library(sandwich)
+library(viridis)
+})
+knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+```
+
+# Modeller
+
+## Leser inn data
+```{r}
+Tabell1 <- read_csv("~/Regionaløkonomi/Arbeidskrav-by-reg/Data/Tabell1.csv")
+show_col_types = FALSE
+```
+
+
+
