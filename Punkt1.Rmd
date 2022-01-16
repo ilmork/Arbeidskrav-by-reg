@@ -19,10 +19,35 @@ knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 # Modeller
 
 ## Leser inn data
+
 ```{r}
-Tabell1 <- read_csv("~/Regionaløkonomi/Arbeidskrav-by-reg/Data/Tabell1.csv")
+Tabell1 <- read_csv("Data/Tabell1.csv")
+View(Tabell1)
 show_col_types = FALSE
+```
+ 
+
+```{r}
+Tabell1 %>% 
+select(Aar, variables, ContentsCode) %>% 
+  Filter(
+    variables %in% c("Alle naeringer", "Jordbruk, skogbruk og fiske", "Bergverksdrift og utvinning", "Industri", "Elektrisitet, vann og renevasjon", "Bygge- og anleggsvirksomhet","Varehandel, reparasjon av motorvogner", "Transport og lagring", "Overnattings- og serveringsvriksomhet", "Informasjon og kommunikasjon", "Finansiering og forsikring ", "Teknisk tjenesteyting, eiendosmdrift", "Forretningsmessig tjenesteyting", "Off.adm., forsvar, sosialforsikring", "Undervisning", "Helse- og sosialtjenester", "Personlig tjenesteyting", "Uoppgitt")
+  ) %>% 
+ggplot(data = mpg, mapping = aes(x = Aar, y = ContentsCode)) + 
+  geom_point(mapping = aes(color = class)) + 
+  geom_smooth(data = filter(mpg, class == "subcompact"), se = FALSE)
+```
+
+```{r}
+coef_df_long %>% 
+  select(aar, variables, coef) %>% 
+  filter(
+    variables %in% c("fnr02", "fnr03", "fnr04", "fnr10", "fnr11", "fnr12", "fnr14")
+  ) %>% 
 ```
 
 
+```{r}
+"Alle naeringer", "Jordbruk, skogbruk og fiske", "Bergverksdrift og utvinning", "Industri", "Elektrisitet, vann og renevasjon", "Bygge- og anleggsvirksomhet","Varehandel, reparasjon av motorvogner", "Transport og lagring", "Overnattings- og serveringsvriksomhet", "Informasjon og kommunikasjon", "Finansiering og forsikring ", "Teknisk tjenesteyting, eiendosmdrift", "Forretningsmessig tjenesteyting", "Off.adm., forsvar, sosialforsikring", "Undervisning", "Helse- og sosialtjenester", "Personlig tjenesteyting", "Uoppgitt"
+```
 
