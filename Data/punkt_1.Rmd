@@ -440,7 +440,7 @@ Haug_bo_raw <- ApiData(
     "1160")), 
   NACE2007 = TRUE,
   Kjonn = "0",
-  ContentsCode = "SysselsatteArb",
+  ContentsCode = "Sysselsatte",
   Tid = c(as.character(2008:2020))
 )
 ```
@@ -510,7 +510,7 @@ Sunn_bo_raw <- ApiData(
     "4618")), 
   NACE2007 = TRUE,
   Kjonn = "0",
-  ContentsCode = "SysselsatteArb",
+  ContentsCode = "Sysselsatte",
   Tid = c(as.character(2008:2020))
 )
 ```
