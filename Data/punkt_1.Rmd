@@ -54,11 +54,6 @@ Tabell1_raw <- ApiData(
   )
 ```
 
-## Kommentarer fra Thibiga 
-* Vi har ikke inkludert "Alder", men får det opp som en variabel. 
-* "NACE2007" bruke "00" eller TRUE
-* SSB - vi valgte "År", men ble ikke med på JSON-spørringen. Hva skjer hvis vi bruker tekststreng as.character().
-* HAr nå inkludert variablen "Tid"
 
 ```{r}
 Tabell1 <- Tabell1_raw$dataset %>% 
@@ -72,25 +67,16 @@ Tabell1 <- Tabell1_raw$dataset %>%
 
 
 ```{r}
-head(Tabell1)
-```
-## THIBIGA
-* Hva gjør denne chunken? Trenger vi den?
-
-```{r}
 names(Tabell1_raw)[[1]]<-"desc"
 ```
-## THIBIGA
-* hentet fra arbeidskrav 4 "Vi skal også hente ut det offisielle kommunenavn fra det første elementet i pm2_raw. For å slippe å hanske
-med det uhåndterlig lange navnet på dette elementet skifter vi først navn på dette til “desc”."
-* Trenger vi denne?
+
 
 ```{r}
 Tabell1 <- Tabell1 %>% 
   mutate(knavn = Tabell1$desc$region)
 ```
 ## THIBIGA
-* Får advarsel når jeg kjører chunken. 
+* Får advarsel når jeg kjører chunken. Hva er feil?
 
 ```{r}
 Tabell1 <- Tabell1 %>%
@@ -105,7 +91,6 @@ Tabell1 <- Tabell1 %>%
     values_from = value)
 ```
 
-## Ingrid - blir denne pivot-wideren rett?
 
 ```{r}
 names(Tabell1)[[6]] <- "Alle naeringer"
@@ -147,7 +132,7 @@ Tabell1[1][(Tabell1)[1]=="1224"]<-"4617"
 Tabell1[1][(Tabell1)[1]=="1231"]<-"4618"
 ```
 
-## INGRID - er siste rett "1228+1231"?
+## INGRID - sal siste være "1228+1231"?
 
 ```{r}
 rm(Tabell1_raw)
@@ -208,8 +193,6 @@ Haug_arbeid <- Haug_arbeid %>%
     names_from = Knr,
     values_from = value)
 ```
-## THIBIGA
-Har gjort en endring her, endret fra "Naering" til "Knr". Hvis vi bruker Knr får vi kommunenummerene som variabel. "Vi trenger antall sysselsatte innenfor ulike bransjer per kommune ... .". Nå kan vi endre navnene på knr'ene.
 
 ```{r}
 names(Haug_arbeid)[[6]] <- "Haugesund"
@@ -224,7 +207,6 @@ names(Haug_arbeid)[[12]] <- "Vindafjord"
 ```{r}
 rm(Haug_arbeid_raw)
 ```
-
 
 ## Sunnhordland inkludert Hardanger
 
@@ -296,12 +278,6 @@ names(Sunn_arbeid)[[13]] <- "Odda+Ullensvang"
 rm(Sunn_arbeid_raw)
 ```
 
-
-## Endre navn
-
-## skal både beskrive situasjonen slik den er for det siste året dere har data, og for utviklingen over tid. Studer først sysselsettingsutviklingen for ulike næringer i ulike kommuner, og for regionen samlet.
-
-
 # Sysselsatte personer etter bosted
 
 ```{r}
@@ -338,8 +314,6 @@ Tabell2_raw <- ApiData(
   Tid = c(as.character(2008:2020))
   )
 ```
-## THIBIGA
-Forskjellen er at nå bruker "Sysselsatte" mens i den forrige brukte vi "SysselsatteArb".
 
 ```{r}
 Tabell2 <- Tabell2_raw$dataset %>% 
@@ -364,14 +338,7 @@ Tabell2 <- Tabell2 %>%
   mutate(knavn = Tabell2$desc3$region)
 ```
 ## THIBIGA
-* Får advarsel når jeg kjører chunken. 
-
-```{r}
-## Tabell2 <- Tabell2 %>%
-  ## select(-NAstatus)
-```
-## THIBIGA
-Denne chunken vil ikke kjøre, skal vi bare fjerne den? Det er igen variabel som heter (-NAstatus), så vi kan bare fjerne denne.
+* Får advarsel når jeg kjører chunken. Hva er feil?
 
 ```{r}
 Tabell2 <- Tabell2 %>% 
@@ -379,8 +346,6 @@ Tabell2 <- Tabell2 %>%
     names_from = Naering,
     values_from = value)
 ```
-
-## Ingrid - blir denne pivot-wideren rett?
 
 ```{r}
 names(Tabell2)[[6]] <- "Alle naeringer"
@@ -417,7 +382,8 @@ Tabell2[1][(Tabell2)[1]=="1223"]<-"4616"
 Tabell2[1][(Tabell2)[1]=="1224"]<-"4617"
 Tabell2[1][(Tabell2)[1]=="1231"]<-"4618"
 ```
-## INGRID - er siste rett "1228+1231"?
+
+## INGRID - skal siste være 1231 + 1228?
 
 ```{r}
 rm(Tabell2_raw)
@@ -541,7 +507,6 @@ Sunn_bo <- Sunn_bo %>%
   select(-NAstatus)
 ```
 
-
 ```{r}
 Sunn_bo <- Sunn_bo %>% 
   pivot_wider(
@@ -563,8 +528,6 @@ names(Sunn_bo)[[13]] <- "Odda+Ullensvang"
 ```{r}
 rm(Sunn_bo_raw)
 ```
-
-
 
 ## .csv-filer
 
