@@ -22,12 +22,22 @@ knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 ```{r}
 Nas_arbeid_raw <- ApiData(
   urlToData = "07984",
-  Region = list("vs:Landet", c("0"))
+  Region = "0",
   NACE2007 = TRUE,
   Kjonn = "0",
   ContentsCode = "SysselsatteArb",
   Tid = c(as.character(2008:2020))
 )
+```
+
+```{r}
+Nas_arbeid <- Nas_arbeid_raw$dataset %>% 
+  tibble() %>% 
+  rename(
+    Knr = Region, 
+    Naering = NACE2007,
+    Aar = Tid
+  )
 ```
 
 # Sysselsatte personer etter arbeidssted
