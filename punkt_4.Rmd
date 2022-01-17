@@ -163,6 +163,1392 @@ Tab_03321_01 <- Tab_03321_01 %>%
 
 # Tabell for år 2002
 
+```{r}
+Tab_03321_02 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151, 
+                           1154, 1159, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1154, 1159, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2002"
+  )
+```
+
+```{r}
+names(Tab_03321_02)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_02 <- Tab_03321_02$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_02$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_02$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_02 <- Tab_03321_02 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_02$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+# Tabell for år 2003
+
+```{r}
+Tab_03321_03 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151, 
+                           1154, 1159, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1154, 1159, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2003"
+  )
+```
+
+```{r}
+names(Tab_03321_03)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_03 <- Tab_03321_03$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_03$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_03$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_03 <- Tab_03321_03 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_03$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+# Tabell for år 2004
+
+```{r}
+Tab_03321_04 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151, 
+                           1154, 1159, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1154, 1159, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2004"
+  )
+```
+
+```{r}
+names(Tab_03321_04)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_04 <- Tab_03321_04$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_04$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_04$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_04 <- Tab_03321_04 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_04$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+# Tabell for år 2005
+
+```{r}
+Tab_03321_05 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151,
+                           1160, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1160, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2005"
+  )
+```
+
+```{r}
+names(Tab_03321_05)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_05 <- Tab_03321_05$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_05$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_05$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_05 <- Tab_03321_05 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_05$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+# Tabell for år 2006
+
+```{r}
+Tab_03321_06 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151,
+                           1160, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1160, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2006"
+  )
+```
+
+```{r}
+names(Tab_03321_06)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_06 <- Tab_03321_06$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_06$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_06$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_06 <- Tab_03321_06 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_06$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+# Tabell for år 2007
+
+```{r}
+Tab_03321_07 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151,
+                           1160, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1160, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2007"
+  )
+```
+
+```{r}
+names(Tab_03321_07)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_07 <- Tab_03321_07$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_07$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_07$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_07 <- Tab_03321_07 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_07$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+# Tabell for år 2008
+
+```{r}
+Tab_03321_08 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151,
+                           1160, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1160, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2008"
+  )
+```
+
+```{r}
+names(Tab_03321_08)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_08 <- Tab_03321_08$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_08$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_08$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_08 <- Tab_03321_08 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_08$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+# Tabell for år 2009
+
+```{r}
+Tab_03321_09 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151,
+                           1160, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1160, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2009"
+  )
+```
+
+```{r}
+names(Tab_03321_09)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_09 <- Tab_03321_09$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_09$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_09$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_09 <- Tab_03321_09 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_09$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+# Tabell for år 2010
+
+```{r}
+Tab_03321_10 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151,
+                           1160, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1160, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2010"
+  )
+```
+
+```{r}
+names(Tab_03321_10)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_10 <- Tab_03321_10$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_10$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_10$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_10 <- Tab_03321_10 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_10$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+# Tabell for år 2011
+
+```{r}
+Tab_03321_11 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151,
+                           1160, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1160, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2011"
+  )
+```
+
+```{r}
+names(Tab_03321_11)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_11 <- Tab_03321_11$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_11$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_11$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_11 <- Tab_03321_11 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_11$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+# Tabell for år 2012
+
+```{r}
+Tab_03321_12 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151,
+                           1160, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1160, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2012"
+  )
+```
+
+```{r}
+names(Tab_03321_12)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_12 <- Tab_03321_12$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_12$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_12$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_12 <- Tab_03321_12 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_12$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+# Tabell for år 2013
+
+```{r}
+Tab_03321_13 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151,
+                           1160, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1160, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2013"
+  )
+```
+
+```{r}
+names(Tab_03321_13)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_13 <- Tab_03321_13$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_13$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_13$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_13 <- Tab_03321_13 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_13$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+# Tabell for år 2014
+
+```{r}
+Tab_03321_14 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151,
+                           1160, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1160, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2014"
+  )
+```
+
+```{r}
+names(Tab_03321_14)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_14 <- Tab_03321_14$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_14$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_14$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_14 <- Tab_03321_14 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_14$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+# Tabell for år 2015
+
+```{r}
+Tab_03321_15 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151,
+                           1160, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1160, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2015"
+  )
+```
+
+```{r}
+names(Tab_03321_15)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_15 <- Tab_03321_15$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_15$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_15$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_15 <- Tab_03321_15 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_15$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+# Tabell for år 2016
+
+```{r}
+Tab_03321_16 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151,
+                           1160, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1160, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2016"
+  )
+```
+
+```{r}
+names(Tab_03321_16)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_16 <- Tab_03321_16$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_16$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_16$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_16 <- Tab_03321_16 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_16$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+# Tabell for år 2017
+
+```{r}
+Tab_03321_17 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151,
+                           1160, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1160, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2017"
+  )
+```
+
+```{r}
+names(Tab_03321_17)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_17 <- Tab_03321_17$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_17$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_17$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_17 <- Tab_03321_17 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_17$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+# Tabell for år 2018
+
+```{r}
+Tab_03321_18 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151,
+                           1160, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1160, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2018"
+  )
+```
+
+```{r}
+names(Tab_03321_18)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_18 <- Tab_03321_18$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_18$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_18$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_18 <- Tab_03321_18 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_18$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+# Tabell for år 2019
+
+```{r}
+Tab_03321_19 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151,
+                           1160, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1160, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       ""
+                       )
+                ),
+  Tid = "2019"
+  )
+```
+
+```{r}
+names(Tab_03321_19)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_19 <- Tab_03321_19$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_19$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_19$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_19 <- Tab_03321_19 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_19$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+# Tabell for år 2020
+
+```{r}
+Tab_03321_20 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151,
+                           1160,
+                           4611, 4612, 
+                           4613, 4614, 
+                           4615, 4616, 
+                           4617, 4618),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151,
+                           1160,
+                           4611, 4612, 
+                           4613, 4614, 
+                           4615, 4616, 
+                           4617, 4618),
+                       ""
+                       )
+                ),
+  Tid = "2020"
+  )
+```
+
+```{r}
+names(Tab_03321_20)[[1]] <- "desc"
+```
+
+```{r}
+Tab_03321_20 <- Tab_03321_20$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_03321_20$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_03321_20$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_03321_20 <- Tab_03321_20 %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_20$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
+
+
+
+
+
 
 
 
