@@ -10,6 +10,7 @@ library(tidyverse)
 library(lubridate)
 library(PxWebApiData)
 library(readr)
+library(ggplot2)
 })
 #knitr::opts_chunk$set(eval=FALSE)
 ```
@@ -1547,6 +1548,99 @@ Tab_03321_20 <- Tab_03321_20 %>%
 
 
 
+
+# Sammenslåing av tabellene
+
+```{r}
+Tab_0321_00_04 <- rbind(Tab_03321_00, Tab_03321_01, Tab_03321_02, Tab_03321_03, Tab_03321_04)
+```
+
+```{r}
+Tab_0321_05_19 <- rbind(Tab_03321_05, Tab_03321_06, Tab_03321_06, Tab_03321_07, Tab_03321_08, Tab_03321_09, Tab_03321_10, Tab_03321_11, Tab_03321_12, Tab_03321_13, Tab_03321_14, Tab_03321_15, Tab_03321_16, Tab_03321_17, Tab_03321_18, Tab_03321_19)
+```
+
+
+# Tabell 0321 for alle år - Atlerantiv måte for ggplot? (Trenger hjelp med dette Arnstein)
+
+```{r}
+Tab_Test_Alle_Aar <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151, 
+                           1154, 1159, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231, 1160,
+                           4611, 4612, 
+                           4613, 4614, 
+                           4615, 4616, 
+                           4617, 4618),
+                         ""
+                         )
+                  ), 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1154, 1159, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231, 1160,
+                         4611, 4612, 
+                         4613, 4614,
+                         4615, 4616, 
+                         4617, 4618),
+                       ""
+                       )
+                ),
+  Tid = c(as.character(2000:2020))
+  )
+```
+
+
+```{r}
+names(Tab_Test_Alle_Aar)[[1]] <- "desc"
+```
+
+
+```{r}
+Tab_Test_Alle_Aar <- Tab_Test_Alle_Aar$dataset %>% 
+  mutate(
+    NavnArbstedKomm = Tab_Test_Alle_Aar$desc$arbeidsstedskommune,
+    NavnBokommuen = Tab_Test_Alle_Aar$desc$bostedskommune
+  ) %>% 
+  unite("ArbstedKomm", NavnArbstedKomm, ArbstedKomm) %>% 
+  unite("Bokommuen", NavnBokommuen, Bokommuen) %>% 
+  select(-ContentsCode, -Tid) %>% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )
+```
+
+```{r}
+Tab_Test_Alle_Aar <- Tab_Test_Alle_Aar %>% 
+  rename(Bokommune = Bokommuen) %>% 
+  select(-Bokommune) %>%
+  mutate(
+         Tot_bosted = rowSums(.),
+         Pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
+         Tot_arb_komm = colSums(.),
+         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_Test_Alle_Aar$Bokommuen
+                    ) %>% 
+  select(Bokommune, everything())
+```
 
 
 
