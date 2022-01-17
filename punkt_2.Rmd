@@ -17,9 +17,9 @@ library(REAT)
 knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 ```
 
-2.  Mål for beskrivelse av næringsstrukturen.
+# 2. Mål for beskrivelse av næringsstrukturen.
 
-Haugesund, bergverksdrift og utvinning:
+
 
 ```{r hente datasett}
 Haug_arbeid <- read_csv("Data/Haug_arbeid.csv") 
@@ -51,9 +51,13 @@ rm (arbeid_punkt2_first, Haug_arbeid, Sunn_arbeid)
 
 %\>%
 
+## Lokaliseringskvotienter
+
 ```{r df 2008}
 df2008 = filter(arbeid_punkt2, Aar == c("2008"))
 ```
+
+### Haugesund: 05-09 Bergverksdrift og utvinning
 
 ```{r 2008}
 locq(452, 21322, 1338, 47530, industry.names = Bergverksdrift_utvinning_2008, plot.results = FALSE,
@@ -103,6 +107,26 @@ stabiliteten i slike koeffisienter over tid og rom. Gjør beregningene
 for ulike aggregeringsnivåer av næringer og geografi, og identifiser
 mulige S basert på verdiene for lokaliseringskvotienten.
 
+### Haugesund: 86-88 Helse- og sosialtjenester
+
+```{r}
+locq(4812, 21322, 9596, 47530, industry.names = Helse_og_sosialtjen_2008, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(5096, 22190, 10425, 49518, industry.names = Helse_og_sosialtjen_2014, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(5608, 21429, 11050, 49295, industry.names = Helse_og_sosialtjen_2019, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
 \#\#\#\#\#\#\#\#\#\#\#
 
 Gjør også en vurdering av hvor konsentrert/spredt en næring er fordelt
@@ -112,6 +136,22 @@ sysselsetting i regionen, eller samlet sysselsetting for nasjonen, og
 finn gjerne ut hvilken rolle det spiller om en bruker regionale eller
 nasjonale anslag for samlet sysselsetting. Gjør gjerne disse
 beregningene både for det første og det siste året i datagrunnlaget.
+
+## Gini-indeks
+
+Helse- og sosialtjenester i Haugesund/Geografien i år 2008: 
+
+```{r}
+(4812/9596)-(21322/47530)
+```
+
+Helse- og sosialtjenester i Haugesund/Geografien i år 2019: 
+
+```{r}
+(5608/11050)-(21429/49295)
+```
+
+
 
 Har næringsstrukturen i regionen blitt mer eller mindre diversifisert,
 mangfoldig, over tid? Beregn en regional mangfold-indeks (for eksempel
