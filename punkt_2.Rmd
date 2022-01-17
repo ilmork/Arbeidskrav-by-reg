@@ -1,24 +1,121 @@
 ---
 title: "Punkt 2."
 output: html_notebook
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
-2. Mål for beskrivelse av næringsstrukturen.
+```{r}
+suppressPackageStartupMessages({
+library(PxWebApiData)
+library(dplyr)
+library(tidyverse)
+library(lubridate)
+library(REAT)
+})
+knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+```
 
-Beregn lokaliseringskvotienter for ulike næringer i ulike kommuner, og for regionen(e) samlet. Gjør
-dette for noen enkeltår, og diskuter stabiliteten i slike koeffisienter over tid og rom. Gjør beregningene
-for ulike aggregeringsnivåer av næringer og geografi, og identifiser mulige klynger basert på verdiene
-for lokaliseringskvotientene.
+2.  Mål for beskrivelse av næringsstrukturen.
 
-Lokaliseringskvotient: andelen antall arbeidsplasser i bransjen utgjør av samlet sysselsetting i området, dividert med andelen bransjen utgjør av samlet sysselsetting i Norge
+Haugesund, bergverksdrift og utvinning:
 
-Gjør også en vurdering av hvor konsentrert/spredt en næring er fordelt mellom kommunene i
-regionen, basert på beregninger av den romlige Gini-indeksen. Vurder om sammenligningsgrunnlaget
-bør være samlet sysselsetting i regionen, eller samlet sysselsetting for nasjonen, og finn gjerne ut
-hvilken rolle det spiller om en bruker regionale eller nasjonale anslag for samlet sysselsetting. Gjør
-gjerne disse beregningene både for det første og det siste året i datagrunnlaget.
+```{r hente datasett}
+Haug_arbeid <- read_csv("Data/Haug_arbeid.csv") 
+Sunn_arbeid <- read_csv("Data/Sunn_arbeid.csv")
+```
 
-Har næringsstrukturen i regionen blitt mer eller mindre diversifisert, mangfoldig, over tid? Beregn
-en regional mangfold-indeks (for eksempel RDI i boken til McCann), og finn hvordan verdiene på
-en slik indeks er endret over tid. Vurder også nå om sysselsettingsandelene skal sammenlignes med
-nasjonale eller regionale andeler for de ulike næringene.
+```{r rydde datasett H}
+Haug_arbeid_punkt2 = mutate(Haug_arbeid, tot_H = Haugesund+Sauda+Bokn+Tysvaer+Karmoey+Utsira+Vindafjord)
+Haug_arbeid_punkt2 = filter(Haug_arbeid_punkt2, Alder == c("15-74"))
+```
+
+```{r rydde datasett S}
+names(Sunn_arbeid)[[13]] <- "Odda_og_Ullensvang"
+Sunn_arbeid_punkt2 = mutate(Sunn_arbeid, tot_S =  Etne+Sveio+Boemlo+Stord+Fitjar+Tysnes+Kvinnherad+Odda_og_Ullensvang)
+Sunn_arbeid_punkt2 = filter(Sunn_arbeid_punkt2, Alder == c("15-74"))
+```
+
+```{r left_join}
+arbeid_punkt2_first = left_join(Haug_arbeid_punkt2, Sunn_arbeid_punkt2)
+```
+
+```{r legge inn total av alle kommuner}
+arbeid_punkt2 =mutate(arbeid_punkt2_first, tot = tot_H+tot_S)
+```
+
+```{r rydde}
+rm (arbeid_punkt2_first, Haug_arbeid, Sunn_arbeid)
+```
+
+%\>%
+
+```{r df 2008}
+df2008 = filter(arbeid_punkt2, Aar == c("2008"))
+```
+
+```{r 2008}
+locq(452, 21322, 1338, 47530, industry.names = Bergverksdrift_utvinning_2008, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r df 2014}
+df2014 = filter(arbeid_punkt2, Aar == c("2014"))
+```
+
+```{r 2014}
+locq(416, 22190, 1521, 49518, industry.names = Bergverksdrift_utvinning_2014, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r df 2019}
+df2019 = filter(arbeid_punkt2, Aar == c("2019"))
+```
+
+```{r 2020}
+locq(685, 21429, 1752, 49295, industry.names = Bergverksdrift_utvinning_2020, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+Her har vi beregnet lokaliseringskvotient for næringen "bergverksdrift
+og utvinning" med NACE-kode 05-09. Den beregnes slik: (sysselsetting i
+gitt bransje i Haugesund/total sysselsetting i Haugesund)/(sysselsetting
+i gitt bransje i alle kommunene/sysselsetting i alle kommunene vi har
+med i oppgaven vår).
+
+Som vi kan se har lokaliseringskvotienten her endret seg noe med tiden.
+Dette tolker vi som at konsentrasjonen av industrien (bergverksdrift og
+utvinning) i Haugesund er i endring, men fordi tallet hele tiden er
+lavere enn 1, kan vi se at industrien er underrepresentert i Haugesund,
+målt opp mot hele området vårt (alle kommunene i vårt datasett).
+
+Det er flere grunner til at lokaliseringskvotienten endrer seg. En kan
+være at antall sysselsatte innenfor næringer øker i kommunen, eller at
+totalt antall i næringen i regionen minker.
+
+Beregn lokaliseringskvotienter for ulike næringer i ulike kommuner, og
+for regionen(e) samlet. Gjør dette for noen enkeltår, og diskuter
+stabiliteten i slike koeffisienter over tid og rom. Gjør beregningene
+for ulike aggregeringsnivåer av næringer og geografi, og identifiser
+mulige S basert på verdiene for lokaliseringskvotienten.
+
+\#\#\#\#\#\#\#\#\#\#\#
+
+Gjør også en vurdering av hvor konsentrert/spredt en næring er fordelt
+mellom kommunene i regionen, basert på beregninger av den romlige
+Gini-indeksen. Vurder om sammenligningsgrunnlaget bør være samlet
+sysselsetting i regionen, eller samlet sysselsetting for nasjonen, og
+finn gjerne ut hvilken rolle det spiller om en bruker regionale eller
+nasjonale anslag for samlet sysselsetting. Gjør gjerne disse
+beregningene både for det første og det siste året i datagrunnlaget.
+
+Har næringsstrukturen i regionen blitt mer eller mindre diversifisert,
+mangfoldig, over tid? Beregn en regional mangfold-indeks (for eksempel
+RDI i boken til McCann), og finn hvordan verdiene på en slik indeks er
+endret over tid. Vurder også nå om sysselsettingsandelene skal
+sammenlignes med nasjonale eller regionale andeler for de ulike
+næringene.
