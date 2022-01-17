@@ -217,14 +217,80 @@ pre code {
 
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VwcHJlc3NQYWNrYWdlU3RhcnR1cE1lc3NhZ2VzKHtcbmxpYnJhcnkodGlkeXZlcnNlKVxubGlicmFyeShsdWJyaWRhdGUpXG5saWJyYXJ5KFB4V2ViQXBpRGF0YSlcbmxpYnJhcnkocmVhZHIpXG59KVxuI2tuaXRyOjpvcHRzX2NodW5rJHNldChldmFsPUZBTFNFKVxuYGBgIn0= -->
+<pre class="r"><code>suppressPackageStartupMessages({
+library(tidyverse)
+library(lubridate)
+library(PxWebApiData)
+library(readr)
+})
+#knitr::opts_chunk$set(eval=FALSE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <div id="tabell-for-år-2000" class="section level1">
 <h1>Tabell for år 2000</h1>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGFiZWxsXzAzMzIxXzAwIDwtIEFwaURhdGEoXG4gIHVybFRvRGF0YSA9IFwiMDMzMjFcIixcbiAgQXJic3RlZEtvbW0gPSBjKHBhc3RlMChjKDExMDYsIDExMzUsIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgMTE0NSwgMTE0NiwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAxMTQ5LCAxMTUxLCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgIDExNTQsIDExNTksIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgMTIxMSwgMTIxNiwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAxMjE5LCAxMjIxLCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgIDEyMjIsIDEyMjMsIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgMTIyNCwgMTIyOCwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAxMjMxKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICBcIlwiXG4gICAgICAgICAgICAgICAgICAgICAgICAgKVxuICAgICAgICAgICAgICAgICAgKSwgXG4gIENvbnRlbnRzQ29kZSA9IFwiU3lzc2Vsc2F0dGVcIixcbiAgQm9rb21tdWVuID0gYyhwYXN0ZTAoYygxMTA2LCAxMTM1LCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAxMTQ1LCAxMTQ2LCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAxMTQ5LCAxMTUxLCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAxMTU0LCAxMTU5LCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAxMjExLCAxMjE2LCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAxMjE5LCAxMjIxLCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAxMjIyLCAxMjIzLCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAxMjI0LCAxMjI4LCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAxMjMxKSxcbiAgICAgICAgICAgICAgICAgICAgICAgXCJcIlxuICAgICAgICAgICAgICAgICAgICAgICApXG4gICAgICAgICAgICAgICAgKSxcbiAgVGlkID0gXCIyMDAwXCJcbiAgKVxuYGBgIn0= -->
+<pre class="r"><code>Tabell_03321_00 &lt;- ApiData(
+  urlToData = &quot;03321&quot;,
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151, 
+                           1154, 1159, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         &quot;&quot;
+                         )
+                  ), 
+  ContentsCode = &quot;Sysselsatte&quot;,
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1154, 1159, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       &quot;&quot;
+                       )
+                ),
+  Tid = &quot;2000&quot;
+  )</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoVGFiZWxsXzAzMzIxXzAwKVtbMV1dIDwtIFwiZGVzY1wiXG5gYGAifQ== -->
+<pre class="r"><code>names(Tabell_03321_00)[[1]] &lt;- &quot;desc&quot;</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGFiZWxsXzAzMzIxXzAwIDwtIFRhYmVsbF8wMzMyMV8wMCRkYXRhc2V0ICU+JSBcbiAgbXV0YXRlKFxuICAgIE5hdm5BcmJzdGVkS29tbSA9IFRhYmVsbF8wMzMyMV8wMCRkZXNjJGFyYmVpZHNzdGVkc2tvbW11bmUsXG4gICAgTmF2bkJva29tbXVlbiA9IFRhYmVsbF8wMzMyMV8wMCRkZXNjJGJvc3RlZHNrb21tdW5lXG4gICkgJT4lIFxuICB1bml0ZShcIkFyYnN0ZWRLb21tXCIsIE5hdm5BcmJzdGVkS29tbSwgQXJic3RlZEtvbW0pICU+JSBcbiAgdW5pdGUoXCJCb2tvbW11ZW5cIiwgTmF2bkJva29tbXVlbiwgQm9rb21tdWVuKSAlPiUgXG4gIHNlbGVjdCgtQ29udGVudHNDb2RlLCAtVGlkKSAlPiUgXG4gIHBpdm90X3dpZGVyKFxuICAgIGlkX2NvbHMgPSBCb2tvbW11ZW4sXG4gICAgbmFtZXNfZnJvbSA9IEFyYnN0ZWRLb21tLFxuICAgIHZhbHVlc19mcm9tID0gdmFsdWVcbiAgKVxuYGBgIn0= -->
+<pre class="r"><code>Tabell_03321_00 &lt;- Tabell_03321_00$dataset %&gt;% 
+  mutate(
+    NavnArbstedKomm = Tabell_03321_00$desc$arbeidsstedskommune,
+    NavnBokommuen = Tabell_03321_00$desc$bostedskommune
+  ) %&gt;% 
+  unite(&quot;ArbstedKomm&quot;, NavnArbstedKomm, ArbstedKomm) %&gt;% 
+  unite(&quot;Bokommuen&quot;, NavnBokommuen, Bokommuen) %&gt;% 
+  select(-ContentsCode, -Tid) %&gt;% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-text-begin -->
@@ -232,10 +298,65 @@ pre code {
 <div id="tabell-for-år-2001" class="section level1">
 <h1>Tabell for år 2001</h1>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGFiZWxsXzAzMzIxXzAxIDwtIEFwaURhdGEoXG4gIHVybFRvRGF0YSA9IFwiMDMzMjFcIixcbiAgQXJic3RlZEtvbW0gPSBjKHBhc3RlMChjKDExMDYsIDExMzUsIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgMTE0NSwgMTE0NiwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAxMTQ5LCAxMTUxLCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgIDExNTQsIDExNTksIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgMTIxMSwgMTIxNiwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAxMjE5LCAxMjIxLCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgIDEyMjIsIDEyMjMsIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgMTIyNCwgMTIyOCwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAxMjMxKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICBcIlwiXG4gICAgICAgICAgICAgICAgICAgICAgICAgKVxuICAgICAgICAgICAgICAgICAgKSwgXG4gIENvbnRlbnRzQ29kZSA9IFwiU3lzc2Vsc2F0dGVcIixcbiAgQm9rb21tdWVuID0gYyhwYXN0ZTAoYygxMTA2LCAxMTM1LCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAxMTQ1LCAxMTQ2LCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAxMTQ5LCAxMTUxLCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAxMTU0LCAxMTU5LCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAxMjExLCAxMjE2LCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAxMjE5LCAxMjIxLCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAxMjIyLCAxMjIzLCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAxMjI0LCAxMjI4LCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAxMjMxKSxcbiAgICAgICAgICAgICAgICAgICAgICAgXCJcIlxuICAgICAgICAgICAgICAgICAgICAgICApXG4gICAgICAgICAgICAgICAgKSxcbiAgVGlkID0gXCIyMDAxXCJcbiAgKVxuYGBgIn0= -->
+<pre class="r"><code>Tabell_03321_01 &lt;- ApiData(
+  urlToData = &quot;03321&quot;,
+  ArbstedKomm = c(paste0(c(1106, 1135, 
+                           1145, 1146, 
+                           1149, 1151, 
+                           1154, 1159, 
+                           1211, 1216, 
+                           1219, 1221, 
+                           1222, 1223, 
+                           1224, 1228, 
+                           1231),
+                         &quot;&quot;
+                         )
+                  ), 
+  ContentsCode = &quot;Sysselsatte&quot;,
+  Bokommuen = c(paste0(c(1106, 1135, 
+                         1145, 1146, 
+                         1149, 1151, 
+                         1154, 1159, 
+                         1211, 1216, 
+                         1219, 1221, 
+                         1222, 1223, 
+                         1224, 1228, 
+                         1231),
+                       &quot;&quot;
+                       )
+                ),
+  Tid = &quot;2001&quot;
+  )</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoVGFiZWxsXzAzMzIxXzAxKVtbMV1dIDwtIFwiZGVzY1wiXG5gYGAifQ== -->
+<pre class="r"><code>names(Tabell_03321_01)[[1]] &lt;- &quot;desc&quot;</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGFiZWxsXzAzMzIxXzAxIDwtIFRhYmVsbF8wMzMyMV8wMSRkYXRhc2V0ICU+JSBcbiAgbXV0YXRlKFxuICAgIE5hdm5BcmJzdGVkS29tbSA9IFRhYmVsbF8wMzMyMV8wMSRkZXNjJGFyYmVpZHNzdGVkc2tvbW11bmUsXG4gICAgTmF2bkJva29tbXVlbiA9IFRhYmVsbF8wMzMyMV8wMSRkZXNjJGJvc3RlZHNrb21tdW5lXG4gICkgJT4lIFxuICB1bml0ZShcIkFyYnN0ZWRLb21tXCIsIE5hdm5BcmJzdGVkS29tbSwgQXJic3RlZEtvbW0pICU+JSBcbiAgdW5pdGUoXCJCb2tvbW11ZW5cIiwgTmF2bkJva29tbXVlbiwgQm9rb21tdWVuKSAlPiUgXG4gIHNlbGVjdCgtQ29udGVudHNDb2RlLCAtVGlkKSAlPiUgXG4gIHBpdm90X3dpZGVyKFxuICAgIGlkX2NvbHMgPSBCb2tvbW11ZW4sXG4gICAgbmFtZXNfZnJvbSA9IEFyYnN0ZWRLb21tLFxuICAgIHZhbHVlc19mcm9tID0gdmFsdWVcbiAgKVxuYGBgIn0= -->
+<pre class="r"><code>Tabell_03321_01 &lt;- Tabell_03321_01$dataset %&gt;% 
+  mutate(
+    NavnArbstedKomm = Tabell_03321_01$desc$arbeidsstedskommune,
+    NavnBokommuen = Tabell_03321_01$desc$bostedskommune
+  ) %&gt;% 
+  unite(&quot;ArbstedKomm&quot;, NavnArbstedKomm, ArbstedKomm) %&gt;% 
+  unite(&quot;Bokommuen&quot;, NavnBokommuen, Bokommuen) %&gt;% 
+  select(-ContentsCode, -Tid) %&gt;% 
+  pivot_wider(
+    id_cols = Bokommuen,
+    names_from = ArbstedKomm,
+    values_from = value
+  )</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-text-begin -->
