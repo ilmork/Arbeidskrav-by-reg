@@ -4,3 +4,21 @@ output: html_notebook
 ---
 
 2. Mål for beskrivelse av næringsstrukturen.
+
+Beregn lokaliseringskvotienter for ulike næringer i ulike kommuner, og for regionen(e) samlet. Gjør
+dette for noen enkeltår, og diskuter stabiliteten i slike koeffisienter over tid og rom. Gjør beregningene
+for ulike aggregeringsnivåer av næringer og geografi, og identifiser mulige klynger basert på verdiene
+for lokaliseringskvotientene.
+
+Lokaliseringskvotient: andelen antall arbeidsplasser i bransjen utgjør av samlet sysselsetting i området, dividert med andelen bransjen utgjør av samlet sysselsetting i Norge
+
+Gjør også en vurdering av hvor konsentrert/spredt en næring er fordelt mellom kommunene i
+regionen, basert på beregninger av den romlige Gini-indeksen. Vurder om sammenligningsgrunnlaget
+bør være samlet sysselsetting i regionen, eller samlet sysselsetting for nasjonen, og finn gjerne ut
+hvilken rolle det spiller om en bruker regionale eller nasjonale anslag for samlet sysselsetting. Gjør
+gjerne disse beregningene både for det første og det siste året i datagrunnlaget.
+
+Har næringsstrukturen i regionen blitt mer eller mindre diversifisert, mangfoldig, over tid? Beregn
+en regional mangfold-indeks (for eksempel RDI i boken til McCann), og finn hvordan verdiene på
+en slik indeks er endret over tid. Vurder også nå om sysselsettingsandelene skal sammenlignes med
+nasjonale eller regionale andeler for de ulike næringene.
