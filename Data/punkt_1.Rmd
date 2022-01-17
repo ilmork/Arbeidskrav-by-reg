@@ -14,7 +14,7 @@ library(PxWebApiData)
 library(tidyverse)
 library(lubridate)
 })
-#knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 ```
 
 # Sysselsatte personer etter arbeidssted - Nasjonalt
@@ -27,93 +27,47 @@ Nas_arbeid_raw <- ApiData(
   Kjonn = "0",
   ContentsCode = "SysselsatteArb",
   Tid = c(as.character(2008:2020)),
-  # Neste hvis dere virkelig ønsker tre kategorier
-  # Alder = c("15-74", "55-66", "67-74")
-  Alder = c("15-74"),
+  Alder = c("15-74", "55-66", "67-74"),
   makeNAstatus = FALSE
 )
 ```
 
 ```{r}
-# Nytt navn første element i listen Nas_arbeid_raw
 names(Nas_arbeid_raw)[1]<-"desc6"
 ```
 
 ```{r}
-# Hele landet, Knr, knavn ikke relevant
-# Har tre alt. for ansatte 15 - 74 år, 55-66 år og 67 - 74 år
 Nas_arbeid_norge <- unlist(
   Nas_arbeid_raw, 
   recursive = FALSE
 ) %>% 
   as_tibble() %>% 
   rename(
-  # The variable names now begin with desc6. or dataset.
-    # Jeg vil foreslå å bare bruke NACE2007 som variabelnavn
-    # for næringskode
     NACE2007 = dataset.NACE2007,
     Aar = dataset.Tid,
-    # Hvorfor ikke bare plukke med næringsnavn i samme slengen?
-    # Jeg vil foreslå å bruke SN2007 som variabelnavn for næringsnavn
     SN2007 = `desc6.næring (SN2007)`, 
-    # hvis dere ønske rtre kategorier må alder med her
-    #alder = desc6.alder,
+    alder = desc6.alder,
     ansatte = dataset.value
   ) %>% 
   select(Aar, NACE2007, SN2007, 
-         # Hvis tre kategorier ønskes
-         # alder,
-         ansatte)
+         alder, ansatte)
 ```
 
 
 ```{r}
 # Gir antall ansatte i de tre alderskategoriene i de ulike næringene på landsbasis
-# Skulle dere ønske bare ønske f.eks 15 - 74 år må det spesifiseres i ApiData ovenfor
-# vha. 
 Nas_arbeid_wide <- Nas_arbeid_norge %>% 
   pivot_wider(
     id_cols = Aar,
-    # hvis tre alderskategorier
-    # names_from = c(SN2007, alder)
-    names_from = c(SN2007),
+    names_from = c(SN2007, alder),
     values_from = ansatte
     )
 ```
 
-```{r}
-# ikke nødvendig, hentet rett fra data
-# names(Nas_arbeid)[[6]] <- "Alle naeringer"
-# names(Nas_arbeid)[[7]] <- "Jordbruk, skogbruk og fiske"
-# names(Nas_arbeid)[[8]] <- "Bergverksdrift og utvinning"
-# names(Nas_arbeid)[[9]] <- "Industri"
-# names(Nas_arbeid)[[10]] <- "Elektrisitet, vann og renevasjon"
-# names(Nas_arbeid)[[11]] <- "Bygge- og anleggsvirksomhet"
-# names(Nas_arbeid)[[12]] <- "Varehandel, reparasjon av motorvogner"
-# names(Nas_arbeid)[[13]] <- "Transport og lagring"
-# names(Nas_arbeid)[[14]] <- "Overnattings- og serveringsvriksomhet"
-# names(Nas_arbeid)[[15]] <- "Informasjon og kommunikasjon"
-# names(Nas_arbeid)[[16]] <- "Finansiering og forsikring "
-# names(Nas_arbeid)[[17]] <- "Teknisk tjenesteyting, eiendosmdrift"
-# names(Nas_arbeid)[[18]] <- "Forretningsmessig tjenesteyting"
-# names(Nas_arbeid)[[19]] <- "Off.adm., forsvar, sosialforsikring"
-# names(Nas_arbeid)[[20]] <- "Undervisning"
-# names(Nas_arbeid)[[21]] <- "Helse- og sosialtjenester"
-# names(Nas_arbeid)[[22]] <- "Personlig tjenesteyting"
-# names(Nas_arbeid)[[23]] <- "Uoppgitt"
-```
-
-
-```{r}
-sum(Nas_arbeid_wide$`Alle næringer` == 0)
-# Usikker på hva som er meningen med neste
-#Nas_arbeid <- Nas_arbeid[Nas_arbeid$`Alle naeringer` !=0,]
-```
 
 # Sysselsatte personer etter bosted, nasjonalt
 
 ```{r}
-# Bør spesifisere sysselsatte, _sys
 Nas_arbeid_raw_sys <- ApiData(
   urlToData = "07984",
   Region = "0",
@@ -121,15 +75,13 @@ Nas_arbeid_raw_sys <- ApiData(
   Kjonn = "0",
   ContentsCode = "Sysselsatte",
   Tid = c(as.character(2008:2020)),
-  # Neste hvis dere virkelig ønsker tre kategorier
-  # Alder = c("15-74", "55-66", "67-74")
-  Alder = c("15-74"),
+  Alder = c("15-74", "55-66", "67-74"),
   makeNAstatus = FALSE
 )
 ```
 
 ```{r}
-names(Nas_arbeid_raw_sys)[1] <- "desc6"
+names(Nas_arbeid_raw_sys)[1] <- "desc7"
 ```
 
 ```{r}
@@ -139,73 +91,31 @@ Nas_arbeid_norge_sys <- unlist(
 ) %>% 
   as_tibble() %>% 
   rename(
-  # The variable names now begin with desc6. or dataset.
-    # Jeg vil foreslå å bare bruke NACE2007 som variabelnavn
-    # for næringskode
     NACE2007 = dataset.NACE2007,
     Aar = dataset.Tid,
-    # Hvorfor ikke bare plukke med næringsnavn i samme slengen?
-    # Jeg vil foreslå å bruke SN2007 som variabelnavn for næringsnavn
-    SN2007 = `desc6.næring (SN2007)`, 
-    # hvis dere ønske rtre kategorier må alder med her
-    #alder = desc6.alder,
+    SN2007 = `desc7.næring (SN2007)`, 
+    alder = desc7.alder,
     sysselsatte = dataset.value
   ) %>% 
-  select(Aar, NACE2007, SN2007, 
-         # Hvis tre kategorier ønskes
-         # alder,
+  select(Aar, NACE2007, SN2007, alder,
          sysselsatte)
 ```
 
 
 ```{r}
-# Nas_arbeid <- Nas_arbeid %>% 
-#   mutate(knavn = Nas_arbeid_raw$desc6$region)
+Nas_arbeid <- Nas_arbeid %>% 
+  mutate(knavn = Nas_arbeid_raw$desc6$region)
 ```
-## THIBIGA
-* Får advarsel når jeg kjører chunken. Hva er feil?
-Se kommentarer ovenfor
 
 
 ```{r}
 Nas_arbeid_sys_wide <- Nas_arbeid_norge_sys %>% 
   pivot_wider(
     id_cols = Aar,
-    # hvis tre alderskategorier
-    # names_from = c(SN2007, alder)
-    names_from = c(SN2007),
+    names_from = c(SN2007, alder),
     values_from = sysselsatte
     )
 ```
-
-
-```{r}
-# Unødvendig nå. Hentet rett fra data
-# names(Nas_arbeid)[[6]] <- "Alle naeringer"
-# names(Nas_arbeid)[[7]] <- "Jordbruk, skogbruk og fiske"
-# names(Nas_arbeid)[[8]] <- "Bergverksdrift og utvinning"
-# names(Nas_arbeid)[[9]] <- "Industri"
-# names(Nas_arbeid)[[10]] <- "Elektrisitet, vann og renevasjon"
-# names(Nas_arbeid)[[11]] <- "Bygge- og anleggsvirksomhet"
-# names(Nas_arbeid)[[12]] <- "Varehandel, reparasjon av motorvogner"
-# names(Nas_arbeid)[[13]] <- "Transport og lagring"
-# names(Nas_arbeid)[[14]] <- "Overnattings- og serveringsvriksomhet"
-# names(Nas_arbeid)[[15]] <- "Informasjon og kommunikasjon"
-# names(Nas_arbeid)[[16]] <- "Finansiering og forsikring "
-# names(Nas_arbeid)[[17]] <- "Teknisk tjenesteyting, eiendosmdrift"
-# names(Nas_arbeid)[[18]] <- "Forretningsmessig tjenesteyting"
-# names(Nas_arbeid)[[19]] <- "Off.adm., forsvar, sosialforsikring"
-# names(Nas_arbeid)[[20]] <- "Undervisning"
-# names(Nas_arbeid)[[21]] <- "Helse- og sosialtjenester"
-# names(Nas_arbeid)[[22]] <- "Personlig tjenesteyting"
-# names(Nas_arbeid)[[23]] <- "Uoppgitt"
-```
-
-
-```{r}
-# Nas_arbeid <- Nas_arbeid[Nas_arbeid$`Alle naeringer` !=0,]
-```
-
 
 # Sysselsatte personer etter arbeidssted
 
@@ -217,12 +127,10 @@ knr <- c("1106", "1135", "1145", "1146", "1149", "1151", "1160", "4611", "4612",
          "1221", "1222", "1223", "1224", "1228", "1231")
 ```
 
-Bruk så samme teknikker som ovenfor for de utvalgte kommunene
 
 ```{r}
 Tabell1_raw <- ApiData(
   urlToData= "07984",
-  # Pick data for kommuner in knr
   Region = list("vs:KommunerS", knr), 
   NACE2007 = TRUE,
   Kjonn = "0",
@@ -251,14 +159,7 @@ names(Tabell1_raw)[[1]]<-"desc"
 
 ```{r}
 Tabell1 <- Tabell1 %>% 
-  mutate(knavn = Tabell1$desc$region)
-```
-## THIBIGA
-* Får advarsel når jeg kjører chunken. Hva er feil?
-
-```{r}
-Tabell1 <- Tabell1 %>%
-  select(-NAstatus)
+  mutate(knavn = Tabell1$Knr)
 ```
 
 
@@ -271,35 +172,6 @@ Tabell1 <- Tabell1 %>%
 
 
 ```{r}
-names(Tabell1)[[6]] <- "Alle naeringer"
-names(Tabell1)[[7]] <- "Jordbruk, skogbruk og fiske"
-names(Tabell1)[[8]] <- "Bergverksdrift og utvinning"
-names(Tabell1)[[9]] <- "Industri"
-names(Tabell1)[[10]] <- "Elektrisitet, vann og renevasjon"
-names(Tabell1)[[11]] <- "Bygge- og anleggsvirksomhet"
-names(Tabell1)[[12]] <- "Varehandel, reparasjon av motorvogner"
-names(Tabell1)[[13]] <- "Transport og lagring"
-names(Tabell1)[[14]] <- "Overnattings- og serveringsvriksomhet"
-names(Tabell1)[[15]] <- "Informasjon og kommunikasjon"
-names(Tabell1)[[16]] <- "Finansiering og forsikring "
-names(Tabell1)[[17]] <- "Teknisk tjenesteyting, eiendosmdrift"
-names(Tabell1)[[18]] <- "Forretningsmessig tjenesteyting"
-names(Tabell1)[[19]] <- "Off.adm., forsvar, sosialforsikring"
-names(Tabell1)[[20]] <- "Undervisning"
-names(Tabell1)[[21]] <- "Helse- og sosialtjenester"
-names(Tabell1)[[22]] <- "Personlig tjenesteyting"
-names(Tabell1)[[23]] <- "Uoppgitt"
-```
-
-
-```{r}
-Tabell1 <- Tabell1[Tabell1$`Alle naeringer` !=0,]
-```
-## THIBIGA
-* Denne fjerner fjerner radene med verdi 0.
-* Nødvendig??
-
-```{r}
 Tabell1[1][(Tabell1)[1]=="1211"]<-"4611"
 Tabell1[1][(Tabell1)[1]=="1216"]<-"4612"
 Tabell1[1][(Tabell1)[1]=="1219"]<-"4613"
@@ -308,9 +180,8 @@ Tabell1[1][(Tabell1)[1]=="1222"]<-"4615"
 Tabell1[1][(Tabell1)[1]=="1223"]<-"4616"
 Tabell1[1][(Tabell1)[1]=="1224"]<-"4617"
 Tabell1[1][(Tabell1)[1]=="1231"]<-"4618"
+Tabell1[1][(Tabell1)[1]=="1228"]<-"4618"
 ```
-
-## INGRID - sal siste være "1228+1231"?
 
 ```{r}
 rm(Tabell1_raw)
@@ -320,29 +191,27 @@ rm(Tabell1_raw)
 
 ### Haugalandet 
 
+
 ```{r}
-Haug_arbeid_raw <- ApiData(
-  url = "07984",
-  Region = list("vs:KommunerS", c(
-    "1106",
-    "1135",
-    "1145",
-    "1146",
-    "1149",
-    "1151",
-    "1160")), 
+knr_haug <- c("1106", "1135", "1145", "1146", "1149", "1151", "1160")
+```
+
+```{r}
+Haug_arb_raw <- ApiData(
+  urlToData= "07984",
+  Region = list("vs:KommunerS", knr_haug), 
   NACE2007 = TRUE,
   Kjonn = "0",
   ContentsCode = "SysselsatteArb",
   Tid = c(as.character(2008:2020)),
   makeNAstatus = FALSE
-)
+  )
 ```
 
 ## Endre navn 
 
 ```{r}
-Haug_arbeid <- Haug_arbeid_raw$dataset %>% 
+Haug_arbeid <- Haug_arb_raw$dataset %>% 
   tibble() %>% 
   rename(
     Knr = Region, 
@@ -352,19 +221,13 @@ Haug_arbeid <- Haug_arbeid_raw$dataset %>%
 ```
 
 ```{r}
-names(Haug_arbeid_raw)[[1]]<-"desc1"
+names(Haug_arb_raw)[[1]]<-"desc1"
 ```
 
 ```{r}
 Haug_arbeid <- Haug_arbeid %>% 
-  mutate(knavn = Haug_arbeid$desc1$region)
+  mutate(knavn = Haug_arbeid$Knr)
 ```
-
-```{r}
-Haug_arbeid <- Haug_arbeid %>%
-  select(-NAstatus)
-```
-
 
 ```{r}
 Haug_arbeid <- Haug_arbeid %>% 
