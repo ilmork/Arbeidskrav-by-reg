@@ -10,6 +10,7 @@ library(tidyverse)
 library(lubridate)
 library(PxWebApiData)
 library(readr)
+library(ggplot2)
 })
 #knitr::opts_chunk$set(eval=FALSE)
 ```
@@ -1547,6 +1548,16 @@ Tab_03321_20 <- Tab_03321_20 %>%
 
 
 
+
+# Sammenslåing av tabellene
+
+```{r}
+Tab_0321_00_04 <- rbind(Tab_03321_00, Tab_03321_01, Tab_03321_02, Tab_03321_03, Tab_03321_04)
+```
+
+```{r}
+Tab_0321_05_19 <- rbind(Tab_03321_05, Tab_03321_06, Tab_03321_06, Tab_03321_07, Tab_03321_08, Tab_03321_09, Tab_03321_10, Tab_03321_11, Tab_03321_12, Tab_03321_13, Tab_03321_14, Tab_03321_15, Tab_03321_16, Tab_03321_17, Tab_03321_18, Tab_03321_19)
+```
 
 
 
