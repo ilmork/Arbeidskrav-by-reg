@@ -237,18 +237,9 @@ Haug_arbeid <- Haug_arbeid %>%
     values_from = value)
 ```
 
-```{r}
-names(Haug_arbeid)[[6]] <- "Haugesund"
-names(Haug_arbeid)[[7]] <- "Sauda"
-names(Haug_arbeid)[[8]] <- "Bokn"
-names(Haug_arbeid)[[9]] <- "Tysvaer"
-names(Haug_arbeid)[[10]] <- "Karmoy"
-names(Haug_arbeid)[[11]] <- "Utsira"
-names(Haug_arbeid)[[12]] <- "Vindafjord"
-```
 
 ```{r}
-rm(Haug_arb_raw)
+rm(Haug_arbeid_raw)
 ```
 
 ## Sunnhordland inkludert Hardanger
