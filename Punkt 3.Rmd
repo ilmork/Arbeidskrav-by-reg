@@ -4,5 +4,53 @@ output: html_notebook
 ---
 
 
+```{r}
+suppressPackageStartupMessages({
+library(PxWebApiData)
+library(dplyr)
+library(tidyverse)
+library(lubridate)
+library(REAT)
+})
+knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+```
+
+I denne oppgaven skal vi finne sysselsetting i de ulike næringene, etter arbeidsstedskommune.
+
+```{r}
+Haug_arbeid <- read.csv("Data_pkt1/Haug_arbeid.csv")
+Haug_bo <- read.csv("Data_pkt1/Haug_bo.csv")
+Sunn_arbeid <- read.csv("Data_pkt1/Sunn_arbeid.csv")
+Sunn_bo <- read.csv("Data_pkt1/Sunn_bo.csv")
+```
+
+
+```{r}
+syssel_arbeid_haug = mutate(Haug_arbeid, tot_H = Haugesund+Sauda+Bokn+Tysvaer+Karmoy+Utsira+Vindafjord)
+```
+
+```{r}
+names(Sunn_arbeid)[[13]] <- "Odda_og_Ullensvang"
+syssel_arbeid_sunn = mutate(Sunn_arbeid, tot_s =  Etne+Sveio+Boemlo+Stord+Fitjar+Tysnes+Kvinnherad+Odda_og_Ullensvang)
+```
+
+```{r}
+Haug_Sunn_arbeid_raw = left_join(syssel_arbeid_haug, syssel_arbeid_sunn)
+```
+```{r}
+Haug_Sunn_arbeid = mutate(Haug_Sunn_arbeid_raw, tot = tot_H+tot_s)
+```
+
+
+```{r}
+ Haug_Sunn_arbeid%>% 
+  ggplot(mapping = aes(x= Aar, y = tot)) +
+  geom_line()+
+  labs(title = "Haugalandet") +
+  ylab("Antall ansatte i \n alle næringer") +
+   theme(axis.title.y = element_text(angle=0))+
+  scale_x_continuous(breaks = seq(2008, 2020, by = 1))
+
+```
 
 
