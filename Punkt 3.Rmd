@@ -18,33 +18,112 @@ knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 I denne oppgaven skal vi finne sysselsetting i de ulike næringene, etter arbeidsstedskommune.
 
 ```{r}
-Haug_arbeid <- read.csv("Data_pkt1/Haug_arbeid.csv")
-Haug_bo <- read.csv("Data_pkt1/Haug_bo.csv")
-Sunn_arbeid <- read.csv("Data_pkt1/Sunn_arbeid.csv")
-Sunn_bo <- read.csv("Data_pkt1/Sunn_bo.csv")
+knr <- c("1106", "1135", "1145", "1146", "1149", "1151", "1160")
+```
+
+```{r}
+Haug_bo_raw <- ApiData(
+  url = "07984",
+  Region = list("vs:KommunerS", knr), 
+  NACE2007 = TRUE,
+  Kjonn = "0",
+  ContentsCode = "Sysselsatte",
+  Tid = c(as.character(2008:2020)),
+  Alder = c("15-74", "55-66", "67-74"),
+  makeNAstatus = FALSE
+)
 ```
 
 
 ```{r}
-syssel_arbeid_haug = mutate(Haug_arbeid, tot_H = Haugesund+Sauda+Bokn+Tysvaer+Karmoy+Utsira+Vindafjord)
+Haug_bo <- Haug_bo_raw$`07984: Sysselsatte per 4. kvartal, etter region, næring (SN2007), kjønn, alder, statistikkvariabel og år` %>% 
+  tibble() %>% 
+  rename(
+    Knr = region,
+    Aar = år,
+    Naering = `næring (SN2007)`
+  )
 ```
 
 ```{r}
-names(Sunn_arbeid)[[13]] <- "Odda_og_Ullensvang"
-syssel_arbeid_sunn = mutate(Sunn_arbeid, tot_s =  Etne+Sveio+Boemlo+Stord+Fitjar+Tysnes+Kvinnherad+Odda_og_Ullensvang)
+names(Haug_bo_raw)[1] <- "desc4"
 ```
 
 ```{r}
-Haug_Sunn_arbeid_raw = left_join(syssel_arbeid_haug, syssel_arbeid_sunn)
+Haug_bo <- Haug_bo %>% 
+  mutate(knavn = Haug_bo_raw$Knr)
 ```
+
 ```{r}
-Haug_Sunn_arbeid = mutate(Haug_Sunn_arbeid_raw, tot = tot_H+tot_s)
+Haug_bo <- Haug_bo %>% 
+  pivot_wider(
+    names_from = c(Knr),
+    values_from = value)
 ```
 
 
 ```{r}
- Haug_Sunn_arbeid%>% 
-  ggplot(mapping = aes(x= Aar, y = tot)) +
+Haug_bo = mutate(Haug_bo, tot_h = Haugesund+Sauda+Bokn+Tysvær+Karmøy+Utsira+Vindafjord)
+```
+
+# Sunnhordaland
+
+```{r}
+knr_sunn <- c("1211", "1216",
+         "1219", "1221", "1222", "1223", "1224", "1228", "1231")
+```
+
+```{r}
+Sunn_bo_raw <- ApiData(
+  url = "07984",
+  Region = list("vs:KommunerS", knr_sunn), 
+  NACE2007 = TRUE,
+  Kjonn = "0",
+  ContentsCode = "Sysselsatte",
+  Tid = c(as.character(2008:2020)),
+  Alder = c("15-74", "55-66", "67-74"),
+  makeNAstatus = FALSE
+)
+```
+
+
+```{r}
+Sunn_bo <- Sunn_bo_raw$`07984: Sysselsatte per 4. kvartal, etter region, næring (SN2007), kjønn, alder, statistikkvariabel og år` %>% 
+  tibble() %>% 
+  rename(
+    Knr = region, 
+    Naering = `næring (SN2007)`,
+    Aar = år
+  )
+```
+
+```{r}
+names(Sunn_bo_raw)[[1]]<-"desc5"
+```
+
+```{r}
+Sunn_bo <- Sunn_bo %>% 
+  mutate(knavn = Sunn_bo_raw$Knr)
+```
+
+```{r}
+Sunn_bo <- Sunn_bo %>% 
+  pivot_wider(
+    names_from = c(Knr),
+    values_from = value)
+```
+
+
+```{r}
+Sunn_bo = mutate(Haug_bo, tot_s = Etne)
+```
+
+
+
+
+```{r}
+ Haug_bo%>% 
+  ggplot(mapping = aes(x= Aar, y = )) +
   geom_line()+
   labs(title = "Haugalandet") +
   ylab("Antall ansatte i \n alle næringer") +
