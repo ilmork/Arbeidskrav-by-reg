@@ -51,7 +51,23 @@ tabell_haugaland %>%
     labs(x = "År", y = "Alle næringer, 00-99") +
   scale_color_hue(name = "Kommune")
 ```
- 
+
+```{r}
+Tabell1 %>% 
+  ggplot(aes(x = År)) +
+  geom_line(aes(y = `00-99`, colour = knavn)) +
+    ggtitle("Alle næringer, Haugesund og Karmøy, 2008-2020") +
+    theme(legend.position = "bottom",
+          axis.title = element_text(size = 12, face = "bold")) +
+    labs(x = "År", y = "Alle næringer, 00-99") +
+  scale_color_hue(name = "Kommune")
+
+# OK! Kanskje ikke en graf som gir noe fornuftig illustrasjon...
+# Men var litt stilig :)
+```
+
+
+
 
 ```{r} 
 Tabell1 %>%
