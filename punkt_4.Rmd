@@ -1643,7 +1643,148 @@ Tab_Test_Alle_Aar <- Tab_Test_Alle_Aar %>%
 ```
 
 
+# 2000 til 2020 fra ag
+
+```{r}
+# Antar at de nye også skal med
+# 1214 Ølen fra 2000 til 2002 skal vel også med
+# Ser ikke ut til at denne eksisterer i statistikken
+# Medfører at det blir et brudd for Vindafjord 2003 tror jeg
+# Har ikke justert for delen av Ullensvang som gikk til Voss 2020
+# 1160 Vindafjord må med
+knr <- c("1106", "1135", "1145", "1146", "1149", "1151", "1154", "1159", "1160", "1211", 
+         "1216", "1219", "1221", "1222", "1223", "1224", "1228", "1231", "4611", "4612", 
+         "4613", "4614", "4615", "4616", "4617", "4618")
+```
 
 
+```{r}
+Tab_03321_00_20 <- ApiData(
+  urlToData = "03321",
+  ArbstedKomm = knr, 
+  ContentsCode = "Sysselsatte",
+  Bokommuen = knr,
+  Tid = as.character(2000:2020)
+  )
+```
+
+```{r}
+names(Tab_03321_00_20)[1] <- "desc"
+```
+
+
+```{r}
+Tab_03321_00_20 <- Tab_03321_00_20 %>% 
+  # combine to one list
+  unlist(recursive = FALSE) %>% 
+  # make a tibble of the list
+  as_tibble() %>% 
+  # rename variables
+  transmute(
+    a_knavn = desc.arbeidsstedskommune,
+    a_knr = dataset.ArbstedKomm,
+    b_knavn = desc.bostedskommune,
+    b_knr = dataset.Bokommuen,
+    aar = desc.år,
+    personer = desc.value
+  ) %>% 
+  mutate(
+    a_knr_new = case_when(
+      a_knr == "1219" ~ "4613",
+      a_knr == "1211" ~ "4611",
+      a_knr == "1222" ~ "4615",
+      a_knr == "1224" ~ "4617",
+      a_knr %in% c("1227", "1228", "1231") ~ "4618",
+      a_knr == "1221" ~ "4614",
+      a_knr == "1216" ~ "4612",
+      a_knr == "1223" ~  "4616",
+      a_knr %in% c("1154", "1159", "1214") ~ "1160",
+      # all others same as a_knr
+      TRUE ~ a_knr
+    ),
+    b_knr_new = case_when(
+      b_knr == "1219" ~ "4613",
+      b_knr == "1211" ~ "4611",
+      b_knr == "1222" ~ "4615",
+      b_knr == "1224" ~ "4617",
+      b_knr %in% c("1227", "1228", "1231") ~ "4618",
+      b_knr == "1221" ~ "4614",
+      b_knr == "1216" ~ "4612",
+      b_knr == "1223" ~  "4616",
+      b_knr %in% c("1154", "1159", "1214") ~ "1160",
+      # all others same as a_knr
+      TRUE ~ b_knr
+      ),
+    a_knavn_new = case_when(
+      a_knr %in% c("1154", "1159", "1214") ~ "Vindafjord",
+      a_knr %in% c("1227", "1228", "1231") ~ "Ullensvang",
+      a_knr == "1219" ~ "Bømlo",
+      a_knr == "1211" ~ "Etne",
+      a_knr == "1222" ~ "Fitjar",
+      a_knr == "1224" ~ "Kvinnherad",
+      a_knr == "1221" ~ "Stord",
+      a_knr == "1216" ~ "Sveio",
+      a_knr == "1223" ~ "Tysnes",
+      TRUE ~ a_knavn
+    ),
+    b_knavn_new = case_when(
+      b_knr %in% c("1154", "1159", "1214") ~ "Vindafjord",
+      b_knr %in% c("1227", "1228", "1231") ~ "Ullensvang",
+      b_knr == "1219" ~ "Bømlo",
+      b_knr == "1211" ~ "Etne",
+      b_knr == "1222" ~ "Fitjar",
+      b_knr == "1224" ~ "Kvinnherad",
+      b_knr == "1221" ~ "Stord",
+      b_knr == "1216" ~ "Sveio",
+      b_knr == "1223" ~ "Tysnes",    
+      TRUE ~ b_knavn
+  )
+  )
+```
+
+```{r}
+# Personer som arbeider, konvertert til 2020 kommuner
+Tab_03321_00_20_a <- Tab_03321_00_20 %>%
+  group_by(a_knr_new, b_knr_new, a_knavn_new, b_knavn_new, aar) %>% 
+  summarise(personer_new = sum(personer)) %>% 
+  select(aar, a_knr_new, a_knavn_new, b_knr_new, b_knavn_new, personer_new)
+```
+
+```{r}
+# pendlematrise år 2000 oppdatert til kommunestruktur 2020
+# bor vertikalt, arbeider horisontalt
+tab_2000 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2000") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+osv. for de andre årene
+
+```{r}
+# pendlematrise år 2020 oppdatert til kommunestruktur 2020
+# bor vertikalt, arbeider horisontalt
+tab_2020 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2020") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+Tab_03321_00_20_a %>% 
+  # bor i Haugesund, jobber annet sted enn Haugesund, Tysvær, Karmøy
+  filter(b_knr_new == "1106" & !a_knr_new %in% c("1106", "1146", "1149")) %>% 
+  ggplot(mapping = aes(x = as_date(paste0(aar, "-01-01")))) +
+  geom_line(mapping=aes(y = personer_new, group = a_knavn_new, colour = a_knavn_new)) +
+  xlab("År") +
+  ylab("Antall personer") +
+  labs(colour = "Kommune")
+```
 
 
