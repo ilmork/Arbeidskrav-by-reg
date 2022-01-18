@@ -233,7 +233,7 @@ Haug_arbeid <- Haug_arbeid %>%
 ```{r}
 Haug_arbeid <- Haug_arbeid %>% 
   pivot_wider(
-    names_from = c(knavn, Alder),
+    names_from = c(Knr, Alder),
     values_from = value)
 ```
 
