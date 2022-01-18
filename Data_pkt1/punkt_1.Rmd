@@ -197,7 +197,7 @@ knr_haug <- c("1106", "1135", "1145", "1146", "1149", "1151", "1160")
 ```
 
 ```{r}
-Haug_arb_raw <- ApiData(
+Haug_arbeid_raw <- ApiData(
   urlToData= "07984",
   Region = list("vs:KommunerS", knr_haug), 
   NACE2007 = TRUE,
@@ -212,7 +212,7 @@ Haug_arb_raw <- ApiData(
 ## Endre navn 
 
 ```{r}
-Haug_arbeid <- Haug_arb_raw$dataset %>% 
+Haug_arbeid <- Haug_arbeid_raw$dataset %>% 
   tibble() %>% 
   rename(
     Knr = Region, 
@@ -222,12 +222,12 @@ Haug_arbeid <- Haug_arb_raw$dataset %>%
 ```
 
 ```{r}
-names(Haug_arb_raw)[[1]]<-"desc1"
+names(Haug_arbeid_raw)[1]<-"desc1"
 ```
 
 ```{r}
 Haug_arbeid <- Haug_arbeid %>% 
-  mutate(knavn = Haug_arbeid$Knr)
+  mutate(knavn = Haug_arbeid_raw$Knr)
 ```
 
 ```{r}
@@ -284,13 +284,13 @@ Sunn_arbeid <- Sunn_arbeid_raw$dataset %>%
 ```
 
 ```{r}
-names(Sunn_arbeid_raw)[[1]]<-"desc2"
+names(Sunn_arbeid_raw)[1]<-"desc2"
 ```
 
 
 ```{r}
 Sunn_arbeid <- Sunn_arbeid %>% 
-  mutate(knavn = Sunn_arbeid$Knr)
+  mutate(knavn = Sunn_arbeid_raw$Knr)
 ```
 
 ```{r}
@@ -483,7 +483,7 @@ names(Sunn_bo_raw)[[1]]<-"desc5"
 
 ```{r}
 Sunn_bo <- Sunn_bo %>% 
-  mutate(knavn = Sunn_bo$Knr)
+  mutate(knavn = Sunn_bo_raw$Knr)
 ```
 
 ```{r}
