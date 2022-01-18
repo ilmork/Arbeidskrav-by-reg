@@ -148,7 +148,8 @@ Tabell1 <- Tabell1_raw$dataset %>%
     Knr = Region, 
     Naering = NACE2007,
     Aar = Tid
-  )
+  )%>% 
+    mutate(knavn = Tabell1_raw$`07984: Sysselsatte per 4. kvartal, etter region, næring (SN2007), kjønn, alder, statistikkvariabel og år`$region)
 ```
 
 
@@ -157,10 +158,6 @@ names(Tabell1_raw)[[1]]<-"desc"
 ```
 
 
-```{r}
-Tabell1 <- Tabell1 %>% 
-  mutate(knavn = Tabell1$Knr)
-```
 
 
 ```{r}
