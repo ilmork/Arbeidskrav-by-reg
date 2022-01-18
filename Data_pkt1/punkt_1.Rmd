@@ -103,7 +103,7 @@ Nas_arbeid_norge_sys <- unlist(
 
 
 ```{r}
-Nas_arbeid <- Nas_arbeid %>% 
+Nas_arbeid <- Nas_arbeid_norge_sys %>% 
   mutate(knavn = Nas_arbeid_raw$desc6$region)
 ```
 
@@ -257,7 +257,7 @@ rm(Haug_arb_raw)
 knr_sunn <- c("4611", "4612",
          "4613", "4614", "4615", "4616", "4617", "4618")
 ```
-
+         
 ```{r}
 Sunn_arbeid_raw <- ApiData(
   url = "07984",
@@ -524,17 +524,6 @@ write_csv(Sunn_arbeid, "Sunn_arbeid.csv")
 write_csv(Sunn_bo, "Sunn_bo.csv")
 write_csv(Tabell1, "Tabell1.csv")
 write_csv(Tabell2, "Tabell2.csv")
-```
-
-
-```{r}
-write_csv(Tabell1,"Tabell1.csv")
-write_csv(Haug_arbeid,"Haug_arbeid.csv")
-write_csv(Sunn_arbeid,"Sunn_arbeid.csv")
-write_csv(Tabell2,"Tabell2.csv")
-write_csv(Haug_bo,"Haug_bo.csv")
-write_csv(Sunn_bo,"Sunn_bo.csv")
-write_csv()
 ```
 
 ```{r}
