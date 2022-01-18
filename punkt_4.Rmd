@@ -1762,6 +1762,197 @@ tab_2000 <- Tab_03321_00_20_a %>%
   )
 ```
 
+```{r}
+tab_2001 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2001") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+tab_2002 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2002") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+tab_2003 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2003") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+tab_2004 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2004") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+tab_2005 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2005") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+tab_2006 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2006") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+tab_2007 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2007") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+tab_2008 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2008") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+tab_2009 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2009") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+tab_2010 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2010") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+tab_2011 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2011") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+tab_2012 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2012") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+tab_2013 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2013") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+tab_2014 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2014") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+tab_2015 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2015") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+tab_2016 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2016") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+tab_2017 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2017") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+tab_2018 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2018") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+```{r}
+tab_2019 <- Tab_03321_00_20_a %>% 
+  filter(aar == "2019") %>% 
+  select(-aar) %>% 
+  pivot_wider(
+    names_from = c("a_knavn_new", "a_knr_new"),
+    values_from = personer_new
+  )
+```
+
+
 osv. for de andre årene
 
 ```{r}
@@ -1775,6 +1966,9 @@ tab_2020 <- Tab_03321_00_20_a %>%
     values_from = personer_new
   )
 ```
+
+
+
 
 ```{r}
 Tab_03321_00_20_a %>% 
