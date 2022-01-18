@@ -238,13 +238,27 @@ Haug_arbeid <- Haug_arbeid %>%
 ```
 
 ```{r}
-names(Haug_arbeid)[[6]] <- "Haugesund"
-names(Haug_arbeid)[[7]] <- "Sauda"
-names(Haug_arbeid)[[8]] <- "Bokn"
-names(Haug_arbeid)[[9]] <- "Tysvaer"
-names(Haug_arbeid)[[10]] <- "Karmoy"
-names(Haug_arbeid)[[11]] <- "Utsira"
-names(Haug_arbeid)[[12]] <- "Vindafjord"
+names(Haug_arbeid)[[5]] <- "Haugesund_15-74"
+names(Haug_arbeid)[[6]] <- "Haugesund_55-66"
+names(Haug_arbeid)[[7]] <- "Haugesund_67-74"
+names(Haug_arbeid)[[8]] <- "Sauda_15-74"
+names(Haug_arbeid)[[9]] <- "Sauda_55-66"
+names(Haug_arbeid)[[10]] <- "Sauda_67-74"
+names(Haug_arbeid)[[11]] <- "Bokn_15-74"
+names(Haug_arbeid)[[12]] <- "Bokn_55-66"
+names(Haug_arbeid)[[13]] <- "Bokn_67-74"
+names(Haug_arbeid)[[14]] <- "Tysvaer_15-74"
+names(Haug_arbeid)[[15]] <- "Tysvaer_55-66"
+names(Haug_arbeid)[[16]] <- "Tysvaer_67-74"
+names(Haug_arbeid)[[17]] <- "Karmoy_15-74"
+names(Haug_arbeid)[[18]] <- "Karmoy_55-66"
+names(Haug_arbeid)[[19]] <- "KArmoy_67-74"
+names(Haug_arbeid)[[20]] <- "Utsira_15-74"
+names(Haug_arbeid)[[21]] <- "Utsira_55-66"
+names(Haug_arbeid)[[22]] <- "Utsira_67-74"
+names(Haug_arbeid)[[23]] <- "Vindafjord_15-74"
+names(Haug_arbeid)[[24]] <- "Vindafjord_55-66"
+names(Haug_arbeid)[[25]] <- "Vindafjord_67-74"
 ```
 
 ```{r}
