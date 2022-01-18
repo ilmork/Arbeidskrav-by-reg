@@ -127,6 +127,71 @@ LQ.method = "m", plot.title = "Localization quotients",
 bar.col = "lightblue", line.col = "red", arg.size = 1)
 ```
 
+Resultatene til lokaliseringskvotientene for næringen helse- og sosialtjenester i Haugesund fremviser en relativt stabil utvikling over tidsperioden 2008-2019. Verdien i 2008 lå på 1,12, hvor den sank til 1,09 i 2014 og steg igjen til 1,17 i 2019. Fra formelen for lokaliseringskvotienter så vet vi at den øverste brøken vil da representere helse- og sosialtjenester sin andel for total sysselsetting i regionen og i nevner helse-og sosialtjenester sin andel av total sysselsetting for nasjonen. Siden tallet har ligget stabilt over 1 så reflekterer det at denne type aktiviteter er viktigere for regionen, enn for landet. Noe som potensielt kan antyde på at Haugesund er en del av en helse-og sosial tjenesteregion, muligens i en klynge. Vi kan også antyde at denne type næring er en lokalnæring siden kvotienten har såpass stabile verdier i nærheten av 1. 
+
+### Karmøy: 10-33 Industri
+
+```{r}
+locq(3357, 15194, 7491, 47530, industry.names = Industri_2008, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(2353, 15457, 6767, 49518, industry.names = Industri_2014, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(2476, 15978, 6563, 49295, industry.names = Industri_2019, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+For næringen industri i kommunen Karmøy kan vi se at lokalisering kvotientene for de bestemte årene er alle over verdien 1, med 1,40 i år 2008 som er en relativt høy verdi. Noe som tilsier at dette vil være en typisk basisnæring for kommunen, siden basisnæringer tenderer til å svinge mer i aktivitet som dermed resulterer at også kvotientene for denne type næring også har høyere svingninger. Vi kan også observere en relativt stagnering i kvotientene ut tidsperioden, som potensielt tilsier at denne type næring har blitt mindre viktigere for regionen sammenlignet med nasjonalt sett. 
+
+### Karmøy: 05-09 Bergverksdrift og utvinning
+
+```{r}
+locq(55, 15194, 1338, 47530, industry.names = Bergverksdrift_utvinning_2008, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(245, 15457, 1521, 49518, industry.names = Bergverksdrift_utvinning_2014, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(307, 15978, 1752, 49295, industry.names = Bergverksdrift_utvinning_2014, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+### Tysvær: 10-33 Industri
+
+```{r}
+locq(268, 4048, 7491, 47530, industry.names = Industri_2008, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(220, 4329, 6767, 49518, industry.names = Industri_2014, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(617, 4710, 6563, 49295, industry.names = Industri_2014, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+
 \#\#\#\#\#\#\#\#\#\#\#
 
 Gjør også en vurdering av hvor konsentrert/spredt en næring er fordelt
