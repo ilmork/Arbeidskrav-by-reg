@@ -11,8 +11,6 @@ suppressPackageStartupMessages({
 library(tidyverse)
 library(lubridate)
 library(PxWebApiData)
-library(readr)
-library(ggplot2)
 })
 #knitr::opts_chunk$set(eval=FALSE)
 ```
@@ -1572,7 +1570,7 @@ knr <- c("1106", "1135", "1145", "1146", "1149", "1151", "1154", "1159", "1160",
 
 ```{r}
 Tab_03321_00_20 <- ApiData(
-  urlToData = "03321",
+  urlToData = "http://data.ssb.no/api/v0/no/table/03321",
   ArbstedKomm = knr, 
   ContentsCode = "Sysselsatte",
   Bokommuen = knr,
@@ -1933,11 +1931,34 @@ Vi ønsker pedlere dvs. dem som jobber i en annen kommune enn der de bor. Trenge
 For dem som pendler ut vil vi også filtrere bort a_knr==b_knr. Her grupperer vi mht. aar og b_knr og vil ha antallet som pendler ut fra en kommune.
 
 ```{r}
-
+# pendler inn
+tmp_pi <- Tab_03321_00_20 %>% 
+  filter(!a_knr == b_knr) %>% 
+  group_by(aar, a_knr) %>% 
+  summarise(pendler_inn = sum())
 ```
 
+```{r}
+#pendler_ut
+tmp_pu <- Tab_03321_00_20 %>% 
+  filter(!a_knr == b_knr) %>% 
+  group_by(aar, b_knr) %>% 
+  summarise(pendler_ut = sum())
+```
 
+```{r}
+#arbeidsplasser
+tmp_arb <- Tab_03321_00_20 %>% 
+  group_by(aar, a_knr) %>% 
+  summarise(arbeidsplasser = sum())
+```
 
+```{r}
+#bosatte
+tmp_bo <- Tab_03321_00_20 %>% 
+  group_by(aar, b_knr) %>% 
+  summarise(bosatte = sum())
+```
 
 
 
