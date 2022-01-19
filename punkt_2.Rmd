@@ -301,11 +301,19 @@ alle arbeidsplassene ligger i et område.
 
 # Gini- indeks for industrivirksomhet
 
-Den romlige gini-indeksen er et sentralt mål som gjerne blir benyttet til å forstå utviklingen i klyngetendenser. Resultatene av gini-koeffisientene beskriver noe om hvor konsentrert/spredt en næring er fordelt basert på de utvalgte kommunene i regionen. Dersom det eksisterer en sterkere klyngetendens mellom kommunene vil man i stor grad forvente at verdien på gini-koeffisienten har økt over tid og man burde som regel analysere dette på et finere nivå enn kommunenivå. Vi har kun data tilgjengelig på dette nivået og vil derfor benytte dette.
+Den romlige Gini-indeksen $(G_i)$ er et sentralt mål som
+blir brukt til å undersøke den geografiske spredningen av en
+næringssektor og forstå klyngetendenser. Resultatene av gini-koeffisientene måler hvor konsentrert/spredten næring vil være fordelt basert på de utvalgte kommunene i regionen. Dersomdet eksisterer en sterkere klyngetendens mellom kommunene vil man kunneforvente at verdien på gini-koeffisientenhar økt over tid og man burde som
+regel analysere dette på et finere nivå enn kommunenivå om mulig.
 
-Man benytter gini-indeksen for å undersøke hvordan den bestemte aktiviteten er fordelt overfor geografien/regionen. Dersom det eksisterer en svært jevn fordeling vil verdien av gini-koeffisienten være null. Men hvis aktiviteten har tendenser til å være konsentrert mer romlig vil det være høyere verdier av koeffisientene. 
+Man benytter gini-indeksen for å undersøke hvordan den
+bestemte aktiviteten er fordelt overfor geografien/regionen. Ved høye
+verdier av gini-koeffisienten vil dette indikere klyngedannelser og
+konsentrasjoner, imens lave verdier av koeffisienten beskriver et forhold av jevnere spredning mellom regionene. Dersom det eksisterer en helt jevn fordeling vil $G_i=0$.
 
-Vi har valgt å undersøke gini-indeksen for næringen industri og de fem utvalgte kommunene vi har benyttet oss av er Haugesund, Sauda, Bokn, Tysvaer og Karmoey. Tilsvarende har vi brukt dataene fra 2008 og 2019 som er det første- og siste året vi har som datagrunnlag. 
+Vi har valgt å undersøke gini-indeksen for næringen industri
+og de fem utvalgte kommunene vi har benyttet oss av er Haugesund, Sauda,
+Bokn, Tysvaer og Karmoey. Tilsvarende har vi brukt dataene fra 2008 og 2019 som er det første- og siste året vi har som vårt datagrunnlag.
 
 -   **Årstall: 2008**
 
@@ -335,7 +343,12 @@ E_j1 <- c(21429, 1945, 327, 4710, 15978)
 gini.conc(E_ij1, E_j1)
 ```
 
-Fra resultatene ser vi at gini-koeffisienten for år 2008 er på 0,21 og for 2019 fant vi en verdi på 0,11. Dette er svært lave indekser som vil tilsi at det er en jevn fordeling når det kommer til industri-næringen blant kommunene. Vi kan også bemerke oss at koeffisienten har stagnert betraktelig gjennom denne tidsperioden. Noe som tilsier at klyngetendensen mellom kommunene har blitt relativt svekket. 
+Fra resultatene ser vi at gini-koeffisienten for år 2008 er på 0,21 og
+for 2019 fant vi en verdi på 0,11. Dette er svært lave indekser som
+tilsier at det er en jevn fordeling når det kommer til industri-næringen
+blant kommunene. Vi kan også bemerke oss at koeffisienten har stagnert
+betraktelig gjennom denne tidsperioden. Noe som tilsier at
+klyngetendensen mellom kommunene har blitt relativt svekket.
 
 ## RDI
 
@@ -355,3 +368,5 @@ RDI i boken til McCann), og finn hvordan verdiene på en slik indeks er
 endret over tid. Vurder også nå om sysselsettingsandelene skal
 sammenlignes med nasjonale eller regionale andeler for de ulike
 næringene.
+
+## RDI
