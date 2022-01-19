@@ -291,7 +291,7 @@ Sunn_arbeid <- Sunn_arbeid_raw$dataset %>%
 ```
 
 ```{r}
-names(Sunn_arbeid_raw)[[1]]<-"desc2"
+names(Sunn_arbeid_raw)[1]<-"desc2"
 ```
 
 
