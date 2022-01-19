@@ -22,14 +22,85 @@ knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 
 ```{r}
 Tabell1 <- read_csv("Data_pkt1/Tabell1.csv")
-View(Tabell1)
+Nas_arbeid_norge_sys <- read_csv("Data_pkt1/Nas_arbeid_norge_sys.csv")
+Haug_arbeid <- read_csv("Data_pkt1/Haug_arbeid.csv")
+Sunn_arbeid <- read_csv("Data_pkt1/Sunn_arbeid.csv")
 show_col_types = FALSE
 ```
+
+# Antall sysselsatte i ulike næringer, Norge
+
+```{r}
+names(Nas_arbeid_norge_sys)
+```
+
+```{r}
+Nas_arbeid_norge_sys <- Nas_arbeid_norge_sys %>% 
+  mutate(År = make_date(Aar))
+```
+
+```{r}
+tabell_Norge<- Nas_arbeid_norge_sys
+
+tabell_Norge %>% 
+  ggplot(aes(x = sysselsatte)) +
+  geom_line(aes(y = NACE2007)) +
+  ggtitle("Alle næringer, Norge, 2008-2020") + 
+  theme(legend.position="bottom",
+        axis.title= element_text(size=12,face="bold")) +
+  labs(x="Sysselsatte", y= "Alle næringer, 00-99")+
+  scale_color_hue(name = "00-99")
+```
+
+
+# Antall sysselsatte etter arbeidssted
+
 
 ```{r}
 names(Tabell1)
 ```
 
+```{r}
+Tabell1 <- Tabell1 %>% 
+  mutate(År = make_date(Aar))
+```
+
+```{r}
+tabell_haugaland <- Tabell1 %>% 
+  filter(Alder == "15-74",
+         Knr %in% c("1106","1135", "1145","1146", "1149", "1151", "1160"))
+
+tabell_haugaland %>% 
+  ggplot(aes(x = År)) +
+  geom_line(aes(y = `00-99`, colour=knavn)) +
+  ggtitle("Alle næringer, Haugesund og Karmøy, 2008-2020") + 
+  theme(legend.position="bottom",
+        axis.title= element_text(size=12,face="bold")) +
+  labs(x="År", y= "Alle næringer, 00-99")+
+  scale_color_hue(name = "00-99")
+```
+
+```{r}
+names(Nas_arbeid_norge_sys)
+```
+
+```{r}
+Nas_arbeid_norge_sys <- Nas_arbeid_norge_sys %>% 
+  mutate(År = make_date(Aar))
+```
+
+```{r}
+tabell_Norge<- Nas_arbeid_norge_sys
+
+tabell_Norge %>% 
+  ggplot(aes(x = sysselsatte)) +
+  geom_line(aes(y = NACE2007)) +
+  ggtitle("Alle næringer, Norge, 2008-2020") + 
+  theme(legend.position="bottom",
+        axis.title= element_text(size=12,face="bold")) +
+  labs(x="År", y= "Alle næringer, 00-99")+
+  scale_color_hue(name = "00-99")
+```
 
 ```{r}
 Haug_arbeid<- read_csv("Data_pkt1/Haug_arbeid.csv")
@@ -40,6 +111,21 @@ show_col_types = FALSE
 ```{r}
 names(Haug_arbeid)
 ```
+
+
+```{r}
+Test_tabell_haugaland <- Haug_arbeid
+
+Test_tabell_haugaland %>% 
+  ggplot(aes(x = Aar)) +
+  geom_line(aes(y = Naering)) +
+  ggtitle("Alle næringer, Haugesund og Karmøy, 2008-2020") + 
+  theme(legend.position="bottom",
+        axis.title= element_text(size=12,face="bold")) +
+  labs(x="År", y= "Alle næringer, 00-99")+
+  scale_color_hue(name = "00-99")
+```
+
 
 ```{r} 
 Haug_arbeid %>% 
