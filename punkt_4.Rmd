@@ -1917,9 +1917,10 @@ Tab_03321_a_og_b <- read_excel("Data/Tab_03321_a_og_b.xlsx",
 
 ```{r}
 Tab_03321_a_og_b %>%
+  #Bor og jobber i samme kommune
   select(aar, b_knavn_new, Andel_B_og_A) %>%
   filter(
-    b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda")
+    b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes", "Kvinnherad", "Ullensvang", "Haugesund")
     ) %>%
   ggplot(mapping = aes(x = aar, y = Andel_B_og_A, colour = b_knavn_new)) +
   geom_line(aes(group = b_knavn_new), lwd = 1) +
@@ -1927,7 +1928,16 @@ Tab_03321_a_og_b %>%
 ```
 
 
-
+```{r}
+Tab_03321_a_og_b %>%
+  select(aar, b_knavn_new, Andel_B_og_A) %>%
+  filter(
+    b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes", "Kvinnherad", "Ullensvang")
+    ) %>%
+  ggplot(mapping = aes(x = aar, y = Andel_B_og_A, colour = b_knavn_new)) +
+  geom_line(aes(group = b_knavn_new), lwd = 1) +
+  theme(legend.position = 'bottom')
+```
 
 
 
