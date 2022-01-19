@@ -52,9 +52,14 @@ tabell_Norge %>%
   labs(x="Sysselsatte", y= "Alle næringer, 00-99")+ 
   scale_color_hue(name = "00-99")
 ```
-
+# TEKST
 
 # Antall sysselsatte etter arbeidssted
+
+-Haugalandet og Sunnhordland - en graf.
+-Haugalandet og Sunnhordland mot nasjonalt --> Hvis det blir vanskelig, så kan vi ta Haugalandet vs nasjonalt og Sunnhordland vs nasjonalt. 
+- Kommunene på Haugalandet opp mot Haugalandet. 
+- Kommunene i Sunnhordland opp mot Sunnhordland. 
 
 
 ```{r}
@@ -74,11 +79,11 @@ tabell_haugaland <- Tabell1 %>%
 tabell_haugaland %>% 
   ggplot(aes(x = År)) +
   geom_line(aes(y = `00-99`, colour=knavn)) +
-  ggtitle("Alle næringer, Haugesund og Karmøy, 2008-2020") + 
+  ggtitle("Alle næringer, Haugalandet, 2008-2020") + 
   theme(legend.position="bottom",
         axis.title= element_text(size=12,face="bold")) +
-  labs(x="År", y= "Alle næringer, 00-99")+
-  scale_color_hue(name = "00-99")
+  labs(x="År", y= "Antall sysselsatte, alle næringer")+
+  scale_color_hue(name = "Kommuner")
 ```
 
 ```{r}
