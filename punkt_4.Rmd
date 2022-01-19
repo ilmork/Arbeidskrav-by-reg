@@ -1584,7 +1584,6 @@ Tab_03321_00_20 <- ApiData(
 names(Tab_03321_00_20)[1] <- "desc"
 ```
 
-
 ```{r}
 Tab_03321_00_20 <- Tab_03321_00_20 %>% 
   # combine to one list
@@ -1661,6 +1660,16 @@ Tab_03321_00_20_a <- Tab_03321_00_20 %>%
   summarise(personer_new = sum(personer)) %>% 
   select(aar, a_knr_new, a_knavn_new, b_knr_new, b_knavn_new, personer_new)
 ```
+
+```{r}
+Tab_03321_00_20_b <- Tab_03321_00_20_a %>% 
+  group_by(a_knr_new, b_knr_new, a_knavn_new, b_knavn_new, aar) %>% 
+  summarise(a_og_b = sum(personer_new)) %>% 
+  select(aar, a_knr_new, a_knavn_new, b_knr_new, b_knavn_new, a_og_b)
+```
+
+
+# Testing Testing
 
 ```{r}
 # pendlematrise år 2000 oppdatert til kommunestruktur 2020
@@ -1865,8 +1874,6 @@ tab_2019 <- Tab_03321_00_20_a %>%
 ```
 
 
-osv. for de andre årene
-
 ```{r}
 # pendlematrise år 2020 oppdatert til kommunestruktur 2020
 # bor vertikalt, arbeider horisontalt
@@ -1879,8 +1886,12 @@ tab_2020 <- Tab_03321_00_20_a %>%
   )
 ```
 
+# Legger til variabler
 
 
+
+
+# Figur
 
 ```{r}
 Tab_03321_00_20_a %>% 
@@ -1892,5 +1903,35 @@ Tab_03321_00_20_a %>%
   ylab("Antall personer") +
   labs(colour = "Kommune")
 ```
+
+
+
+```{r}
+library(readxl)
+Tab_03321_a_og_b <- read_excel("Data/Tab_03321_a_og_b.xlsx", 
+    col_types = c("text", "text", "text", 
+        "text", "text", "numeric", "numeric", 
+        "numeric"))
+```
+
+
+```{r}
+Tab_03321_a_og_b %>%
+  select(aar, b_knavn_new, Andel_B_og_A) %>%
+  filter(
+    b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda")
+    ) %>%
+  ggplot(mapping = aes(x = aar, y = Andel_B_og_A, colour = b_knavn_new)) +
+  geom_line(aes(group = b_knavn_new), lwd = 1) +
+  theme(legend.position = 'bottom')
+```
+
+
+
+
+
+
+
+
 
 
