@@ -273,6 +273,11 @@ Gini-indeksen måler hvor likt fordelt arbeidsplassene er. Man kommer frem til e
 (617/6563)-(4710/49295)
 ```
 
+## RDI
+Et mål som kan brukes for å se på om næringsstrukturen i en region er diversifisert eller spesialisert, er RDI. RDI står for regional diversity index. Verdien vi får forteller oss om fordelingen av arbeidsplasser, innenfor ulike sektorer, 
+
+
+V
 
 
 
