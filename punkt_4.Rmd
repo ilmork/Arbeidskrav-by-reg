@@ -1865,8 +1865,6 @@ tab_2019 <- Tab_03321_00_20_a %>%
 ```
 
 
-osv. for de andre årene
-
 ```{r}
 # pendlematrise år 2020 oppdatert til kommunestruktur 2020
 # bor vertikalt, arbeider horisontalt
@@ -1880,7 +1878,7 @@ tab_2020 <- Tab_03321_00_20_a %>%
 ```
 
 
-
+# Figur
 
 ```{r}
 Tab_03321_00_20_a %>% 
