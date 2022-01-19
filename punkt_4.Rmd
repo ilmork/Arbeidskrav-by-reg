@@ -78,16 +78,8 @@ Tab_03321_00 <- Tab_03321_00 %>%
   rename(Bokommune = Bokommuen) %>% 
   select(-Bokommune) %>%
   mutate(
-         Tot_bosted = rowSums(.),
-         Pendlere = Tot_bosted - diag(as.matrix(.)),
-         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
-         Tot_arb_komm = colSums(.),
-         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
-         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
-         Bo_og_arb_komm = Tot_bosted - Pendlere,
-         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
-         Bokommune = Tab_03321_00$Bokommuen
-                    ) %>% 
+    Tot_bosted = 
+  ) %>% 
   select(Bokommune, everything())
 ```
 
@@ -1908,11 +1900,15 @@ Tab_03321_00_20_a %>%
 
 ```{r}
 library(readxl)
-Tab_03321_a_og_b <- read_excel("Data/Tab_03321_a_og_b.xlsx", 
+Tab_03321_andeler <- read_excel("Data/Tab_03321_andeler.xlsx", 
     col_types = c("text", "text", "text", 
         "text", "text", "numeric", "numeric", 
         "numeric"))
 ```
+
+
+
+
 
 
 ```{r}
