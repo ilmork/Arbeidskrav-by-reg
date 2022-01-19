@@ -639,6 +639,7 @@ write_csv(Sunn_bo, "Sunn_bo.csv")
 write_csv(Tabell1, "Tabell1.csv")
 write_csv(Tabell2, "Tabell2.csv")
 write_csv(Haug_arbeid_wide, "Haug_arbeid_wide.csv")
+write_csv(Haug_arbeid_2, "Haug_arbeid_2.csv")
 ```
 
 ```{r}
