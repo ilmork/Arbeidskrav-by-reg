@@ -23,6 +23,7 @@ I denne oppgaven skal vi finne sysselsetting i de ulike næringene, etter arbeid
 knr <- c("1106", "1135", "1145", "1146", "1149", "1151", "1160")
 ```
 
+
 ```{r}
 Haug_bo_raw <- ApiData(
   url = "07984",
@@ -35,6 +36,7 @@ Haug_bo_raw <- ApiData(
   makeNAstatus = FALSE
 )
 ```
+
 
 
 ```{r}
@@ -162,6 +164,7 @@ Haug_bo %>%
    theme(axis.title.y = element_text(angle=0))+
    theme(legend.position = 'bottom')
 ```
+
 
 
 
