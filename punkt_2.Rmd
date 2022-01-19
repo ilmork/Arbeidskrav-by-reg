@@ -1,4 +1,3 @@
-
 ---
 title: "Punkt 2."
 output: html_notebook
@@ -300,6 +299,44 @@ alle arbeidsplassene ligger i et område.
 (617/6563)-(4710/49295)
 ```
 
+# Gini- indeks for industrivirksomhet
+
+Den romlige gini-indeksen er et sentralt mål som gjerne blir benyttet til å forstå utviklingen i klyngetendenser. Resultatene av gini-koeffisientene beskriver noe om hvor konsentrert/spredt en næring er fordelt basert på de utvalgte kommunene i regionen. Dersom det eksisterer en sterkere klyngetendens mellom kommunene vil man i stor grad forvente at verdien på gini-koeffisienten har økt over tid og man burde som regel analysere dette på et finere nivå enn kommunenivå. Vi har kun data tilgjengelig på dette nivået og vil derfor benytte dette.
+
+Man benytter gini-indeksen for å undersøke hvordan den bestemte aktiviteten er fordelt overfor geografien/regionen. Dersom det eksisterer en svært jevn fordeling vil verdien av gini-koeffisienten være null. Men hvis aktiviteten har tendenser til å være konsentrert mer romlig vil det være høyere verdier av koeffisientene. 
+
+Vi har valgt å undersøke gini-indeksen for næringen industri og de fem utvalgte kommunene vi har benyttet oss av er Haugesund, Sauda, Bokn, Tysvaer og Karmoey. Tilsvarende har vi brukt dataene fra 2008 og 2019 som er det første- og siste året vi har som datagrunnlag. 
+
+-   **Årstall: 2008**
+
+```{r sysselsetting for industri i de fem kommunene 2008}
+E_ij <- c(2572, 468, 41, 268, 3357)
+```
+
+```{r total sysselsetting i de fem kommunene 2008}
+E_j <- c(21322, 2136, 297, 4048, 15194)
+```
+
+```{r gini koeffisient for konsentrasjonen av næringen 2008}
+gini.conc(E_ij, E_j)
+```
+
+-   **Årstall: 2019**
+
+```{r sysselsetting for industri i de fem kommunene 2019}
+E_ij1 <- c(2171, 360, 52, 617, 2467)
+```
+
+```{r total sysselsetting i de fem kommunene 2019}
+E_j1 <- c(21429, 1945, 327, 4710, 15978)
+```
+
+```{r gini koeffisient for konsentrasjonen av næringen 2019}
+gini.conc(E_ij1, E_j1)
+```
+
+Fra resultatene ser vi at gini-koeffisienten for år 2008 er på 0,21 og for 2019 fant vi en verdi på 0,11. Dette er svært lave indekser som vil tilsi at det er en jevn fordeling når det kommer til industri-næringen blant kommunene. Vi kan også bemerke oss at koeffisienten har stagnert betraktelig gjennom denne tidsperioden. Noe som tilsier at klyngetendensen mellom kommunene har blitt relativt svekket. 
+
 ## RDI
 
 Et mål som kan brukes for å se på om næringsstrukturen i en region er
@@ -308,11 +345,9 @@ diversity index. Verdien vi får forteller oss om fordelingen av
 arbeidsplasser, innenfor ulike sektorer, ligner den nasjonale
 fordelingen.
 
-![RDI formel, *i* er sektor, og *Sin* er andel av nasjonal sysselsetting ](RDI_formel.JPG)
-der sin er sektor i ’s andel av samlet nasjonal sysselsetting.
-
-
-
+![RDI formel, i er sektor, og Sin er andel av nasjonal
+sysselsetting](RDI_formel.JPG) der sin er sektor i 's andel av samlet
+nasjonal sysselsetting.
 
 Har næringsstrukturen i regionen blitt mer eller mindre diversifisert,
 mangfoldig, over tid? Beregn en regional mangfold-indeks (for eksempel
