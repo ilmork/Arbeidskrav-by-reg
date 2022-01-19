@@ -57,7 +57,7 @@ Haug_bo <- Haug_bo %>%
 ```{r}
 Haug_bo <- Haug_bo %>% 
   pivot_wider(
-    names_from = c(Knr),
+    names_from = Knr,
     values_from = value)
 ```
 
@@ -130,51 +130,36 @@ names(Sunn_bo)[[14]] <- "Ullensvang"
 Sunn_bo = mutate(Sunn_bo, tot_s = Etne + Sveio + Boemlo+ Stord+ Fitjar+ Tysnes+ Kvinnherad + Odda + Ullensvang)
 ```
 
+
+# Totalt anasatte i hver næring for Haugalandet
+
 ```{r}
-Haug_sunn_first = left_join(Haug_bo, Sunn_bo)
+Haug_bo %>% 
+ ggplot(mapping = aes(x = tot_h, y = Naering, (angle=0))) +
+  scale_fill_distiller(palette = "Dark2") +
+  geom_line(aes(group = Naering, colour = Naering)) +
+  scale_size_manual(values = c(seq(2.0, 2, by = -0.1))) +
+  geom_hline(yintercept = 0) +
+  labs(title = "Haugalandet", x = "Totalt ansatte", y = "Antall ansatte i  \n alle næringer") +
+  theme(axis.title.y = element_text(angle=0))+
+  theme(legend.position = 'bottom')
 ```
 
-```{r}
-Haug_sunn = mutate(Haug_sunn_first, tot = tot_h+tot_s)
-```
+# Totalt anasatte i hver næring for Sunnhordaland
 
 ```{r}
-syssel_bo_raw <- read.csv("Data_pkt1/Nas_arbeid_norge.csv")
-```
-
-```{r}
-syssel_bo <- syssel_bo_raw %>% 
-  select(ansatte)
-```
-
-
-```{r}
-Haug_sunn <- merge(Haug_sunn, syssel_bo)
-```
-
-
-```{r}
-Haug_sunn <- syssel_bo %>% 
-  pivot_longer(
-    cols = `Alle Næringer`:Uoppgitt,
-    names_to = "Naering",
-    values_to = "ansatte"
-  )
+Sunn_bo %>% 
+ ggplot(mapping = aes(x = tot_s, y = Naering, (angle=0))) +
+  scale_fill_distiller(palette = "Dark2") +
+  geom_line(aes(group = Naering, colour = Naering)) +
+  scale_size_manual(values = c(seq(2.0, 2, by = -0.1))) +
+  geom_hline(yintercept = 0) +
+  labs(title = "Sunnhordaland", x = "Totalt ansatte", y = "Antall ansatte i  \n alle næringer") +
+  theme(axis.title.y = element_text(angle=0))+
+  theme(legend.position = 'bottom')
 ```
 
 
 
-
-
-```{r}
- Haug_sunn%>% 
-  ggplot(mapping = aes(x= ansatte, y = Aar)) +
-  geom_line()+
-  labs(title = "Haugalandet") +
-  ylab("Antall ansatte i \n alle næringer") +
-   theme(axis.title.y = element_text(angle=0))+
-  scale_x_continuous(breaks = seq(2008, 2020, by = 1))
-
-```
 
 

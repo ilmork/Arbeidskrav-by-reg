@@ -197,7 +197,7 @@ knr_haug <- c("1106", "1135", "1145", "1146", "1149", "1151", "1160")
 ```
 
 ```{r}
-Haug_arbeid_raw <- ApiData(
+Haug_arb_raw <- ApiData(
   urlToData= "07984",
   Region = list("vs:KommunerS", knr_haug), 
   NACE2007 = TRUE,
@@ -212,7 +212,7 @@ Haug_arbeid_raw <- ApiData(
 ## Endre navn 
 
 ```{r}
-Haug_arbeid <- Haug_arbeid_raw$dataset %>% 
+Haug_arbeid <- Haug_arb_raw$dataset %>% 
   tibble() %>% 
   rename(
     Knr = Region, 
@@ -222,47 +222,33 @@ Haug_arbeid <- Haug_arbeid_raw$dataset %>%
 ```
 
 ```{r}
-names(Haug_arbeid_raw)[1]<-"desc1"
+names(Haug_arb_raw)[[1]]<-"desc1"
 ```
 
 ```{r}
 Haug_arbeid <- Haug_arbeid %>% 
-  mutate(knavn = Haug_arbeid_raw$Knr)
+  mutate(knavn = Haug_arbeid$Knr)
 ```
 
 ```{r}
 Haug_arbeid <- Haug_arbeid %>% 
   pivot_wider(
-    names_from = c(Knr, Alder),
+    names_from = c(knavn, Alder),
     values_from = value)
 ```
 
 ```{r}
-names(Haug_arbeid)[[5]] <- "Haugesund_15-74"
-names(Haug_arbeid)[[6]] <- "Haugesund_55-66"
-names(Haug_arbeid)[[7]] <- "Haugesund_67-74"
-names(Haug_arbeid)[[8]] <- "Sauda_15-74"
-names(Haug_arbeid)[[9]] <- "Sauda_55-66"
-names(Haug_arbeid)[[10]] <- "Sauda_67-74"
-names(Haug_arbeid)[[11]] <- "Bokn_15-74"
-names(Haug_arbeid)[[12]] <- "Bokn_55-66"
-names(Haug_arbeid)[[13]] <- "Bokn_67-74"
-names(Haug_arbeid)[[14]] <- "Tysvaer_15-74"
-names(Haug_arbeid)[[15]] <- "Tysvaer_55-66"
-names(Haug_arbeid)[[16]] <- "Tysvaer_67-74"
-names(Haug_arbeid)[[17]] <- "Karmoy_15-74"
-names(Haug_arbeid)[[18]] <- "Karmoy_55-66"
-names(Haug_arbeid)[[19]] <- "KArmoy_67-74"
-names(Haug_arbeid)[[20]] <- "Utsira_15-74"
-names(Haug_arbeid)[[21]] <- "Utsira_55-66"
-names(Haug_arbeid)[[22]] <- "Utsira_67-74"
-names(Haug_arbeid)[[23]] <- "Vindafjord_15-74"
-names(Haug_arbeid)[[24]] <- "Vindafjord_55-66"
-names(Haug_arbeid)[[25]] <- "Vindafjord_67-74"
+names(Haug_arbeid)[[6]] <- "Haugesund"
+names(Haug_arbeid)[[7]] <- "Sauda"
+names(Haug_arbeid)[[8]] <- "Bokn"
+names(Haug_arbeid)[[9]] <- "Tysvaer"
+names(Haug_arbeid)[[10]] <- "Karmoy"
+names(Haug_arbeid)[[11]] <- "Utsira"
+names(Haug_arbeid)[[12]] <- "Vindafjord"
 ```
 
 ```{r}
-rm(Haug_arbeid_raw)
+rm(Haug_arb_raw)
 ```
 
 ## Sunnhordland inkludert Hardanger
@@ -298,13 +284,13 @@ Sunn_arbeid <- Sunn_arbeid_raw$dataset %>%
 ```
 
 ```{r}
-names(Sunn_arbeid_raw)[1]<-"desc2"
+names(Sunn_arbeid_raw)[[1]]<-"desc2"
 ```
 
 
 ```{r}
 Sunn_arbeid <- Sunn_arbeid %>% 
-  mutate(knavn = Sunn_arbeid_raw$Knr)
+  mutate(knavn = Sunn_arbeid$Knr)
 ```
 
 ```{r}
@@ -315,30 +301,14 @@ Sunn_arbeid <- Sunn_arbeid %>%
 ```
 
 ```{r}
-names(Sunn_arbeid)[[5]] <- "Etne_15-74"
-names(Sunn_arbeid)[[6]] <- "Etne_55-66"
-names(Sunn_arbeid)[[7]] <- "Etne_67-74"
-names(Sunn_arbeid)[[8]] <- "Sveio_15-74"
-names(Sunn_arbeid)[[9]] <- "Sveio_55-66"
-names(Sunn_arbeid)[[10]] <- "Sveio_67-74"
-names(Sunn_arbeid)[[11]] <- "Bomlo_15-74"
-names(Sunn_arbeid)[[12]] <- "Bomlo_55-66"
-names(Sunn_arbeid)[[13]] <- "Bomlo_67-74"
-names(Sunn_arbeid)[[14]] <- "Stord_15-74"
-names(Sunn_arbeid)[[15]] <- "Stord_55-66"
-names(Sunn_arbeid)[[16]] <- "Stord_67-74"
-names(Sunn_arbeid)[[17]] <- "Fitjar_15-74"
-names(Sunn_arbeid)[[18]] <- "Fitjar_55-66"
-names(Sunn_arbeid)[[19]] <- "Fitjar_67-74"
-names(Sunn_arbeid)[[20]] <- "Tysnes_15-74"
-names(Sunn_arbeid)[[21]] <- "Tysnes_55-66"
-names(Sunn_arbeid)[[22]] <- "Tysnes_67-74"
-names(Sunn_arbeid)[[23]] <- "Kvinnherad_15-74"
-names(Sunn_arbeid)[[24]] <- "Kvinnherad_55-66"
-names(Sunn_arbeid)[[25]] <- "Kvinnherad_67-74"
-names(Sunn_arbeid)[[26]] <- "Odda+Ullens._15-74"
-names(Sunn_arbeid)[[27]] <- "Odda+Ullens._55-66"
-names(Sunn_arbeid)[[28]] <- "Odda+Ullens._67-74"
+names(Sunn_arbeid)[[6]] <- "Etne"
+names(Sunn_arbeid)[[7]] <- "Sveio"
+names(Sunn_arbeid)[[8]] <- "Boemlo"
+names(Sunn_arbeid)[[9]] <- "Stord"
+names(Sunn_arbeid)[[10]] <- "Fitjar"
+names(Sunn_arbeid)[[11]] <- "Tysnes"
+names(Sunn_arbeid)[[12]] <- "Kvinnherad"
+names(Sunn_arbeid)[[13]] <- "Odda+Ullensvang"
 ```
 
 ```{r}
@@ -460,30 +430,6 @@ Haug_bo <- Haug_bo %>%
     values_from = value)
 ```
 
-
-```{r}
-names(Haug_bo)[[5]] <- "Haugesund_15-74"
-names(Haug_bo)[[6]] <- "Haugesund_55-66"
-names(Haug_bo)[[7]] <- "Haugesund_67-74"
-names(Haug_bo)[[8]] <- "Sauda_15-74"
-names(Haug_bo)[[9]] <- "Sauda_55-66"
-names(Haug_bo)[[10]] <- "Sauda_67-74"
-names(Haug_bo)[[11]] <- "Bokn_15-74"
-names(Haug_bo)[[12]] <- "Bokn_55-66"
-names(Haug_bo)[[13]] <- "Bokn_67-74"
-names(Haug_bo)[[14]] <- "Tysvaer_15-74"
-names(Haug_bo)[[15]] <- "Tysvaer_55-66"
-names(Haug_bo)[[16]] <- "Tysvaer_67-74"
-names(Haug_bo)[[17]] <- "Karmoy_15-74"
-names(Haug_bo)[[18]] <- "Karmoy_55-66"
-names(Haug_bo)[[19]] <- "KArmoy_67-74"
-names(Haug_bo)[[20]] <- "Utsira_15-74"
-names(Haug_bo)[[21]] <- "Utsira_55-66"
-names(Haug_bo)[[22]] <- "Utsira_67-74"
-names(Haug_bo)[[23]] <- "Vindafjord_15-74"
-names(Haug_bo)[[24]] <- "Vindafjord_55-66"
-names(Haug_bo)[[25]] <- "Vindafjord_67-74"
-```
 ```{r}
 names(Haug_bo)[[6]] <- "Haugesund"
 names(Haug_bo)[[7]] <- "Sauda"
@@ -537,7 +483,7 @@ names(Sunn_bo_raw)[[1]]<-"desc5"
 
 ```{r}
 Sunn_bo <- Sunn_bo %>% 
-  mutate(knavn = Sunn_bo_raw$Knr)
+  mutate(knavn = Sunn_bo$Knr)
 ```
 
 ```{r}
@@ -548,32 +494,15 @@ Sunn_bo <- Sunn_bo %>%
 ```
 
 ```{r}
-names(Sunn_bo)[[5]] <- "Etne_15-74"
-names(Sunn_bo)[[6]] <- "Etne_55-66"
-names(Sunn_bo)[[7]] <- "Etne_67-74"
-names(Sunn_bo)[[8]] <- "Sveio_15-74"
-names(Sunn_bo)[[9]] <- "Sveio_55-66"
-names(Sunn_bo)[[10]] <- "Sveio_67-74"
-names(Sunn_bo)[[11]] <- "Bomlo_15-74"
-names(Sunn_bo)[[12]] <- "Bomlo_55-66"
-names(Sunn_bo)[[13]] <- "Bomlo_67-74"
-names(Sunn_bo)[[14]] <- "Stord_15-74"
-names(Sunn_bo)[[15]] <- "Stord_55-66"
-names(Sunn_bo)[[16]] <- "Stord_67-74"
-names(Sunn_bo)[[17]] <- "Fitjar_15-74"
-names(Sunn_bo)[[18]] <- "Fitjar_55-66"
-names(Sunn_bo)[[19]] <- "Fitjar_67-74"
-names(Sunn_bo)[[20]] <- "Tysnes_15-74"
-names(Sunn_bo)[[21]] <- "Tysnes_55-66"
-names(Sunn_bo)[[22]] <- "Tysnes_67-74"
-names(Sunn_bo)[[23]] <- "Kvinnherad_15-74"
-names(Sunn_bo)[[24]] <- "Kvinnherad_55-66"
-names(Sunn_bo)[[25]] <- "Kvinnherad_67-74"
-names(Sunn_bo)[[26]] <- "Odda+Ullens._15-74"
-names(Sunn_bo)[[27]] <- "Odda+Ullens._55-66"
-names(Sunn_bo)[[28]] <- "Odda+Ullens._67-74"
+names(Sunn_bo)[[6]] <- "Etne"
+names(Sunn_bo)[[7]] <- "Sveio"
+names(Sunn_bo)[[8]] <- "Boemlo"
+names(Sunn_bo)[[9]] <- "Stord"
+names(Sunn_bo)[[10]] <- "Fitjar"
+names(Sunn_bo)[[11]] <- "Tysnes"
+names(Sunn_bo)[[12]] <- "Kvinnherad"
+names(Sunn_bo)[[13]] <- "Odda+Ullensvang"
 ```
-
 
 ```{r}
 rm(Sunn_bo_raw)
