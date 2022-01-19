@@ -1930,7 +1930,7 @@ Tab_03321_a_og_b %>%
 
 Vi ønsker pedlere dvs. dem som jobber i en annen kommune enn der de bor. Trenger altså å filtrere bort alle dem som har a_knr == b_knr, så gjennstår vel å gruppere mht. aar og a_knr så har vi dem som pendler inn til hver kommune.
 
-For dem som pendler ut vil vi også filtrere bort a_knr==b_knr. Her grupperer vi mht. aar og b_knr og vil ha antallet som pendler ut fra en kommune
+For dem som pendler ut vil vi også filtrere bort a_knr==b_knr. Her grupperer vi mht. aar og b_knr og vil ha antallet som pendler ut fra en kommune.
 
 ```{r}
 
