@@ -45,11 +45,11 @@ tabell_Norge<- Nas_arbeid_norge_sys
 
 tabell_Norge %>% 
   ggplot(aes(x = sysselsatte)) +
-  geom_line(aes(y = NACE2007)) +
+  geom_line(aes(y = SN2007)) +
   ggtitle("Alle næringer, Norge, 2008-2020") + 
   theme(legend.position="bottom",
         axis.title= element_text(size=12,face="bold")) +
-  labs(x="Sysselsatte", y= "Alle næringer, 00-99")+
+  labs(x="Sysselsatte", y= "Alle næringer, 00-99")+ 
   scale_color_hue(name = "00-99")
 ```
 
@@ -90,18 +90,6 @@ Nas_arbeid_norge_sys <- Nas_arbeid_norge_sys %>%
   mutate(År = make_date(Aar))
 ```
 
-```{r}
-tabell_Norge<- Nas_arbeid_norge_sys
-
-tabell_Norge %>% 
-  ggplot(aes(x = sysselsatte)) +
-  geom_line(aes(y = NACE2007)) +
-  ggtitle("Alle næringer, Norge, 2008-2020") + 
-  theme(legend.position="bottom",
-        axis.title= element_text(size=12,face="bold")) +
-  labs(x="År", y= "Alle næringer, 00-99")+
-  scale_color_hue(name = "00-99")
-```
 
 ```{r}
 Haug_arbeid<- read_csv("Data_pkt1/Haug_arbeid.csv")
@@ -112,67 +100,3 @@ show_col_types = FALSE
 ```{r}
 names(Haug_arbeid)
 ```
-
-
-```{r}
-Test_tabell_haugaland <- Haug_arbeid
-
-Test_tabell_haugaland %>% 
-  ggplot(aes(x = Aar)) +
-  geom_line(aes(y = Naering)) +
-  ggtitle("Alle næringer, Haugesund og Karmøy, 2008-2020") + 
-  theme(legend.position="bottom",
-        axis.title= element_text(size=12,face="bold")) +
-  labs(x="År", y= "Alle næringer, 00-99")+
-  scale_color_hue(name = "00-99")
-```
-
-
-```{r} 
-Haug_arbeid %>% 
-select(Variables, Naering, ContentsCode) %>% 
-  Filter(
-    Variables %in% c("Haugesund","Sauda", "Bokn", "Tysvaer", "Karmoy", "Utsira", "Vindafjord")
-  ) %>% 
-ggplot(data = mpg, mapping = aes(x = Naering , y = ContentsCode)) + 
-  geom_point(mapping = aes(color = class)) + 
-  geom_smooth(data = filter(mpg, class == "subcompact"), se = FALSE)
-```
-
-
-
-
-
-
-```{r}
-Tabell1 %>% 
-  ggplot(mapping= aes(x = Aar, y = Tabell1$00-99))+
-  geom_line() + 
-  labs(title = "Test1") + 
-  ylab("Test2")+
-  theme(axis.title.y = element_text(angle=1))+
-  scale_x_continuous(breaks= seq(2008, 2020, by = 0.5))
-```
- 
-
-```{r} 
-Haug_arbeid %>% 
-select(Variables, ContentsCode) %>% 
-  Filter(
-    Variables %in% c("Alle naeringer", "Jordbruk, skogbruk og fiske", "Bergverksdrift og utvinning", "Industri", "Elektrisitet, vann og renevasjon", "Bygge- og anleggsvirksomhet","Varehandel, reparasjon av motorvogner", "Transport og lagring", "Overnattings- og serveringsvriksomhet", "Informasjon og kommunikasjon", "Finansiering og forsikring ", "Teknisk tjenesteyting, eiendosmdrift", "Forretningsmessig tjenesteyting", "Off.adm., forsvar, sosialforsikring", "Undervisning", "Helse- og sosialtjenester", "Personlig tjenesteyting", "Uoppgitt")
-  ) %>% 
-ggplot(data = mpg, mapping = aes(x = , y = )) + 
-  geom_point(mapping = aes(color = class)) + 
-  geom_smooth(data = filter(mpg, class == "subcompact"), se = FALSE)
-```
-
-
-```{r}
-coef_df_long %>% 
-  select(aar, variables, coef) %>% 
-  filter(
-    variables %in% c("fnr02", "fnr03", "fnr04", "fnr10", "fnr11", "fnr12", "fnr14")
-  ) %>% 
-```
-
-
