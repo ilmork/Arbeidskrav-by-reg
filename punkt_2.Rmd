@@ -167,153 +167,55 @@ relativt stagnering i kvotientene ut tidsperioden, som potensielt
 tilsier at denne type næring har blitt mindre viktigere for regionen
 sammenlignet med nasjonalt sett.
 
-### Karmøy: 05-09 Bergverksdrift og utvinning
+### Karmøy: 86-88 Helse- og sosialetjenester
 
 ```{r}
-locq(55, 15194, 1338, 47530, industry.names = Bergverksdrift_utvinning_2008, plot.results = FALSE,
+locq(2771, 15194, 9596, 47530, industry.names = Helse_og_sosialtjen_2008, plot.results = FALSE,
 LQ.method = "m", plot.title = "Localization quotients", 
 bar.col = "lightblue", line.col = "red", arg.size = 1)
 ```
 
 ```{r}
-locq(245, 15457, 1521, 49518, industry.names = Bergverksdrift_utvinning_2014, plot.results = FALSE,
+locq(3162, 15457, 10425, 49518, industry.names = Bergverksdrift_utvinning_2014, plot.results = FALSE,
 LQ.method = "m", plot.title = "Localization quotients", 
 bar.col = "lightblue", line.col = "red", arg.size = 1)
 ```
 
 ```{r}
-locq(307, 15978, 1752, 49295, industry.names = Bergverksdrift_utvinning_2014, plot.results = FALSE,
+locq(3280, 15978, 11050, 49295, industry.names = Bergverksdrift_utvinning_2014, plot.results = FALSE,
 LQ.method = "m", plot.title = "Localization quotients", 
 bar.col = "lightblue", line.col = "red", arg.size = 1)
 ```
 
-### Tysvær: 10-33 Industri
+Lokaliseringskvotientene for helse- og sosialtjenester i Karmøy kommune
+har hatt et relativt stabilt nivå gjennom tidsperioden 2008-2019, hvorav
+alle verdiene har ligget i underkant av 1. Dette tilsier at denne type
+aktivitet er en typisk lokalnæring for kommunen, siden vi har hatt
+såpass stabile verdier rundt 1. Dette reflekterer også at hele- og
+sosialtjenester er like viktig for regionen som for nasjonen.
 
-```{r}
-locq(268, 4048, 7491, 47530, industry.names = Industri_2008, plot.results = FALSE,
-LQ.method = "m", plot.title = "Localization quotients", 
-bar.col = "lightblue", line.col = "red", arg.size = 1)
-```
+## Gini- indeks for industrivirksomhet
 
-```{r}
-locq(220, 4329, 6767, 49518, industry.names = Industri_2014, plot.results = FALSE,
-LQ.method = "m", plot.title = "Localization quotients", 
-bar.col = "lightblue", line.col = "red", arg.size = 1)
-```
+Den romlige Gini-indeksen $(G_i)$ er et sentralt mål som blir brukt til
+å undersøke den geografiske spredningen av en næringssektor og forstå
+klyngetendenser. Resultatene av gini-koeffisientene måler hvor
+konsentrert/spredten næring vil være fordelt basert på de utvalgte
+kommunene i regionen. Dersom det eksisterer en sterkere klyngetendens
+mellom kommunene vil man kunne forvente at verdien på gini-koeffisienten
+har økt over tid og man burde som regel analysere dette på et finere
+nivå enn kommunenivå om mulig.
 
-```{r}
-locq(617, 4710, 6563, 49295, industry.names = Industri_2014, plot.results = FALSE,
-LQ.method = "m", plot.title = "Localization quotients", 
-bar.col = "lightblue", line.col = "red", arg.size = 1)
-```
+Man benytter gini-indeksen for å undersøke hvordan den bestemte
+aktiviteten er fordelt overfor geografien/regionen. Ved høye verdier av
+gini-koeffisienten vil dette indikere klyngedannelser og
+konsentrasjoner, imens lave verdier av koeffisienten beskriver et
+forhold av jevnere spredning mellom regionene. Dersom det eksisterer en
+helt jevn fordeling vil $G_i=0$.
 
-\#\#\#\#\#\#\#\#\#\#\#
-
-Gjør også en vurdering av hvor konsentrert/spredt en næring er fordelt
-mellom kommunene i regionen, basert på beregninger av den romlige
-Gini-indeksen. Vurder om sammenligningsgrunnlaget bør være samlet
-sysselsetting i regionen, eller samlet sysselsetting for nasjonen, og
-finn gjerne ut hvilken rolle det spiller om en bruker regionale eller
-nasjonale anslag for samlet sysselsetting. Gjør gjerne disse
-beregningene både for det første og det siste året i datagrunnlaget.
-
-## Gini-indeks
-
-Jonathan: Kan du se at jeg har gjort riktig? For jeg får - foran mine
-svar, du fikk ikke det. Kan du også beregne for hele nasjonen på noen av
-de? Og skrive kommentarer under? en setning eller noe til hver
-by/bransje.
-
-Gini-indeksen måler hvor likt fordelt arbeidsplassene er. Man kommer
-frem til et tall mellom 0 og 1, hvor 0 vil si at arbeidsplassene er likt
-fordelt i området og 1 betyr at arbeidsplassene er helt ulike, altså at
-alle arbeidsplassene ligger i et område.
-
-### Haugesund: 05-09 Bergverksdrift og utvinning
-
-2008:
-
-```{r gini_Haug1_08}
-(452/1338)-(21322/47530)
-```
-
-2019:
-
-```{r gini_Haug1_19}
-(685/1752)-(21429/49295)
-```
-
-### Haugesund: 86-88 Helse- og sosialtjenester
-
-2008:
-
-```{r gini_haug2_08}
-(4812/9596)-(21322/47530)
-```
-
-2019:
-
-```{r gini_haug2_19}
-(5608/11050)-(21429/49295)
-```
-
-### Karmøy: 10-33 Industri
-
-2008:
-
-```{r gini_Karmøy08}
-(3357/7491)-(15194/47530)
-```
-
-2019:
-
-```{r gini_karmøy19}
-(2476/6563)-(15978/49295)
-```
-
-### Karmøy: 05-09 Bergverksdrift og utvinning
-
-2008:
-
-```{r gini_Karmøy2_08}
-(55/1338)-(15194/47530)
-```
-
-2019:
-
-```{r gini_karmøy2_19}
-(307/1752)-(15978/49295)
-```
-
-### Tysvær: 10-33 Industri
-
-2008:
-
-```{r tysvær08}
-(268/7491)-(4048/47530)
-```
-
-2019:
-
-```{r tysvær19}
-(617/6563)-(4710/49295)
-```
-
-# Gini- indeks for industrivirksomhet
-
-Den romlige Gini-indeksen $(G_i)$ er et sentralt mål som
-blir brukt til å undersøke den geografiske spredningen av en
-næringssektor og forstå klyngetendenser. Resultatene av gini-koeffisientene måler hvor konsentrert/spredten næring vil være fordelt basert på de utvalgte kommunene i regionen. Dersomdet eksisterer en sterkere klyngetendens mellom kommunene vil man kunneforvente at verdien på gini-koeffisientenhar økt over tid og man burde som
-regel analysere dette på et finere nivå enn kommunenivå om mulig.
-
-Man benytter gini-indeksen for å undersøke hvordan den
-bestemte aktiviteten er fordelt overfor geografien/regionen. Ved høye
-verdier av gini-koeffisienten vil dette indikere klyngedannelser og
-konsentrasjoner, imens lave verdier av koeffisienten beskriver et forhold av jevnere spredning mellom regionene. Dersom det eksisterer en helt jevn fordeling vil $G_i=0$.
-
-Vi har valgt å undersøke gini-indeksen for næringen industri
-og de fem utvalgte kommunene vi har benyttet oss av er Haugesund, Sauda,
-Bokn, Tysvaer og Karmoey. Tilsvarende har vi brukt dataene fra 2008 og 2019 som er det første- og siste året vi har som vårt datagrunnlag.
+Vi har valgt å undersøke gini-indeksen for næringen industri og de fem
+utvalgte kommunene vi har benyttet oss av er Haugesund, Sauda, Bokn,
+Tysvaer og Karmoey. Tilsvarende har vi brukt dataene fra 2008 og 2019
+som er det første- og siste året vi har som vårt datagrunnlag.
 
 -   **Årstall: 2008**
 
@@ -370,3 +272,31 @@ sammenlignes med nasjonale eller regionale andeler for de ulike
 næringene.
 
 ## RDI
+
+**Formel:**
+
+$RDI_r=\frac{1}{\sum_i|\frac{E_{ir}}{E_r}-\frac{E_{in}}{E_n}|}$
+
+Haugesund: 05-09 Bergverksdrift og utvinning 2008:
+
+$E_{ir}=452$ $E_r=1338$ $E_{in}=21322$ $E_n=47530$
+
+$RDI=\frac{1}{\frac{452}{1338}-\frac{21322}{47530}}$
+
+$RDI=\frac{1}{0,34-0,45}$
+
+$RDI=\frac{1}{-0,11}$
+
+$RDI=-9,09$
+
+Haugesund: 05-09 Bergverksdrift og utvinning 2019:
+
+$E_{ir}=685$ $E_r=1752$ $E_{in}=21429$ $E_n=49295$
+
+$RDI=\frac{1}{\frac{685}{1752}-\frac{21429}{49295}}$
+
+$RDI=\frac{1}{0,39-0,43}$
+
+$RDI=\frac{1}{-0,04}$
+
+$RDI=-25$
