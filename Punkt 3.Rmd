@@ -169,6 +169,7 @@ Sunn_bo %>%
   theme(axis.title.y = element_text(angle=0))+
   theme(legend.position = 'bottom')
 `````
+
 I grafen ovenfor fremstilles det antall ansatte i de ulike næringene i Sunnhordaland, her kan en se Helse- og Soisaltjenester har flest ansatte. 
 
 
