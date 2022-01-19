@@ -11,6 +11,7 @@ library(dplyr)
 library(tidyverse)
 library(lubridate)
 library(REAT)
+library(readxl)
 })
 knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 ```
@@ -26,10 +27,7 @@ knr <- c("1106", "1135", "1145", "1146", "1149", "1151", "1160")
 <<<<<<< HEAD
 
 ```{r}
-=======
 ## hentet ut data fra oppgave 1, data fra Haugalandet. 
-```{r Henter data}
->>>>>>> df4e0ba1f46ebe764853acb98ef0d58be55fe112
 Haug_bo_raw <- ApiData(
   url = "07984",
   Region = list("vs:KommunerS", knr), 
@@ -43,12 +41,7 @@ Haug_bo_raw <- ApiData(
 ```
 
 
-<<<<<<< HEAD
-
-```{r}
-=======
 ```{r Velger ut og endrer navn, Haugalandet}
->>>>>>> df4e0ba1f46ebe764853acb98ef0d58be55fe112
 Haug_bo <- Haug_bo_raw$`07984: Sysselsatte per 4. kvartal, etter region, næring (SN2007), kjønn, alder, statistikkvariabel og år` %>% 
   tibble() %>% 
   rename(
@@ -166,7 +159,6 @@ Grafen ovenfor viser til antall ansatte i ulike næringer på Haugalandet. Ut i 
 # Totalt anasatte i hver næring for Sunnhordaland
 
 ```{r}
-
 Sunn_bo %>% 
  ggplot(mapping = aes(x = tot_s, y = Naering, (angle=0))) +
   scale_fill_distiller(palette = "Dark2") +
@@ -180,6 +172,9 @@ Sunn_bo %>%
 I grafen ovenfor fremstilles det antall ansatte i de ulike næringene i Sunnhordaland, her kan en se Helse- og Soisaltjenester har flest ansatte. 
 
 
+```{r}
+lokaliseringskvotienter <- read_excel("~/Documents/Master i sivilokonom/2. Semester/Anvendt by- og regionaløkonomi/lokaliseringskvotienter.xlsx")
+```
 
 
 
