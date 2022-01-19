@@ -45,7 +45,7 @@ tabell_Norge<- Nas_arbeid_norge_sys
 
 tabell_Norge %>% 
   ggplot(aes(x = sysselsatte)) +
-  geom_line(aes(y = NACE2007)) +
+  geom_line(aes(y = SN2007)) +
   ggtitle("Alle næringer, Norge, 2008-2020") + 
   theme(legend.position="bottom",
         axis.title= element_text(size=12,face="bold")) +
