@@ -101,6 +101,24 @@ Det er flere grunner til at lokaliseringskvotienten endrer seg. En kan
 være at antall sysselsatte innenfor næringer øker i kommunen, eller at
 totalt antall i næringen i regionen minker.
 
+```{r koeffisient_mot_nasjonal_2008}
+locq(452, 43265, 1338, 2525000, industry.names = Bergverksdrift_utvinning_nasjonal_2008, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+
+```{r koeffisient_mot_nasjonal_2019}
+locq(685, 58757, 1752, 2710435, industry.names = Bergverksdrift_utvinning_nasjonal_2019, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+Her har vi beregnet koeffisienten for bergverksdrift- og utvinning i Haugesund, mot nasjonalt for årstallene 2008 og 2019. 
+
+Når vi ser på disse koeffisientene, ser vi at bergverksdrift- og utvinning i Haugesund er overrepresentert sett opp mot hele landet. 
+
+
 ### Haugesund: 86-88 Helse- og sosialtjenester
 
 (første tall/3. tall)-(andre tall/fjerde tall)
@@ -255,10 +273,9 @@ klyngetendensen mellom kommunene har blitt relativt svekket.
 ## RDI
 
 Et mål som kan brukes for å se på om næringsstrukturen i en region er
-diversifisert eller spesialisert, er RDI. RDI står for regional
-diversity index. Verdien vi får forteller oss om fordelingen av
-arbeidsplasser, innenfor ulike sektorer, ligner den nasjonale
-fordelingen.
+diversifisert eller spesialisert er RDI. RDI står for regional diversity
+index. Verdien vi får forteller oss om fordelingen av arbeidsplasser,
+innenfor ulike sektorer, ligner den nasjonale fordelingen.
 
 ![RDI formel, i er sektor, og Sin er andel av nasjonal
 sysselsetting](RDI_formel.JPG) der sin er sektor i 's andel av samlet
@@ -271,13 +288,11 @@ endret over tid. Vurder også nå om sysselsettingsandelene skal
 sammenlignes med nasjonale eller regionale andeler for de ulike
 næringene.
 
-## RDI
-
 **Formel:**
 
 $RDI_r=\frac{1}{\sum_i|\frac{E_{ir}}{E_r}-\frac{E_{in}}{E_n}|}$
 
-Haugesund: 05-09 Bergverksdrift og utvinning 2008:
+### Haugesund: 05-09 Bergverksdrift og utvinning 2008:
 
 $E_{ir}=452$ $E_r=1338$ $E_{in}=21322$ $E_n=47530$
 
@@ -289,7 +304,7 @@ $RDI=\frac{1}{-0,11}$
 
 $RDI=-9,09$
 
-Haugesund: 05-09 Bergverksdrift og utvinning 2019:
+### Haugesund: 05-09 Bergverksdrift og utvinning 2019:
 
 $E_{ir}=685$ $E_r=1752$ $E_{in}=21429$ $E_n=49295$
 
@@ -300,3 +315,30 @@ $RDI=\frac{1}{0,39-0,43}$
 $RDI=\frac{1}{-0,04}$
 
 $RDI=-25$
+
+
+### Haugesund 05-09, mot nasjonal bergverksdrift og utvinning.
+
+### 2008:
+
+$E_{ir}=452$ $E_r=1338$ $E_{in}=43265$ $E_n=2525000$
+
+$RDI=\frac{1}{\frac{452}{1338}-\frac{43265}{2525000}}$
+
+$RDI=\frac{1}{0.34-0.02}$
+
+$RDI=\frac{1}{0.32}$
+
+$RDI=3.125$
+
+### 2019:
+
+$E_{ir}=685$ $E_r=1752$ $E_{in}=58757$ $E_n=2710435$
+
+$RDI=\frac{1}{\frac{685}{1752}-\frac{58757}{2710435}}$
+
+$RDI=\frac{1}{0.39-0.22}$
+
+$RDI=\frac{1}{0.17}$
+
+$RDI=5.88$
