@@ -1896,7 +1896,7 @@ Tab_03321_00_20_a %>%
   labs(colour = "Kommune")
 ```
 
-
+# Oppgave 4
 
 ```{r}
 library(readxl)
@@ -1907,22 +1907,67 @@ Tab_03321_andeler <- read_excel("Data/Tab_03321_andeler.xlsx",
 ```
 
 
+```{r}
+#beregne og presentere andeler av arbeidstakerne med bosted i en kommune som har arbeidssted i andre kommuner, og gjør det samme for andelen av jobbene i en kommune som er besatt av arbeidstakere fra andre kommuner. Diskuter forskjeller mellom kommunene i regionen, og drøft utviklingen over tid for ulike kommuner
+```
 
 
+### Pendler ut
+
+```{r}
+#Andel pendelere ut av kommunen
+Tab_03321_andeler %>%
+  select(aar, b_knavn_new, Ut_pendlere) %>%
+  filter(
+    b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes", "Kvinnherad", "Ullensvang")
+    ) %>%
+  ggplot(mapping = aes(x = aar, y = Ut_pendlere, colour = b_knavn_new)) +
+  geom_line(aes(group = b_knavn_new), lwd = 0.6) +
+  theme(legend.position = 'bottom')+
+  xlab("År") +
+  ylab("Prosentandel") +
+  labs(colour = "Kommune")
+```
+### Pendler inn
+
+```{r}
+#Andeler som pendler inn i kommune
+Tab_03321_andeler %>%
+  select(aar, b_knavn_new, Inn_pendlere) %>%
+  filter(
+    b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes", "Kvinnherad", "Ullensvang")
+    ) %>%
+  ggplot(mapping = aes(x = aar, y = Inn_pendlere, colour = b_knavn_new)) +
+  geom_line(aes(group = b_knavn_new), lwd = 0.5) +
+  theme(legend.position = 'bottom') +
+  xlab("År") +
+  ylab("Prosentandel") +
+  labs(colour = "Kommune")
+```
+
+# i) 
+Ut i fra disse grafene vi viser frem kan vi se at det er to kommuner som skiller seg ut når det kommer til pendling ut av kommunen. Vi ser at Sveio og Tysvær ligger høyest pendling fra sine kommuner. En grunn til dette er at kommunene ligger gunstig til med reiseavstand ut til flere andre kommuner. Ser vi på Bokn så kan vi se at de har hatt den største prosentøkningen og de største svingningen fra 2000-2020. Vi kan se at Bokn fikk en brå økning i pendlere ut av kommunen rundt 2011. Dette kan være effekten av at T-forbinelsen var i gang og de som bor på Bokn så for seg kortere avstander for å reise til jobb, men vi ser at når T-forbindelsen åpnet i 2013, så avtar grafen igjen og går mot tallene som var i 2011. 
+
+
+
+
+
+### Bor og jobber i samme kommune
 
 
 ```{r}
 Tab_03321_andeler %>%
-  select(aar, b_knavn_new, Ut_pendlere) %>%
+  select(aar, b_knavn_new, b_og_a) %>%
   filter(
-    b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda", "Haugesund")
+    b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes", "Kvinnherad", "Ullensvang")
     ) %>%
-  ggplot(mapping = aes(x = aar, y = Ut_pendlere, colour = b_knavn_new)) +
-  geom_line(aes(group = b_knavn_new), lwd = 1) +
-  theme(legend.position = 'bottom')
+  ggplot(mapping = aes(x = aar, y = b_og_a, colour = b_knavn_new)) +
+  geom_line(aes(group = b_knavn_new), lwd = 0.5) +
+  theme(legend.position = 'bottom')+
+  xlab("År") +
+  ylab("Prosentandel") +
+  labs(colour = "Kommune")
 ```
-
-
 
 
 
