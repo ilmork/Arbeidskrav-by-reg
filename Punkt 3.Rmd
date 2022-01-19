@@ -4,7 +4,7 @@ output: html_notebook
 ---
 
 
-```{r}
+```{r Setup}
 suppressPackageStartupMessages({
 library(PxWebApiData)
 library(dplyr)
@@ -17,13 +17,14 @@ knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 
 
 
-I denne oppgaven skal vi finne sysselsetting i de ulike næringene, etter arbeidsstedskommune.
+# I denne oppgaven skal vi finne sysselsetting i de ulike næringene, etter arbeidsstedskommune.
 
 ```{r}
 knr <- c("1106", "1135", "1145", "1146", "1149", "1151", "1160")
 ```
 
-```{r}
+## hentet ut data fra oppgave 1, data fra Haugalandet. 
+```{r Henter data}
 Haug_bo_raw <- ApiData(
   url = "07984",
   Region = list("vs:KommunerS", knr), 
@@ -37,7 +38,7 @@ Haug_bo_raw <- ApiData(
 ```
 
 
-```{r}
+```{r Velger ut og endrer navn, Haugalandet}
 Haug_bo <- Haug_bo_raw$`07984: Sysselsatte per 4. kvartal, etter region, næring (SN2007), kjønn, alder, statistikkvariabel og år` %>% 
   tibble() %>% 
   rename(
@@ -47,35 +48,36 @@ Haug_bo <- Haug_bo_raw$`07984: Sysselsatte per 4. kvartal, etter region, næring
   )
 ```
 
-```{r}
+```{r }
 names(Haug_bo_raw)[1] <- "desc4"
 ```
 
-```{r}
+```{r Muterer inn i Haug_bo }
 Haug_bo <- Haug_bo %>% 
   mutate(knavn = Haug_bo_raw$Knr)
 ```
 
-```{r}
+
+```{r Tar ut kommunene}
 Haug_bo <- Haug_bo %>% 
   pivot_wider(
     names_from = Knr,
     values_from = value)
 ```
 
-
-```{r}
+## Legger her til en total for Haugalandet. 
+```{r Muterer inn en tot_h}
 Haug_bo = mutate(Haug_bo, tot_h = Haugesund+Sauda+Bokn+Tysvær+Karmøy+Utsira+Vindafjord)
 ```
 
 # Sunnhordaland
-
-```{r}
+```{r Legger til kommune nr}
 knr_sunn <- c("1211", "1216",
          "1219", "1221", "1222", "1223", "1224", "1228", "1231")
 ```
 
-```{r}
+## Henter inn data fra oppgave 1, kommunene i Sunnhordaland
+```{r Data fra Sunnhordaland}
 Sunn_bo_raw <- ApiData(
   url = "07984",
   Region = list("vs:KommunerS", knr_sunn), 
@@ -89,7 +91,7 @@ Sunn_bo_raw <- ApiData(
 ```
 
 
-```{r}
+```{r Endrer navnene}
 Sunn_bo <- Sunn_bo_raw$`07984: Sysselsatte per 4. kvartal, etter region, næring (SN2007), kjønn, alder, statistikkvariabel og år` %>% 
   tibble() %>% 
   rename(
@@ -103,7 +105,7 @@ Sunn_bo <- Sunn_bo_raw$`07984: Sysselsatte per 4. kvartal, etter region, næring
 names(Sunn_bo_raw)[[1]]<-"desc5"
 ```
 
-```{r}
+```{r Muterer inn knr og knavn}
 Sunn_bo <- Sunn_bo %>% 
   mutate(knavn = Sunn_bo_raw$Knr)
 ```
@@ -115,7 +117,8 @@ Sunn_bo <- Sunn_bo %>%
     values_from = value)
 ```
 
-```{r}
+## fra kommune nummer til kommune navn 
+```{r navnendring}
 names(Sunn_bo)[[6]] <- "Etne"
 names(Sunn_bo)[[7]] <- "Sveio"
 names(Sunn_bo)[[8]] <- "Boemlo"
@@ -128,14 +131,12 @@ names(Sunn_bo)[[14]] <- "Ullensvang"
 ```
 
 
-```{r}
+```{r muterer kommunene inn i sunn_bo}
 Sunn_bo = mutate(Sunn_bo, tot_s = Etne + Sveio + Boemlo+ Stord+ Fitjar+ Tysnes+ Kvinnherad + Odda + Ullensvang)
 ```
 
-<<<<<<< HEAD
 
 # Totalt anasatte i hver næring for Haugalandet
-
 ```{r}
 Haug_bo %>% 
  ggplot(mapping = aes(x = tot_h, y = Naering, (angle=0))) +
@@ -147,30 +148,15 @@ Haug_bo %>%
   theme(axis.title.y = element_text(angle=0))+
   theme(legend.position = 'bottom')
 ```
-=======
 
-# Totalt anasatte i hver næring for Haugalandet
-
-```{r}
-Haug_bo %>% 
-  ggplot(mapping = aes(x = tot_h, y = Naering, (angle=0))) +
-   scale_fill_distiller(palette = "Dark2") +
-   geom_line(aes(group = Naering, colour = Naering)) +
-   scale_size_manual(values = c(seq(2.0, 2, by = -0.1))) +
-   geom_hline(yintercept = 0) +
-   labs(title = "Haugalandet", x = "Totalt ansatte", y = "Antall ansatte i  \n alle næringer") +
-   theme(axis.title.y = element_text(angle=0))+
-   theme(legend.position = 'bottom')
-```
+Grafen ovenfor viser til antall ansatte i ulike næringer på Haugalandet. Ut i fra grafen kan en se at Helse- og omsorgstjenester er næring med høyest antall ansatte på Haugalandet. 
 
 
-# Totalt anasatte i hver næring for Sunnhordaland
->>>>>>> 53b17ab303bc3ab63600c06a7d1c7c0d087bccbf
 
 # Totalt anasatte i hver næring for Sunnhordaland
 
 ```{r}
-<<<<<<< HEAD
+
 Sunn_bo %>% 
  ggplot(mapping = aes(x = tot_s, y = Naering, (angle=0))) +
   scale_fill_distiller(palette = "Dark2") +
@@ -180,18 +166,8 @@ Sunn_bo %>%
   labs(title = "Sunnhordaland", x = "Totalt ansatte", y = "Antall ansatte i  \n alle næringer") +
   theme(axis.title.y = element_text(angle=0))+
   theme(legend.position = 'bottom')
-=======
- Sunn_bo %>% 
-  ggplot(mapping = aes(x = tot_s, y = Naering, (angle=0))) +
-   scale_fill_distiller(palette = "Dark2") +
-   geom_line(aes(group = Naering, colour = Naering)) +
-   scale_size_manual(values = c(seq(2.0, 2, by = -0.1))) +
-   geom_hline(yintercept = 0) +
-   labs(title = "Sunnhordaland", x = "Totalt ansatte", y = "Antall ansatte i  \n alle næringer") +
-   theme(axis.title.y = element_text(angle=0))+
-   theme(legend.position = 'bottom')
->>>>>>> 53b17ab303bc3ab63600c06a7d1c7c0d087bccbf
-```
+`````
+I grafen ovenfor fremstilles det antall ansatte i de ulike næringene i Sunnhordaland, her kan en se Helse- og Soisaltjenester har flest ansatte. 
 
 
 
