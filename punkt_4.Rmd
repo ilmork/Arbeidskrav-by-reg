@@ -1547,7 +1547,7 @@ Tab_03321_20 <- Tab_03321_20 %>%
 # Sammenslåing av tabellene
 
 
-# 2000 til 2020 (AG)
+## 2000 til 2020
 
 ```{r}
 # Antar at de nye også skal med
@@ -1653,15 +1653,8 @@ Tab_03321_00_20_a <- Tab_03321_00_20 %>%
   select(aar, a_knr_new, a_knavn_new, b_knr_new, b_knavn_new, personer_new)
 ```
 
-```{r}
-Tab_03321_00_20_b <- Tab_03321_00_20_a %>% 
-  group_by(a_knr_new, b_knr_new, a_knavn_new, b_knavn_new, aar) %>% 
-  summarise(a_og_b = sum(personer_new)) %>% 
-  select(aar, a_knr_new, a_knavn_new, b_knr_new, b_knavn_new, a_og_b)
-```
 
-
-# Testing Testing
+# Pendlematrise for hvert år med kommunestruktur 2020
 
 ```{r}
 # pendlematrise år 2000 oppdatert til kommunestruktur 2020
@@ -1878,12 +1871,8 @@ tab_2020 <- Tab_03321_00_20_a %>%
   )
 ```
 
-# Legger til variabler
 
-
-
-
-# Figur
+# Figurer
 
 ```{r}
 Tab_03321_00_20_a %>% 
