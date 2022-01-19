@@ -1917,6 +1917,10 @@ Tab_03321_andeler %>%
   ylab("Prosentandel") +
   labs(colour = "Kommune")
 ```
+
+
+
+
 ### Pendler inn
 
 ```{r}
@@ -1943,7 +1947,6 @@ Ut i fra disse grafene vi viser frem kan vi se at det er to kommuner som skiller
 
 ### Bor og jobber i samme kommune
 
-
 ```{r}
 Tab_03321_andeler %>%
   select(aar, b_knavn_new, b_og_a) %>%
@@ -1957,6 +1960,12 @@ Tab_03321_andeler %>%
   ylab("Prosentandel") +
   labs(colour = "Kommune")
 ```
+
+
+
+# Leker meg bare med ggplot og tester ut ting
+
+
 
 
 
