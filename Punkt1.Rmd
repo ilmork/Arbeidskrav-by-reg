@@ -12,6 +12,7 @@ library(broom)
 library(lmtest)
 library(sandwich)
 library(viridis)
+  options(scipen = 999)
 })
 knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 ```
