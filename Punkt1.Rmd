@@ -61,6 +61,8 @@ tabell_Norge %>%
 - Kommunene på Haugalandet opp mot Haugalandet. 
 - Kommunene i Sunnhordland opp mot Sunnhordland. 
 
+-Fikse SUNN ARB. 
+
 
 ```{r}
 names(Tabell1)
