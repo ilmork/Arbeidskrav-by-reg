@@ -1912,12 +1912,12 @@ Tab_03321_andeler <- read_excel("Data/Tab_03321_andeler.xlsx",
 
 
 ```{r}
-Tab_03321_a_og_b %>%
-  select(aar, b_knavn_new, Andel_B_og_A) %>%
+Tab_03321_andeler %>%
+  select(aar, b_knavn_new, Ut_pendlere) %>%
   filter(
-    b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda")
+    b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda", "Haugesund")
     ) %>%
-  ggplot(mapping = aes(x = aar, y = Andel_B_og_A, colour = b_knavn_new)) +
+  ggplot(mapping = aes(x = aar, y = Ut_pendlere, colour = b_knavn_new)) +
   geom_line(aes(group = b_knavn_new), lwd = 1) +
   theme(legend.position = 'bottom')
 ```
