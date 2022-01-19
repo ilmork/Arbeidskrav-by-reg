@@ -49,7 +49,7 @@ tabell_Norge %>%
   ggtitle("Alle næringer, Norge, 2008-2020") + 
   theme(legend.position="bottom",
         axis.title= element_text(size=12,face="bold")) +
-  labs(x="Sysselsatte", y= "Alle næringer, 00-99")+
+  labs(x="Sysselsatte", y= "Alle næringer, 00-99")+ 
   scale_color_hue(name = "00-99")
 ```
 
