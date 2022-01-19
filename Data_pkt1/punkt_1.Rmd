@@ -27,7 +27,7 @@ Nas_arbeid_raw <- ApiData(
   Kjonn = "0",
   ContentsCode = "SysselsatteArb",
   Tid = c(as.character(2008:2020)),
-  Alder = c("15-74", "55-66", "67-74"),
+  Alder = c("15-74"),
   makeNAstatus = FALSE
 )
 ```
@@ -104,7 +104,7 @@ Nas_arbeid_norge_sys <- unlist(
 
 ```{r}
 Nas_arbeid <- Nas_arbeid_norge_sys %>% 
-  mutate(knavn = Nas_arbeid_raw$desc6$region)
+  mutate(knavn = Nas_arbeid_raw$region)
 ```
 
 
@@ -197,7 +197,7 @@ Haug_arbeid_raw <- ApiData(
   Kjonn = "0",
   ContentsCode = "SysselsatteArb",
   Tid = c(as.character(2008:2020)),
-  Alder = c("15-74", "55-66", "67-74"),
+  Alder = c("15-74"),
   makeNAstatus = FALSE
   )
 ```
@@ -578,14 +578,18 @@ rm(Nas_arbeid_raw_sys)
 # Gir antall ansatte i de tre alderskategoriene i de ulike næringene, Haugalandet
 
 ```{r}
+knr_haug1 <- c("1106", "1135", "1145", "1146", "1149", "1151", "1160")
+```
+
+```{r}
 Haug_arbeid_raw2 <- ApiData(
   urlToData = "07984",
-  Region = "0",
+  Region = list("vs:KommunerS", knr_haug),
   NACE2007 = TRUE,
   Kjonn = "0",
   ContentsCode = "SysselsatteArb",
   Tid = c(as.character(2008:2020)),
-  Alder = c("15-74", "55-66", "67-74"),
+  Alder = c("15-74"),
   makeNAstatus = FALSE
 )
 ```
@@ -605,7 +609,8 @@ Haug_arbeid_2 <- unlist(
     Aar = dataset.Tid,
     SN2007 = `desc9.næring (SN2007)`, 
     alder = desc9.alder,
-    ansatte = dataset.value
+    ansatte = dataset.value,
+    knavn = desc9.region
   ) %>% 
   select(Aar, NACE2007, SN2007, 
          alder, ansatte)
@@ -622,6 +627,58 @@ Haug_arbeid_wide <- Haug_arbeid_2 %>%
     )
 ```
 
+# Gir antall ansatte i de tre alderskategoriene i de ulike næringene, Sunnhordland
+
+```{r}
+knr_sunn1 <- c(knr_sunn <- c("4611", "4612",
+         "4613", "4614", "4615", "4616", "4617", "4618"))
+```
+
+```{r}
+Sunn_arbeid_raw2 <- ApiData(
+  urlToData = "07984",
+  Region = list("vs:KommunerS", knr_sunn),
+  NACE2007 = TRUE,
+  Kjonn = "0",
+  ContentsCode = "SysselsatteArb",
+  Tid = c(as.character(2008:2020)),
+  Alder = c("15-74"),
+  makeNAstatus = FALSE
+)
+```
+
+```{r}
+names(Sunn_arbeid_raw2)[1]<-"desc10"
+```
+
+```{r}
+Sunn_arbeid_2 <- unlist(
+  Haug_arbeid_raw2, 
+  recursive = FALSE
+) %>% 
+  as_tibble() %>% 
+  rename(
+    NACE2007 = dataset.NACE2007,
+    Aar = dataset.Tid,
+    SN2007 = `desc9.næring (SN2007)`, 
+    alder = desc9.alder,
+    ansatte = dataset.value,
+    knavn = desc9.region
+  ) %>% 
+  select(Aar, NACE2007, SN2007, 
+         alder, ansatte)
+```
+
+
+```{r}
+# Gir antall ansatte i de tre alderskategoriene i de ulike næringene på landsbasis
+Sunn_arbeid_wide <- Sunn_arbeid_2 %>% 
+  pivot_wider(
+    id_cols = Aar,
+    names_from = c(SN2007, alder),
+    values_from = ansatte
+    )
+```
 
 
 ## .csv-filer
@@ -640,6 +697,8 @@ write_csv(Tabell1, "Tabell1.csv")
 write_csv(Tabell2, "Tabell2.csv")
 write_csv(Haug_arbeid_wide, "Haug_arbeid_wide.csv")
 write_csv(Haug_arbeid_2, "Haug_arbeid_2.csv")
+write_csv(Sunn_arbeid_2, "Sunn_arbeid_2.csv")
+write_csv(Sunn_arbeid_wide, "Sunn_arbeid_wide.csv")
 ```
 
 ```{r}
