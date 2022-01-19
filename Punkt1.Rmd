@@ -1,6 +1,6 @@
 ---
 title: "R Notebook"
-output: html_notebook
+output: html_notebook 
 ---
 
 ```{r}
@@ -32,8 +32,34 @@ names(Tabell1)
 
 
 ```{r}
+Haug_arbeid<- read_csv("Data_pkt1/Haug_arbeid.csv")
+View(Haug_arbeid)
+show_col_types = FALSE
+```
+
+```{r}
+names(Haug_arbeid)
+```
+
+```{r} 
+Haug_arbeid %>% 
+select(Variables, Naering, ContentsCode) %>% 
+  Filter(
+    Variables %in% c("Haugesund","Sauda", "Bokn", "Tysvaer", "Karmoy", "Utsira", "Vindafjord")
+  ) %>% 
+ggplot(data = mpg, mapping = aes(x = Naering , y = ContentsCode)) + 
+  geom_point(mapping = aes(color = class)) + 
+  geom_smooth(data = filter(mpg, class == "subcompact"), se = FALSE)
+```
+
+
+
+
+
+
+```{r}
 Tabell1 %>% 
-  ggplot(mapping= aes(x = Aar, y = Tabell1$`00-99`))+
+  ggplot(mapping= aes(x = Aar, y = Tabell1$00-99))+
   geom_line() + 
   labs(title = "Test1") + 
   ylab("Test2")+
@@ -43,15 +69,16 @@ Tabell1 %>%
  
 
 ```{r} 
-Tabell1 %>% 
-select(Alder, Variables, ContentsCode) %>% 
+Haug_arbeid %>% 
+select(Variables, ContentsCode) %>% 
   Filter(
     Variables %in% c("Alle naeringer", "Jordbruk, skogbruk og fiske", "Bergverksdrift og utvinning", "Industri", "Elektrisitet, vann og renevasjon", "Bygge- og anleggsvirksomhet","Varehandel, reparasjon av motorvogner", "Transport og lagring", "Overnattings- og serveringsvriksomhet", "Informasjon og kommunikasjon", "Finansiering og forsikring ", "Teknisk tjenesteyting, eiendosmdrift", "Forretningsmessig tjenesteyting", "Off.adm., forsvar, sosialforsikring", "Undervisning", "Helse- og sosialtjenester", "Personlig tjenesteyting", "Uoppgitt")
   ) %>% 
-ggplot(data = mpg, mapping = aes(x = Alder, y = ContentsCode)) + 
+ggplot(data = mpg, mapping = aes(x = , y = )) + 
   geom_point(mapping = aes(color = class)) + 
   geom_smooth(data = filter(mpg, class == "subcompact"), se = FALSE)
 ```
+
 
 ```{r}
 coef_df_long %>% 
@@ -61,8 +88,4 @@ coef_df_long %>%
   ) %>% 
 ```
 
-
-```{r}
-"Alle naeringer", "Jordbruk, skogbruk og fiske", "Bergverksdrift og utvinning", "Industri", "Elektrisitet, vann og renevasjon", "Bygge- og anleggsvirksomhet","Varehandel, reparasjon av motorvogner", "Transport og lagring", "Overnattings- og serveringsvriksomhet", "Informasjon og kommunikasjon", "Finansiering og forsikring ", "Teknisk tjenesteyting, eiendosmdrift", "Forretningsmessig tjenesteyting", "Off.adm., forsvar, sosialforsikring", "Undervisning", "Helse- og sosialtjenester", "Personlig tjenesteyting", "Uoppgitt"
-```
 
