@@ -140,6 +140,9 @@ Tabell1_raw <- ApiData(
   )
 ```
 
+```{r}
+names(Tabell1_raw)[[1]]<-"desc"
+```
 
 ```{r}
 Tabell1 <- Tabell1_raw$dataset %>% 
@@ -148,18 +151,8 @@ Tabell1 <- Tabell1_raw$dataset %>%
     Knr = Region, 
     Naering = NACE2007,
     Aar = Tid
-  )
-```
-
-
-```{r}
-names(Tabell1_raw)[[1]]<-"desc"
-```
-
-
-```{r}
-Tabell1 <- Tabell1 %>% 
-  mutate(knavn = Tabell1$Knr)
+) %>% 
+  mutate(knavn = Tabell1_raw$desc$region)
 ```
 
 
