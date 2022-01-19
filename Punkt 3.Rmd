@@ -15,6 +15,8 @@ library(REAT)
 knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 ```
 
+
+
 I denne oppgaven skal vi finne sysselsetting i de ulike næringene, etter arbeidsstedskommune.
 
 ```{r}
@@ -109,7 +111,7 @@ Sunn_bo <- Sunn_bo %>%
 ```{r}
 Sunn_bo <- Sunn_bo %>% 
   pivot_wider(
-    names_from = c(Knr),
+    names_from = Knr,
     values_from = value)
 ```
 
@@ -130,6 +132,7 @@ names(Sunn_bo)[[14]] <- "Ullensvang"
 Sunn_bo = mutate(Sunn_bo, tot_s = Etne + Sveio + Boemlo+ Stord+ Fitjar+ Tysnes+ Kvinnherad + Odda + Ullensvang)
 ```
 
+<<<<<<< HEAD
 
 # Totalt anasatte i hver næring for Haugalandet
 
@@ -144,10 +147,30 @@ Haug_bo %>%
   theme(axis.title.y = element_text(angle=0))+
   theme(legend.position = 'bottom')
 ```
+=======
+
+# Totalt anasatte i hver næring for Haugalandet
+
+```{r}
+Haug_bo %>% 
+  ggplot(mapping = aes(x = tot_h, y = Naering, (angle=0))) +
+   scale_fill_distiller(palette = "Dark2") +
+   geom_line(aes(group = Naering, colour = Naering)) +
+   scale_size_manual(values = c(seq(2.0, 2, by = -0.1))) +
+   geom_hline(yintercept = 0) +
+   labs(title = "Haugalandet", x = "Totalt ansatte", y = "Antall ansatte i  \n alle næringer") +
+   theme(axis.title.y = element_text(angle=0))+
+   theme(legend.position = 'bottom')
+```
+
+
+# Totalt anasatte i hver næring for Sunnhordaland
+>>>>>>> 53b17ab303bc3ab63600c06a7d1c7c0d087bccbf
 
 # Totalt anasatte i hver næring for Sunnhordaland
 
 ```{r}
+<<<<<<< HEAD
 Sunn_bo %>% 
  ggplot(mapping = aes(x = tot_s, y = Naering, (angle=0))) +
   scale_fill_distiller(palette = "Dark2") +
@@ -157,6 +180,17 @@ Sunn_bo %>%
   labs(title = "Sunnhordaland", x = "Totalt ansatte", y = "Antall ansatte i  \n alle næringer") +
   theme(axis.title.y = element_text(angle=0))+
   theme(legend.position = 'bottom')
+=======
+ Sunn_bo %>% 
+  ggplot(mapping = aes(x = tot_s, y = Naering, (angle=0))) +
+   scale_fill_distiller(palette = "Dark2") +
+   geom_line(aes(group = Naering, colour = Naering)) +
+   scale_size_manual(values = c(seq(2.0, 2, by = -0.1))) +
+   geom_hline(yintercept = 0) +
+   labs(title = "Sunnhordaland", x = "Totalt ansatte", y = "Antall ansatte i  \n alle næringer") +
+   theme(axis.title.y = element_text(angle=0))+
+   theme(legend.position = 'bottom')
+>>>>>>> 53b17ab303bc3ab63600c06a7d1c7c0d087bccbf
 ```
 
 
