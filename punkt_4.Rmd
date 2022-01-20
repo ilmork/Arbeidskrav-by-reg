@@ -78,8 +78,16 @@ Tab_03321_00 <- Tab_03321_00 %>%
   rename(Bokommune = Bokommuen) %>% 
   select(-Bokommune) %>%
   mutate(
-    Tot_bosted = 
-  ) %>% 
+         Tot_bosted = rowSums(.),
+         Tot_arb_komm = colSums(.),
+         Ut_pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_ut_pendlere = round(Ut_pendlere/Tot_bosted*100, 2),
+         Inn_pendlere = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_inn_pendlere = round(Inn_pendlere/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Ut_pendlere,
+         Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
+         Bokommune = Tab_03321_00$Bokommuen
+                    ) %>% 
   select(Bokommune, everything())
 ```
 
@@ -1959,7 +1967,6 @@ Tab_03321_andeler %>%
   select(aar, b_knavn_new, b_og_a) %>%
   filter(
     b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes", "Kvinnherad", "Ullensvang")
->>>>>>> 53b17ab303bc3ab63600c06a7d1c7c0d087bccbf
     ) %>%
   ggplot(mapping = aes(x = aar, y = b_og_a, colour = b_knavn_new)) +
   geom_line(aes(group = b_knavn_new), lwd = 0.5) +
@@ -1970,24 +1977,9 @@ Tab_03321_andeler %>%
 ```
 
 
-<<<<<<< HEAD
-```{r}
-Tab_03321_a_og_b %>%
-  select(aar, b_knavn_new, Andel_B_og_A) %>%
-  filter(
-    b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes", "Kvinnherad", "Ullensvang")
-    ) %>%
-  ggplot(mapping = aes(x = aar, y = Andel_B_og_A, colour = b_knavn_new)) +
-  geom_line(aes(group = b_knavn_new), lwd = 1) +
-  theme(legend.position = 'bottom')
-```
-=======
-
 # Leker meg bare med ggplot og tester ut ting
 
 
-
->>>>>>> 53b17ab303bc3ab63600c06a7d1c7c0d087bccbf
 
 
 
