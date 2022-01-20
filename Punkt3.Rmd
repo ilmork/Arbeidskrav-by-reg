@@ -176,6 +176,12 @@ Sunn_bo %>%
 I figuren ovenfor fremstilles det antall ansatte i de ulike næringene i Sunnhordland, her kan en se at helse- og soisaltjenester har flest ansatte.  
 
 ```{r}
+write.csv(Haug_bo, "Haug_bo_3.csv")
+write.csv(Sunn_bo, "Sunn_bo_3.csv")
+```
+
+
+```{r}
 lokaliseringskvotienter <- read_excel("~/Documents/Master i sivilokonom/2. Semester/Anvendt by- og regionaløkonomi/lokaliseringskvotienter.xlsx")
 ```
 
