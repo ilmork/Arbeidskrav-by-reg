@@ -1,6 +1,6 @@
 ---
 title: "R Notebook"
-output: html_notebook 
+output: html_notebook
 ---
 
 ```{r}
@@ -30,51 +30,52 @@ show_col_types = FALSE
 names(Tabell1)
 ```
 
+```{r}
+Tabell1 <- Tabell1 %>% 
+  mutate(År = make_date(Aar))
+```
+
+
 
 ```{r}
-Haug_arbeid<- read_csv("Data_pkt1/Haug_arbeid.csv")
-View(Haug_arbeid)
-show_col_types = FALSE
+tabell_haugaland <- Tabell1 %>% 
+  filter(Alder =="15-74",
+         Knr %in% c("1106", "1135", "1146", "1149"))
+
+tabell_haugaland %>% 
+  ggplot(aes(x = År)) +
+  geom_line(aes(y = `00-99`, colour = knavn)) +
+    ggtitle("Alle næringer, Haugesund og Karmøy, 2008-2020") +
+    theme(legend.position = "bottom",
+          axis.title = element_text(size = 12, face = "bold")) +
+    labs(x = "År", y = "Alle næringer, 00-99") +
+  scale_color_hue(name = "Kommune")
 ```
-
-```{r}
-names(Haug_arbeid)
-```
-
-```{r} 
-Haug_arbeid %>% 
-select(Variables, Naering, ContentsCode) %>% 
-  Filter(
-    Variables %in% c("Haugesund","Sauda", "Bokn", "Tysvaer", "Karmoy", "Utsira", "Vindafjord")
-  ) %>% 
-ggplot(data = mpg, mapping = aes(x = Naering , y = ContentsCode)) + 
-  geom_point(mapping = aes(color = class)) + 
-  geom_smooth(data = filter(mpg, class == "subcompact"), se = FALSE)
-```
-
-
-
-
-
 
 ```{r}
 Tabell1 %>% 
-  ggplot(mapping= aes(x = Aar, y = Tabell1$00-99))+
-  geom_line() + 
-  labs(title = "Test1") + 
-  ylab("Test2")+
-  theme(axis.title.y = element_text(angle=1))+
-  scale_x_continuous(breaks= seq(2008, 2020, by = 0.5))
+  ggplot(aes(x = År)) +
+  geom_line(aes(y = `00-99`, colour = knavn)) +
+    ggtitle("Alle næringer, Haugesund og Karmøy, 2008-2020") +
+    theme(legend.position = "bottom",
+          axis.title = element_text(size = 12, face = "bold")) +
+    labs(x = "År", y = "Alle næringer, 00-99") +
+  scale_color_hue(name = "Kommune")
+
+# OK! Kanskje ikke en graf som gir noe fornuftig illustrasjon...
+# Men var litt stilig :)
 ```
- 
+
+
+
 
 ```{r} 
-Haug_arbeid %>% 
-select(Variables, ContentsCode) %>% 
+Tabell1 %>%
+  select(Alder, Variables, ContentsCode) %>% 
   Filter(
     Variables %in% c("Alle naeringer", "Jordbruk, skogbruk og fiske", "Bergverksdrift og utvinning", "Industri", "Elektrisitet, vann og renevasjon", "Bygge- og anleggsvirksomhet","Varehandel, reparasjon av motorvogner", "Transport og lagring", "Overnattings- og serveringsvriksomhet", "Informasjon og kommunikasjon", "Finansiering og forsikring ", "Teknisk tjenesteyting, eiendosmdrift", "Forretningsmessig tjenesteyting", "Off.adm., forsvar, sosialforsikring", "Undervisning", "Helse- og sosialtjenester", "Personlig tjenesteyting", "Uoppgitt")
   ) %>% 
-ggplot(data = mpg, mapping = aes(x = , y = )) + 
+ggplot(data = mpg, mapping = aes(x = Alder, y = ContentsCode)) + 
   geom_point(mapping = aes(color = class)) + 
   geom_smooth(data = filter(mpg, class == "subcompact"), se = FALSE)
 ```

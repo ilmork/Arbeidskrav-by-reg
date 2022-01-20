@@ -1,0 +1,157 @@
+---
+title: "R Notebook"
+output:
+  pdf_document: default
+  html_notebook: default
+  word_document: default
+---
+
+
+```{r setup, message = FALSE, echo=FALSE}
+suppressPackageStartupMessages({
+library(tidyverse)
+library(lubridate)
+library(modelr)
+library(broom)
+library(lmtest)
+library(sandwich)
+library(viridis)
+  options(scipen = 999)
+})
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Modeller
+
+## Leser inn data
+
+```{r include= FALSE}
+Tabell1 <- read_csv("Data_pkt1/Tabell1.csv")
+Nas_arbeid_norge_sys <- read_csv("Data_pkt1/Nas_arbeid_norge_sys.csv")
+Haug_arbeid <- read_csv("Data_pkt1/Haug_arbeid.csv")
+Sunn_arbeid <- read_csv("Data_pkt1/Sunn_arbeid.csv")
+Haug_arbeid_wide <- read_csv("Data_pkt1/Haug_arbeid_wide.csv")
+Haug_arbeid_2 <- read_csv("Data_pkt1/Haug_arbeid_2.csv")
+Sunn_arbeid_2 <- read_csv("Data_pkt1/Sunn_arbeid_2.csv")
+Tabell2 <- read_csv("Data_pkt1/Tabell2.csv")
+show_col_types = FALSE
+
+```
+
+# Antall sysselsatte i ulike næringer, Norge
+
+
+```{r}
+names(Nas_arbeid_norge_sys)
+```
+
+```{r}
+Nas_arbeid_norge_sys <- Nas_arbeid_norge_sys %>% 
+  mutate(År = make_date(Aar))
+```
+
+```{r}
+tabell_Norge<- Nas_arbeid_norge_sys
+
+tabell_Norge %>% 
+  filter(SN2007 != "Alle næringer") %>%
+  ggplot(aes(x = sysselsatte)) +
+  geom_line(aes(y = SN2007)) +
+  ggtitle("Alle næringer, Norge, 2008-2020") + 
+  theme(legend.position="bottom",
+        axis.title= element_text(size=12,face="bold")) +
+  labs(x="Sysselsatte", y= "Alle næringer, 00-99")+ 
+  scale_color_hue(name = "00-99")
+```
+# Antall sysselsatte i ulike næringer i Norge over tid
+
+```{r}
+tabell_Norge %>% 
+  # velger yrkesaktive
+  filter(alder == "15-74 år") %>% 
+  # Dropper variabler som ikke trengs
+  select(-Aar, -NACE2007, -alder) %>% 
+  # Næringer som variabler, for å kunne regne ut andel
+  pivot_wider(
+    id_cols = År,
+    names_from = SN2007,
+    values_from = sysselsatte
+  ) %>% 
+  # Kan være at vi kunne regnet ut disse uten bruk av pivot_wider
+  # med avansert bruk av mutate
+  mutate(
+`Jordbruk, skogbruk og fiske prosent` = `Jordbruk, skogbruk og fiske`/`Alle næringer`*100,
+`Bergverksdrift og utvinning prosent` = `Bergverksdrift og utvinning`/`Alle næringer`*100,
+`Industri prosent` = `Industri`/`Alle næringer`*100,
+`Elektrisitet, vann og renovasjon prosent` = `Elektrisitet, vann og renovasjon`/`Alle næringer`*100,
+`Bygge- og anleggsvirksomhet prosent` = `Bygge- og anleggsvirksomhet`/`Alle næringer`*100,
+`Varehandel, reparasjon av motorvogner prosent` = `Varehandel, reparasjon av motorvogner`/`Alle næringer`*100,
+`Transport og lagring prosent`= `Transport og lagring`/`Alle næringer`*100,
+`Overnattings- og serveringsvirksomhet prosent` = `Overnattings- og serveringsvirksomhet`/`Alle næringer`*100,
+`Informasjon og kommunikasjon prosent` = `Informasjon og kommunikasjon`/`Alle næringer`*100,
+`Finansiering og forsikring prosent` = `Finansiering og forsikring`/`Alle næringer`*100,
+`Teknisk tjenesteyting, eiendomsdrift prosent` = `Teknisk tjenesteyting, eiendomsdrift`/`Alle næringer`*100,
+`Forretningsmessig tjenesteyting prosent` = `Forretningsmessig tjenesteyting`/`Alle næringer`*100,
+`Off.adm., forsvar, sosialforsikring prosent` = 
+  `Off.adm., forsvar, sosialforsikring`/`Alle næringer`*100,
+`Undervisning prosent` = `Undervisning`/`Alle næringer`*100,
+`Helse- og sosialtjenester prosent` = `Helse- og sosialtjenester`/`Alle næringer`*100,
+`Personlig tjenesteyting prosent` = `Personlig tjenesteyting`/`Alle næringer`*100,
+`Uoppgitt prosent` = `Uoppgitt`/`Alle næringer`*100
+  ) %>% 
+  select(År, `Jordbruk, skogbruk og fiske prosent`:`Uoppgitt prosent`) %>% 
+  # Så må vi gå long igjen for å tilfeedsstille ggplot
+  pivot_longer(
+    `Bygge- og anleggsvirksomhet prosent`:`Uoppgitt prosent`,
+    names_to = "SN2007",
+    values_to = "Sysselsatte"
+  ) %>% 
+  # litt avrunding
+  mutate(
+    Sysselsatte = round(Sysselsatte, 2)
+  ) %>% 
+  ggplot(aes(x = År)) +
+  geom_line(aes(y = Sysselsatte, group = SN2007, colour = SN2007)) +
+  ggtitle("Næringers andel av sysselsatte, Norge, 2008-2020") + 
+  theme(legend.position="right",
+        axis.title= element_text(size=12,face="bold")) +
+  labs(x="År", y= "Andel sysselsatte")+
+  scale_y_continuous(labels = scales::percent_format(scale = 1))
+```
+Tilsvarende kan også gjøres for de ulike kommunene. Skal dere sammenligne nasjonalt og kommunene bør dere kanskje velge ut særlig interessante næringer. Ellers kan figuren bli nokså overbefolket.
+
+
+# Antsall sysselsatte i ulike næringer, Haugalandet 
+
+```{r}
+haugaland <- Tabell1 %>% 
+  filter(Alder =="15-74",
+         Knr %in% c("1106", "1135", "1145", "1146", "1149", "1151", "1160"))
+
+haugaland %>% 
+  ggplot(aes(x = Aar)) +
+  geom_line(aes(y = `00-99`, colour = knavn)) +
+    ggtitle("Antall sysselsatte over tid, Haugaland") +
+    theme(legend.position = "bottom",
+          axis.title = element_text(size = 12, face = "bold")) +
+    labs(x = "År", y = "Sysselsatte") +
+  scale_color_hue(name = "Kommune")
+```
+
+# Antall sysselsatte i ulike næringer over tid, Hauglandet
+ 
+```{r}
+Haug_arbeid_2 <- Haug_arbeid_2 %>% 
+  mutate(År = make_date(Aar))
+
+Haug_arbeid_2 %>% 
+  filter(SN2007 != "Alle næringer") %>% 
+  ggplot(aes(x = År, y = ansatte, fill = SN2007)) +
+  geom_bar(stat = "identity") +
+  ggtitle("Alle næringer over tid, Haugalandet") + 
+  theme(legend.position="right",
+        axis.title= element_text(size=12,face="bold")) +
+  labs(x="År", y= "Sysselsatte") +
+  scale_y_continuous(limits = c(0, 50000), breaks =seq(0, 50000, by = 5000))
+```
+

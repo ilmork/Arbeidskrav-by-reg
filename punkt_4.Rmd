@@ -2,8 +2,10 @@
 title: "4. Pendling mellom de ulike kommunene i regionen."
 subtitle: MSB 106 - Anvendt By- og Regionaløkonomi
 output:
-  pdf_document: default
+  html_document:
+    df_print: paged
   html_notebook: default
+  pdf_document: default
 ---
 
 ```{r setup}
@@ -73,18 +75,20 @@ Tab_03321_00 <- Tab_03321_00$dataset %>%
   )
 ```
 
+# Har endret variabelnavn - sjekk om dette stemmer
+
 ```{r}
 Tab_03321_00 <- Tab_03321_00 %>% 
   rename(Bokommune = Bokommuen) %>% 
   select(-Bokommune) %>%
   mutate(
          Tot_bosted = rowSums(.),
-         Pendlere = Tot_bosted - diag(as.matrix(.)),
-         Andel_pendlere = round(Pendlere/Tot_bosted*100, 2),
          Tot_arb_komm = colSums(.),
-         Arb_inv = Tot_arb_komm - diag(as.matrix(.)),
-         Andel_arb_inv = round(Arb_inv/Tot_arb_komm*100, 2),
-         Bo_og_arb_komm = Tot_bosted - Pendlere,
+         Ut_pendlere = Tot_bosted - diag(as.matrix(.)),
+         Andel_ut_pendlere = round(Ut_pendlere/Tot_bosted*100, 2),
+         Inn_pendlere = Tot_arb_komm - diag(as.matrix(.)),
+         Andel_inn_pendlere = round(Inn_pendlere/Tot_arb_komm*100, 2),
+         Bo_og_arb_komm = Tot_bosted - Ut_pendlere,
          Andel_bo_arb_komm = round(Bo_og_arb_komm/Tot_bosted*100, 2),
          Bokommune = Tab_03321_00$Bokommuen
                     ) %>% 
@@ -1555,7 +1559,7 @@ Tab_03321_20 <- Tab_03321_20 %>%
 # Sammenslåing av tabellene
 
 
-# 2000 til 2020 (AG)
+## 2000 til 2020
 
 ```{r}
 # Antar at de nye også skal med
@@ -1661,15 +1665,8 @@ Tab_03321_00_20_a <- Tab_03321_00_20 %>%
   select(aar, a_knr_new, a_knavn_new, b_knr_new, b_knavn_new, personer_new)
 ```
 
-```{r}
-Tab_03321_00_20_b <- Tab_03321_00_20_a %>% 
-  group_by(a_knr_new, b_knr_new, a_knavn_new, b_knavn_new, aar) %>% 
-  summarise(a_og_b = sum(personer_new)) %>% 
-  select(aar, a_knr_new, a_knavn_new, b_knr_new, b_knavn_new, a_og_b)
-```
 
-
-# Testing Testing
+# Pendlematrise for hvert år med kommunestruktur 2020
 
 ```{r}
 # pendlematrise år 2000 oppdatert til kommunestruktur 2020
@@ -1886,12 +1883,8 @@ tab_2020 <- Tab_03321_00_20_a %>%
   )
 ```
 
-# Legger til variabler
 
-
-
-
-# Figur
+# Figurer
 
 ```{r}
 Tab_03321_00_20_a %>% 
@@ -1904,43 +1897,113 @@ Tab_03321_00_20_a %>%
   labs(colour = "Kommune")
 ```
 
-
+# Oppgave 4
 
 ```{r}
 library(readxl)
-Tab_03321_a_og_b <- read_excel("Data/Tab_03321_a_og_b.xlsx", 
+Tab_03321_andeler <- read_excel("Data/Tab_03321_andeler.xlsx", 
     col_types = c("text", "text", "text", 
         "text", "text", "numeric", "numeric", 
         "numeric"))
 ```
 
+# Pendler ut
 
 ```{r}
-Tab_03321_a_og_b %>%
-  select(aar, b_knavn_new, Andel_B_og_A) %>%
-  filter(
-    b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda")
+#Andel pendelere ut av kommunen
+Tab_03321_andeler %>%
+  select(aar, b_knavn_new, Ut_pendlere) %>%
+  filter(b_knavn_new %in% c("Tysvær", "Karmøy", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes")
     ) %>%
-  ggplot(mapping = aes(x = aar, y = Andel_B_og_A, colour = b_knavn_new)) +
-  geom_line(aes(group = b_knavn_new), lwd = 1) +
-  theme(legend.position = 'bottom')
+  ggplot(mapping = aes(x = aar, y = Ut_pendlere, colour = b_knavn_new)) +
+  geom_line(aes(group = b_knavn_new), lwd = 0.6) +
+  theme(legend.position = 'bottom')+
+  xlab("År") +
+  ylab("Utpendling %") +
+  labs(colour = "Kommune")
 ```
 
-# Mer fra ag
+Det vi ser ut i fra grafen er at det er to kommuner som skiller seg klart ut når det kommer til andel utpendlere(Tysvær og Sveio). Grunnen til det er at disse kommunene er nabokommunene til Haugesund som er et arbeidssenter på haugalandet. Fitjar er også en kommune med høy andel utpendlere, grunnen til dette er litt det samme som Sveio og Tysvær, men i dette tilfelle er det Stord som arbeidssenter i sunnhordaland. Når det gjelder Bokn så er dette en liten kommune med begrenset arbeidsplasser som gir en økt utpendling til nabokommunene Karnøy, Tysvær og Haugesund.  
 
-Vi ønsker pedlere dvs. dem som jobber i en annen kommune enn der de bor. Trenger altså å filtrere bort alle dem som har a_knr == b_knr, så gjennstår vel å gruppere mht. aar og a_knr så har vi dem som pendler inn til hver kommune.
+### Utvikling over tid
 
-For dem som pendler ut vil vi også filtrere bort a_knr==b_knr. Her grupperer vi mht. aar og b_knr og vil ha antallet som pendler ut fra en kommune
+Vi ser at de små kommunene svinger mye mer enn de større kommunene. De største kommunene (Haugesund og Karmøy) er ganske flate med en jevn og moderat økning. De kommunene med størst utvikling de siste 20 årene har vært Tysvær og Bokn. Tysvær er en attraktiv plass og bo fordi kvadratmeterprisen er lavere enn i Haugeusnd og reisekostnadene er overkommlige, derfor ser vi en økning i utpendlere. Når det gjelder Bokn er folketallet relativt lav, så det skal ikke store endringene til i befolkning før endringene blir radikale i utpendling. Når det gjelder resten av kommunene så er det en liten økning i alle de siste 20 årene. 
+
+
+# Pendler inn
 
 ```{r}
-
+#Andeler som pendler inn i kommune
+Tab_03321_andeler %>%
+  select(aar, b_knavn_new, Inn_pendlere) %>%
+  filter(
+    b_knavn_new %in% c("Tysvær", "Karmøy", "", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes", "", "")
+    ) %>%
+  ggplot(mapping = aes(x = aar, y = Inn_pendlere, colour = b_knavn_new)) +
+  geom_line(aes(group = b_knavn_new), lwd = 0.5) +
+  theme(legend.position = 'bottom') +
+  xlab("År") +
+  ylab("Innpendling %") +
+  labs(colour = "Kommune")
 ```
 
+Tysvær er kommunen med flest andel innpendlere på grunn av kårstø og etableringer av nye næringsparker. De er også en av de kommunene som har hatt størst vekst over 20-års perioden. Haugesund har en ganske moderat og stabil vekst. Samtidig er de veldig høyt oppe i andel innpendling. Dette skyldes at Haugesund er regionens senter. Bokn sine svigninger kan skyldes Bokn Plast AS og hvordan de gjør det som privateid selskap. Dette er det største privateide selskapet i kommunen. Utsira er en kommune med veldig få antall beboere, så deres graf i figuren gir store og radikale endringer hvis for eksempel en familie skulle flyttet bort der i fra.
+
+### Utviklingen over tid
+
+Fleste kommuner har hatt en svak positiv utvikling. Utsira har hatt en negativ utvikling, men som nevnt er dette en kommune med svært få innbyggere.
 
 
 
+# Bor og jobber i samme kommune
+
+```{r}
+Tab_03321_andeler %>%
+  select(aar, b_knavn_new, b_og_a) %>%
+  filter(
+    b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes", "Kvinnherad", "Ullensvang")
+    ) %>%
+  ggplot(mapping = aes(x = aar, y = b_og_a, colour = b_knavn_new)) +
+  geom_line(aes(group = b_knavn_new), lwd = 0.5) +
+  theme(legend.position = 'bottom')+
+  xlab("År") +
+  ylab("Bo- og arbeidskommune %") +
+  labs(colour = "Kommune")
+```
+
+Vi ser at Sauda og Ullensvang har en stor og stabil andel av bosatte og sysselsatte innenfor samme kommune. Dette skyldes at Sauda og Odda (Odda ligger i Ullensvang), har vært byer med relativ stor industri aktivitet samtidig som de ligger relativt adskilt fra andre nære, store kommuner slik som for eksempel Haugesund og Bergen.
+
+### Oppsummering
+
+Pendlestrømmene øker i regionen, samtidig som vi ser at de som bor og jobber i samme kommune er avtakende i 20-års perioden.
+
+Veinettet forbedres i tillegg til at prisene på eiendom og bolig er rimeligere per kvardratmeter utenfor de mest sentrerte plassene.
+
+Sveio er et eksempel på hvor pendlestrømmen har økt og bosatt og sysselsatt i kommunen har synket. Sveio er en kommune med store utviklingspotensialet innenfor eiendom og bolig samtidig som avstanden til Haugesund er kort.
 
 
-
+```{r}
+write.csv(Tab_03321_00, "Tab_03321_00.csv")
+write.csv(Tab_03321_01, "Tab_03321_01.csv")
+write.csv(Tab_03321_02, "Tab_03321_02.csv")
+write.csv(Tab_03321_03, "Tab_03321_03.csv")
+write.csv(Tab_03321_04, "Tab_03321_04.csv")
+write.csv(Tab_03321_05, "Tab_03321_05.csv")
+write.csv(Tab_03321_06, "Tab_03321_06.csv")
+write.csv(Tab_03321_07, "Tab_03321_07.csv")
+write.csv(Tab_03321_08, "Tab_03321_08.csv")
+write.csv(Tab_03321_09, "Tab_03321_09.csv")
+write.csv(Tab_03321_10, "Tab_03321_10.csv")
+write.csv(Tab_03321_11, "Tab_03321_11.csv")
+write.csv(Tab_03321_12, "Tab_03321_12.csv")
+write.csv(Tab_03321_13, "Tab_03321_13.csv")
+write.csv(Tab_03321_14, "Tab_03321_14.csv")
+write.csv(Tab_03321_15, "Tab_03321_15.csv")
+write.csv(Tab_03321_16, "Tab_03321_16.csv")
+write.csv(Tab_03321_17, "Tab_03321_17.csv")
+write.csv(Tab_03321_18, "Tab_03321_18.csv")
+write.csv(Tab_03321_19, "Tab_03321_19.csv")
+write.csv(Tab_03321_20, "Tab_03321_20.csv")
+```
 
 
