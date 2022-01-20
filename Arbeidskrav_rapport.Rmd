@@ -3,9 +3,9 @@ title: "Arbeidskrav"
 author: "Gruppe 2"
 subtitle: MSB 106 - Anvendt by- og regionaløkonomi
 output:
-  word_document: default
-  html_notebook: default
   pdf_document: default
+  html_notebook: default
+  word_document: default
 lang: nb-NO
 ---
 ```{r setup, message = FALSE, echo = FALSE}
@@ -23,8 +23,8 @@ knitr::opts_chunk$set(echo=FALSE)
 # 2. Mål for beskrivelse av næringsstrukturen.
 
 ```{r hente datasett}
-Haug_arbeid <- read_csv("Data_pkt1/Haug_arbeid.csv") 
-Sunn_arbeid <- read_csv("Data_pkt1/Sunn_arbeid.csv")
+Haug_arbeid <- read_csv("Data/Haug_arbeid-kopi.csv") 
+Sunn_arbeid <- read_csv("Data/Sunn_arbeid-kopi.csv")
 ```
 
 ```{r rydde datasett H}
