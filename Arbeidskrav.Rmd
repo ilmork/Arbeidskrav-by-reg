@@ -1,7 +1,15 @@
 ---
 title: "Arbeidskrav"
+author:
+  - "Kine Maakestad"
+  - "Karoline Midtboo"
+  - "Morten Knutsen"
+  - "Sindre Espedal"
+  - "Thibiga Kuddyar"
+  - "Jonathan Christoffersen"
+  - "Ingrid Liv Morkken"
+  - "Maren Louise Haugland Sognefest"
 output: html_notebook
 ---
-
 
 
