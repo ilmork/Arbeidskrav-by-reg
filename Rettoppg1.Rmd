@@ -134,7 +134,7 @@ Grafen viser prosentvis næringsandel av sysselsatte i Norge over tid (2008-2020
 ## Fjerne, men må lagre den til senere kanskje? --> "Tilsvarende kan også gjøres for de ulike kommunene. Skal dere sammenligne nasjonalt og kommunene bør dere kanskje velge ut særlig interessante næringer. Ellers kan figuren bli nokså overbefolket."
 
 
-# Antsall sysselsatte i ulike næringer, Haugalandet 
+# Antall sysselsatte i ulike næringer, Haugalandet 
 
 ```{r}
 haugaland <- Tabell1 %>% 
@@ -150,6 +150,20 @@ haugaland %>%
     labs(x = "År", y = "Sysselsatte") +
   scale_color_hue(name = "Kommune")
 ```
+
+Grafen viser antall sysselsatte per kommunne på Haugalandet over tid - fra 2008-2020. Kommunene med størst innbyggertall, har naturligvis høyest andel sysselsatte. Utsira og Bokn med færrest innbyggertall ligger dermed nederst i kurven. Kommunene har hatt følgende trender i befolkningsvekst: 
+
+**Vindafjord:** Relativt flat befolkningsvekst 
+**Usira:** Synkende befolkningsvekst.
+**Tysvær:** Økende befolkningsvekst. 
+**Sauda:** Synkende befolkningsvekst. 
+**Karmøy:** Økende befolkningsvekst.
+**Haugesund:** Økende befolkningsvekst.
+**Bokn:** Synkende befolkningsvekst.
+
+Kommunenes flate, synkende eller økende befolkningsvekst kan sees i sammenheng med antall sysselsatte, men flere parametere vil være nødvendig for å kunne måle dette. Haugesund opplever en økning i befolkning, men en nedgang i antall sysselsatte. Hvor Karmøy både ser en økning i antall sysselsatte og en økning i befolkning. Sauda, Utsira og Bokn alle med synkende befolkningsvekst ser en svært liten nedgang i antall sysselsatte. Vindafjord har forholdt seg relativt stabil i antall sysselsatte, i takt med befolkningsvekst, men har likevel sett en liten nedgang fra 2013 til 2020. Til slutt; Tysvær har hatt en økende befolkingsvekst hvor grafen også viser et økende antall i sysselsatte, etter en nedadgående trend fra 2012 til ca. 2016. 
+
+Grunnen til trenden i antall sysselsatte kan som nevnt sees i sammenheng med befolkningsvekst, men det vil likevel være nødvendig å se på flere faktorer for å få et korrekt bilde av årsaken til trendene. Tallene og grafen sier eksemplenvis ikke noe om antall pendlere i andel sysselsatte, heller ikke noe om bedriftene i de forskjellige kommunene. Det er dermed utfordrende og tolke om eksempelvis en kommune vil ha en høyere andel sysselsatte mot befolkningsvekst, ettersom relevante faktorer ikke er medregnet. Sluttvis sier grafen heller ikke noe om næringene i de forskjellige kommunene, vi vil derfor ta for oss dette i neste graf. 
 
 
 
@@ -169,4 +183,5 @@ Haug_arbeid_2 %>%
   labs(x="År", y= "Sysselsatte") +
   scale_y_continuous(limits = c(0, 50000), breaks =seq(0, 50000, by = 5000))
 ```
+
 
