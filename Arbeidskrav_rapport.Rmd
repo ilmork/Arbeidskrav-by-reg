@@ -23,8 +23,8 @@ knitr::opts_chunk$set(echo=FALSE)
 # 2. Mål for beskrivelse av næringsstrukturen.
 
 ```{r hente datasett}
-Haug_arbeid <- read_csv("Data/Haug_arbeid-kopi.csv") 
-Sunn_arbeid <- read_csv("Data/Sunn_arbeid-kopi.csv")
+Haug_arbeid <- read_csv("Data/Haug_arbeid.csv") 
+Sunn_arbeid <- read_csv("Data/Sunn_arbeid.csv")
 ```
 
 ```{r rydde datasett H}
