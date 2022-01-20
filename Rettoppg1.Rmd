@@ -170,3 +170,45 @@ Haug_arbeid_2 %>%
   scale_y_continuous(limits = c(0, 50000), breaks =seq(0, 50000, by = 5000))
 ```
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Antall sysselsatte i ulike næringer over tid, Sunnhordland inkludert Hardanger
+
+Sunnhordland er et distrikt i den sørvestlige delen av Vestland fylke som beståår av kommunene; Etne, Sveio, Bømlo, Stord, Fitjar, Tysnes, Kvinnherad. I tillegg inkluderes Ullensvang (+Odda).   
+
+
+```{r}
+Sunn_arbeid_2 <- Sunn_arbeid_2 %>% 
+  mutate(År = make_date(Aar))
+
+Sunn_arbeid_2 %>% 
+  filter(SN2007 != "Alle næringer") %>% 
+  ggplot(aes(x = År, y = ansatte, fill = SN2007)) +
+  geom_bar(stat = "identity") +
+  ggtitle("Alle næringer over tid, Haugalandet inkl. Hardanger") + 
+  theme(legend.position="right",
+        axis.title= element_text(size=12,face="bold")) +
+  labs(x="År", y= "Sysselsatte") +
+  scale_y_continuous(limits = c(0, 50000), breaks =seq(0, 50000, by = 5000))
+```
+
+
+Grafen viser antall sysselsatte i ulike næringer i 2020 for Sunnhordland. **Helse- og sosialtjenester** og **industri** er blandt de næringene som har flest sysselsatte i 2020, mens **elektrisitet, vann og renovasjon** og **personlig tjenesteyting** er dem med færrest. Ettersom en del data ikke ble inkludert på grunn av teknikse vanskeligheter, vises ikke effekten av kommunesammenslåingen i 2020 eller utviklingen over tid. En ønskelig graf hadde vist utviklingen av ulike næringer i perioden 2008 til 2020.
+
