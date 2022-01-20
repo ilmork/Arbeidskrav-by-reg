@@ -73,6 +73,8 @@ Tab_03321_00 <- Tab_03321_00$dataset %>%
   )
 ```
 
+# Har endret variabelnavn - sjekk om dette stemmer
+
 ```{r}
 Tab_03321_00 <- Tab_03321_00 %>% 
   rename(Bokommune = Bokommuen) %>% 
