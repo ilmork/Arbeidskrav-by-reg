@@ -168,14 +168,32 @@ Sunn_bo %>%
   labs(title = "Sunnhordaland", x = "Totalt ansatte", y = "Antall ansatte i  \n alle næringer") +
   theme(axis.title.y = element_text(angle=0))+
   theme(legend.position = 'bottom')
-`````
+```
 
-I grafen ovenfor fremstilles det antall ansatte i de ulike næringene i Sunnhordaland, her kan en se Helse- og Soisaltjenester har flest ansatte. 
+
+I figuren ovenfor fremstilles det antall ansatte i de ulike næringene i Sunnhordaland, her kan en se at helse- og soisaltjenester har flest ansatte.  
 
 
 ```{r}
 lokaliseringskvotienter <- read_excel("~/Documents/Master i sivilokonom/2. Semester/Anvendt by- og regionaløkonomi/lokaliseringskvotienter.xlsx")
 ```
+
+Under lokaliseringskvoienter har vi sett på tre ulike sektorer både på Haugalandet og for Sunnhordaland. Vi valgte da ut industri, helse- og sosialtjenester og varehandel, reperasjon av motorvogner. Det ble valgt ut tre forskjellige år, da første året som er 2008, 2010 og det siste året som var 2020. Aldersgruppen vi valgte var 15 til 74 fordi vi ser at denne aldersgruppen inneholder høyest tall av ansatte. 
+
+RES
+
+I den romlige Gini-koeffisienten har vi valgt å se på samme sektorene som vi brukte for å finne lokaliseringskovientene. 
+
+RES
+
+Under målet for mangfold av næringer, RDI, ser vi på samme sektorene som ovenfor. 
+
+res
+
+Sammenligne med resultatene for data etter arbeidssted, og kommenter
+hvilken informasjon resultatene gir om romlig mobilitet i arbeidsmarkedet.
+
+
 
 
 
