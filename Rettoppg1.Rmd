@@ -168,6 +168,8 @@ Grunnen til trenden i antall sysselsatte kan som nevnt sees i sammenheng med bef
 
 
 # Antall sysselsatte i ulike næringer over tid, Hauglandet
+
+
  
 ```{r}
 Haug_arbeid_2 <- Haug_arbeid_2 %>% 
@@ -184,9 +186,11 @@ Haug_arbeid_2 %>%
   scale_y_continuous(limits = c(0, 50000), breaks =seq(0, 50000, by = 5000))
 ```
 
+Grafen viser antall sysselsatte på Haugalandet i ulike næringer, innenfor tidsperioden 2008-2020. **Helse og sosialtjenester** har siden 2008 vært den næringen med flest antall sysselsatte, etterfulgt av **Varehandel, reperasjon av motorvogner**, **industri** og **undervisning**. Næringene med minst antall sysselsatte har siden 2008 vært **jordbruk, skogbruk og fiske**, **Bergverksdrift og utvinning** og **elektrisitet, vann og renovasjon**. Det er ingen markante endringer i grafen, men **Helse og sosialtjenester** ser i likhet med hele landet, som tidligere presentert, en liten økning. Videre, har **Bergdrift og utvinning** sett en nedgang i antall sysselsatte. Årsaken til resultatene kan sees i sammenheng med etterspørselen i et samfunn. Det er både på regionalt og nasjonalt nivå behov for helsefagarbeidere, lærerere og professorer, samt forsyning av varer. Næringene med lavest antall sysselsatte inkluderer de næringene hvor etterspørselen i samfunnet gjerne er synkende for varen og/eller tjenesten. Disse næringene har gjerne også til felles at nye og innovative teknologiske løsninger har tatt over driften, eller at det er billigere å impotere den besteme varen eller tjenesten hvor konsekvensen dermed blir færre sysselsatte i næringen. 
+
 # Antall sysselsatte i ulike næringer over tid, Sunnhordland inkludert Hardanger
 
-Sunnhordland er et distrikt i den sørvestlige delen av Vestland fylke som beståår av kommunene; Etne, Sveio, Bømlo, Stord, Fitjar, Tysnes, Kvinnherad. I tillegg inkluderes Ullensvang (+Odda).   
+Sunnhordland er et distrikt i den sørvestlige delen av Vestland fylke som består av kommunene; Etne, Sveio, Bømlo, Stord, Fitjar, Tysnes, Kvinnherad. I tillegg inkluderes Ullensvang (+Odda).   
 
 
 ```{r}
