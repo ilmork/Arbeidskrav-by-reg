@@ -140,12 +140,6 @@ haugaland %>%
 
 # Antall sysselsatte i ulike næringer over tid, Hauglandet
  
-<<<<<<< HEAD
-```{r}
-=======
->>>>>>> 2f1891764054958752e21433ff45719bd1990fee
-
-
 ```{r}
 Haug_arbeid_2 <- Haug_arbeid_2 %>% 
   mutate(År = make_date(Aar))
