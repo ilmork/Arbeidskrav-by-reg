@@ -1916,7 +1916,7 @@ Tab_03321_andeler <- read_excel("Data/Tab_03321_andeler.xlsx",
 Tab_03321_andeler %>%
   select(aar, b_knavn_new, Ut_pendlere) %>%
   filter(
-    b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes", "Kvinnherad", "Ullensvang")
+    b_knavn_new %in% c("Tysvær", "Karmøy", "", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes", "", "")
     ) %>%
   ggplot(mapping = aes(x = aar, y = Ut_pendlere, colour = b_knavn_new)) +
   geom_line(aes(group = b_knavn_new), lwd = 0.6) +
@@ -1925,6 +1925,14 @@ Tab_03321_andeler %>%
   ylab("Utpendling %") +
   labs(colour = "Kommune")
 ```
+
+Det vi ser ut i fra grafen er at det er to kommuner som skiller seg klart ut når det kommer til andel utpendlere(Tysvær og Sveio). Grunnen til det er at disse kommunene er nabokommunene til Haugesund som er et arbeidssenter på haugalandet. Fitjar er også en kommune med høy andel utpendlere, grunnen til dette er litt det samme som Sveio og Tysvær, men i dette tilfelle er det Stord som arbeidssenter i sunnhordaland. Når det gjelder Bokn så er dette en liten kommune med begrenset arbeidsplasser som gir en økt utpendling til nabokommunene Karnøy, Tysvær og Haugesund.  
+
+### Utvikling over tid
+
+Vi ser at de små kommunene svinger mye mer enn de større kommunene. De største kommunene (Haugesund og Karmøy) er ganske flate med en jevn og moderat økning. De kommunene med størst utvikling de siste 20 årene har vært Tysvær og Bokn. Tysvær er en attraktiv plass og bo fordi kvadratmeterprisen er lavere enn i Haugeusnd og reisekostnadene er overkommlige, derfor ser vi en økning i utpendlere. Når det gjelder Bokn er folketallet relativt lav, så det skal ikke store endringene til i befolkning før endringene blir radikale i utpendling. Når det gjelder resten av kommunene så er det en liten økning i alle de siste 20 årene. 
+
+
 
 
 
@@ -1946,8 +1954,7 @@ Tab_03321_andeler %>%
   labs(colour = "Kommune")
 ```
 
-# i) 
-Ut i fra disse grafene vi viser frem kan vi se at det er to kommuner som skiller seg ut når det kommer til pendling ut av kommunen. Vi ser at Sveio og Tysvær ligger høyest pendling fra sine kommuner. En grunn til dette er at kommunene ligger gunstig til med reiseavstand ut til flere andre kommuner. Ser vi på Bokn så kan vi se at de har hatt den største prosentøkningen og de største svingningen fra 2000-2020. Vi kan se at Bokn fikk en brå økning i pendlere ut av kommunen rundt 2011. Dette kan være effekten av at T-forbinelsen var i gang og de som bor på Bokn så for seg kortere avstander for å reise til jobb, men vi ser at når T-forbindelsen åpnet i 2013, så avtar grafen igjen og går mot tallene som var i 2011. 
+
 
 
 
