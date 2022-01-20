@@ -354,7 +354,7 @@ Tabell2_raw <- ApiData(
   Kjonn = "0",
   ContentsCode = "Sysselsatte",
   Tid = c(as.character(2008:2020)),
-  Alder = c("15-74", "55-66", "67-74"),
+  Alder = c("15-74"),
   makeNAstatus = FALSE
   )
 ```

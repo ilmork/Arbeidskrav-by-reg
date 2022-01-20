@@ -29,6 +29,7 @@ Sunn_arbeid <- read_csv("Data_pkt1/Sunn_arbeid.csv")
 Haug_arbeid_wide <- read_csv("Data_pkt1/Haug_arbeid_wide.csv")
 Haug_arbeid_2 <- read_csv("Data_pkt1/Sunn_arbeid_2.csv")
 Sunn_arbeid_2 <- read_csv("Data_pkt1/Sunn_arbeid_2.csv")
+Tabell2 <- read_csv("Data_pkt1/Tabell2.csv")
 show_col_types = FALSE
 ```
 
@@ -124,17 +125,6 @@ Sunn_arbeid_2 %>%
 
 
 ```{r}
-Tabell1 %>% 
-  ggplot(aes(x = Aar)) +
-  geom_line(aes(y = `00-99`, colour = knavn)) +
-    ggtitle("Alle næringer, Haugesund og Karmøy, 2008-2020") +
-    theme(legend.position = "bottom",
-          axis.title = element_text(size = 12, face = "bold")) +
-    labs(x = "År", y = "Alle næringer, 00-99") +
-  scale_color_hue(name = "Kommune")
-```
-
-```{r}
 haugaland <- Tabell1 %>% 
   filter(Alder =="15-74",
          Knr %in% c("1106", "1135", "1145", "1146", "1149", "1151", "1160"))
@@ -151,9 +141,8 @@ haugaland %>%
 
 
 ```{r}
-Sunnhordland <- Tabell1 %>% 
-  filter(Alder =="15-74",
-         Knr %in% c("4611", "4612",
+Sunnhordland <- Tabell2 %>% 
+filter( Knr %in% c("4611", "4612",
          "4613", "4614", "4615", "4616", "4617", "4618"))
 
 Sunnhordland %>% 
