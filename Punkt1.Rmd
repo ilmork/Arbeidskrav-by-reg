@@ -120,6 +120,8 @@ Sunn_arbeid_2 %>%
 
 
 ```{r}
+Haug_arbeid_2 <- Haug_arbeid_2 %>% 
+  mutate(knavn = Haug_arbeid_raw2$desc9$region)
 Haug_arbeid_2 %>% 
   filter(SN2007 != "Alle næringer" & SN2007 != "Uoppgitt") %>% 
   ggplot(aes(x = Aar)) + 
