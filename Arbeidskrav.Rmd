@@ -1,7 +1,0 @@
----
-title: "Arbeidskrav"
-output: html_notebook
----
-
-
-
