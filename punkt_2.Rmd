@@ -107,21 +107,19 @@ LQ.method = "m", plot.title = "Localization quotients",
 bar.col = "lightblue", line.col = "red", arg.size = 1)
 ```
 
-
 ```{r koeffisient_mot_nasjonal_2019}
 locq(685, 58757, 1752, 2710435, industry.names = Bergverksdrift_utvinning_nasjonal_2019, plot.results = FALSE,
 LQ.method = "m", plot.title = "Localization quotients", 
 bar.col = "lightblue", line.col = "red", arg.size = 1)
 ```
 
-Her har vi beregnet koeffisienten for bergverksdrift- og utvinning i Haugesund, mot nasjonalt for årstallene 2008 og 2019. 
+Her har vi beregnet koeffisienten for bergverksdrift- og utvinning i
+Haugesund, mot nasjonalt for årstallene 2008 og 2019.
 
-Når vi ser på disse koeffisientene, ser vi at bergverksdrift- og utvinning i Haugesund er overrepresentert sett opp mot hele landet. 
-
+Når vi ser på disse koeffisientene, ser vi at bergverksdrift- og
+utvinning i Haugesund er overrepresentert sett opp mot hele landet.
 
 ### Haugesund: 86-88 Helse- og sosialtjenester
-
-(første tall/3. tall)-(andre tall/fjerde tall)
 
 ```{r}
 locq(4812, 21322, 9596, 47530, industry.names = Helse_og_sosialtjen_2008, plot.results = FALSE,
@@ -281,13 +279,6 @@ innenfor ulike sektorer, ligner den nasjonale fordelingen.
 sysselsetting](RDI_formel.JPG) der sin er sektor i 's andel av samlet
 nasjonal sysselsetting.
 
-Har næringsstrukturen i regionen blitt mer eller mindre diversifisert,
-mangfoldig, over tid? Beregn en regional mangfold-indeks (for eksempel
-RDI i boken til McCann), og finn hvordan verdiene på en slik indeks er
-endret over tid. Vurder også nå om sysselsettingsandelene skal
-sammenlignes med nasjonale eller regionale andeler for de ulike
-næringene.
-
 **Formel:**
 
 $RDI_r=\frac{1}{\sum_i|\frac{E_{ir}}{E_r}-\frac{E_{in}}{E_n}|}$
@@ -316,6 +307,10 @@ $RDI=\frac{1}{-0,04}$
 
 $RDI=-25$
 
+Som vi kan se så har det vært en negativ utvikling i RDIen i Haugesund
+innenfor næringen Bergverksdrift og utvinning, hvor
+sysselsettingsandelene er sammenlignet mot regionale (kommunene vi har
+med) andeler for næringen.
 
 ### Haugesund 05-09, mot nasjonal bergverksdrift og utvinning.
 
@@ -342,3 +337,13 @@ $RDI=\frac{1}{0.39-0.22}$
 $RDI=\frac{1}{0.17}$
 
 $RDI=5.88$
+
+Som vi kan se så har det vært en positiv utvikling i RDIen i Haugesund
+innenfor næringen Bergverksdrift og utvinning, hvor
+sysselsettingsandelene er sammenlignet mot nasjonale andeler for
+næringen.
+
+Alle tallene vi har kommet frem til, både ved å sammenligne mot
+regionale og nasjonale andeler, er relativt lave. Det vil si at næringen
+lokalt ikke er lik sammenligningsgrunnlaget. Den har nærmet seg mest sammenlignet med nasjonale andeler i 2019, men det er fortsatt lave tall. 
+
