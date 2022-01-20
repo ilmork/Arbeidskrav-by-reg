@@ -14,7 +14,7 @@ library(sandwich)
 library(viridis)
   options(scipen = 999)
 })
-knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+#knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 ```
 
 # Modeller
@@ -22,14 +22,13 @@ knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 ## Leser inn data
 
 ```{r}
-Tabell1 <- read_csv("Data_pkt1/Tabell1.csv")
-Nas_arbeid_norge_sys <- read_csv("Data_pkt1/Nas_arbeid_norge_sys.csv")
-Haug_arbeid <- read_csv("Data_pkt1/Haug_arbeid.csv")
-Sunn_arbeid <- read_csv("Data_pkt1/Sunn_arbeid.csv")
-Haug_arbeid_wide <- read_csv("Data_pkt1/Haug_arbeid_wide.csv")
-Haug_arbeid_2 <- read_csv("Data_pkt1/Sunn_arbeid_2.csv")
-Sunn_arbeid_2 <- read_csv("Data_pkt1/Sunn_arbeid_2.csv")
-show_col_types = FALSE
+Tabell1 <- read_csv("Data_pkt1/Tabell1.csv", show_col_types = FALSE)
+Nas_arbeid_norge_sys <- read_csv("Data_pkt1/Nas_arbeid_norge_sys.csv", show_col_types = FALSE)
+Haug_arbeid <- read_csv("Data_pkt1/Haug_arbeid.csv", show_col_types = FALSE)
+Sunn_arbeid <- read_csv("Data_pkt1/Sunn_arbeid.csv", show_col_types = FALSE)
+Haug_arbeid_wide <- read_csv("Data_pkt1/Haug_arbeid_wide.csv", show_col_types = FALSE)
+Haug_arbeid_2 <- read_csv("Data_pkt1/Sunn_arbeid_2.csv", show_col_types = FALSE)
+Sunn_arbeid_2 <- read_csv("Data_pkt1/Sunn_arbeid_2.csv", show_col_types = FALSE)
 ```
 
 # Antall sysselsatte i ulike næringer, Norge
@@ -55,6 +54,63 @@ tabell_Norge %>%
   labs(x="Sysselsatte", y= "Alle næringer, 00-99")+ 
   scale_color_hue(name = "00-99")
 ```
+
+```{r}
+tabell_Norge %>% 
+  # velger yrkesaktive
+  filter(alder == "15-74 år") %>% 
+  # Dropper variabler som ikke trengs
+  select(-Aar, -NACE2007, -alder) %>% 
+  # Næringer som variabler, for å kunne regne ut andel
+  pivot_wider(
+    id_cols = År,
+    names_from = SN2007,
+    values_from = sysselsatte
+  ) %>% 
+  # Kan være at vi kunne regnet ut disse uten bruk av pivot_wider
+  # med avansert bruk av mutate
+  mutate(
+`Jordbruk, skogbruk og fiske prosent` = `Jordbruk, skogbruk og fiske`/`Alle næringer`*100,
+`Bergverksdrift og utvinning prosent` = `Bergverksdrift og utvinning`/`Alle næringer`*100,
+`Industri prosent` = `Industri`/`Alle næringer`*100,
+`Elektrisitet, vann og renovasjon prosent` = `Elektrisitet, vann og renovasjon`/`Alle næringer`*100,
+`Bygge- og anleggsvirksomhet prosent` = `Bygge- og anleggsvirksomhet`/`Alle næringer`*100,
+`Varehandel, reparasjon av motorvogner prosent` = `Varehandel, reparasjon av motorvogner`/`Alle næringer`*100,
+`Transport og lagring prosent`= `Transport og lagring`/`Alle næringer`*100,
+`Overnattings- og serveringsvirksomhet prosent` = `Overnattings- og serveringsvirksomhet`/`Alle næringer`*100,
+`Informasjon og kommunikasjon prosent` = `Informasjon og kommunikasjon`/`Alle næringer`*100,
+`Finansiering og forsikring prosent` = `Finansiering og forsikring`/`Alle næringer`*100,
+`Teknisk tjenesteyting, eiendomsdrift prosent` = `Teknisk tjenesteyting, eiendomsdrift`/`Alle næringer`*100,
+`Forretningsmessig tjenesteyting prosent` = `Forretningsmessig tjenesteyting`/`Alle næringer`*100,
+`Off.adm., forsvar, sosialforsikring prosent` = 
+  `Off.adm., forsvar, sosialforsikring`/`Alle næringer`*100,
+`Undervisning prosent` = `Undervisning`/`Alle næringer`*100,
+`Helse- og sosialtjenester prosent` = `Helse- og sosialtjenester`/`Alle næringer`*100,
+`Personlig tjenesteyting prosent` = `Personlig tjenesteyting`/`Alle næringer`*100,
+`Uoppgitt prosent` = `Uoppgitt`/`Alle næringer`*100
+  ) %>% 
+  select(År, `Jordbruk, skogbruk og fiske prosent`:`Uoppgitt prosent`) %>% 
+  # Så må vi gå long igjen for å tilfeedsstille ggplot
+  pivot_longer(
+    `Bygge- og anleggsvirksomhet prosent`:`Uoppgitt prosent`,
+    names_to = "SN2007",
+    values_to = "Sysselsatte"
+  ) %>% 
+  # litt avrunding
+  mutate(
+    Sysselsatte = round(Sysselsatte, 2)
+  ) %>% 
+  ggplot(aes(x = År)) +
+  geom_line(aes(y = Sysselsatte, group = SN2007, colour = SN2007)) +
+  ggtitle("Næringers andel av sysselsatte, Norge, 2008-2020") + 
+  theme(legend.position="right",
+        axis.title= element_text(size=12,face="bold")) +
+  labs(x="År", y= "Andel sysselsatte")
+```
+Tilsvarende kan også gjøres for de ulike kommunene. Skal dere sammenligne nasjonalt og kommunene bør dere kanskje velge ut særlig interessante næringer. Ellers kan figuren bli nokså overbefolket.
+
+
+
 # TEKST
 
 # Antall sysselsatte etter arbeidssted
