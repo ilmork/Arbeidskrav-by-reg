@@ -194,9 +194,6 @@ Haug_arbeid_2 %>%
 ```
 
 
-
-
-
 ## TEST
 
 
