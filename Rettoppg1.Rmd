@@ -3,10 +3,11 @@ title: "R Notebook"
 output:
   pdf_document: default
   html_notebook: default
+  word_document: default
 ---
 
 
-```{r}
+```{r setup, message = FALSE, echo=FALSE}
 suppressPackageStartupMessages({
 library(tidyverse)
 library(lubridate)
@@ -17,23 +18,24 @@ library(sandwich)
 library(viridis)
   options(scipen = 999)
 })
-knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 # Modeller
 
 ## Leser inn data
 
-```{r}
+```{r include= FALSE}
 Tabell1 <- read_csv("Data_pkt1/Tabell1.csv")
 Nas_arbeid_norge_sys <- read_csv("Data_pkt1/Nas_arbeid_norge_sys.csv")
 Haug_arbeid <- read_csv("Data_pkt1/Haug_arbeid.csv")
 Sunn_arbeid <- read_csv("Data_pkt1/Sunn_arbeid.csv")
 Haug_arbeid_wide <- read_csv("Data_pkt1/Haug_arbeid_wide.csv")
-Haug_arbeid_2 <- read_csv("Data_pkt1/Sunn_arbeid_2.csv")
+Haug_arbeid_2 <- read_csv("Data_pkt1/Haug_arbeid_2.csv")
 Sunn_arbeid_2 <- read_csv("Data_pkt1/Sunn_arbeid_2.csv")
 Tabell2 <- read_csv("Data_pkt1/Tabell2.csv")
 show_col_types = FALSE
+
 ```
 
 # Antall sysselsatte i ulike næringer, Norge
@@ -52,6 +54,7 @@ Nas_arbeid_norge_sys <- Nas_arbeid_norge_sys %>%
 tabell_Norge<- Nas_arbeid_norge_sys
 
 tabell_Norge %>% 
+  filter(SN2007 != "Alle næringer") %>%
   ggplot(aes(x = sysselsatte)) +
   geom_line(aes(y = SN2007)) +
   ggtitle("Alle næringer, Norge, 2008-2020") + 
@@ -112,7 +115,8 @@ tabell_Norge %>%
   ggtitle("Næringers andel av sysselsatte, Norge, 2008-2020") + 
   theme(legend.position="right",
         axis.title= element_text(size=12,face="bold")) +
-  labs(x="År", y= "Andel sysselsatte")
+  labs(x="År", y= "Andel sysselsatte")+
+  scale_y_continuous(labels = scales::percent_format(scale = 1))
 ```
 Tilsvarende kan også gjøres for de ulike kommunene. Skal dere sammenligne nasjonalt og kommunene bør dere kanskje velge ut særlig interessante næringer. Ellers kan figuren bli nokså overbefolket.
 
@@ -133,11 +137,10 @@ haugaland %>%
     labs(x = "År", y = "Sysselsatte") +
   scale_color_hue(name = "Kommune")
 ```
+
 # Antall sysselsatte i ulike næringer over tid, Hauglandet
  
 ```{r}
-Haug_arbeid_2 <- Haug_arbeid_2 %>% 
-  mutate(knavn = Haug_arbeid_raw2$desc9$region)
 
 Haug_arbeid_2 %>% 
   filter(SN2007 != "Alle næringer" & SN2007 != "Uoppgitt") %>% 
@@ -165,3 +168,4 @@ Haug_arbeid_2 %>%
   labs(x="År", y= "Sysselsatte") +
   scale_y_continuous(limits = c(0, 50000), breaks =seq(0, 50000, by = 5000))
 ```
+

@@ -576,7 +576,7 @@ knr_haug1 <- c("1106", "1135", "1145", "1146", "1149", "1151", "1160")
 ```{r}
 Haug_arbeid_raw2 <- ApiData(
   urlToData = "07984",
-  Region = list("vs:KommunerS", knr_haug),
+  Region = list("vs:KommunerS", knr_haug1),
   NACE2007 = TRUE,
   Kjonn = "0",
   ContentsCode = "SysselsatteArb",
@@ -619,7 +619,7 @@ Haug_arbeid_wide <- Haug_arbeid_2 %>%
     values_from = ansatte
     )
 ```
-
+%>% %>% %>% %>% %>% %>% 
 # Gir antall ansatte i de tre alderskategoriene i de ulike næringene, Sunnhordland
 
 ```{r}
@@ -630,7 +630,7 @@ knr_sunn1 <- c(knr_sunn <- c("4611", "4612",
 ```{r}
 Sunn_arbeid_raw2 <- ApiData(
   urlToData = "07984",
-  Region = list("vs:KommunerS", knr_sunn),
+  Region = list("vs:KommunerS", knr_sunn1),
   NACE2007 = TRUE,
   Kjonn = "0",
   ContentsCode = "SysselsatteArb",
@@ -646,17 +646,17 @@ names(Sunn_arbeid_raw2)[1]<-"desc10"
 
 ```{r}
 Sunn_arbeid_2 <- unlist(
-  Haug_arbeid_raw2, 
+  Sunn_arbeid_raw2, 
   recursive = FALSE
 ) %>% 
   as_tibble() %>% 
   rename(
     NACE2007 = dataset.NACE2007,
     Aar = dataset.Tid,
-    SN2007 = `desc9.næring (SN2007)`, 
-    alder = desc9.alder,
+    SN2007 = `desc10.næring (SN2007)`, 
+    alder = desc10.alder,
     ansatte = dataset.value,
-    knavn = desc9.region
+    knavn = desc10.region
   ) %>% 
   select(Aar, NACE2007, SN2007, 
          alder, ansatte)
