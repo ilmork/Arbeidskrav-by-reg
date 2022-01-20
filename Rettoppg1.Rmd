@@ -60,6 +60,7 @@ tabell_Norge %>%
   labs(x="Sysselsatte", y= "Alle næringer, 00-99")+ 
   scale_color_hue(name = "00-99")
 ```
+# Antall sysselsatte i ulike næringer i Norge over tid
 
 ```{r}
 tabell_Norge %>% 
@@ -114,3 +115,39 @@ tabell_Norge %>%
   labs(x="År", y= "Andel sysselsatte")
 ```
 Tilsvarende kan også gjøres for de ulike kommunene. Skal dere sammenligne nasjonalt og kommunene bør dere kanskje velge ut særlig interessante næringer. Ellers kan figuren bli nokså overbefolket.
+
+
+# Antsall sysselsatte i ulike næringer, Haugalandet 
+
+```{r}
+haugaland <- Tabell1 %>% 
+  filter(Alder =="15-74",
+         Knr %in% c("1106", "1135", "1145", "1146", "1149", "1151", "1160"))
+
+haugaland %>% 
+  ggplot(aes(x = Aar)) +
+  geom_line(aes(y = `00-99`, colour = knavn)) +
+    ggtitle("Antall sysselsatte over tid, Haugaland") +
+    theme(legend.position = "bottom",
+          axis.title = element_text(size = 12, face = "bold")) +
+    labs(x = "År", y = "Sysselsatte") +
+  scale_color_hue(name = "Kommune")
+```
+# Antall sysselsatte i ulike næringer over tid, Hauglandet
+ 
+
+
+```{r}
+Haug_arbeid_2 <- Haug_arbeid_2 %>% 
+  mutate(År = make_date(Aar))
+
+Haug_arbeid_2 %>% 
+  filter(SN2007 != "Alle næringer") %>% 
+  ggplot(aes(x = År, y = ansatte, fill = SN2007)) +
+  geom_bar(stat = "identity") +
+  ggtitle("Alle næringer over tid, Haugalandet") + 
+  theme(legend.position="right",
+        axis.title= element_text(size=12,face="bold")) +
+  labs(x="År", y= "Sysselsatte") +
+  scale_y_continuous(limits = c(0, 50000), breaks =seq(0, 50000, by = 5000))
+```
