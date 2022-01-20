@@ -128,11 +128,11 @@ tabell_Norge %>%
   scale_y_continuous(labels = scales::percent_format(scale = 1))
 ```
 
-Grafen viser prosentvis næringsandel av sysselsatte i Norge over tid (2008-2020). Ingen av næringene viser en markant økning, og vi ser en generell stabil utvikling over tid. Likevel er det noen næringer som skiller seg ut. Helse- og sosialtjenester viser en større prosentvis økning i antall sysselsatte fra 2008 til 2020 enn andre næringer. Næringen har også vært næringen med størst andel sysselsatte fra 2008-2020, etterfulgt av "Varehandel, reparasjon of motorvogner" som i motsetning viser en nedadgående trend fra ca. 15% i 2008 til ca. 12.5% i 2020. De tre største næringene har siden 2008 hatt en klar første- og andreplass, hvor tredjeplassen har vært vekslende mellom "undervisning" og "bygge- og anleggsvirksomhet" hvor sistnevnte var størst av de to i 2020. 
+Grafen viser prosentvis næringsandel av sysselsatte i Norge over tid (2008-2020). Ingen av næringene viser en markant økning, og vi ser en generell stabil utvikling over tid. Likevel er det noen næringer som skiller seg ut. Helse- og sosialtjenester viser en større prosentvis økning i antall sysselsatte fra 2008 til 2020 enn andre næringer. Næringen har også vært næringen med størst andel sysselsatte fra 2008-2020, etterfulgt av "Varehandel, reparasjon of motorvogner" som i motsetning viser en nedadgående trend fra ca. 15% i 2008 til ca. 12.5% i 2020. De tre største næringene har siden 2008 hatt en klar første- og andreplass, hvor tredjeplassen har vært vekslende mellom "undervisning" og "bygge- og anleggsvirksomhet" hvor sistnevnte var størst av de to i 2020, og har opplevd en stødig vekst de siste årene. 
 
-Årsaken til disse tingene...
+Årsaken til resultatene kan sees i sammenheng med både samfunnets etterspørsel for tjenester, men også de offentlige tilskudd til de ulike næringene. Samfunnet er både avhengig av helsetjeneste, undervisning, og varehandel. Bygg- og anleggsvirksomhet har som nevt opplevd en stødig vekst de siste årene, hvor de siste årene gjerne kan forklares med pandemien COVID-19. Det er dog usikkert om dette er en medvirende faktor, eller om det er for tidlig å si noe om effekten av COVID-19 i resultatene presentert.   
 
-## Fjerne, men må lagre den til senere kanskje? --> "Tilsvarende kan også gjøres for de ulike kommunene. Skal dere sammenligne nasjonalt og kommunene bør dere kanskje velge ut særlig interessante næringer. Ellers kan figuren bli nokså overbefolket."
+
 
 
 # Antall sysselsatte i ulike næringer, Haugalandet 
