@@ -13,8 +13,250 @@ library(lubridate)
 library(PxWebApiData)
 library(readr)
 library(ggplot2)
+library(dplyr)
+library(REAT)
+
 knitr::opts_chunk$set(echo=FALSE)
 ```
+
+\newpage
+
+# 3. Sysselsetting i ulike næringer, etter arbeidsstedskommune
+
+## I denne oppgaven skal vi finne sysselsetting i de ulike næringene, etter arbeidsstedskommune.
+
+```{r}
+knr <- c("1106", "1135", "1145", "1146", "1149", "1151", "1160")
+```
+
+
+```{r}
+Haug_bo_raw <- ApiData(
+  url = "07984",
+  Region = list("vs:KommunerS", knr), 
+  NACE2007 = TRUE,
+  Kjonn = "0",
+  ContentsCode = "Sysselsatte",
+  Tid = c(as.character(2008:2020)),
+  Alder = c("15-74", "55-66", "67-74"),
+  makeNAstatus = FALSE
+)
+```
+
+Velger ut og endrer navn, Haugalandet
+
+```{r}
+Haug_bo <- Haug_bo_raw$`07984: Sysselsatte per 4. kvartal, etter region, næring (SN2007), kjønn, alder, statistikkvariabel og år` %>% 
+  tibble() %>% 
+  rename(
+    Knr = region,
+    Aar = år,
+    Naering = `næring (SN2007)`
+  )
+```
+
+```{r }
+names(Haug_bo_raw)[1] <- "desc4"
+```
+
+Muterer inn i Haugbo 
+```{r}
+Haug_bo <- Haug_bo %>% 
+  mutate(knavn = Haug_bo_raw$Knr)
+```
+
+Tar ut kommunene
+```{r}
+Haug_bo <- Haug_bo %>% 
+  pivot_wider(
+    names_from = Knr,
+    values_from = value)
+```
+
+## Legger her til en total for Haugalandet. 
+```{r}
+Haug_bo = mutate(Haug_bo, tot_h = Haugesund+Sauda+Bokn+Tysvær+Karmøy+Utsira+Vindafjord)
+```
+
+## Sunnhordaland
+```{r}
+knr_sunn <- c("1211", "1216",
+         "1219", "1221", "1222", "1223", "1224", "1228", "1231")
+```
+
+## Henter inn data fra oppgave 1, kommunene i Sunnhordaland
+```{r}
+Sunn_bo_raw <- ApiData(
+  url = "07984",
+  Region = list("vs:KommunerS", knr_sunn), 
+  NACE2007 = TRUE,
+  Kjonn = "0",
+  ContentsCode = "Sysselsatte",
+  Tid = c(as.character(2008:2020)),
+  Alder = c("15-74", "55-66", "67-74"),
+  makeNAstatus = FALSE
+)
+```
+
+
+```{r}
+Sunn_bo <- Sunn_bo_raw$`07984: Sysselsatte per 4. kvartal, etter region, næring (SN2007), kjønn, alder, statistikkvariabel og år` %>% 
+  tibble() %>% 
+  rename(
+    Knr = region, 
+    Naering = `næring (SN2007)`,
+    Aar = år
+  )
+```
+
+```{r}
+names(Sunn_bo_raw)[[1]]<-"desc5"
+```
+
+```{r}
+Sunn_bo <- Sunn_bo %>% 
+  mutate(knavn = Sunn_bo_raw$Knr)
+```
+
+```{r}
+Sunn_bo <- Sunn_bo %>% 
+  pivot_wider(
+    names_from = Knr,
+    values_from = value)
+```
+
+## fra kommune nummer til kommune navn 
+```{r}
+names(Sunn_bo)[[6]] <- "Etne"
+names(Sunn_bo)[[7]] <- "Sveio"
+names(Sunn_bo)[[8]] <- "Boemlo"
+names(Sunn_bo)[[9]] <- "Stord"
+names(Sunn_bo)[[10]] <- "Fitjar"
+names(Sunn_bo)[[11]] <- "Tysnes"
+names(Sunn_bo)[[12]] <- "Kvinnherad"
+names(Sunn_bo)[[13]] <- "Odda"
+names(Sunn_bo)[[14]] <- "Ullensvang"
+```
+
+
+```{r}
+Sunn_bo = mutate(Sunn_bo, tot_s = Etne + Sveio + Boemlo+ Stord+ Fitjar+ Tysnes+ Kvinnherad + Odda + Ullensvang)
+```
+
+
+## Totalt anasatte i hver næring for Haugalandet
+```{r}
+Haug_bo %>% 
+ ggplot(mapping = aes(x = tot_h, y = Naering, (angle=0))) +
+  scale_fill_distiller(palette = "Dark2") +
+  geom_line(aes(group = Naering, colour = Naering)) +
+  scale_size_manual(values = c(seq(2.0, 2, by = -0.1))) +
+  geom_hline(yintercept = 0) +
+  labs(title = "Haugalandet", x = "Totalt ansatte", y = "Antall ansatte i  \n alle næringer") +
+  theme(axis.title.y = element_text(angle=0))+
+  theme(legend.position = 'bottom')
+```
+
+Grafen ovenfor viser til antall ansatte i ulike næringer på Haugalandet. Ut i fra grafen kan en se at Helse- og omsorgstjenester er næring med høyest antall ansatte på Haugalandet. 
+
+
+
+## Totalt anasatte i hver næring for Sunnhordland
+
+```{r}
+Sunn_bo %>% 
+ ggplot(mapping = aes(x = tot_s, y = Naering, (angle=0))) +
+  scale_fill_distiller(palette = "Dark2") +
+  geom_line(aes(group = Naering, colour = Naering)) +
+  scale_size_manual(values = c(seq(2.0, 2, by = -0.1))) +
+  geom_hline(yintercept = 0) +
+  labs(title = "Sunnhordaland", x = "Totalt ansatte", y = "Antall ansatte i  \n alle næringer") +
+  theme(axis.title.y = element_text(angle=0))+
+  theme(legend.position = 'bottom')
+```
+
+
+I figuren ovenfor fremstilles det antall ansatte i de ulike næringene i Sunnhordland, her kan en se at helse- og soisaltjenester har flest ansatte.  
+
+
+```{r}
+lokaliseringskvotienter <- read_excel("~/Documents/Master i sivilokonom/2. Semester/Anvendt by- og regionaløkonomi/lokaliseringskvotienter.xlsx")
+```
+
+
+Under *lokaliseringskvoienter* har vi sett på tre ulike sektorer både på Haugalandet og for Sunnhordland. Vi valgte da ut industri, helse og sosialtjenester og varehandel, reperasjon av motorvogner. Det ble valgt ut tre forskjellige år, da første året som er 2008, 2010 og det siste året som var 2020. Aldersgruppen vi valgte var 15 til 74, fordi vi ser at denne aldersgruppen inneholder høyest tall av ansatte. 
+
+*Haugalandet*
+
+Resultatet til sektoren **industri** Haugalandet ble på for årene 2008, 2010 og 2020 ble 
+1.527396811, 1.434975844 og 1.601509868. Alle årene så sier resultatet at det er en lokalnæring  på Haugalandet. Haugesund, Karmøy og Tysvær er de tre største kommunene med flere industri bedrifter, de har for eksempel Aibel, Hydro og Equinor. Disse kan ses også på som basenæringer. 
+
+**Helse- og sosialtjenester** ble våre resultater for 2008, 2010 og 2020, slik 
+0.9962243996, 0.9816929097 og 1.026935838. For 2008 og 2010 kan en se ut i fra resultatene at det er basefaktor. Hvis en ser på realiteten vil en si er en lokalnæring, som resultatet i 2020 sier. Fordi det er sykehus i haugesund. 
+
+I **varehandel, reperasjon av motorvogner** ble resultatene for 2008, 2010 og 2020,
+0.9372344155, 0.9562311403 og 0.9144987383. Her vil en se at alle resultatene er nder 1 som tilsvarer at det er en basisnæring. 
+
+
+*Sunnhordaland*
+
+For **industri** sektoren i Sunnhordland har vi brukt samme år, og samme aldersgruppe, der våre resultater ble 2.039077786, 2.05242696 og 0. 
+Her fikk vi 0 i 2020 fordi det var mengel på informasjon i år 2020. I de to andre resultatene er tallet mye høyere en 1, vil det si at industri sektoren på Sunnhordalan er en lokalnæring. Her vil det nok være mye mer av lokalt arbeid.
+
+
+**Helse- og sosialtjenester** ble våre resultater for 2008, 2010 og 2020, slik
+1.8936, 2.2833 og 0 (mangel på informasjon for 2020). Her ser en at i 2008 var det et lavere resultat enn i 2010, men begge årene gir et resultat på over 1 som sier at det er lokalnæring. 
+
+
+I **varehandel, reperasjon av motorvogner** ble resultatene for 2008, 2010 og 2020 var våre svar 1.104, 1.2475 og 0. Slik som de over er resultatet for 2020 en mangel på. Det er også lokalnæring slik som de andre to sektorene. 
+
+
+I den romlige Gini-koeffisienten har vi valgt å se på samme sektorene som vi brukte for å finne lokaliseringskovientene. Da årene 2008, 2010 og 2020. Aldersgruppen er 15-74 år og sektorene er industri, helse- og sosialtjenester og varehandel, reperasjon av motorvogner. Ved måling av Gini-koeffisienten måler vi hvor stor avstanden på "rik" og "fattig" i fylket, tallet skal ligge i mellom 0-1. 0 betyr at det er lik inntekt som formue for alle i landet, og på 1 er det de tlik inntekt og formue for en person. 
+
+
+*Haugalandet*
+
+Industri gir et resultat på 0,08818581974, som vil si at den er så å si null og tilsvarer en nok så lik inntekt som formue innen sektoren industi på Haugalandet. 
+
+Innen Helse- og sosialtjenster fikk vi svaret 0.0576.Der resultatet blir det samme som i sektor industri. Der helse- og sosialtjenesten har nok så lik formue som inntekt. 
+
+I varehandel, reperasjon av motorvogner var svaret vårt 0.0368, som gir et enda lavere resultat enn de andre, men har samme betydning at det er lik inntekt som formue innen den sektoren. 
+
+
+*Sunnhordland*
+På grunn av mangel for informasjon i år 2020, er det kun to år som er regnet med i denne delen. 
+
+Industri ga oss et resultat på 0.0568 der en ser at formue og inntekt er nok så like for industri sektoren. 
+
+Resultatet til helse- og sosialtjenester er 0.056804 nok så likt tall som på Haugalandet, som også lik inntekt som formue. 
+
+Innen varhandel, reperasjon av motorvogner i Sunnhordland var vårt resultat 0.03182
+og gir en lik inntekt som formue innen sektoren.
+
+
+
+En kan se ut i fra alle resultatene så ga det oss en lik inntekt og formue på alle sektorene vi valgte ut. i manglet et år på hver sektor i Sunnhordland som kan ha gitt oss andre tall en hva den kunne blitt. Vi antar at resultatene er gode og har gitt oss rett svar i forhold til å måle Gini-koeffisienten. 
+
+
+*RDI*
+
+Under målet for mangfold av næringer, RDI, ser vi på samme sektorene som ovenfor. Med RDI måler vi om den regionale næringen er lik den nasjonale næringen, jo høyere RDI en er jo mer lik er den regionale næringen den nasjonle næringen. 
+
+*Haugalandet*
+Resultatet vi fikk i industri var 65.7341, det vil si at den regionale næringen(industri) er ikke så lik som den nasjonal næringen(industri). 
+
+Når det kommer til næringen helse- og sosialtjenesten fikk et tall på 1498.289 som tilsvarer en høy RDI, og vil si at sektoren helse- og sosialtjenessten regionalt på Haugalandet er svært lik den nasjonale næringen. 
+
+Innen varhandel, reperasjon av motorvogner fikk vi resultatet 356.211 har et høyee RDI tall enn industri som tilsvarer at den er mær lik den nasjonale næringen(arhandel, reperasjon av motorvogner) enne sektoren industri er den nasjonale. 
+
+*Sunnhordland* 
+Industri næringen i Sunnhordland fikk vi resultatet 0.1231, som vil si at det er et veldig lav RDI. Det vil si at den regionale industrien er ikke lik den najsoanle næringen. 
+
+Samme gjelder helse- og sosialtjenesten 0.12925 som også tilsvarer ingen likhet med den nasjonale næringen. 
+
+
+Varhandel, reperasjon av motorvogner fikk et negativ resultat minus 0.0442, som vil si at det er ingen likhet mellom den najsonale og regionale næringen. 
+
 
 \newpage
 
