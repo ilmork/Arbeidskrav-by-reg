@@ -179,9 +179,6 @@ Sunn_bo %>%
 I figuren ovenfor fremstilles det antall ansatte i de ulike næringene i Sunnhordland, her kan en se at helse- og soisaltjenester har flest ansatte.  
 
 
-```{r}
-lokaliseringskvotienter <- read_excel("~/Documents/Master i sivilokonom/2. Semester/Anvendt by- og regionaløkonomi/lokaliseringskvotienter.xlsx")
-```
 
 
 Under *lokaliseringskvoienter* har vi sett på tre ulike sektorer både på Haugalandet og for Sunnhordland. Vi valgte da ut industri, helse og sosialtjenester og varehandel, reperasjon av motorvogner. Det ble valgt ut tre forskjellige år, da første året som er 2008, 2010 og det siste året som var 2020. Aldersgruppen vi valgte var 15 til 74, fordi vi ser at denne aldersgruppen inneholder høyest tall av ansatte. 
