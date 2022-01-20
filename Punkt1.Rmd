@@ -122,7 +122,7 @@ Sunn_arbeid_2 %>%
 ```{r}
 Haug_arbeid_2 %>% 
   filter(SN2007 != "Alle næringer" & SN2007 != "Uoppgitt") %>% 
-  ggplot(aes(x = År)) + 
+  ggplot(aes(x = Aar)) + 
   geom_line(aes(y = ansatte, colour = SN2007, linetype = knavn)) + 
   ggtitle("Alle Næringene, Haugalandet, 2008-2020") + 
   theme(legend.position = "bottom",
