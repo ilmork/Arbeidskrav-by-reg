@@ -1,26 +1,29 @@
 ---
-title: "Punkt3"
+title: "Arbeidskrav"
+subtitle: "MSB 106 - Anvendt by- og regionaløkonomi"
+author: "Gruppe 2"
 output:
   pdf_document: default
   html_notebook: default
+lang: nb-NO
 ---
-
-
-```{r Setup}
-suppressPackageStartupMessages({
-library(PxWebApiData)
-library(dplyr)
+```{r setup, message = FALSE, echo = FALSE}
 library(tidyverse)
 library(lubridate)
+library(PxWebApiData)
+library(readr)
+library(ggplot2)
+library(dplyr)
 library(REAT)
 library(readxl)
-})
-knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+knitr::opts_chunk$set(echo=FALSE)
 ```
 
+\newpage
 
+# 3. Sysselsetting i ulike næringer, etter arbeidsstedskommune
 
-# I denne oppgaven skal vi finne sysselsetting i de ulike næringene, etter arbeidsstedskommune.
+## I denne oppgaven skal vi finne sysselsetting i de ulike næringene, etter arbeidsstedskommune.
 
 ```{r}
 knr <- c("1106", "1135", "1145", "1146", "1149", "1151", "1160")
@@ -40,7 +43,7 @@ Haug_bo_raw <- ApiData(
 )
 ```
 
-Velger ut og endrer navn, Haugalandet
+
 
 ```{r}
 Haug_bo <- Haug_bo_raw$`07984: Sysselsatte per 4. kvartal, etter region, næring (SN2007), kjønn, alder, statistikkvariabel og år` %>% 
@@ -56,13 +59,13 @@ Haug_bo <- Haug_bo_raw$`07984: Sysselsatte per 4. kvartal, etter region, næring
 names(Haug_bo_raw)[1] <- "desc4"
 ```
 
-Muterer inn i Haugbo 
+
 ```{r}
 Haug_bo <- Haug_bo %>% 
   mutate(knavn = Haug_bo_raw$Knr)
 ```
 
-Tar ut kommunene
+
 ```{r}
 Haug_bo <- Haug_bo %>% 
   pivot_wider(
@@ -75,13 +78,13 @@ Haug_bo <- Haug_bo %>%
 Haug_bo = mutate(Haug_bo, tot_h = Haugesund+Sauda+Bokn+Tysvær+Karmøy+Utsira+Vindafjord)
 ```
 
-# Sunnhordaland
+## Sunnhordaland
 ```{r}
 knr_sunn <- c("1211", "1216",
          "1219", "1221", "1222", "1223", "1224", "1228", "1231")
 ```
 
-## Henter inn data fra oppgave 1, kommunene i Sunnhordaland
+
 ```{r}
 Sunn_bo_raw <- ApiData(
   url = "07984",
@@ -175,15 +178,7 @@ Sunn_bo %>%
 
 I figuren ovenfor fremstilles det antall ansatte i de ulike næringene i Sunnhordland, her kan en se at helse- og soisaltjenester har flest ansatte.  
 
-```{r}
-write.csv(Haug_bo, "Haug_bo_3.csv")
-write.csv(Sunn_bo, "Sunn_bo_3.csv")
-```
 
-
-```{r}
-lokaliseringskvotienter <- read_excel("~/Documents/Master i sivilokonom/2. Semester/Anvendt by- og regionaløkonomi/lokaliseringskvotienter.xlsx")
-```
 
 
 Under *lokaliseringskvoienter* har vi sett på tre ulike sektorer både på Haugalandet og for Sunnhordland. Vi valgte da ut industri, helse og sosialtjenester og varehandel, reperasjon av motorvogner. Det ble valgt ut tre forskjellige år, da første året som er 2008, 2010 og det siste året som var 2020. Aldersgruppen vi valgte var 15 til 74, fordi vi ser at denne aldersgruppen inneholder høyest tall av ansatte. 
@@ -211,8 +206,6 @@ Her fikk vi 0 i 2020 fordi det var mengel på informasjon i år 2020. I de to an
 
 
 I **varehandel, reperasjon av motorvogner** ble resultatene for 2008, 2010 og 2020 var våre svar 1.104, 1.2475 og 0. Slik som de over er resultatet for 2020 en mangel på. Det er også lokalnæring slik som de andre to sektorene. 
-
-
 
 
 I den romlige Gini-koeffisienten har vi valgt å se på samme sektorene som vi brukte for å finne lokaliseringskovientene. Da årene 2008, 2010 og 2020. Aldersgruppen er 15-74 år og sektorene er industri, helse- og sosialtjenester og varehandel, reperasjon av motorvogner. Ved måling av Gini-koeffisienten måler vi hvor stor avstanden på "rik" og "fattig" i fylket, tallet skal ligge i mellom 0-1. 0 betyr at det er lik inntekt som formue for alle i landet, og på 1 er det de tlik inntekt og formue for en person. 
@@ -262,13 +255,88 @@ Samme gjelder helse- og sosialtjenesten 0.12925 som også tilsvarer ingen likhet
 Varhandel, reperasjon av motorvogner fikk et negativ resultat minus 0.0442, som vil si at det er ingen likhet mellom den najsonale og regionale næringen. 
 
 
+\newpage
 
-Sammenligne med resultatene for data etter arbeidssted, og kommenter
-hvilken informasjon resultatene gir om romlig mobilitet i arbeidsmarkedet.
+# 4. Pendling mellom de ulike kommunene i regionen
+
+```{r}
+library(readxl)
+Tab_03321_andeler <- read_excel("Data/Tab_03321_andeler.xlsx", 
+    col_types = c("text", "text", "text", 
+        "text", "text", "numeric", "numeric", 
+        "numeric"))
+```
+
+# Pendler ut
+
+```{r}
+Tab_03321_andeler %>%
+  select(aar, b_knavn_new, Ut_pendlere) %>%
+  filter(b_knavn_new %in% c("Tysvær", "Karmøy", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes")
+    ) %>%
+  ggplot(mapping = aes(x = aar, y = Ut_pendlere, colour = b_knavn_new)) +
+  geom_line(aes(group = b_knavn_new), lwd = 0.6) +
+  theme(legend.position = 'bottom')+
+  xlab("År") +
+  ylab("Utpendling %") +
+  labs(colour = "Kommune")
+```
+
+Det vi ser ut i fra grafen er at det er to kommuner som skiller seg klart ut når det kommer til andel utpendlere(Tysvær og Sveio). Grunnen til det er at disse kommunene er nabokommunene til Haugesund som er et arbeidssenter på haugalandet. Fitjar er også en kommune med høy andel utpendlere, grunnen til dette er litt det samme som Sveio og Tysvær, men i dette tilfelle er det Stord som arbeidssenter i sunnhordaland. Når det gjelder Bokn så er dette en liten kommune med begrenset arbeidsplasser som gir en økt utpendling til nabokommunene Karnøy, Tysvær og Haugesund.  
+
+### Utvikling over tid
+
+Vi ser at de små kommunene svinger mye mer enn de større kommunene. De største kommunene (Haugesund og Karmøy) er ganske flate med en jevn og moderat økning. De kommunene med størst utvikling de siste 20 årene har vært Tysvær og Bokn. Tysvær er en attraktiv plass og bo fordi kvadratmeterprisen er lavere enn i Haugeusnd og reisekostnadene er overkommlige, derfor ser vi en økning i utpendlere. Når det gjelder Bokn er folketallet relativt lav, så det skal ikke store endringene til i befolkning før endringene blir radikale i utpendling. Når det gjelder resten av kommunene så er det en liten økning i alle de siste 20 årene. 
 
 
+# Pendler inn
+
+```{r}
+Tab_03321_andeler %>%
+  select(aar, b_knavn_new, Inn_pendlere) %>%
+  filter(
+    b_knavn_new %in% c("Tysvær", "Karmøy", "", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes", "", "")
+    ) %>%
+  ggplot(mapping = aes(x = aar, y = Inn_pendlere, colour = b_knavn_new)) +
+  geom_line(aes(group = b_knavn_new), lwd = 0.5) +
+  theme(legend.position = 'bottom') +
+  xlab("År") +
+  ylab("Innpendling %") +
+  labs(colour = "Kommune")
+```
+
+Tysvær er kommunen med flest andel innpendlere på grunn av kårstø og etableringer av nye næringsparker. De er også en av de kommunene som har hatt størst vekst over 20-års perioden. Haugesund har en ganske moderat og stabil vekst. Samtidig er de veldig høyt oppe i andel innpendling. Dette skyldes at Haugesund er regionens senter. Bokn sine svigninger kan skyldes Bokn Plast AS og hvordan de gjør det som privateid selskap. Dette er det største privateide selskapet i kommunen. Utsira er en kommune med veldig få antall beboere, så deres graf i figuren gir store og radikale endringer hvis for eksempel en familie skulle flyttet bort der i fra.
+
+### Utviklingen over tid
+
+Fleste kommuner har hatt en svak positiv utvikling. Utsira har hatt en negativ utvikling, men som nevnt er dette en kommune med svært få innbyggere.
 
 
+# Bor og jobber i samme kommune
+
+```{r}
+Tab_03321_andeler %>%
+  select(aar, b_knavn_new, b_og_a) %>%
+  filter(
+    b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes", "Kvinnherad", "Ullensvang")
+    ) %>%
+  ggplot(mapping = aes(x = aar, y = b_og_a, colour = b_knavn_new)) +
+  geom_line(aes(group = b_knavn_new), lwd = 0.5) +
+  theme(legend.position = 'bottom')+
+  xlab("År") +
+  ylab("Bo- og arbeidskommune %") +
+  labs(colour = "Kommune")
+```
+
+Vi ser at Sauda og Ullensvang har en stor og stabil andel av bosatte og sysselsatte innenfor samme kommune. Dette skyldes at Sauda og Odda (Odda ligger i Ullensvang), har vært byer med relativ stor industri aktivitet samtidig som de ligger relativt adskilt fra andre nære, store kommuner slik som for eksempel Haugesund og Bergen.
+
+### Oppsummering
+
+Pendlestrømmene øker i regionen, samtidig som vi ser at de som bor og jobber i samme kommune er avtakende i 20-års perioden.
+
+Veinettet forbedres i tillegg til at prisene på eiendom og bolig er rimeligere per kvardratmeter utenfor de mest sentrerte plassene.
+
+Sveio er et eksempel på hvor pendlestrømmen har økt og bosatt og sysselsatt i kommunen har synket. Sveio er en kommune med store utviklingspotensialet innenfor eiendom og bolig samtidig som avstanden til Haugesund er kort.
 
 
 

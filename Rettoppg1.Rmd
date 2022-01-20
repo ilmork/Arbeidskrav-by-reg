@@ -140,19 +140,11 @@ haugaland %>%
 
 # Antall sysselsatte i ulike næringer over tid, Hauglandet
  
+<<<<<<< HEAD
 ```{r}
+=======
+>>>>>>> 2f1891764054958752e21433ff45719bd1990fee
 
-Haug_arbeid_2 %>% 
-  filter(SN2007 != "Alle næringer" & SN2007 != "Uoppgitt") %>% 
-  ggplot(aes(x = Aar)) + 
-  geom_line(aes(y = ansatte, colour = SN2007, linetype = knavn)) + 
-  ggtitle("Alle Næringene i over tid, Haugalandet") + 
-  theme(legend.position = "bottom",
-        axis.title = element_text(size = 12, face = "bold")) + 
-  labs(x = "Sysselsatte", y = "Sysselsatte")+
-  scale_color_hue(name = "Kommune") + 
-  scale_y_continuous(limits = c(0,6000), breaks = seq(0, 6000, by = 500))
-```
 
 ```{r}
 Haug_arbeid_2 <- Haug_arbeid_2 %>% 
