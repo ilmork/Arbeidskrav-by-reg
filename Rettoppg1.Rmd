@@ -69,7 +69,8 @@ tabell_Norge %>%
   scale_color_hue(name = "00-99")
 ```
 
-Hva skal vi skrive her? hihi :)
+Grafen viser gjennomsnittelig antall sysselsatte i ulike næringer i Norge i perioden 2008 til 2020. Sysselsetting innen **helse- og sosialtjenesten** og **varehandel, reparasjon av motorvogner** er næringene som fremkommer mest i hele landet. Dette kan skyldes at det er mer behov for helsehjelp, stillinger som blir utlyst av den offentlige sektoren, og at det eksporteres mer.   Derimot er jobber innen elektrisitet, vann og renovasjon og finansiering og forsikring er mindre populære. Dette kan skyldes stillinger utlyses mer av den private sektoren, og digitalisering av verktøy.  
+
 
 # Antall sysselsatte i ulike næringer i Norge over tid
 
@@ -205,6 +206,6 @@ Sunn_arbeid_2 %>%
 ```
 
 
-Grafen viser antall sysselsatte i ulike næringer i 2020 for Sunnhordland. **Helse- og sosialtjenester** og **industri** er blandt de næringene som har flest sysselsatte i 2020, mens **elektrisitet, vann og renovasjon** og **personlig tjenesteyting** er dem med færrest. Ettersom en del data ikke ble inkludert på grunn av teknikse vanskeligheter, vises ikke effekten av kommunesammenslåingen i 2020 eller utviklingen over tid. En ønskelig graf hadde vist utviklingen av ulike næringer i perioden 2008 til 2020.
+Grafen viser antall sysselsatte i ulike næringer i 2020 for Sunnhordland. **Helse- og sosialtjenester** og **industri** er blandt de næringene som har flest sysselsatte i 2020, mens **elektrisitet, vann og renovasjon** og **personlig tjenesteyting** er dem med færrest. Ettersom en del data ikke ble inkludert på grunn av teknikse vanskeligheter, vises ikke effekten av kommunesammenslåingen i 2020 eller utviklingen over tid. En ønskelig grafe hadde vist utviklingen av ulike næringer i perioden 2008 til 2020.
 
 
