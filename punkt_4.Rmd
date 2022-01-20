@@ -1911,12 +1911,7 @@ Tab_03321_andeler <- read_excel("Data/Tab_03321_andeler.xlsx",
 #Andel pendelere ut av kommunen
 Tab_03321_andeler %>%
   select(aar, b_knavn_new, Ut_pendlere) %>%
-  filter(
-<<<<<<< HEAD
-    b_knavn_new %in% c("Tysvær", "Karmøy", "", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes", "", "")
-=======
-    b_knavn_new %in% c("Tysvær", "Karmøy", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes")
->>>>>>> 8321930d44730eabd32f4358ff94a6312005139a
+  filter(b_knavn_new %in% c("Tysvær", "Karmøy", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes")
     ) %>%
   ggplot(mapping = aes(x = aar, y = Ut_pendlere, colour = b_knavn_new)) +
   geom_line(aes(group = b_knavn_new), lwd = 0.6) +
@@ -1931,12 +1926,6 @@ Det vi ser ut i fra grafen er at det er to kommuner som skiller seg klart ut nå
 ### Utvikling over tid
 
 Vi ser at de små kommunene svinger mye mer enn de større kommunene. De største kommunene (Haugesund og Karmøy) er ganske flate med en jevn og moderat økning. De kommunene med størst utvikling de siste 20 årene har vært Tysvær og Bokn. Tysvær er en attraktiv plass og bo fordi kvadratmeterprisen er lavere enn i Haugeusnd og reisekostnadene er overkommlige, derfor ser vi en økning i utpendlere. Når det gjelder Bokn er folketallet relativt lav, så det skal ikke store endringene til i befolkning før endringene blir radikale i utpendling. Når det gjelder resten av kommunene så er det en liten økning i alle de siste 20 årene. 
-
-
-
-
-### Utviklingen over tid
-
 
 
 # Pendler inn
@@ -1956,10 +1945,11 @@ Tab_03321_andeler %>%
   labs(colour = "Kommune")
 ```
 
+Tysvær er kommunen med flest andel innpendlere på grunn av kårstø og etableringer av nye næringsparker. De er også en av de kommunene som har hatt størst vekst over 20-års perioden. Haugesund har en ganske moderat og stabil vekst. Samtidig er de veldig høyt oppe i andel innpendling. Dette skyldes at Haugesund er regionens senter. Bokn sine svigninger kan skyldes Bokn Plast AS og hvordan de gjør det som privateid selskap. Dette er det største privateide selskapet i kommunen. Utsira er en kommune med veldig få antall beboere, så deres graf i figuren gir store og radikale endringer hvis for eksempel en familie skulle flyttet bort der i fra.
 
+### Utviklingen over tid
 
-
-
+Fleste kommuner har hatt en svak positiv utvikling. Utsira har hatt en negativ utvikling, men som nevnt er dette en kommune med svært få innbyggere.
 
 
 # Bor og jobber i samme kommune
@@ -1980,13 +1970,12 @@ Tab_03321_andeler %>%
 
 Vi ser at Sauda og Ullensvang har en stor og stabil andel av bosatte og sysselsatte innenfor samme kommune. Dette skyldes at Sauda og Odda (Odda ligger i Ullensvang), har vært byer med relativ stor industri aktivitet samtidig som de ligger relativt adskilt fra andre nære, store kommuner slik som for eksempel Haugesund og Bergen.
 
+### Oppsummering
 
+Pendlestrømmene øker i regionen, samtidig som vi ser at de som bor og jobber i samme kommune er avtakende i 20-års perioden.
 
+Veinettet forbedres i tillegg til at prisene på eiendom og bolig er rimeligere per kvardratmeter utenfor de mest sentrerte plassene.
 
-
-
-
-
-
+Sveio er et eksempel på hvor pendlestrømmen har økt og bosatt og sysselsatt i kommunen har synket. Sveio er en kommune med store utviklingspotensialet innenfor eiendom og bolig samtidig som avstanden til Haugesund er kort.
 
 
