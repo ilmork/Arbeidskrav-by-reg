@@ -175,7 +175,20 @@ mutate(
 
 
 
+# Alle næringer, Haugalandet:
 
+```{r}
+Haug_arbeid_2 %>% 
+  filter(SN2007 != "Alle næringer") %>% 
+  ggplot(aes(x = ansatte)) + 
+  geom_line(aes(y = SN2007)) + 
+  ggtitle("Alle næringene, Haugalandet, 2008-2020") + 
+  theme(legend.position = "bottom",
+        axis.title = element_text(size = 12, face = "bold")) +
+  labs(x="Sysselsatte", y="Alle næringer, 00-99")+
+  scale_color_hue(name = "00-99") + 
+  scale_x_continuous(limits = c(0,6000), breaks = seq(0,6000, by = 500))
+```
 
 
 
