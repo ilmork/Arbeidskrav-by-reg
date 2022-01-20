@@ -1979,3 +1979,28 @@ Veinettet forbedres i tillegg til at prisene på eiendom og bolig er rimeligere 
 Sveio er et eksempel på hvor pendlestrømmen har økt og bosatt og sysselsatt i kommunen har synket. Sveio er en kommune med store utviklingspotensialet innenfor eiendom og bolig samtidig som avstanden til Haugesund er kort.
 
 
+```{r}
+write.csv(Tab_03321_00, "Tab_03321_00.csv")
+write.csv(Tab_03321_01, "Tab_03321_01.csv")
+write.csv(Tab_03321_02, "Tab_03321_02.csv")
+write.csv(Tab_03321_03, "Tab_03321_03.csv")
+write.csv(Tab_03321_04, "Tab_03321_04.csv")
+write.csv(Tab_03321_05, "Tab_03321_05.csv")
+write.csv(Tab_03321_06, "Tab_03321_06.csv")
+write.csv(Tab_03321_07, "Tab_03321_07.csv")
+write.csv(Tab_03321_08, "Tab_03321_08.csv")
+write.csv(Tab_03321_09, "Tab_03321_09.csv")
+write.csv(Tab_03321_10, "Tab_03321_10.csv")
+write.csv(Tab_03321_11, "Tab_03321_11.csv")
+write.csv(Tab_03321_12, "Tab_03321_12.csv")
+write.csv(Tab_03321_13, "Tab_03321_13.csv")
+write.csv(Tab_03321_14, "Tab_03321_14.csv")
+write.csv(Tab_03321_15, "Tab_03321_15.csv")
+write.csv(Tab_03321_16, "Tab_03321_16.csv")
+write.csv(Tab_03321_17, "Tab_03321_17.csv")
+write.csv(Tab_03321_18, "Tab_03321_18.csv")
+write.csv(Tab_03321_19, "Tab_03321_19.csv")
+write.csv(Tab_03321_20, "Tab_03321_20.csv")
+```
+
+

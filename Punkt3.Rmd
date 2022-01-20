@@ -28,7 +28,6 @@ knr <- c("1106", "1135", "1145", "1146", "1149", "1151", "1160")
 
 
 ```{r}
-## hentet ut data fra oppgave 1, data fra Haugalandet. 
 Haug_bo_raw <- ApiData(
   url = "07984",
   Region = list("vs:KommunerS", knr), 
@@ -176,29 +175,42 @@ Sunn_bo %>%
 
 I figuren ovenfor fremstilles det antall ansatte i de ulike næringene i Sunnhordland, her kan en se at helse- og soisaltjenester har flest ansatte.  
 
+```{r}
+write.csv(Haug_bo, "Haug_bo_3.csv")
+write.csv(Sunn_bo, "Sunn_bo_3.csv")
+```
 
 
-Under *lokaliseringskvoienter* har vi sett på tre ulike sektorer både på Haugalandet og for Sunnhordland. Vi valgte da ut industri, helse- og sosialtjenester og varehandel, reperasjon av motorvogner. Det ble valgt ut tre forskjellige år, da første året som er 2008, 2010 og det siste året som var 2020. Aldersgruppen vi valgte var 15 til 74, fordi vi ser at denne aldersgruppen inneholder høyest tall av ansatte. 
+```{r}
+lokaliseringskvotienter <- read_excel("~/Documents/Master i sivilokonom/2. Semester/Anvendt by- og regionaløkonomi/lokaliseringskvotienter.xlsx")
+```
+
+
+Under *lokaliseringskvoienter* har vi sett på tre ulike sektorer både på Haugalandet og for Sunnhordland. Vi valgte da ut industri, helse og sosialtjenester og varehandel, reperasjon av motorvogner. Det ble valgt ut tre forskjellige år, da første året som er 2008, 2010 og det siste året som var 2020. Aldersgruppen vi valgte var 15 til 74, fordi vi ser at denne aldersgruppen inneholder høyest tall av ansatte. 
 
 *Haugalandet*
 
-Resultatet til sektoren **industri** Haugalandet ble på for årene 2008, 2010 og 2020 ble 1,527396811, 1,434975844 og 1,601509868. Alle årene så sier resultatet at det er en lokalnæring  på Haugalandet. Haugesund, Karmøy og Tysvær er de tre største kommunene med flere industri bedrifter, de har for eksempel Aibel, Hydro og Equinor. Disse kan ses også på som basenæringer. 
+Resultatet til sektoren **industri** Haugalandet ble på for årene 2008, 2010 og 2020 ble 
+1.527396811, 1.434975844 og 1.601509868. Alle årene så sier resultatet at det er en lokalnæring  på Haugalandet. Haugesund, Karmøy og Tysvær er de tre største kommunene med flere industri bedrifter, de har for eksempel Aibel, Hydro og Equinor. Disse kan ses også på som basenæringer. 
 
-**Helse- og sosialtjenester** ble våre resultater for 2008, 2010 og 2020, slik 0,9962243996, 0,9816929097 og 1,026935838. For 2008 og 2010 kan en se ut i fra resultatene at det er basefaktor. Hvis en ser på realiteten vil en si er en lokalnæring, som resultatet i 2020 sier. Fordi det er sykehus i haugesund. 
+**Helse- og sosialtjenester** ble våre resultater for 2008, 2010 og 2020, slik 
+0.9962243996, 0.9816929097 og 1.026935838. For 2008 og 2010 kan en se ut i fra resultatene at det er basefaktor. Hvis en ser på realiteten vil en si er en lokalnæring, som resultatet i 2020 sier. Fordi det er sykehus i haugesund. 
 
-I **varehandel, reperasjon av motorvogner** ble resultatene for 2008, 2010 og 2020, 0,9372344155, 0,9562311403 og 0,9144987383. Her vil en se at alle resultatene er nder 1 som tilsvarer at det er en basisnæring. 
+I **varehandel, reperasjon av motorvogner** ble resultatene for 2008, 2010 og 2020,
+0.9372344155, 0.9562311403 og 0.9144987383. Her vil en se at alle resultatene er nder 1 som tilsvarer at det er en basisnæring. 
 
 
 *Sunnhordaland*
 
-For **industri** sektoren i Sunnhordland har vi brukt samme år, og samme aldersgruppe, der våre resultater ble 2,039077786, 2,05242696 og 0. 
+For **industri** sektoren i Sunnhordland har vi brukt samme år, og samme aldersgruppe, der våre resultater ble 2.039077786, 2.05242696 og 0. 
 Her fikk vi 0 i 2020 fordi det var mengel på informasjon i år 2020. I de to andre resultatene er tallet mye høyere en 1, vil det si at industri sektoren på Sunnhordalan er en lokalnæring. Her vil det nok være mye mer av lokalt arbeid.
 
 
-**Helse- og sosialtjenester** ble våre resultater for 2008, 2010 og 2020, slik 1,893611307, 2,283353332 og 0 (mangel på informasjon for 2020). Her ser en at i 2008 var det et lavere resultat enn i 2010, men begge årene gir et resultat på over 1 som sier at det er lokalnæring. 
+**Helse- og sosialtjenester** ble våre resultater for 2008, 2010 og 2020, slik
+1.8936, 2.2833 og 0 (mangel på informasjon for 2020). Her ser en at i 2008 var det et lavere resultat enn i 2010, men begge årene gir et resultat på over 1 som sier at det er lokalnæring. 
 
 
-I **varehandel, reperasjon av motorvogner** ble resultatene for 2008, 2010 og 2020 var våre svar 1,104016994, 1,247585395 og 0. Slik som de over er resultatet for 2020 en mangel på. Det er også lokalnæring slik som de andre to sektorene. 
+I **varehandel, reperasjon av motorvogner** ble resultatene for 2008, 2010 og 2020 var våre svar 1.104, 1.2475 og 0. Slik som de over er resultatet for 2020 en mangel på. Det er også lokalnæring slik som de andre to sektorene. 
 
 
 
@@ -210,19 +222,20 @@ I den romlige Gini-koeffisienten har vi valgt å se på samme sektorene som vi b
 
 Industri gir et resultat på 0,08818581974, som vil si at den er så å si null og tilsvarer en nok så lik inntekt som formue innen sektoren industi på Haugalandet. 
 
-Innen Helse- og sosialtjenster fikk vi svaret 0,05768709678. Der resultatet blir det samme som i sektor industri. Der helse- og sosialtjenesten har nok så lik formue som inntekt. 
+Innen Helse- og sosialtjenster fikk vi svaret 0.0576.Der resultatet blir det samme som i sektor industri. Der helse- og sosialtjenesten har nok så lik formue som inntekt. 
 
-I varehandel, reperasjon av motorvogner var svaret vårt 0,03682287627, som gir et enda lavere resultat enn de forje, men har samme betydning at det er lik inntekt som formue innen den sektoren. 
+I varehandel, reperasjon av motorvogner var svaret vårt 0.0368, som gir et enda lavere resultat enn de andre, men har samme betydning at det er lik inntekt som formue innen den sektoren. 
 
 
 *Sunnhordland*
 På grunn av mangel for informasjon i år 2020, er det kun to år som er regnet med i denne delen. 
 
-Industri ga oss et resultat på 0,0568049578 der en ser at formue og inntekt er nok så like for industri sektoren. 
+Industri ga oss et resultat på 0.0568 der en ser at formue og inntekt er nok så like for industri sektoren. 
 
-Resultatet til helse- og sosialtjenester er 0,0568049578 nok så likt tall som på Haugalandet, som også lik inntekt som formue. 
+Resultatet til helse- og sosialtjenester er 0.056804 nok så likt tall som på Haugalandet, som også lik inntekt som formue. 
 
-Innen varhandel, reperasjon av motorvogner i Sunnhordland var vårt resultat 0,03182481794 og gir en lik inntekt som formue innen sektoren.
+Innen varhandel, reperasjon av motorvogner i Sunnhordland var vårt resultat 0.03182
+og gir en lik inntekt som formue innen sektoren.
 
 
 
@@ -234,27 +247,26 @@ En kan se ut i fra alle resultatene så ga det oss en lik inntekt og formue på 
 Under målet for mangfold av næringer, RDI, ser vi på samme sektorene som ovenfor. Med RDI måler vi om den regionale næringen er lik den nasjonale næringen, jo høyere RDI en er jo mer lik er den regionale næringen den nasjonle næringen. 
 
 *Haugalandet*
-Resultatet vi fikk i industri var 65,73415204, det vil si at den regionale næringen(industri) er ikke så lik som den nasjonal næringen(industri). 
+Resultatet vi fikk i industri var 65.7341, det vil si at den regionale næringen(industri) er ikke så lik som den nasjonal næringen(industri). 
 
+Når det kommer til næringen helse- og sosialtjenesten fikk et tall på 1498.289 som tilsvarer en høy RDI, og vil si at sektoren helse- og sosialtjenessten regionalt på Haugalandet er svært lik den nasjonale næringen. 
 
-Når det kommer til næringen helse- og sosialtjenesten fikk et tall på 1498,289335 som tilsvarer en høy RDI, og vil si at sektoren helse- og sosialtjenessten regionalt på Haugalandet er svært lik den nasjonale næringen. 
-
-Innen varhandel, reperasjon av motorvogner fikk vi resultatet 356,211496 har et høyee RDI tall enn industri som tilsvarer at den er mær lik den nasjonale næringen(arhandel, reperasjon av motorvogner) enne sektoren industri er den nasjonale. 
+Innen varhandel, reperasjon av motorvogner fikk vi resultatet 356.211 har et høyee RDI tall enn industri som tilsvarer at den er mær lik den nasjonale næringen(arhandel, reperasjon av motorvogner) enne sektoren industri er den nasjonale. 
 
 *Sunnhordland* 
-Industri næringen i Sunnhordland fikk vi resultatet 0,1231639904, som vil si at det er et veldig lav RDI. Det vil si at den regionale industrien er ikke lik den najsoanle næringen. 
+Industri næringen i Sunnhordland fikk vi resultatet 0.1231, som vil si at det er et veldig lav RDI. Det vil si at den regionale industrien er ikke lik den najsoanle næringen. 
 
-Samme gjelder helse- og sosialtjenesten 0,1292582968 som også tilsvarer ingen likhet med den nasjonale næringen. 
+Samme gjelder helse- og sosialtjenesten 0.12925 som også tilsvarer ingen likhet med den nasjonale næringen. 
 
 
-Varhandel, reperasjon av motorvogner fikk et negativ resultat −0,04424893169, som vil si at det er ingen likhet mellom den najsonale og regionale næringen. 
+Varhandel, reperasjon av motorvogner fikk et negativ resultat minus 0.0442, som vil si at det er ingen likhet mellom den najsonale og regionale næringen. 
 
 
 
 Sammenligne med resultatene for data etter arbeidssted, og kommenter
 hvilken informasjon resultatene gir om romlig mobilitet i arbeidsmarkedet.
 
-Kommer når tinger er kommet på plasss... Ble forsinkelser. 
+
 
 
 
