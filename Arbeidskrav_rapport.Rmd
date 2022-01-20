@@ -19,6 +19,347 @@ library(readxl)
 knitr::opts_chunk$set(echo=FALSE)
 ```
 
+```{r}
+suppressPackageStartupMessages({
+library(PxWebApiData)
+library(dplyr)
+library(tidyverse)
+library(lubridate)
+library(REAT)
+})
+knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+```
+
+# 2. Mål for beskrivelse av næringsstrukturen.
+
+```{r hente datasett}
+Haug_arbeid <- read_csv("Data/Haug_arbeid.csv") 
+Sunn_arbeid <- read_csv("Data/Sunn_arbeid.csv")
+```
+
+```{r rydde datasett H}
+Haug_arbeid_punkt2 = mutate(Haug_arbeid, tot_H = Haugesund+Sauda+Bokn+Tysvaer+Karmoey+Utsira+Vindafjord)
+Haug_arbeid_punkt2 = filter(Haug_arbeid_punkt2, Alder == c("15-74"))
+```
+
+```{r rydde datasett S}
+names(Sunn_arbeid)[[13]] <- "Odda_og_Ullensvang"
+Sunn_arbeid_punkt2 = mutate(Sunn_arbeid, tot_S =  Etne+Sveio+Boemlo+Stord+Fitjar+Tysnes+Kvinnherad+Odda_og_Ullensvang)
+Sunn_arbeid_punkt2 = filter(Sunn_arbeid_punkt2, Alder == c("15-74"))
+```
+
+```{r left_join}
+arbeid_punkt2_first = left_join(Haug_arbeid_punkt2, Sunn_arbeid_punkt2)
+```
+
+```{r legge inn total av alle kommuner}
+arbeid_punkt2 =mutate(arbeid_punkt2_first, tot = tot_H+tot_S)
+```
+
+```{r rydde}
+rm (arbeid_punkt2_first, Haug_arbeid, Sunn_arbeid)
+```
+
+## Lokaliseringskvotienter
+
+### Haugesund: 05-09 Bergverksdrift og utvinning
+
+```{r df 2008}
+df2008 = filter(arbeid_punkt2, Aar == c("2008"))
+```
+
+```{r 2008}
+locq(452, 21322, 1338, 47530, industry.names = Bergverksdrift_utvinning_2008, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r df 2014}
+df2014 = filter(arbeid_punkt2, Aar == c("2014"))
+```
+
+```{r 2014}
+locq(416, 22190, 1521, 49518, industry.names = Bergverksdrift_utvinning_2014, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r df 2019}
+df2019 = filter(arbeid_punkt2, Aar == c("2019"))
+```
+
+```{r 2019}
+locq(685, 21429, 1752, 49295, industry.names = Bergverksdrift_utvinning_2020, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+Her har vi beregnet lokaliseringskvotient for næringen "bergverksdrift
+og utvinning" med NACE-kode 05-09. Den beregnes slik: (sysselsetting i
+gitt bransje i Haugesund/total sysselsetting i Haugesund)/(sysselsetting
+i gitt bransje i alle kommunene/sysselsetting i alle kommunene vi har
+med i oppgaven vår).
+
+Som vi kan se har lokaliseringskvotienten her endret seg noe med tiden.
+Dette tolker vi som at konsentrasjonen av industrien (bergverksdrift og
+utvinning) i Haugesund er i endring, men fordi tallet hele tiden er
+lavere enn 1, kan vi se at industrien er underrepresentert i Haugesund,
+målt opp mot hele området vårt (alle kommunene i vårt datasett). For
+eksempel vil tallet 0.8994 si at i Haugesund er det målt opp mot området
+i helhet, 89% arbeidsplasser innenfor bransjen.
+
+Det er flere grunner til at lokaliseringskvotienten endrer seg. En kan
+være at antall sysselsatte innenfor næringer øker i kommunen, eller at
+totalt antall i næringen i regionen minker.
+
+```{r koeffisient_mot_nasjonal_2008}
+locq(452, 43265, 1338, 2525000, industry.names = Bergverksdrift_utvinning_nasjonal_2008, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r koeffisient_mot_nasjonal_2019}
+locq(685, 58757, 1752, 2710435, industry.names = Bergverksdrift_utvinning_nasjonal_2019, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+Her har vi beregnet koeffisienten for bergverksdrift- og utvinning i
+Haugesund, mot nasjonalt for årstallene 2008 og 2019.
+
+Når vi ser på disse koeffisientene, ser vi at bergverksdrift- og
+utvinning i Haugesund er overrepresentert sett opp mot hele landet.
+
+### Haugesund: 86-88 Helse- og sosialtjenester
+
+```{r}
+locq(4812, 21322, 9596, 47530, industry.names = Helse_og_sosialtjen_2008, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(5096, 22190, 10425, 49518, industry.names = Helse_og_sosialtjen_2014, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(5608, 21429, 11050, 49295, industry.names = Helse_og_sosialtjen_2019, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+Resultatene til lokaliseringskvotientene for næringen helse- og
+sosialtjenester i Haugesund fremviser en relativt stabil utvikling over
+tidsperioden 2008-2019. Verdien i 2008 lå på 1,12, hvor den sank til
+1,09 i 2014 og steg igjen til 1,17 i 2019. Fra formelen for
+lokaliseringskvotienter så vet vi at den øverste brøken vil da
+representere helse- og sosialtjenester sin andel for total sysselsetting
+i regionen og i nevner helse-og sosialtjenester sin andel av total
+sysselsetting for nasjonen. Siden tallet har ligget stabilt over 1 så
+reflekterer det at denne type aktiviteter er viktigere for regionen, enn
+for landet. Noe som potensielt kan antyde på at Haugesund er en del av
+en helse-og sosial tjenesteregion, muligens i en klynge. Vi kan også
+antyde at denne type næring er en lokalnæring siden kvotienten har
+såpass stabile verdier i nærheten av 1.
+
+### Karmøy: 10-33 Industri
+
+```{r}
+locq(3357, 15194, 7491, 47530, industry.names = Industri_2008, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(2353, 15457, 6767, 49518, industry.names = Industri_2014, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(2476, 15978, 6563, 49295, industry.names = Industri_2019, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+For næringen industri i kommunen Karmøy kan vi se at lokalisering
+kvotientene for de bestemte årene er alle over verdien 1, med 1,40 i år
+2008 som er en relativt høy verdi. Noe som tilsier at dette vil være en
+typisk basisnæring for kommunen, siden basisnæringer tenderer til å
+svinge mer i aktivitet som dermed resulterer at også kvotientene for
+denne type næring også har høyere svingninger. Vi kan også observere en
+relativt stagnering i kvotientene ut tidsperioden, som potensielt
+tilsier at denne type næring har blitt mindre viktigere for regionen
+sammenlignet med nasjonalt sett.
+
+### Karmøy: 86-88 Helse- og sosialetjenester
+
+```{r}
+locq(2771, 15194, 9596, 47530, industry.names = Helse_og_sosialtjen_2008, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(3162, 15457, 10425, 49518, industry.names = Bergverksdrift_utvinning_2014, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(3280, 15978, 11050, 49295, industry.names = Bergverksdrift_utvinning_2014, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+Lokaliseringskvotientene for helse- og sosialtjenester i Karmøy kommune
+har hatt et relativt stabilt nivå gjennom tidsperioden 2008-2019, hvorav
+alle verdiene har ligget i underkant av 1. Dette tilsier at denne type
+aktivitet er en typisk lokalnæring for kommunen, siden vi har hatt
+såpass stabile verdier rundt 1. Dette reflekterer også at helse- og
+sosialtjenester er like viktig for regionen som for nasjonen.
+
+## Gini- indeks for industrivirksomhet
+
+Den romlige Gini-indeksen $(G_i)$ er et sentralt mål som blir brukt til
+å undersøke den geografiske spredningen av en næringssektor og forstå
+klyngetendenser. Resultatene av gini-koeffisientene måler hvor
+konsentrert/spredten næring vil være fordelt basert på de utvalgte
+kommunene i regionen. Dersom det eksisterer en sterkere klyngetendens
+mellom kommunene vil man kunne forvente at verdien på gini-koeffisienten
+har økt over tid og man burde som regel analysere dette på et finere
+nivå enn kommunenivå om mulig.
+
+Man benytter gini-indeksen for å undersøke hvordan den bestemte
+aktiviteten er fordelt overfor geografien/regionen. Ved høye verdier av
+gini-koeffisienten vil dette indikere klyngedannelser og
+konsentrasjoner, imens lave verdier av koeffisienten beskriver et
+forhold av jevnere spredning mellom regionene. Dersom det eksisterer en
+helt jevn fordeling vil $G_i=0$.
+
+Vi har valgt å undersøke gini-indeksen for næringen industri og de fem
+utvalgte kommunene vi har benyttet oss av er Haugesund, Sauda, Bokn,
+Tysvaer og Karmoey. Tilsvarende har vi brukt dataene fra 2008 og 2019
+som er det første- og siste året vi har som vårt datagrunnlag.
+
+-   **Årstall: 2008**
+
+```{r sysselsetting for industri i de fem kommunene 2008}
+E_ij <- c(2572, 468, 41, 268, 3357)
+```
+
+```{r total sysselsetting i de fem kommunene 2008}
+E_j <- c(21322, 2136, 297, 4048, 15194)
+```
+
+```{r gini koeffisient for konsentrasjonen av næringen 2008}
+gini.conc(E_ij, E_j)
+```
+
+-   **Årstall: 2019**
+
+```{r sysselsetting for industri i de fem kommunene 2019}
+E_ij1 <- c(2171, 360, 52, 617, 2467)
+```
+
+```{r total sysselsetting i de fem kommunene 2019}
+E_j1 <- c(21429, 1945, 327, 4710, 15978)
+```
+
+```{r gini koeffisient for konsentrasjonen av næringen 2019}
+gini.conc(E_ij1, E_j1)
+```
+
+Fra resultatene ser vi at gini-koeffisienten for år 2008 er på 0,21 og
+for 2019 fant vi en verdi på 0,11. Dette er svært lave indekser som
+tilsier at det er en jevn fordeling når det kommer til industri-næringen
+blant kommunene. Vi kan også bemerke oss at koeffisienten har stagnert
+betraktelig gjennom denne tidsperioden. Noe som tilsier at
+klyngetendensen mellom kommunene har blitt relativt svekket.
+
+## RDI
+
+Et mål som kan brukes for å se på om næringsstrukturen i en region er
+diversifisert eller spesialisert er RDI. RDI står for regional diversity
+index. Verdien vi får forteller oss om fordelingen av arbeidsplasser,
+innenfor ulike sektorer, ligner den nasjonale fordelingen.
+
+![RDI formel, i er sektor, og Sin er andel av nasjonal
+sysselsetting](RDI_formel.JPG) der sin er sektor i 's andel av samlet
+nasjonal sysselsetting.
+
+**Formel:**
+
+$RDI_r=\frac{1}{\sum_i|\frac{E_{ir}}{E_r}-\frac{E_{in}}{E_n}|}$
+
+### Haugesund: 05-09 Bergverksdrift og utvinning 2008:
+
+$E_{ir}=452$ $E_r=1338$ $E_{in}=21322$ $E_n=47530$
+
+$RDI=\frac{1}{\frac{452}{1338}-\frac{21322}{47530}}$
+
+$RDI=\frac{1}{0,34-0,45}$
+
+$RDI=\frac{1}{-0,11}$
+
+$RDI=-9,09$
+
+### Haugesund: 05-09 Bergverksdrift og utvinning 2019:
+
+$E_{ir}=685$ $E_r=1752$ $E_{in}=21429$ $E_n=49295$
+
+$RDI=\frac{1}{\frac{685}{1752}-\frac{21429}{49295}}$
+
+$RDI=\frac{1}{0,39-0,43}$
+
+$RDI=\frac{1}{-0,04}$
+
+$RDI=-25$
+
+Som vi kan se så har det vært en negativ utvikling i RDIen i Haugesund
+innenfor næringen Bergverksdrift og utvinning, hvor
+sysselsettingsandelene er sammenlignet mot regionale (kommunene vi har
+med) andeler for næringen.
+
+### Haugesund 05-09, mot nasjonal bergverksdrift og utvinning.
+
+### 2008:
+
+$E_{ir}=452$ $E_r=1338$ $E_{in}=43265$ $E_n=2525000$
+
+$RDI=\frac{1}{\frac{452}{1338}-\frac{43265}{2525000}}$
+
+$RDI=\frac{1}{0.34-0.02}$
+
+$RDI=\frac{1}{0.32}$
+
+$RDI=3.125$
+
+### 2019:
+
+$E_{ir}=685$ $E_r=1752$ $E_{in}=58757$ $E_n=2710435$
+
+$RDI=\frac{1}{\frac{685}{1752}-\frac{58757}{2710435}}$
+
+$RDI=\frac{1}{0.39-0.22}$
+
+$RDI=\frac{1}{0.17}$
+
+$RDI=5.88$
+
+Som vi kan se så har det vært en positiv utvikling i RDIen i Haugesund
+innenfor næringen Bergverksdrift og utvinning, hvor
+sysselsettingsandelene er sammenlignet mot nasjonale andeler for
+næringen.
+
+Alle tallene vi har kommet frem til, både ved å sammenligne mot
+regionale og nasjonale andeler, er relativt lave. Det vil si at næringen
+lokalt ikke er lik sammenligningsgrunnlaget. Den har nærmet seg mest sammenlignet med nasjonale andeler i 2019, men det er fortsatt lave tall. 
+
+
+
 \newpage
 
 # 3. Sysselsetting i ulike næringer, etter arbeidsstedskommune
