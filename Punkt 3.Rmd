@@ -232,9 +232,25 @@ En kan se ut i fra alle resultatene så ga det oss en lik inntekt og formue på 
 
 *RDI*
 
-Under målet for mangfold av næringer, RDI, ser vi på samme sektorene som ovenfor. RDI er et mål på hvilken grad sysselsettingen i en region er jevnt fordelt mellom dens næringer. 
+Under målet for mangfold av næringer, RDI, ser vi på samme sektorene som ovenfor. Med RDI måler vi om den regionale næringen er lik den nasjonale næringen, jo høyere RDI en er jo mer lik er den regionale næringen den nasjonle næringen. 
 
-res
+*Haugalandet*
+Resultatet vi fikk i industri var 65,73415204, det vil si at den regionale næringen(industri) er ikke så lik som den nasjonal næringen(industri). 
+
+
+Når det kommer til næringen helse- og sosialtjenesten fikk et tall på 1498,289335 som tilsvarer en høy RDI, og vil si at sektoren helse- og sosialtjenessten regionalt på Haugalandet er svært lik den nasjonale næringen. 
+
+Innen varhandel, reperasjon av motorvogner fikk vi resultatet 356,211496 har et høyee RDI tall enn industri som tilsvarer at den er mær lik den nasjonale næringen(arhandel, reperasjon av motorvogner) enne sektoren industri er den nasjonale. 
+
+*Sunnhordland* 
+Industri næringen i Sunnhordland fikk vi resultatet 0,1231639904, som vil si at det er et veldig lav RDI. Det vil si at den regionale industrien er ikke lik den najsoanle næringen. 
+
+Samme gjelder helse- og sosialtjenesten 0,1292582968 som også tilsvarer ingen likhet med den nasjonale næringen. 
+
+
+Varhandel, reperasjon av motorvogner fikk et negativ resultat −0,04424893169, som vil si at det er ingen likhet mellom den najsonale og regionale næringen. 
+
+
 
 Sammenligne med resultatene for data etter arbeidssted, og kommenter
 hvilken informasjon resultatene gir om romlig mobilitet i arbeidsmarkedet.
