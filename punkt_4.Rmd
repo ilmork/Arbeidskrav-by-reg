@@ -1905,53 +1905,42 @@ Tab_03321_andeler <- read_excel("Data/Tab_03321_andeler.xlsx",
         "numeric"))
 ```
 
-
-```{r}
-<<<<<<< HEAD
-Tab_03321_a_og_b %>%
-  #Bor og jobber i samme kommune
-  select(aar, b_knavn_new, Andel_B_og_A) %>%
-  filter(
-    b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes", "Kvinnherad", "Ullensvang", "Haugesund")
-=======
-#beregne og presentere andeler av arbeidstakerne med bosted i en kommune som har arbeidssted i andre kommuner, og gjør det samme for andelen av jobbene i en kommune som er besatt av arbeidstakere fra andre kommuner. Diskuter forskjeller mellom kommunene i regionen, og drøft utviklingen over tid for ulike kommuner
-```
-
-
-### Pendler ut
+# Pendler ut
 
 ```{r}
 #Andel pendelere ut av kommunen
 Tab_03321_andeler %>%
   select(aar, b_knavn_new, Ut_pendlere) %>%
   filter(
-    b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes", "Kvinnherad", "Ullensvang")
+    b_knavn_new %in% c("Tysvær", "Karmøy", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes")
     ) %>%
   ggplot(mapping = aes(x = aar, y = Ut_pendlere, colour = b_knavn_new)) +
   geom_line(aes(group = b_knavn_new), lwd = 0.6) +
   theme(legend.position = 'bottom')+
   xlab("År") +
-  ylab("Prosentandel") +
+  ylab("Utpendling %") +
   labs(colour = "Kommune")
 ```
 
 
+### Utviklingen over tid
 
 
-### Pendler inn
+
+# Pendler inn
 
 ```{r}
 #Andeler som pendler inn i kommune
 Tab_03321_andeler %>%
   select(aar, b_knavn_new, Inn_pendlere) %>%
   filter(
-    b_knavn_new %in% c("Tysvær", "Karmøy", "Sauda", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes", "Kvinnherad", "Ullensvang")
+    b_knavn_new %in% c("Tysvær", "Karmøy", "", "Haugesund", "Bokn", "Utsira", "Vindafjord", "Etne", "Sveio", "Bømlo", "Stord", "Fitjar", "Tysnes", "", "")
     ) %>%
   ggplot(mapping = aes(x = aar, y = Inn_pendlere, colour = b_knavn_new)) +
   geom_line(aes(group = b_knavn_new), lwd = 0.5) +
   theme(legend.position = 'bottom') +
   xlab("År") +
-  ylab("Prosentandel") +
+  ylab("Innpendling %") +
   labs(colour = "Kommune")
 ```
 
@@ -1962,7 +1951,7 @@ Ut i fra disse grafene vi viser frem kan vi se at det er to kommuner som skiller
 
 
 
-### Bor og jobber i samme kommune
+# Bor og jobber i samme kommune
 
 ```{r}
 Tab_03321_andeler %>%
@@ -1974,12 +1963,13 @@ Tab_03321_andeler %>%
   geom_line(aes(group = b_knavn_new), lwd = 0.5) +
   theme(legend.position = 'bottom')+
   xlab("År") +
-  ylab("Prosentandel") +
+  ylab("Bo- og arbeidskommune %") +
   labs(colour = "Kommune")
 ```
 
+Vi ser at Sauda og Ullensvang har en stor og stabil andel av bosatte og sysselsatte innenfor samme kommune. Dette skyldes at Sauda og Odda (Odda ligger i Ullensvang), har vært byer med relativ stor industri aktivitet samtidig som de ligger relativt adskilt fra andre nære, store kommuner slik som for eksempel Haugesund og Bergen.
 
-# Leker meg bare med ggplot og tester ut ting
+
 
 
 

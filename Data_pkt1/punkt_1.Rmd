@@ -354,7 +354,7 @@ Tabell2_raw <- ApiData(
   Kjonn = "0",
   ContentsCode = "Sysselsatte",
   Tid = c(as.character(2008:2020)),
-  Alder = c("15-74", "55-66", "67-74"),
+  Alder = c("15-74"),
   makeNAstatus = FALSE
   )
 ```
@@ -383,7 +383,7 @@ Tabell2 <- Tabell2 %>%
 ```{r}
 Tabell2 <- Tabell2 %>% 
   pivot_wider(
-    names_from = c(Naering, Alder),
+    names_from = c(Naering),
     values_from = value)
 ```
 
@@ -477,15 +477,7 @@ names(Haug_bo)[[23]] <- "Vindafjord_15-74"
 names(Haug_bo)[[24]] <- "Vindafjord_55-66"
 names(Haug_bo)[[25]] <- "Vindafjord_67-74"
 ```
-```{r}
-names(Haug_bo)[[6]] <- "Haugesund"
-names(Haug_bo)[[7]] <- "Sauda"
-names(Haug_bo)[[8]] <- "Bokn"
-names(Haug_bo)[[9]] <- "Tysvaer"
-names(Haug_bo)[[10]] <- "Karmoy"
-names(Haug_bo)[[11]] <- "Utsira"
-names(Haug_bo)[[12]] <- "Vindafjord"
-```
+
 
 ```{r}
 rm(Haug_bo_raw)
@@ -613,7 +605,8 @@ Haug_arbeid_2 <- unlist(
     knavn = desc9.region
   ) %>% 
   select(Aar, NACE2007, SN2007, 
-         alder, ansatte)
+         alder, ansatte) %>% 
+  mutate(knavn= Haug_arbeid_raw2$desc9$region)
 ```
 
 
@@ -699,6 +692,7 @@ write_csv(Haug_arbeid_wide, "Haug_arbeid_wide.csv")
 write_csv(Haug_arbeid_2, "Haug_arbeid_2.csv")
 write_csv(Sunn_arbeid_2, "Sunn_arbeid_2.csv")
 write_csv(Sunn_arbeid_wide, "Sunn_arbeid_wide.csv")
+show_col_type = FALSE
 ```
 
 ```{r}

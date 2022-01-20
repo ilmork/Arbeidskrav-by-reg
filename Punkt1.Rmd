@@ -1,6 +1,8 @@
 ---
 title: "R Notebook"
-output: html_notebook 
+output:
+  html_document:
+    df_print: paged
 ---
 
 ```{r}
@@ -29,6 +31,8 @@ Sunn_arbeid <- read_csv("Data_pkt1/Sunn_arbeid.csv", show_col_types = FALSE)
 Haug_arbeid_wide <- read_csv("Data_pkt1/Haug_arbeid_wide.csv", show_col_types = FALSE)
 Haug_arbeid_2 <- read_csv("Data_pkt1/Sunn_arbeid_2.csv", show_col_types = FALSE)
 Sunn_arbeid_2 <- read_csv("Data_pkt1/Sunn_arbeid_2.csv", show_col_types = FALSE)
+Tabell2 <- read_csv("Data_pkt1/Tabell2.csv", show_col_types = FALSE)
+Tabell2 <- read_csv("Data_pkt1/Tabell2.csv")
 ```
 
 # Antall sysselsatte i ulike næringer, Norge
@@ -174,21 +178,27 @@ Sunn_arbeid_2 %>%
 ```
 
 
+```{r}
+Haug_arbeid_2 <- Haug_arbeid_2 %>% 
+  mutate(knavn = Haug_arbeid_raw2$desc9$region)
+Haug_arbeid_2 %>% 
+  filter(SN2007 != "Alle næringer" & SN2007 != "Uoppgitt") %>% 
+  ggplot(aes(x = Aar)) + 
+  geom_line(aes(y = ansatte, colour = SN2007, linetype = knavn)) + 
+  ggtitle("Alle Næringene, Haugalandet, 2008-2020") + 
+  theme(legend.position = "bottom",
+        axis.title = element_text(size = 12, face = "bold")) + 
+  labs(x = "Sysselsatte", y = "Alle næringer, 00-99")+
+  scale_color_hue(name = "Kommune") + 
+  scale_y_continuous(limits = c(0,6000), breaks = seq(0, 6000, by = 500))
+```
+
+
+
 
 
 ## TEST
 
-
-```{r}
-Tabell1 %>% 
-  ggplot(aes(x = Aar)) +
-  geom_line(aes(y = `00-99`, colour = knavn)) +
-    ggtitle("Alle næringer, Haugesund og Karmøy, 2008-2020") +
-    theme(legend.position = "bottom",
-          axis.title = element_text(size = 12, face = "bold")) +
-    labs(x = "År", y = "Alle næringer, 00-99") +
-  scale_color_hue(name = "Kommune")
-```
 
 ```{r}
 haugaland <- Tabell1 %>% 
@@ -208,8 +218,7 @@ haugaland %>%
 
 ```{r}
 Sunnhordland <- Tabell1 %>% 
-  filter(Alder =="15-74",
-         Knr %in% c("4611", "4612",
+filter( Knr %in% c("4611", "4612",
          "4613", "4614", "4615", "4616", "4617", "4618"))
 
 Sunnhordland %>% 
@@ -231,7 +240,20 @@ mutate(
 
 
 
+# Alle næringer, Haugalandet:
 
+```{r}
+Haug_arbeid_2 %>% 
+  filter(SN2007 != "Alle næringer") %>% 
+  ggplot(aes(x = ansatte)) + 
+  geom_line(aes(y = SN2007)) + 
+  ggtitle("Alle næringene, Haugalandet, 2008-2020") + 
+  theme(legend.position = "bottom",
+        axis.title = element_text(size = 12, face = "bold")) +
+  labs(x="Sysselsatte", y="Alle næringer, 00-99")+
+  scale_color_hue(name = "00-99") + 
+  scale_x_continuous(limits = c(0,6000), breaks = seq(0,6000, by = 500))
+```
 
 
 
