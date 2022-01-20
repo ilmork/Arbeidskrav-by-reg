@@ -229,7 +229,6 @@ Innen varhandel, reperasjon av motorvogner i Sunnhordland var vårt resultat 0,0
 En kan se ut i fra alle resultatene så ga det oss en lik inntekt og formue på alle sektorene vi valgte ut. i manglet et år på hver sektor i Sunnhordland som kan ha gitt oss andre tall en hva den kunne blitt. Vi antar at resultatene er gode og har gitt oss rett svar i forhold til å måle Gini-koeffisienten. 
 
 
-
 *RDI*
 
 Under målet for mangfold av næringer, RDI, ser vi på samme sektorene som ovenfor. Med RDI måler vi om den regionale næringen er lik den nasjonale næringen, jo høyere RDI en er jo mer lik er den regionale næringen den nasjonle næringen. 
@@ -254,6 +253,8 @@ Varhandel, reperasjon av motorvogner fikk et negativ resultat −0,04424893169, 
 
 Sammenligne med resultatene for data etter arbeidssted, og kommenter
 hvilken informasjon resultatene gir om romlig mobilitet i arbeidsmarkedet.
+
+Kommer når tinger er kommet på plasss... Ble forsinkelser. 
 
 
 
