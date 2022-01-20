@@ -38,6 +38,11 @@ show_col_types = FALSE
 
 ```
 
+# Oppgave 1
+
+Vi har i denne oppgaven tatt for oss sysselsetting i de ulike næringene, etter arbeidssted. Vi vil i kombinasjon av grafiske fremstillinger og tekst vise sysselsetting i Norge, på Haugalandet, og i Sunnhordland (inkludert Hardanger) fra 2008-2020. Vi vil deretter gjøre rede for ulikheter og forskjeller både nasjonalt og regionalt, før vi avsluttningsvis vil presentere en konklusjon baser på resultatene vi har angitt. 
+
+
 # Antall sysselsatte i ulike næringer, Norge
 
 
@@ -63,6 +68,9 @@ tabell_Norge %>%
   labs(x="Sysselsatte", y= "Alle næringer, 00-99")+ 
   scale_color_hue(name = "00-99")
 ```
+
+Hva skal vi skrive her? hihi :)
+
 # Antall sysselsatte i ulike næringer i Norge over tid
 
 ```{r}
@@ -118,7 +126,12 @@ tabell_Norge %>%
   labs(x="År", y= "Andel sysselsatte")+
   scale_y_continuous(labels = scales::percent_format(scale = 1))
 ```
-Tilsvarende kan også gjøres for de ulike kommunene. Skal dere sammenligne nasjonalt og kommunene bør dere kanskje velge ut særlig interessante næringer. Ellers kan figuren bli nokså overbefolket.
+
+Grafen viser prosentvis næringsandel av sysselsatte i Norge over tid (2008-2020). Ingen av næringene viser en markant økning, og vi ser en generell stabil utvikling over tid. Likevel er det noen næringer som skiller seg ut. Helse- og sosialtjenester viser en større prosentvis økning i antall sysselsatte fra 2008 til 2020 enn andre næringer. Næringen har også vært næringen med størst andel sysselsatte fra 2008-2020, etterfulgt av "Varehandel, reparasjon of motorvogner" som i motsetning viser en nedadgående trend fra ca. 15% i 2008 til ca. 12.5% i 2020. De tre største næringene har siden 2008 hatt en klar første- og andreplass, hvor tredjeplassen har vært vekslende mellom "undervisning" og "bygge- og anleggsvirksomhet" hvor sistnevnte var størst av de to i 2020. 
+
+Årsaken til disse tingene...
+
+## Fjerne, men må lagre den til senere kanskje? --> "Tilsvarende kan også gjøres for de ulike kommunene. Skal dere sammenligne nasjonalt og kommunene bør dere kanskje velge ut særlig interessante næringer. Ellers kan figuren bli nokså overbefolket."
 
 
 # Antsall sysselsatte i ulike næringer, Haugalandet 
@@ -137,6 +150,8 @@ haugaland %>%
     labs(x = "År", y = "Sysselsatte") +
   scale_color_hue(name = "Kommune")
 ```
+
+
 
 # Antall sysselsatte i ulike næringer over tid, Hauglandet
  
