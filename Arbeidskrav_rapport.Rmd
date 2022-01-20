@@ -15,7 +15,7 @@ library(readr)
 library(ggplot2)
 library(dplyr)
 library(REAT)
-
+library(readxl)
 knitr::opts_chunk$set(echo=FALSE)
 ```
 
@@ -43,7 +43,7 @@ Haug_bo_raw <- ApiData(
 )
 ```
 
-Velger ut og endrer navn, Haugalandet
+
 
 ```{r}
 Haug_bo <- Haug_bo_raw$`07984: Sysselsatte per 4. kvartal, etter region, næring (SN2007), kjønn, alder, statistikkvariabel og år` %>% 
@@ -59,13 +59,13 @@ Haug_bo <- Haug_bo_raw$`07984: Sysselsatte per 4. kvartal, etter region, næring
 names(Haug_bo_raw)[1] <- "desc4"
 ```
 
-Muterer inn i Haugbo 
+
 ```{r}
 Haug_bo <- Haug_bo %>% 
   mutate(knavn = Haug_bo_raw$Knr)
 ```
 
-Tar ut kommunene
+
 ```{r}
 Haug_bo <- Haug_bo %>% 
   pivot_wider(
@@ -84,7 +84,7 @@ knr_sunn <- c("1211", "1216",
          "1219", "1221", "1222", "1223", "1224", "1228", "1231")
 ```
 
-## Henter inn data fra oppgave 1, kommunene i Sunnhordaland
+
 ```{r}
 Sunn_bo_raw <- ApiData(
   url = "07984",
