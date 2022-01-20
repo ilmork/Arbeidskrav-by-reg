@@ -1,8 +1,6 @@
 ---
 title: "R Notebook"
-output:
-  pdf_document: default
-  html_notebook: default
+output: html_notebook
 ---
 
 ```{r}
@@ -14,7 +12,6 @@ library(broom)
 library(lmtest)
 library(sandwich)
 library(viridis)
-  options(scipen = 999)
 })
 knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 ```
@@ -25,225 +22,71 @@ knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 
 ```{r}
 Tabell1 <- read_csv("Data_pkt1/Tabell1.csv")
-Nas_arbeid_norge_sys <- read_csv("Data_pkt1/Nas_arbeid_norge_sys.csv")
-Haug_arbeid <- read_csv("Data_pkt1/Haug_arbeid.csv")
-Sunn_arbeid <- read_csv("Data_pkt1/Sunn_arbeid.csv")
-Haug_arbeid_wide <- read_csv("Data_pkt1/Haug_arbeid_wide.csv")
-Haug_arbeid_2 <- read_csv("Data_pkt1/Sunn_arbeid_2.csv")
-Sunn_arbeid_2 <- read_csv("Data_pkt1/Sunn_arbeid_2.csv")
-Tabell2 <- read_csv("Data_pkt1/Tabell2.csv")
+View(Tabell1)
 show_col_types = FALSE
 ```
 
-# Antall sysselsatte i ulike næringer, Norge
-
 ```{r}
-names(Nas_arbeid_norge_sys)
+names(Tabell1)
 ```
 
 ```{r}
-Nas_arbeid_norge_sys <- Nas_arbeid_norge_sys %>% 
+Tabell1 <- Tabell1 %>% 
   mutate(År = make_date(Aar))
 ```
 
-```{r}
-tabell_Norge<- Nas_arbeid_norge_sys
-
-tabell_Norge %>% 
-  ggplot(aes(x = sysselsatte)) +
-  geom_line(aes(y = SN2007)) +
-  ggtitle("Alle næringer, Norge, 2008-2020") + 
-  theme(legend.position="bottom",
-        axis.title= element_text(size=12,face="bold")) +
-  labs(x="Sysselsatte", y= "Alle næringer, 00-99")+ 
-  scale_color_hue(name = "00-99")
-```
-# TEKST
-
-# Antall sysselsatte etter arbeidssted
-
--Haugalandet og Sunnhordland - en graf.
--Haugalandet og Sunnhordland mot nasjonalt --> Hvis det blir vanskelig, så kan vi ta Haugalandet vs nasjonalt og Sunnhordland vs nasjonalt. 
-- Kommunene på Haugalandet opp mot Haugalandet. 
-- Kommunene i Sunnhordland opp mot Sunnhordland. 
-
--Fikse SUNN ARB. 
-
 
 
 ```{r}
-names(Haug_arbeid_2)
-```
-```{r}
-tabell_Norge %>% 
-  filter(SN2007 != "Alle næringer") %>% 
-  ggplot(aes(x=År, y= sysselsatte, fill = SN2007))+
-  geom_bar(stat = "identity") +
-  ggtitle("Alle næringer, Norge, 2008-2020") + 
-  theme(legend.position="right",
-        axis.title= element_text(size=12,face="bold")) +
-  labs(x="År", y= "Alle næringer, 00-99") +
-  scale_y_continuous(limits = c(0, 3250000), breaks = c(0, 250000, 500000, 750000, 1000000,1250000,1500000,1750000,2000000,2250000,2500000,2750000,3000000,3250000))
-```
-
-## Hauglandet 
-
-```{r}
-Haug_arbeid_2 <- Haug_arbeid_2 %>% 
-  mutate(År = make_date(Aar))
-
-Haug_arbeid_2 %>% 
-  filter(SN2007 != "Alle næringer") %>% 
-  ggplot(aes(x = År, y = ansatte, fill = SN2007)) +
-  geom_bar(stat = "identity") +
-  ggtitle("Alle næringer, Haugalandet, 2008-2020") + 
-  theme(legend.position="right",
-        axis.title= element_text(size=12,face="bold")) +
-  labs(x="År", y= "Alle næringer, 00-99") +
-  scale_y_continuous(limits = c(0, 50000), breaks =seq(0, 50000, by = 5000))
-```
-
-## Sunnhordland
-
-```{r}
-Sunn_arbeid_2 <- Sunn_arbeid_2 %>% 
-  mutate(År = make_date(Aar))
-
-Sunn_arbeid_2 %>% 
-  filter(SN2007 != "Alle næringer") %>% 
-  ggplot(aes(x = År, y = ansatte, fill = SN2007)) +
-  geom_bar(stat = "identity") +
-  ggtitle("Alle næringer, Sunnhordland, 2008-2020") + 
-  theme(legend.position="right",
-        axis.title= element_text(size=12,face="bold")) +
-  labs(x="År", y= "Alle næringer, 00-99") +
-  scale_y_continuous(limits = c(0, 50000), breaks =seq(0, 50000, by = 5000))
-```
-
-
-```{r}
-Haug_arbeid_2 <- Haug_arbeid_2 %>% 
-  mutate(knavn = Haug_arbeid_raw2$desc9$region)
-Haug_arbeid_2 %>% 
-  filter(SN2007 != "Alle næringer" & SN2007 != "Uoppgitt") %>% 
-  ggplot(aes(x = Aar)) + 
-  geom_line(aes(y = ansatte, colour = SN2007, linetype = knavn)) + 
-  ggtitle("Alle Næringene, Haugalandet, 2008-2020") + 
-  theme(legend.position = "bottom",
-        axis.title = element_text(size = 12, face = "bold")) + 
-  labs(x = "Sysselsatte", y = "Alle næringer, 00-99")+
-  scale_color_hue(name = "Kommune") + 
-  scale_y_continuous(limits = c(0,6000), breaks = seq(0, 6000, by = 500))
-```
-
-
-
-
-
-## TEST
-
-
-```{r}
-haugaland <- Tabell1 %>% 
+tabell_haugaland <- Tabell1 %>% 
   filter(Alder =="15-74",
-         Knr %in% c("1106", "1135", "1145", "1146", "1149", "1151", "1160"))
+         Knr %in% c("1106", "1135", "1146", "1149"))
 
-haugaland %>% 
-  ggplot(aes(x = Aar)) +
-  geom_line(aes(y = `00-99`, colour = knavn)) +
-    ggtitle("Alle næringer, Haugaland, 2008-2020") +
-    theme(legend.position = "bottom",
-          axis.title = element_text(size = 12, face = "bold")) +
-    labs(x = "År", y = "Alle næringer, 00-99") +
-  scale_color_hue(name = "Kommune")
-```
-
-
-```{r}
-Sunnhordland <- Tabell1 %>% 
-filter( Knr %in% c("4611", "4612",
-         "4613", "4614", "4615", "4616", "4617", "4618"))
-
-Sunnhordland %>% 
-  ggplot(aes(x = Aar)) +
-  geom_line(aes(y = `00-99`, colour = knavn)) +
-    ggtitle("Alle næringer, Sunnhordland, 2008-2020") +
-    theme(legend.position = "bottom",
-          axis.title = element_text(size = 12, face = "bold")) +
-    labs(x = "År", y = "Alle næringer, 00-99") +
-  scale_color_hue(name = "Kommune")
-```
-
-```{r}
-Haug_Sunn <- Tabell1
-mutate(
-  Haug = `Knr$1106`+ `Knr$1135` + `Knr$1145` + `Knr$1146` + `Knr$1149` + `Knr$1151` + `Knr$1160` 
-)
-```
-
-
-
-# Alle næringer, Haugalandet:
-
-```{r}
-Haug_arbeid_2 %>% 
-  filter(SN2007 != "Alle næringer") %>% 
-  ggplot(aes(x = ansatte)) + 
-  geom_line(aes(y = SN2007)) + 
-  ggtitle("Alle næringene, Haugalandet, 2008-2020") + 
-  theme(legend.position = "bottom",
-        axis.title = element_text(size = 12, face = "bold")) +
-  labs(x="Sysselsatte", y="Alle næringer, 00-99")+
-  scale_color_hue(name = "00-99") + 
-  scale_x_continuous(limits = c(0,6000), breaks = seq(0,6000, by = 500))
-```
-
-
-
-
-
-
-
-
-# Boss
-
-```{r}
-#Tabell1 <- Tabell1 %>% 
- # mutate(År = make_date(Aar))
-```
-
-
-Knr %in% c("1106","1135", "1145","1146", "1149", "1151", "1160"))
-
-```{r}
-tabell_haugaland <- Haug_arbeid_2 
-         
 tabell_haugaland %>% 
-  ggplot(aes(x = Aar)) +
-  geom_line(aes(y = ansatte, colour = knavn )) +
-  ggtitle("Alle næringer, Haugalandet, 2008-2020") + 
-  theme(legend.position="bottom",
-        axis.title= element_text(size=12,face="bold")) +
-  labs(x="År", y= "Antall sysselsatte, alle næringer")+
-  scale_color_hue(name = "Kommuner")
+  ggplot(aes(x = År)) +
+  geom_line(aes(y = `00-99`, colour = knavn)) +
+    ggtitle("Alle næringer, Haugesund og Karmøy, 2008-2020") +
+    theme(legend.position = "bottom",
+          axis.title = element_text(size = 12, face = "bold")) +
+    labs(x = "År", y = "Alle næringer, 00-99") +
+  scale_color_hue(name = "Kommune")
 ```
 
 ```{r}
-names(Nas_arbeid_norge_sys)
+Tabell1 %>% 
+  ggplot(aes(x = År)) +
+  geom_line(aes(y = `00-99`, colour = knavn)) +
+    ggtitle("Alle næringer, Haugesund og Karmøy, 2008-2020") +
+    theme(legend.position = "bottom",
+          axis.title = element_text(size = 12, face = "bold")) +
+    labs(x = "År", y = "Alle næringer, 00-99") +
+  scale_color_hue(name = "Kommune")
+
+# OK! Kanskje ikke en graf som gir noe fornuftig illustrasjon...
+# Men var litt stilig :)
 ```
+
+
+
+
+```{r} 
+Tabell1 %>%
+  select(Alder, Variables, ContentsCode) %>% 
+  Filter(
+    Variables %in% c("Alle naeringer", "Jordbruk, skogbruk og fiske", "Bergverksdrift og utvinning", "Industri", "Elektrisitet, vann og renevasjon", "Bygge- og anleggsvirksomhet","Varehandel, reparasjon av motorvogner", "Transport og lagring", "Overnattings- og serveringsvriksomhet", "Informasjon og kommunikasjon", "Finansiering og forsikring ", "Teknisk tjenesteyting, eiendosmdrift", "Forretningsmessig tjenesteyting", "Off.adm., forsvar, sosialforsikring", "Undervisning", "Helse- og sosialtjenester", "Personlig tjenesteyting", "Uoppgitt")
+  ) %>% 
+ggplot(data = mpg, mapping = aes(x = Alder, y = ContentsCode)) + 
+  geom_point(mapping = aes(color = class)) + 
+  geom_smooth(data = filter(mpg, class == "subcompact"), se = FALSE)
+```
+
 
 ```{r}
-Nas_arbeid_norge_sys <- Nas_arbeid_norge_sys %>% 
-  mutate(År = make_date(Aar))
+coef_df_long %>% 
+  select(aar, variables, coef) %>% 
+  filter(
+    variables %in% c("fnr02", "fnr03", "fnr04", "fnr10", "fnr11", "fnr12", "fnr14")
+  ) %>% 
 ```
 
 
-```{r}
-Haug_arbeid<- read_csv("Data_pkt1/Haug_arbeid.csv")
-View(Haug_arbeid)
-show_col_types = FALSE
-```
-
-```{r}
-names(Haug_arbeid)
-```
