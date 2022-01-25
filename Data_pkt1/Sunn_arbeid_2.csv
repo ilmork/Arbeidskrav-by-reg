@@ -1,264 +1,30 @@
 Aar,NACE2007,SN2007,alder,ansatte
-2008,00-99,Alle næringer,15-74 år,21322
-2009,00-99,Alle næringer,15-74 år,21160
-2010,00-99,Alle næringer,15-74 år,21233
-2011,00-99,Alle næringer,15-74 år,21734
-2012,00-99,Alle næringer,15-74 år,21986
-2013,00-99,Alle næringer,15-74 år,22143
-2014,00-99,Alle næringer,15-74 år,22190
-2015,00-99,Alle næringer,15-74 år,21328
-2016,00-99,Alle næringer,15-74 år,21056
-2017,00-99,Alle næringer,15-74 år,21372
-2018,00-99,Alle næringer,15-74 år,21346
-2019,00-99,Alle næringer,15-74 år,21429
-2020,00-99,Alle næringer,15-74 år,20852
-2008,01-03,"Jordbruk, skogbruk og fiske",15-74 år,74
-2009,01-03,"Jordbruk, skogbruk og fiske",15-74 år,67
-2010,01-03,"Jordbruk, skogbruk og fiske",15-74 år,72
-2011,01-03,"Jordbruk, skogbruk og fiske",15-74 år,66
-2012,01-03,"Jordbruk, skogbruk og fiske",15-74 år,69
-2013,01-03,"Jordbruk, skogbruk og fiske",15-74 år,71
-2014,01-03,"Jordbruk, skogbruk og fiske",15-74 år,70
-2015,01-03,"Jordbruk, skogbruk og fiske",15-74 år,80
-2016,01-03,"Jordbruk, skogbruk og fiske",15-74 år,67
-2017,01-03,"Jordbruk, skogbruk og fiske",15-74 år,70
-2018,01-03,"Jordbruk, skogbruk og fiske",15-74 år,65
-2019,01-03,"Jordbruk, skogbruk og fiske",15-74 år,89
-2020,01-03,"Jordbruk, skogbruk og fiske",15-74 år,83
-2008,05-09,Bergverksdrift og utvinning,15-74 år,452
-2009,05-09,Bergverksdrift og utvinning,15-74 år,455
-2010,05-09,Bergverksdrift og utvinning,15-74 år,318
-2011,05-09,Bergverksdrift og utvinning,15-74 år,335
-2012,05-09,Bergverksdrift og utvinning,15-74 år,379
-2013,05-09,Bergverksdrift og utvinning,15-74 år,404
-2014,05-09,Bergverksdrift og utvinning,15-74 år,416
-2015,05-09,Bergverksdrift og utvinning,15-74 år,417
-2016,05-09,Bergverksdrift og utvinning,15-74 år,369
-2017,05-09,Bergverksdrift og utvinning,15-74 år,402
-2018,05-09,Bergverksdrift og utvinning,15-74 år,655
-2019,05-09,Bergverksdrift og utvinning,15-74 år,685
-2020,05-09,Bergverksdrift og utvinning,15-74 år,694
-2008,10-33,Industri,15-74 år,2572
-2009,10-33,Industri,15-74 år,2570
-2010,10-33,Industri,15-74 år,2486
-2011,10-33,Industri,15-74 år,2600
-2012,10-33,Industri,15-74 år,2766
-2013,10-33,Industri,15-74 år,2805
-2014,10-33,Industri,15-74 år,2682
-2015,10-33,Industri,15-74 år,2371
-2016,10-33,Industri,15-74 år,2196
-2017,10-33,Industri,15-74 år,2110
-2018,10-33,Industri,15-74 år,2128
-2019,10-33,Industri,15-74 år,2171
-2020,10-33,Industri,15-74 år,2220
-2008,35-39,"Elektrisitet, vann og renovasjon",15-74 år,267
-2009,35-39,"Elektrisitet, vann og renovasjon",15-74 år,286
-2010,35-39,"Elektrisitet, vann og renovasjon",15-74 år,313
-2011,35-39,"Elektrisitet, vann og renovasjon",15-74 år,325
-2012,35-39,"Elektrisitet, vann og renovasjon",15-74 år,335
-2013,35-39,"Elektrisitet, vann og renovasjon",15-74 år,343
-2014,35-39,"Elektrisitet, vann og renovasjon",15-74 år,348
-2015,35-39,"Elektrisitet, vann og renovasjon",15-74 år,347
-2016,35-39,"Elektrisitet, vann og renovasjon",15-74 år,375
-2017,35-39,"Elektrisitet, vann og renovasjon",15-74 år,379
-2018,35-39,"Elektrisitet, vann og renovasjon",15-74 år,372
-2019,35-39,"Elektrisitet, vann og renovasjon",15-74 år,416
-2020,35-39,"Elektrisitet, vann og renovasjon",15-74 år,425
-2008,41-43,Bygge- og anleggsvirksomhet,15-74 år,1263
-2009,41-43,Bygge- og anleggsvirksomhet,15-74 år,1296
-2010,41-43,Bygge- og anleggsvirksomhet,15-74 år,1226
-2011,41-43,Bygge- og anleggsvirksomhet,15-74 år,1273
-2012,41-43,Bygge- og anleggsvirksomhet,15-74 år,1211
-2013,41-43,Bygge- og anleggsvirksomhet,15-74 år,1340
-2014,41-43,Bygge- og anleggsvirksomhet,15-74 år,1294
-2015,41-43,Bygge- og anleggsvirksomhet,15-74 år,1240
-2016,41-43,Bygge- og anleggsvirksomhet,15-74 år,1179
-2017,41-43,Bygge- og anleggsvirksomhet,15-74 år,1197
-2018,41-43,Bygge- og anleggsvirksomhet,15-74 år,1252
-2019,41-43,Bygge- og anleggsvirksomhet,15-74 år,1081
-2020,41-43,Bygge- og anleggsvirksomhet,15-74 år,1002
-2008,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,3945
-2009,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,3810
-2010,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,3793
-2011,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,3814
-2012,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,3712
-2013,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,3670
-2014,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,3642
-2015,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,3295
-2016,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,3233
-2017,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,3235
-2018,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,3176
-2019,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,3006
-2020,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,2879
-2008,49-53,Transport og lagring,15-74 år,1261
-2009,49-53,Transport og lagring,15-74 år,1249
-2010,49-53,Transport og lagring,15-74 år,1141
-2011,49-53,Transport og lagring,15-74 år,1174
-2012,49-53,Transport og lagring,15-74 år,1211
-2013,49-53,Transport og lagring,15-74 år,1046
-2014,49-53,Transport og lagring,15-74 år,1069
-2015,49-53,Transport og lagring,15-74 år,1067
-2016,49-53,Transport og lagring,15-74 år,1001
-2017,49-53,Transport og lagring,15-74 år,996
-2018,49-53,Transport og lagring,15-74 år,999
-2019,49-53,Transport og lagring,15-74 år,993
-2020,49-53,Transport og lagring,15-74 år,820
-2008,55-56,Overnattings- og serveringsvirksomhet,15-74 år,863
-2009,55-56,Overnattings- og serveringsvirksomhet,15-74 år,774
-2010,55-56,Overnattings- og serveringsvirksomhet,15-74 år,838
-2011,55-56,Overnattings- og serveringsvirksomhet,15-74 år,833
-2012,55-56,Overnattings- og serveringsvirksomhet,15-74 år,871
-2013,55-56,Overnattings- og serveringsvirksomhet,15-74 år,939
-2014,55-56,Overnattings- og serveringsvirksomhet,15-74 år,965
-2015,55-56,Overnattings- og serveringsvirksomhet,15-74 år,827
-2016,55-56,Overnattings- og serveringsvirksomhet,15-74 år,908
-2017,55-56,Overnattings- og serveringsvirksomhet,15-74 år,924
-2018,55-56,Overnattings- og serveringsvirksomhet,15-74 år,880
-2019,55-56,Overnattings- og serveringsvirksomhet,15-74 år,898
-2020,55-56,Overnattings- og serveringsvirksomhet,15-74 år,751
-2008,58-63,Informasjon og kommunikasjon,15-74 år,405
-2009,58-63,Informasjon og kommunikasjon,15-74 år,400
-2010,58-63,Informasjon og kommunikasjon,15-74 år,429
-2011,58-63,Informasjon og kommunikasjon,15-74 år,439
-2012,58-63,Informasjon og kommunikasjon,15-74 år,450
-2013,58-63,Informasjon og kommunikasjon,15-74 år,458
-2014,58-63,Informasjon og kommunikasjon,15-74 år,477
-2015,58-63,Informasjon og kommunikasjon,15-74 år,463
-2016,58-63,Informasjon og kommunikasjon,15-74 år,474
-2017,58-63,Informasjon og kommunikasjon,15-74 år,483
-2018,58-63,Informasjon og kommunikasjon,15-74 år,530
-2019,58-63,Informasjon og kommunikasjon,15-74 år,577
-2020,58-63,Informasjon og kommunikasjon,15-74 år,604
-2008,64-66,Finansiering og forsikring,15-74 år,286
-2009,64-66,Finansiering og forsikring,15-74 år,281
-2010,64-66,Finansiering og forsikring,15-74 år,260
-2011,64-66,Finansiering og forsikring,15-74 år,244
-2012,64-66,Finansiering og forsikring,15-74 år,234
-2013,64-66,Finansiering og forsikring,15-74 år,219
-2014,64-66,Finansiering og forsikring,15-74 år,219
-2015,64-66,Finansiering og forsikring,15-74 år,220
-2016,64-66,Finansiering og forsikring,15-74 år,202
-2017,64-66,Finansiering og forsikring,15-74 år,193
-2018,64-66,Finansiering og forsikring,15-74 år,178
-2019,64-66,Finansiering og forsikring,15-74 år,172
-2020,64-66,Finansiering og forsikring,15-74 år,166
-2008,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,995
-2009,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,1028
-2010,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,1207
-2011,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,1239
-2012,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,1284
-2013,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,1372
-2014,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,1391
-2015,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,1384
-2016,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,1332
-2017,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,1369
-2018,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,1202
-2019,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,1173
-2020,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,1098
-2008,77-82,Forretningsmessig tjenesteyting,15-74 år,1029
-2009,77-82,Forretningsmessig tjenesteyting,15-74 år,867
-2010,77-82,Forretningsmessig tjenesteyting,15-74 år,823
-2011,77-82,Forretningsmessig tjenesteyting,15-74 år,886
-2012,77-82,Forretningsmessig tjenesteyting,15-74 år,924
-2013,77-82,Forretningsmessig tjenesteyting,15-74 år,890
-2014,77-82,Forretningsmessig tjenesteyting,15-74 år,915
-2015,77-82,Forretningsmessig tjenesteyting,15-74 år,678
-2016,77-82,Forretningsmessig tjenesteyting,15-74 år,613
-2017,77-82,Forretningsmessig tjenesteyting,15-74 år,752
-2018,77-82,Forretningsmessig tjenesteyting,15-74 år,647
-2019,77-82,Forretningsmessig tjenesteyting,15-74 år,765
-2020,77-82,Forretningsmessig tjenesteyting,15-74 år,717
-2008,84,"Off.adm., forsvar, sosialforsikring",15-74 år,927
-2009,84,"Off.adm., forsvar, sosialforsikring",15-74 år,968
-2010,84,"Off.adm., forsvar, sosialforsikring",15-74 år,1022
-2011,84,"Off.adm., forsvar, sosialforsikring",15-74 år,1020
-2012,84,"Off.adm., forsvar, sosialforsikring",15-74 år,1068
-2013,84,"Off.adm., forsvar, sosialforsikring",15-74 år,1094
-2014,84,"Off.adm., forsvar, sosialforsikring",15-74 år,1152
-2015,84,"Off.adm., forsvar, sosialforsikring",15-74 år,1080
-2016,84,"Off.adm., forsvar, sosialforsikring",15-74 år,1121
-2017,84,"Off.adm., forsvar, sosialforsikring",15-74 år,1114
-2018,84,"Off.adm., forsvar, sosialforsikring",15-74 år,1122
-2019,84,"Off.adm., forsvar, sosialforsikring",15-74 år,1276
-2020,84,"Off.adm., forsvar, sosialforsikring",15-74 år,1157
-2008,85,Undervisning,15-74 år,1422
-2009,85,Undervisning,15-74 år,1535
-2010,85,Undervisning,15-74 år,1632
-2011,85,Undervisning,15-74 år,1637
-2012,85,Undervisning,15-74 år,1721
-2013,85,Undervisning,15-74 år,1709
-2014,85,Undervisning,15-74 år,1733
-2015,85,Undervisning,15-74 år,1680
-2016,85,Undervisning,15-74 år,1764
-2017,85,Undervisning,15-74 år,1771
-2018,85,Undervisning,15-74 år,1743
-2019,85,Undervisning,15-74 år,1716
-2020,85,Undervisning,15-74 år,1720
-2008,86-88,Helse- og sosialtjenester,15-74 år,4812
-2009,86-88,Helse- og sosialtjenester,15-74 år,4865
-2010,86-88,Helse- og sosialtjenester,15-74 år,4952
-2011,86-88,Helse- og sosialtjenester,15-74 år,5133
-2012,86-88,Helse- og sosialtjenester,15-74 år,5040
-2013,86-88,Helse- og sosialtjenester,15-74 år,5057
-2014,86-88,Helse- og sosialtjenester,15-74 år,5096
-2015,86-88,Helse- og sosialtjenester,15-74 år,5395
-2016,86-88,Helse- og sosialtjenester,15-74 år,5416
-2017,86-88,Helse- og sosialtjenester,15-74 år,5513
-2018,86-88,Helse- og sosialtjenester,15-74 år,5567
-2019,86-88,Helse- og sosialtjenester,15-74 år,5608
-2020,86-88,Helse- og sosialtjenester,15-74 år,5713
-2008,90-99,Personlig tjenesteyting,15-74 år,675
-2009,90-99,Personlig tjenesteyting,15-74 år,627
-2010,90-99,Personlig tjenesteyting,15-74 år,628
-2011,90-99,Personlig tjenesteyting,15-74 år,636
-2012,90-99,Personlig tjenesteyting,15-74 år,630
-2013,90-99,Personlig tjenesteyting,15-74 år,650
-2014,90-99,Personlig tjenesteyting,15-74 år,646
-2015,90-99,Personlig tjenesteyting,15-74 år,658
-2016,90-99,Personlig tjenesteyting,15-74 år,683
-2017,90-99,Personlig tjenesteyting,15-74 år,740
-2018,90-99,Personlig tjenesteyting,15-74 år,716
-2019,90-99,Personlig tjenesteyting,15-74 år,703
-2020,90-99,Personlig tjenesteyting,15-74 år,713
-2008,00,Uoppgitt,15-74 år,74
-2009,00,Uoppgitt,15-74 år,82
-2010,00,Uoppgitt,15-74 år,93
-2011,00,Uoppgitt,15-74 år,80
-2012,00,Uoppgitt,15-74 år,81
-2013,00,Uoppgitt,15-74 år,76
-2014,00,Uoppgitt,15-74 år,75
-2015,00,Uoppgitt,15-74 år,126
-2016,00,Uoppgitt,15-74 år,123
-2017,00,Uoppgitt,15-74 år,124
-2018,00,Uoppgitt,15-74 år,114
-2019,00,Uoppgitt,15-74 år,100
-2020,00,Uoppgitt,15-74 år,90
-2008,00-99,Alle næringer,15-74 år,2136
-2009,00-99,Alle næringer,15-74 år,2176
-2010,00-99,Alle næringer,15-74 år,2180
-2011,00-99,Alle næringer,15-74 år,2131
-2012,00-99,Alle næringer,15-74 år,2100
-2013,00-99,Alle næringer,15-74 år,2048
-2014,00-99,Alle næringer,15-74 år,2073
-2015,00-99,Alle næringer,15-74 år,1977
-2016,00-99,Alle næringer,15-74 år,1951
-2017,00-99,Alle næringer,15-74 år,1956
-2018,00-99,Alle næringer,15-74 år,1937
-2019,00-99,Alle næringer,15-74 år,1945
-2020,00-99,Alle næringer,15-74 år,1970
-2008,01-03,"Jordbruk, skogbruk og fiske",15-74 år,36
-2009,01-03,"Jordbruk, skogbruk og fiske",15-74 år,43
-2010,01-03,"Jordbruk, skogbruk og fiske",15-74 år,36
-2011,01-03,"Jordbruk, skogbruk og fiske",15-74 år,36
-2012,01-03,"Jordbruk, skogbruk og fiske",15-74 år,39
-2013,01-03,"Jordbruk, skogbruk og fiske",15-74 år,36
-2014,01-03,"Jordbruk, skogbruk og fiske",15-74 år,33
-2015,01-03,"Jordbruk, skogbruk og fiske",15-74 år,25
-2016,01-03,"Jordbruk, skogbruk og fiske",15-74 år,26
-2017,01-03,"Jordbruk, skogbruk og fiske",15-74 år,21
-2018,01-03,"Jordbruk, skogbruk og fiske",15-74 år,28
-2019,01-03,"Jordbruk, skogbruk og fiske",15-74 år,30
-2020,01-03,"Jordbruk, skogbruk og fiske",15-74 år,26
+2008,00-99,Alle næringer,15-74 år,0
+2009,00-99,Alle næringer,15-74 år,0
+2010,00-99,Alle næringer,15-74 år,0
+2011,00-99,Alle næringer,15-74 år,0
+2012,00-99,Alle næringer,15-74 år,0
+2013,00-99,Alle næringer,15-74 år,0
+2014,00-99,Alle næringer,15-74 år,0
+2015,00-99,Alle næringer,15-74 år,0
+2016,00-99,Alle næringer,15-74 år,0
+2017,00-99,Alle næringer,15-74 år,0
+2018,00-99,Alle næringer,15-74 år,0
+2019,00-99,Alle næringer,15-74 år,0
+2020,00-99,Alle næringer,15-74 år,1613
+2008,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2009,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2010,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2011,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2012,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2013,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2014,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2015,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2016,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2017,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2018,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2019,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2020,01-03,"Jordbruk, skogbruk og fiske",15-74 år,172
 2008,05-09,Bergverksdrift og utvinning,15-74 år,0
 2009,05-09,Bergverksdrift og utvinning,15-74 år,0
 2010,05-09,Bergverksdrift og utvinning,15-74 år,0
@@ -271,254 +37,20 @@ Aar,NACE2007,SN2007,alder,ansatte
 2017,05-09,Bergverksdrift og utvinning,15-74 år,0
 2018,05-09,Bergverksdrift og utvinning,15-74 år,0
 2019,05-09,Bergverksdrift og utvinning,15-74 år,0
-2020,05-09,Bergverksdrift og utvinning,15-74 år,0
-2008,10-33,Industri,15-74 år,468
-2009,10-33,Industri,15-74 år,429
-2010,10-33,Industri,15-74 år,414
-2011,10-33,Industri,15-74 år,395
-2012,10-33,Industri,15-74 år,394
-2013,10-33,Industri,15-74 år,401
-2014,10-33,Industri,15-74 år,408
-2015,10-33,Industri,15-74 år,383
-2016,10-33,Industri,15-74 år,345
-2017,10-33,Industri,15-74 år,345
-2018,10-33,Industri,15-74 år,342
-2019,10-33,Industri,15-74 år,360
-2020,10-33,Industri,15-74 år,367
-2008,35-39,"Elektrisitet, vann og renovasjon",15-74 år,113
-2009,35-39,"Elektrisitet, vann og renovasjon",15-74 år,121
-2010,35-39,"Elektrisitet, vann og renovasjon",15-74 år,120
-2011,35-39,"Elektrisitet, vann og renovasjon",15-74 år,124
-2012,35-39,"Elektrisitet, vann og renovasjon",15-74 år,138
-2013,35-39,"Elektrisitet, vann og renovasjon",15-74 år,125
-2014,35-39,"Elektrisitet, vann og renovasjon",15-74 år,127
-2015,35-39,"Elektrisitet, vann og renovasjon",15-74 år,123
-2016,35-39,"Elektrisitet, vann og renovasjon",15-74 år,131
-2017,35-39,"Elektrisitet, vann og renovasjon",15-74 år,127
-2018,35-39,"Elektrisitet, vann og renovasjon",15-74 år,129
-2019,35-39,"Elektrisitet, vann og renovasjon",15-74 år,126
-2020,35-39,"Elektrisitet, vann og renovasjon",15-74 år,140
-2008,41-43,Bygge- og anleggsvirksomhet,15-74 år,176
-2009,41-43,Bygge- og anleggsvirksomhet,15-74 år,180
-2010,41-43,Bygge- og anleggsvirksomhet,15-74 år,177
-2011,41-43,Bygge- og anleggsvirksomhet,15-74 år,179
-2012,41-43,Bygge- og anleggsvirksomhet,15-74 år,190
-2013,41-43,Bygge- og anleggsvirksomhet,15-74 år,195
-2014,41-43,Bygge- og anleggsvirksomhet,15-74 år,195
-2015,41-43,Bygge- og anleggsvirksomhet,15-74 år,197
-2016,41-43,Bygge- og anleggsvirksomhet,15-74 år,207
-2017,41-43,Bygge- og anleggsvirksomhet,15-74 år,219
-2018,41-43,Bygge- og anleggsvirksomhet,15-74 år,210
-2019,41-43,Bygge- og anleggsvirksomhet,15-74 år,198
-2020,41-43,Bygge- og anleggsvirksomhet,15-74 år,206
-2008,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,183
-2009,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,189
-2010,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,205
-2011,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,189
-2012,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,202
-2013,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,182
-2014,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,173
-2015,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,170
-2016,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,168
-2017,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,164
-2018,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,171
-2019,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,158
-2020,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,158
-2008,49-53,Transport og lagring,15-74 år,82
-2009,49-53,Transport og lagring,15-74 år,82
-2010,49-53,Transport og lagring,15-74 år,85
-2011,49-53,Transport og lagring,15-74 år,93
-2012,49-53,Transport og lagring,15-74 år,90
-2013,49-53,Transport og lagring,15-74 år,70
-2014,49-53,Transport og lagring,15-74 år,66
-2015,49-53,Transport og lagring,15-74 år,64
-2016,49-53,Transport og lagring,15-74 år,67
-2017,49-53,Transport og lagring,15-74 år,77
-2018,49-53,Transport og lagring,15-74 år,69
-2019,49-53,Transport og lagring,15-74 år,70
-2020,49-53,Transport og lagring,15-74 år,75
-2008,55-56,Overnattings- og serveringsvirksomhet,15-74 år,50
-2009,55-56,Overnattings- og serveringsvirksomhet,15-74 år,52
-2010,55-56,Overnattings- og serveringsvirksomhet,15-74 år,59
-2011,55-56,Overnattings- og serveringsvirksomhet,15-74 år,56
-2012,55-56,Overnattings- og serveringsvirksomhet,15-74 år,41
-2013,55-56,Overnattings- og serveringsvirksomhet,15-74 år,46
-2014,55-56,Overnattings- og serveringsvirksomhet,15-74 år,42
-2015,55-56,Overnattings- og serveringsvirksomhet,15-74 år,48
-2016,55-56,Overnattings- og serveringsvirksomhet,15-74 år,44
-2017,55-56,Overnattings- og serveringsvirksomhet,15-74 år,55
-2018,55-56,Overnattings- og serveringsvirksomhet,15-74 år,57
-2019,55-56,Overnattings- og serveringsvirksomhet,15-74 år,59
-2020,55-56,Overnattings- og serveringsvirksomhet,15-74 år,33
-2008,58-63,Informasjon og kommunikasjon,15-74 år,18
-2009,58-63,Informasjon og kommunikasjon,15-74 år,18
-2010,58-63,Informasjon og kommunikasjon,15-74 år,14
-2011,58-63,Informasjon og kommunikasjon,15-74 år,14
-2012,58-63,Informasjon og kommunikasjon,15-74 år,14
-2013,58-63,Informasjon og kommunikasjon,15-74 år,18
-2014,58-63,Informasjon og kommunikasjon,15-74 år,21
-2015,58-63,Informasjon og kommunikasjon,15-74 år,24
-2016,58-63,Informasjon og kommunikasjon,15-74 år,11
-2017,58-63,Informasjon og kommunikasjon,15-74 år,12
-2018,58-63,Informasjon og kommunikasjon,15-74 år,12
-2019,58-63,Informasjon og kommunikasjon,15-74 år,15
-2020,58-63,Informasjon og kommunikasjon,15-74 år,13
-2008,64-66,Finansiering og forsikring,15-74 år,20
-2009,64-66,Finansiering og forsikring,15-74 år,11
-2010,64-66,Finansiering og forsikring,15-74 år,15
-2011,64-66,Finansiering og forsikring,15-74 år,17
-2012,64-66,Finansiering og forsikring,15-74 år,13
-2013,64-66,Finansiering og forsikring,15-74 år,12
-2014,64-66,Finansiering og forsikring,15-74 år,3
-2015,64-66,Finansiering og forsikring,15-74 år,3
-2016,64-66,Finansiering og forsikring,15-74 år,6
-2017,64-66,Finansiering og forsikring,15-74 år,3
-2018,64-66,Finansiering og forsikring,15-74 år,3
-2019,64-66,Finansiering og forsikring,15-74 år,3
-2020,64-66,Finansiering og forsikring,15-74 år,NA
-2008,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,31
-2009,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,30
-2010,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,35
-2011,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,30
-2012,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,28
-2013,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,32
-2014,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,37
-2015,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,31
-2016,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,31
-2017,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,24
-2018,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,28
-2019,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,29
-2020,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,33
-2008,77-82,Forretningsmessig tjenesteyting,15-74 år,89
-2009,77-82,Forretningsmessig tjenesteyting,15-74 år,75
-2010,77-82,Forretningsmessig tjenesteyting,15-74 år,77
-2011,77-82,Forretningsmessig tjenesteyting,15-74 år,76
-2012,77-82,Forretningsmessig tjenesteyting,15-74 år,84
-2013,77-82,Forretningsmessig tjenesteyting,15-74 år,75
-2014,77-82,Forretningsmessig tjenesteyting,15-74 år,97
-2015,77-82,Forretningsmessig tjenesteyting,15-74 år,63
-2016,77-82,Forretningsmessig tjenesteyting,15-74 år,61
-2017,77-82,Forretningsmessig tjenesteyting,15-74 år,65
-2018,77-82,Forretningsmessig tjenesteyting,15-74 år,68
-2019,77-82,Forretningsmessig tjenesteyting,15-74 år,67
-2020,77-82,Forretningsmessig tjenesteyting,15-74 år,64
-2008,84,"Off.adm., forsvar, sosialforsikring",15-74 år,83
-2009,84,"Off.adm., forsvar, sosialforsikring",15-74 år,94
-2010,84,"Off.adm., forsvar, sosialforsikring",15-74 år,95
-2011,84,"Off.adm., forsvar, sosialforsikring",15-74 år,105
-2012,84,"Off.adm., forsvar, sosialforsikring",15-74 år,95
-2013,84,"Off.adm., forsvar, sosialforsikring",15-74 år,93
-2014,84,"Off.adm., forsvar, sosialforsikring",15-74 år,89
-2015,84,"Off.adm., forsvar, sosialforsikring",15-74 år,89
-2016,84,"Off.adm., forsvar, sosialforsikring",15-74 år,96
-2017,84,"Off.adm., forsvar, sosialforsikring",15-74 år,94
-2018,84,"Off.adm., forsvar, sosialforsikring",15-74 år,88
-2019,84,"Off.adm., forsvar, sosialforsikring",15-74 år,86
-2020,84,"Off.adm., forsvar, sosialforsikring",15-74 år,97
-2008,85,Undervisning,15-74 år,209
-2009,85,Undervisning,15-74 år,224
-2010,85,Undervisning,15-74 år,232
-2011,85,Undervisning,15-74 år,231
-2012,85,Undervisning,15-74 år,222
-2013,85,Undervisning,15-74 år,214
-2014,85,Undervisning,15-74 år,225
-2015,85,Undervisning,15-74 år,216
-2016,85,Undervisning,15-74 år,221
-2017,85,Undervisning,15-74 år,201
-2018,85,Undervisning,15-74 år,209
-2019,85,Undervisning,15-74 år,208
-2020,85,Undervisning,15-74 år,215
-2008,86-88,Helse- og sosialtjenester,15-74 år,522
-2009,86-88,Helse- og sosialtjenester,15-74 år,544
-2010,86-88,Helse- og sosialtjenester,15-74 år,546
-2011,86-88,Helse- og sosialtjenester,15-74 år,518
-2012,86-88,Helse- og sosialtjenester,15-74 år,474
-2013,86-88,Helse- og sosialtjenester,15-74 år,469
-2014,86-88,Helse- og sosialtjenester,15-74 år,510
-2015,86-88,Helse- og sosialtjenester,15-74 år,470
-2016,86-88,Helse- og sosialtjenester,15-74 år,470
-2017,86-88,Helse- og sosialtjenester,15-74 år,480
-2018,86-88,Helse- og sosialtjenester,15-74 år,452
-2019,86-88,Helse- og sosialtjenester,15-74 år,466
-2020,86-88,Helse- og sosialtjenester,15-74 år,473
-2008,90-99,Personlig tjenesteyting,15-74 år,46
-2009,90-99,Personlig tjenesteyting,15-74 år,75
-2010,90-99,Personlig tjenesteyting,15-74 år,52
-2011,90-99,Personlig tjenesteyting,15-74 år,56
-2012,90-99,Personlig tjenesteyting,15-74 år,65
-2013,90-99,Personlig tjenesteyting,15-74 år,69
-2014,90-99,Personlig tjenesteyting,15-74 år,37
-2015,90-99,Personlig tjenesteyting,15-74 år,43
-2016,90-99,Personlig tjenesteyting,15-74 år,46
-2017,90-99,Personlig tjenesteyting,15-74 år,46
-2018,90-99,Personlig tjenesteyting,15-74 år,55
-2019,90-99,Personlig tjenesteyting,15-74 år,55
-2020,90-99,Personlig tjenesteyting,15-74 år,53
-2008,00,Uoppgitt,15-74 år,10
-2009,00,Uoppgitt,15-74 år,9
-2010,00,Uoppgitt,15-74 år,18
-2011,00,Uoppgitt,15-74 år,12
-2012,00,Uoppgitt,15-74 år,11
-2013,00,Uoppgitt,15-74 år,11
-2014,00,Uoppgitt,15-74 år,10
-2015,00,Uoppgitt,15-74 år,28
-2016,00,Uoppgitt,15-74 år,21
-2017,00,Uoppgitt,15-74 år,23
-2018,00,Uoppgitt,15-74 år,16
-2019,00,Uoppgitt,15-74 år,15
-2020,00,Uoppgitt,15-74 år,NA
-2008,00-99,Alle næringer,15-74 år,297
-2009,00-99,Alle næringer,15-74 år,296
-2010,00-99,Alle næringer,15-74 år,291
-2011,00-99,Alle næringer,15-74 år,293
-2012,00-99,Alle næringer,15-74 år,317
-2013,00-99,Alle næringer,15-74 år,327
-2014,00-99,Alle næringer,15-74 år,327
-2015,00-99,Alle næringer,15-74 år,301
-2016,00-99,Alle næringer,15-74 år,306
-2017,00-99,Alle næringer,15-74 år,311
-2018,00-99,Alle næringer,15-74 år,291
-2019,00-99,Alle næringer,15-74 år,327
-2020,00-99,Alle næringer,15-74 år,323
-2008,01-03,"Jordbruk, skogbruk og fiske",15-74 år,51
-2009,01-03,"Jordbruk, skogbruk og fiske",15-74 år,59
-2010,01-03,"Jordbruk, skogbruk og fiske",15-74 år,54
-2011,01-03,"Jordbruk, skogbruk og fiske",15-74 år,67
-2012,01-03,"Jordbruk, skogbruk og fiske",15-74 år,52
-2013,01-03,"Jordbruk, skogbruk og fiske",15-74 år,57
-2014,01-03,"Jordbruk, skogbruk og fiske",15-74 år,49
-2015,01-03,"Jordbruk, skogbruk og fiske",15-74 år,56
-2016,01-03,"Jordbruk, skogbruk og fiske",15-74 år,61
-2017,01-03,"Jordbruk, skogbruk og fiske",15-74 år,74
-2018,01-03,"Jordbruk, skogbruk og fiske",15-74 år,65
-2019,01-03,"Jordbruk, skogbruk og fiske",15-74 år,67
-2020,01-03,"Jordbruk, skogbruk og fiske",15-74 år,67
-2008,05-09,Bergverksdrift og utvinning,15-74 år,0
-2009,05-09,Bergverksdrift og utvinning,15-74 år,0
-2010,05-09,Bergverksdrift og utvinning,15-74 år,0
-2011,05-09,Bergverksdrift og utvinning,15-74 år,0
-2012,05-09,Bergverksdrift og utvinning,15-74 år,0
-2013,05-09,Bergverksdrift og utvinning,15-74 år,0
-2014,05-09,Bergverksdrift og utvinning,15-74 år,0
-2015,05-09,Bergverksdrift og utvinning,15-74 år,0
-2016,05-09,Bergverksdrift og utvinning,15-74 år,0
-2017,05-09,Bergverksdrift og utvinning,15-74 år,0
-2018,05-09,Bergverksdrift og utvinning,15-74 år,0
-2019,05-09,Bergverksdrift og utvinning,15-74 år,0
-2020,05-09,Bergverksdrift og utvinning,15-74 år,0
-2008,10-33,Industri,15-74 år,41
-2009,10-33,Industri,15-74 år,40
-2010,10-33,Industri,15-74 år,31
-2011,10-33,Industri,15-74 år,31
-2012,10-33,Industri,15-74 år,51
-2013,10-33,Industri,15-74 år,54
-2014,10-33,Industri,15-74 år,54
-2015,10-33,Industri,15-74 år,36
-2016,10-33,Industri,15-74 år,43
-2017,10-33,Industri,15-74 år,37
-2018,10-33,Industri,15-74 år,43
-2019,10-33,Industri,15-74 år,52
-2020,10-33,Industri,15-74 år,63
+2020,05-09,Bergverksdrift og utvinning,15-74 år,13
+2008,10-33,Industri,15-74 år,0
+2009,10-33,Industri,15-74 år,0
+2010,10-33,Industri,15-74 år,0
+2011,10-33,Industri,15-74 år,0
+2012,10-33,Industri,15-74 år,0
+2013,10-33,Industri,15-74 år,0
+2014,10-33,Industri,15-74 år,0
+2015,10-33,Industri,15-74 år,0
+2016,10-33,Industri,15-74 år,0
+2017,10-33,Industri,15-74 år,0
+2018,10-33,Industri,15-74 år,0
+2019,10-33,Industri,15-74 år,0
+2020,10-33,Industri,15-74 år,177
 2008,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
 2009,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
 2010,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
@@ -531,72 +63,72 @@ Aar,NACE2007,SN2007,alder,ansatte
 2017,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
 2018,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
 2019,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
-2020,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
-2008,41-43,Bygge- og anleggsvirksomhet,15-74 år,11
-2009,41-43,Bygge- og anleggsvirksomhet,15-74 år,8
-2010,41-43,Bygge- og anleggsvirksomhet,15-74 år,7
-2011,41-43,Bygge- og anleggsvirksomhet,15-74 år,8
-2012,41-43,Bygge- og anleggsvirksomhet,15-74 år,8
-2013,41-43,Bygge- og anleggsvirksomhet,15-74 år,11
-2014,41-43,Bygge- og anleggsvirksomhet,15-74 år,11
-2015,41-43,Bygge- og anleggsvirksomhet,15-74 år,16
-2016,41-43,Bygge- og anleggsvirksomhet,15-74 år,13
-2017,41-43,Bygge- og anleggsvirksomhet,15-74 år,13
-2018,41-43,Bygge- og anleggsvirksomhet,15-74 år,12
-2019,41-43,Bygge- og anleggsvirksomhet,15-74 år,9
-2020,41-43,Bygge- og anleggsvirksomhet,15-74 år,9
-2008,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,12
-2009,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,13
-2010,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,13
-2011,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,15
-2012,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,19
-2013,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,13
-2014,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,16
-2015,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,15
-2016,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,15
-2017,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,12
-2018,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,9
-2019,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,10
-2020,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,12
-2008,49-53,Transport og lagring,15-74 år,35
-2009,49-53,Transport og lagring,15-74 år,27
-2010,49-53,Transport og lagring,15-74 år,28
-2011,49-53,Transport og lagring,15-74 år,21
-2012,49-53,Transport og lagring,15-74 år,20
-2013,49-53,Transport og lagring,15-74 år,24
-2014,49-53,Transport og lagring,15-74 år,27
-2015,49-53,Transport og lagring,15-74 år,26
-2016,49-53,Transport og lagring,15-74 år,30
-2017,49-53,Transport og lagring,15-74 år,32
-2018,49-53,Transport og lagring,15-74 år,27
-2019,49-53,Transport og lagring,15-74 år,33
-2020,49-53,Transport og lagring,15-74 år,31
-2008,55-56,Overnattings- og serveringsvirksomhet,15-74 år,9
-2009,55-56,Overnattings- og serveringsvirksomhet,15-74 år,6
+2020,35-39,"Elektrisitet, vann og renovasjon",15-74 år,21
+2008,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2009,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2010,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2011,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2012,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2013,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2014,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2015,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2016,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2017,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2018,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2019,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2020,41-43,Bygge- og anleggsvirksomhet,15-74 år,242
+2008,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2009,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2010,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2011,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2012,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2013,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2014,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2015,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2016,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2017,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2018,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2019,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2020,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,186
+2008,49-53,Transport og lagring,15-74 år,0
+2009,49-53,Transport og lagring,15-74 år,0
+2010,49-53,Transport og lagring,15-74 år,0
+2011,49-53,Transport og lagring,15-74 år,0
+2012,49-53,Transport og lagring,15-74 år,0
+2013,49-53,Transport og lagring,15-74 år,0
+2014,49-53,Transport og lagring,15-74 år,0
+2015,49-53,Transport og lagring,15-74 år,0
+2016,49-53,Transport og lagring,15-74 år,0
+2017,49-53,Transport og lagring,15-74 år,0
+2018,49-53,Transport og lagring,15-74 år,0
+2019,49-53,Transport og lagring,15-74 år,0
+2020,49-53,Transport og lagring,15-74 år,48
+2008,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2009,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
 2010,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
 2011,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
-2012,55-56,Overnattings- og serveringsvirksomhet,15-74 år,3
-2013,55-56,Overnattings- og serveringsvirksomhet,15-74 år,3
+2012,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2013,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
 2014,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
-2015,55-56,Overnattings- og serveringsvirksomhet,15-74 år,3
-2016,55-56,Overnattings- og serveringsvirksomhet,15-74 år,3
-2017,55-56,Overnattings- og serveringsvirksomhet,15-74 år,3
-2018,55-56,Overnattings- og serveringsvirksomhet,15-74 år,3
+2015,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2016,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2017,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2018,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
 2019,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
-2020,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2020,55-56,Overnattings- og serveringsvirksomhet,15-74 år,51
 2008,58-63,Informasjon og kommunikasjon,15-74 år,0
 2009,58-63,Informasjon og kommunikasjon,15-74 år,0
 2010,58-63,Informasjon og kommunikasjon,15-74 år,0
 2011,58-63,Informasjon og kommunikasjon,15-74 år,0
 2012,58-63,Informasjon og kommunikasjon,15-74 år,0
 2013,58-63,Informasjon og kommunikasjon,15-74 år,0
-2014,58-63,Informasjon og kommunikasjon,15-74 år,3
-2015,58-63,Informasjon og kommunikasjon,15-74 år,3
+2014,58-63,Informasjon og kommunikasjon,15-74 år,0
+2015,58-63,Informasjon og kommunikasjon,15-74 år,0
 2016,58-63,Informasjon og kommunikasjon,15-74 år,0
 2017,58-63,Informasjon og kommunikasjon,15-74 år,0
-2018,58-63,Informasjon og kommunikasjon,15-74 år,3
-2019,58-63,Informasjon og kommunikasjon,15-74 år,3
-2020,58-63,Informasjon og kommunikasjon,15-74 år,NA
+2018,58-63,Informasjon og kommunikasjon,15-74 år,0
+2019,58-63,Informasjon og kommunikasjon,15-74 år,0
+2020,58-63,Informasjon og kommunikasjon,15-74 år,22
 2008,64-66,Finansiering og forsikring,15-74 år,0
 2009,64-66,Finansiering og forsikring,15-74 år,0
 2010,64-66,Finansiering og forsikring,15-74 år,0
@@ -609,592 +141,124 @@ Aar,NACE2007,SN2007,alder,ansatte
 2017,64-66,Finansiering og forsikring,15-74 år,0
 2018,64-66,Finansiering og forsikring,15-74 år,0
 2019,64-66,Finansiering og forsikring,15-74 år,0
-2020,64-66,Finansiering og forsikring,15-74 år,0
-2008,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,3
-2009,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,3
-2010,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,6
-2011,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,3
-2012,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,3
+2020,64-66,Finansiering og forsikring,15-74 år,NA
+2008,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2009,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2010,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2011,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2012,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
 2013,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
 2014,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
 2015,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
-2016,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,3
-2017,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,3
+2016,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2017,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
 2018,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
 2019,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
-2020,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,NA
-2008,77-82,Forretningsmessig tjenesteyting,15-74 år,9
-2009,77-82,Forretningsmessig tjenesteyting,15-74 år,6
-2010,77-82,Forretningsmessig tjenesteyting,15-74 år,6
-2011,77-82,Forretningsmessig tjenesteyting,15-74 år,3
-2012,77-82,Forretningsmessig tjenesteyting,15-74 år,3
-2013,77-82,Forretningsmessig tjenesteyting,15-74 år,6
-2014,77-82,Forretningsmessig tjenesteyting,15-74 år,3
-2015,77-82,Forretningsmessig tjenesteyting,15-74 år,9
-2016,77-82,Forretningsmessig tjenesteyting,15-74 år,6
-2017,77-82,Forretningsmessig tjenesteyting,15-74 år,6
-2018,77-82,Forretningsmessig tjenesteyting,15-74 år,6
-2019,77-82,Forretningsmessig tjenesteyting,15-74 år,3
-2020,77-82,Forretningsmessig tjenesteyting,15-74 år,NA
-2008,84,"Off.adm., forsvar, sosialforsikring",15-74 år,14
-2009,84,"Off.adm., forsvar, sosialforsikring",15-74 år,15
-2010,84,"Off.adm., forsvar, sosialforsikring",15-74 år,14
-2011,84,"Off.adm., forsvar, sosialforsikring",15-74 år,21
-2012,84,"Off.adm., forsvar, sosialforsikring",15-74 år,16
-2013,84,"Off.adm., forsvar, sosialforsikring",15-74 år,18
-2014,84,"Off.adm., forsvar, sosialforsikring",15-74 år,17
-2015,84,"Off.adm., forsvar, sosialforsikring",15-74 år,15
-2016,84,"Off.adm., forsvar, sosialforsikring",15-74 år,13
-2017,84,"Off.adm., forsvar, sosialforsikring",15-74 år,16
-2018,84,"Off.adm., forsvar, sosialforsikring",15-74 år,12
-2019,84,"Off.adm., forsvar, sosialforsikring",15-74 år,21
-2020,84,"Off.adm., forsvar, sosialforsikring",15-74 år,18
-2008,85,Undervisning,15-74 år,32
-2009,85,Undervisning,15-74 år,39
-2010,85,Undervisning,15-74 år,42
-2011,85,Undervisning,15-74 år,45
-2012,85,Undervisning,15-74 år,33
-2013,85,Undervisning,15-74 år,33
-2014,85,Undervisning,15-74 år,35
-2015,85,Undervisning,15-74 år,28
-2016,85,Undervisning,15-74 år,34
-2017,85,Undervisning,15-74 år,29
-2018,85,Undervisning,15-74 år,26
-2019,85,Undervisning,15-74 år,26
-2020,85,Undervisning,15-74 år,23
-2008,86-88,Helse- og sosialtjenester,15-74 år,74
-2009,86-88,Helse- og sosialtjenester,15-74 år,77
-2010,86-88,Helse- og sosialtjenester,15-74 år,84
-2011,86-88,Helse- og sosialtjenester,15-74 år,73
-2012,86-88,Helse- og sosialtjenester,15-74 år,97
-2013,86-88,Helse- og sosialtjenester,15-74 år,99
-2014,86-88,Helse- og sosialtjenester,15-74 år,100
-2015,86-88,Helse- og sosialtjenester,15-74 år,85
-2016,86-88,Helse- og sosialtjenester,15-74 år,76
-2017,86-88,Helse- og sosialtjenester,15-74 år,80
-2018,86-88,Helse- og sosialtjenester,15-74 år,76
-2019,86-88,Helse- og sosialtjenester,15-74 år,91
-2020,86-88,Helse- og sosialtjenester,15-74 år,82
-2008,90-99,Personlig tjenesteyting,15-74 år,3
-2009,90-99,Personlig tjenesteyting,15-74 år,3
-2010,90-99,Personlig tjenesteyting,15-74 år,3
-2011,90-99,Personlig tjenesteyting,15-74 år,3
-2012,90-99,Personlig tjenesteyting,15-74 år,6
-2013,90-99,Personlig tjenesteyting,15-74 år,6
-2014,90-99,Personlig tjenesteyting,15-74 år,6
-2015,90-99,Personlig tjenesteyting,15-74 år,6
-2016,90-99,Personlig tjenesteyting,15-74 år,3
-2017,90-99,Personlig tjenesteyting,15-74 år,3
-2018,90-99,Personlig tjenesteyting,15-74 år,6
-2019,90-99,Personlig tjenesteyting,15-74 år,9
-2020,90-99,Personlig tjenesteyting,15-74 år,3
-2008,00,Uoppgitt,15-74 år,3
+2020,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,39
+2008,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2009,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2010,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2011,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2012,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2013,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2014,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2015,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2016,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2017,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2018,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2019,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2020,77-82,Forretningsmessig tjenesteyting,15-74 år,68
+2008,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2009,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2010,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2011,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2012,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2013,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2014,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2015,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2016,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2017,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2018,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2019,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2020,84,"Off.adm., forsvar, sosialforsikring",15-74 år,52
+2008,85,Undervisning,15-74 år,0
+2009,85,Undervisning,15-74 år,0
+2010,85,Undervisning,15-74 år,0
+2011,85,Undervisning,15-74 år,0
+2012,85,Undervisning,15-74 år,0
+2013,85,Undervisning,15-74 år,0
+2014,85,Undervisning,15-74 år,0
+2015,85,Undervisning,15-74 år,0
+2016,85,Undervisning,15-74 år,0
+2017,85,Undervisning,15-74 år,0
+2018,85,Undervisning,15-74 år,0
+2019,85,Undervisning,15-74 år,0
+2020,85,Undervisning,15-74 år,111
+2008,86-88,Helse- og sosialtjenester,15-74 år,0
+2009,86-88,Helse- og sosialtjenester,15-74 år,0
+2010,86-88,Helse- og sosialtjenester,15-74 år,0
+2011,86-88,Helse- og sosialtjenester,15-74 år,0
+2012,86-88,Helse- og sosialtjenester,15-74 år,0
+2013,86-88,Helse- og sosialtjenester,15-74 år,0
+2014,86-88,Helse- og sosialtjenester,15-74 år,0
+2015,86-88,Helse- og sosialtjenester,15-74 år,0
+2016,86-88,Helse- og sosialtjenester,15-74 år,0
+2017,86-88,Helse- og sosialtjenester,15-74 år,0
+2018,86-88,Helse- og sosialtjenester,15-74 år,0
+2019,86-88,Helse- og sosialtjenester,15-74 år,0
+2020,86-88,Helse- og sosialtjenester,15-74 år,346
+2008,90-99,Personlig tjenesteyting,15-74 år,0
+2009,90-99,Personlig tjenesteyting,15-74 år,0
+2010,90-99,Personlig tjenesteyting,15-74 år,0
+2011,90-99,Personlig tjenesteyting,15-74 år,0
+2012,90-99,Personlig tjenesteyting,15-74 år,0
+2013,90-99,Personlig tjenesteyting,15-74 år,0
+2014,90-99,Personlig tjenesteyting,15-74 år,0
+2015,90-99,Personlig tjenesteyting,15-74 år,0
+2016,90-99,Personlig tjenesteyting,15-74 år,0
+2017,90-99,Personlig tjenesteyting,15-74 år,0
+2018,90-99,Personlig tjenesteyting,15-74 år,0
+2019,90-99,Personlig tjenesteyting,15-74 år,0
+2020,90-99,Personlig tjenesteyting,15-74 år,34
+2008,00,Uoppgitt,15-74 år,0
 2009,00,Uoppgitt,15-74 år,0
-2010,00,Uoppgitt,15-74 år,3
-2011,00,Uoppgitt,15-74 år,3
-2012,00,Uoppgitt,15-74 år,6
-2013,00,Uoppgitt,15-74 år,3
-2014,00,Uoppgitt,15-74 år,6
-2015,00,Uoppgitt,15-74 år,3
-2016,00,Uoppgitt,15-74 år,6
-2017,00,Uoppgitt,15-74 år,3
-2018,00,Uoppgitt,15-74 år,3
-2019,00,Uoppgitt,15-74 år,3
-2020,00,Uoppgitt,15-74 år,3
-2008,00-99,Alle næringer,15-74 år,4048
-2009,00-99,Alle næringer,15-74 år,4160
-2010,00-99,Alle næringer,15-74 år,4232
-2011,00-99,Alle næringer,15-74 år,4475
-2012,00-99,Alle næringer,15-74 år,4423
-2013,00-99,Alle næringer,15-74 år,4281
-2014,00-99,Alle næringer,15-74 år,4329
-2015,00-99,Alle næringer,15-74 år,4304
-2016,00-99,Alle næringer,15-74 år,4314
-2017,00-99,Alle næringer,15-74 år,4576
-2018,00-99,Alle næringer,15-74 år,4620
-2019,00-99,Alle næringer,15-74 år,4710
-2020,00-99,Alle næringer,15-74 år,4773
-2008,01-03,"Jordbruk, skogbruk og fiske",15-74 år,298
-2009,01-03,"Jordbruk, skogbruk og fiske",15-74 år,282
-2010,01-03,"Jordbruk, skogbruk og fiske",15-74 år,270
-2011,01-03,"Jordbruk, skogbruk og fiske",15-74 år,239
-2012,01-03,"Jordbruk, skogbruk og fiske",15-74 år,219
-2013,01-03,"Jordbruk, skogbruk og fiske",15-74 år,209
-2014,01-03,"Jordbruk, skogbruk og fiske",15-74 år,190
-2015,01-03,"Jordbruk, skogbruk og fiske",15-74 år,196
-2016,01-03,"Jordbruk, skogbruk og fiske",15-74 år,194
-2017,01-03,"Jordbruk, skogbruk og fiske",15-74 år,186
-2018,01-03,"Jordbruk, skogbruk og fiske",15-74 år,182
-2019,01-03,"Jordbruk, skogbruk og fiske",15-74 år,192
-2020,01-03,"Jordbruk, skogbruk og fiske",15-74 år,204
-2008,05-09,Bergverksdrift og utvinning,15-74 år,825
-2009,05-09,Bergverksdrift og utvinning,15-74 år,872
-2010,05-09,Bergverksdrift og utvinning,15-74 år,866
-2011,05-09,Bergverksdrift og utvinning,15-74 år,850
-2012,05-09,Bergverksdrift og utvinning,15-74 år,909
-2013,05-09,Bergverksdrift og utvinning,15-74 år,859
-2014,05-09,Bergverksdrift og utvinning,15-74 år,852
-2015,05-09,Bergverksdrift og utvinning,15-74 år,820
-2016,05-09,Bergverksdrift og utvinning,15-74 år,790
-2017,05-09,Bergverksdrift og utvinning,15-74 år,797
-2018,05-09,Bergverksdrift og utvinning,15-74 år,759
-2019,05-09,Bergverksdrift og utvinning,15-74 år,757
-2020,05-09,Bergverksdrift og utvinning,15-74 år,NA
-2008,10-33,Industri,15-74 år,268
-2009,10-33,Industri,15-74 år,270
-2010,10-33,Industri,15-74 år,252
-2011,10-33,Industri,15-74 år,252
-2012,10-33,Industri,15-74 år,257
-2013,10-33,Industri,15-74 år,241
-2014,10-33,Industri,15-74 år,220
-2015,10-33,Industri,15-74 år,320
-2016,10-33,Industri,15-74 år,390
-2017,10-33,Industri,15-74 år,476
-2018,10-33,Industri,15-74 år,628
-2019,10-33,Industri,15-74 år,617
-2020,10-33,Industri,15-74 år,631
-2008,35-39,"Elektrisitet, vann og renovasjon",15-74 år,51
-2009,35-39,"Elektrisitet, vann og renovasjon",15-74 år,54
-2010,35-39,"Elektrisitet, vann og renovasjon",15-74 år,60
-2011,35-39,"Elektrisitet, vann og renovasjon",15-74 år,67
-2012,35-39,"Elektrisitet, vann og renovasjon",15-74 år,61
-2013,35-39,"Elektrisitet, vann og renovasjon",15-74 år,60
-2014,35-39,"Elektrisitet, vann og renovasjon",15-74 år,61
-2015,35-39,"Elektrisitet, vann og renovasjon",15-74 år,31
-2016,35-39,"Elektrisitet, vann og renovasjon",15-74 år,31
-2017,35-39,"Elektrisitet, vann og renovasjon",15-74 år,28
-2018,35-39,"Elektrisitet, vann og renovasjon",15-74 år,25
-2019,35-39,"Elektrisitet, vann og renovasjon",15-74 år,23
-2020,35-39,"Elektrisitet, vann og renovasjon",15-74 år,NA
-2008,41-43,Bygge- og anleggsvirksomhet,15-74 år,346
-2009,41-43,Bygge- og anleggsvirksomhet,15-74 år,385
-2010,41-43,Bygge- og anleggsvirksomhet,15-74 år,394
-2011,41-43,Bygge- og anleggsvirksomhet,15-74 år,663
-2012,41-43,Bygge- og anleggsvirksomhet,15-74 år,480
-2013,41-43,Bygge- og anleggsvirksomhet,15-74 år,466
-2014,41-43,Bygge- og anleggsvirksomhet,15-74 år,450
-2015,41-43,Bygge- og anleggsvirksomhet,15-74 år,469
-2016,41-43,Bygge- og anleggsvirksomhet,15-74 år,467
-2017,41-43,Bygge- og anleggsvirksomhet,15-74 år,485
-2018,41-43,Bygge- og anleggsvirksomhet,15-74 år,500
-2019,41-43,Bygge- og anleggsvirksomhet,15-74 år,549
-2020,41-43,Bygge- og anleggsvirksomhet,15-74 år,510
-2008,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,362
-2009,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,363
-2010,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,390
-2011,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,390
-2012,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,434
-2013,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,415
-2014,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,443
-2015,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,438
-2016,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,445
-2017,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,454
-2018,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,451
-2019,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,445
-2020,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,431
-2008,49-53,Transport og lagring,15-74 år,191
-2009,49-53,Transport og lagring,15-74 år,181
-2010,49-53,Transport og lagring,15-74 år,135
-2011,49-53,Transport og lagring,15-74 år,137
-2012,49-53,Transport og lagring,15-74 år,127
-2013,49-53,Transport og lagring,15-74 år,130
-2014,49-53,Transport og lagring,15-74 år,137
-2015,49-53,Transport og lagring,15-74 år,135
-2016,49-53,Transport og lagring,15-74 år,109
-2017,49-53,Transport og lagring,15-74 år,216
-2018,49-53,Transport og lagring,15-74 år,105
-2019,49-53,Transport og lagring,15-74 år,92
-2020,49-53,Transport og lagring,15-74 år,178
-2008,55-56,Overnattings- og serveringsvirksomhet,15-74 år,156
-2009,55-56,Overnattings- og serveringsvirksomhet,15-74 år,163
-2010,55-56,Overnattings- og serveringsvirksomhet,15-74 år,181
-2011,55-56,Overnattings- og serveringsvirksomhet,15-74 år,124
-2012,55-56,Overnattings- og serveringsvirksomhet,15-74 år,136
-2013,55-56,Overnattings- og serveringsvirksomhet,15-74 år,126
-2014,55-56,Overnattings- og serveringsvirksomhet,15-74 år,134
-2015,55-56,Overnattings- og serveringsvirksomhet,15-74 år,89
-2016,55-56,Overnattings- og serveringsvirksomhet,15-74 år,92
-2017,55-56,Overnattings- og serveringsvirksomhet,15-74 år,92
-2018,55-56,Overnattings- og serveringsvirksomhet,15-74 år,81
-2019,55-56,Overnattings- og serveringsvirksomhet,15-74 år,88
-2020,55-56,Overnattings- og serveringsvirksomhet,15-74 år,80
-2008,58-63,Informasjon og kommunikasjon,15-74 år,11
-2009,58-63,Informasjon og kommunikasjon,15-74 år,12
-2010,58-63,Informasjon og kommunikasjon,15-74 år,104
-2011,58-63,Informasjon og kommunikasjon,15-74 år,105
-2012,58-63,Informasjon og kommunikasjon,15-74 år,117
-2013,58-63,Informasjon og kommunikasjon,15-74 år,100
-2014,58-63,Informasjon og kommunikasjon,15-74 år,88
-2015,58-63,Informasjon og kommunikasjon,15-74 år,50
-2016,58-63,Informasjon og kommunikasjon,15-74 år,40
-2017,58-63,Informasjon og kommunikasjon,15-74 år,62
-2018,58-63,Informasjon og kommunikasjon,15-74 år,60
-2019,58-63,Informasjon og kommunikasjon,15-74 år,101
-2020,58-63,Informasjon og kommunikasjon,15-74 år,115
-2008,64-66,Finansiering og forsikring,15-74 år,13
-2009,64-66,Finansiering og forsikring,15-74 år,6
-2010,64-66,Finansiering og forsikring,15-74 år,9
-2011,64-66,Finansiering og forsikring,15-74 år,12
-2012,64-66,Finansiering og forsikring,15-74 år,13
-2013,64-66,Finansiering og forsikring,15-74 år,10
-2014,64-66,Finansiering og forsikring,15-74 år,7
-2015,64-66,Finansiering og forsikring,15-74 år,9
-2016,64-66,Finansiering og forsikring,15-74 år,10
-2017,64-66,Finansiering og forsikring,15-74 år,10
-2018,64-66,Finansiering og forsikring,15-74 år,10
-2019,64-66,Finansiering og forsikring,15-74 år,10
-2020,64-66,Finansiering og forsikring,15-74 år,7
-2008,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,63
-2009,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,62
-2010,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,76
-2011,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,69
-2012,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,72
-2013,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,86
-2014,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,96
-2015,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,84
-2016,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,151
-2017,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,136
-2018,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,169
-2019,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,177
-2020,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,153
-2008,77-82,Forretningsmessig tjenesteyting,15-74 år,31
-2009,77-82,Forretningsmessig tjenesteyting,15-74 år,34
-2010,77-82,Forretningsmessig tjenesteyting,15-74 år,32
-2011,77-82,Forretningsmessig tjenesteyting,15-74 år,70
-2012,77-82,Forretningsmessig tjenesteyting,15-74 år,85
-2013,77-82,Forretningsmessig tjenesteyting,15-74 år,138
-2014,77-82,Forretningsmessig tjenesteyting,15-74 år,167
-2015,77-82,Forretningsmessig tjenesteyting,15-74 år,169
-2016,77-82,Forretningsmessig tjenesteyting,15-74 år,152
-2017,77-82,Forretningsmessig tjenesteyting,15-74 år,169
-2018,77-82,Forretningsmessig tjenesteyting,15-74 år,180
-2019,77-82,Forretningsmessig tjenesteyting,15-74 år,180
-2020,77-82,Forretningsmessig tjenesteyting,15-74 år,202
-2008,84,"Off.adm., forsvar, sosialforsikring",15-74 år,143
-2009,84,"Off.adm., forsvar, sosialforsikring",15-74 år,153
-2010,84,"Off.adm., forsvar, sosialforsikring",15-74 år,145
-2011,84,"Off.adm., forsvar, sosialforsikring",15-74 år,163
-2012,84,"Off.adm., forsvar, sosialforsikring",15-74 år,165
-2013,84,"Off.adm., forsvar, sosialforsikring",15-74 år,160
-2014,84,"Off.adm., forsvar, sosialforsikring",15-74 år,164
-2015,84,"Off.adm., forsvar, sosialforsikring",15-74 år,134
-2016,84,"Off.adm., forsvar, sosialforsikring",15-74 år,142
-2017,84,"Off.adm., forsvar, sosialforsikring",15-74 år,134
-2018,84,"Off.adm., forsvar, sosialforsikring",15-74 år,139
-2019,84,"Off.adm., forsvar, sosialforsikring",15-74 år,129
-2020,84,"Off.adm., forsvar, sosialforsikring",15-74 år,143
-2008,85,Undervisning,15-74 år,353
-2009,85,Undervisning,15-74 år,386
-2010,85,Undervisning,15-74 år,387
-2011,85,Undervisning,15-74 år,392
-2012,85,Undervisning,15-74 år,406
-2013,85,Undervisning,15-74 år,353
-2014,85,Undervisning,15-74 år,353
-2015,85,Undervisning,15-74 år,342
-2016,85,Undervisning,15-74 år,338
-2017,85,Undervisning,15-74 år,342
-2018,85,Undervisning,15-74 år,348
-2019,85,Undervisning,15-74 år,340
-2020,85,Undervisning,15-74 år,345
-2008,86-88,Helse- og sosialtjenester,15-74 år,833
-2009,86-88,Helse- og sosialtjenester,15-74 år,831
-2010,86-88,Helse- og sosialtjenester,15-74 år,810
-2011,86-88,Helse- og sosialtjenester,15-74 år,827
-2012,86-88,Helse- og sosialtjenester,15-74 år,818
-2013,86-88,Helse- og sosialtjenester,15-74 år,806
-2014,86-88,Helse- og sosialtjenester,15-74 år,842
-2015,86-88,Helse- og sosialtjenester,15-74 år,858
-2016,86-88,Helse- og sosialtjenester,15-74 år,802
-2017,86-88,Helse- og sosialtjenester,15-74 år,834
-2018,86-88,Helse- og sosialtjenester,15-74 år,834
-2019,86-88,Helse- og sosialtjenester,15-74 år,843
-2020,86-88,Helse- og sosialtjenester,15-74 år,844
-2008,90-99,Personlig tjenesteyting,15-74 år,85
-2009,90-99,Personlig tjenesteyting,15-74 år,84
-2010,90-99,Personlig tjenesteyting,15-74 år,93
-2011,90-99,Personlig tjenesteyting,15-74 år,91
-2012,90-99,Personlig tjenesteyting,15-74 år,97
-2013,90-99,Personlig tjenesteyting,15-74 år,100
-2014,90-99,Personlig tjenesteyting,15-74 år,102
-2015,90-99,Personlig tjenesteyting,15-74 år,96
-2016,90-99,Personlig tjenesteyting,15-74 år,105
-2017,90-99,Personlig tjenesteyting,15-74 år,108
-2018,90-99,Personlig tjenesteyting,15-74 år,108
-2019,90-99,Personlig tjenesteyting,15-74 år,129
-2020,90-99,Personlig tjenesteyting,15-74 år,111
-2008,00,Uoppgitt,15-74 år,19
-2009,00,Uoppgitt,15-74 år,22
-2010,00,Uoppgitt,15-74 år,28
-2011,00,Uoppgitt,15-74 år,24
-2012,00,Uoppgitt,15-74 år,27
-2013,00,Uoppgitt,15-74 år,22
-2014,00,Uoppgitt,15-74 år,23
-2015,00,Uoppgitt,15-74 år,64
-2016,00,Uoppgitt,15-74 år,56
-2017,00,Uoppgitt,15-74 år,47
-2018,00,Uoppgitt,15-74 år,41
-2019,00,Uoppgitt,15-74 år,38
-2020,00,Uoppgitt,15-74 år,33
-2008,00-99,Alle næringer,15-74 år,15194
-2009,00-99,Alle næringer,15-74 år,14666
-2010,00-99,Alle næringer,15-74 år,14591
-2011,00-99,Alle næringer,15-74 år,14781
-2012,00-99,Alle næringer,15-74 år,14989
-2013,00-99,Alle næringer,15-74 år,15239
-2014,00-99,Alle næringer,15-74 år,15457
-2015,00-99,Alle næringer,15-74 år,15066
-2016,00-99,Alle næringer,15-74 år,15287
-2017,00-99,Alle næringer,15-74 år,15728
-2018,00-99,Alle næringer,15-74 år,15866
-2019,00-99,Alle næringer,15-74 år,15978
-2020,00-99,Alle næringer,15-74 år,16059
-2008,01-03,"Jordbruk, skogbruk og fiske",15-74 år,472
-2009,01-03,"Jordbruk, skogbruk og fiske",15-74 år,462
-2010,01-03,"Jordbruk, skogbruk og fiske",15-74 år,447
-2011,01-03,"Jordbruk, skogbruk og fiske",15-74 år,378
-2012,01-03,"Jordbruk, skogbruk og fiske",15-74 år,369
-2013,01-03,"Jordbruk, skogbruk og fiske",15-74 år,357
-2014,01-03,"Jordbruk, skogbruk og fiske",15-74 år,337
-2015,01-03,"Jordbruk, skogbruk og fiske",15-74 år,340
-2016,01-03,"Jordbruk, skogbruk og fiske",15-74 år,367
-2017,01-03,"Jordbruk, skogbruk og fiske",15-74 år,347
-2018,01-03,"Jordbruk, skogbruk og fiske",15-74 år,358
-2019,01-03,"Jordbruk, skogbruk og fiske",15-74 år,329
-2020,01-03,"Jordbruk, skogbruk og fiske",15-74 år,338
-2008,05-09,Bergverksdrift og utvinning,15-74 år,55
-2009,05-09,Bergverksdrift og utvinning,15-74 år,134
-2010,05-09,Bergverksdrift og utvinning,15-74 år,161
-2011,05-09,Bergverksdrift og utvinning,15-74 år,172
-2012,05-09,Bergverksdrift og utvinning,15-74 år,187
-2013,05-09,Bergverksdrift og utvinning,15-74 år,209
-2014,05-09,Bergverksdrift og utvinning,15-74 år,246
-2015,05-09,Bergverksdrift og utvinning,15-74 år,194
-2016,05-09,Bergverksdrift og utvinning,15-74 år,196
-2017,05-09,Bergverksdrift og utvinning,15-74 år,263
-2018,05-09,Bergverksdrift og utvinning,15-74 år,300
-2019,05-09,Bergverksdrift og utvinning,15-74 år,307
-2020,05-09,Bergverksdrift og utvinning,15-74 år,291
-2008,10-33,Industri,15-74 år,3357
-2009,10-33,Industri,15-74 år,2806
-2010,10-33,Industri,15-74 år,2571
-2011,10-33,Industri,15-74 år,2475
-2012,10-33,Industri,15-74 år,2408
-2013,10-33,Industri,15-74 år,2367
-2014,10-33,Industri,15-74 år,2353
-2015,10-33,Industri,15-74 år,2302
-2016,10-33,Industri,15-74 år,2313
-2017,10-33,Industri,15-74 år,2426
-2018,10-33,Industri,15-74 år,2419
-2019,10-33,Industri,15-74 år,2476
-2020,10-33,Industri,15-74 år,2470
-2008,35-39,"Elektrisitet, vann og renovasjon",15-74 år,120
-2009,35-39,"Elektrisitet, vann og renovasjon",15-74 år,101
-2010,35-39,"Elektrisitet, vann og renovasjon",15-74 år,102
-2011,35-39,"Elektrisitet, vann og renovasjon",15-74 år,105
-2012,35-39,"Elektrisitet, vann og renovasjon",15-74 år,107
-2013,35-39,"Elektrisitet, vann og renovasjon",15-74 år,128
-2014,35-39,"Elektrisitet, vann og renovasjon",15-74 år,112
-2015,35-39,"Elektrisitet, vann og renovasjon",15-74 år,105
-2016,35-39,"Elektrisitet, vann og renovasjon",15-74 år,110
-2017,35-39,"Elektrisitet, vann og renovasjon",15-74 år,109
-2018,35-39,"Elektrisitet, vann og renovasjon",15-74 år,114
-2019,35-39,"Elektrisitet, vann og renovasjon",15-74 år,123
-2020,35-39,"Elektrisitet, vann og renovasjon",15-74 år,133
-2008,41-43,Bygge- og anleggsvirksomhet,15-74 år,1472
-2009,41-43,Bygge- og anleggsvirksomhet,15-74 år,1442
-2010,41-43,Bygge- og anleggsvirksomhet,15-74 år,1532
-2011,41-43,Bygge- og anleggsvirksomhet,15-74 år,1682
-2012,41-43,Bygge- og anleggsvirksomhet,15-74 år,1775
-2013,41-43,Bygge- og anleggsvirksomhet,15-74 år,1876
-2014,41-43,Bygge- og anleggsvirksomhet,15-74 år,1907
-2015,41-43,Bygge- og anleggsvirksomhet,15-74 år,1811
-2016,41-43,Bygge- og anleggsvirksomhet,15-74 år,1808
-2017,41-43,Bygge- og anleggsvirksomhet,15-74 år,1907
-2018,41-43,Bygge- og anleggsvirksomhet,15-74 år,1807
-2019,41-43,Bygge- og anleggsvirksomhet,15-74 år,1891
-2020,41-43,Bygge- og anleggsvirksomhet,15-74 år,1920
-2008,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,2026
-2009,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,1968
-2010,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,2080
-2011,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,2149
-2012,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,2144
-2013,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,2030
-2014,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,2005
-2015,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,1983
-2016,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,2001
-2017,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,1991
-2018,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,1951
-2019,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,1939
-2020,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,2020
-2008,49-53,Transport og lagring,15-74 år,1402
-2009,49-53,Transport og lagring,15-74 år,1388
-2010,49-53,Transport og lagring,15-74 år,1424
-2011,49-53,Transport og lagring,15-74 år,1346
-2012,49-53,Transport og lagring,15-74 år,1365
-2013,49-53,Transport og lagring,15-74 år,1470
-2014,49-53,Transport og lagring,15-74 år,1495
-2015,49-53,Transport og lagring,15-74 år,1441
-2016,49-53,Transport og lagring,15-74 år,1362
-2017,49-53,Transport og lagring,15-74 år,1407
-2018,49-53,Transport og lagring,15-74 år,1431
-2019,49-53,Transport og lagring,15-74 år,1430
-2020,49-53,Transport og lagring,15-74 år,1443
-2008,55-56,Overnattings- og serveringsvirksomhet,15-74 år,267
-2009,55-56,Overnattings- og serveringsvirksomhet,15-74 år,255
-2010,55-56,Overnattings- og serveringsvirksomhet,15-74 år,257
-2011,55-56,Overnattings- og serveringsvirksomhet,15-74 år,281
-2012,55-56,Overnattings- og serveringsvirksomhet,15-74 år,285
-2013,55-56,Overnattings- og serveringsvirksomhet,15-74 år,336
-2014,55-56,Overnattings- og serveringsvirksomhet,15-74 år,343
-2015,55-56,Overnattings- og serveringsvirksomhet,15-74 år,259
-2016,55-56,Overnattings- og serveringsvirksomhet,15-74 år,265
-2017,55-56,Overnattings- og serveringsvirksomhet,15-74 år,265
-2018,55-56,Overnattings- og serveringsvirksomhet,15-74 år,315
-2019,55-56,Overnattings- og serveringsvirksomhet,15-74 år,280
-2020,55-56,Overnattings- og serveringsvirksomhet,15-74 år,269
-2008,58-63,Informasjon og kommunikasjon,15-74 år,136
-2009,58-63,Informasjon og kommunikasjon,15-74 år,146
-2010,58-63,Informasjon og kommunikasjon,15-74 år,157
-2011,58-63,Informasjon og kommunikasjon,15-74 år,133
-2012,58-63,Informasjon og kommunikasjon,15-74 år,160
-2013,58-63,Informasjon og kommunikasjon,15-74 år,158
-2014,58-63,Informasjon og kommunikasjon,15-74 år,135
-2015,58-63,Informasjon og kommunikasjon,15-74 år,141
-2016,58-63,Informasjon og kommunikasjon,15-74 år,155
-2017,58-63,Informasjon og kommunikasjon,15-74 år,163
-2018,58-63,Informasjon og kommunikasjon,15-74 år,180
-2019,58-63,Informasjon og kommunikasjon,15-74 år,186
-2020,58-63,Informasjon og kommunikasjon,15-74 år,194
-2008,64-66,Finansiering og forsikring,15-74 år,117
-2009,64-66,Finansiering og forsikring,15-74 år,110
-2010,64-66,Finansiering og forsikring,15-74 år,114
-2011,64-66,Finansiering og forsikring,15-74 år,99
-2012,64-66,Finansiering og forsikring,15-74 år,100
-2013,64-66,Finansiering og forsikring,15-74 år,97
-2014,64-66,Finansiering og forsikring,15-74 år,81
-2015,64-66,Finansiering og forsikring,15-74 år,75
-2016,64-66,Finansiering og forsikring,15-74 år,77
-2017,64-66,Finansiering og forsikring,15-74 år,72
-2018,64-66,Finansiering og forsikring,15-74 år,67
-2019,64-66,Finansiering og forsikring,15-74 år,64
-2020,64-66,Finansiering og forsikring,15-74 år,75
-2008,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,420
-2009,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,415
-2010,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,416
-2011,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,432
-2012,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,414
-2013,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,444
-2014,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,495
-2015,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,473
-2016,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,448
-2017,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,461
-2018,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,462
-2019,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,480
-2020,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,487
-2008,77-82,Forretningsmessig tjenesteyting,15-74 år,514
-2009,77-82,Forretningsmessig tjenesteyting,15-74 år,445
-2010,77-82,Forretningsmessig tjenesteyting,15-74 år,472
-2011,77-82,Forretningsmessig tjenesteyting,15-74 år,563
-2012,77-82,Forretningsmessig tjenesteyting,15-74 år,671
-2013,77-82,Forretningsmessig tjenesteyting,15-74 år,628
-2014,77-82,Forretningsmessig tjenesteyting,15-74 år,616
-2015,77-82,Forretningsmessig tjenesteyting,15-74 år,586
-2016,77-82,Forretningsmessig tjenesteyting,15-74 år,727
-2017,77-82,Forretningsmessig tjenesteyting,15-74 år,810
-2018,77-82,Forretningsmessig tjenesteyting,15-74 år,892
-2019,77-82,Forretningsmessig tjenesteyting,15-74 år,861
-2020,77-82,Forretningsmessig tjenesteyting,15-74 år,883
-2008,84,"Off.adm., forsvar, sosialforsikring",15-74 år,394
-2009,84,"Off.adm., forsvar, sosialforsikring",15-74 år,367
-2010,84,"Off.adm., forsvar, sosialforsikring",15-74 år,379
-2011,84,"Off.adm., forsvar, sosialforsikring",15-74 år,390
-2012,84,"Off.adm., forsvar, sosialforsikring",15-74 år,448
-2013,84,"Off.adm., forsvar, sosialforsikring",15-74 år,466
-2014,84,"Off.adm., forsvar, sosialforsikring",15-74 år,474
-2015,84,"Off.adm., forsvar, sosialforsikring",15-74 år,427
-2016,84,"Off.adm., forsvar, sosialforsikring",15-74 år,476
-2017,84,"Off.adm., forsvar, sosialforsikring",15-74 år,469
-2018,84,"Off.adm., forsvar, sosialforsikring",15-74 år,437
-2019,84,"Off.adm., forsvar, sosialforsikring",15-74 år,476
-2020,84,"Off.adm., forsvar, sosialforsikring",15-74 år,481
-2008,85,Undervisning,15-74 år,1203
-2009,85,Undervisning,15-74 år,1244
-2010,85,Undervisning,15-74 år,1199
-2011,85,Undervisning,15-74 år,1154
-2012,85,Undervisning,15-74 år,1162
-2013,85,Undervisning,15-74 år,1197
-2014,85,Undervisning,15-74 år,1244
-2015,85,Undervisning,15-74 år,1197
-2016,85,Undervisning,15-74 år,1213
-2017,85,Undervisning,15-74 år,1257
-2018,85,Undervisning,15-74 år,1294
-2019,85,Undervisning,15-74 år,1318
-2020,85,Undervisning,15-74 år,1333
-2008,86-88,Helse- og sosialtjenester,15-74 år,2771
-2009,86-88,Helse- og sosialtjenester,15-74 år,2885
-2010,86-88,Helse- og sosialtjenester,15-74 år,2807
-2011,86-88,Helse- og sosialtjenester,15-74 år,2950
-2012,86-88,Helse- og sosialtjenester,15-74 år,2929
-2013,86-88,Helse- og sosialtjenester,15-74 år,3002
-2014,86-88,Helse- og sosialtjenester,15-74 år,3162
-2015,86-88,Helse- og sosialtjenester,15-74 år,3151
-2016,86-88,Helse- og sosialtjenester,15-74 år,3167
-2017,86-88,Helse- og sosialtjenester,15-74 år,3197
-2018,86-88,Helse- og sosialtjenester,15-74 år,3297
-2019,86-88,Helse- og sosialtjenester,15-74 år,3280
-2020,86-88,Helse- og sosialtjenester,15-74 år,3208
-2008,90-99,Personlig tjenesteyting,15-74 år,371
-2009,90-99,Personlig tjenesteyting,15-74 år,404
-2010,90-99,Personlig tjenesteyting,15-74 år,372
-2011,90-99,Personlig tjenesteyting,15-74 år,384
-2012,90-99,Personlig tjenesteyting,15-74 år,370
-2013,90-99,Personlig tjenesteyting,15-74 år,371
-2014,90-99,Personlig tjenesteyting,15-74 år,356
-2015,90-99,Personlig tjenesteyting,15-74 år,416
-2016,90-99,Personlig tjenesteyting,15-74 år,437
-2017,90-99,Personlig tjenesteyting,15-74 år,426
-2018,90-99,Personlig tjenesteyting,15-74 år,403
-2019,90-99,Personlig tjenesteyting,15-74 år,409
-2020,90-99,Personlig tjenesteyting,15-74 år,407
-2008,00,Uoppgitt,15-74 år,97
-2009,00,Uoppgitt,15-74 år,94
-2010,00,Uoppgitt,15-74 år,101
-2011,00,Uoppgitt,15-74 år,88
-2012,00,Uoppgitt,15-74 år,95
-2013,00,Uoppgitt,15-74 år,103
-2014,00,Uoppgitt,15-74 år,96
-2015,00,Uoppgitt,15-74 år,165
-2016,00,Uoppgitt,15-74 år,165
-2017,00,Uoppgitt,15-74 år,158
-2018,00,Uoppgitt,15-74 år,139
-2019,00,Uoppgitt,15-74 år,129
-2020,00,Uoppgitt,15-74 år,107
-2008,00-99,Alle næringer,15-74 år,111
-2009,00-99,Alle næringer,15-74 år,105
-2010,00-99,Alle næringer,15-74 år,105
-2011,00-99,Alle næringer,15-74 år,114
-2012,00-99,Alle næringer,15-74 år,108
-2013,00-99,Alle næringer,15-74 år,103
-2014,00-99,Alle næringer,15-74 år,105
-2015,00-99,Alle næringer,15-74 år,96
-2016,00-99,Alle næringer,15-74 år,94
-2017,00-99,Alle næringer,15-74 år,99
-2018,00-99,Alle næringer,15-74 år,90
-2019,00-99,Alle næringer,15-74 år,88
-2020,00-99,Alle næringer,15-74 år,96
-2008,01-03,"Jordbruk, skogbruk og fiske",15-74 år,9
-2009,01-03,"Jordbruk, skogbruk og fiske",15-74 år,6
-2010,01-03,"Jordbruk, skogbruk og fiske",15-74 år,9
-2011,01-03,"Jordbruk, skogbruk og fiske",15-74 år,9
-2012,01-03,"Jordbruk, skogbruk og fiske",15-74 år,6
-2013,01-03,"Jordbruk, skogbruk og fiske",15-74 år,3
-2014,01-03,"Jordbruk, skogbruk og fiske",15-74 år,6
-2015,01-03,"Jordbruk, skogbruk og fiske",15-74 år,6
-2016,01-03,"Jordbruk, skogbruk og fiske",15-74 år,6
-2017,01-03,"Jordbruk, skogbruk og fiske",15-74 år,6
-2018,01-03,"Jordbruk, skogbruk og fiske",15-74 år,6
-2019,01-03,"Jordbruk, skogbruk og fiske",15-74 år,6
-2020,01-03,"Jordbruk, skogbruk og fiske",15-74 år,6
+2010,00,Uoppgitt,15-74 år,0
+2011,00,Uoppgitt,15-74 år,0
+2012,00,Uoppgitt,15-74 år,0
+2013,00,Uoppgitt,15-74 år,0
+2014,00,Uoppgitt,15-74 år,0
+2015,00,Uoppgitt,15-74 år,0
+2016,00,Uoppgitt,15-74 år,0
+2017,00,Uoppgitt,15-74 år,0
+2018,00,Uoppgitt,15-74 år,0
+2019,00,Uoppgitt,15-74 år,0
+2020,00,Uoppgitt,15-74 år,NA
+2008,00-99,Alle næringer,15-74 år,0
+2009,00-99,Alle næringer,15-74 år,0
+2010,00-99,Alle næringer,15-74 år,0
+2011,00-99,Alle næringer,15-74 år,0
+2012,00-99,Alle næringer,15-74 år,0
+2013,00-99,Alle næringer,15-74 år,0
+2014,00-99,Alle næringer,15-74 år,0
+2015,00-99,Alle næringer,15-74 år,0
+2016,00-99,Alle næringer,15-74 år,0
+2017,00-99,Alle næringer,15-74 år,0
+2018,00-99,Alle næringer,15-74 år,0
+2019,00-99,Alle næringer,15-74 år,0
+2020,00-99,Alle næringer,15-74 år,1494
+2008,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2009,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2010,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2011,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2012,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2013,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2014,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2015,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2016,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2017,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2018,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2019,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2020,01-03,"Jordbruk, skogbruk og fiske",15-74 år,180
 2008,05-09,Bergverksdrift og utvinning,15-74 år,0
 2009,05-09,Bergverksdrift og utvinning,15-74 år,0
 2010,05-09,Bergverksdrift og utvinning,15-74 år,0
@@ -1209,10 +273,10 @@ Aar,NACE2007,SN2007,alder,ansatte
 2019,05-09,Bergverksdrift og utvinning,15-74 år,0
 2020,05-09,Bergverksdrift og utvinning,15-74 år,0
 2008,10-33,Industri,15-74 år,0
-2009,10-33,Industri,15-74 år,3
+2009,10-33,Industri,15-74 år,0
 2010,10-33,Industri,15-74 år,0
 2011,10-33,Industri,15-74 år,0
-2012,10-33,Industri,15-74 år,3
+2012,10-33,Industri,15-74 år,0
 2013,10-33,Industri,15-74 år,0
 2014,10-33,Industri,15-74 år,0
 2015,10-33,Industri,15-74 år,0
@@ -1220,7 +284,7 @@ Aar,NACE2007,SN2007,alder,ansatte
 2017,10-33,Industri,15-74 år,0
 2018,10-33,Industri,15-74 år,0
 2019,10-33,Industri,15-74 år,0
-2020,10-33,Industri,15-74 år,0
+2020,10-33,Industri,15-74 år,48
 2008,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
 2009,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
 2010,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
@@ -1233,59 +297,59 @@ Aar,NACE2007,SN2007,alder,ansatte
 2017,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
 2018,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
 2019,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
-2020,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
-2008,41-43,Bygge- og anleggsvirksomhet,15-74 år,9
-2009,41-43,Bygge- og anleggsvirksomhet,15-74 år,11
-2010,41-43,Bygge- og anleggsvirksomhet,15-74 år,10
-2011,41-43,Bygge- og anleggsvirksomhet,15-74 år,9
-2012,41-43,Bygge- og anleggsvirksomhet,15-74 år,7
-2013,41-43,Bygge- og anleggsvirksomhet,15-74 år,13
-2014,41-43,Bygge- og anleggsvirksomhet,15-74 år,10
-2015,41-43,Bygge- og anleggsvirksomhet,15-74 år,12
-2016,41-43,Bygge- og anleggsvirksomhet,15-74 år,9
-2017,41-43,Bygge- og anleggsvirksomhet,15-74 år,6
-2018,41-43,Bygge- og anleggsvirksomhet,15-74 år,9
-2019,41-43,Bygge- og anleggsvirksomhet,15-74 år,3
-2020,41-43,Bygge- og anleggsvirksomhet,15-74 år,6
-2008,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,3
-2009,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,3
-2010,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,6
-2011,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,6
-2012,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,6
-2013,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,3
-2014,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,3
-2015,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,3
-2016,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,6
-2017,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,6
-2018,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,3
-2019,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,9
-2020,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,NA
-2008,49-53,Transport og lagring,15-74 år,26
-2009,49-53,Transport og lagring,15-74 år,22
-2010,49-53,Transport og lagring,15-74 år,22
-2011,49-53,Transport og lagring,15-74 år,24
-2012,49-53,Transport og lagring,15-74 år,20
-2013,49-53,Transport og lagring,15-74 år,19
-2014,49-53,Transport og lagring,15-74 år,21
-2015,49-53,Transport og lagring,15-74 år,18
-2016,49-53,Transport og lagring,15-74 år,19
-2017,49-53,Transport og lagring,15-74 år,20
-2018,49-53,Transport og lagring,15-74 år,17
-2019,49-53,Transport og lagring,15-74 år,20
-2020,49-53,Transport og lagring,15-74 år,25
-2008,55-56,Overnattings- og serveringsvirksomhet,15-74 år,9
-2009,55-56,Overnattings- og serveringsvirksomhet,15-74 år,3
-2010,55-56,Overnattings- og serveringsvirksomhet,15-74 år,6
-2011,55-56,Overnattings- og serveringsvirksomhet,15-74 år,3
-2012,55-56,Overnattings- og serveringsvirksomhet,15-74 år,3
-2013,55-56,Overnattings- og serveringsvirksomhet,15-74 år,7
-2014,55-56,Overnattings- og serveringsvirksomhet,15-74 år,6
-2015,55-56,Overnattings- og serveringsvirksomhet,15-74 år,3
+2020,35-39,"Elektrisitet, vann og renovasjon",15-74 år,3
+2008,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2009,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2010,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2011,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2012,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2013,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2014,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2015,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2016,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2017,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2018,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2019,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2020,41-43,Bygge- og anleggsvirksomhet,15-74 år,231
+2008,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2009,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2010,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2011,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2012,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2013,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2014,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2015,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2016,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2017,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2018,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2019,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2020,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,142
+2008,49-53,Transport og lagring,15-74 år,0
+2009,49-53,Transport og lagring,15-74 år,0
+2010,49-53,Transport og lagring,15-74 år,0
+2011,49-53,Transport og lagring,15-74 år,0
+2012,49-53,Transport og lagring,15-74 år,0
+2013,49-53,Transport og lagring,15-74 år,0
+2014,49-53,Transport og lagring,15-74 år,0
+2015,49-53,Transport og lagring,15-74 år,0
+2016,49-53,Transport og lagring,15-74 år,0
+2017,49-53,Transport og lagring,15-74 år,0
+2018,49-53,Transport og lagring,15-74 år,0
+2019,49-53,Transport og lagring,15-74 år,0
+2020,49-53,Transport og lagring,15-74 år,94
+2008,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2009,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2010,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2011,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2012,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2013,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2014,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2015,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
 2016,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
-2017,55-56,Overnattings- og serveringsvirksomhet,15-74 år,3
-2018,55-56,Overnattings- og serveringsvirksomhet,15-74 år,3
+2017,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2018,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
 2019,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
-2020,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2020,55-56,Overnattings- og serveringsvirksomhet,15-74 år,9
 2008,58-63,Informasjon og kommunikasjon,15-74 år,0
 2009,58-63,Informasjon og kommunikasjon,15-74 år,0
 2010,58-63,Informasjon og kommunikasjon,15-74 år,0
@@ -1298,7 +362,7 @@ Aar,NACE2007,SN2007,alder,ansatte
 2017,58-63,Informasjon og kommunikasjon,15-74 år,0
 2018,58-63,Informasjon og kommunikasjon,15-74 år,0
 2019,58-63,Informasjon og kommunikasjon,15-74 år,0
-2020,58-63,Informasjon og kommunikasjon,15-74 år,0
+2020,58-63,Informasjon og kommunikasjon,15-74 år,5
 2008,64-66,Finansiering og forsikring,15-74 år,0
 2009,64-66,Finansiering og forsikring,15-74 år,0
 2010,64-66,Finansiering og forsikring,15-74 år,0
@@ -1313,83 +377,83 @@ Aar,NACE2007,SN2007,alder,ansatte
 2019,64-66,Finansiering og forsikring,15-74 år,0
 2020,64-66,Finansiering og forsikring,15-74 år,0
 2008,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
-2009,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,3
-2010,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,3
+2009,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2010,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
 2011,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
-2012,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,3
-2013,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,3
+2012,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2013,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
 2014,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
 2015,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
-2016,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,3
+2016,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
 2017,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
 2018,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
 2019,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
-2020,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,NA
-2008,77-82,Forretningsmessig tjenesteyting,15-74 år,11
-2009,77-82,Forretningsmessig tjenesteyting,15-74 år,12
-2010,77-82,Forretningsmessig tjenesteyting,15-74 år,3
-2011,77-82,Forretningsmessig tjenesteyting,15-74 år,17
-2012,77-82,Forretningsmessig tjenesteyting,15-74 år,14
-2013,77-82,Forretningsmessig tjenesteyting,15-74 år,13
-2014,77-82,Forretningsmessig tjenesteyting,15-74 år,9
-2015,77-82,Forretningsmessig tjenesteyting,15-74 år,6
-2016,77-82,Forretningsmessig tjenesteyting,15-74 år,3
-2017,77-82,Forretningsmessig tjenesteyting,15-74 år,6
-2018,77-82,Forretningsmessig tjenesteyting,15-74 år,6
-2019,77-82,Forretningsmessig tjenesteyting,15-74 år,6
-2020,77-82,Forretningsmessig tjenesteyting,15-74 år,3
-2008,84,"Off.adm., forsvar, sosialforsikring",15-74 år,10
-2009,84,"Off.adm., forsvar, sosialforsikring",15-74 år,6
-2010,84,"Off.adm., forsvar, sosialforsikring",15-74 år,13
-2011,84,"Off.adm., forsvar, sosialforsikring",15-74 år,7
-2012,84,"Off.adm., forsvar, sosialforsikring",15-74 år,9
-2013,84,"Off.adm., forsvar, sosialforsikring",15-74 år,6
-2014,84,"Off.adm., forsvar, sosialforsikring",15-74 år,9
-2015,84,"Off.adm., forsvar, sosialforsikring",15-74 år,9
-2016,84,"Off.adm., forsvar, sosialforsikring",15-74 år,6
-2017,84,"Off.adm., forsvar, sosialforsikring",15-74 år,6
-2018,84,"Off.adm., forsvar, sosialforsikring",15-74 år,6
-2019,84,"Off.adm., forsvar, sosialforsikring",15-74 år,6
-2020,84,"Off.adm., forsvar, sosialforsikring",15-74 år,6
-2008,85,Undervisning,15-74 år,10
-2009,85,Undervisning,15-74 år,9
-2010,85,Undervisning,15-74 år,9
-2011,85,Undervisning,15-74 år,12
-2012,85,Undervisning,15-74 år,11
-2013,85,Undervisning,15-74 år,12
-2014,85,Undervisning,15-74 år,13
-2015,85,Undervisning,15-74 år,10
-2016,85,Undervisning,15-74 år,9
-2017,85,Undervisning,15-74 år,13
-2018,85,Undervisning,15-74 år,17
-2019,85,Undervisning,15-74 år,12
-2020,85,Undervisning,15-74 år,NA
-2008,86-88,Helse- og sosialtjenester,15-74 år,21
-2009,86-88,Helse- og sosialtjenester,15-74 år,24
-2010,86-88,Helse- og sosialtjenester,15-74 år,24
-2011,86-88,Helse- og sosialtjenester,15-74 år,24
-2012,86-88,Helse- og sosialtjenester,15-74 år,23
-2013,86-88,Helse- og sosialtjenester,15-74 år,21
-2014,86-88,Helse- og sosialtjenester,15-74 år,22
-2015,86-88,Helse- og sosialtjenester,15-74 år,23
-2016,86-88,Helse- og sosialtjenester,15-74 år,27
-2017,86-88,Helse- og sosialtjenester,15-74 år,24
-2018,86-88,Helse- og sosialtjenester,15-74 år,20
-2019,86-88,Helse- og sosialtjenester,15-74 år,20
-2020,86-88,Helse- og sosialtjenester,15-74 år,NA
-2008,90-99,Personlig tjenesteyting,15-74 år,3
-2009,90-99,Personlig tjenesteyting,15-74 år,3
+2020,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,26
+2008,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2009,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2010,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2011,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2012,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2013,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2014,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2015,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2016,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2017,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2018,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2019,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2020,77-82,Forretningsmessig tjenesteyting,15-74 år,34
+2008,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2009,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2010,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2011,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2012,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2013,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2014,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2015,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2016,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2017,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2018,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2019,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2020,84,"Off.adm., forsvar, sosialforsikring",15-74 år,48
+2008,85,Undervisning,15-74 år,0
+2009,85,Undervisning,15-74 år,0
+2010,85,Undervisning,15-74 år,0
+2011,85,Undervisning,15-74 år,0
+2012,85,Undervisning,15-74 år,0
+2013,85,Undervisning,15-74 år,0
+2014,85,Undervisning,15-74 år,0
+2015,85,Undervisning,15-74 år,0
+2016,85,Undervisning,15-74 år,0
+2017,85,Undervisning,15-74 år,0
+2018,85,Undervisning,15-74 år,0
+2019,85,Undervisning,15-74 år,0
+2020,85,Undervisning,15-74 år,171
+2008,86-88,Helse- og sosialtjenester,15-74 år,0
+2009,86-88,Helse- og sosialtjenester,15-74 år,0
+2010,86-88,Helse- og sosialtjenester,15-74 år,0
+2011,86-88,Helse- og sosialtjenester,15-74 år,0
+2012,86-88,Helse- og sosialtjenester,15-74 år,0
+2013,86-88,Helse- og sosialtjenester,15-74 år,0
+2014,86-88,Helse- og sosialtjenester,15-74 år,0
+2015,86-88,Helse- og sosialtjenester,15-74 år,0
+2016,86-88,Helse- og sosialtjenester,15-74 år,0
+2017,86-88,Helse- og sosialtjenester,15-74 år,0
+2018,86-88,Helse- og sosialtjenester,15-74 år,0
+2019,86-88,Helse- og sosialtjenester,15-74 år,0
+2020,86-88,Helse- og sosialtjenester,15-74 år,423
+2008,90-99,Personlig tjenesteyting,15-74 år,0
+2009,90-99,Personlig tjenesteyting,15-74 år,0
 2010,90-99,Personlig tjenesteyting,15-74 år,0
-2011,90-99,Personlig tjenesteyting,15-74 år,3
-2012,90-99,Personlig tjenesteyting,15-74 år,3
-2013,90-99,Personlig tjenesteyting,15-74 år,3
-2014,90-99,Personlig tjenesteyting,15-74 år,6
-2015,90-99,Personlig tjenesteyting,15-74 år,3
-2016,90-99,Personlig tjenesteyting,15-74 år,3
-2017,90-99,Personlig tjenesteyting,15-74 år,6
-2018,90-99,Personlig tjenesteyting,15-74 år,3
-2019,90-99,Personlig tjenesteyting,15-74 år,3
-2020,90-99,Personlig tjenesteyting,15-74 år,3
+2011,90-99,Personlig tjenesteyting,15-74 år,0
+2012,90-99,Personlig tjenesteyting,15-74 år,0
+2013,90-99,Personlig tjenesteyting,15-74 år,0
+2014,90-99,Personlig tjenesteyting,15-74 år,0
+2015,90-99,Personlig tjenesteyting,15-74 år,0
+2016,90-99,Personlig tjenesteyting,15-74 år,0
+2017,90-99,Personlig tjenesteyting,15-74 år,0
+2018,90-99,Personlig tjenesteyting,15-74 år,0
+2019,90-99,Personlig tjenesteyting,15-74 år,0
+2020,90-99,Personlig tjenesteyting,15-74 år,62
 2008,00,Uoppgitt,15-74 år,0
 2009,00,Uoppgitt,15-74 år,0
 2010,00,Uoppgitt,15-74 år,0
@@ -1397,243 +461,1413 @@ Aar,NACE2007,SN2007,alder,ansatte
 2012,00,Uoppgitt,15-74 år,0
 2013,00,Uoppgitt,15-74 år,0
 2014,00,Uoppgitt,15-74 år,0
-2015,00,Uoppgitt,15-74 år,3
-2016,00,Uoppgitt,15-74 år,3
-2017,00,Uoppgitt,15-74 år,3
+2015,00,Uoppgitt,15-74 år,0
+2016,00,Uoppgitt,15-74 år,0
+2017,00,Uoppgitt,15-74 år,0
 2018,00,Uoppgitt,15-74 år,0
-2019,00,Uoppgitt,15-74 år,3
-2020,00,Uoppgitt,15-74 år,NA
-2008,00-99,Alle næringer,15-74 år,4422
-2009,00-99,Alle næringer,15-74 år,4450
-2010,00-99,Alle næringer,15-74 år,4544
-2011,00-99,Alle næringer,15-74 år,4748
-2012,00-99,Alle næringer,15-74 år,4785
-2013,00-99,Alle næringer,15-74 år,4870
-2014,00-99,Alle næringer,15-74 år,5037
-2015,00-99,Alle næringer,15-74 år,4971
-2016,00-99,Alle næringer,15-74 år,4915
-2017,00-99,Alle næringer,15-74 år,4915
-2018,00-99,Alle næringer,15-74 år,4814
-2019,00-99,Alle næringer,15-74 år,4818
-2020,00-99,Alle næringer,15-74 år,4898
-2008,01-03,"Jordbruk, skogbruk og fiske",15-74 år,678
-2009,01-03,"Jordbruk, skogbruk og fiske",15-74 år,658
-2010,01-03,"Jordbruk, skogbruk og fiske",15-74 år,649
-2011,01-03,"Jordbruk, skogbruk og fiske",15-74 år,684
-2012,01-03,"Jordbruk, skogbruk og fiske",15-74 år,623
-2013,01-03,"Jordbruk, skogbruk og fiske",15-74 år,571
-2014,01-03,"Jordbruk, skogbruk og fiske",15-74 år,571
-2015,01-03,"Jordbruk, skogbruk og fiske",15-74 år,627
-2016,01-03,"Jordbruk, skogbruk og fiske",15-74 år,633
-2017,01-03,"Jordbruk, skogbruk og fiske",15-74 år,625
-2018,01-03,"Jordbruk, skogbruk og fiske",15-74 år,608
-2019,01-03,"Jordbruk, skogbruk og fiske",15-74 år,567
-2020,01-03,"Jordbruk, skogbruk og fiske",15-74 år,578
-2008,05-09,Bergverksdrift og utvinning,15-74 år,6
-2009,05-09,Bergverksdrift og utvinning,15-74 år,6
-2010,05-09,Bergverksdrift og utvinning,15-74 år,3
-2011,05-09,Bergverksdrift og utvinning,15-74 år,3
-2012,05-09,Bergverksdrift og utvinning,15-74 år,3
+2019,00,Uoppgitt,15-74 år,0
+2020,00,Uoppgitt,15-74 år,18
+2008,00-99,Alle næringer,15-74 år,0
+2009,00-99,Alle næringer,15-74 år,0
+2010,00-99,Alle næringer,15-74 år,0
+2011,00-99,Alle næringer,15-74 år,0
+2012,00-99,Alle næringer,15-74 år,0
+2013,00-99,Alle næringer,15-74 år,0
+2014,00-99,Alle næringer,15-74 år,0
+2015,00-99,Alle næringer,15-74 år,0
+2016,00-99,Alle næringer,15-74 år,0
+2017,00-99,Alle næringer,15-74 år,0
+2018,00-99,Alle næringer,15-74 år,0
+2019,00-99,Alle næringer,15-74 år,0
+2020,00-99,Alle næringer,15-74 år,4890
+2008,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2009,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2010,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2011,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2012,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2013,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2014,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2015,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2016,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2017,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2018,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2019,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2020,01-03,"Jordbruk, skogbruk og fiske",15-74 år,340
+2008,05-09,Bergverksdrift og utvinning,15-74 år,0
+2009,05-09,Bergverksdrift og utvinning,15-74 år,0
+2010,05-09,Bergverksdrift og utvinning,15-74 år,0
+2011,05-09,Bergverksdrift og utvinning,15-74 år,0
+2012,05-09,Bergverksdrift og utvinning,15-74 år,0
 2013,05-09,Bergverksdrift og utvinning,15-74 år,0
-2014,05-09,Bergverksdrift og utvinning,15-74 år,7
-2015,05-09,Bergverksdrift og utvinning,15-74 år,3
-2016,05-09,Bergverksdrift og utvinning,15-74 år,3
-2017,05-09,Bergverksdrift og utvinning,15-74 år,3
-2018,05-09,Bergverksdrift og utvinning,15-74 år,3
-2019,05-09,Bergverksdrift og utvinning,15-74 år,3
-2020,05-09,Bergverksdrift og utvinning,15-74 år,NA
-2008,10-33,Industri,15-74 år,785
-2009,10-33,Industri,15-74 år,852
-2010,10-33,Industri,15-74 år,901
-2011,10-33,Industri,15-74 år,942
-2012,10-33,Industri,15-74 år,974
-2013,10-33,Industri,15-74 år,1009
-2014,10-33,Industri,15-74 år,1050
-2015,10-33,Industri,15-74 år,1098
-2016,10-33,Industri,15-74 år,1035
-2017,10-33,Industri,15-74 år,985
-2018,10-33,Industri,15-74 år,828
-2019,10-33,Industri,15-74 år,887
-2020,10-33,Industri,15-74 år,887
-2008,35-39,"Elektrisitet, vann og renovasjon",15-74 år,94
-2009,35-39,"Elektrisitet, vann og renovasjon",15-74 år,88
-2010,35-39,"Elektrisitet, vann og renovasjon",15-74 år,80
-2011,35-39,"Elektrisitet, vann og renovasjon",15-74 år,76
-2012,35-39,"Elektrisitet, vann og renovasjon",15-74 år,74
-2013,35-39,"Elektrisitet, vann og renovasjon",15-74 år,129
-2014,35-39,"Elektrisitet, vann og renovasjon",15-74 år,86
-2015,35-39,"Elektrisitet, vann og renovasjon",15-74 år,43
-2016,35-39,"Elektrisitet, vann og renovasjon",15-74 år,65
-2017,35-39,"Elektrisitet, vann og renovasjon",15-74 år,92
-2018,35-39,"Elektrisitet, vann og renovasjon",15-74 år,76
-2019,35-39,"Elektrisitet, vann og renovasjon",15-74 år,101
-2020,35-39,"Elektrisitet, vann og renovasjon",15-74 år,101
-2008,41-43,Bygge- og anleggsvirksomhet,15-74 år,444
-2009,41-43,Bygge- og anleggsvirksomhet,15-74 år,473
-2010,41-43,Bygge- og anleggsvirksomhet,15-74 år,482
-2011,41-43,Bygge- og anleggsvirksomhet,15-74 år,484
-2012,41-43,Bygge- og anleggsvirksomhet,15-74 år,448
-2013,41-43,Bygge- og anleggsvirksomhet,15-74 år,465
-2014,41-43,Bygge- og anleggsvirksomhet,15-74 år,501
-2015,41-43,Bygge- og anleggsvirksomhet,15-74 år,511
-2016,41-43,Bygge- og anleggsvirksomhet,15-74 år,504
-2017,41-43,Bygge- og anleggsvirksomhet,15-74 år,544
-2018,41-43,Bygge- og anleggsvirksomhet,15-74 år,569
-2019,41-43,Bygge- og anleggsvirksomhet,15-74 år,555
-2020,41-43,Bygge- og anleggsvirksomhet,15-74 år,638
-2008,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,494
-2009,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,447
-2010,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,437
-2011,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,467
-2012,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,510
-2013,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,506
-2014,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,497
-2015,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,462
-2016,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,450
-2017,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,483
-2018,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,515
-2019,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,490
-2020,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,475
-2008,49-53,Transport og lagring,15-74 år,213
-2009,49-53,Transport og lagring,15-74 år,194
-2010,49-53,Transport og lagring,15-74 år,207
-2011,49-53,Transport og lagring,15-74 år,201
-2012,49-53,Transport og lagring,15-74 år,195
-2013,49-53,Transport og lagring,15-74 år,225
-2014,49-53,Transport og lagring,15-74 år,231
-2015,49-53,Transport og lagring,15-74 år,315
-2016,49-53,Transport og lagring,15-74 år,309
-2017,49-53,Transport og lagring,15-74 år,304
-2018,49-53,Transport og lagring,15-74 år,288
-2019,49-53,Transport og lagring,15-74 år,269
-2020,49-53,Transport og lagring,15-74 år,259
-2008,55-56,Overnattings- og serveringsvirksomhet,15-74 år,84
-2009,55-56,Overnattings- og serveringsvirksomhet,15-74 år,120
-2010,55-56,Overnattings- og serveringsvirksomhet,15-74 år,115
-2011,55-56,Overnattings- og serveringsvirksomhet,15-74 år,141
-2012,55-56,Overnattings- og serveringsvirksomhet,15-74 år,106
-2013,55-56,Overnattings- og serveringsvirksomhet,15-74 år,71
-2014,55-56,Overnattings- og serveringsvirksomhet,15-74 år,69
-2015,55-56,Overnattings- og serveringsvirksomhet,15-74 år,19
-2016,55-56,Overnattings- og serveringsvirksomhet,15-74 år,23
-2017,55-56,Overnattings- og serveringsvirksomhet,15-74 år,21
-2018,55-56,Overnattings- og serveringsvirksomhet,15-74 år,19
-2019,55-56,Overnattings- og serveringsvirksomhet,15-74 år,23
-2020,55-56,Overnattings- og serveringsvirksomhet,15-74 år,41
-2008,58-63,Informasjon og kommunikasjon,15-74 år,168
-2009,58-63,Informasjon og kommunikasjon,15-74 år,161
-2010,58-63,Informasjon og kommunikasjon,15-74 år,171
-2011,58-63,Informasjon og kommunikasjon,15-74 år,209
-2012,58-63,Informasjon og kommunikasjon,15-74 år,199
-2013,58-63,Informasjon og kommunikasjon,15-74 år,191
-2014,58-63,Informasjon og kommunikasjon,15-74 år,144
-2015,58-63,Informasjon og kommunikasjon,15-74 år,182
-2016,58-63,Informasjon og kommunikasjon,15-74 år,208
-2017,58-63,Informasjon og kommunikasjon,15-74 år,127
-2018,58-63,Informasjon og kommunikasjon,15-74 år,135
-2019,58-63,Informasjon og kommunikasjon,15-74 år,145
-2020,58-63,Informasjon og kommunikasjon,15-74 år,149
-2008,64-66,Finansiering og forsikring,15-74 år,20
-2009,64-66,Finansiering og forsikring,15-74 år,25
-2010,64-66,Finansiering og forsikring,15-74 år,19
-2011,64-66,Finansiering og forsikring,15-74 år,15
-2012,64-66,Finansiering og forsikring,15-74 år,16
-2013,64-66,Finansiering og forsikring,15-74 år,16
-2014,64-66,Finansiering og forsikring,15-74 år,16
-2015,64-66,Finansiering og forsikring,15-74 år,17
-2016,64-66,Finansiering og forsikring,15-74 år,12
-2017,64-66,Finansiering og forsikring,15-74 år,17
-2018,64-66,Finansiering og forsikring,15-74 år,15
-2019,64-66,Finansiering og forsikring,15-74 år,16
-2020,64-66,Finansiering og forsikring,15-74 år,NA
-2008,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,117
-2009,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,125
-2010,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,122
-2011,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,107
-2012,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,119
-2013,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,126
-2014,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,210
-2015,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,172
-2016,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,136
-2017,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,182
-2018,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,187
-2019,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,209
-2020,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,216
-2008,77-82,Forretningsmessig tjenesteyting,15-74 år,180
-2009,77-82,Forretningsmessig tjenesteyting,15-74 år,175
-2010,77-82,Forretningsmessig tjenesteyting,15-74 år,187
-2011,77-82,Forretningsmessig tjenesteyting,15-74 år,225
-2012,77-82,Forretningsmessig tjenesteyting,15-74 år,282
-2013,77-82,Forretningsmessig tjenesteyting,15-74 år,274
-2014,77-82,Forretningsmessig tjenesteyting,15-74 år,324
-2015,77-82,Forretningsmessig tjenesteyting,15-74 år,162
-2016,77-82,Forretningsmessig tjenesteyting,15-74 år,170
-2017,77-82,Forretningsmessig tjenesteyting,15-74 år,168
-2018,77-82,Forretningsmessig tjenesteyting,15-74 år,160
-2019,77-82,Forretningsmessig tjenesteyting,15-74 år,157
-2020,77-82,Forretningsmessig tjenesteyting,15-74 år,163
-2008,84,"Off.adm., forsvar, sosialforsikring",15-74 år,158
-2009,84,"Off.adm., forsvar, sosialforsikring",15-74 år,151
-2010,84,"Off.adm., forsvar, sosialforsikring",15-74 år,166
-2011,84,"Off.adm., forsvar, sosialforsikring",15-74 år,177
-2012,84,"Off.adm., forsvar, sosialforsikring",15-74 år,181
-2013,84,"Off.adm., forsvar, sosialforsikring",15-74 år,186
-2014,84,"Off.adm., forsvar, sosialforsikring",15-74 år,196
-2015,84,"Off.adm., forsvar, sosialforsikring",15-74 år,184
-2016,84,"Off.adm., forsvar, sosialforsikring",15-74 år,187
-2017,84,"Off.adm., forsvar, sosialforsikring",15-74 år,184
-2018,84,"Off.adm., forsvar, sosialforsikring",15-74 år,188
-2019,84,"Off.adm., forsvar, sosialforsikring",15-74 år,194
-2020,84,"Off.adm., forsvar, sosialforsikring",15-74 år,177
-2008,85,Undervisning,15-74 år,349
-2009,85,Undervisning,15-74 år,330
-2010,85,Undervisning,15-74 år,349
-2011,85,Undervisning,15-74 år,353
-2012,85,Undervisning,15-74 år,356
-2013,85,Undervisning,15-74 år,369
-2014,85,Undervisning,15-74 år,370
-2015,85,Undervisning,15-74 år,377
-2016,85,Undervisning,15-74 år,372
-2017,85,Undervisning,15-74 år,378
-2018,85,Undervisning,15-74 år,386
-2019,85,Undervisning,15-74 år,370
-2020,85,Undervisning,15-74 år,385
-2008,86-88,Helse- og sosialtjenester,15-74 år,563
-2009,86-88,Helse- og sosialtjenester,15-74 år,577
-2010,86-88,Helse- og sosialtjenester,15-74 år,575
-2011,86-88,Helse- og sosialtjenester,15-74 år,599
-2012,86-88,Helse- og sosialtjenester,15-74 år,636
-2013,86-88,Helse- og sosialtjenester,15-74 år,662
-2014,86-88,Helse- og sosialtjenester,15-74 år,693
-2015,86-88,Helse- og sosialtjenester,15-74 år,694
-2016,86-88,Helse- og sosialtjenester,15-74 år,706
-2017,86-88,Helse- og sosialtjenester,15-74 år,704
-2018,86-88,Helse- og sosialtjenester,15-74 år,740
-2019,86-88,Helse- og sosialtjenester,15-74 år,742
-2020,86-88,Helse- og sosialtjenester,15-74 år,730
-2008,90-99,Personlig tjenesteyting,15-74 år,49
-2009,90-99,Personlig tjenesteyting,15-74 år,51
-2010,90-99,Personlig tjenesteyting,15-74 år,49
-2011,90-99,Personlig tjenesteyting,15-74 år,46
-2012,90-99,Personlig tjenesteyting,15-74 år,46
-2013,90-99,Personlig tjenesteyting,15-74 år,50
-2014,90-99,Personlig tjenesteyting,15-74 år,56
-2015,90-99,Personlig tjenesteyting,15-74 år,61
-2016,90-99,Personlig tjenesteyting,15-74 år,59
-2017,90-99,Personlig tjenesteyting,15-74 år,58
-2018,90-99,Personlig tjenesteyting,15-74 år,59
-2019,90-99,Personlig tjenesteyting,15-74 år,55
-2020,90-99,Personlig tjenesteyting,15-74 år,50
-2008,00,Uoppgitt,15-74 år,20
-2009,00,Uoppgitt,15-74 år,17
-2010,00,Uoppgitt,15-74 år,32
-2011,00,Uoppgitt,15-74 år,19
-2012,00,Uoppgitt,15-74 år,17
-2013,00,Uoppgitt,15-74 år,20
-2014,00,Uoppgitt,15-74 år,16
-2015,00,Uoppgitt,15-74 år,44
-2016,00,Uoppgitt,15-74 år,43
-2017,00,Uoppgitt,15-74 år,40
-2018,00,Uoppgitt,15-74 år,38
-2019,00,Uoppgitt,15-74 år,35
+2014,05-09,Bergverksdrift og utvinning,15-74 år,0
+2015,05-09,Bergverksdrift og utvinning,15-74 år,0
+2016,05-09,Bergverksdrift og utvinning,15-74 år,0
+2017,05-09,Bergverksdrift og utvinning,15-74 år,0
+2018,05-09,Bergverksdrift og utvinning,15-74 år,0
+2019,05-09,Bergverksdrift og utvinning,15-74 år,0
+2020,05-09,Bergverksdrift og utvinning,15-74 år,0
+2008,10-33,Industri,15-74 år,0
+2009,10-33,Industri,15-74 år,0
+2010,10-33,Industri,15-74 år,0
+2011,10-33,Industri,15-74 år,0
+2012,10-33,Industri,15-74 år,0
+2013,10-33,Industri,15-74 år,0
+2014,10-33,Industri,15-74 år,0
+2015,10-33,Industri,15-74 år,0
+2016,10-33,Industri,15-74 år,0
+2017,10-33,Industri,15-74 år,0
+2018,10-33,Industri,15-74 år,0
+2019,10-33,Industri,15-74 år,0
+2020,10-33,Industri,15-74 år,1101
+2008,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2009,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2010,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2011,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2012,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2013,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2014,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2015,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2016,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2017,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2018,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2019,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2020,35-39,"Elektrisitet, vann og renovasjon",15-74 år,49
+2008,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2009,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2010,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2011,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2012,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2013,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2014,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2015,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2016,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2017,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2018,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2019,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2020,41-43,Bygge- og anleggsvirksomhet,15-74 år,532
+2008,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2009,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2010,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2011,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2012,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2013,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2014,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2015,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2016,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2017,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2018,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2019,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2020,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,420
+2008,49-53,Transport og lagring,15-74 år,0
+2009,49-53,Transport og lagring,15-74 år,0
+2010,49-53,Transport og lagring,15-74 år,0
+2011,49-53,Transport og lagring,15-74 år,0
+2012,49-53,Transport og lagring,15-74 år,0
+2013,49-53,Transport og lagring,15-74 år,0
+2014,49-53,Transport og lagring,15-74 år,0
+2015,49-53,Transport og lagring,15-74 år,0
+2016,49-53,Transport og lagring,15-74 år,0
+2017,49-53,Transport og lagring,15-74 år,0
+2018,49-53,Transport og lagring,15-74 år,0
+2019,49-53,Transport og lagring,15-74 år,0
+2020,49-53,Transport og lagring,15-74 år,339
+2008,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2009,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2010,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2011,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2012,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2013,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2014,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2015,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2016,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2017,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2018,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2019,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2020,55-56,Overnattings- og serveringsvirksomhet,15-74 år,75
+2008,58-63,Informasjon og kommunikasjon,15-74 år,0
+2009,58-63,Informasjon og kommunikasjon,15-74 år,0
+2010,58-63,Informasjon og kommunikasjon,15-74 år,0
+2011,58-63,Informasjon og kommunikasjon,15-74 år,0
+2012,58-63,Informasjon og kommunikasjon,15-74 år,0
+2013,58-63,Informasjon og kommunikasjon,15-74 år,0
+2014,58-63,Informasjon og kommunikasjon,15-74 år,0
+2015,58-63,Informasjon og kommunikasjon,15-74 år,0
+2016,58-63,Informasjon og kommunikasjon,15-74 år,0
+2017,58-63,Informasjon og kommunikasjon,15-74 år,0
+2018,58-63,Informasjon og kommunikasjon,15-74 år,0
+2019,58-63,Informasjon og kommunikasjon,15-74 år,0
+2020,58-63,Informasjon og kommunikasjon,15-74 år,30
+2008,64-66,Finansiering og forsikring,15-74 år,0
+2009,64-66,Finansiering og forsikring,15-74 år,0
+2010,64-66,Finansiering og forsikring,15-74 år,0
+2011,64-66,Finansiering og forsikring,15-74 år,0
+2012,64-66,Finansiering og forsikring,15-74 år,0
+2013,64-66,Finansiering og forsikring,15-74 år,0
+2014,64-66,Finansiering og forsikring,15-74 år,0
+2015,64-66,Finansiering og forsikring,15-74 år,0
+2016,64-66,Finansiering og forsikring,15-74 år,0
+2017,64-66,Finansiering og forsikring,15-74 år,0
+2018,64-66,Finansiering og forsikring,15-74 år,0
+2019,64-66,Finansiering og forsikring,15-74 år,0
+2020,64-66,Finansiering og forsikring,15-74 år,16
+2008,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2009,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2010,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2011,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2012,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2013,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2014,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2015,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2016,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2017,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2018,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2019,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2020,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,106
+2008,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2009,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2010,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2011,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2012,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2013,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2014,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2015,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2016,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2017,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2018,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2019,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2020,77-82,Forretningsmessig tjenesteyting,15-74 år,186
+2008,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2009,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2010,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2011,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2012,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2013,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2014,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2015,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2016,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2017,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2018,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2019,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2020,84,"Off.adm., forsvar, sosialforsikring",15-74 år,145
+2008,85,Undervisning,15-74 år,0
+2009,85,Undervisning,15-74 år,0
+2010,85,Undervisning,15-74 år,0
+2011,85,Undervisning,15-74 år,0
+2012,85,Undervisning,15-74 år,0
+2013,85,Undervisning,15-74 år,0
+2014,85,Undervisning,15-74 år,0
+2015,85,Undervisning,15-74 år,0
+2016,85,Undervisning,15-74 år,0
+2017,85,Undervisning,15-74 år,0
+2018,85,Undervisning,15-74 år,0
+2019,85,Undervisning,15-74 år,0
+2020,85,Undervisning,15-74 år,460
+2008,86-88,Helse- og sosialtjenester,15-74 år,0
+2009,86-88,Helse- og sosialtjenester,15-74 år,0
+2010,86-88,Helse- og sosialtjenester,15-74 år,0
+2011,86-88,Helse- og sosialtjenester,15-74 år,0
+2012,86-88,Helse- og sosialtjenester,15-74 år,0
+2013,86-88,Helse- og sosialtjenester,15-74 år,0
+2014,86-88,Helse- og sosialtjenester,15-74 år,0
+2015,86-88,Helse- og sosialtjenester,15-74 år,0
+2016,86-88,Helse- og sosialtjenester,15-74 år,0
+2017,86-88,Helse- og sosialtjenester,15-74 år,0
+2018,86-88,Helse- og sosialtjenester,15-74 år,0
+2019,86-88,Helse- og sosialtjenester,15-74 år,0
+2020,86-88,Helse- og sosialtjenester,15-74 år,950
+2008,90-99,Personlig tjenesteyting,15-74 år,0
+2009,90-99,Personlig tjenesteyting,15-74 år,0
+2010,90-99,Personlig tjenesteyting,15-74 år,0
+2011,90-99,Personlig tjenesteyting,15-74 år,0
+2012,90-99,Personlig tjenesteyting,15-74 år,0
+2013,90-99,Personlig tjenesteyting,15-74 år,0
+2014,90-99,Personlig tjenesteyting,15-74 år,0
+2015,90-99,Personlig tjenesteyting,15-74 år,0
+2016,90-99,Personlig tjenesteyting,15-74 år,0
+2017,90-99,Personlig tjenesteyting,15-74 år,0
+2018,90-99,Personlig tjenesteyting,15-74 år,0
+2019,90-99,Personlig tjenesteyting,15-74 år,0
+2020,90-99,Personlig tjenesteyting,15-74 år,123
+2008,00,Uoppgitt,15-74 år,0
+2009,00,Uoppgitt,15-74 år,0
+2010,00,Uoppgitt,15-74 år,0
+2011,00,Uoppgitt,15-74 år,0
+2012,00,Uoppgitt,15-74 år,0
+2013,00,Uoppgitt,15-74 år,0
+2014,00,Uoppgitt,15-74 år,0
+2015,00,Uoppgitt,15-74 år,0
+2016,00,Uoppgitt,15-74 år,0
+2017,00,Uoppgitt,15-74 år,0
+2018,00,Uoppgitt,15-74 år,0
+2019,00,Uoppgitt,15-74 år,0
+2020,00,Uoppgitt,15-74 år,18
+2008,00-99,Alle næringer,15-74 år,0
+2009,00-99,Alle næringer,15-74 år,0
+2010,00-99,Alle næringer,15-74 år,0
+2011,00-99,Alle næringer,15-74 år,0
+2012,00-99,Alle næringer,15-74 år,0
+2013,00-99,Alle næringer,15-74 år,0
+2014,00-99,Alle næringer,15-74 år,0
+2015,00-99,Alle næringer,15-74 år,0
+2016,00-99,Alle næringer,15-74 år,0
+2017,00-99,Alle næringer,15-74 år,0
+2018,00-99,Alle næringer,15-74 år,0
+2019,00-99,Alle næringer,15-74 år,0
+2020,00-99,Alle næringer,15-74 år,9301
+2008,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2009,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2010,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2011,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2012,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2013,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2014,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2015,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2016,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2017,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2018,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2019,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2020,01-03,"Jordbruk, skogbruk og fiske",15-74 år,38
+2008,05-09,Bergverksdrift og utvinning,15-74 år,0
+2009,05-09,Bergverksdrift og utvinning,15-74 år,0
+2010,05-09,Bergverksdrift og utvinning,15-74 år,0
+2011,05-09,Bergverksdrift og utvinning,15-74 år,0
+2012,05-09,Bergverksdrift og utvinning,15-74 år,0
+2013,05-09,Bergverksdrift og utvinning,15-74 år,0
+2014,05-09,Bergverksdrift og utvinning,15-74 år,0
+2015,05-09,Bergverksdrift og utvinning,15-74 år,0
+2016,05-09,Bergverksdrift og utvinning,15-74 år,0
+2017,05-09,Bergverksdrift og utvinning,15-74 år,0
+2018,05-09,Bergverksdrift og utvinning,15-74 år,0
+2019,05-09,Bergverksdrift og utvinning,15-74 år,0
+2020,05-09,Bergverksdrift og utvinning,15-74 år,0
+2008,10-33,Industri,15-74 år,0
+2009,10-33,Industri,15-74 år,0
+2010,10-33,Industri,15-74 år,0
+2011,10-33,Industri,15-74 år,0
+2012,10-33,Industri,15-74 år,0
+2013,10-33,Industri,15-74 år,0
+2014,10-33,Industri,15-74 år,0
+2015,10-33,Industri,15-74 år,0
+2016,10-33,Industri,15-74 år,0
+2017,10-33,Industri,15-74 år,0
+2018,10-33,Industri,15-74 år,0
+2019,10-33,Industri,15-74 år,0
+2020,10-33,Industri,15-74 år,2330
+2008,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2009,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2010,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2011,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2012,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2013,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2014,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2015,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2016,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2017,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2018,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2019,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2020,35-39,"Elektrisitet, vann og renovasjon",15-74 år,172
+2008,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2009,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2010,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2011,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2012,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2013,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2014,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2015,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2016,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2017,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2018,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2019,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2020,41-43,Bygge- og anleggsvirksomhet,15-74 år,639
+2008,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2009,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2010,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2011,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2012,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2013,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2014,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2015,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2016,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2017,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2018,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2019,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2020,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,1009
+2008,49-53,Transport og lagring,15-74 år,0
+2009,49-53,Transport og lagring,15-74 år,0
+2010,49-53,Transport og lagring,15-74 år,0
+2011,49-53,Transport og lagring,15-74 år,0
+2012,49-53,Transport og lagring,15-74 år,0
+2013,49-53,Transport og lagring,15-74 år,0
+2014,49-53,Transport og lagring,15-74 år,0
+2015,49-53,Transport og lagring,15-74 år,0
+2016,49-53,Transport og lagring,15-74 år,0
+2017,49-53,Transport og lagring,15-74 år,0
+2018,49-53,Transport og lagring,15-74 år,0
+2019,49-53,Transport og lagring,15-74 år,0
+2020,49-53,Transport og lagring,15-74 år,345
+2008,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2009,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2010,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2011,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2012,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2013,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2014,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2015,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2016,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2017,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2018,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2019,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2020,55-56,Overnattings- og serveringsvirksomhet,15-74 år,350
+2008,58-63,Informasjon og kommunikasjon,15-74 år,0
+2009,58-63,Informasjon og kommunikasjon,15-74 år,0
+2010,58-63,Informasjon og kommunikasjon,15-74 år,0
+2011,58-63,Informasjon og kommunikasjon,15-74 år,0
+2012,58-63,Informasjon og kommunikasjon,15-74 år,0
+2013,58-63,Informasjon og kommunikasjon,15-74 år,0
+2014,58-63,Informasjon og kommunikasjon,15-74 år,0
+2015,58-63,Informasjon og kommunikasjon,15-74 år,0
+2016,58-63,Informasjon og kommunikasjon,15-74 år,0
+2017,58-63,Informasjon og kommunikasjon,15-74 år,0
+2018,58-63,Informasjon og kommunikasjon,15-74 år,0
+2019,58-63,Informasjon og kommunikasjon,15-74 år,0
+2020,58-63,Informasjon og kommunikasjon,15-74 år,104
+2008,64-66,Finansiering og forsikring,15-74 år,0
+2009,64-66,Finansiering og forsikring,15-74 år,0
+2010,64-66,Finansiering og forsikring,15-74 år,0
+2011,64-66,Finansiering og forsikring,15-74 år,0
+2012,64-66,Finansiering og forsikring,15-74 år,0
+2013,64-66,Finansiering og forsikring,15-74 år,0
+2014,64-66,Finansiering og forsikring,15-74 år,0
+2015,64-66,Finansiering og forsikring,15-74 år,0
+2016,64-66,Finansiering og forsikring,15-74 år,0
+2017,64-66,Finansiering og forsikring,15-74 år,0
+2018,64-66,Finansiering og forsikring,15-74 år,0
+2019,64-66,Finansiering og forsikring,15-74 år,0
+2020,64-66,Finansiering og forsikring,15-74 år,39
+2008,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2009,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2010,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2011,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2012,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2013,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2014,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2015,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2016,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2017,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2018,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2019,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2020,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,501
+2008,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2009,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2010,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2011,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2012,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2013,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2014,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2015,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2016,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2017,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2018,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2019,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2020,77-82,Forretningsmessig tjenesteyting,15-74 år,217
+2008,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2009,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2010,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2011,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2012,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2013,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2014,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2015,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2016,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2017,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2018,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2019,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2020,84,"Off.adm., forsvar, sosialforsikring",15-74 år,355
+2008,85,Undervisning,15-74 år,0
+2009,85,Undervisning,15-74 år,0
+2010,85,Undervisning,15-74 år,0
+2011,85,Undervisning,15-74 år,0
+2012,85,Undervisning,15-74 år,0
+2013,85,Undervisning,15-74 år,0
+2014,85,Undervisning,15-74 år,0
+2015,85,Undervisning,15-74 år,0
+2016,85,Undervisning,15-74 år,0
+2017,85,Undervisning,15-74 år,0
+2018,85,Undervisning,15-74 år,0
+2019,85,Undervisning,15-74 år,0
+2020,85,Undervisning,15-74 år,786
+2008,86-88,Helse- og sosialtjenester,15-74 år,0
+2009,86-88,Helse- og sosialtjenester,15-74 år,0
+2010,86-88,Helse- og sosialtjenester,15-74 år,0
+2011,86-88,Helse- og sosialtjenester,15-74 år,0
+2012,86-88,Helse- og sosialtjenester,15-74 år,0
+2013,86-88,Helse- og sosialtjenester,15-74 år,0
+2014,86-88,Helse- og sosialtjenester,15-74 år,0
+2015,86-88,Helse- og sosialtjenester,15-74 år,0
+2016,86-88,Helse- og sosialtjenester,15-74 år,0
+2017,86-88,Helse- og sosialtjenester,15-74 år,0
+2018,86-88,Helse- og sosialtjenester,15-74 år,0
+2019,86-88,Helse- og sosialtjenester,15-74 år,0
+2020,86-88,Helse- og sosialtjenester,15-74 år,2168
+2008,90-99,Personlig tjenesteyting,15-74 år,0
+2009,90-99,Personlig tjenesteyting,15-74 år,0
+2010,90-99,Personlig tjenesteyting,15-74 år,0
+2011,90-99,Personlig tjenesteyting,15-74 år,0
+2012,90-99,Personlig tjenesteyting,15-74 år,0
+2013,90-99,Personlig tjenesteyting,15-74 år,0
+2014,90-99,Personlig tjenesteyting,15-74 år,0
+2015,90-99,Personlig tjenesteyting,15-74 år,0
+2016,90-99,Personlig tjenesteyting,15-74 år,0
+2017,90-99,Personlig tjenesteyting,15-74 år,0
+2018,90-99,Personlig tjenesteyting,15-74 år,0
+2019,90-99,Personlig tjenesteyting,15-74 år,0
+2020,90-99,Personlig tjenesteyting,15-74 år,217
+2008,00,Uoppgitt,15-74 år,0
+2009,00,Uoppgitt,15-74 år,0
+2010,00,Uoppgitt,15-74 år,0
+2011,00,Uoppgitt,15-74 år,0
+2012,00,Uoppgitt,15-74 år,0
+2013,00,Uoppgitt,15-74 år,0
+2014,00,Uoppgitt,15-74 år,0
+2015,00,Uoppgitt,15-74 år,0
+2016,00,Uoppgitt,15-74 år,0
+2017,00,Uoppgitt,15-74 år,0
+2018,00,Uoppgitt,15-74 år,0
+2019,00,Uoppgitt,15-74 år,0
 2020,00,Uoppgitt,15-74 år,31
+2008,00-99,Alle næringer,15-74 år,0
+2009,00-99,Alle næringer,15-74 år,0
+2010,00-99,Alle næringer,15-74 år,0
+2011,00-99,Alle næringer,15-74 år,0
+2012,00-99,Alle næringer,15-74 år,0
+2013,00-99,Alle næringer,15-74 år,0
+2014,00-99,Alle næringer,15-74 år,0
+2015,00-99,Alle næringer,15-74 år,0
+2016,00-99,Alle næringer,15-74 år,0
+2017,00-99,Alle næringer,15-74 år,0
+2018,00-99,Alle næringer,15-74 år,0
+2019,00-99,Alle næringer,15-74 år,0
+2020,00-99,Alle næringer,15-74 år,1085
+2008,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2009,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2010,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2011,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2012,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2013,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2014,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2015,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2016,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2017,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2018,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2019,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2020,01-03,"Jordbruk, skogbruk og fiske",15-74 år,122
+2008,05-09,Bergverksdrift og utvinning,15-74 år,0
+2009,05-09,Bergverksdrift og utvinning,15-74 år,0
+2010,05-09,Bergverksdrift og utvinning,15-74 år,0
+2011,05-09,Bergverksdrift og utvinning,15-74 år,0
+2012,05-09,Bergverksdrift og utvinning,15-74 år,0
+2013,05-09,Bergverksdrift og utvinning,15-74 år,0
+2014,05-09,Bergverksdrift og utvinning,15-74 år,0
+2015,05-09,Bergverksdrift og utvinning,15-74 år,0
+2016,05-09,Bergverksdrift og utvinning,15-74 år,0
+2017,05-09,Bergverksdrift og utvinning,15-74 år,0
+2018,05-09,Bergverksdrift og utvinning,15-74 år,0
+2019,05-09,Bergverksdrift og utvinning,15-74 år,0
+2020,05-09,Bergverksdrift og utvinning,15-74 år,NA
+2008,10-33,Industri,15-74 år,0
+2009,10-33,Industri,15-74 år,0
+2010,10-33,Industri,15-74 år,0
+2011,10-33,Industri,15-74 år,0
+2012,10-33,Industri,15-74 år,0
+2013,10-33,Industri,15-74 år,0
+2014,10-33,Industri,15-74 år,0
+2015,10-33,Industri,15-74 år,0
+2016,10-33,Industri,15-74 år,0
+2017,10-33,Industri,15-74 år,0
+2018,10-33,Industri,15-74 år,0
+2019,10-33,Industri,15-74 år,0
+2020,10-33,Industri,15-74 år,141
+2008,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2009,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2010,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2011,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2012,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2013,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2014,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2015,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2016,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2017,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2018,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2019,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2020,35-39,"Elektrisitet, vann og renovasjon",15-74 år,15
+2008,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2009,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2010,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2011,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2012,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2013,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2014,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2015,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2016,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2017,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2018,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2019,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2020,41-43,Bygge- og anleggsvirksomhet,15-74 år,149
+2008,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2009,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2010,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2011,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2012,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2013,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2014,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2015,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2016,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2017,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2018,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2019,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2020,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,85
+2008,49-53,Transport og lagring,15-74 år,0
+2009,49-53,Transport og lagring,15-74 år,0
+2010,49-53,Transport og lagring,15-74 år,0
+2011,49-53,Transport og lagring,15-74 år,0
+2012,49-53,Transport og lagring,15-74 år,0
+2013,49-53,Transport og lagring,15-74 år,0
+2014,49-53,Transport og lagring,15-74 år,0
+2015,49-53,Transport og lagring,15-74 år,0
+2016,49-53,Transport og lagring,15-74 år,0
+2017,49-53,Transport og lagring,15-74 år,0
+2018,49-53,Transport og lagring,15-74 år,0
+2019,49-53,Transport og lagring,15-74 år,0
+2020,49-53,Transport og lagring,15-74 år,39
+2008,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2009,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2010,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2011,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2012,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2013,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2014,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2015,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2016,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2017,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2018,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2019,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2020,55-56,Overnattings- og serveringsvirksomhet,15-74 år,15
+2008,58-63,Informasjon og kommunikasjon,15-74 år,0
+2009,58-63,Informasjon og kommunikasjon,15-74 år,0
+2010,58-63,Informasjon og kommunikasjon,15-74 år,0
+2011,58-63,Informasjon og kommunikasjon,15-74 år,0
+2012,58-63,Informasjon og kommunikasjon,15-74 år,0
+2013,58-63,Informasjon og kommunikasjon,15-74 år,0
+2014,58-63,Informasjon og kommunikasjon,15-74 år,0
+2015,58-63,Informasjon og kommunikasjon,15-74 år,0
+2016,58-63,Informasjon og kommunikasjon,15-74 år,0
+2017,58-63,Informasjon og kommunikasjon,15-74 år,0
+2018,58-63,Informasjon og kommunikasjon,15-74 år,0
+2019,58-63,Informasjon og kommunikasjon,15-74 år,0
+2020,58-63,Informasjon og kommunikasjon,15-74 år,NA
+2008,64-66,Finansiering og forsikring,15-74 år,0
+2009,64-66,Finansiering og forsikring,15-74 år,0
+2010,64-66,Finansiering og forsikring,15-74 år,0
+2011,64-66,Finansiering og forsikring,15-74 år,0
+2012,64-66,Finansiering og forsikring,15-74 år,0
+2013,64-66,Finansiering og forsikring,15-74 år,0
+2014,64-66,Finansiering og forsikring,15-74 år,0
+2015,64-66,Finansiering og forsikring,15-74 år,0
+2016,64-66,Finansiering og forsikring,15-74 år,0
+2017,64-66,Finansiering og forsikring,15-74 år,0
+2018,64-66,Finansiering og forsikring,15-74 år,0
+2019,64-66,Finansiering og forsikring,15-74 år,0
+2020,64-66,Finansiering og forsikring,15-74 år,0
+2008,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2009,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2010,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2011,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2012,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2013,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2014,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2015,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2016,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2017,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2018,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2019,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2020,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,45
+2008,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2009,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2010,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2011,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2012,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2013,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2014,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2015,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2016,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2017,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2018,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2019,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2020,77-82,Forretningsmessig tjenesteyting,15-74 år,19
+2008,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2009,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2010,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2011,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2012,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2013,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2014,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2015,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2016,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2017,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2018,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2019,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2020,84,"Off.adm., forsvar, sosialforsikring",15-74 år,40
+2008,85,Undervisning,15-74 år,0
+2009,85,Undervisning,15-74 år,0
+2010,85,Undervisning,15-74 år,0
+2011,85,Undervisning,15-74 år,0
+2012,85,Undervisning,15-74 år,0
+2013,85,Undervisning,15-74 år,0
+2014,85,Undervisning,15-74 år,0
+2015,85,Undervisning,15-74 år,0
+2016,85,Undervisning,15-74 år,0
+2017,85,Undervisning,15-74 år,0
+2018,85,Undervisning,15-74 år,0
+2019,85,Undervisning,15-74 år,0
+2020,85,Undervisning,15-74 år,115
+2008,86-88,Helse- og sosialtjenester,15-74 år,0
+2009,86-88,Helse- og sosialtjenester,15-74 år,0
+2010,86-88,Helse- og sosialtjenester,15-74 år,0
+2011,86-88,Helse- og sosialtjenester,15-74 år,0
+2012,86-88,Helse- og sosialtjenester,15-74 år,0
+2013,86-88,Helse- og sosialtjenester,15-74 år,0
+2014,86-88,Helse- og sosialtjenester,15-74 år,0
+2015,86-88,Helse- og sosialtjenester,15-74 år,0
+2016,86-88,Helse- og sosialtjenester,15-74 år,0
+2017,86-88,Helse- og sosialtjenester,15-74 år,0
+2018,86-88,Helse- og sosialtjenester,15-74 år,0
+2019,86-88,Helse- og sosialtjenester,15-74 år,0
+2020,86-88,Helse- og sosialtjenester,15-74 år,267
+2008,90-99,Personlig tjenesteyting,15-74 år,0
+2009,90-99,Personlig tjenesteyting,15-74 år,0
+2010,90-99,Personlig tjenesteyting,15-74 år,0
+2011,90-99,Personlig tjenesteyting,15-74 år,0
+2012,90-99,Personlig tjenesteyting,15-74 år,0
+2013,90-99,Personlig tjenesteyting,15-74 år,0
+2014,90-99,Personlig tjenesteyting,15-74 år,0
+2015,90-99,Personlig tjenesteyting,15-74 år,0
+2016,90-99,Personlig tjenesteyting,15-74 år,0
+2017,90-99,Personlig tjenesteyting,15-74 år,0
+2018,90-99,Personlig tjenesteyting,15-74 år,0
+2019,90-99,Personlig tjenesteyting,15-74 år,0
+2020,90-99,Personlig tjenesteyting,15-74 år,15
+2008,00,Uoppgitt,15-74 år,0
+2009,00,Uoppgitt,15-74 år,0
+2010,00,Uoppgitt,15-74 år,0
+2011,00,Uoppgitt,15-74 år,0
+2012,00,Uoppgitt,15-74 år,0
+2013,00,Uoppgitt,15-74 år,0
+2014,00,Uoppgitt,15-74 år,0
+2015,00,Uoppgitt,15-74 år,0
+2016,00,Uoppgitt,15-74 år,0
+2017,00,Uoppgitt,15-74 år,0
+2018,00,Uoppgitt,15-74 år,0
+2019,00,Uoppgitt,15-74 år,0
+2020,00,Uoppgitt,15-74 år,15
+2008,00-99,Alle næringer,15-74 år,0
+2009,00-99,Alle næringer,15-74 år,0
+2010,00-99,Alle næringer,15-74 år,0
+2011,00-99,Alle næringer,15-74 år,0
+2012,00-99,Alle næringer,15-74 år,0
+2013,00-99,Alle næringer,15-74 år,0
+2014,00-99,Alle næringer,15-74 år,0
+2015,00-99,Alle næringer,15-74 år,0
+2016,00-99,Alle næringer,15-74 år,0
+2017,00-99,Alle næringer,15-74 år,0
+2018,00-99,Alle næringer,15-74 år,0
+2019,00-99,Alle næringer,15-74 år,0
+2020,00-99,Alle næringer,15-74 år,1188
+2008,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2009,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2010,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2011,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2012,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2013,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2014,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2015,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2016,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2017,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2018,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2019,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2020,01-03,"Jordbruk, skogbruk og fiske",15-74 år,231
+2008,05-09,Bergverksdrift og utvinning,15-74 år,0
+2009,05-09,Bergverksdrift og utvinning,15-74 år,0
+2010,05-09,Bergverksdrift og utvinning,15-74 år,0
+2011,05-09,Bergverksdrift og utvinning,15-74 år,0
+2012,05-09,Bergverksdrift og utvinning,15-74 år,0
+2013,05-09,Bergverksdrift og utvinning,15-74 år,0
+2014,05-09,Bergverksdrift og utvinning,15-74 år,0
+2015,05-09,Bergverksdrift og utvinning,15-74 år,0
+2016,05-09,Bergverksdrift og utvinning,15-74 år,0
+2017,05-09,Bergverksdrift og utvinning,15-74 år,0
+2018,05-09,Bergverksdrift og utvinning,15-74 år,0
+2019,05-09,Bergverksdrift og utvinning,15-74 år,0
+2020,05-09,Bergverksdrift og utvinning,15-74 år,0
+2008,10-33,Industri,15-74 år,0
+2009,10-33,Industri,15-74 år,0
+2010,10-33,Industri,15-74 år,0
+2011,10-33,Industri,15-74 år,0
+2012,10-33,Industri,15-74 år,0
+2013,10-33,Industri,15-74 år,0
+2014,10-33,Industri,15-74 år,0
+2015,10-33,Industri,15-74 år,0
+2016,10-33,Industri,15-74 år,0
+2017,10-33,Industri,15-74 år,0
+2018,10-33,Industri,15-74 år,0
+2019,10-33,Industri,15-74 år,0
+2020,10-33,Industri,15-74 år,49
+2008,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2009,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2010,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2011,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2012,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2013,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2014,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2015,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2016,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2017,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2018,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2019,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2020,35-39,"Elektrisitet, vann og renovasjon",15-74 år,17
+2008,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2009,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2010,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2011,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2012,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2013,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2014,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2015,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2016,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2017,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2018,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2019,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2020,41-43,Bygge- og anleggsvirksomhet,15-74 år,119
+2008,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2009,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2010,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2011,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2012,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2013,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2014,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2015,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2016,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2017,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2018,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2019,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2020,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,167
+2008,49-53,Transport og lagring,15-74 år,0
+2009,49-53,Transport og lagring,15-74 år,0
+2010,49-53,Transport og lagring,15-74 år,0
+2011,49-53,Transport og lagring,15-74 år,0
+2012,49-53,Transport og lagring,15-74 år,0
+2013,49-53,Transport og lagring,15-74 år,0
+2014,49-53,Transport og lagring,15-74 år,0
+2015,49-53,Transport og lagring,15-74 år,0
+2016,49-53,Transport og lagring,15-74 år,0
+2017,49-53,Transport og lagring,15-74 år,0
+2018,49-53,Transport og lagring,15-74 år,0
+2019,49-53,Transport og lagring,15-74 år,0
+2020,49-53,Transport og lagring,15-74 år,68
+2008,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2009,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2010,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2011,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2012,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2013,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2014,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2015,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2016,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2017,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2018,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2019,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2020,55-56,Overnattings- og serveringsvirksomhet,15-74 år,12
+2008,58-63,Informasjon og kommunikasjon,15-74 år,0
+2009,58-63,Informasjon og kommunikasjon,15-74 år,0
+2010,58-63,Informasjon og kommunikasjon,15-74 år,0
+2011,58-63,Informasjon og kommunikasjon,15-74 år,0
+2012,58-63,Informasjon og kommunikasjon,15-74 år,0
+2013,58-63,Informasjon og kommunikasjon,15-74 år,0
+2014,58-63,Informasjon og kommunikasjon,15-74 år,0
+2015,58-63,Informasjon og kommunikasjon,15-74 år,0
+2016,58-63,Informasjon og kommunikasjon,15-74 år,0
+2017,58-63,Informasjon og kommunikasjon,15-74 år,0
+2018,58-63,Informasjon og kommunikasjon,15-74 år,0
+2019,58-63,Informasjon og kommunikasjon,15-74 år,0
+2020,58-63,Informasjon og kommunikasjon,15-74 år,NA
+2008,64-66,Finansiering og forsikring,15-74 år,0
+2009,64-66,Finansiering og forsikring,15-74 år,0
+2010,64-66,Finansiering og forsikring,15-74 år,0
+2011,64-66,Finansiering og forsikring,15-74 år,0
+2012,64-66,Finansiering og forsikring,15-74 år,0
+2013,64-66,Finansiering og forsikring,15-74 år,0
+2014,64-66,Finansiering og forsikring,15-74 år,0
+2015,64-66,Finansiering og forsikring,15-74 år,0
+2016,64-66,Finansiering og forsikring,15-74 år,0
+2017,64-66,Finansiering og forsikring,15-74 år,0
+2018,64-66,Finansiering og forsikring,15-74 år,0
+2019,64-66,Finansiering og forsikring,15-74 år,0
+2020,64-66,Finansiering og forsikring,15-74 år,NA
+2008,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2009,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2010,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2011,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2012,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2013,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2014,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2015,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2016,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2017,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2018,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2019,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2020,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,31
+2008,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2009,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2010,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2011,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2012,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2013,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2014,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2015,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2016,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2017,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2018,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2019,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2020,77-82,Forretningsmessig tjenesteyting,15-74 år,31
+2008,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2009,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2010,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2011,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2012,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2013,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2014,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2015,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2016,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2017,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2018,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2019,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2020,84,"Off.adm., forsvar, sosialforsikring",15-74 år,60
+2008,85,Undervisning,15-74 år,0
+2009,85,Undervisning,15-74 år,0
+2010,85,Undervisning,15-74 år,0
+2011,85,Undervisning,15-74 år,0
+2012,85,Undervisning,15-74 år,0
+2013,85,Undervisning,15-74 år,0
+2014,85,Undervisning,15-74 år,0
+2015,85,Undervisning,15-74 år,0
+2016,85,Undervisning,15-74 år,0
+2017,85,Undervisning,15-74 år,0
+2018,85,Undervisning,15-74 år,0
+2019,85,Undervisning,15-74 år,0
+2020,85,Undervisning,15-74 år,79
+2008,86-88,Helse- og sosialtjenester,15-74 år,0
+2009,86-88,Helse- og sosialtjenester,15-74 år,0
+2010,86-88,Helse- og sosialtjenester,15-74 år,0
+2011,86-88,Helse- og sosialtjenester,15-74 år,0
+2012,86-88,Helse- og sosialtjenester,15-74 år,0
+2013,86-88,Helse- og sosialtjenester,15-74 år,0
+2014,86-88,Helse- og sosialtjenester,15-74 år,0
+2015,86-88,Helse- og sosialtjenester,15-74 år,0
+2016,86-88,Helse- og sosialtjenester,15-74 år,0
+2017,86-88,Helse- og sosialtjenester,15-74 år,0
+2018,86-88,Helse- og sosialtjenester,15-74 år,0
+2019,86-88,Helse- og sosialtjenester,15-74 år,0
+2020,86-88,Helse- og sosialtjenester,15-74 år,264
+2008,90-99,Personlig tjenesteyting,15-74 år,0
+2009,90-99,Personlig tjenesteyting,15-74 år,0
+2010,90-99,Personlig tjenesteyting,15-74 år,0
+2011,90-99,Personlig tjenesteyting,15-74 år,0
+2012,90-99,Personlig tjenesteyting,15-74 år,0
+2013,90-99,Personlig tjenesteyting,15-74 år,0
+2014,90-99,Personlig tjenesteyting,15-74 år,0
+2015,90-99,Personlig tjenesteyting,15-74 år,0
+2016,90-99,Personlig tjenesteyting,15-74 år,0
+2017,90-99,Personlig tjenesteyting,15-74 år,0
+2018,90-99,Personlig tjenesteyting,15-74 år,0
+2019,90-99,Personlig tjenesteyting,15-74 år,0
+2020,90-99,Personlig tjenesteyting,15-74 år,30
+2008,00,Uoppgitt,15-74 år,0
+2009,00,Uoppgitt,15-74 år,0
+2010,00,Uoppgitt,15-74 år,0
+2011,00,Uoppgitt,15-74 år,0
+2012,00,Uoppgitt,15-74 år,0
+2013,00,Uoppgitt,15-74 år,0
+2014,00,Uoppgitt,15-74 år,0
+2015,00,Uoppgitt,15-74 år,0
+2016,00,Uoppgitt,15-74 år,0
+2017,00,Uoppgitt,15-74 år,0
+2018,00,Uoppgitt,15-74 år,0
+2019,00,Uoppgitt,15-74 år,0
+2020,00,Uoppgitt,15-74 år,6
+2008,00-99,Alle næringer,15-74 år,0
+2009,00-99,Alle næringer,15-74 år,0
+2010,00-99,Alle næringer,15-74 år,0
+2011,00-99,Alle næringer,15-74 år,0
+2012,00-99,Alle næringer,15-74 år,0
+2013,00-99,Alle næringer,15-74 år,0
+2014,00-99,Alle næringer,15-74 år,0
+2015,00-99,Alle næringer,15-74 år,0
+2016,00-99,Alle næringer,15-74 år,0
+2017,00-99,Alle næringer,15-74 år,0
+2018,00-99,Alle næringer,15-74 år,0
+2019,00-99,Alle næringer,15-74 år,0
+2020,00-99,Alle næringer,15-74 år,5808
+2008,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2009,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2010,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2011,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2012,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2013,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2014,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2015,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2016,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2017,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2018,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2019,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2020,01-03,"Jordbruk, skogbruk og fiske",15-74 år,416
+2008,05-09,Bergverksdrift og utvinning,15-74 år,0
+2009,05-09,Bergverksdrift og utvinning,15-74 år,0
+2010,05-09,Bergverksdrift og utvinning,15-74 år,0
+2011,05-09,Bergverksdrift og utvinning,15-74 år,0
+2012,05-09,Bergverksdrift og utvinning,15-74 år,0
+2013,05-09,Bergverksdrift og utvinning,15-74 år,0
+2014,05-09,Bergverksdrift og utvinning,15-74 år,0
+2015,05-09,Bergverksdrift og utvinning,15-74 år,0
+2016,05-09,Bergverksdrift og utvinning,15-74 år,0
+2017,05-09,Bergverksdrift og utvinning,15-74 år,0
+2018,05-09,Bergverksdrift og utvinning,15-74 år,0
+2019,05-09,Bergverksdrift og utvinning,15-74 år,0
+2020,05-09,Bergverksdrift og utvinning,15-74 år,NA
+2008,10-33,Industri,15-74 år,0
+2009,10-33,Industri,15-74 år,0
+2010,10-33,Industri,15-74 år,0
+2011,10-33,Industri,15-74 år,0
+2012,10-33,Industri,15-74 år,0
+2013,10-33,Industri,15-74 år,0
+2014,10-33,Industri,15-74 år,0
+2015,10-33,Industri,15-74 år,0
+2016,10-33,Industri,15-74 år,0
+2017,10-33,Industri,15-74 år,0
+2018,10-33,Industri,15-74 år,0
+2019,10-33,Industri,15-74 år,0
+2020,10-33,Industri,15-74 år,1012
+2008,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2009,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2010,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2011,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2012,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2013,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2014,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2015,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2016,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2017,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2018,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2019,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2020,35-39,"Elektrisitet, vann og renovasjon",15-74 år,106
+2008,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2009,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2010,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2011,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2012,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2013,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2014,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2015,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2016,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2017,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2018,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2019,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2020,41-43,Bygge- og anleggsvirksomhet,15-74 år,556
+2008,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2009,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2010,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2011,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2012,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2013,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2014,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2015,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2016,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2017,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2018,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2019,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2020,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,541
+2008,49-53,Transport og lagring,15-74 år,0
+2009,49-53,Transport og lagring,15-74 år,0
+2010,49-53,Transport og lagring,15-74 år,0
+2011,49-53,Transport og lagring,15-74 år,0
+2012,49-53,Transport og lagring,15-74 år,0
+2013,49-53,Transport og lagring,15-74 år,0
+2014,49-53,Transport og lagring,15-74 år,0
+2015,49-53,Transport og lagring,15-74 år,0
+2016,49-53,Transport og lagring,15-74 år,0
+2017,49-53,Transport og lagring,15-74 år,0
+2018,49-53,Transport og lagring,15-74 år,0
+2019,49-53,Transport og lagring,15-74 år,0
+2020,49-53,Transport og lagring,15-74 år,221
+2008,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2009,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2010,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2011,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2012,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2013,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2014,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2015,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2016,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2017,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2018,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2019,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2020,55-56,Overnattings- og serveringsvirksomhet,15-74 år,113
+2008,58-63,Informasjon og kommunikasjon,15-74 år,0
+2009,58-63,Informasjon og kommunikasjon,15-74 år,0
+2010,58-63,Informasjon og kommunikasjon,15-74 år,0
+2011,58-63,Informasjon og kommunikasjon,15-74 år,0
+2012,58-63,Informasjon og kommunikasjon,15-74 år,0
+2013,58-63,Informasjon og kommunikasjon,15-74 år,0
+2014,58-63,Informasjon og kommunikasjon,15-74 år,0
+2015,58-63,Informasjon og kommunikasjon,15-74 år,0
+2016,58-63,Informasjon og kommunikasjon,15-74 år,0
+2017,58-63,Informasjon og kommunikasjon,15-74 år,0
+2018,58-63,Informasjon og kommunikasjon,15-74 år,0
+2019,58-63,Informasjon og kommunikasjon,15-74 år,0
+2020,58-63,Informasjon og kommunikasjon,15-74 år,63
+2008,64-66,Finansiering og forsikring,15-74 år,0
+2009,64-66,Finansiering og forsikring,15-74 år,0
+2010,64-66,Finansiering og forsikring,15-74 år,0
+2011,64-66,Finansiering og forsikring,15-74 år,0
+2012,64-66,Finansiering og forsikring,15-74 år,0
+2013,64-66,Finansiering og forsikring,15-74 år,0
+2014,64-66,Finansiering og forsikring,15-74 år,0
+2015,64-66,Finansiering og forsikring,15-74 år,0
+2016,64-66,Finansiering og forsikring,15-74 år,0
+2017,64-66,Finansiering og forsikring,15-74 år,0
+2018,64-66,Finansiering og forsikring,15-74 år,0
+2019,64-66,Finansiering og forsikring,15-74 år,0
+2020,64-66,Finansiering og forsikring,15-74 år,16
+2008,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2009,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2010,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2011,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2012,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2013,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2014,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2015,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2016,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2017,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2018,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2019,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2020,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,161
+2008,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2009,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2010,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2011,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2012,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2013,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2014,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2015,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2016,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2017,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2018,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2019,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2020,77-82,Forretningsmessig tjenesteyting,15-74 år,156
+2008,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2009,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2010,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2011,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2012,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2013,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2014,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2015,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2016,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2017,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2018,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2019,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2020,84,"Off.adm., forsvar, sosialforsikring",15-74 år,201
+2008,85,Undervisning,15-74 år,0
+2009,85,Undervisning,15-74 år,0
+2010,85,Undervisning,15-74 år,0
+2011,85,Undervisning,15-74 år,0
+2012,85,Undervisning,15-74 år,0
+2013,85,Undervisning,15-74 år,0
+2014,85,Undervisning,15-74 år,0
+2015,85,Undervisning,15-74 år,0
+2016,85,Undervisning,15-74 år,0
+2017,85,Undervisning,15-74 år,0
+2018,85,Undervisning,15-74 år,0
+2019,85,Undervisning,15-74 år,0
+2020,85,Undervisning,15-74 år,477
+2008,86-88,Helse- og sosialtjenester,15-74 år,0
+2009,86-88,Helse- og sosialtjenester,15-74 år,0
+2010,86-88,Helse- og sosialtjenester,15-74 år,0
+2011,86-88,Helse- og sosialtjenester,15-74 år,0
+2012,86-88,Helse- og sosialtjenester,15-74 år,0
+2013,86-88,Helse- og sosialtjenester,15-74 år,0
+2014,86-88,Helse- og sosialtjenester,15-74 år,0
+2015,86-88,Helse- og sosialtjenester,15-74 år,0
+2016,86-88,Helse- og sosialtjenester,15-74 år,0
+2017,86-88,Helse- og sosialtjenester,15-74 år,0
+2018,86-88,Helse- og sosialtjenester,15-74 år,0
+2019,86-88,Helse- og sosialtjenester,15-74 år,0
+2020,86-88,Helse- og sosialtjenester,15-74 år,1577
+2008,90-99,Personlig tjenesteyting,15-74 år,0
+2009,90-99,Personlig tjenesteyting,15-74 år,0
+2010,90-99,Personlig tjenesteyting,15-74 år,0
+2011,90-99,Personlig tjenesteyting,15-74 år,0
+2012,90-99,Personlig tjenesteyting,15-74 år,0
+2013,90-99,Personlig tjenesteyting,15-74 år,0
+2014,90-99,Personlig tjenesteyting,15-74 år,0
+2015,90-99,Personlig tjenesteyting,15-74 år,0
+2016,90-99,Personlig tjenesteyting,15-74 år,0
+2017,90-99,Personlig tjenesteyting,15-74 år,0
+2018,90-99,Personlig tjenesteyting,15-74 år,0
+2019,90-99,Personlig tjenesteyting,15-74 år,0
+2020,90-99,Personlig tjenesteyting,15-74 år,134
+2008,00,Uoppgitt,15-74 år,0
+2009,00,Uoppgitt,15-74 år,0
+2010,00,Uoppgitt,15-74 år,0
+2011,00,Uoppgitt,15-74 år,0
+2012,00,Uoppgitt,15-74 år,0
+2013,00,Uoppgitt,15-74 år,0
+2014,00,Uoppgitt,15-74 år,0
+2015,00,Uoppgitt,15-74 år,0
+2016,00,Uoppgitt,15-74 år,0
+2017,00,Uoppgitt,15-74 år,0
+2018,00,Uoppgitt,15-74 år,0
+2019,00,Uoppgitt,15-74 år,0
+2020,00,Uoppgitt,15-74 år,NA
+2008,00-99,Alle næringer,15-74 år,0
+2009,00-99,Alle næringer,15-74 år,0
+2010,00-99,Alle næringer,15-74 år,0
+2011,00-99,Alle næringer,15-74 år,0
+2012,00-99,Alle næringer,15-74 år,0
+2013,00-99,Alle næringer,15-74 år,0
+2014,00-99,Alle næringer,15-74 år,0
+2015,00-99,Alle næringer,15-74 år,0
+2016,00-99,Alle næringer,15-74 år,0
+2017,00-99,Alle næringer,15-74 år,0
+2018,00-99,Alle næringer,15-74 år,0
+2019,00-99,Alle næringer,15-74 år,0
+2020,00-99,Alle næringer,15-74 år,5291
+2008,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2009,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2010,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2011,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2012,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2013,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2014,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2015,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2016,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2017,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2018,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2019,01-03,"Jordbruk, skogbruk og fiske",15-74 år,0
+2020,01-03,"Jordbruk, skogbruk og fiske",15-74 år,219
+2008,05-09,Bergverksdrift og utvinning,15-74 år,0
+2009,05-09,Bergverksdrift og utvinning,15-74 år,0
+2010,05-09,Bergverksdrift og utvinning,15-74 år,0
+2011,05-09,Bergverksdrift og utvinning,15-74 år,0
+2012,05-09,Bergverksdrift og utvinning,15-74 år,0
+2013,05-09,Bergverksdrift og utvinning,15-74 år,0
+2014,05-09,Bergverksdrift og utvinning,15-74 år,0
+2015,05-09,Bergverksdrift og utvinning,15-74 år,0
+2016,05-09,Bergverksdrift og utvinning,15-74 år,0
+2017,05-09,Bergverksdrift og utvinning,15-74 år,0
+2018,05-09,Bergverksdrift og utvinning,15-74 år,0
+2019,05-09,Bergverksdrift og utvinning,15-74 år,0
+2020,05-09,Bergverksdrift og utvinning,15-74 år,6
+2008,10-33,Industri,15-74 år,0
+2009,10-33,Industri,15-74 år,0
+2010,10-33,Industri,15-74 år,0
+2011,10-33,Industri,15-74 år,0
+2012,10-33,Industri,15-74 år,0
+2013,10-33,Industri,15-74 år,0
+2014,10-33,Industri,15-74 år,0
+2015,10-33,Industri,15-74 år,0
+2016,10-33,Industri,15-74 år,0
+2017,10-33,Industri,15-74 år,0
+2018,10-33,Industri,15-74 år,0
+2019,10-33,Industri,15-74 år,0
+2020,10-33,Industri,15-74 år,984
+2008,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2009,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2010,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2011,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2012,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2013,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2014,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2015,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2016,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2017,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2018,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2019,35-39,"Elektrisitet, vann og renovasjon",15-74 år,0
+2020,35-39,"Elektrisitet, vann og renovasjon",15-74 år,126
+2008,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2009,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2010,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2011,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2012,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2013,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2014,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2015,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2016,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2017,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2018,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2019,41-43,Bygge- og anleggsvirksomhet,15-74 år,0
+2020,41-43,Bygge- og anleggsvirksomhet,15-74 år,569
+2008,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2009,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2010,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2011,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2012,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2013,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2014,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2015,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2016,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2017,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2018,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2019,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,0
+2020,45-47,"Varehandel, reparasjon av motorvogner",15-74 år,492
+2008,49-53,Transport og lagring,15-74 år,0
+2009,49-53,Transport og lagring,15-74 år,0
+2010,49-53,Transport og lagring,15-74 år,0
+2011,49-53,Transport og lagring,15-74 år,0
+2012,49-53,Transport og lagring,15-74 år,0
+2013,49-53,Transport og lagring,15-74 år,0
+2014,49-53,Transport og lagring,15-74 år,0
+2015,49-53,Transport og lagring,15-74 år,0
+2016,49-53,Transport og lagring,15-74 år,0
+2017,49-53,Transport og lagring,15-74 år,0
+2018,49-53,Transport og lagring,15-74 år,0
+2019,49-53,Transport og lagring,15-74 år,0
+2020,49-53,Transport og lagring,15-74 år,301
+2008,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2009,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2010,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2011,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2012,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2013,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2014,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2015,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2016,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2017,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2018,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2019,55-56,Overnattings- og serveringsvirksomhet,15-74 år,0
+2020,55-56,Overnattings- og serveringsvirksomhet,15-74 år,194
+2008,58-63,Informasjon og kommunikasjon,15-74 år,0
+2009,58-63,Informasjon og kommunikasjon,15-74 år,0
+2010,58-63,Informasjon og kommunikasjon,15-74 år,0
+2011,58-63,Informasjon og kommunikasjon,15-74 år,0
+2012,58-63,Informasjon og kommunikasjon,15-74 år,0
+2013,58-63,Informasjon og kommunikasjon,15-74 år,0
+2014,58-63,Informasjon og kommunikasjon,15-74 år,0
+2015,58-63,Informasjon og kommunikasjon,15-74 år,0
+2016,58-63,Informasjon og kommunikasjon,15-74 år,0
+2017,58-63,Informasjon og kommunikasjon,15-74 år,0
+2018,58-63,Informasjon og kommunikasjon,15-74 år,0
+2019,58-63,Informasjon og kommunikasjon,15-74 år,0
+2020,58-63,Informasjon og kommunikasjon,15-74 år,38
+2008,64-66,Finansiering og forsikring,15-74 år,0
+2009,64-66,Finansiering og forsikring,15-74 år,0
+2010,64-66,Finansiering og forsikring,15-74 år,0
+2011,64-66,Finansiering og forsikring,15-74 år,0
+2012,64-66,Finansiering og forsikring,15-74 år,0
+2013,64-66,Finansiering og forsikring,15-74 år,0
+2014,64-66,Finansiering og forsikring,15-74 år,0
+2015,64-66,Finansiering og forsikring,15-74 år,0
+2016,64-66,Finansiering og forsikring,15-74 år,0
+2017,64-66,Finansiering og forsikring,15-74 år,0
+2018,64-66,Finansiering og forsikring,15-74 år,0
+2019,64-66,Finansiering og forsikring,15-74 år,0
+2020,64-66,Finansiering og forsikring,15-74 år,NA
+2008,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2009,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2010,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2011,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2012,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2013,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2014,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2015,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2016,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2017,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2018,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2019,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,0
+2020,68-75,"Teknisk tjenesteyting, eiendomsdrift",15-74 år,259
+2008,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2009,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2010,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2011,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2012,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2013,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2014,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2015,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2016,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2017,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2018,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2019,77-82,Forretningsmessig tjenesteyting,15-74 år,0
+2020,77-82,Forretningsmessig tjenesteyting,15-74 år,105
+2008,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2009,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2010,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2011,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2012,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2013,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2014,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2015,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2016,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2017,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2018,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2019,84,"Off.adm., forsvar, sosialforsikring",15-74 år,0
+2020,84,"Off.adm., forsvar, sosialforsikring",15-74 år,189
+2008,85,Undervisning,15-74 år,0
+2009,85,Undervisning,15-74 år,0
+2010,85,Undervisning,15-74 år,0
+2011,85,Undervisning,15-74 år,0
+2012,85,Undervisning,15-74 år,0
+2013,85,Undervisning,15-74 år,0
+2014,85,Undervisning,15-74 år,0
+2015,85,Undervisning,15-74 år,0
+2016,85,Undervisning,15-74 år,0
+2017,85,Undervisning,15-74 år,0
+2018,85,Undervisning,15-74 år,0
+2019,85,Undervisning,15-74 år,0
+2020,85,Undervisning,15-74 år,385
+2008,86-88,Helse- og sosialtjenester,15-74 år,0
+2009,86-88,Helse- og sosialtjenester,15-74 år,0
+2010,86-88,Helse- og sosialtjenester,15-74 år,0
+2011,86-88,Helse- og sosialtjenester,15-74 år,0
+2012,86-88,Helse- og sosialtjenester,15-74 år,0
+2013,86-88,Helse- og sosialtjenester,15-74 år,0
+2014,86-88,Helse- og sosialtjenester,15-74 år,0
+2015,86-88,Helse- og sosialtjenester,15-74 år,0
+2016,86-88,Helse- og sosialtjenester,15-74 år,0
+2017,86-88,Helse- og sosialtjenester,15-74 år,0
+2018,86-88,Helse- og sosialtjenester,15-74 år,0
+2019,86-88,Helse- og sosialtjenester,15-74 år,0
+2020,86-88,Helse- og sosialtjenester,15-74 år,1262
+2008,90-99,Personlig tjenesteyting,15-74 år,0
+2009,90-99,Personlig tjenesteyting,15-74 år,0
+2010,90-99,Personlig tjenesteyting,15-74 år,0
+2011,90-99,Personlig tjenesteyting,15-74 år,0
+2012,90-99,Personlig tjenesteyting,15-74 år,0
+2013,90-99,Personlig tjenesteyting,15-74 år,0
+2014,90-99,Personlig tjenesteyting,15-74 år,0
+2015,90-99,Personlig tjenesteyting,15-74 år,0
+2016,90-99,Personlig tjenesteyting,15-74 år,0
+2017,90-99,Personlig tjenesteyting,15-74 år,0
+2018,90-99,Personlig tjenesteyting,15-74 år,0
+2019,90-99,Personlig tjenesteyting,15-74 år,0
+2020,90-99,Personlig tjenesteyting,15-74 år,121
+2008,00,Uoppgitt,15-74 år,0
+2009,00,Uoppgitt,15-74 år,0
+2010,00,Uoppgitt,15-74 år,0
+2011,00,Uoppgitt,15-74 år,0
+2012,00,Uoppgitt,15-74 år,0
+2013,00,Uoppgitt,15-74 år,0
+2014,00,Uoppgitt,15-74 år,0
+2015,00,Uoppgitt,15-74 år,0
+2016,00,Uoppgitt,15-74 år,0
+2017,00,Uoppgitt,15-74 år,0
+2018,00,Uoppgitt,15-74 år,0
+2019,00,Uoppgitt,15-74 år,0
+2020,00,Uoppgitt,15-74 år,NA

@@ -1,12 +1,16 @@
 ---
 title: "Arbeidskrav"
-subtitle: "MSB 106 - Anvendt by- og regionaløkonomi"
 author: "Gruppe 2"
+subtitle: MSB 106 - Anvendt by- og regionaløkonomi
 output:
   pdf_document: default
   html_notebook: default
+  word_document: default
 lang: nb-NO
 ---
+
+\newpage
+
 ```{r setup, message = FALSE, echo = FALSE}
 library(tidyverse)
 library(lubridate)
@@ -18,6 +22,527 @@ library(REAT)
 library(readxl)
 knitr::opts_chunk$set(echo=FALSE)
 ```
+
+# 1. Sysselsetting i ulike næringer, etter arbeidsstedskommune
+
+```{r include= FALSE}
+Tabell1 <- read_csv("Data_pkt1/Tabell1.csv")
+Nas_arbeid_norge_sys <- read_csv("Data_pkt1/Nas_arbeid_norge_sys.csv")
+Haug_arbeid <- read_csv("Data_pkt1/Haug_arbeid.csv")
+Sunn_arbeid <- read_csv("Data_pkt1/Sunn_arbeid.csv")
+Haug_arbeid_wide <- read_csv("Data_pkt1/Haug_arbeid_wide.csv")
+Haug_arbeid_2 <- read_csv("Data_pkt1/Haug_arbeid_2.csv")
+Sunn_arbeid_2 <- read_csv("Data_pkt1/Sunn_arbeid_2.csv")
+Tabell2 <- read_csv("Data_pkt1/Tabell2.csv")
+show_col_types = FALSE
+
+```
+
+
+Vi har i denne oppgaven tatt for oss sysselsetting i de ulike næringene, etter arbeidssted. Vi vil i kombinasjon av grafiske fremstillinger og tekst vise sysselsetting i Norge, på Haugalandet, og i Sunnhordland (inkludert Hardanger) fra 2008-2020. Vi vil deretter gjøre rede for ulikheter og forskjeller både nasjonalt og regionalt, før vi avsluttningsvis vil presentere en konklusjon basert på resultatene vi har angitt. 
+
+
+# Antall sysselsatte i ulike næringer, Norge
+
+```{r}
+Nas_arbeid_norge_sys <- Nas_arbeid_norge_sys %>% 
+  mutate(År = make_date(Aar))
+```
+
+```{r}
+tabell_Norge<- Nas_arbeid_norge_sys
+
+tabell_Norge %>% 
+  filter(SN2007 != "Alle næringer") %>%
+  ggplot(aes(x = sysselsatte)) +
+  geom_line(aes(y = SN2007)) +
+  ggtitle("Alle næringer, Norge, 2008-2020") + 
+  theme(legend.position="bottom",
+        axis.title= element_text(size=12,face="bold")) +
+  labs(x="Sysselsatte", y= "Alle næringer, 00-99")+ 
+  scale_color_hue(name = "00-99")
+```
+
+Grafen viser gjennomsnittelig antall sysselsatte i ulike næringer i Norge i perioden 2008 til 2020. Sysselsetting innen **helse- og sosialtjenesten** og **varehandel, reparasjon av motorvogner** er næringene som fremkommer mest i hele landet. Dette kan skyldes at det er mer behov for helsehjelp, stillinger som blir utlyst av den offentlige sektoren, og at det eksporteres mer. Derimot er jobber innen **elektrisitet, vann og renovasjon** og **finansiering og forsikring* er mindre populære. Dette kan skyldes av at flere stillinger utlyses av den private enn den offentlige sektoren, og digitalisering av verktøy.  
+
+
+# Antall sysselsatte i ulike næringer i Norge over tid
+
+```{r}
+tabell_Norge %>% 
+  # velger yrkesaktive
+  filter(alder == "15-74 år") %>% 
+  # Dropper variabler som ikke trengs
+  select(-Aar, -NACE2007, -alder) %>% 
+  # Næringer som variabler, for å kunne regne ut andel
+  pivot_wider(
+    id_cols = År,
+    names_from = SN2007,
+    values_from = sysselsatte
+  ) %>% 
+  # Kan være at vi kunne regnet ut disse uten bruk av pivot_wider
+  # med avansert bruk av mutate
+  mutate(
+`Jordbruk, skogbruk og fiske prosent` = `Jordbruk, skogbruk og fiske`/`Alle næringer`*100,
+`Bergverksdrift og utvinning prosent` = `Bergverksdrift og utvinning`/`Alle næringer`*100,
+`Industri prosent` = `Industri`/`Alle næringer`*100,
+`Elektrisitet, vann og renovasjon prosent` = `Elektrisitet, vann og renovasjon`/`Alle næringer`*100,
+`Bygge- og anleggsvirksomhet prosent` = `Bygge- og anleggsvirksomhet`/`Alle næringer`*100,
+`Varehandel, reparasjon av motorvogner prosent` = `Varehandel, reparasjon av motorvogner`/`Alle næringer`*100,
+`Transport og lagring prosent`= `Transport og lagring`/`Alle næringer`*100,
+`Overnattings- og serveringsvirksomhet prosent` = `Overnattings- og serveringsvirksomhet`/`Alle næringer`*100,
+`Informasjon og kommunikasjon prosent` = `Informasjon og kommunikasjon`/`Alle næringer`*100,
+`Finansiering og forsikring prosent` = `Finansiering og forsikring`/`Alle næringer`*100,
+`Teknisk tjenesteyting, eiendomsdrift prosent` = `Teknisk tjenesteyting, eiendomsdrift`/`Alle næringer`*100,
+`Forretningsmessig tjenesteyting prosent` = `Forretningsmessig tjenesteyting`/`Alle næringer`*100,
+`Off.adm., forsvar, sosialforsikring prosent` = 
+  `Off.adm., forsvar, sosialforsikring`/`Alle næringer`*100,
+`Undervisning prosent` = `Undervisning`/`Alle næringer`*100,
+`Helse- og sosialtjenester prosent` = `Helse- og sosialtjenester`/`Alle næringer`*100,
+`Personlig tjenesteyting prosent` = `Personlig tjenesteyting`/`Alle næringer`*100,
+`Uoppgitt prosent` = `Uoppgitt`/`Alle næringer`*100
+  ) %>% 
+  select(År, `Jordbruk, skogbruk og fiske prosent`:`Uoppgitt prosent`) %>% 
+  # Så må vi gå long igjen for å tilfeedsstille ggplot
+  pivot_longer(
+    `Bygge- og anleggsvirksomhet prosent`:`Uoppgitt prosent`,
+    names_to = "SN2007",
+    values_to = "Sysselsatte"
+  ) %>% 
+  # litt avrunding
+  mutate(
+    Sysselsatte = round(Sysselsatte, 2)
+  ) %>% 
+  ggplot(aes(x = År)) +
+  geom_line(aes(y = Sysselsatte, group = SN2007, colour = SN2007)) +
+  ggtitle("Næringers andel av sysselsatte, Norge, 2008-2020") + 
+  theme(legend.position="right",
+        axis.title= element_text(size=12,face="bold")) +
+  labs(x="År", y= "Andel sysselsatte")+
+  scale_y_continuous(labels = scales::percent_format(scale = 1))
+```
+
+Grafen viser prosentvis næringsandel av sysselsatte i Norge over tid (2008-2020). Ingen av næringene viser en markant økning, og vi ser en generell stabil utvikling over tid. Likevel er det noen næringer som skiller seg ut. Helse- og sosialtjenester viser en større prosentvis økning i antall sysselsatte fra 2008 til 2020 enn andre næringer. Næringen har også vært næringen med størst andel sysselsatte fra 2008-2020, etterfulgt av "Varehandel, reparasjon of motorvogner" som i motsetning viser en nedadgående trend fra ca. 15% i 2008 til ca. 12.5% i 2020. De tre største næringene har siden 2008 hatt en klar første- og andreplass, hvor tredjeplassen har vært vekslende mellom "undervisning" og "bygge- og anleggsvirksomhet" hvor sistnevnte var størst av de to i 2020, og har opplevd en stødig vekst de siste årene. 
+
+Årsaken til resultatene kan sees i sammenheng med både samfunnets etterspørsel for tjenester, men også de offentlige tilskudd til de ulike næringene. Samfunnet er både avhengig av helsetjeneste, undervisning, og varehandel. Bygg- og anleggsvirksomhet har som nevt opplevd en stødig vekst de siste årene, hvor de siste årene gjerne kan forklares med pandemien COVID-19. Det er dog usikkert om dette er en medvirende faktor, eller om det er for tidlig å si noe om effekten av COVID-19 i resultatene presentert.   
+
+
+# Haugalandet
+
+Haugalandet grenser til Vestland fylke i nord og Rogaland fylke i sør og består av kommunene; Haugasund, Sauda, Bokn, Tysvær, Karmøy, Utsira og Vindafjord.
+
+# Antall sysselsatte i ulike næringer, Haugalandet 
+
+```{r}
+haugaland <- Tabell1 %>% 
+  filter(Alder =="15-74",
+         Knr %in% c("1106", "1135", "1145", "1146", "1149", "1151", "1160"))
+
+haugaland %>% 
+  ggplot(aes(x = Aar)) +
+  geom_line(aes(y = `00-99`, colour = knavn)) +
+    ggtitle("Antall sysselsatte over tid, Haugaland") +
+    theme(legend.position = "bottom",
+          axis.title = element_text(size = 12, face = "bold")) +
+    labs(x = "År", y = "Sysselsatte") +
+  scale_color_hue(name = "Kommune")
+```
+
+Grafen viser antall sysselsatte per kommunne på Haugalandet over tid - fra 2008-2020. Kommunene med størst innbyggertall, har naturligvis høyest andel sysselsatte. Utsira og Bokn med færrest innbyggertall ligger dermed nederst i kurven. Kommunene har hatt følgende trender i befolkningsvekst: 
+
+**Vindafjord:** Relativt flat befolkningsvekst 
+**Usira:** Synkende befolkningsvekst.
+**Tysvær:** Økende befolkningsvekst. 
+**Sauda:** Synkende befolkningsvekst. 
+**Karmøy:** Økende befolkningsvekst.
+**Haugesund:** Økende befolkningsvekst.
+**Bokn:** Synkende befolkningsvekst.
+
+Kommunenes flate, synkende eller økende befolkningsvekst kan sees i sammenheng med antall sysselsatte, men flere parametere vil være nødvendig for å kunne måle dette. Haugesund opplever en økning i befolkning, men en nedgang i antall sysselsatte. Hvor Karmøy både ser en økning i antall sysselsatte og en økning i befolkning. Sauda, Utsira og Bokn alle med synkende befolkningsvekst ser en svært liten nedgang i antall sysselsatte. Vindafjord har forholdt seg relativt stabil i antall sysselsatte, i takt med befolkningsvekst, men har likevel sett en liten nedgang fra 2013 til 2020. Til slutt; Tysvær har hatt en økende befolkingsvekst hvor grafen også viser et økende antall i sysselsatte, etter en nedadgående trend fra 2012 til ca. 2016. 
+
+Grunnen til trenden i antall sysselsatte kan som nevnt sees i sammenheng med befolkningsvekst, men det vil likevel være nødvendig å se på flere faktorer for å få et korrekt bilde av årsaken til trendene. Tallene og grafen sier eksemplenvis ikke noe om antall pendlere i andel sysselsatte, heller ikke noe om bedriftene i de forskjellige kommunene. Det er dermed utfordrende og tolke om eksempelvis en kommune vil ha en høyere andel sysselsatte mot befolkningsvekst, ettersom relevante faktorer ikke er medregnet. Sluttvis sier grafen heller ikke noe om næringene i de forskjellige kommunene, vi vil derfor ta for oss dette i neste graf. 
+
+
+
+# Antall sysselsatte i ulike næringer over tid, Hauglandet
+
+
+ 
+```{r}
+Haug_arbeid_2 <- Haug_arbeid_2 %>% 
+  mutate(År = make_date(Aar))
+
+Haug_arbeid_2 %>% 
+  filter(SN2007 != "Alle næringer") %>% 
+  ggplot(aes(x = År, y = ansatte, fill = SN2007)) +
+  geom_bar(stat = "identity") +
+  ggtitle("Alle næringer over tid, Haugalandet") + 
+  theme(legend.position="right",
+        axis.title= element_text(size=12,face="bold")) +
+  labs(x="År", y= "Sysselsatte") +
+  scale_y_continuous(limits = c(0, 50000), breaks =seq(0, 50000, by = 5000))
+```
+
+Grafen viser antall sysselsatte på Haugalandet i ulike næringer, innenfor tidsperioden 2008-2020. **Helse og sosialtjenester** har siden 2008 vært den næringen med flest antall sysselsatte, etterfulgt av **Varehandel, reperasjon av motorvogner**, **industri** og **undervisning**. Næringene med minst antall sysselsatte har siden 2008 vært **jordbruk, skogbruk og fiske**, **Bergverksdrift og utvinning** og **elektrisitet, vann og renovasjon**. Det er ingen markante endringer i grafen, men **Helse og sosialtjenester** ser i likhet med hele landet, som tidligere presentert, en liten økning. Videre, har **Bergdrift og utvinning** sett en nedgang i antall sysselsatte. Årsaken til resultatene kan sees i sammenheng med etterspørselen i et samfunn. Det er både på regionalt og nasjonalt nivå behov for helsefagarbeidere, lærerere og professorer, samt forsyning av varer. Næringene med lavest antall sysselsatte inkluderer de næringene hvor etterspørselen i samfunnet gjerne er synkende for varen og/eller tjenesten. Disse næringene har gjerne også til felles at nye og innovative teknologiske løsninger har tatt over driften, eller at det er billigere å impotere den besteme varen eller tjenesten hvor konsekvensen dermed blir færre sysselsatte i næringen. 
+
+
+
+
+# Sunnhordland
+
+Sunnhordland er et distrikt i den sørvestlige delen av Vestland fylke som består av kommunene; Etne, Sveio, Bømlo, Stord, Fitjar, Tysnes, Kvinnherad. I tillegg inkluderes Ullensvang (+Odda). 
+
+# Antall sysselsatte i ulike næringer over tid, Sunnhordland inkludert Hardanger
+
+```{r}
+Sunn_arbeid_2 <- Sunn_arbeid_2 %>% 
+  mutate(År = make_date(Aar))
+
+Sunn_arbeid_2 %>% 
+  filter(SN2007 != "Alle næringer") %>% 
+  ggplot(aes(x = År, y = ansatte, fill = SN2007)) +
+  geom_bar(stat = "identity") +
+  ggtitle("Alle næringer over tid, Haugalandet inkl. Hardanger") + 
+  theme(legend.position="right",
+        axis.title= element_text(size=12,face="bold")) +
+  labs(x="År", y= "Sysselsatte") +
+  scale_y_continuous(limits = c(0, 50000), breaks =seq(0, 50000, by = 5000))
+```
+
+Grafen viser antall sysselsatte i ulike næringer i 2020 for Sunnhordland. **Helse- og sosialtjenester** og **industri** er blandt de næringene som har flest sysselsatte i 2020, mens **elektrisitet, vann og renovasjon** og **personlig tjenesteyting** er dem med færrest. Ettersom en del data ikke ble inkludert på grunn av teknikse vanskeligheter, vises ikke effekten av kommunesammenslåingen i 2020 eller utviklingen over tid. En ønskelig grafe hadde vist utviklingen av ulike næringer i perioden 2008 til 2020.
+
+
+\newpage
+
+# 2. Mål for beskrivelse av næringsstrukturen.
+
+```{r hente datasett}
+Haug_arbeid <- read_csv("Data/Haug_arbeid.csv") 
+Sunn_arbeid <- read_csv("Data/Sunn_arbeid.csv")
+```
+
+```{r rydde datasett H}
+Haug_arbeid_punkt2 = mutate(Haug_arbeid, tot_H = Haugesund+Sauda+Bokn+Tysvaer+Karmoey+Utsira+Vindafjord)
+Haug_arbeid_punkt2 = filter(Haug_arbeid_punkt2, Alder == c("15-74"))
+```
+
+```{r rydde datasett S}
+names(Sunn_arbeid)[[13]] <- "Odda_og_Ullensvang"
+Sunn_arbeid_punkt2 = mutate(Sunn_arbeid, tot_S =  Etne+Sveio+Boemlo+Stord+Fitjar+Tysnes+Kvinnherad+Odda_og_Ullensvang)
+Sunn_arbeid_punkt2 = filter(Sunn_arbeid_punkt2, Alder == c("15-74"))
+```
+
+```{r left_join}
+arbeid_punkt2_first = left_join(Haug_arbeid_punkt2, Sunn_arbeid_punkt2)
+```
+
+```{r legge inn total av alle kommuner}
+arbeid_punkt2 =mutate(arbeid_punkt2_first, tot = tot_H+tot_S)
+```
+
+```{r rydde}
+rm (arbeid_punkt2_first, Haug_arbeid, Sunn_arbeid)
+```
+
+## Lokaliseringskvotienter
+
+### Haugesund: 05-09 Bergverksdrift og utvinning
+
+```{r df 2008}
+df2008 = filter(arbeid_punkt2, Aar == c("2008"))
+```
+
+```{r 2008}
+locq(452, 21322, 1338, 47530, industry.names = Bergverksdrift_utvinning_2008, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r df 2014}
+df2014 = filter(arbeid_punkt2, Aar == c("2014"))
+```
+
+```{r 2014}
+locq(416, 22190, 1521, 49518, industry.names = Bergverksdrift_utvinning_2014, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r df 2019}
+df2019 = filter(arbeid_punkt2, Aar == c("2019"))
+```
+
+```{r 2019}
+locq(685, 21429, 1752, 49295, industry.names = Bergverksdrift_utvinning_2020, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+Her har vi beregnet lokaliseringskvotient for næringen "bergverksdrift
+og utvinning" med NACE-kode 05-09. Den beregnes slik: (sysselsetting i
+gitt bransje i Haugesund/total sysselsetting i Haugesund)/(sysselsetting
+i gitt bransje i alle kommunene/sysselsetting i alle kommunene vi har
+med i oppgaven vår).
+
+Som vi kan se har lokaliseringskvotienten her endret seg noe med tiden.
+Dette tolker vi som at konsentrasjonen av industrien (bergverksdrift og
+utvinning) i Haugesund er i endring, men fordi tallet hele tiden er
+lavere enn 1, kan vi se at industrien er underrepresentert i Haugesund,
+målt opp mot hele området vårt (alle kommunene i vårt datasett). For
+eksempel vil tallet 0.8994 si at i Haugesund er det målt opp mot området
+i helhet, 89% arbeidsplasser innenfor bransjen.
+
+Det er flere grunner til at lokaliseringskvotienten endrer seg. En kan
+være at antall sysselsatte innenfor næringer øker i kommunen, eller at
+totalt antall i næringen i regionen minker.
+
+```{r koeffisient_mot_nasjonal_2008}
+locq(452, 43265, 1338, 2525000, industry.names = Bergverksdrift_utvinning_nasjonal_2008, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r koeffisient_mot_nasjonal_2019}
+locq(685, 58757, 1752, 2710435, industry.names = Bergverksdrift_utvinning_nasjonal_2019, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+Her har vi beregnet koeffisienten for bergverksdrift- og utvinning i
+Haugesund, mot nasjonalt for årstallene 2008 og 2019.
+
+Når vi ser på disse koeffisientene, ser vi at bergverksdrift- og
+utvinning i Haugesund er overrepresentert sett opp mot hele landet.
+
+### Haugesund: 86-88 Helse- og sosialtjenester
+
+```{r}
+locq(4812, 21322, 9596, 47530, industry.names = Helse_og_sosialtjen_2008, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(5096, 22190, 10425, 49518, industry.names = Helse_og_sosialtjen_2014, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(5608, 21429, 11050, 49295, industry.names = Helse_og_sosialtjen_2019, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+Resultatene til lokaliseringskvotientene for næringen helse- og
+sosialtjenester i Haugesund fremviser en relativt stabil utvikling over
+tidsperioden 2008-2019. Verdien i 2008 lå på 1,12, hvor den sank til
+1,09 i 2014 og steg igjen til 1,17 i 2019. Fra formelen for
+lokaliseringskvotienter så vet vi at den øverste brøken vil da
+representere helse- og sosialtjenester sin andel for total sysselsetting
+i regionen og i nevner helse-og sosialtjenester sin andel av total
+sysselsetting for nasjonen. Siden tallet har ligget stabilt over 1 så
+reflekterer det at denne type aktiviteter er viktigere for regionen, enn
+for landet. Noe som potensielt kan antyde på at Haugesund er en del av
+en helse-og sosial tjenesteregion, muligens i en klynge. Vi kan også
+antyde at denne type næring er en lokalnæring siden kvotienten har
+såpass stabile verdier i nærheten av 1.
+
+### Karmøy: 10-33 Industri
+
+```{r}
+locq(3357, 15194, 7491, 47530, industry.names = Industri_2008, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(2353, 15457, 6767, 49518, industry.names = Industri_2014, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(2476, 15978, 6563, 49295, industry.names = Industri_2019, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+For næringen industri i kommunen Karmøy kan vi se at lokalisering
+kvotientene for de bestemte årene er alle over verdien 1, med 1,40 i år
+2008 som er en relativt høy verdi. Noe som tilsier at dette vil være en
+typisk basisnæring for kommunen, siden basisnæringer tenderer til å
+svinge mer i aktivitet som dermed resulterer at også kvotientene for
+denne type næring også har høyere svingninger. Vi kan også observere en
+relativt stagnering i kvotientene ut tidsperioden, som potensielt
+tilsier at denne type næring har blitt mindre viktigere for regionen
+sammenlignet med nasjonalt sett.
+
+### Karmøy: 86-88 Helse- og sosialetjenester
+
+```{r}
+locq(2771, 15194, 9596, 47530, industry.names = Helse_og_sosialtjen_2008, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(3162, 15457, 10425, 49518, industry.names = Bergverksdrift_utvinning_2014, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+```{r}
+locq(3280, 15978, 11050, 49295, industry.names = Bergverksdrift_utvinning_2014, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
+```
+
+Lokaliseringskvotientene for helse- og sosialtjenester i Karmøy kommune
+har hatt et relativt stabilt nivå gjennom tidsperioden 2008-2019, hvorav
+alle verdiene har ligget i underkant av 1. Dette tilsier at denne type
+aktivitet er en typisk lokalnæring for kommunen, siden vi har hatt
+såpass stabile verdier rundt 1. Dette reflekterer også at helse- og
+sosialtjenester er like viktig for regionen som for nasjonen.
+
+## Gini- indeks for industrivirksomhet
+
+Den romlige Gini-indeksen $(G_i)$ er et sentralt mål som blir brukt til
+å undersøke den geografiske spredningen av en næringssektor og forstå
+klyngetendenser. Resultatene av gini-koeffisientene måler hvor
+konsentrert/spredten næring vil være fordelt basert på de utvalgte
+kommunene i regionen. Dersom det eksisterer en sterkere klyngetendens
+mellom kommunene vil man kunne forvente at verdien på gini-koeffisienten
+har økt over tid og man burde som regel analysere dette på et finere
+nivå enn kommunenivå om mulig.
+
+Man benytter gini-indeksen for å undersøke hvordan den bestemte
+aktiviteten er fordelt overfor geografien/regionen. Ved høye verdier av
+gini-koeffisienten vil dette indikere klyngedannelser og
+konsentrasjoner, imens lave verdier av koeffisienten beskriver et
+forhold av jevnere spredning mellom regionene. Dersom det eksisterer en
+helt jevn fordeling vil $G_i=0$.
+
+Vi har valgt å undersøke gini-indeksen for næringen industri og de fem
+utvalgte kommunene vi har benyttet oss av er Haugesund, Sauda, Bokn,
+Tysvaer og Karmoey. Tilsvarende har vi brukt dataene fra 2008 og 2019
+som er det første- og siste året vi har som vårt datagrunnlag.
+
+-   **Årstall: 2008**
+
+```{r sysselsetting for industri i de fem kommunene 2008}
+E_ij <- c(2572, 468, 41, 268, 3357)
+```
+
+```{r total sysselsetting i de fem kommunene 2008}
+E_j <- c(21322, 2136, 297, 4048, 15194)
+```
+
+```{r gini koeffisient for konsentrasjonen av næringen 2008}
+gini.conc(E_ij, E_j)
+```
+
+-   **Årstall: 2019**
+
+```{r sysselsetting for industri i de fem kommunene 2019}
+E_ij1 <- c(2171, 360, 52, 617, 2467)
+```
+
+```{r total sysselsetting i de fem kommunene 2019}
+E_j1 <- c(21429, 1945, 327, 4710, 15978)
+```
+
+```{r gini koeffisient for konsentrasjonen av næringen 2019}
+gini.conc(E_ij1, E_j1)
+```
+
+Fra resultatene ser vi at gini-koeffisienten for år 2008 er på 0,21 og
+for 2019 fant vi en verdi på 0,11. Dette er svært lave indekser som
+tilsier at det er en jevn fordeling når det kommer til industri-næringen
+blant kommunene. Vi kan også bemerke oss at koeffisienten har stagnert
+betraktelig gjennom denne tidsperioden. Noe som tilsier at
+klyngetendensen mellom kommunene har blitt relativt svekket.
+
+## RDI
+
+Et mål som kan brukes for å se på om næringsstrukturen i en region er
+diversifisert eller spesialisert er RDI. RDI står for regional diversity
+index. Verdien vi får forteller oss om fordelingen av arbeidsplasser,
+innenfor ulike sektorer, ligner den nasjonale fordelingen.
+
+![RDI formel, i er sektor, og Sin er andel av nasjonal
+sysselsetting](RDI_formel.JPG) der sin er sektor i 's andel av samlet
+nasjonal sysselsetting.
+
+**Formel:**
+
+$RDI_r=\frac{1}{\sum_i|\frac{E_{ir}}{E_r}-\frac{E_{in}}{E_n}|}$
+
+### Haugesund: 05-09 Bergverksdrift og utvinning 2008:
+
+$E_{ir}=452$ $E_r=1338$ $E_{in}=21322$ $E_n=47530$
+
+$RDI=\frac{1}{\frac{452}{1338}-\frac{21322}{47530}}$
+
+$RDI=\frac{1}{0,34-0,45}$
+
+$RDI=\frac{1}{-0,11}$
+
+$RDI=-9,09$
+
+### Haugesund: 05-09 Bergverksdrift og utvinning 2019:
+
+$E_{ir}=685$ $E_r=1752$ $E_{in}=21429$ $E_n=49295$
+
+$RDI=\frac{1}{\frac{685}{1752}-\frac{21429}{49295}}$
+
+$RDI=\frac{1}{0,39-0,43}$
+
+$RDI=\frac{1}{-0,04}$
+
+$RDI=-25$
+
+Som vi kan se så har det vært en negativ utvikling i RDIen i Haugesund
+innenfor næringen Bergverksdrift og utvinning, hvor
+sysselsettingsandelene er sammenlignet mot regionale (kommunene vi har
+med) andeler for næringen.
+
+### Haugesund 05-09, mot nasjonal bergverksdrift og utvinning.
+
+### 2008:
+
+$E_{ir}=452$ $E_r=1338$ $E_{in}=43265$ $E_n=2525000$
+
+$RDI=\frac{1}{\frac{452}{1338}-\frac{43265}{2525000}}$
+
+$RDI=\frac{1}{0.34-0.02}$
+
+$RDI=\frac{1}{0.32}$
+
+$RDI=3.125$
+
+### 2019:
+
+$E_{ir}=685$ $E_r=1752$ $E_{in}=58757$ $E_n=2710435$
+
+$RDI=\frac{1}{\frac{685}{1752}-\frac{58757}{2710435}}$
+
+$RDI=\frac{1}{0.39-0.22}$
+
+$RDI=\frac{1}{0.17}$
+
+$RDI=5.88$
+
+Som vi kan se så har det vært en positiv utvikling i RDIen i Haugesund
+innenfor næringen Bergverksdrift og utvinning, hvor
+sysselsettingsandelene er sammenlignet mot nasjonale andeler for
+næringen.
+
+Alle tallene vi har kommet frem til, både ved å sammenligne mot
+regionale og nasjonale andeler, er relativt lave. Det vil si at næringen
+lokalt ikke er lik sammenligningsgrunnlaget. Den har nærmet seg mest sammenlignet med nasjonale andeler i 2019, men det er fortsatt lave tall. 
+
+
 
 \newpage
 
@@ -179,9 +704,6 @@ Sunn_bo %>%
 I figuren ovenfor fremstilles det antall ansatte i de ulike næringene i Sunnhordland, her kan en se at helse- og soisaltjenester har flest ansatte.  
 
 
-```{r}
-lokaliseringskvotienter <- read_excel("~/Documents/Master i sivilokonom/2. Semester/Anvendt by- og regionaløkonomi/lokaliseringskvotienter.xlsx")
-```
 
 
 Under *lokaliseringskvoienter* har vi sett på tre ulike sektorer både på Haugalandet og for Sunnhordland. Vi valgte da ut industri, helse og sosialtjenester og varehandel, reperasjon av motorvogner. Det ble valgt ut tre forskjellige år, da første året som er 2008, 2010 og det siste året som var 2020. Aldersgruppen vi valgte var 15 til 74, fordi vi ser at denne aldersgruppen inneholder høyest tall av ansatte. 

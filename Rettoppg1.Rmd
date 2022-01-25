@@ -3,10 +3,11 @@ title: "R Notebook"
 output:
   pdf_document: default
   html_notebook: default
+  word_document: default
 ---
 
 
-```{r}
+```{r setup, message = FALSE, echo=FALSE}
 suppressPackageStartupMessages({
 library(tidyverse)
 library(lubridate)
@@ -17,24 +18,30 @@ library(sandwich)
 library(viridis)
   options(scipen = 999)
 })
-knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 # Modeller
 
 ## Leser inn data
 
-```{r}
+```{r include= FALSE}
 Tabell1 <- read_csv("Data_pkt1/Tabell1.csv")
 Nas_arbeid_norge_sys <- read_csv("Data_pkt1/Nas_arbeid_norge_sys.csv")
 Haug_arbeid <- read_csv("Data_pkt1/Haug_arbeid.csv")
 Sunn_arbeid <- read_csv("Data_pkt1/Sunn_arbeid.csv")
 Haug_arbeid_wide <- read_csv("Data_pkt1/Haug_arbeid_wide.csv")
-Haug_arbeid_2 <- read_csv("Data_pkt1/Sunn_arbeid_2.csv")
+Haug_arbeid_2 <- read_csv("Data_pkt1/Haug_arbeid_2.csv")
 Sunn_arbeid_2 <- read_csv("Data_pkt1/Sunn_arbeid_2.csv")
 Tabell2 <- read_csv("Data_pkt1/Tabell2.csv")
 show_col_types = FALSE
+
 ```
+
+# Oppgave 1
+
+Vi har i denne oppgaven tatt for oss sysselsetting i de ulike næringene, etter arbeidssted. Vi vil i kombinasjon av grafiske fremstillinger og tekst vise sysselsetting i Norge, på Haugalandet, og i Sunnhordland (inkludert Hardanger) fra 2008-2020. Vi vil deretter gjøre rede for ulikheter og forskjeller både nasjonalt og regionalt, før vi avsluttningsvis vil presentere en konklusjon basert på resultatene vi har angitt. 
+
 
 # Antall sysselsatte i ulike næringer, Norge
 
@@ -52,6 +59,7 @@ Nas_arbeid_norge_sys <- Nas_arbeid_norge_sys %>%
 tabell_Norge<- Nas_arbeid_norge_sys
 
 tabell_Norge %>% 
+  filter(SN2007 != "Alle næringer") %>%
   ggplot(aes(x = sysselsatte)) +
   geom_line(aes(y = SN2007)) +
   ggtitle("Alle næringer, Norge, 2008-2020") + 
@@ -60,6 +68,10 @@ tabell_Norge %>%
   labs(x="Sysselsatte", y= "Alle næringer, 00-99")+ 
   scale_color_hue(name = "00-99")
 ```
+
+Grafen viser gjennomsnittelig antall sysselsatte i ulike næringer i Norge i perioden 2008 til 2020. Sysselsetting innen **helse- og sosialtjenesten** og **varehandel, reparasjon av motorvogner** er næringene som fremkommer mest i hele landet. Dette kan skyldes at det er mer behov for helsehjelp, stillinger som blir utlyst av den offentlige sektoren, og at det eksporteres mer. Derimot er jobber innen **elektrisitet, vann og renovasjon** og **finansiering og forsikring* er mindre populære. Dette kan skyldes av at flere stillinger utlyses av den private enn den offentlige sektoren, og digitalisering av verktøy.  
+
+
 # Antall sysselsatte i ulike næringer i Norge over tid
 
 ```{r}
@@ -112,12 +124,20 @@ tabell_Norge %>%
   ggtitle("Næringers andel av sysselsatte, Norge, 2008-2020") + 
   theme(legend.position="right",
         axis.title= element_text(size=12,face="bold")) +
-  labs(x="År", y= "Andel sysselsatte")
+  labs(x="År", y= "Andel sysselsatte")+
+  scale_y_continuous(labels = scales::percent_format(scale = 1))
 ```
-Tilsvarende kan også gjøres for de ulike kommunene. Skal dere sammenligne nasjonalt og kommunene bør dere kanskje velge ut særlig interessante næringer. Ellers kan figuren bli nokså overbefolket.
+
+Grafen viser prosentvis næringsandel av sysselsatte i Norge over tid (2008-2020). Ingen av næringene viser en markant økning, og vi ser en generell stabil utvikling over tid. Likevel er det noen næringer som skiller seg ut. Helse- og sosialtjenester viser en større prosentvis økning i antall sysselsatte fra 2008 til 2020 enn andre næringer. Næringen har også vært næringen med størst andel sysselsatte fra 2008-2020, etterfulgt av "Varehandel, reparasjon of motorvogner" som i motsetning viser en nedadgående trend fra ca. 15% i 2008 til ca. 12.5% i 2020. De tre største næringene har siden 2008 hatt en klar første- og andreplass, hvor tredjeplassen har vært vekslende mellom "undervisning" og "bygge- og anleggsvirksomhet" hvor sistnevnte var størst av de to i 2020, og har opplevd en stødig vekst de siste årene. 
+
+Årsaken til resultatene kan sees i sammenheng med både samfunnets etterspørsel for tjenester, men også de offentlige tilskudd til de ulike næringene. Samfunnet er både avhengig av helsetjeneste, undervisning, og varehandel. Bygg- og anleggsvirksomhet har som nevt opplevd en stødig vekst de siste årene, hvor de siste årene gjerne kan forklares med pandemien COVID-19. Det er dog usikkert om dette er en medvirende faktor, eller om det er for tidlig å si noe om effekten av COVID-19 i resultatene presentert.   
 
 
-# Antsall sysselsatte i ulike næringer, Haugalandet 
+# Haugalandet
+
+Haugalandet grenser til Vestland fylke i nord og Rogaland fylke i sør og består av kommunene; Haugasund, Sauda, Bokn, Tysvær, Karmøy, Utsira og Vindafjord.
+
+# Antall sysselsatte i ulike næringer, Haugalandet 
 
 ```{r}
 haugaland <- Tabell1 %>% 
@@ -133,10 +153,27 @@ haugaland %>%
     labs(x = "År", y = "Sysselsatte") +
   scale_color_hue(name = "Kommune")
 ```
+
+Grafen viser antall sysselsatte per kommunne på Haugalandet over tid - fra 2008-2020. Kommunene med størst innbyggertall, har naturligvis høyest andel sysselsatte. Utsira og Bokn med færrest innbyggertall ligger dermed nederst i kurven. Kommunene har hatt følgende trender i befolkningsvekst: 
+
+**Vindafjord:** Relativt flat befolkningsvekst 
+**Usira:** Synkende befolkningsvekst.
+**Tysvær:** Økende befolkningsvekst. 
+**Sauda:** Synkende befolkningsvekst. 
+**Karmøy:** Økende befolkningsvekst.
+**Haugesund:** Økende befolkningsvekst.
+**Bokn:** Synkende befolkningsvekst.
+
+Kommunenes flate, synkende eller økende befolkningsvekst kan sees i sammenheng med antall sysselsatte, men flere parametere vil være nødvendig for å kunne måle dette. Haugesund opplever en økning i befolkning, men en nedgang i antall sysselsatte. Hvor Karmøy både ser en økning i antall sysselsatte og en økning i befolkning. Sauda, Utsira og Bokn alle med synkende befolkningsvekst ser en svært liten nedgang i antall sysselsatte. Vindafjord har forholdt seg relativt stabil i antall sysselsatte, i takt med befolkningsvekst, men har likevel sett en liten nedgang fra 2013 til 2020. Til slutt; Tysvær har hatt en økende befolkingsvekst hvor grafen også viser et økende antall i sysselsatte, etter en nedadgående trend fra 2012 til ca. 2016. 
+
+Grunnen til trenden i antall sysselsatte kan som nevnt sees i sammenheng med befolkningsvekst, men det vil likevel være nødvendig å se på flere faktorer for å få et korrekt bilde av årsaken til trendene. Tallene og grafen sier eksemplenvis ikke noe om antall pendlere i andel sysselsatte, heller ikke noe om bedriftene i de forskjellige kommunene. Det er dermed utfordrende og tolke om eksempelvis en kommune vil ha en høyere andel sysselsatte mot befolkningsvekst, ettersom relevante faktorer ikke er medregnet. Sluttvis sier grafen heller ikke noe om næringene i de forskjellige kommunene, vi vil derfor ta for oss dette i neste graf. 
+
+
+
 # Antall sysselsatte i ulike næringer over tid, Hauglandet
+
+
  
-
-
 ```{r}
 Haug_arbeid_2 <- Haug_arbeid_2 %>% 
   mutate(År = make_date(Aar))
@@ -151,3 +188,32 @@ Haug_arbeid_2 %>%
   labs(x="År", y= "Sysselsatte") +
   scale_y_continuous(limits = c(0, 50000), breaks =seq(0, 50000, by = 5000))
 ```
+
+Grafen viser antall sysselsatte på Haugalandet i ulike næringer, innenfor tidsperioden 2008-2020. **Helse og sosialtjenester** har siden 2008 vært den næringen med flest antall sysselsatte, etterfulgt av **Varehandel, reperasjon av motorvogner**, **industri** og **undervisning**. Næringene med minst antall sysselsatte har siden 2008 vært **jordbruk, skogbruk og fiske**, **Bergverksdrift og utvinning** og **elektrisitet, vann og renovasjon**. Det er ingen markante endringer i grafen, men **Helse og sosialtjenester** ser i likhet med hele landet, som tidligere presentert, en liten økning. Videre, har **Bergdrift og utvinning** sett en nedgang i antall sysselsatte. Årsaken til resultatene kan sees i sammenheng med etterspørselen i et samfunn. Det er både på regionalt og nasjonalt nivå behov for helsefagarbeidere, lærerere og professorer, samt forsyning av varer. Næringene med lavest antall sysselsatte inkluderer de næringene hvor etterspørselen i samfunnet gjerne er synkende for varen og/eller tjenesten. Disse næringene har gjerne også til felles at nye og innovative teknologiske løsninger har tatt over driften, eller at det er billigere å impotere den besteme varen eller tjenesten hvor konsekvensen dermed blir færre sysselsatte i næringen. 
+
+
+
+# Sunnhordland
+
+Sunnhordland er et distrikt i den sørvestlige delen av Vestland fylke som består av kommunene; Etne, Sveio, Bømlo, Stord, Fitjar, Tysnes, Kvinnherad. I tillegg inkluderes Ullensvang (+Odda). 
+
+# Antall sysselsatte i ulike næringer over tid, Sunnhordland inkludert Hardanger
+
+```{r}
+Sunn_arbeid_2 <- Sunn_arbeid_2 %>% 
+  mutate(År = make_date(Aar))
+
+Sunn_arbeid_2 %>% 
+  filter(SN2007 != "Alle næringer") %>% 
+  ggplot(aes(x = År, y = ansatte, fill = SN2007)) +
+  geom_bar(stat = "identity") +
+  ggtitle("Alle næringer over tid, Haugalandet inkl. Hardanger") + 
+  theme(legend.position="right",
+        axis.title= element_text(size=12,face="bold")) +
+  labs(x="År", y= "Sysselsatte") +
+  scale_y_continuous(limits = c(0, 50000), breaks =seq(0, 50000, by = 5000))
+```
+
+Grafen viser antall sysselsatte i ulike næringer i 2020 for Sunnhordland. **Helse- og sosialtjenester** og **industri** er blandt de næringene som har flest sysselsatte i 2020, mens **elektrisitet, vann og renovasjon** og **personlig tjenesteyting** er dem med færrest. Ettersom en del data ikke ble inkludert på grunn av teknikse vanskeligheter, vises ikke effekten av kommunesammenslåingen i 2020 eller utviklingen over tid. En ønskelig grafe hadde vist utviklingen av ulike næringer i perioden 2008 til 2020.
+
+
