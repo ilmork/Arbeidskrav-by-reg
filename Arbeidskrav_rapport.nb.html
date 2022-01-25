@@ -219,6 +219,8 @@ pre code {
 
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <div style="page-break-after: always;"></div>
 <div id="sysselsetting-i-ulike-næringer-etter-arbeidsstedskommune" class="section level1">
@@ -226,73 +228,220 @@ pre code {
 <div id="i-denne-oppgaven-skal-vi-finne-sysselsetting-i-de-ulike-næringene-etter-arbeidsstedskommune." class="section level2">
 <h2>I denne oppgaven skal vi finne sysselsetting i de ulike næringene, etter arbeidsstedskommune.</h2>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxua25yIDwtIGMoXCIxMTA2XCIsIFwiMTEzNVwiLCBcIjExNDVcIiwgXCIxMTQ2XCIsIFwiMTE0OVwiLCBcIjExNTFcIiwgXCIxMTYwXCIpXG5gYGAifQ== -->
+<pre class="r"><code>knr &lt;- c(&quot;1106&quot;, &quot;1135&quot;, &quot;1145&quot;, &quot;1146&quot;, &quot;1149&quot;, &quot;1151&quot;, &quot;1160&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSGF1Z19ib19yYXcgPC0gQXBpRGF0YShcbiAgdXJsID0gXCIwNzk4NFwiLFxuICBSZWdpb24gPSBsaXN0KFwidnM6S29tbXVuZXJTXCIsIGtuciksIFxuICBOQUNFMjAwNyA9IFRSVUUsXG4gIEtqb25uID0gXCIwXCIsXG4gIENvbnRlbnRzQ29kZSA9IFwiU3lzc2Vsc2F0dGVcIixcbiAgVGlkID0gYyhhcy5jaGFyYWN0ZXIoMjAwODoyMDIwKSksXG4gIEFsZGVyID0gYyhcIjE1LTc0XCIsIFwiNTUtNjZcIiwgXCI2Ny03NFwiKSxcbiAgbWFrZU5Bc3RhdHVzID0gRkFMU0VcbilcbmBgYCJ9 -->
+<pre class="r"><code>Haug_bo_raw &lt;- ApiData(
+  url = &quot;07984&quot;,
+  Region = list(&quot;vs:KommunerS&quot;, knr), 
+  NACE2007 = TRUE,
+  Kjonn = &quot;0&quot;,
+  ContentsCode = &quot;Sysselsatte&quot;,
+  Tid = c(as.character(2008:2020)),
+  Alder = c(&quot;15-74&quot;, &quot;55-66&quot;, &quot;67-74&quot;),
+  makeNAstatus = FALSE
+)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Velger ut og endrer navn, Haugalandet</p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSGF1Z19ibyA8LSBIYXVnX2JvX3JhdyRgMDc5ODQ6IFN5c3NlbHNhdHRlIHBlciA0LiBrdmFydGFsLCBldHRlciByZWdpb24sIG7DpnJpbmcgKFNOMjAwNyksIGtqw7hubiwgYWxkZXIsIHN0YXRpc3Rpa2t2YXJpYWJlbCBvZyDDpXJgICU+JSBcbiAgdGliYmxlKCkgJT4lIFxuICByZW5hbWUoXG4gICAgS25yID0gcmVnaW9uLFxuICAgIEFhciA9IMOlcixcbiAgICBOYWVyaW5nID0gYG7DpnJpbmcgKFNOMjAwNylgXG4gIClcbmBgYCJ9 -->
+<pre class="r"><code>Haug_bo &lt;- Haug_bo_raw$`07984: Sysselsatte per 4. kvartal, etter region, næring (SN2007), kjønn, alder, statistikkvariabel og år` %&gt;% 
+  tibble() %&gt;% 
+  rename(
+    Knr = region,
+    Aar = år,
+    Naering = `næring (SN2007)`
+  )</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoSGF1Z19ib19yYXcpWzFdIDwtIFwiZGVzYzRcIlxuYGBgIn0= -->
+<pre class="r"><code>names(Haug_bo_raw)[1] &lt;- &quot;desc4&quot;</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Muterer inn i Haugbo</p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSGF1Z19ibyA8LSBIYXVnX2JvICU+JSBcbiAgbXV0YXRlKGtuYXZuID0gSGF1Z19ib19yYXckS25yKVxuYGBgIn0= -->
+<pre class="r"><code>Haug_bo &lt;- Haug_bo %&gt;% 
+  mutate(knavn = Haug_bo_raw$Knr)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Tar ut kommunene</p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSGF1Z19ibyA8LSBIYXVnX2JvICU+JSBcbiAgcGl2b3Rfd2lkZXIoXG4gICAgbmFtZXNfZnJvbSA9IEtucixcbiAgICB2YWx1ZXNfZnJvbSA9IHZhbHVlKVxuYGBgIn0= -->
+<pre class="r"><code>Haug_bo &lt;- Haug_bo %&gt;% 
+  pivot_wider(
+    names_from = Knr,
+    values_from = value)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
 <div id="legger-her-til-en-total-for-haugalandet." class="section level2">
 <h2>Legger her til en total for Haugalandet.</h2>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSGF1Z19ibyA9IG11dGF0ZShIYXVnX2JvLCB0b3RfaCA9IEhhdWdlc3VuZCtTYXVkYStCb2tuK1R5c3bDpnIrS2FybcO4eStVdHNpcmErVmluZGFmam9yZClcbmBgYCJ9 -->
+<pre class="r"><code>Haug_bo = mutate(Haug_bo, tot_h = Haugesund+Sauda+Bokn+Tysvær+Karmøy+Utsira+Vindafjord)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
 <div id="sunnhordaland" class="section level2">
 <h2>Sunnhordaland</h2>
 <!-- rnb-text-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="henter-inn-data-fra-oppgave-1-kommunene-i-sunnhordaland" class="section level2">
-<h2>Henter inn data fra oppgave 1, kommunene i Sunnhordaland</h2>
-<!-- rnb-text-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxua25yX3N1bm4gPC0gYyhcIjEyMTFcIiwgXCIxMjE2XCIsXG4gICAgICAgICBcIjEyMTlcIiwgXCIxMjIxXCIsIFwiMTIyMlwiLCBcIjEyMjNcIiwgXCIxMjI0XCIsIFwiMTIyOFwiLCBcIjEyMzFcIilcbmBgYCJ9 -->
+<pre class="r"><code>knr_sunn &lt;- c(&quot;1211&quot;, &quot;1216&quot;,
+         &quot;1219&quot;, &quot;1221&quot;, &quot;1222&quot;, &quot;1223&quot;, &quot;1224&quot;, &quot;1228&quot;, &quot;1231&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3Vubl9ib19yYXcgPC0gQXBpRGF0YShcbiAgdXJsID0gXCIwNzk4NFwiLFxuICBSZWdpb24gPSBsaXN0KFwidnM6S29tbXVuZXJTXCIsIGtucl9zdW5uKSwgXG4gIE5BQ0UyMDA3ID0gVFJVRSxcbiAgS2pvbm4gPSBcIjBcIixcbiAgQ29udGVudHNDb2RlID0gXCJTeXNzZWxzYXR0ZVwiLFxuICBUaWQgPSBjKGFzLmNoYXJhY3RlcigyMDA4OjIwMjApKSxcbiAgQWxkZXIgPSBjKFwiMTUtNzRcIiwgXCI1NS02NlwiLCBcIjY3LTc0XCIpLFxuICBtYWtlTkFzdGF0dXMgPSBGQUxTRVxuKVxuYGBgIn0= -->
+<pre class="r"><code>Sunn_bo_raw &lt;- ApiData(
+  url = &quot;07984&quot;,
+  Region = list(&quot;vs:KommunerS&quot;, knr_sunn), 
+  NACE2007 = TRUE,
+  Kjonn = &quot;0&quot;,
+  ContentsCode = &quot;Sysselsatte&quot;,
+  Tid = c(as.character(2008:2020)),
+  Alder = c(&quot;15-74&quot;, &quot;55-66&quot;, &quot;67-74&quot;),
+  makeNAstatus = FALSE
+)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3Vubl9ibyA8LSBTdW5uX2JvX3JhdyRgMDc5ODQ6IFN5c3NlbHNhdHRlIHBlciA0LiBrdmFydGFsLCBldHRlciByZWdpb24sIG7DpnJpbmcgKFNOMjAwNyksIGtqw7hubiwgYWxkZXIsIHN0YXRpc3Rpa2t2YXJpYWJlbCBvZyDDpXJgICU+JSBcbiAgdGliYmxlKCkgJT4lIFxuICByZW5hbWUoXG4gICAgS25yID0gcmVnaW9uLCBcbiAgICBOYWVyaW5nID0gYG7DpnJpbmcgKFNOMjAwNylgLFxuICAgIEFhciA9IMOlclxuICApXG5gYGAifQ== -->
+<pre class="r"><code>Sunn_bo &lt;- Sunn_bo_raw$`07984: Sysselsatte per 4. kvartal, etter region, næring (SN2007), kjønn, alder, statistikkvariabel og år` %&gt;% 
+  tibble() %&gt;% 
+  rename(
+    Knr = region, 
+    Naering = `næring (SN2007)`,
+    Aar = år
+  )</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoU3Vubl9ib19yYXcpW1sxXV08LVwiZGVzYzVcIlxuYGBgIn0= -->
+<pre class="r"><code>names(Sunn_bo_raw)[[1]]&lt;-&quot;desc5&quot;</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3Vubl9ibyA8LSBTdW5uX2JvICU+JSBcbiAgbXV0YXRlKGtuYXZuID0gU3Vubl9ib19yYXckS25yKVxuYGBgIn0= -->
+<pre class="r"><code>Sunn_bo &lt;- Sunn_bo %&gt;% 
+  mutate(knavn = Sunn_bo_raw$Knr)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3Vubl9ibyA8LSBTdW5uX2JvICU+JSBcbiAgcGl2b3Rfd2lkZXIoXG4gICAgbmFtZXNfZnJvbSA9IEtucixcbiAgICB2YWx1ZXNfZnJvbSA9IHZhbHVlKVxuYGBgIn0= -->
+<pre class="r"><code>Sunn_bo &lt;- Sunn_bo %&gt;% 
+  pivot_wider(
+    names_from = Knr,
+    values_from = value)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
 <div id="fra-kommune-nummer-til-kommune-navn" class="section level2">
 <h2>fra kommune nummer til kommune navn</h2>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoU3Vubl9ibylbWzZdXSA8LSBcIkV0bmVcIlxubmFtZXMoU3Vubl9ibylbWzddXSA8LSBcIlN2ZWlvXCJcbm5hbWVzKFN1bm5fYm8pW1s4XV0gPC0gXCJCb2VtbG9cIlxubmFtZXMoU3Vubl9ibylbWzldXSA8LSBcIlN0b3JkXCJcbm5hbWVzKFN1bm5fYm8pW1sxMF1dIDwtIFwiRml0amFyXCJcbm5hbWVzKFN1bm5fYm8pW1sxMV1dIDwtIFwiVHlzbmVzXCJcbm5hbWVzKFN1bm5fYm8pW1sxMl1dIDwtIFwiS3Zpbm5oZXJhZFwiXG5uYW1lcyhTdW5uX2JvKVtbMTNdXSA8LSBcIk9kZGFcIlxubmFtZXMoU3Vubl9ibylbWzE0XV0gPC0gXCJVbGxlbnN2YW5nXCJcbmBgYCJ9 -->
+<pre class="r"><code>names(Sunn_bo)[[6]] &lt;- &quot;Etne&quot;
+names(Sunn_bo)[[7]] &lt;- &quot;Sveio&quot;
+names(Sunn_bo)[[8]] &lt;- &quot;Boemlo&quot;
+names(Sunn_bo)[[9]] &lt;- &quot;Stord&quot;
+names(Sunn_bo)[[10]] &lt;- &quot;Fitjar&quot;
+names(Sunn_bo)[[11]] &lt;- &quot;Tysnes&quot;
+names(Sunn_bo)[[12]] &lt;- &quot;Kvinnherad&quot;
+names(Sunn_bo)[[13]] &lt;- &quot;Odda&quot;
+names(Sunn_bo)[[14]] &lt;- &quot;Ullensvang&quot;</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3Vubl9ibyA9IG11dGF0ZShTdW5uX2JvLCB0b3RfcyA9IEV0bmUgKyBTdmVpbyArIEJvZW1sbysgU3RvcmQrIEZpdGphcisgVHlzbmVzKyBLdmlubmhlcmFkICsgT2RkYSArIFVsbGVuc3ZhbmcpXG5gYGAifQ== -->
+<pre class="r"><code>Sunn_bo = mutate(Sunn_bo, tot_s = Etne + Sveio + Boemlo+ Stord+ Fitjar+ Tysnes+ Kvinnherad + Odda + Ullensvang)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
 <div id="totalt-anasatte-i-hver-næring-for-haugalandet" class="section level2">
 <h2>Totalt anasatte i hver næring for Haugalandet</h2>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSGF1Z19ibyAlPiUgXG4gZ2dwbG90KG1hcHBpbmcgPSBhZXMoeCA9IHRvdF9oLCB5ID0gTmFlcmluZywgKGFuZ2xlPTApKSkgK1xuICBzY2FsZV9maWxsX2Rpc3RpbGxlcihwYWxldHRlID0gXCJEYXJrMlwiKSArXG4gIGdlb21fbGluZShhZXMoZ3JvdXAgPSBOYWVyaW5nLCBjb2xvdXIgPSBOYWVyaW5nKSkgK1xuICBzY2FsZV9zaXplX21hbnVhbCh2YWx1ZXMgPSBjKHNlcSgyLjAsIDIsIGJ5ID0gLTAuMSkpKSArXG4gIGdlb21faGxpbmUoeWludGVyY2VwdCA9IDApICtcbiAgbGFicyh0aXRsZSA9IFwiSGF1Z2FsYW5kZXRcIiwgeCA9IFwiVG90YWx0IGFuc2F0dGVcIiwgeSA9IFwiQW50YWxsIGFuc2F0dGUgaSAgXFxuIGFsbGUgbsOmcmluZ2VyXCIpICtcbiAgdGhlbWUoYXhpcy50aXRsZS55ID0gZWxlbWVudF90ZXh0KGFuZ2xlPTApKStcbiAgdGhlbWUobGVnZW5kLnBvc2l0aW9uID0gJ2JvdHRvbScpXG5gYGAifQ== -->
+<pre class="r"><code>Haug_bo %&gt;% 
+ ggplot(mapping = aes(x = tot_h, y = Naering, (angle=0))) +
+  scale_fill_distiller(palette = &quot;Dark2&quot;) +
+  geom_line(aes(group = Naering, colour = Naering)) +
+  scale_size_manual(values = c(seq(2.0, 2, by = -0.1))) +
+  geom_hline(yintercept = 0) +
+  labs(title = &quot;Haugalandet&quot;, x = &quot;Totalt ansatte&quot;, y = &quot;Antall ansatte i  \n alle næringer&quot;) +
+  theme(axis.title.y = element_text(angle=0))+
+  theme(legend.position = &#39;bottom&#39;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Grafen ovenfor viser til antall ansatte i ulike næringer på Haugalandet. Ut i fra grafen kan en se at Helse- og omsorgstjenester er næring med høyest antall ansatte på Haugalandet.</p>
 </div>
 <div id="totalt-anasatte-i-hver-næring-for-sunnhordland" class="section level2">
 <h2>Totalt anasatte i hver næring for Sunnhordland</h2>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3Vubl9ibyAlPiUgXG4gZ2dwbG90KG1hcHBpbmcgPSBhZXMoeCA9IHRvdF9zLCB5ID0gTmFlcmluZywgKGFuZ2xlPTApKSkgK1xuICBzY2FsZV9maWxsX2Rpc3RpbGxlcihwYWxldHRlID0gXCJEYXJrMlwiKSArXG4gIGdlb21fbGluZShhZXMoZ3JvdXAgPSBOYWVyaW5nLCBjb2xvdXIgPSBOYWVyaW5nKSkgK1xuICBzY2FsZV9zaXplX21hbnVhbCh2YWx1ZXMgPSBjKHNlcSgyLjAsIDIsIGJ5ID0gLTAuMSkpKSArXG4gIGdlb21faGxpbmUoeWludGVyY2VwdCA9IDApICtcbiAgbGFicyh0aXRsZSA9IFwiU3VubmhvcmRhbGFuZFwiLCB4ID0gXCJUb3RhbHQgYW5zYXR0ZVwiLCB5ID0gXCJBbnRhbGwgYW5zYXR0ZSBpICBcXG4gYWxsZSBuw6ZyaW5nZXJcIikgK1xuICB0aGVtZShheGlzLnRpdGxlLnkgPSBlbGVtZW50X3RleHQoYW5nbGU9MCkpK1xuICB0aGVtZShsZWdlbmQucG9zaXRpb24gPSAnYm90dG9tJylcbmBgYCJ9 -->
+<pre class="r"><code>Sunn_bo %&gt;% 
+ ggplot(mapping = aes(x = tot_s, y = Naering, (angle=0))) +
+  scale_fill_distiller(palette = &quot;Dark2&quot;) +
+  geom_line(aes(group = Naering, colour = Naering)) +
+  scale_size_manual(values = c(seq(2.0, 2, by = -0.1))) +
+  geom_hline(yintercept = 0) +
+  labs(title = &quot;Sunnhordaland&quot;, x = &quot;Totalt ansatte&quot;, y = &quot;Antall ansatte i  \n alle næringer&quot;) +
+  theme(axis.title.y = element_text(angle=0))+
+  theme(legend.position = &#39;bottom&#39;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>I figuren ovenfor fremstilles det antall ansatte i de ulike næringene i Sunnhordland, her kan en se at helse- og soisaltjenester har flest ansatte.</p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG9rYWxpc2VyaW5nc2t2b3RpZW50ZXIgPC0gcmVhZF9leGNlbChcIn4vRG9jdW1lbnRzL01hc3RlciBpIHNpdmlsb2tvbm9tLzIuIFNlbWVzdGVyL0FudmVuZHQgYnktIG9nIHJlZ2lvbmFsw7hrb25vbWkvbG9rYWxpc2VyaW5nc2t2b3RpZW50ZXIueGxzeFwiKVxuYGBgIn0= -->
+<pre class="r"><code>lokaliseringskvotienter &lt;- read_excel(&quot;~/Documents/Master i sivilokonom/2. Semester/Anvendt by- og regionaløkonomi/lokaliseringskvotienter.xlsx&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Under <em>lokaliseringskvoienter</em> har vi sett på tre ulike sektorer både på Haugalandet og for Sunnhordland. Vi valgte da ut industri, helse og sosialtjenester og varehandel, reperasjon av motorvogner. Det ble valgt ut tre forskjellige år, da første året som er 2008, 2010 og det siste året som var 2020. Aldersgruppen vi valgte var 15 til 74, fordi vi ser at denne aldersgruppen inneholder høyest tall av ansatte.</p>
 <p><em>Haugalandet</em></p>
-<p>Resultatet til sektoren <strong>industri</strong> Haugalandet ble på for årene 2008, 2010 og 2020 ble 1.527396811, 1.434975844 og 1.601509868. Alle årene så sier resultatet at det er en lokalnæring på Haugalandet. Haugesund, Karmøy og Tysvær er de tre største kommunene med flere industri bedrifter, de har for eksempel Aibel, Hydro og Equinor. Disse kan ses også på som basenæringer.</p>
-<p><strong>Helse- og sosialtjenester</strong> ble våre resultater for 2008, 2010 og 2020, slik 0.9962243996, 0.9816929097 og 1.026935838. For 2008 og 2010 kan en se ut i fra resultatene at det er basefaktor. Hvis en ser på realiteten vil en si er en lokalnæring, som resultatet i 2020 sier. Fordi det er sykehus i haugesund.</p>
-<p>I <strong>varehandel, reperasjon av motorvogner</strong> ble resultatene for 2008, 2010 og 2020, 0.9372344155, 0.9562311403 og 0.9144987383. Her vil en se at alle resultatene er nder 1 som tilsvarer at det er en basisnæring.</p>
-<p><em>Sunnhordaland</em></p>
-<p>For <strong>industri</strong> sektoren i Sunnhordland har vi brukt samme år, og samme aldersgruppe, der våre resultater ble 2.039077786, 2.05242696 og 0. Her fikk vi 0 i 2020 fordi det var mengel på informasjon i år 2020. I de to andre resultatene er tallet mye høyere en 1, vil det si at industri sektoren på Sunnhordalan er en lokalnæring. Her vil det nok være mye mer av lokalt arbeid.</p>
-<p><strong>Helse- og sosialtjenester</strong> ble våre resultater for 2008, 2010 og 2020, slik 1.8936, 2.2833 og 0 (mangel på informasjon for 2020). Her ser en at i 2008 var det et lavere resultat enn i 2010, men begge årene gir et resultat på over 1 som sier at det er lokalnæring.</p>
-<p>I <strong>varehandel, reperasjon av motorvogner</strong> ble resultatene for 2008, 2010 og 2020 var våre svar 1.104, 1.2475 og 0. Slik som de over er resultatet for 2020 en mangel på. Det er også lokalnæring slik som de andre to sektorene.</p>
+<p>Resultatet til sektoren <strong>industri</strong> Haugalandet ble på for årene 2008, 2010 og 2020 ble 1.527396811, 1.434975844 og 1.601509868. Alle årene så sier resultatet at det er en basisnæring på Haugalandet. Haugesund, Karmøy og Tysvær er de tre største kommunene med flere industri bedrifter, de har for eksempel Aibel, Hydro og Equinor.</p>
+<p><strong>Helse- og sosialtjenester</strong> ble våre resultater for 2008, 2010 og 2020, slik 0.9962243996, 0.9816929097 og 1.026935838. Når det kommer til helse- og sosialtjenester så vil en si her at det er en lokalnæring, dette fordi dem tilbyr å hjelpe menneskene lokalt.</p>
+<p>I <strong>varehandel, reperasjon av motorvogner</strong> ble resultatene for 2008, 2010 og 2020, 0.9372344155, 0.9562311403 og 0.9144987383. Varehandel, reparasjon av motorvogner vil være en lokalnæring, dette på grunn av at et verksted i nærheten tilbyr tjenester til de lokale.</p>
+<p><em>Sunnhordland</em></p>
+<p>For <strong>industri</strong> sektoren i Sunnhordland har vi brukt samme år, og samme aldersgruppe, der våre resultater ble 2.039077786, 2.05242696 og 0. Industrien i Sunnhordland vil vi påstå er en basisnæring, for når vi tar Westcon som et eksempel, så gir dem produkter og tjenester til andre folk/bedrifter i andre kommuner eller regioner.</p>
+<p><strong>Helse- og sosialtjenester</strong> ble våre resultater for 2008, 2010 og 2020, slik 1.8936, 2.2833 og 0 (mangel på informasjon for 2020). Slik som det er for Haugalandet, så vil helse- og sosialtjenesten være en lokalnæring i Sunnhordland. Dette fordi sykehuser skal hjelpe folkene som er i nærheten, og det er derfor man har et sykehus i de fleste kommuner.</p>
+<p>I <strong>varehandel, reperasjon av motorvogner</strong> ble resultatene for 2008, 2010 og 2020 var våre svar 1.104, 1.2475 og 0. Her tenker vi det samme slik som vi forklarte under Haugalandet, der dette vil bli en lokalnæring.</p>
 <p>I den romlige Gini-koeffisienten har vi valgt å se på samme sektorene som vi brukte for å finne lokaliseringskovientene. Da årene 2008, 2010 og 2020. Aldersgruppen er 15-74 år og sektorene er industri, helse- og sosialtjenester og varehandel, reperasjon av motorvogner. Ved måling av Gini-koeffisienten måler vi hvor stor avstanden på “rik” og “fattig” i fylket, tallet skal ligge i mellom 0-1. 0 betyr at det er lik inntekt som formue for alle i landet, og på 1 er det de tlik inntekt og formue for en person.</p>
 <p><em>Haugalandet</em></p>
 <p>Industri gir et resultat på 0,08818581974, som vil si at den er så å si null og tilsvarer en nok så lik inntekt som formue innen sektoren industi på Haugalandet.</p>
@@ -317,11 +466,34 @@ pre code {
 <div id="pendling-mellom-de-ulike-kommunene-i-regionen" class="section level1">
 <h1>4. Pendling mellom de ulike kommunene i regionen</h1>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkeGwpXG5UYWJfMDMzMjFfYW5kZWxlciA8LSByZWFkX2V4Y2VsKFwiRGF0YS9UYWJfMDMzMjFfYW5kZWxlci54bHN4XCIsIFxuICAgIGNvbF90eXBlcyA9IGMoXCJ0ZXh0XCIsIFwidGV4dFwiLCBcInRleHRcIiwgXG4gICAgICAgIFwidGV4dFwiLCBcInRleHRcIiwgXCJudW1lcmljXCIsIFwibnVtZXJpY1wiLCBcbiAgICAgICAgXCJudW1lcmljXCIpKVxuYGBgIn0= -->
+<pre class="r"><code>library(readxl)
+Tab_03321_andeler &lt;- read_excel(&quot;Data/Tab_03321_andeler.xlsx&quot;, 
+    col_types = c(&quot;text&quot;, &quot;text&quot;, &quot;text&quot;, 
+        &quot;text&quot;, &quot;text&quot;, &quot;numeric&quot;, &quot;numeric&quot;, 
+        &quot;numeric&quot;))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
 <div id="pendler-ut" class="section level1">
 <h1>Pendler ut</h1>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGFiXzAzMzIxX2FuZGVsZXIgJT4lXG4gIHNlbGVjdChhYXIsIGJfa25hdm5fbmV3LCBVdF9wZW5kbGVyZSkgJT4lXG4gIGZpbHRlcihiX2tuYXZuX25ldyAlaW4lIGMoXCJUeXN2w6ZyXCIsIFwiS2FybcO4eVwiLCBcIkhhdWdlc3VuZFwiLCBcIkJva25cIiwgXCJVdHNpcmFcIiwgXCJWaW5kYWZqb3JkXCIsIFwiRXRuZVwiLCBcIlN2ZWlvXCIsIFwiQsO4bWxvXCIsIFwiU3RvcmRcIiwgXCJGaXRqYXJcIiwgXCJUeXNuZXNcIilcbiAgICApICU+JVxuICBnZ3Bsb3QobWFwcGluZyA9IGFlcyh4ID0gYWFyLCB5ID0gVXRfcGVuZGxlcmUsIGNvbG91ciA9IGJfa25hdm5fbmV3KSkgK1xuICBnZW9tX2xpbmUoYWVzKGdyb3VwID0gYl9rbmF2bl9uZXcpLCBsd2QgPSAwLjYpICtcbiAgdGhlbWUobGVnZW5kLnBvc2l0aW9uID0gJ2JvdHRvbScpK1xuICB4bGFiKFwiw4VyXCIpICtcbiAgeWxhYihcIlV0cGVuZGxpbmcgJVwiKSArXG4gIGxhYnMoY29sb3VyID0gXCJLb21tdW5lXCIpXG5gYGAifQ== -->
+<pre class="r"><code>Tab_03321_andeler %&gt;%
+  select(aar, b_knavn_new, Ut_pendlere) %&gt;%
+  filter(b_knavn_new %in% c(&quot;Tysvær&quot;, &quot;Karmøy&quot;, &quot;Haugesund&quot;, &quot;Bokn&quot;, &quot;Utsira&quot;, &quot;Vindafjord&quot;, &quot;Etne&quot;, &quot;Sveio&quot;, &quot;Bømlo&quot;, &quot;Stord&quot;, &quot;Fitjar&quot;, &quot;Tysnes&quot;)
+    ) %&gt;%
+  ggplot(mapping = aes(x = aar, y = Ut_pendlere, colour = b_knavn_new)) +
+  geom_line(aes(group = b_knavn_new), lwd = 0.6) +
+  theme(legend.position = &#39;bottom&#39;)+
+  xlab(&quot;År&quot;) +
+  ylab(&quot;Utpendling %&quot;) +
+  labs(colour = &quot;Kommune&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Det vi ser ut i fra grafen er at det er to kommuner som skiller seg klart ut når det kommer til andel utpendlere(Tysvær og Sveio). Grunnen til det er at disse kommunene er nabokommunene til Haugesund som er et arbeidssenter på haugalandet. Fitjar er også en kommune med høy andel utpendlere, grunnen til dette er litt det samme som Sveio og Tysvær, men i dette tilfelle er det Stord som arbeidssenter i sunnhordaland. Når det gjelder Bokn så er dette en liten kommune med begrenset arbeidsplasser som gir en økt utpendling til nabokommunene Karnøy, Tysvær og Haugesund.</p>
 <div id="utvikling-over-tid" class="section level3">
@@ -332,6 +504,21 @@ pre code {
 <div id="pendler-inn" class="section level1">
 <h1>Pendler inn</h1>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGFiXzAzMzIxX2FuZGVsZXIgJT4lXG4gIHNlbGVjdChhYXIsIGJfa25hdm5fbmV3LCBJbm5fcGVuZGxlcmUpICU+JVxuICBmaWx0ZXIoXG4gICAgYl9rbmF2bl9uZXcgJWluJSBjKFwiVHlzdsOmclwiLCBcIkthcm3DuHlcIiwgXCJcIiwgXCJIYXVnZXN1bmRcIiwgXCJCb2tuXCIsIFwiVXRzaXJhXCIsIFwiVmluZGFmam9yZFwiLCBcIkV0bmVcIiwgXCJTdmVpb1wiLCBcIkLDuG1sb1wiLCBcIlN0b3JkXCIsIFwiRml0amFyXCIsIFwiVHlzbmVzXCIsIFwiXCIsIFwiXCIpXG4gICAgKSAlPiVcbiAgZ2dwbG90KG1hcHBpbmcgPSBhZXMoeCA9IGFhciwgeSA9IElubl9wZW5kbGVyZSwgY29sb3VyID0gYl9rbmF2bl9uZXcpKSArXG4gIGdlb21fbGluZShhZXMoZ3JvdXAgPSBiX2tuYXZuX25ldyksIGx3ZCA9IDAuNSkgK1xuICB0aGVtZShsZWdlbmQucG9zaXRpb24gPSAnYm90dG9tJykgK1xuICB4bGFiKFwiw4VyXCIpICtcbiAgeWxhYihcIklubnBlbmRsaW5nICVcIikgK1xuICBsYWJzKGNvbG91ciA9IFwiS29tbXVuZVwiKVxuYGBgIn0= -->
+<pre class="r"><code>Tab_03321_andeler %&gt;%
+  select(aar, b_knavn_new, Inn_pendlere) %&gt;%
+  filter(
+    b_knavn_new %in% c(&quot;Tysvær&quot;, &quot;Karmøy&quot;, &quot;&quot;, &quot;Haugesund&quot;, &quot;Bokn&quot;, &quot;Utsira&quot;, &quot;Vindafjord&quot;, &quot;Etne&quot;, &quot;Sveio&quot;, &quot;Bømlo&quot;, &quot;Stord&quot;, &quot;Fitjar&quot;, &quot;Tysnes&quot;, &quot;&quot;, &quot;&quot;)
+    ) %&gt;%
+  ggplot(mapping = aes(x = aar, y = Inn_pendlere, colour = b_knavn_new)) +
+  geom_line(aes(group = b_knavn_new), lwd = 0.5) +
+  theme(legend.position = &#39;bottom&#39;) +
+  xlab(&quot;År&quot;) +
+  ylab(&quot;Innpendling %&quot;) +
+  labs(colour = &quot;Kommune&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Tysvær er kommunen med flest andel innpendlere på grunn av kårstø og etableringer av nye næringsparker. De er også en av de kommunene som har hatt størst vekst over 20-års perioden. Haugesund har en ganske moderat og stabil vekst. Samtidig er de veldig høyt oppe i andel innpendling. Dette skyldes at Haugesund er regionens senter. Bokn sine svigninger kan skyldes Bokn Plast AS og hvordan de gjør det som privateid selskap. Dette er det største privateide selskapet i kommunen. Utsira er en kommune med veldig få antall beboere, så deres graf i figuren gir store og radikale endringer hvis for eksempel en familie skulle flyttet bort der i fra.</p>
 <div id="utviklingen-over-tid" class="section level3">
@@ -342,6 +529,21 @@ pre code {
 <div id="bor-og-jobber-i-samme-kommune" class="section level1">
 <h1>Bor og jobber i samme kommune</h1>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGFiXzAzMzIxX2FuZGVsZXIgJT4lXG4gIHNlbGVjdChhYXIsIGJfa25hdm5fbmV3LCBiX29nX2EpICU+JVxuICBmaWx0ZXIoXG4gICAgYl9rbmF2bl9uZXcgJWluJSBjKFwiVHlzdsOmclwiLCBcIkthcm3DuHlcIiwgXCJTYXVkYVwiLCBcIkhhdWdlc3VuZFwiLCBcIkJva25cIiwgXCJVdHNpcmFcIiwgXCJWaW5kYWZqb3JkXCIsIFwiRXRuZVwiLCBcIlN2ZWlvXCIsIFwiQsO4bWxvXCIsIFwiU3RvcmRcIiwgXCJGaXRqYXJcIiwgXCJUeXNuZXNcIiwgXCJLdmlubmhlcmFkXCIsIFwiVWxsZW5zdmFuZ1wiKVxuICAgICkgJT4lXG4gIGdncGxvdChtYXBwaW5nID0gYWVzKHggPSBhYXIsIHkgPSBiX29nX2EsIGNvbG91ciA9IGJfa25hdm5fbmV3KSkgK1xuICBnZW9tX2xpbmUoYWVzKGdyb3VwID0gYl9rbmF2bl9uZXcpLCBsd2QgPSAwLjUpICtcbiAgdGhlbWUobGVnZW5kLnBvc2l0aW9uID0gJ2JvdHRvbScpK1xuICB4bGFiKFwiw4VyXCIpICtcbiAgeWxhYihcIkJvLSBvZyBhcmJlaWRza29tbXVuZSAlXCIpICtcbiAgbGFicyhjb2xvdXIgPSBcIktvbW11bmVcIilcbmBgYCJ9 -->
+<pre class="r"><code>Tab_03321_andeler %&gt;%
+  select(aar, b_knavn_new, b_og_a) %&gt;%
+  filter(
+    b_knavn_new %in% c(&quot;Tysvær&quot;, &quot;Karmøy&quot;, &quot;Sauda&quot;, &quot;Haugesund&quot;, &quot;Bokn&quot;, &quot;Utsira&quot;, &quot;Vindafjord&quot;, &quot;Etne&quot;, &quot;Sveio&quot;, &quot;Bømlo&quot;, &quot;Stord&quot;, &quot;Fitjar&quot;, &quot;Tysnes&quot;, &quot;Kvinnherad&quot;, &quot;Ullensvang&quot;)
+    ) %&gt;%
+  ggplot(mapping = aes(x = aar, y = b_og_a, colour = b_knavn_new)) +
+  geom_line(aes(group = b_knavn_new), lwd = 0.5) +
+  theme(legend.position = &#39;bottom&#39;)+
+  xlab(&quot;År&quot;) +
+  ylab(&quot;Bo- og arbeidskommune %&quot;) +
+  labs(colour = &quot;Kommune&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Vi ser at Sauda og Ullensvang har en stor og stabil andel av bosatte og sysselsatte innenfor samme kommune. Dette skyldes at Sauda og Odda (Odda ligger i Ullensvang), har vært byer med relativ stor industri aktivitet samtidig som de ligger relativt adskilt fra andre nære, store kommuner slik som for eksempel Haugesund og Bergen.</p>
 <div id="oppsummering" class="section level3">
@@ -353,7 +555,7 @@ pre code {
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiQXJiZWlkc2tyYXYiCnN1YnRpdGxlOiAiTVNCIDEwNiAtIEFudmVuZHQgYnktIG9nIHJlZ2lvbmFsw7hrb25vbWkiCmF1dGhvcjogIkdydXBwZSAyIgpvdXRwdXQ6CiAgcGRmX2RvY3VtZW50OiBkZWZhdWx0CiAgaHRtbF9ub3RlYm9vazogZGVmYXVsdApsYW5nOiBuYi1OTwotLS0KYGBge3Igc2V0dXAsIG1lc3NhZ2UgPSBGQUxTRSwgZWNobyA9IEZBTFNFfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShsdWJyaWRhdGUpCmxpYnJhcnkoUHhXZWJBcGlEYXRhKQpsaWJyYXJ5KHJlYWRyKQpsaWJyYXJ5KGdncGxvdDIpCmxpYnJhcnkoZHBseXIpCmxpYnJhcnkoUkVBVCkKCmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvPUZBTFNFKQpgYGAKClxuZXdwYWdlCgojIDMuIFN5c3NlbHNldHRpbmcgaSB1bGlrZSBuw6ZyaW5nZXIsIGV0dGVyIGFyYmVpZHNzdGVkc2tvbW11bmUKCiMjIEkgZGVubmUgb3BwZ2F2ZW4gc2thbCB2aSBmaW5uZSBzeXNzZWxzZXR0aW5nIGkgZGUgdWxpa2UgbsOmcmluZ2VuZSwgZXR0ZXIgYXJiZWlkc3N0ZWRza29tbXVuZS4KCmBgYHtyfQprbnIgPC0gYygiMTEwNiIsICIxMTM1IiwgIjExNDUiLCAiMTE0NiIsICIxMTQ5IiwgIjExNTEiLCAiMTE2MCIpCmBgYAoKCmBgYHtyfQpIYXVnX2JvX3JhdyA8LSBBcGlEYXRhKAogIHVybCA9ICIwNzk4NCIsCiAgUmVnaW9uID0gbGlzdCgidnM6S29tbXVuZXJTIiwga25yKSwgCiAgTkFDRTIwMDcgPSBUUlVFLAogIEtqb25uID0gIjAiLAogIENvbnRlbnRzQ29kZSA9ICJTeXNzZWxzYXR0ZSIsCiAgVGlkID0gYyhhcy5jaGFyYWN0ZXIoMjAwODoyMDIwKSksCiAgQWxkZXIgPSBjKCIxNS03NCIsICI1NS02NiIsICI2Ny03NCIpLAogIG1ha2VOQXN0YXR1cyA9IEZBTFNFCikKYGBgCgpWZWxnZXIgdXQgb2cgZW5kcmVyIG5hdm4sIEhhdWdhbGFuZGV0CgpgYGB7cn0KSGF1Z19ibyA8LSBIYXVnX2JvX3JhdyRgMDc5ODQ6IFN5c3NlbHNhdHRlIHBlciA0LiBrdmFydGFsLCBldHRlciByZWdpb24sIG7DpnJpbmcgKFNOMjAwNyksIGtqw7hubiwgYWxkZXIsIHN0YXRpc3Rpa2t2YXJpYWJlbCBvZyDDpXJgICU+JSAKICB0aWJibGUoKSAlPiUgCiAgcmVuYW1lKAogICAgS25yID0gcmVnaW9uLAogICAgQWFyID0gw6VyLAogICAgTmFlcmluZyA9IGBuw6ZyaW5nIChTTjIwMDcpYAogICkKYGBgCgpgYGB7ciB9Cm5hbWVzKEhhdWdfYm9fcmF3KVsxXSA8LSAiZGVzYzQiCmBgYAoKTXV0ZXJlciBpbm4gaSBIYXVnYm8gCmBgYHtyfQpIYXVnX2JvIDwtIEhhdWdfYm8gJT4lIAogIG11dGF0ZShrbmF2biA9IEhhdWdfYm9fcmF3JEtucikKYGBgCgpUYXIgdXQga29tbXVuZW5lCmBgYHtyfQpIYXVnX2JvIDwtIEhhdWdfYm8gJT4lIAogIHBpdm90X3dpZGVyKAogICAgbmFtZXNfZnJvbSA9IEtuciwKICAgIHZhbHVlc19mcm9tID0gdmFsdWUpCmBgYAoKIyMgTGVnZ2VyIGhlciB0aWwgZW4gdG90YWwgZm9yIEhhdWdhbGFuZGV0LiAKYGBge3J9CkhhdWdfYm8gPSBtdXRhdGUoSGF1Z19ibywgdG90X2ggPSBIYXVnZXN1bmQrU2F1ZGErQm9rbitUeXN2w6ZyK0thcm3DuHkrVXRzaXJhK1ZpbmRhZmpvcmQpCmBgYAoKIyMgU3VubmhvcmRhbGFuZApgYGB7cn0Ka25yX3N1bm4gPC0gYygiMTIxMSIsICIxMjE2IiwKICAgICAgICAgIjEyMTkiLCAiMTIyMSIsICIxMjIyIiwgIjEyMjMiLCAiMTIyNCIsICIxMjI4IiwgIjEyMzEiKQpgYGAKCiMjIEhlbnRlciBpbm4gZGF0YSBmcmEgb3BwZ2F2ZSAxLCBrb21tdW5lbmUgaSBTdW5uaG9yZGFsYW5kCmBgYHtyfQpTdW5uX2JvX3JhdyA8LSBBcGlEYXRhKAogIHVybCA9ICIwNzk4NCIsCiAgUmVnaW9uID0gbGlzdCgidnM6S29tbXVuZXJTIiwga25yX3N1bm4pLCAKICBOQUNFMjAwNyA9IFRSVUUsCiAgS2pvbm4gPSAiMCIsCiAgQ29udGVudHNDb2RlID0gIlN5c3NlbHNhdHRlIiwKICBUaWQgPSBjKGFzLmNoYXJhY3RlcigyMDA4OjIwMjApKSwKICBBbGRlciA9IGMoIjE1LTc0IiwgIjU1LTY2IiwgIjY3LTc0IiksCiAgbWFrZU5Bc3RhdHVzID0gRkFMU0UKKQpgYGAKCgpgYGB7cn0KU3Vubl9ibyA8LSBTdW5uX2JvX3JhdyRgMDc5ODQ6IFN5c3NlbHNhdHRlIHBlciA0LiBrdmFydGFsLCBldHRlciByZWdpb24sIG7DpnJpbmcgKFNOMjAwNyksIGtqw7hubiwgYWxkZXIsIHN0YXRpc3Rpa2t2YXJpYWJlbCBvZyDDpXJgICU+JSAKICB0aWJibGUoKSAlPiUgCiAgcmVuYW1lKAogICAgS25yID0gcmVnaW9uLCAKICAgIE5hZXJpbmcgPSBgbsOmcmluZyAoU04yMDA3KWAsCiAgICBBYXIgPSDDpXIKICApCmBgYAoKYGBge3J9Cm5hbWVzKFN1bm5fYm9fcmF3KVtbMV1dPC0iZGVzYzUiCmBgYAoKYGBge3J9ClN1bm5fYm8gPC0gU3Vubl9ibyAlPiUgCiAgbXV0YXRlKGtuYXZuID0gU3Vubl9ib19yYXckS25yKQpgYGAKCmBgYHtyfQpTdW5uX2JvIDwtIFN1bm5fYm8gJT4lIAogIHBpdm90X3dpZGVyKAogICAgbmFtZXNfZnJvbSA9IEtuciwKICAgIHZhbHVlc19mcm9tID0gdmFsdWUpCmBgYAoKIyMgZnJhIGtvbW11bmUgbnVtbWVyIHRpbCBrb21tdW5lIG5hdm4gCmBgYHtyfQpuYW1lcyhTdW5uX2JvKVtbNl1dIDwtICJFdG5lIgpuYW1lcyhTdW5uX2JvKVtbN11dIDwtICJTdmVpbyIKbmFtZXMoU3Vubl9ibylbWzhdXSA8LSAiQm9lbWxvIgpuYW1lcyhTdW5uX2JvKVtbOV1dIDwtICJTdG9yZCIKbmFtZXMoU3Vubl9ibylbWzEwXV0gPC0gIkZpdGphciIKbmFtZXMoU3Vubl9ibylbWzExXV0gPC0gIlR5c25lcyIKbmFtZXMoU3Vubl9ibylbWzEyXV0gPC0gIkt2aW5uaGVyYWQiCm5hbWVzKFN1bm5fYm8pW1sxM11dIDwtICJPZGRhIgpuYW1lcyhTdW5uX2JvKVtbMTRdXSA8LSAiVWxsZW5zdmFuZyIKYGBgCgoKYGBge3J9ClN1bm5fYm8gPSBtdXRhdGUoU3Vubl9ibywgdG90X3MgPSBFdG5lICsgU3ZlaW8gKyBCb2VtbG8rIFN0b3JkKyBGaXRqYXIrIFR5c25lcysgS3Zpbm5oZXJhZCArIE9kZGEgKyBVbGxlbnN2YW5nKQpgYGAKCgojIyBUb3RhbHQgYW5hc2F0dGUgaSBodmVyIG7DpnJpbmcgZm9yIEhhdWdhbGFuZGV0CmBgYHtyfQpIYXVnX2JvICU+JSAKIGdncGxvdChtYXBwaW5nID0gYWVzKHggPSB0b3RfaCwgeSA9IE5hZXJpbmcsIChhbmdsZT0wKSkpICsKICBzY2FsZV9maWxsX2Rpc3RpbGxlcihwYWxldHRlID0gIkRhcmsyIikgKwogIGdlb21fbGluZShhZXMoZ3JvdXAgPSBOYWVyaW5nLCBjb2xvdXIgPSBOYWVyaW5nKSkgKwogIHNjYWxlX3NpemVfbWFudWFsKHZhbHVlcyA9IGMoc2VxKDIuMCwgMiwgYnkgPSAtMC4xKSkpICsKICBnZW9tX2hsaW5lKHlpbnRlcmNlcHQgPSAwKSArCiAgbGFicyh0aXRsZSA9ICJIYXVnYWxhbmRldCIsIHggPSAiVG90YWx0IGFuc2F0dGUiLCB5ID0gIkFudGFsbCBhbnNhdHRlIGkgIFxuIGFsbGUgbsOmcmluZ2VyIikgKwogIHRoZW1lKGF4aXMudGl0bGUueSA9IGVsZW1lbnRfdGV4dChhbmdsZT0wKSkrCiAgdGhlbWUobGVnZW5kLnBvc2l0aW9uID0gJ2JvdHRvbScpCmBgYAoKR3JhZmVuIG92ZW5mb3IgdmlzZXIgdGlsIGFudGFsbCBhbnNhdHRlIGkgdWxpa2UgbsOmcmluZ2VyIHDDpSBIYXVnYWxhbmRldC4gVXQgaSBmcmEgZ3JhZmVuIGthbiBlbiBzZSBhdCBIZWxzZS0gb2cgb21zb3Jnc3RqZW5lc3RlciBlciBuw6ZyaW5nIG1lZCBow7h5ZXN0IGFudGFsbCBhbnNhdHRlIHDDpSBIYXVnYWxhbmRldC4gCgoKCiMjIFRvdGFsdCBhbmFzYXR0ZSBpIGh2ZXIgbsOmcmluZyBmb3IgU3VubmhvcmRsYW5kCgpgYGB7cn0KU3Vubl9ibyAlPiUgCiBnZ3Bsb3QobWFwcGluZyA9IGFlcyh4ID0gdG90X3MsIHkgPSBOYWVyaW5nLCAoYW5nbGU9MCkpKSArCiAgc2NhbGVfZmlsbF9kaXN0aWxsZXIocGFsZXR0ZSA9ICJEYXJrMiIpICsKICBnZW9tX2xpbmUoYWVzKGdyb3VwID0gTmFlcmluZywgY29sb3VyID0gTmFlcmluZykpICsKICBzY2FsZV9zaXplX21hbnVhbCh2YWx1ZXMgPSBjKHNlcSgyLjAsIDIsIGJ5ID0gLTAuMSkpKSArCiAgZ2VvbV9obGluZSh5aW50ZXJjZXB0ID0gMCkgKwogIGxhYnModGl0bGUgPSAiU3VubmhvcmRhbGFuZCIsIHggPSAiVG90YWx0IGFuc2F0dGUiLCB5ID0gIkFudGFsbCBhbnNhdHRlIGkgIFxuIGFsbGUgbsOmcmluZ2VyIikgKwogIHRoZW1lKGF4aXMudGl0bGUueSA9IGVsZW1lbnRfdGV4dChhbmdsZT0wKSkrCiAgdGhlbWUobGVnZW5kLnBvc2l0aW9uID0gJ2JvdHRvbScpCmBgYAoKCkkgZmlndXJlbiBvdmVuZm9yIGZyZW1zdGlsbGVzIGRldCBhbnRhbGwgYW5zYXR0ZSBpIGRlIHVsaWtlIG7DpnJpbmdlbmUgaSBTdW5uaG9yZGxhbmQsIGhlciBrYW4gZW4gc2UgYXQgaGVsc2UtIG9nIHNvaXNhbHRqZW5lc3RlciBoYXIgZmxlc3QgYW5zYXR0ZS4gIAoKCmBgYHtyfQpsb2thbGlzZXJpbmdza3ZvdGllbnRlciA8LSByZWFkX2V4Y2VsKCJ+L0RvY3VtZW50cy9NYXN0ZXIgaSBzaXZpbG9rb25vbS8yLiBTZW1lc3Rlci9BbnZlbmR0IGJ5LSBvZyByZWdpb25hbMO4a29ub21pL2xva2FsaXNlcmluZ3Nrdm90aWVudGVyLnhsc3giKQpgYGAKCgpVbmRlciAqbG9rYWxpc2VyaW5nc2t2b2llbnRlciogaGFyIHZpIHNldHQgcMOlIHRyZSB1bGlrZSBzZWt0b3JlciBiw6VkZSBww6UgSGF1Z2FsYW5kZXQgb2cgZm9yIFN1bm5ob3JkbGFuZC4gVmkgdmFsZ3RlIGRhIHV0IGluZHVzdHJpLCBoZWxzZSBvZyBzb3NpYWx0amVuZXN0ZXIgb2cgdmFyZWhhbmRlbCwgcmVwZXJhc2pvbiBhdiBtb3RvcnZvZ25lci4gRGV0IGJsZSB2YWxndCB1dCB0cmUgZm9yc2tqZWxsaWdlIMOlciwgZGEgZsO4cnN0ZSDDpXJldCBzb20gZXIgMjAwOCwgMjAxMCBvZyBkZXQgc2lzdGUgw6VyZXQgc29tIHZhciAyMDIwLiBBbGRlcnNncnVwcGVuIHZpIHZhbGd0ZSB2YXIgMTUgdGlsIDc0LCBmb3JkaSB2aSBzZXIgYXQgZGVubmUgYWxkZXJzZ3J1cHBlbiBpbm5laG9sZGVyIGjDuHllc3QgdGFsbCBhdiBhbnNhdHRlLiAKCipIYXVnYWxhbmRldCoKClJlc3VsdGF0ZXQgdGlsIHNla3RvcmVuICoqaW5kdXN0cmkqKiBIYXVnYWxhbmRldCBibGUgcMOlIGZvciDDpXJlbmUgMjAwOCwgMjAxMCBvZyAyMDIwIGJsZSAKMS41MjczOTY4MTEsIDEuNDM0OTc1ODQ0IG9nIDEuNjAxNTA5ODY4LiBBbGxlIMOlcmVuZSBzw6Ugc2llciByZXN1bHRhdGV0IGF0IGRldCBlciBlbiBsb2thbG7DpnJpbmcgIHDDpSBIYXVnYWxhbmRldC4gSGF1Z2VzdW5kLCBLYXJtw7h5IG9nIFR5c3bDpnIgZXIgZGUgdHJlIHN0w7hyc3RlIGtvbW11bmVuZSBtZWQgZmxlcmUgaW5kdXN0cmkgYmVkcmlmdGVyLCBkZSBoYXIgZm9yIGVrc2VtcGVsIEFpYmVsLCBIeWRybyBvZyBFcXVpbm9yLiBEaXNzZSBrYW4gc2VzIG9nc8OlIHDDpSBzb20gYmFzZW7DpnJpbmdlci4gCgoqKkhlbHNlLSBvZyBzb3NpYWx0amVuZXN0ZXIqKiBibGUgdsOlcmUgcmVzdWx0YXRlciBmb3IgMjAwOCwgMjAxMCBvZyAyMDIwLCBzbGlrIAowLjk5NjIyNDM5OTYsIDAuOTgxNjkyOTA5NyBvZyAxLjAyNjkzNTgzOC4gRm9yIDIwMDggb2cgMjAxMCBrYW4gZW4gc2UgdXQgaSBmcmEgcmVzdWx0YXRlbmUgYXQgZGV0IGVyIGJhc2VmYWt0b3IuIEh2aXMgZW4gc2VyIHDDpSByZWFsaXRldGVuIHZpbCBlbiBzaSBlciBlbiBsb2thbG7DpnJpbmcsIHNvbSByZXN1bHRhdGV0IGkgMjAyMCBzaWVyLiBGb3JkaSBkZXQgZXIgc3lrZWh1cyBpIGhhdWdlc3VuZC4gCgpJICoqdmFyZWhhbmRlbCwgcmVwZXJhc2pvbiBhdiBtb3RvcnZvZ25lcioqIGJsZSByZXN1bHRhdGVuZSBmb3IgMjAwOCwgMjAxMCBvZyAyMDIwLAowLjkzNzIzNDQxNTUsIDAuOTU2MjMxMTQwMyBvZyAwLjkxNDQ5ODczODMuIEhlciB2aWwgZW4gc2UgYXQgYWxsZSByZXN1bHRhdGVuZSBlciBuZGVyIDEgc29tIHRpbHN2YXJlciBhdCBkZXQgZXIgZW4gYmFzaXNuw6ZyaW5nLiAKCgoqU3VubmhvcmRhbGFuZCoKCkZvciAqKmluZHVzdHJpKiogc2VrdG9yZW4gaSBTdW5uaG9yZGxhbmQgaGFyIHZpIGJydWt0IHNhbW1lIMOlciwgb2cgc2FtbWUgYWxkZXJzZ3J1cHBlLCBkZXIgdsOlcmUgcmVzdWx0YXRlciBibGUgMi4wMzkwNzc3ODYsIDIuMDUyNDI2OTYgb2cgMC4gCkhlciBmaWtrIHZpIDAgaSAyMDIwIGZvcmRpIGRldCB2YXIgbWVuZ2VsIHDDpSBpbmZvcm1hc2pvbiBpIMOlciAyMDIwLiBJIGRlIHRvIGFuZHJlIHJlc3VsdGF0ZW5lIGVyIHRhbGxldCBteWUgaMO4eWVyZSBlbiAxLCB2aWwgZGV0IHNpIGF0IGluZHVzdHJpIHNla3RvcmVuIHDDpSBTdW5uaG9yZGFsYW4gZXIgZW4gbG9rYWxuw6ZyaW5nLiBIZXIgdmlsIGRldCBub2sgdsOmcmUgbXllIG1lciBhdiBsb2thbHQgYXJiZWlkLgoKCioqSGVsc2UtIG9nIHNvc2lhbHRqZW5lc3RlcioqIGJsZSB2w6VyZSByZXN1bHRhdGVyIGZvciAyMDA4LCAyMDEwIG9nIDIwMjAsIHNsaWsKMS44OTM2LCAyLjI4MzMgb2cgMCAobWFuZ2VsIHDDpSBpbmZvcm1hc2pvbiBmb3IgMjAyMCkuIEhlciBzZXIgZW4gYXQgaSAyMDA4IHZhciBkZXQgZXQgbGF2ZXJlIHJlc3VsdGF0IGVubiBpIDIwMTAsIG1lbiBiZWdnZSDDpXJlbmUgZ2lyIGV0IHJlc3VsdGF0IHDDpSBvdmVyIDEgc29tIHNpZXIgYXQgZGV0IGVyIGxva2FsbsOmcmluZy4gCgoKSSAqKnZhcmVoYW5kZWwsIHJlcGVyYXNqb24gYXYgbW90b3J2b2duZXIqKiBibGUgcmVzdWx0YXRlbmUgZm9yIDIwMDgsIDIwMTAgb2cgMjAyMCB2YXIgdsOlcmUgc3ZhciAxLjEwNCwgMS4yNDc1IG9nIDAuIFNsaWsgc29tIGRlIG92ZXIgZXIgcmVzdWx0YXRldCBmb3IgMjAyMCBlbiBtYW5nZWwgcMOlLiBEZXQgZXIgb2dzw6UgbG9rYWxuw6ZyaW5nIHNsaWsgc29tIGRlIGFuZHJlIHRvIHNla3RvcmVuZS4gCgoKSSBkZW4gcm9tbGlnZSBHaW5pLWtvZWZmaXNpZW50ZW4gaGFyIHZpIHZhbGd0IMOlIHNlIHDDpSBzYW1tZSBzZWt0b3JlbmUgc29tIHZpIGJydWt0ZSBmb3Igw6UgZmlubmUgbG9rYWxpc2VyaW5nc2tvdmllbnRlbmUuIERhIMOlcmVuZSAyMDA4LCAyMDEwIG9nIDIwMjAuIEFsZGVyc2dydXBwZW4gZXIgMTUtNzQgw6VyIG9nIHNla3RvcmVuZSBlciBpbmR1c3RyaSwgaGVsc2UtIG9nIHNvc2lhbHRqZW5lc3RlciBvZyB2YXJlaGFuZGVsLCByZXBlcmFzam9uIGF2IG1vdG9ydm9nbmVyLiBWZWQgbcOlbGluZyBhdiBHaW5pLWtvZWZmaXNpZW50ZW4gbcOlbGVyIHZpIGh2b3Igc3RvciBhdnN0YW5kZW4gcMOlICJyaWsiIG9nICJmYXR0aWciIGkgZnlsa2V0LCB0YWxsZXQgc2thbCBsaWdnZSBpIG1lbGxvbSAwLTEuIDAgYmV0eXIgYXQgZGV0IGVyIGxpayBpbm50ZWt0IHNvbSBmb3JtdWUgZm9yIGFsbGUgaSBsYW5kZXQsIG9nIHDDpSAxIGVyIGRldCBkZSB0bGlrIGlubnRla3Qgb2cgZm9ybXVlIGZvciBlbiBwZXJzb24uIAoKCipIYXVnYWxhbmRldCoKCkluZHVzdHJpIGdpciBldCByZXN1bHRhdCBww6UgMCwwODgxODU4MTk3NCwgc29tIHZpbCBzaSBhdCBkZW4gZXIgc8OlIMOlIHNpIG51bGwgb2cgdGlsc3ZhcmVyIGVuIG5vayBzw6UgbGlrIGlubnRla3Qgc29tIGZvcm11ZSBpbm5lbiBzZWt0b3JlbiBpbmR1c3RpIHDDpSBIYXVnYWxhbmRldC4gCgpJbm5lbiBIZWxzZS0gb2cgc29zaWFsdGplbnN0ZXIgZmlrayB2aSBzdmFyZXQgMC4wNTc2LkRlciByZXN1bHRhdGV0IGJsaXIgZGV0IHNhbW1lIHNvbSBpIHNla3RvciBpbmR1c3RyaS4gRGVyIGhlbHNlLSBvZyBzb3NpYWx0amVuZXN0ZW4gaGFyIG5vayBzw6UgbGlrIGZvcm11ZSBzb20gaW5udGVrdC4gCgpJIHZhcmVoYW5kZWwsIHJlcGVyYXNqb24gYXYgbW90b3J2b2duZXIgdmFyIHN2YXJldCB2w6VydCAwLjAzNjgsIHNvbSBnaXIgZXQgZW5kYSBsYXZlcmUgcmVzdWx0YXQgZW5uIGRlIGFuZHJlLCBtZW4gaGFyIHNhbW1lIGJldHlkbmluZyBhdCBkZXQgZXIgbGlrIGlubnRla3Qgc29tIGZvcm11ZSBpbm5lbiBkZW4gc2VrdG9yZW4uIAoKCipTdW5uaG9yZGxhbmQqClDDpSBncnVubiBhdiBtYW5nZWwgZm9yIGluZm9ybWFzam9uIGkgw6VyIDIwMjAsIGVyIGRldCBrdW4gdG8gw6VyIHNvbSBlciByZWduZXQgbWVkIGkgZGVubmUgZGVsZW4uIAoKSW5kdXN0cmkgZ2Egb3NzIGV0IHJlc3VsdGF0IHDDpSAwLjA1NjggZGVyIGVuIHNlciBhdCBmb3JtdWUgb2cgaW5udGVrdCBlciBub2sgc8OlIGxpa2UgZm9yIGluZHVzdHJpIHNla3RvcmVuLiAKClJlc3VsdGF0ZXQgdGlsIGhlbHNlLSBvZyBzb3NpYWx0amVuZXN0ZXIgZXIgMC4wNTY4MDQgbm9rIHPDpSBsaWt0IHRhbGwgc29tIHDDpSBIYXVnYWxhbmRldCwgc29tIG9nc8OlIGxpayBpbm50ZWt0IHNvbSBmb3JtdWUuIAoKSW5uZW4gdmFyaGFuZGVsLCByZXBlcmFzam9uIGF2IG1vdG9ydm9nbmVyIGkgU3VubmhvcmRsYW5kIHZhciB2w6VydCByZXN1bHRhdCAwLjAzMTgyCm9nIGdpciBlbiBsaWsgaW5udGVrdCBzb20gZm9ybXVlIGlubmVuIHNla3RvcmVuLgoKCgpFbiBrYW4gc2UgdXQgaSBmcmEgYWxsZSByZXN1bHRhdGVuZSBzw6UgZ2EgZGV0IG9zcyBlbiBsaWsgaW5udGVrdCBvZyBmb3JtdWUgcMOlIGFsbGUgc2VrdG9yZW5lIHZpIHZhbGd0ZSB1dC4gaSBtYW5nbGV0IGV0IMOlciBww6UgaHZlciBzZWt0b3IgaSBTdW5uaG9yZGxhbmQgc29tIGthbiBoYSBnaXR0IG9zcyBhbmRyZSB0YWxsIGVuIGh2YSBkZW4ga3VubmUgYmxpdHQuIFZpIGFudGFyIGF0IHJlc3VsdGF0ZW5lIGVyIGdvZGUgb2cgaGFyIGdpdHQgb3NzIHJldHQgc3ZhciBpIGZvcmhvbGQgdGlsIMOlIG3DpWxlIEdpbmkta29lZmZpc2llbnRlbi4gCgoKKlJESSoKClVuZGVyIG3DpWxldCBmb3IgbWFuZ2ZvbGQgYXYgbsOmcmluZ2VyLCBSREksIHNlciB2aSBww6Ugc2FtbWUgc2VrdG9yZW5lIHNvbSBvdmVuZm9yLiBNZWQgUkRJIG3DpWxlciB2aSBvbSBkZW4gcmVnaW9uYWxlIG7DpnJpbmdlbiBlciBsaWsgZGVuIG5hc2pvbmFsZSBuw6ZyaW5nZW4sIGpvIGjDuHllcmUgUkRJIGVuIGVyIGpvIG1lciBsaWsgZXIgZGVuIHJlZ2lvbmFsZSBuw6ZyaW5nZW4gZGVuIG5hc2pvbmxlIG7DpnJpbmdlbi4gCgoqSGF1Z2FsYW5kZXQqClJlc3VsdGF0ZXQgdmkgZmlrayBpIGluZHVzdHJpIHZhciA2NS43MzQxLCBkZXQgdmlsIHNpIGF0IGRlbiByZWdpb25hbGUgbsOmcmluZ2VuKGluZHVzdHJpKSBlciBpa2tlIHPDpSBsaWsgc29tIGRlbiBuYXNqb25hbCBuw6ZyaW5nZW4oaW5kdXN0cmkpLiAKCk7DpXIgZGV0IGtvbW1lciB0aWwgbsOmcmluZ2VuIGhlbHNlLSBvZyBzb3NpYWx0amVuZXN0ZW4gZmlrayBldCB0YWxsIHDDpSAxNDk4LjI4OSBzb20gdGlsc3ZhcmVyIGVuIGjDuHkgUkRJLCBvZyB2aWwgc2kgYXQgc2VrdG9yZW4gaGVsc2UtIG9nIHNvc2lhbHRqZW5lc3N0ZW4gcmVnaW9uYWx0IHDDpSBIYXVnYWxhbmRldCBlciBzdsOmcnQgbGlrIGRlbiBuYXNqb25hbGUgbsOmcmluZ2VuLiAKCklubmVuIHZhcmhhbmRlbCwgcmVwZXJhc2pvbiBhdiBtb3RvcnZvZ25lciBmaWtrIHZpIHJlc3VsdGF0ZXQgMzU2LjIxMSBoYXIgZXQgaMO4eWVlIFJESSB0YWxsIGVubiBpbmR1c3RyaSBzb20gdGlsc3ZhcmVyIGF0IGRlbiBlciBtw6ZyIGxpayBkZW4gbmFzam9uYWxlIG7DpnJpbmdlbihhcmhhbmRlbCwgcmVwZXJhc2pvbiBhdiBtb3RvcnZvZ25lcikgZW5uZSBzZWt0b3JlbiBpbmR1c3RyaSBlciBkZW4gbmFzam9uYWxlLiAKCipTdW5uaG9yZGxhbmQqIApJbmR1c3RyaSBuw6ZyaW5nZW4gaSBTdW5uaG9yZGxhbmQgZmlrayB2aSByZXN1bHRhdGV0IDAuMTIzMSwgc29tIHZpbCBzaSBhdCBkZXQgZXIgZXQgdmVsZGlnIGxhdiBSREkuIERldCB2aWwgc2kgYXQgZGVuIHJlZ2lvbmFsZSBpbmR1c3RyaWVuIGVyIGlra2UgbGlrIGRlbiBuYWpzb2FubGUgbsOmcmluZ2VuLiAKClNhbW1lIGdqZWxkZXIgaGVsc2UtIG9nIHNvc2lhbHRqZW5lc3RlbiAwLjEyOTI1IHNvbSBvZ3PDpSB0aWxzdmFyZXIgaW5nZW4gbGlraGV0IG1lZCBkZW4gbmFzam9uYWxlIG7DpnJpbmdlbi4gCgoKVmFyaGFuZGVsLCByZXBlcmFzam9uIGF2IG1vdG9ydm9nbmVyIGZpa2sgZXQgbmVnYXRpdiByZXN1bHRhdCBtaW51cyAwLjA0NDIsIHNvbSB2aWwgc2kgYXQgZGV0IGVyIGluZ2VuIGxpa2hldCBtZWxsb20gZGVuIG5hanNvbmFsZSBvZyByZWdpb25hbGUgbsOmcmluZ2VuLiAKCgpcbmV3cGFnZQoKIyA0LiBQZW5kbGluZyBtZWxsb20gZGUgdWxpa2Uga29tbXVuZW5lIGkgcmVnaW9uZW4KCmBgYHtyfQpsaWJyYXJ5KHJlYWR4bCkKVGFiXzAzMzIxX2FuZGVsZXIgPC0gcmVhZF9leGNlbCgiRGF0YS9UYWJfMDMzMjFfYW5kZWxlci54bHN4IiwgCiAgICBjb2xfdHlwZXMgPSBjKCJ0ZXh0IiwgInRleHQiLCAidGV4dCIsIAogICAgICAgICJ0ZXh0IiwgInRleHQiLCAibnVtZXJpYyIsICJudW1lcmljIiwgCiAgICAgICAgIm51bWVyaWMiKSkKYGBgCgojIFBlbmRsZXIgdXQKCmBgYHtyfQpUYWJfMDMzMjFfYW5kZWxlciAlPiUKICBzZWxlY3QoYWFyLCBiX2tuYXZuX25ldywgVXRfcGVuZGxlcmUpICU+JQogIGZpbHRlcihiX2tuYXZuX25ldyAlaW4lIGMoIlR5c3bDpnIiLCAiS2FybcO4eSIsICJIYXVnZXN1bmQiLCAiQm9rbiIsICJVdHNpcmEiLCAiVmluZGFmam9yZCIsICJFdG5lIiwgIlN2ZWlvIiwgIkLDuG1sbyIsICJTdG9yZCIsICJGaXRqYXIiLCAiVHlzbmVzIikKICAgICkgJT4lCiAgZ2dwbG90KG1hcHBpbmcgPSBhZXMoeCA9IGFhciwgeSA9IFV0X3BlbmRsZXJlLCBjb2xvdXIgPSBiX2tuYXZuX25ldykpICsKICBnZW9tX2xpbmUoYWVzKGdyb3VwID0gYl9rbmF2bl9uZXcpLCBsd2QgPSAwLjYpICsKICB0aGVtZShsZWdlbmQucG9zaXRpb24gPSAnYm90dG9tJykrCiAgeGxhYigiw4VyIikgKwogIHlsYWIoIlV0cGVuZGxpbmcgJSIpICsKICBsYWJzKGNvbG91ciA9ICJLb21tdW5lIikKYGBgCgpEZXQgdmkgc2VyIHV0IGkgZnJhIGdyYWZlbiBlciBhdCBkZXQgZXIgdG8ga29tbXVuZXIgc29tIHNraWxsZXIgc2VnIGtsYXJ0IHV0IG7DpXIgZGV0IGtvbW1lciB0aWwgYW5kZWwgdXRwZW5kbGVyZShUeXN2w6ZyIG9nIFN2ZWlvKS4gR3J1bm5lbiB0aWwgZGV0IGVyIGF0IGRpc3NlIGtvbW11bmVuZSBlciBuYWJva29tbXVuZW5lIHRpbCBIYXVnZXN1bmQgc29tIGVyIGV0IGFyYmVpZHNzZW50ZXIgcMOlIGhhdWdhbGFuZGV0LiBGaXRqYXIgZXIgb2dzw6UgZW4ga29tbXVuZSBtZWQgaMO4eSBhbmRlbCB1dHBlbmRsZXJlLCBncnVubmVuIHRpbCBkZXR0ZSBlciBsaXR0IGRldCBzYW1tZSBzb20gU3ZlaW8gb2cgVHlzdsOmciwgbWVuIGkgZGV0dGUgdGlsZmVsbGUgZXIgZGV0IFN0b3JkIHNvbSBhcmJlaWRzc2VudGVyIGkgc3VubmhvcmRhbGFuZC4gTsOlciBkZXQgZ2plbGRlciBCb2tuIHPDpSBlciBkZXR0ZSBlbiBsaXRlbiBrb21tdW5lIG1lZCBiZWdyZW5zZXQgYXJiZWlkc3BsYXNzZXIgc29tIGdpciBlbiDDuGt0IHV0cGVuZGxpbmcgdGlsIG5hYm9rb21tdW5lbmUgS2FybsO4eSwgVHlzdsOmciBvZyBIYXVnZXN1bmQuICAKCiMjIyBVdHZpa2xpbmcgb3ZlciB0aWQKClZpIHNlciBhdCBkZSBzbcOlIGtvbW11bmVuZSBzdmluZ2VyIG15ZSBtZXIgZW5uIGRlIHN0w7hycmUga29tbXVuZW5lLiBEZSBzdMO4cnN0ZSBrb21tdW5lbmUgKEhhdWdlc3VuZCBvZyBLYXJtw7h5KSBlciBnYW5za2UgZmxhdGUgbWVkIGVuIGpldm4gb2cgbW9kZXJhdCDDuGtuaW5nLiBEZSBrb21tdW5lbmUgbWVkIHN0w7hyc3QgdXR2aWtsaW5nIGRlIHNpc3RlIDIwIMOlcmVuZSBoYXIgdsOmcnQgVHlzdsOmciBvZyBCb2tuLiBUeXN2w6ZyIGVyIGVuIGF0dHJha3RpdiBwbGFzcyBvZyBibyBmb3JkaSBrdmFkcmF0bWV0ZXJwcmlzZW4gZXIgbGF2ZXJlIGVubiBpIEhhdWdldXNuZCBvZyByZWlzZWtvc3RuYWRlbmUgZXIgb3ZlcmtvbW1saWdlLCBkZXJmb3Igc2VyIHZpIGVuIMO4a25pbmcgaSB1dHBlbmRsZXJlLiBOw6VyIGRldCBnamVsZGVyIEJva24gZXIgZm9sa2V0YWxsZXQgcmVsYXRpdnQgbGF2LCBzw6UgZGV0IHNrYWwgaWtrZSBzdG9yZSBlbmRyaW5nZW5lIHRpbCBpIGJlZm9sa25pbmcgZsO4ciBlbmRyaW5nZW5lIGJsaXIgcmFkaWthbGUgaSB1dHBlbmRsaW5nLiBOw6VyIGRldCBnamVsZGVyIHJlc3RlbiBhdiBrb21tdW5lbmUgc8OlIGVyIGRldCBlbiBsaXRlbiDDuGtuaW5nIGkgYWxsZSBkZSBzaXN0ZSAyMCDDpXJlbmUuIAoKCiMgUGVuZGxlciBpbm4KCmBgYHtyfQpUYWJfMDMzMjFfYW5kZWxlciAlPiUKICBzZWxlY3QoYWFyLCBiX2tuYXZuX25ldywgSW5uX3BlbmRsZXJlKSAlPiUKICBmaWx0ZXIoCiAgICBiX2tuYXZuX25ldyAlaW4lIGMoIlR5c3bDpnIiLCAiS2FybcO4eSIsICIiLCAiSGF1Z2VzdW5kIiwgIkJva24iLCAiVXRzaXJhIiwgIlZpbmRhZmpvcmQiLCAiRXRuZSIsICJTdmVpbyIsICJCw7htbG8iLCAiU3RvcmQiLCAiRml0amFyIiwgIlR5c25lcyIsICIiLCAiIikKICAgICkgJT4lCiAgZ2dwbG90KG1hcHBpbmcgPSBhZXMoeCA9IGFhciwgeSA9IElubl9wZW5kbGVyZSwgY29sb3VyID0gYl9rbmF2bl9uZXcpKSArCiAgZ2VvbV9saW5lKGFlcyhncm91cCA9IGJfa25hdm5fbmV3KSwgbHdkID0gMC41KSArCiAgdGhlbWUobGVnZW5kLnBvc2l0aW9uID0gJ2JvdHRvbScpICsKICB4bGFiKCLDhXIiKSArCiAgeWxhYigiSW5ucGVuZGxpbmcgJSIpICsKICBsYWJzKGNvbG91ciA9ICJLb21tdW5lIikKYGBgCgpUeXN2w6ZyIGVyIGtvbW11bmVuIG1lZCBmbGVzdCBhbmRlbCBpbm5wZW5kbGVyZSBww6UgZ3J1bm4gYXYga8OlcnN0w7ggb2cgZXRhYmxlcmluZ2VyIGF2IG55ZSBuw6ZyaW5nc3Bhcmtlci4gRGUgZXIgb2dzw6UgZW4gYXYgZGUga29tbXVuZW5lIHNvbSBoYXIgaGF0dCBzdMO4cnN0IHZla3N0IG92ZXIgMjAtw6VycyBwZXJpb2Rlbi4gSGF1Z2VzdW5kIGhhciBlbiBnYW5za2UgbW9kZXJhdCBvZyBzdGFiaWwgdmVrc3QuIFNhbXRpZGlnIGVyIGRlIHZlbGRpZyBow7h5dCBvcHBlIGkgYW5kZWwgaW5ucGVuZGxpbmcuIERldHRlIHNreWxkZXMgYXQgSGF1Z2VzdW5kIGVyIHJlZ2lvbmVucyBzZW50ZXIuIEJva24gc2luZSBzdmlnbmluZ2VyIGthbiBza3lsZGVzIEJva24gUGxhc3QgQVMgb2cgaHZvcmRhbiBkZSBnasO4ciBkZXQgc29tIHByaXZhdGVpZCBzZWxza2FwLiBEZXR0ZSBlciBkZXQgc3TDuHJzdGUgcHJpdmF0ZWlkZSBzZWxza2FwZXQgaSBrb21tdW5lbi4gVXRzaXJhIGVyIGVuIGtvbW11bmUgbWVkIHZlbGRpZyBmw6UgYW50YWxsIGJlYm9lcmUsIHPDpSBkZXJlcyBncmFmIGkgZmlndXJlbiBnaXIgc3RvcmUgb2cgcmFkaWthbGUgZW5kcmluZ2VyIGh2aXMgZm9yIGVrc2VtcGVsIGVuIGZhbWlsaWUgc2t1bGxlIGZseXR0ZXQgYm9ydCBkZXIgaSBmcmEuCgojIyMgVXR2aWtsaW5nZW4gb3ZlciB0aWQKCkZsZXN0ZSBrb21tdW5lciBoYXIgaGF0dCBlbiBzdmFrIHBvc2l0aXYgdXR2aWtsaW5nLiBVdHNpcmEgaGFyIGhhdHQgZW4gbmVnYXRpdiB1dHZpa2xpbmcsIG1lbiBzb20gbmV2bnQgZXIgZGV0dGUgZW4ga29tbXVuZSBtZWQgc3bDpnJ0IGbDpSBpbm5ieWdnZXJlLgoKCiMgQm9yIG9nIGpvYmJlciBpIHNhbW1lIGtvbW11bmUKCmBgYHtyfQpUYWJfMDMzMjFfYW5kZWxlciAlPiUKICBzZWxlY3QoYWFyLCBiX2tuYXZuX25ldywgYl9vZ19hKSAlPiUKICBmaWx0ZXIoCiAgICBiX2tuYXZuX25ldyAlaW4lIGMoIlR5c3bDpnIiLCAiS2FybcO4eSIsICJTYXVkYSIsICJIYXVnZXN1bmQiLCAiQm9rbiIsICJVdHNpcmEiLCAiVmluZGFmam9yZCIsICJFdG5lIiwgIlN2ZWlvIiwgIkLDuG1sbyIsICJTdG9yZCIsICJGaXRqYXIiLCAiVHlzbmVzIiwgIkt2aW5uaGVyYWQiLCAiVWxsZW5zdmFuZyIpCiAgICApICU+JQogIGdncGxvdChtYXBwaW5nID0gYWVzKHggPSBhYXIsIHkgPSBiX29nX2EsIGNvbG91ciA9IGJfa25hdm5fbmV3KSkgKwogIGdlb21fbGluZShhZXMoZ3JvdXAgPSBiX2tuYXZuX25ldyksIGx3ZCA9IDAuNSkgKwogIHRoZW1lKGxlZ2VuZC5wb3NpdGlvbiA9ICdib3R0b20nKSsKICB4bGFiKCLDhXIiKSArCiAgeWxhYigiQm8tIG9nIGFyYmVpZHNrb21tdW5lICUiKSArCiAgbGFicyhjb2xvdXIgPSAiS29tbXVuZSIpCmBgYAoKVmkgc2VyIGF0IFNhdWRhIG9nIFVsbGVuc3ZhbmcgaGFyIGVuIHN0b3Igb2cgc3RhYmlsIGFuZGVsIGF2IGJvc2F0dGUgb2cgc3lzc2Vsc2F0dGUgaW5uZW5mb3Igc2FtbWUga29tbXVuZS4gRGV0dGUgc2t5bGRlcyBhdCBTYXVkYSBvZyBPZGRhIChPZGRhIGxpZ2dlciBpIFVsbGVuc3ZhbmcpLCBoYXIgdsOmcnQgYnllciBtZWQgcmVsYXRpdiBzdG9yIGluZHVzdHJpIGFrdGl2aXRldCBzYW10aWRpZyBzb20gZGUgbGlnZ2VyIHJlbGF0aXZ0IGFkc2tpbHQgZnJhIGFuZHJlIG7DpnJlLCBzdG9yZSBrb21tdW5lciBzbGlrIHNvbSBmb3IgZWtzZW1wZWwgSGF1Z2VzdW5kIG9nIEJlcmdlbi4KCiMjIyBPcHBzdW1tZXJpbmcKClBlbmRsZXN0csO4bW1lbmUgw7hrZXIgaSByZWdpb25lbiwgc2FtdGlkaWcgc29tIHZpIHNlciBhdCBkZSBzb20gYm9yIG9nIGpvYmJlciBpIHNhbW1lIGtvbW11bmUgZXIgYXZ0YWtlbmRlIGkgMjAtw6VycyBwZXJpb2Rlbi4KClZlaW5ldHRldCBmb3JiZWRyZXMgaSB0aWxsZWdnIHRpbCBhdCBwcmlzZW5lIHDDpSBlaWVuZG9tIG9nIGJvbGlnIGVyIHJpbWVsaWdlcmUgcGVyIGt2YXJkcmF0bWV0ZXIgdXRlbmZvciBkZSBtZXN0IHNlbnRyZXJ0ZSBwbGFzc2VuZS4KClN2ZWlvIGVyIGV0IGVrc2VtcGVsIHDDpSBodm9yIHBlbmRsZXN0csO4bW1lbiBoYXIgw7hrdCBvZyBib3NhdHQgb2cgc3lzc2Vsc2F0dCBpIGtvbW11bmVuIGhhciBzeW5rZXQuIFN2ZWlvIGVyIGVuIGtvbW11bmUgbWVkIHN0b3JlIHV0dmlrbGluZ3Nwb3RlbnNpYWxldCBpbm5lbmZvciBlaWVuZG9tIG9nIGJvbGlnIHNhbXRpZGlnIHNvbSBhdnN0YW5kZW4gdGlsIEhhdWdlc3VuZCBlciBrb3J0LgoKCgoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiQXJiZWlkc2tyYXYiCnN1YnRpdGxlOiAiTVNCIDEwNiAtIEFudmVuZHQgYnktIG9nIHJlZ2lvbmFsw7hrb25vbWkiCmF1dGhvcjogIkdydXBwZSAyIgpvdXRwdXQ6CiAgcGRmX2RvY3VtZW50OiBkZWZhdWx0CiAgaHRtbF9ub3RlYm9vazogZGVmYXVsdApsYW5nOiBuYi1OTwotLS0KYGBge3Igc2V0dXAsIG1lc3NhZ2UgPSBGQUxTRSwgZWNobyA9IEZBTFNFfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShsdWJyaWRhdGUpCmxpYnJhcnkoUHhXZWJBcGlEYXRhKQpsaWJyYXJ5KHJlYWRyKQpsaWJyYXJ5KGdncGxvdDIpCmxpYnJhcnkoZHBseXIpCmxpYnJhcnkoUkVBVCkKbGlicmFyeShyZWFkeGwpCmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvPUZBTFNFKQpgYGAKClxuZXdwYWdlCgojIDMuIFN5c3NlbHNldHRpbmcgaSB1bGlrZSBuw6ZyaW5nZXIsIGV0dGVyIGFyYmVpZHNzdGVkc2tvbW11bmUKCiMjIEkgZGVubmUgb3BwZ2F2ZW4gc2thbCB2aSBmaW5uZSBzeXNzZWxzZXR0aW5nIGkgZGUgdWxpa2UgbsOmcmluZ2VuZSwgZXR0ZXIgYXJiZWlkc3N0ZWRza29tbXVuZS4KCmBgYHtyfQprbnIgPC0gYygiMTEwNiIsICIxMTM1IiwgIjExNDUiLCAiMTE0NiIsICIxMTQ5IiwgIjExNTEiLCAiMTE2MCIpCmBgYAoKCmBgYHtyfQpIYXVnX2JvX3JhdyA8LSBBcGlEYXRhKAogIHVybCA9ICIwNzk4NCIsCiAgUmVnaW9uID0gbGlzdCgidnM6S29tbXVuZXJTIiwga25yKSwgCiAgTkFDRTIwMDcgPSBUUlVFLAogIEtqb25uID0gIjAiLAogIENvbnRlbnRzQ29kZSA9ICJTeXNzZWxzYXR0ZSIsCiAgVGlkID0gYyhhcy5jaGFyYWN0ZXIoMjAwODoyMDIwKSksCiAgQWxkZXIgPSBjKCIxNS03NCIsICI1NS02NiIsICI2Ny03NCIpLAogIG1ha2VOQXN0YXR1cyA9IEZBTFNFCikKYGBgCgoKCmBgYHtyfQpIYXVnX2JvIDwtIEhhdWdfYm9fcmF3JGAwNzk4NDogU3lzc2Vsc2F0dGUgcGVyIDQuIGt2YXJ0YWwsIGV0dGVyIHJlZ2lvbiwgbsOmcmluZyAoU04yMDA3KSwga2rDuG5uLCBhbGRlciwgc3RhdGlzdGlra3ZhcmlhYmVsIG9nIMOlcmAgJT4lIAogIHRpYmJsZSgpICU+JSAKICByZW5hbWUoCiAgICBLbnIgPSByZWdpb24sCiAgICBBYXIgPSDDpXIsCiAgICBOYWVyaW5nID0gYG7DpnJpbmcgKFNOMjAwNylgCiAgKQpgYGAKCmBgYHtyIH0KbmFtZXMoSGF1Z19ib19yYXcpWzFdIDwtICJkZXNjNCIKYGBgCgoKYGBge3J9CkhhdWdfYm8gPC0gSGF1Z19ibyAlPiUgCiAgbXV0YXRlKGtuYXZuID0gSGF1Z19ib19yYXckS25yKQpgYGAKCgpgYGB7cn0KSGF1Z19ibyA8LSBIYXVnX2JvICU+JSAKICBwaXZvdF93aWRlcigKICAgIG5hbWVzX2Zyb20gPSBLbnIsCiAgICB2YWx1ZXNfZnJvbSA9IHZhbHVlKQpgYGAKCiMjIExlZ2dlciBoZXIgdGlsIGVuIHRvdGFsIGZvciBIYXVnYWxhbmRldC4gCmBgYHtyfQpIYXVnX2JvID0gbXV0YXRlKEhhdWdfYm8sIHRvdF9oID0gSGF1Z2VzdW5kK1NhdWRhK0Jva24rVHlzdsOmcitLYXJtw7h5K1V0c2lyYStWaW5kYWZqb3JkKQpgYGAKCiMjIFN1bm5ob3JkYWxhbmQKYGBge3J9Cmtucl9zdW5uIDwtIGMoIjEyMTEiLCAiMTIxNiIsCiAgICAgICAgICIxMjE5IiwgIjEyMjEiLCAiMTIyMiIsICIxMjIzIiwgIjEyMjQiLCAiMTIyOCIsICIxMjMxIikKYGBgCgoKYGBge3J9ClN1bm5fYm9fcmF3IDwtIEFwaURhdGEoCiAgdXJsID0gIjA3OTg0IiwKICBSZWdpb24gPSBsaXN0KCJ2czpLb21tdW5lclMiLCBrbnJfc3VubiksIAogIE5BQ0UyMDA3ID0gVFJVRSwKICBLam9ubiA9ICIwIiwKICBDb250ZW50c0NvZGUgPSAiU3lzc2Vsc2F0dGUiLAogIFRpZCA9IGMoYXMuY2hhcmFjdGVyKDIwMDg6MjAyMCkpLAogIEFsZGVyID0gYygiMTUtNzQiLCAiNTUtNjYiLCAiNjctNzQiKSwKICBtYWtlTkFzdGF0dXMgPSBGQUxTRQopCmBgYAoKCmBgYHtyfQpTdW5uX2JvIDwtIFN1bm5fYm9fcmF3JGAwNzk4NDogU3lzc2Vsc2F0dGUgcGVyIDQuIGt2YXJ0YWwsIGV0dGVyIHJlZ2lvbiwgbsOmcmluZyAoU04yMDA3KSwga2rDuG5uLCBhbGRlciwgc3RhdGlzdGlra3ZhcmlhYmVsIG9nIMOlcmAgJT4lIAogIHRpYmJsZSgpICU+JSAKICByZW5hbWUoCiAgICBLbnIgPSByZWdpb24sIAogICAgTmFlcmluZyA9IGBuw6ZyaW5nIChTTjIwMDcpYCwKICAgIEFhciA9IMOlcgogICkKYGBgCgpgYGB7cn0KbmFtZXMoU3Vubl9ib19yYXcpW1sxXV08LSJkZXNjNSIKYGBgCgpgYGB7cn0KU3Vubl9ibyA8LSBTdW5uX2JvICU+JSAKICBtdXRhdGUoa25hdm4gPSBTdW5uX2JvX3JhdyRLbnIpCmBgYAoKYGBge3J9ClN1bm5fYm8gPC0gU3Vubl9ibyAlPiUgCiAgcGl2b3Rfd2lkZXIoCiAgICBuYW1lc19mcm9tID0gS25yLAogICAgdmFsdWVzX2Zyb20gPSB2YWx1ZSkKYGBgCgojIyBmcmEga29tbXVuZSBudW1tZXIgdGlsIGtvbW11bmUgbmF2biAKYGBge3J9Cm5hbWVzKFN1bm5fYm8pW1s2XV0gPC0gIkV0bmUiCm5hbWVzKFN1bm5fYm8pW1s3XV0gPC0gIlN2ZWlvIgpuYW1lcyhTdW5uX2JvKVtbOF1dIDwtICJCb2VtbG8iCm5hbWVzKFN1bm5fYm8pW1s5XV0gPC0gIlN0b3JkIgpuYW1lcyhTdW5uX2JvKVtbMTBdXSA8LSAiRml0amFyIgpuYW1lcyhTdW5uX2JvKVtbMTFdXSA8LSAiVHlzbmVzIgpuYW1lcyhTdW5uX2JvKVtbMTJdXSA8LSAiS3Zpbm5oZXJhZCIKbmFtZXMoU3Vubl9ibylbWzEzXV0gPC0gIk9kZGEiCm5hbWVzKFN1bm5fYm8pW1sxNF1dIDwtICJVbGxlbnN2YW5nIgpgYGAKCgpgYGB7cn0KU3Vubl9ibyA9IG11dGF0ZShTdW5uX2JvLCB0b3RfcyA9IEV0bmUgKyBTdmVpbyArIEJvZW1sbysgU3RvcmQrIEZpdGphcisgVHlzbmVzKyBLdmlubmhlcmFkICsgT2RkYSArIFVsbGVuc3ZhbmcpCmBgYAoKCiMjIFRvdGFsdCBhbmFzYXR0ZSBpIGh2ZXIgbsOmcmluZyBmb3IgSGF1Z2FsYW5kZXQKYGBge3J9CkhhdWdfYm8gJT4lIAogZ2dwbG90KG1hcHBpbmcgPSBhZXMoeCA9IHRvdF9oLCB5ID0gTmFlcmluZywgKGFuZ2xlPTApKSkgKwogIHNjYWxlX2ZpbGxfZGlzdGlsbGVyKHBhbGV0dGUgPSAiRGFyazIiKSArCiAgZ2VvbV9saW5lKGFlcyhncm91cCA9IE5hZXJpbmcsIGNvbG91ciA9IE5hZXJpbmcpKSArCiAgc2NhbGVfc2l6ZV9tYW51YWwodmFsdWVzID0gYyhzZXEoMi4wLCAyLCBieSA9IC0wLjEpKSkgKwogIGdlb21faGxpbmUoeWludGVyY2VwdCA9IDApICsKICBsYWJzKHRpdGxlID0gIkhhdWdhbGFuZGV0IiwgeCA9ICJUb3RhbHQgYW5zYXR0ZSIsIHkgPSAiQW50YWxsIGFuc2F0dGUgaSAgXG4gYWxsZSBuw6ZyaW5nZXIiKSArCiAgdGhlbWUoYXhpcy50aXRsZS55ID0gZWxlbWVudF90ZXh0KGFuZ2xlPTApKSsKICB0aGVtZShsZWdlbmQucG9zaXRpb24gPSAnYm90dG9tJykKYGBgCgpHcmFmZW4gb3ZlbmZvciB2aXNlciB0aWwgYW50YWxsIGFuc2F0dGUgaSB1bGlrZSBuw6ZyaW5nZXIgcMOlIEhhdWdhbGFuZGV0LiBVdCBpIGZyYSBncmFmZW4ga2FuIGVuIHNlIGF0IEhlbHNlLSBvZyBvbXNvcmdzdGplbmVzdGVyIGVyIG7DpnJpbmcgbWVkIGjDuHllc3QgYW50YWxsIGFuc2F0dGUgcMOlIEhhdWdhbGFuZGV0LiAKCgoKIyMgVG90YWx0IGFuYXNhdHRlIGkgaHZlciBuw6ZyaW5nIGZvciBTdW5uaG9yZGxhbmQKCmBgYHtyfQpTdW5uX2JvICU+JSAKIGdncGxvdChtYXBwaW5nID0gYWVzKHggPSB0b3RfcywgeSA9IE5hZXJpbmcsIChhbmdsZT0wKSkpICsKICBzY2FsZV9maWxsX2Rpc3RpbGxlcihwYWxldHRlID0gIkRhcmsyIikgKwogIGdlb21fbGluZShhZXMoZ3JvdXAgPSBOYWVyaW5nLCBjb2xvdXIgPSBOYWVyaW5nKSkgKwogIHNjYWxlX3NpemVfbWFudWFsKHZhbHVlcyA9IGMoc2VxKDIuMCwgMiwgYnkgPSAtMC4xKSkpICsKICBnZW9tX2hsaW5lKHlpbnRlcmNlcHQgPSAwKSArCiAgbGFicyh0aXRsZSA9ICJTdW5uaG9yZGFsYW5kIiwgeCA9ICJUb3RhbHQgYW5zYXR0ZSIsIHkgPSAiQW50YWxsIGFuc2F0dGUgaSAgXG4gYWxsZSBuw6ZyaW5nZXIiKSArCiAgdGhlbWUoYXhpcy50aXRsZS55ID0gZWxlbWVudF90ZXh0KGFuZ2xlPTApKSsKICB0aGVtZShsZWdlbmQucG9zaXRpb24gPSAnYm90dG9tJykKYGBgCgoKSSBmaWd1cmVuIG92ZW5mb3IgZnJlbXN0aWxsZXMgZGV0IGFudGFsbCBhbnNhdHRlIGkgZGUgdWxpa2UgbsOmcmluZ2VuZSBpIFN1bm5ob3JkbGFuZCwgaGVyIGthbiBlbiBzZSBhdCBoZWxzZS0gb2cgc29pc2FsdGplbmVzdGVyIGhhciBmbGVzdCBhbnNhdHRlLiAgCgoKYGBge3J9Cmxva2FsaXNlcmluZ3Nrdm90aWVudGVyIDwtIHJlYWRfZXhjZWwoIn4vRG9jdW1lbnRzL01hc3RlciBpIHNpdmlsb2tvbm9tLzIuIFNlbWVzdGVyL0FudmVuZHQgYnktIG9nIHJlZ2lvbmFsw7hrb25vbWkvbG9rYWxpc2VyaW5nc2t2b3RpZW50ZXIueGxzeCIpCmBgYAoKClVuZGVyICpsb2thbGlzZXJpbmdza3ZvaWVudGVyKiBoYXIgdmkgc2V0dCBww6UgdHJlIHVsaWtlIHNla3RvcmVyIGLDpWRlIHDDpSBIYXVnYWxhbmRldCBvZyBmb3IgU3VubmhvcmRsYW5kLiBWaSB2YWxndGUgZGEgdXQgaW5kdXN0cmksIGhlbHNlIG9nIHNvc2lhbHRqZW5lc3RlciBvZyB2YXJlaGFuZGVsLCByZXBlcmFzam9uIGF2IG1vdG9ydm9nbmVyLiBEZXQgYmxlIHZhbGd0IHV0IHRyZSBmb3Jza2plbGxpZ2Ugw6VyLCBkYSBmw7hyc3RlIMOlcmV0IHNvbSBlciAyMDA4LCAyMDEwIG9nIGRldCBzaXN0ZSDDpXJldCBzb20gdmFyIDIwMjAuIEFsZGVyc2dydXBwZW4gdmkgdmFsZ3RlIHZhciAxNSB0aWwgNzQsIGZvcmRpIHZpIHNlciBhdCBkZW5uZSBhbGRlcnNncnVwcGVuIGlubmVob2xkZXIgaMO4eWVzdCB0YWxsIGF2IGFuc2F0dGUuIAoKKkhhdWdhbGFuZGV0KgoKUmVzdWx0YXRldCB0aWwgc2VrdG9yZW4gKippbmR1c3RyaSoqIEhhdWdhbGFuZGV0IGJsZSBww6UgZm9yIMOlcmVuZSAyMDA4LCAyMDEwIG9nIDIwMjAgYmxlIAoxLjUyNzM5NjgxMSwgMS40MzQ5NzU4NDQgb2cgMS42MDE1MDk4NjguIEFsbGUgw6VyZW5lIHPDpSBzaWVyIHJlc3VsdGF0ZXQgYXQgZGV0IGVyIGVuIGJhc2lzbsOmcmluZyBww6UgSGF1Z2FsYW5kZXQuIEhhdWdlc3VuZCwgS2FybcO4eSBvZyBUeXN2w6ZyIGVyIGRlIHRyZSBzdMO4cnN0ZSBrb21tdW5lbmUgbWVkIGZsZXJlIGluZHVzdHJpIGJlZHJpZnRlciwgZGUgaGFyIGZvciBla3NlbXBlbCBBaWJlbCwgSHlkcm8gb2cgRXF1aW5vci4gCgoqKkhlbHNlLSBvZyBzb3NpYWx0amVuZXN0ZXIqKiBibGUgdsOlcmUgcmVzdWx0YXRlciBmb3IgMjAwOCwgMjAxMCBvZyAyMDIwLCBzbGlrIAowLjk5NjIyNDM5OTYsIDAuOTgxNjkyOTA5NyBvZyAxLjAyNjkzNTgzOC4gTsOlciBkZXQga29tbWVyIHRpbCBoZWxzZS0gb2cgc29zaWFsdGplbmVzdGVyIHPDpSB2aWwgZW4gc2kgaGVyIGF0IGRldCBlciBlbiBsb2thbG7DpnJpbmcsIGRldHRlIGZvcmRpIGRlbSB0aWxieXIgw6UgaGplbHBlIG1lbm5lc2tlbmUgbG9rYWx0LiAKCkkgKip2YXJlaGFuZGVsLCByZXBlcmFzam9uIGF2IG1vdG9ydm9nbmVyKiogYmxlIHJlc3VsdGF0ZW5lIGZvciAyMDA4LCAyMDEwIG9nIDIwMjAsCjAuOTM3MjM0NDE1NSwgMC45NTYyMzExNDAzIG9nIDAuOTE0NDk4NzM4My4gVmFyZWhhbmRlbCwgcmVwYXJhc2pvbiBhdiBtb3RvcnZvZ25lciB2aWwgdsOmcmUgZW4gbG9rYWxuw6ZyaW5nLCBkZXR0ZSBww6UgZ3J1bm4gYXYgYXQgZXQgdmVya3N0ZWQgaSBuw6ZyaGV0ZW4gdGlsYnlyIHRqZW5lc3RlciB0aWwgZGUgbG9rYWxlLgogCgoKKlN1bm5ob3JkbGFuZCoKCkZvciAqKmluZHVzdHJpKiogc2VrdG9yZW4gaSBTdW5uaG9yZGxhbmQgaGFyIHZpIGJydWt0IHNhbW1lIMOlciwgb2cgc2FtbWUgYWxkZXJzZ3J1cHBlLCBkZXIgdsOlcmUgcmVzdWx0YXRlciBibGUgMi4wMzkwNzc3ODYsIDIuMDUyNDI2OTYgb2cgMC4gSW5kdXN0cmllbiBpIFN1bm5ob3JkbGFuZCB2aWwgdmkgcMOlc3TDpSBlciBlbiBiYXNpc27DpnJpbmcsIGZvciBuw6VyIHZpIHRhciBXZXN0Y29uIHNvbSBldCBla3NlbXBlbCwgc8OlIGdpciBkZW0gcHJvZHVrdGVyIG9nIHRqZW5lc3RlciB0aWwgYW5kcmUgZm9say9iZWRyaWZ0ZXIgaSBhbmRyZSBrb21tdW5lciBlbGxlciByZWdpb25lci4gCgoKKipIZWxzZS0gb2cgc29zaWFsdGplbmVzdGVyKiogYmxlIHbDpXJlIHJlc3VsdGF0ZXIgZm9yIDIwMDgsIDIwMTAgb2cgMjAyMCwgc2xpawoxLjg5MzYsIDIuMjgzMyBvZyAwIChtYW5nZWwgcMOlIGluZm9ybWFzam9uIGZvciAyMDIwKS4gU2xpayBzb20gZGV0IGVyIGZvciBIYXVnYWxhbmRldCwgc8OlIHZpbCBoZWxzZS0gb2cgc29zaWFsdGplbmVzdGVuIHbDpnJlIGVuIGxva2FsbsOmcmluZyBpIFN1bm5ob3JkbGFuZC4gRGV0dGUgZm9yZGkgc3lrZWh1c2VyIHNrYWwgaGplbHBlIGZvbGtlbmUgc29tIGVyIGkgbsOmcmhldGVuLCBvZyBkZXQgZXIgZGVyZm9yIG1hbiBoYXIgZXQgc3lrZWh1cyBpIGRlIGZsZXN0ZSBrb21tdW5lci4gCgpJICoqdmFyZWhhbmRlbCwgcmVwZXJhc2pvbiBhdiBtb3RvcnZvZ25lcioqIGJsZSByZXN1bHRhdGVuZSBmb3IgMjAwOCwgMjAxMCBvZyAyMDIwIHZhciB2w6VyZSBzdmFyIDEuMTA0LCAxLjI0NzUgb2cgMC4gSGVyIHRlbmtlciB2aSBkZXQgc2FtbWUgc2xpayBzb20gdmkgZm9ya2xhcnRlIHVuZGVyIEhhdWdhbGFuZGV0LCBkZXIgZGV0dGUgdmlsIGJsaSBlbiBsb2thbG7DpnJpbmcuICAKCgpJIGRlbiByb21saWdlIEdpbmkta29lZmZpc2llbnRlbiBoYXIgdmkgdmFsZ3Qgw6Ugc2UgcMOlIHNhbW1lIHNla3RvcmVuZSBzb20gdmkgYnJ1a3RlIGZvciDDpSBmaW5uZSBsb2thbGlzZXJpbmdza292aWVudGVuZS4gRGEgw6VyZW5lIDIwMDgsIDIwMTAgb2cgMjAyMC4gQWxkZXJzZ3J1cHBlbiBlciAxNS03NCDDpXIgb2cgc2VrdG9yZW5lIGVyIGluZHVzdHJpLCBoZWxzZS0gb2cgc29zaWFsdGplbmVzdGVyIG9nIHZhcmVoYW5kZWwsIHJlcGVyYXNqb24gYXYgbW90b3J2b2duZXIuIFZlZCBtw6VsaW5nIGF2IEdpbmkta29lZmZpc2llbnRlbiBtw6VsZXIgdmkgaHZvciBzdG9yIGF2c3RhbmRlbiBww6UgInJpayIgb2cgImZhdHRpZyIgaSBmeWxrZXQsIHRhbGxldCBza2FsIGxpZ2dlIGkgbWVsbG9tIDAtMS4gMCBiZXR5ciBhdCBkZXQgZXIgbGlrIGlubnRla3Qgc29tIGZvcm11ZSBmb3IgYWxsZSBpIGxhbmRldCwgb2cgcMOlIDEgZXIgZGV0IGRlIHRsaWsgaW5udGVrdCBvZyBmb3JtdWUgZm9yIGVuIHBlcnNvbi4gCgoKKkhhdWdhbGFuZGV0KgoKSW5kdXN0cmkgZ2lyIGV0IHJlc3VsdGF0IHDDpSAwLDA4ODE4NTgxOTc0LCBzb20gdmlsIHNpIGF0IGRlbiBlciBzw6Ugw6Ugc2kgbnVsbCBvZyB0aWxzdmFyZXIgZW4gbm9rIHPDpSBsaWsgaW5udGVrdCBzb20gZm9ybXVlIGlubmVuIHNla3RvcmVuIGluZHVzdGkgcMOlIEhhdWdhbGFuZGV0LiAKCklubmVuIEhlbHNlLSBvZyBzb3NpYWx0amVuc3RlciBmaWtrIHZpIHN2YXJldCAwLjA1NzYuRGVyIHJlc3VsdGF0ZXQgYmxpciBkZXQgc2FtbWUgc29tIGkgc2VrdG9yIGluZHVzdHJpLiBEZXIgaGVsc2UtIG9nIHNvc2lhbHRqZW5lc3RlbiBoYXIgbm9rIHPDpSBsaWsgZm9ybXVlIHNvbSBpbm50ZWt0LiAKCkkgdmFyZWhhbmRlbCwgcmVwZXJhc2pvbiBhdiBtb3RvcnZvZ25lciB2YXIgc3ZhcmV0IHbDpXJ0IDAuMDM2OCwgc29tIGdpciBldCBlbmRhIGxhdmVyZSByZXN1bHRhdCBlbm4gZGUgYW5kcmUsIG1lbiBoYXIgc2FtbWUgYmV0eWRuaW5nIGF0IGRldCBlciBsaWsgaW5udGVrdCBzb20gZm9ybXVlIGlubmVuIGRlbiBzZWt0b3Jlbi4gCgoKKlN1bm5ob3JkbGFuZCoKUMOlIGdydW5uIGF2IG1hbmdlbCBmb3IgaW5mb3JtYXNqb24gaSDDpXIgMjAyMCwgZXIgZGV0IGt1biB0byDDpXIgc29tIGVyIHJlZ25ldCBtZWQgaSBkZW5uZSBkZWxlbi4gCgpJbmR1c3RyaSBnYSBvc3MgZXQgcmVzdWx0YXQgcMOlIDAuMDU2OCBkZXIgZW4gc2VyIGF0IGZvcm11ZSBvZyBpbm50ZWt0IGVyIG5vayBzw6UgbGlrZSBmb3IgaW5kdXN0cmkgc2VrdG9yZW4uIAoKUmVzdWx0YXRldCB0aWwgaGVsc2UtIG9nIHNvc2lhbHRqZW5lc3RlciBlciAwLjA1NjgwNCBub2sgc8OlIGxpa3QgdGFsbCBzb20gcMOlIEhhdWdhbGFuZGV0LCBzb20gb2dzw6UgbGlrIGlubnRla3Qgc29tIGZvcm11ZS4gCgpJbm5lbiB2YXJoYW5kZWwsIHJlcGVyYXNqb24gYXYgbW90b3J2b2duZXIgaSBTdW5uaG9yZGxhbmQgdmFyIHbDpXJ0IHJlc3VsdGF0IDAuMDMxODIKb2cgZ2lyIGVuIGxpayBpbm50ZWt0IHNvbSBmb3JtdWUgaW5uZW4gc2VrdG9yZW4uCgoKCkVuIGthbiBzZSB1dCBpIGZyYSBhbGxlIHJlc3VsdGF0ZW5lIHPDpSBnYSBkZXQgb3NzIGVuIGxpayBpbm50ZWt0IG9nIGZvcm11ZSBww6UgYWxsZSBzZWt0b3JlbmUgdmkgdmFsZ3RlIHV0LiBpIG1hbmdsZXQgZXQgw6VyIHDDpSBodmVyIHNla3RvciBpIFN1bm5ob3JkbGFuZCBzb20ga2FuIGhhIGdpdHQgb3NzIGFuZHJlIHRhbGwgZW4gaHZhIGRlbiBrdW5uZSBibGl0dC4gVmkgYW50YXIgYXQgcmVzdWx0YXRlbmUgZXIgZ29kZSBvZyBoYXIgZ2l0dCBvc3MgcmV0dCBzdmFyIGkgZm9yaG9sZCB0aWwgw6UgbcOlbGUgR2luaS1rb2VmZmlzaWVudGVuLiAKCgoqUkRJKgoKVW5kZXIgbcOlbGV0IGZvciBtYW5nZm9sZCBhdiBuw6ZyaW5nZXIsIFJESSwgc2VyIHZpIHDDpSBzYW1tZSBzZWt0b3JlbmUgc29tIG92ZW5mb3IuIE1lZCBSREkgbcOlbGVyIHZpIG9tIGRlbiByZWdpb25hbGUgbsOmcmluZ2VuIGVyIGxpayBkZW4gbmFzam9uYWxlIG7DpnJpbmdlbiwgam8gaMO4eWVyZSBSREkgZW4gZXIgam8gbWVyIGxpayBlciBkZW4gcmVnaW9uYWxlIG7DpnJpbmdlbiBkZW4gbmFzam9ubGUgbsOmcmluZ2VuLiAKCipIYXVnYWxhbmRldCoKUmVzdWx0YXRldCB2aSBmaWtrIGkgaW5kdXN0cmkgdmFyIDY1LjczNDEsIGRldCB2aWwgc2kgYXQgZGVuIHJlZ2lvbmFsZSBuw6ZyaW5nZW4oaW5kdXN0cmkpIGVyIGlra2Ugc8OlIGxpayBzb20gZGVuIG5hc2pvbmFsIG7DpnJpbmdlbihpbmR1c3RyaSkuIAoKTsOlciBkZXQga29tbWVyIHRpbCBuw6ZyaW5nZW4gaGVsc2UtIG9nIHNvc2lhbHRqZW5lc3RlbiBmaWtrIGV0IHRhbGwgcMOlIDE0OTguMjg5IHNvbSB0aWxzdmFyZXIgZW4gaMO4eSBSREksIG9nIHZpbCBzaSBhdCBzZWt0b3JlbiBoZWxzZS0gb2cgc29zaWFsdGplbmVzc3RlbiByZWdpb25hbHQgcMOlIEhhdWdhbGFuZGV0IGVyIHN2w6ZydCBsaWsgZGVuIG5hc2pvbmFsZSBuw6ZyaW5nZW4uIAoKSW5uZW4gdmFyaGFuZGVsLCByZXBlcmFzam9uIGF2IG1vdG9ydm9nbmVyIGZpa2sgdmkgcmVzdWx0YXRldCAzNTYuMjExIGhhciBldCBow7h5ZWUgUkRJIHRhbGwgZW5uIGluZHVzdHJpIHNvbSB0aWxzdmFyZXIgYXQgZGVuIGVyIG3DpnIgbGlrIGRlbiBuYXNqb25hbGUgbsOmcmluZ2VuKGFyaGFuZGVsLCByZXBlcmFzam9uIGF2IG1vdG9ydm9nbmVyKSBlbm5lIHNla3RvcmVuIGluZHVzdHJpIGVyIGRlbiBuYXNqb25hbGUuIAoKKlN1bm5ob3JkbGFuZCogCkluZHVzdHJpIG7DpnJpbmdlbiBpIFN1bm5ob3JkbGFuZCBmaWtrIHZpIHJlc3VsdGF0ZXQgMC4xMjMxLCBzb20gdmlsIHNpIGF0IGRldCBlciBldCB2ZWxkaWcgbGF2IFJESS4gRGV0IHZpbCBzaSBhdCBkZW4gcmVnaW9uYWxlIGluZHVzdHJpZW4gZXIgaWtrZSBsaWsgZGVuIG5hanNvYW5sZSBuw6ZyaW5nZW4uIAoKU2FtbWUgZ2plbGRlciBoZWxzZS0gb2cgc29zaWFsdGplbmVzdGVuIDAuMTI5MjUgc29tIG9nc8OlIHRpbHN2YXJlciBpbmdlbiBsaWtoZXQgbWVkIGRlbiBuYXNqb25hbGUgbsOmcmluZ2VuLiAKCgpWYXJoYW5kZWwsIHJlcGVyYXNqb24gYXYgbW90b3J2b2duZXIgZmlrayBldCBuZWdhdGl2IHJlc3VsdGF0IG1pbnVzIDAuMDQ0Miwgc29tIHZpbCBzaSBhdCBkZXQgZXIgaW5nZW4gbGlraGV0IG1lbGxvbSBkZW4gbmFqc29uYWxlIG9nIHJlZ2lvbmFsZSBuw6ZyaW5nZW4uIAoKClxuZXdwYWdlCgojIDQuIFBlbmRsaW5nIG1lbGxvbSBkZSB1bGlrZSBrb21tdW5lbmUgaSByZWdpb25lbgoKYGBge3J9CmxpYnJhcnkocmVhZHhsKQpUYWJfMDMzMjFfYW5kZWxlciA8LSByZWFkX2V4Y2VsKCJEYXRhL1RhYl8wMzMyMV9hbmRlbGVyLnhsc3giLCAKICAgIGNvbF90eXBlcyA9IGMoInRleHQiLCAidGV4dCIsICJ0ZXh0IiwgCiAgICAgICAgInRleHQiLCAidGV4dCIsICJudW1lcmljIiwgIm51bWVyaWMiLCAKICAgICAgICAibnVtZXJpYyIpKQpgYGAKCiMgUGVuZGxlciB1dAoKYGBge3J9ClRhYl8wMzMyMV9hbmRlbGVyICU+JQogIHNlbGVjdChhYXIsIGJfa25hdm5fbmV3LCBVdF9wZW5kbGVyZSkgJT4lCiAgZmlsdGVyKGJfa25hdm5fbmV3ICVpbiUgYygiVHlzdsOmciIsICJLYXJtw7h5IiwgIkhhdWdlc3VuZCIsICJCb2tuIiwgIlV0c2lyYSIsICJWaW5kYWZqb3JkIiwgIkV0bmUiLCAiU3ZlaW8iLCAiQsO4bWxvIiwgIlN0b3JkIiwgIkZpdGphciIsICJUeXNuZXMiKQogICAgKSAlPiUKICBnZ3Bsb3QobWFwcGluZyA9IGFlcyh4ID0gYWFyLCB5ID0gVXRfcGVuZGxlcmUsIGNvbG91ciA9IGJfa25hdm5fbmV3KSkgKwogIGdlb21fbGluZShhZXMoZ3JvdXAgPSBiX2tuYXZuX25ldyksIGx3ZCA9IDAuNikgKwogIHRoZW1lKGxlZ2VuZC5wb3NpdGlvbiA9ICdib3R0b20nKSsKICB4bGFiKCLDhXIiKSArCiAgeWxhYigiVXRwZW5kbGluZyAlIikgKwogIGxhYnMoY29sb3VyID0gIktvbW11bmUiKQpgYGAKCkRldCB2aSBzZXIgdXQgaSBmcmEgZ3JhZmVuIGVyIGF0IGRldCBlciB0byBrb21tdW5lciBzb20gc2tpbGxlciBzZWcga2xhcnQgdXQgbsOlciBkZXQga29tbWVyIHRpbCBhbmRlbCB1dHBlbmRsZXJlKFR5c3bDpnIgb2cgU3ZlaW8pLiBHcnVubmVuIHRpbCBkZXQgZXIgYXQgZGlzc2Uga29tbXVuZW5lIGVyIG5hYm9rb21tdW5lbmUgdGlsIEhhdWdlc3VuZCBzb20gZXIgZXQgYXJiZWlkc3NlbnRlciBww6UgaGF1Z2FsYW5kZXQuIEZpdGphciBlciBvZ3PDpSBlbiBrb21tdW5lIG1lZCBow7h5IGFuZGVsIHV0cGVuZGxlcmUsIGdydW5uZW4gdGlsIGRldHRlIGVyIGxpdHQgZGV0IHNhbW1lIHNvbSBTdmVpbyBvZyBUeXN2w6ZyLCBtZW4gaSBkZXR0ZSB0aWxmZWxsZSBlciBkZXQgU3RvcmQgc29tIGFyYmVpZHNzZW50ZXIgaSBzdW5uaG9yZGFsYW5kLiBOw6VyIGRldCBnamVsZGVyIEJva24gc8OlIGVyIGRldHRlIGVuIGxpdGVuIGtvbW11bmUgbWVkIGJlZ3JlbnNldCBhcmJlaWRzcGxhc3NlciBzb20gZ2lyIGVuIMO4a3QgdXRwZW5kbGluZyB0aWwgbmFib2tvbW11bmVuZSBLYXJuw7h5LCBUeXN2w6ZyIG9nIEhhdWdlc3VuZC4gIAoKIyMjIFV0dmlrbGluZyBvdmVyIHRpZAoKVmkgc2VyIGF0IGRlIHNtw6Uga29tbXVuZW5lIHN2aW5nZXIgbXllIG1lciBlbm4gZGUgc3TDuHJyZSBrb21tdW5lbmUuIERlIHN0w7hyc3RlIGtvbW11bmVuZSAoSGF1Z2VzdW5kIG9nIEthcm3DuHkpIGVyIGdhbnNrZSBmbGF0ZSBtZWQgZW4gamV2biBvZyBtb2RlcmF0IMO4a25pbmcuIERlIGtvbW11bmVuZSBtZWQgc3TDuHJzdCB1dHZpa2xpbmcgZGUgc2lzdGUgMjAgw6VyZW5lIGhhciB2w6ZydCBUeXN2w6ZyIG9nIEJva24uIFR5c3bDpnIgZXIgZW4gYXR0cmFrdGl2IHBsYXNzIG9nIGJvIGZvcmRpIGt2YWRyYXRtZXRlcnByaXNlbiBlciBsYXZlcmUgZW5uIGkgSGF1Z2V1c25kIG9nIHJlaXNla29zdG5hZGVuZSBlciBvdmVya29tbWxpZ2UsIGRlcmZvciBzZXIgdmkgZW4gw7hrbmluZyBpIHV0cGVuZGxlcmUuIE7DpXIgZGV0IGdqZWxkZXIgQm9rbiBlciBmb2xrZXRhbGxldCByZWxhdGl2dCBsYXYsIHPDpSBkZXQgc2thbCBpa2tlIHN0b3JlIGVuZHJpbmdlbmUgdGlsIGkgYmVmb2xrbmluZyBmw7hyIGVuZHJpbmdlbmUgYmxpciByYWRpa2FsZSBpIHV0cGVuZGxpbmcuIE7DpXIgZGV0IGdqZWxkZXIgcmVzdGVuIGF2IGtvbW11bmVuZSBzw6UgZXIgZGV0IGVuIGxpdGVuIMO4a25pbmcgaSBhbGxlIGRlIHNpc3RlIDIwIMOlcmVuZS4gCgoKIyBQZW5kbGVyIGlubgoKYGBge3J9ClRhYl8wMzMyMV9hbmRlbGVyICU+JQogIHNlbGVjdChhYXIsIGJfa25hdm5fbmV3LCBJbm5fcGVuZGxlcmUpICU+JQogIGZpbHRlcigKICAgIGJfa25hdm5fbmV3ICVpbiUgYygiVHlzdsOmciIsICJLYXJtw7h5IiwgIiIsICJIYXVnZXN1bmQiLCAiQm9rbiIsICJVdHNpcmEiLCAiVmluZGFmam9yZCIsICJFdG5lIiwgIlN2ZWlvIiwgIkLDuG1sbyIsICJTdG9yZCIsICJGaXRqYXIiLCAiVHlzbmVzIiwgIiIsICIiKQogICAgKSAlPiUKICBnZ3Bsb3QobWFwcGluZyA9IGFlcyh4ID0gYWFyLCB5ID0gSW5uX3BlbmRsZXJlLCBjb2xvdXIgPSBiX2tuYXZuX25ldykpICsKICBnZW9tX2xpbmUoYWVzKGdyb3VwID0gYl9rbmF2bl9uZXcpLCBsd2QgPSAwLjUpICsKICB0aGVtZShsZWdlbmQucG9zaXRpb24gPSAnYm90dG9tJykgKwogIHhsYWIoIsOFciIpICsKICB5bGFiKCJJbm5wZW5kbGluZyAlIikgKwogIGxhYnMoY29sb3VyID0gIktvbW11bmUiKQpgYGAKClR5c3bDpnIgZXIga29tbXVuZW4gbWVkIGZsZXN0IGFuZGVsIGlubnBlbmRsZXJlIHDDpSBncnVubiBhdiBrw6Vyc3TDuCBvZyBldGFibGVyaW5nZXIgYXYgbnllIG7DpnJpbmdzcGFya2VyLiBEZSBlciBvZ3PDpSBlbiBhdiBkZSBrb21tdW5lbmUgc29tIGhhciBoYXR0IHN0w7hyc3QgdmVrc3Qgb3ZlciAyMC3DpXJzIHBlcmlvZGVuLiBIYXVnZXN1bmQgaGFyIGVuIGdhbnNrZSBtb2RlcmF0IG9nIHN0YWJpbCB2ZWtzdC4gU2FtdGlkaWcgZXIgZGUgdmVsZGlnIGjDuHl0IG9wcGUgaSBhbmRlbCBpbm5wZW5kbGluZy4gRGV0dGUgc2t5bGRlcyBhdCBIYXVnZXN1bmQgZXIgcmVnaW9uZW5zIHNlbnRlci4gQm9rbiBzaW5lIHN2aWduaW5nZXIga2FuIHNreWxkZXMgQm9rbiBQbGFzdCBBUyBvZyBodm9yZGFuIGRlIGdqw7hyIGRldCBzb20gcHJpdmF0ZWlkIHNlbHNrYXAuIERldHRlIGVyIGRldCBzdMO4cnN0ZSBwcml2YXRlaWRlIHNlbHNrYXBldCBpIGtvbW11bmVuLiBVdHNpcmEgZXIgZW4ga29tbXVuZSBtZWQgdmVsZGlnIGbDpSBhbnRhbGwgYmVib2VyZSwgc8OlIGRlcmVzIGdyYWYgaSBmaWd1cmVuIGdpciBzdG9yZSBvZyByYWRpa2FsZSBlbmRyaW5nZXIgaHZpcyBmb3IgZWtzZW1wZWwgZW4gZmFtaWxpZSBza3VsbGUgZmx5dHRldCBib3J0IGRlciBpIGZyYS4KCiMjIyBVdHZpa2xpbmdlbiBvdmVyIHRpZAoKRmxlc3RlIGtvbW11bmVyIGhhciBoYXR0IGVuIHN2YWsgcG9zaXRpdiB1dHZpa2xpbmcuIFV0c2lyYSBoYXIgaGF0dCBlbiBuZWdhdGl2IHV0dmlrbGluZywgbWVuIHNvbSBuZXZudCBlciBkZXR0ZSBlbiBrb21tdW5lIG1lZCBzdsOmcnQgZsOlIGlubmJ5Z2dlcmUuCgoKIyBCb3Igb2cgam9iYmVyIGkgc2FtbWUga29tbXVuZQoKYGBge3J9ClRhYl8wMzMyMV9hbmRlbGVyICU+JQogIHNlbGVjdChhYXIsIGJfa25hdm5fbmV3LCBiX29nX2EpICU+JQogIGZpbHRlcigKICAgIGJfa25hdm5fbmV3ICVpbiUgYygiVHlzdsOmciIsICJLYXJtw7h5IiwgIlNhdWRhIiwgIkhhdWdlc3VuZCIsICJCb2tuIiwgIlV0c2lyYSIsICJWaW5kYWZqb3JkIiwgIkV0bmUiLCAiU3ZlaW8iLCAiQsO4bWxvIiwgIlN0b3JkIiwgIkZpdGphciIsICJUeXNuZXMiLCAiS3Zpbm5oZXJhZCIsICJVbGxlbnN2YW5nIikKICAgICkgJT4lCiAgZ2dwbG90KG1hcHBpbmcgPSBhZXMoeCA9IGFhciwgeSA9IGJfb2dfYSwgY29sb3VyID0gYl9rbmF2bl9uZXcpKSArCiAgZ2VvbV9saW5lKGFlcyhncm91cCA9IGJfa25hdm5fbmV3KSwgbHdkID0gMC41KSArCiAgdGhlbWUobGVnZW5kLnBvc2l0aW9uID0gJ2JvdHRvbScpKwogIHhsYWIoIsOFciIpICsKICB5bGFiKCJCby0gb2cgYXJiZWlkc2tvbW11bmUgJSIpICsKICBsYWJzKGNvbG91ciA9ICJLb21tdW5lIikKYGBgCgpWaSBzZXIgYXQgU2F1ZGEgb2cgVWxsZW5zdmFuZyBoYXIgZW4gc3RvciBvZyBzdGFiaWwgYW5kZWwgYXYgYm9zYXR0ZSBvZyBzeXNzZWxzYXR0ZSBpbm5lbmZvciBzYW1tZSBrb21tdW5lLiBEZXR0ZSBza3lsZGVzIGF0IFNhdWRhIG9nIE9kZGEgKE9kZGEgbGlnZ2VyIGkgVWxsZW5zdmFuZyksIGhhciB2w6ZydCBieWVyIG1lZCByZWxhdGl2IHN0b3IgaW5kdXN0cmkgYWt0aXZpdGV0IHNhbXRpZGlnIHNvbSBkZSBsaWdnZXIgcmVsYXRpdnQgYWRza2lsdCBmcmEgYW5kcmUgbsOmcmUsIHN0b3JlIGtvbW11bmVyIHNsaWsgc29tIGZvciBla3NlbXBlbCBIYXVnZXN1bmQgb2cgQmVyZ2VuLgoKIyMjIE9wcHN1bW1lcmluZwoKUGVuZGxlc3Ryw7htbWVuZSDDuGtlciBpIHJlZ2lvbmVuLCBzYW10aWRpZyBzb20gdmkgc2VyIGF0IGRlIHNvbSBib3Igb2cgam9iYmVyIGkgc2FtbWUga29tbXVuZSBlciBhdnRha2VuZGUgaSAyMC3DpXJzIHBlcmlvZGVuLgoKVmVpbmV0dGV0IGZvcmJlZHJlcyBpIHRpbGxlZ2cgdGlsIGF0IHByaXNlbmUgcMOlIGVpZW5kb20gb2cgYm9saWcgZXIgcmltZWxpZ2VyZSBwZXIga3ZhcmRyYXRtZXRlciB1dGVuZm9yIGRlIG1lc3Qgc2VudHJlcnRlIHBsYXNzZW5lLgoKU3ZlaW8gZXIgZXQgZWtzZW1wZWwgcMOlIGh2b3IgcGVuZGxlc3Ryw7htbWVuIGhhciDDuGt0IG9nIGJvc2F0dCBvZyBzeXNzZWxzYXR0IGkga29tbXVuZW4gaGFyIHN5bmtldC4gU3ZlaW8gZXIgZW4ga29tbXVuZSBtZWQgc3RvcmUgdXR2aWtsaW5nc3BvdGVuc2lhbGV0IGlubmVuZm9yIGVpZW5kb20gb2cgYm9saWcgc2FtdGlkaWcgc29tIGF2c3RhbmRlbiB0aWwgSGF1Z2VzdW5kIGVyIGtvcnQuCgoKCgo=</div>
 
 
 
