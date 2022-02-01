@@ -7,5 +7,5 @@ I oppgave 2 beregnet vi ut lokaliseringskvotienten for noen forskjellige næring
 
 Neste næring som er helse- og sosialtjenesten som også ligger i Haugesund. Lokaliseringskvotienten for denne næringen er i 2008 på 1.117829, i 2014 på 1.090835 og i 2019 er den på 1.167473. Vi kan se på lokaliseringskvotienten at den har vært ganske stabil gjennom tidene. Siden det har vært ganske stabilt så kan vi definere denne næringen som en lokalnæring. 
 
-
+Industrinæringen som ligger i Karmøy har lokaliseringskvotient i 2008 på 1.401868, i 2014 på 1.113945 og i 2019 på 1.163935. Vi kan se at lokaliseringskvotienten over tid har ikke endret seg så mye over tiden, og når det ikke endrer seg så mye så vil en påstå at det er en lokalnæring, og kvotienten er over 1 så det kan stemme med en lokalnæring. Men tenker man med litt skjønn, så vil industrien på Karmøy være en basisnæring. For eksempel er Solstad en basisnæring og ikke en lokalnæring. 
 
