@@ -56,6 +56,7 @@ rename(punkt5, Tot_Haugalandet <- tot_H)
 punkt5 <- left_join(punkt5, Sunn_arbeid_punkt2) 
 punkt5 <- select(punkt5, Naering, Aar, Haugesund, tot_H, tot_S)
 punkt5 <- mutate(punkt5, tot_region = tot_H + tot_S)
+punkt5 <- filter(punkt5, Aar == c(2008, 2014, 2019))
 ```
 ```{r}
 punkt5 <- mutate(punkt5, Lq = (Haugesund/))
