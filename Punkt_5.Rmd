@@ -33,6 +33,6 @@ og
 
 må finne ut hvordan jeg lager trekanten/tegn for endring..
 
-$$ Endring i E_r = \frac{1}{1-a} * endring i \bar{E}_b $$
+$$ \Delta E_r = \frac{1}{1-a} * \Delta \bar{E}_b $$
 
 $$ \frac{1}{1-a} = basemultiplikatoren $$
