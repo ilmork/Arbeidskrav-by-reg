@@ -9,7 +9,11 @@ Neste næring som er helse- og sosialtjenesten som også ligger i Haugesund. Lok
 
 Industrinæringen som ligger i Karmøy har lokaliseringskvotient i 2008 på 1.401868, i 2014 på 1.113945 og i 2019 på 1.163935. Vi kan se at lokaliseringskvotienten over tid har ikke endret seg så mye over tiden, og når det ikke endrer seg så mye så vil en påstå at det er en lokalnæring, og kvotienten er over 1 så det kan stemme med en lokalnæring. Men tenker man med litt skjønn, så vil industrien på Karmøy være en basisnæring. For eksempel er Solstad en basisnæring og ikke en lokalnæring.
 
-Hoyts modell er en modell for byens økonomiske vekst, og formelen er følgende: $$ E_r = E_b + E_s  $$ $$ E_s = aE_r $$
+Hoyts modell er en modell for byens økonomiske vekst, og formelen er følgende: 
+
+$$ E_r = E_b + E_s  $$ 
+
+$$ E_s = aE_r $$
 
 $$ 0 < a < 1 $$
 
@@ -18,7 +22,7 @@ $$ E_b = \bar{E}_b $$
 Hvor $ E_r$ er total sysselsetting, $ E_b$ er sysselsetting i basisnæringer og $ E_s$ er sysselsetting i lokalnæringer.
 
 $$ E_r = E_b + E_s $$
-
+d
 $$ E_s = a * E_r $$
 
 $$ E_b = \bar{E}_b $$
@@ -31,8 +35,13 @@ $$ E_r = \frac{1}{1-a} * E_b$$
 
 og
 
-må finne ut hvordan jeg lager trekanten/tegn for endring..
-
 $$ \Delta E_r = \frac{1}{1-a} * \Delta \bar{E}_b $$
 
 $$ \frac{1}{1-a} = basemultiplikatoren $$
+
+# Hoyts modell for Haugesund
+
+For å finne tallene vi skal putte inn i formelen, må vi begynne med å lage et datasett hvor lokaliseringskvotienten for de ulike næringene er beregnet. 
+
+## 2008:
+$$ 21322 = E_b + E_s  $$ 
