@@ -15,7 +15,11 @@ View(Tab_shift_share)
 Tab_shift_share %>%
   select(År, Region, MIX) %>%
   filter(År %in%c( "2005", "2010", "2015", "2020")
+<<<<<<< HEAD
 )%>%
+=======
+  )%>%
+>>>>>>> d90acece1ada367c2470966c892a5554a2a48f3e
   ggplot(mapping = aes(x = År, y = MIX, colour = Region)) +
   geom_line(aes(group = Region), lwd = 0.6) +
   theme(legend.position = 'bottom')+
@@ -28,7 +32,11 @@ Tab_shift_share %>%
 Tab_shift_share %>%
   select(År, Region, DIF) %>%
   filter(År %in%c( "2005", "2010", "2015", "2020")
+<<<<<<< HEAD
 )%>%
+=======
+  )%>%
+>>>>>>> d90acece1ada367c2470966c892a5554a2a48f3e
   ggplot(mapping = aes(x = År, y = DIF, colour = Region)) +
   geom_line(aes(group = Region), lwd = 0.6) +
   theme(legend.position = 'bottom')+
