@@ -5,3 +5,11 @@ output: html_notebook
 
 
 
+```{r}
+library(readxl)
+Tab_shift_share <- read_excel("Data/Tab_shift_share.xlsx", 
+    col_types = c("text", "text", "numeric", 
+        "numeric"))
+View(Tab_shift_share)
+```
+
