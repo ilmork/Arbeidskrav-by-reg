@@ -13,3 +13,33 @@ Tab_shift_share <- read_excel("Data/Tab_shift_share.xlsx",
 View(Tab_shift_share)
 ```
 
+
+```{r}
+Tab_shift_share %>%
+  select(År, Region, MIX) %>%
+  filter(Region %in% c("Indre", "Ytre", "Midtre", "Haugalandet")
+    ) %>%
+  filter(År %in%c( "2000-2005", "2005-2010", "2010-2015", "2015-2020")
+)%>%
+  ggplot(mapping = aes(x = År, y = MIX, colour = Region)) +
+  geom_line(aes(group = Region), lwd = 0.6) +
+  theme(legend.position = 'bottom')+
+  xlab("År") +
+  ylab("Mix %") +
+  labs(colour = "Region")
+```
+
+```{r}
+Tab_shift_share %>%
+  select(År, Region, DIF) %>%
+  filter(Region %in% c("Indre", "Ytre", "Midtre", "Haugalandet")
+    ) %>%
+  filter(År %in%c( "2000-2005", "2005-2010", "2010-2015", "2015-2020")
+)%>%
+  ggplot(mapping = aes(x = År, y = DIF, colour = Region)) +
+  geom_line(aes(group = Region), lwd = 0.6) +
+  theme(legend.position = 'bottom')+
+  xlab("År") +
+  ylab("DIF %") +
+  labs(colour = "Region")
+```
