@@ -711,26 +711,25 @@ Under *lokaliseringskvoienter* har vi sett på tre ulike sektorer både på Haug
 *Haugalandet*
 
 Resultatet til sektoren **industri** Haugalandet ble på for årene 2008, 2010 og 2020 ble 
-1.527396811, 1.434975844 og 1.601509868. Alle årene så sier resultatet at det er en lokalnæring  på Haugalandet. Haugesund, Karmøy og Tysvær er de tre største kommunene med flere industri bedrifter, de har for eksempel Aibel, Hydro og Equinor. Disse kan ses også på som basenæringer. 
+1.527396811, 1.434975844 og 1.601509868. Alle årene så sier resultatet at det er en basisnæring på Haugalandet. Haugesund, Karmøy og Tysvær er de tre største kommunene med flere industri bedrifter, de har for eksempel Aibel, Hydro og Equinor. 
 
 **Helse- og sosialtjenester** ble våre resultater for 2008, 2010 og 2020, slik 
-0.9962243996, 0.9816929097 og 1.026935838. For 2008 og 2010 kan en se ut i fra resultatene at det er basefaktor. Hvis en ser på realiteten vil en si er en lokalnæring, som resultatet i 2020 sier. Fordi det er sykehus i haugesund. 
+0.9962243996, 0.9816929097 og 1.026935838. Når det kommer til helse- og sosialtjenester så vil en si her at det er en lokalnæring, dette fordi dem tilbyr å hjelpe menneskene lokalt. 
 
 I **varehandel, reperasjon av motorvogner** ble resultatene for 2008, 2010 og 2020,
-0.9372344155, 0.9562311403 og 0.9144987383. Her vil en se at alle resultatene er nder 1 som tilsvarer at det er en basisnæring. 
+0.9372344155, 0.9562311403 og 0.9144987383. Varehandel, reparasjon av motorvogner vil være en lokalnæring, dette på grunn av at et verksted i nærheten tilbyr tjenester til de lokale.
+ 
 
 
-*Sunnhordaland*
+*Sunnhordland*
 
-For **industri** sektoren i Sunnhordland har vi brukt samme år, og samme aldersgruppe, der våre resultater ble 2.039077786, 2.05242696 og 0. 
-Her fikk vi 0 i 2020 fordi det var mengel på informasjon i år 2020. I de to andre resultatene er tallet mye høyere en 1, vil det si at industri sektoren på Sunnhordalan er en lokalnæring. Her vil det nok være mye mer av lokalt arbeid.
+For **industri** sektoren i Sunnhordland har vi brukt samme år, og samme aldersgruppe, der våre resultater ble 2.039077786, 2.05242696 og 0. Industrien i Sunnhordland vil vi påstå er en basisnæring, for når vi tar Westcon som et eksempel, så gir dem produkter og tjenester til andre folk/bedrifter i andre kommuner eller regioner. 
 
 
 **Helse- og sosialtjenester** ble våre resultater for 2008, 2010 og 2020, slik
-1.8936, 2.2833 og 0 (mangel på informasjon for 2020). Her ser en at i 2008 var det et lavere resultat enn i 2010, men begge årene gir et resultat på over 1 som sier at det er lokalnæring. 
+1.8936, 2.2833 og 0 (mangel på informasjon for 2020). Slik som det er for Haugalandet, så vil helse- og sosialtjenesten være en lokalnæring i Sunnhordland. Dette fordi sykehuser skal hjelpe folkene som er i nærheten, og det er derfor man har et sykehus i de fleste kommuner. 
 
-
-I **varehandel, reperasjon av motorvogner** ble resultatene for 2008, 2010 og 2020 var våre svar 1.104, 1.2475 og 0. Slik som de over er resultatet for 2020 en mangel på. Det er også lokalnæring slik som de andre to sektorene. 
+I **varehandel, reperasjon av motorvogner** ble resultatene for 2008, 2010 og 2020 var våre svar 1.104, 1.2475 og 0. Her tenker vi det samme slik som vi forklarte under Haugalandet, der dette vil bli en lokalnæring.  
 
 
 I den romlige Gini-koeffisienten har vi valgt å se på samme sektorene som vi brukte for å finne lokaliseringskovientene. Da årene 2008, 2010 og 2020. Aldersgruppen er 15-74 år og sektorene er industri, helse- og sosialtjenester og varehandel, reperasjon av motorvogner. Ved måling av Gini-koeffisienten måler vi hvor stor avstanden på "rik" og "fattig" i fylket, tallet skal ligge i mellom 0-1. 0 betyr at det er lik inntekt som formue for alle i landet, og på 1 er det de tlik inntekt og formue for en person. 
