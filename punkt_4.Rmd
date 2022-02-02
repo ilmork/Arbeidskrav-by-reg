@@ -2,8 +2,10 @@
 title: "4. Pendling mellom de ulike kommunene i regionen."
 subtitle: MSB 106 - Anvendt By- og Regionaløkonomi
 output:
-  pdf_document: default
+  html_document:
+    df_print: paged
   html_notebook: default
+  pdf_document: default
 ---
 
 ```{r setup}
@@ -1950,6 +1952,7 @@ Tysvær er kommunen med flest andel innpendlere på grunn av kårstø og etabler
 ### Utviklingen over tid
 
 Fleste kommuner har hatt en svak positiv utvikling. Utsira har hatt en negativ utvikling, men som nevnt er dette en kommune med svært få innbyggere.
+
 
 
 # Bor og jobber i samme kommune
