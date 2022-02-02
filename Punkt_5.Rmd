@@ -49,9 +49,18 @@ $$ \frac{1}{1-a} = basemultiplikatoren $$
 For å finne tallene vi skal putte inn i formelen, må vi begynne med å lage et datasett hvor lokaliseringskvotienten for de ulike næringene er beregnet. 
 
 ```{r}
-punkt5 <- select(Haug_arbeid_punkt2, Naering, Aar, Haugesund, tot_H)
-rename(punkt5, Tot_Haugalandet <- tot_H)
+Haug_arbeid_punkt2 <- read.csv("Haug_arbeid_punkt2.csv")
+Sunn_arbeid_punkt2 <- read.csv("Sunn_arbeid_punkt2.csv")
 ```
+
+
+
+```{r}
+punkt5 <- Haug_arbeid_punkt2 %>% 
+  select(Naering, Aar, Haugesund, tot_H)
+```
+
+
 ```{r}
 punkt5 <- left_join(punkt5, Sunn_arbeid_punkt2) 
 punkt5 <- select(punkt5, Naering, Aar, Haugesund, tot_H, tot_S)
