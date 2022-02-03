@@ -1,0 +1,293 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\title{Punkt3}
+\author{}
+\date{\vspace{-2.5em}}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Punkt3},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{suppressPackageStartupMessages}\NormalTok{(\{}
+\FunctionTok{library}\NormalTok{(PxWebApiData)}
+\FunctionTok{library}\NormalTok{(dplyr)}
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\FunctionTok{library}\NormalTok{(lubridate)}
+\FunctionTok{library}\NormalTok{(REAT)}
+\FunctionTok{library}\NormalTok{(readxl)}
+\NormalTok{\})}
+\NormalTok{knitr}\SpecialCharTok{::}\NormalTok{opts\_chunk}\SpecialCharTok{$}\FunctionTok{set}\NormalTok{(}\AttributeTok{echo =} \ConstantTok{FALSE}\NormalTok{, }\AttributeTok{include =} \ConstantTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{i-denne-oppgaven-skal-vi-finne-sysselsetting-i-de-ulike-nuxe6ringene-etter-arbeidsstedskommune.}{%
+\section{I denne oppgaven skal vi finne sysselsetting i de ulike
+næringene, etter
+arbeidsstedskommune.}\label{i-denne-oppgaven-skal-vi-finne-sysselsetting-i-de-ulike-nuxe6ringene-etter-arbeidsstedskommune.}}
+
+Velger ut og endrer navn, Haugalandet
+
+Muterer inn i Haugbo
+
+Tar ut kommunene
+
+\hypertarget{legger-her-til-en-total-for-haugalandet.}{%
+\subsection{Legger her til en total for
+Haugalandet.}\label{legger-her-til-en-total-for-haugalandet.}}
+
+\hypertarget{sunnhordaland}{%
+\section{Sunnhordaland}\label{sunnhordaland}}
+
+\hypertarget{henter-inn-data-fra-oppgave-1-kommunene-i-sunnhordaland}{%
+\subsection{Henter inn data fra oppgave 1, kommunene i
+Sunnhordaland}\label{henter-inn-data-fra-oppgave-1-kommunene-i-sunnhordaland}}
+
+\hypertarget{fra-kommune-nummer-til-kommune-navn}{%
+\subsection{fra kommune nummer til kommune
+navn}\label{fra-kommune-nummer-til-kommune-navn}}
+
+\hypertarget{totalt-anasatte-i-hver-nuxe6ring-for-haugalandet}{%
+\subsection{Totalt anasatte i hver næring for
+Haugalandet}\label{totalt-anasatte-i-hver-nuxe6ring-for-haugalandet}}
+
+Grafen ovenfor viser til antall ansatte i ulike næringer på Haugalandet.
+Ut i fra grafen kan en se at Helse- og omsorgstjenester er næring med
+høyest antall ansatte på Haugalandet.
+
+\hypertarget{totalt-anasatte-i-hver-nuxe6ring-for-sunnhordland}{%
+\subsection{Totalt anasatte i hver næring for
+Sunnhordland}\label{totalt-anasatte-i-hver-nuxe6ring-for-sunnhordland}}
+
+I figuren ovenfor fremstilles det antall ansatte i de ulike næringene i
+Sunnhordland, her kan en se at helse- og soisaltjenester har flest
+ansatte.
+
+Under \emph{lokaliseringskvoienter} har vi sett på tre ulike sektorer
+både på Haugalandet og for Sunnhordland. Vi valgte da ut industri,
+helse- og sosialtjenester og varehandel, reperasjon av motorvogner. Det
+ble valgt ut tre forskjellige år, da første året som er 2008, 2010 og
+det siste året som var 2020. Aldersgruppen vi valgte var 15 til 74,
+fordi vi ser at denne aldersgruppen inneholder høyest tall av ansatte.
+
+\emph{Haugalandet}
+
+Resultatet til sektoren \textbf{industri} Haugalandet ble på for årene
+2008, 2010 og 2020 ble 1,527396811, 1,434975844 og 1,601509868. Alle
+årene så sier resultatet at det er en lokalnæring på Haugalandet.
+Haugesund, Karmøy og Tysvær er de tre største kommunene med flere
+industri bedrifter, de har for eksempel Aibel, Hydro og Equinor. Disse
+kan ses også på som basenæringer.
+
+\textbf{Helse- og sosialtjenester} ble våre resultater for 2008, 2010 og
+2020, slik 0,9962243996, 0,9816929097 og 1,026935838. For 2008 og 2010
+kan en se ut i fra resultatene at det er basefaktor. Hvis en ser på
+realiteten vil en si er en lokalnæring, som resultatet i 2020 sier.
+Fordi det er sykehus i haugesund.
+
+I \textbf{varehandel, reperasjon av motorvogner} ble resultatene for
+2008, 2010 og 2020, 0,9372344155, 0,9562311403 og 0,9144987383. Her vil
+en se at alle resultatene er nder 1 som tilsvarer at det er en
+basisnæring.
+
+\emph{Sunnhordaland}
+
+For \textbf{industri} sektoren i Sunnhordland har vi brukt samme år, og
+samme aldersgruppe, der våre resultater ble 2,039077786, 2,05242696 og
+0. Her fikk vi 0 i 2020 fordi det var mengel på informasjon i år 2020. I
+de to andre resultatene er tallet mye høyere en 1, vil det si at
+industri sektoren på Sunnhordalan er en lokalnæring. Her vil det nok
+være mye mer av lokalt arbeid.
+
+\textbf{Helse- og sosialtjenester} ble våre resultater for 2008, 2010 og
+2020, slik 1,893611307, 2,283353332 og 0 (mangel på informasjon for
+2020). Her ser en at i 2008 var det et lavere resultat enn i 2010, men
+begge årene gir et resultat på over 1 som sier at det er lokalnæring.
+
+I \textbf{varehandel, reperasjon av motorvogner} ble resultatene for
+2008, 2010 og 2020 var våre svar 1,104016994, 1,247585395 og 0. Slik som
+de over er resultatet for 2020 en mangel på. Det er også lokalnæring
+slik som de andre to sektorene.
+
+I den romlige Gini-koeffisienten har vi valgt å se på samme sektorene
+som vi brukte for å finne lokaliseringskovientene. Da årene 2008, 2010
+og 2020. Aldersgruppen er 15-74 år og sektorene er industri, helse- og
+sosialtjenester og varehandel, reperasjon av motorvogner. Ved måling av
+Gini-koeffisienten måler vi hvor stor avstanden på ``rik'' og ``fattig''
+i fylket, tallet skal ligge i mellom 0-1. 0 betyr at det er lik inntekt
+som formue for alle i landet, og på 1 er det de tlik inntekt og formue
+for en person.
+
+\emph{Haugalandet}
+
+Industri gir et resultat på 0,08818581974, som vil si at den er så å si
+null og tilsvarer en nok så lik inntekt som formue innen sektoren
+industi på Haugalandet.
+
+Innen Helse- og sosialtjenster fikk vi svaret 0,05768709678. Der
+resultatet blir det samme som i sektor industri. Der helse- og
+sosialtjenesten har nok så lik formue som inntekt.
+
+I varehandel, reperasjon av motorvogner var svaret vårt 0,03682287627,
+som gir et enda lavere resultat enn de forje, men har samme betydning at
+det er lik inntekt som formue innen den sektoren.
+
+\emph{Sunnhordland} På grunn av mangel for informasjon i år 2020, er det
+kun to år som er regnet med i denne delen.
+
+Industri ga oss et resultat på 0,0568049578 der en ser at formue og
+inntekt er nok så like for industri sektoren.
+
+Resultatet til helse- og sosialtjenester er 0,0568049578 nok så likt
+tall som på Haugalandet, som også lik inntekt som formue.
+
+Innen varhandel, reperasjon av motorvogner i Sunnhordland var vårt
+resultat 0,03182481794 og gir en lik inntekt som formue innen sektoren.
+
+En kan se ut i fra alle resultatene så ga det oss en lik inntekt og
+formue på alle sektorene vi valgte ut. i manglet et år på hver sektor i
+Sunnhordland som kan ha gitt oss andre tall en hva den kunne blitt. Vi
+antar at resultatene er gode og har gitt oss rett svar i forhold til å
+måle Gini-koeffisienten.
+
+\emph{RDI}
+
+Under målet for mangfold av næringer, RDI, ser vi på samme sektorene som
+ovenfor. Med RDI måler vi om den regionale næringen er lik den nasjonale
+næringen, jo høyere RDI en er jo mer lik er den regionale næringen den
+nasjonle næringen.
+
+\emph{Haugalandet} Resultatet vi fikk i industri var 65,73415204, det
+vil si at den regionale næringen(industri) er ikke så lik som den
+nasjonal næringen(industri).
+
+Når det kommer til næringen helse- og sosialtjenesten fikk et tall på
+1498,289335 som tilsvarer en høy RDI, og vil si at sektoren helse- og
+sosialtjenessten regionalt på Haugalandet er svært lik den nasjonale
+næringen.
+
+Innen varhandel, reperasjon av motorvogner fikk vi resultatet 356,211496
+har et høyee RDI tall enn industri som tilsvarer at den er mær lik den
+nasjonale næringen(arhandel, reperasjon av motorvogner) enne sektoren
+industri er den nasjonale.
+
+\emph{Sunnhordland} Industri næringen i Sunnhordland fikk vi resultatet
+0,1231639904, som vil si at det er et veldig lav RDI. Det vil si at den
+regionale industrien er ikke lik den najsoanle næringen.
+
+Samme gjelder helse- og sosialtjenesten 0,1292582968 som også tilsvarer
+ingen likhet med den nasjonale næringen.
+
+Varhandel, reperasjon av motorvogner fikk et negativ resultat
+−0,04424893169, som vil si at det er ingen likhet mellom den najsonale
+og regionale næringen.
+
+Sammenligne med resultatene for data etter arbeidssted, og kommenter
+hvilken informasjon resultatene gir om romlig mobilitet i
+arbeidsmarkedet.
+
+Kommer når tinger er kommet på plasss\ldots{} Ble forsinkelser.
+
+\end{document}

@@ -47,7 +47,14 @@ arbeid_punkt2 =mutate(arbeid_punkt2_first, tot = tot_H+tot_S)
 rm (arbeid_punkt2_first, Haug_arbeid, Sunn_arbeid)
 ```
 
-%\>%
+```{r}
+write.csv(Haug_arbeid_punkt2, "Haug_arbeid_punkt2.csv")
+```
+
+```{r}
+write.csv(Sunn_arbeid_punkt2, "Sunn_arbeid_punkt2.csv")
+```
+
 
 ## Lokaliseringskvotienter
 
