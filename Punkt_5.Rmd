@@ -53,8 +53,9 @@ punkt5 <- select(Haug_arbeid_punkt2, Naering, Aar, Haugesund, tot_H)
 ```
 
 
+```{r}
 Haug_arbeid_punkt2 <- read.csv("Haug_arbeid_punkt2.csv")
-Sunn_arbeid_punkt2 <- read.csv("Sunn_arbeid_punkt2.csv")
+```
 
 
 
@@ -67,14 +68,24 @@ punkt5 <- Haug_arbeid_punkt2 %>%
 
 ```{r}
 punkt5 <- left_join(punkt5, Sunn_arbeid_punkt2) 
-punkt5 <- select(punkt5, Naering, Aar, Haugesund, tot_H, tot_S)
-punkt5 <- mutate(punkt5, tot_region = tot_H + tot_S)
+punkt5 <- select(punkt5, Naering, Aar, Haugesund, tot_H)
 punkt5 <- filter(punkt5, Aar %in% c("2008", "2014", "2019"))
+
 ```
+
+
 
 
 ```{r}
 punkt5 <- mutate(punkt5, Lq = (Haugesund/))
+```
+
+
+
+```{r}
+locq( industry.names = Haugesund, plot.results = FALSE,
+LQ.method = "m", plot.title = "Localization quotients", 
+bar.col = "lightblue", line.col = "red", arg.size = 1)
 ```
 
 
