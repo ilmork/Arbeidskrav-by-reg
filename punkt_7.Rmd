@@ -3,12 +3,9 @@ title: "Shift Share Analyse"
 output: html_notebook
 ---
 
-<<<<<<< HEAD
 ```{r}
 library(ggplot2)
 ```
-
-
 
 
 ```{r}
@@ -21,9 +18,6 @@ View(Tab_shift_share)
 
 ```{r}
 Tab_shift_share %>%
-
-
-
   select(År, Region, MIX) %>%
   filter(År %in%c( "2000-2005", "2005-2010", "2010-2015", "2015-2020"))%>%
   ggplot(mapping = aes(x = År, y = MIX, colour = Region)) +
@@ -34,6 +28,13 @@ Tab_shift_share %>%
   ylab("Mix") +
   labs(colour = "Region")
 ```
+
+
+
+
+
+
+
 
 ```{r}
 Tab_shift_share %>%
