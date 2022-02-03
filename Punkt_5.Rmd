@@ -82,6 +82,7 @@ punkt5 <- mutate(punkt5, Lq = (Haugesund/))
 
 
 
+
 ```{r}
 locq( industry.names = Haugesund, plot.results = FALSE,
 LQ.method = "m", plot.title = "Localization quotients", 
