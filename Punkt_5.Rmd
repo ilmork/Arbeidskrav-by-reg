@@ -70,7 +70,6 @@ punkt5 <- Haug_arbeid_punkt2 %>%
 punkt5 <- left_join(punkt5, Sunn_arbeid_punkt2) 
 punkt5 <- select(punkt5, Naering, Aar, Haugesund, tot_H)
 punkt5 <- filter(punkt5, Aar %in% c("2008", "2014", "2019"))
-
 ```
 
 
@@ -80,13 +79,13 @@ punkt5 <- filter(punkt5, Aar %in% c("2008", "2014", "2019"))
 punkt5 <- mutate(punkt5, Lq = (Haugesund/))
 ```
 
-
+```{r}
+punkt5_1 <- mutate(Haug_arbeid_punkt2)
+```
 
 
 ```{r}
-locq( industry.names = Haugesund, plot.results = FALSE,
-LQ.method = "m", plot.title = "Localization quotients", 
-bar.col = "lightblue", line.col = "red", arg.size = 1)
+summarise(punkt5_1, Kommuner = Haugesund, Sauda, Bokn, Tysvaer, Karmoey, Utsira, Vindafjord)
 ```
 
 
