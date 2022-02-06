@@ -174,4 +174,13 @@ Lokaliseringskvotient: andelen antall arbeidsplasser i bransjen utgjør av samle
 
 
 ## 2008:
-$$ 21322 = E_b + E_s  $$ 
+$$ 21322 = 7385 + 13937 $$ 
+
+
+## 2014: 
+$$ 22190 = 8254 + 13936 $$ 
+## 2019
+
+$$ 21429 = 7600 + 13829 $$
+
+
