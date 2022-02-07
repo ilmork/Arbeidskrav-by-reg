@@ -401,19 +401,27 @@ punkt5_1 <- filter (punkt5_1, alder %in% c("15-74 år"))
 
 ```{r}
 punkt5_1 <- rename(punkt5_1,
-                   næring = NACE2007,
-                   total_Norge = sysselsatte,
-                   år = Aar)
-punkt5_1 <- select(punkt5_1, år, næring, total_Norge)
-punkt5_1 <- filter(punkt5_1, år %in% c("2008", "2014", "2019"))
+                   Naering = NACE2007,
+                   total_Norge = sysselsatte)
+punkt5_1 <- select(punkt5_1, Aar, Naering, total_Norge)
+punkt5_1 <- filter(punkt5_1, Aar %in% c("2008", "2014", "2019"))
 ```
 
 
 ```{r}
-punkt5_1_2008 <- filter (punkt5_1, år %in% c("2008"))
-punkt5_1_2014 <- filter (punkt5_1, år %in% c("2014"))
-punkt5_1_2019 <- filter (punkt5_1, år %in% c("2019"))
+punkt5_1_2008 <- filter (punkt5_1, Aar %in% c("2008"))
+punkt5_1_2014 <- filter (punkt5_1, Aar %in% c("2014"))
+punkt5_1_2019 <- filter (punkt5_1, Aar %in% c("2019"))
 ```
+
+```{r}
+punkt5H_1_2008 <- left_join(punkt5_1_2008, punkt5_2008)
+punkt5H_1_2008 <- select(punkt5H_1_2008, Aar, Naering, total_Norge, Haugesund)
+punkt5H_1_2008 <- mutate(punkt5H_1_2008, Lq_2008_H_N=((Haugesund/21322)/(total_Norge/2525000)),
+                      Lokalnaering = case_when(Lq_2008_H_N > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2008_H_N < 1 ~ "1"))
+```
+
 
 ```{r total 2008}
 2525000 + 4443277 + 51351
