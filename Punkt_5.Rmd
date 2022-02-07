@@ -138,7 +138,6 @@ $$ E_s = aE_t   -> 13937=a*21322   ->   13937/21322=a $$
 13937/21322
 ```
 
-
 $$ a=0.6536441 $$
 
 $$ E_t(1-a) = \bar{E}_b -> 21322(1-0.6536441)=\bar{E}_b $$
@@ -180,6 +179,35 @@ $$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6280306}=basemultiplika
 $$ basemultiplikator = 2.688393 $$
 ## 2019
 
-$$ 21429 = 7600 + 13829 $$
+$$ E_t = E_b + E_s  -> 21429 = 7600 + 13829 $$
+$$ 13829 = aE_t   -> 13829=a*21429   ->   13829/21429=a $$
+```{r}
+13829/21429
+```
+
+$$ a = 0.6453404 $$
+
+$$ E_t(1-a) = \bar{E}_b -> 21429(1-0.6453404)=\bar{E}_b $$
+
+```{r}
+21429*(1-0.6453404)
+```
+$$ 7600.001=\bar{E}_b $$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6453404}=basemultiplikator $$
+
+```{r}
+1/(1-0.6453404)
+```
+$$ basemultiplikator = 2.819605 $$
+# Nasjonalt
+
+```{r}
+punkt5_1 <- read_csv("Data_pkt1/Nas_arbeid_norge_sys.csv")
+```
 
 
+
+# Resultat
+
+Etter vi har målt bademulitplikatoren med ulike sektorer for tre ulike år opp i mot regionalt (Haugalandet) kan en se at i år 2008 ligger basemultiplikatoren på 2.887204 som 
