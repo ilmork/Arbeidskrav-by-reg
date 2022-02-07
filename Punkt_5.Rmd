@@ -338,3 +338,4 @@ Karmøy 2008: 1.982774
 Karmøy 2014: 3.128947
 Karmøy 2019: 2.029468
 
+Som vi kan se her har basemultiplikatoren i Haugesund holdt seg ganske stabil, mens den i større grad har vært i endring på Karmøy. På Karmøy ser vi en tydelig "topp" i 2014 hvor basemultiplikatoren var nesten dobbelt så høy som i 2008. Dette forteller oss at i 2014 hadde Karmøy betydelig flere sysselsatte i lokalnæringer enn i de andre årene, 2008 og 2019. 
