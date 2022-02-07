@@ -8,7 +8,7 @@ library(dplyr)
 ```
 
 
-I oppgave 2 beregnet vi ut lokaliseringskvotienten for noen forskjellige næringer både i Haugesund og Karmøy. For næringen bergverksdrift og utvinning i Haugesund så ser man at lokaliseringskvotienten har endret seg med tiden. For i 2008 var den 0.7530472, i 2014 var den 0.6103373 og i 2019 var den 0.8994094. Dette betyr at bergverksdrift og utvinning i Haugesund er i endring. I følge pensum så er det en basisnæring når lokaliseringskvotienten er mindre enn 0, og det vil være en lokalnæring når den er over 1. Men man kan ikke alltid gå etter den, men også se på endringen over tid og andre faktorer. I dette tilfelle stemmer den, siden bergverksdrift og utvinning i Haugesund er en basisnæring.
+I oppgave 2 beregnet vi ut lokaliseringskvotienten for noen forskjellige næringer både i Haugesund og Karmøy. For næringen bergverksdrift og utvinning i Haugesund så ser man at lokaliseringskvotienten har endret seg med tiden. For i 2008 var den 0.7530472, i 2014 var den 0.6103373 og i 2019 var den 0.8994094. Dette betyr at bergverksdrift og utvinning i Haugesund er i endring. I følge pensum så er det en basisnæring når lokaliseringskvotienten er mindre enn 1, og det vil være en lokalnæring når den er over 1. Men man kan ikke alltid gå etter den, men også se på endringen over tid og andre faktorer. I dette tilfelle stemmer den, siden bergverksdrift og utvinning i Haugesund er en basisnæring.
 
 Neste næring som er helse- og sosialtjenesten som også ligger i Haugesund. Lokaliseringskvotienten for denne næringen er i 2008 på 1.117829, i 2014 på 1.090835 og i 2019 er den på 1.167473. Vi kan se på lokaliseringskvotienten at den har vært ganske stabil gjennom tidene. Siden det har vært ganske stabilt så kan vi definere denne næringen som en lokalnæring.
 
@@ -16,9 +16,9 @@ Industrinæringen som ligger i Karmøy har lokaliseringskvotient i 2008 på 1.40
 
 Hoyts modell er en modell for byens økonomiske vekst, og formelen er følgende: 
 
-$$ E_r = E_b + E_s  $$ 
+$$ E_t = E_b + E_s $$ 
 
-$$ E_s = aE_r $$
+$$ E_s = aE_t $$
 
 $$ 0 < a < 1 $$
 
@@ -26,17 +26,17 @@ $$ E_b = \bar{E}_b $$
 
 Hvor $ E_r$ er total sysselsetting, $ E_b$ er sysselsetting i basisnæringer og $ E_s$ er sysselsetting i lokalnæringer.
 
-$$ E_r = E_b + E_s $$
+$$ E_t = E_b + E_s $$
 d
-$$ E_s = a * E_r $$
+$$ E_s = a * E_t $$
 
 $$ E_b = \bar{E}_b $$
 
-$$ E_r = \bar{E}_b + aE_r $$
+$$ E_t = \bar{E}_b + aE_r $$
 
-$$ E_r(1-a) = \bar{E}_b $$
+$$ E_t(1-a) = \bar{E}_b $$
 
-$$ E_r = \frac{1}{1-a} * E_b$$
+$$ E_t = \frac{1}{1-a} * E_b$$
 
 og
 
@@ -46,7 +46,7 @@ $$ \frac{1}{1-a} = basemultiplikatoren $$
 
 # Hoyts modell for Haugesund
 
-For å finne tallene vi skal putte inn i formelen, må vi begynne med å lage et datasett hvor lokaliseringskvotienten for de ulike næringene er beregnet. 
+For å finne tallene vi skal putte inn i formelen, må vi begynne med å lage datasett for de ulike aktuelle årstallene (2008, 2014, 2019) hvor lokaliseringskvotienten for de ulike næringene er beregnet. 
 
 ```{r}
 punkt5 <- select(Haug_arbeid_punkt2, Naering, Aar, Haugesund, tot_H)
@@ -64,34 +64,122 @@ punkt5 <- Haug_arbeid_punkt2 %>%
   select(Naering, Aar, Haugesund, tot_H)
 ```
 
-
-
 ```{r}
 punkt5 <- left_join(punkt5, Sunn_arbeid_punkt2) 
 punkt5 <- select(punkt5, Naering, Aar, Haugesund, tot_H)
 punkt5 <- filter(punkt5, Aar %in% c("2008", "2014", "2019"))
-
+```
+```{r}
+punkt5_2008 <- filter(punkt5, Aar %in% c("2008"))
+punkt5_2008 <- mutate(punkt5_2008, Lq_2008_Haugesund = ((Haugesund/21322)/(tot_H/47530)))
 ```
 
-
+```{r}
+punkt5_2008 <- mutate(punkt5_2008, Lokalnaering = case_when(Lq_2008_Haugesund > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2008_Haugesund < 1 ~ "1"))
+```
 
 
 ```{r}
-punkt5 <- mutate(punkt5, Lq = (Haugesund/))
+punkt5_2014 <- filter(punkt5, Aar %in% c("2014"))
+punkt5_2014 <- mutate(punkt5_2014,   Lq_2014_Haugesund=((Haugesund/22190)/(tot_H/49518)),
+                      Lokalnaering = case_when(Lq_2014_Haugesund > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2014_Haugesund < 1 ~ "1"))
 ```
-
-
 
 ```{r}
-locq( industry.names = Haugesund, plot.results = FALSE,
-LQ.method = "m", plot.title = "Localization quotients", 
-bar.col = "lightblue", line.col = "red", arg.size = 1)
+punkt5_2019 <- filter(punkt5, Aar %in% c("2019"))
+punkt5_2019 <- mutate(punkt5_2019, Lq_2019_Haugesund=((Haugesund/21429)/(tot_H/49295)),
+                                            Lokalnaering = case_when(Lq_2019_Haugesund > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2019_Haugesund < 1 ~ "1"))
+```
+
+Som nevnt er en næring en basisnæring når lokaliseringskvotienten er under 1, og en lokalnæring når den er over 1.
+
+## 2008
+$ E_t$ total sysselsetting: 21322
+$ E_b$ sysselsetting i basisnæringer:
+```{r Basisnæringer 2008}
+3945 + 863 + 405 + 286 + 995 + 1029 + 927 + 4812 + 675
+```
+$ E_b$ sysselsetting i lokalnæringer:
+```{r lokalnæringer}
+21322-13937
+```
+
+## 2014
+$ E_t$ total sysselsetting: 22190
+$ E_b$ sysselsetting i basisnæringer:
+```{r basisnæringer 2014}
+70+416+2682+1294+1069+915+1733+75
+```
+$ E_s$ sysselsetting i lokalnæringer:
+```{r lokalnæringer_2014}
+22190-8254
 ```
 
 
-Lokaliseringskvotient: andelen antall arbeidsplasser i bransjen utgjør av samlet sysselsetting i området, dividert med andelen bransjen utgjør av samlet sysselsetting i Norge/regionen...
-
-
+## 2019
+$ E_t$ total sysselsetting: 21429
+$ E_b$ sysselsetting i basisnæringer:
+```{r basisnæringer_2019}
+89+685+2171+1081+993+765+1716+100
+```
+$ E_s$ sysselsetting i lokalnæringer:
+```{r lokalnæringer_2019}
+21429-7600
+```
 
 ## 2008:
-$$ 21322 = E_b + E_s  $$ 
+$$ E_t = E_b + E_s   ->  21322 = 7385 + 13937 $$ 
+
+$$ E_s = aE_t   -> 13937=a*21322   ->   13937/21322=a $$
+```{r}
+13937/21322
+```
+
+
+$$ a=0.6536441 $$
+
+$$ E_t(1-a) = \bar{E}_b -> 21322(1-0.6536441)=\bar{E}_b $$
+```{r}
+21322*(1-0.6536441)
+```
+$$ 7385=\bar{E}_b $$
+
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6536441}=basemultiplikator $$
+```{r}
+1/(1-0.6536441)
+```
+$$ basemultiplikator = 2.887204 $$
+
+
+## 2014: 
+$$ E_t = E_b + E_s   ->  22190 = 8254 + 13936 $$ 
+
+$$ 13936 = aE_t   -> 13936=a*22190   ->   13936/22190=a $$
+```{r}
+13936/22190
+```
+
+
+$$ a=0.6280306 $$
+
+$$ E_t(1-a) = \bar{E}_b -> 22190(1-0.6280306)=\bar{E}_b $$
+```{r}
+22190*(1-0.6280306)
+```
+$$ 8254.001=\bar{E}_b $$
+
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6280306}=basemultiplikator $$
+```{r}
+1/(1-0.6280306)
+```
+$$ basemultiplikator = 2.688393 $$
+## 2019
+
+$$ 21429 = 7600 + 13829 $$
+
+
