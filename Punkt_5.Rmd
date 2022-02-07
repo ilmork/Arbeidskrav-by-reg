@@ -207,6 +207,33 @@ punkt5_1 <- read_csv("Data_pkt1/Nas_arbeid_norge_sys.csv")
 ```
 
 
+```{r}
+punkt5_1 <- rename(punkt5_1,
+                   næring = NACE2007,
+                   total_Norge = sysselsatte,
+                   år = Aar)
+punkt5_1 <- select(punkt5_1, år, næring, total_Norge)
+punkt5_1 <- filter(punkt5_1, år %in% c("2008", "2014", "2019"))
+```
+
+
+```{r}
+punkt5_1_2008 <- filter (punkt5_1, år %in% c("2008"))
+punkt5_1_2014 <- filter (punkt5_1, år %in% c("2014"))
+punkt5_1_2019 <- filter (punkt5_1, år %in% c("2019"))
+```
+
+```{r total 2008}
+2525000 + 4443277 + 51351
+```
+
+```{r total 2014}
+2650000 + 487505 + 78659
+```
+
+```{r Total 2019}
+
+```
 
 # Resultat
 
