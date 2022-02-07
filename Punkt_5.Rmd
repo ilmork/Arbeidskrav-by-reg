@@ -16,7 +16,7 @@ Industrinæringen som ligger i Karmøy har lokaliseringskvotient i 2008 på 1.40
 
 Hoyts modell er en modell for byens økonomiske vekst, og formelen er følgende: 
 
-$$ E_t = E_b + E_s  $$ 
+$$ E_t = E_b + E_s $$ 
 
 $$ E_s = aE_t $$
 
@@ -130,65 +130,54 @@ $ E_s$ sysselsetting i lokalnæringer:
 21429-7600
 ```
 
-
-Hvor $ E_t$ er total sysselsetting, $ E_b$ er sysselsetting i basisnæringer og $ E_s$ er sysselsetting i lokalnæringer.
-
-Total sysselsetting Haugalandet ($ E_t$):
-2008: 47530
-2014: 49518
-2019: 49295
-
-Lokaliseringskvotient: andelen antall arbeidsplasser i bransjen utgjør av samlet sysselsetting i området, dividert med andelen bransjen utgjør av samlet sysselsetting i Norge/regionen...
-
-
-Sysselsetting i basisnæringer:
-
-Sysselsetting i lokalnæringer: 
-
-## Lokaliseringskvotienter (hentet fra punkt 2):
-
-### Haugesund, bergverksdrift- og utvinning (05-09):
-2008: 0.7530472
-2014: 0.6103373
-2019: 0.8994094
-
-
-### Haugesund, Helse- og sosialtjenester (86-88)
-2008: 1.117829
-2014: 1.090835
-2019: 1.167473
-
-### Karmøy, Industri (10-33)
-2008: 1.401868
-2014: 1.113945
-2019: 1.163935
-
-### Karmøy, Helse- og sosialetjenester (86-88)
-2008: 0.9033207
-2014: 0.971681
-2019: 0.9157818
-
-
-Lokaliseringskvotient: andelen antall arbeidsplasser i bransjen utgjør av samlet sysselsetting i området, dividert med andelen bransjen utgjør av samlet sysselsetting i Norge/regionen...
-
-
-
 ## 2008:
-$$ 21322 = 7385 + 13937 $$ 
+$$ E_t = E_b + E_s   ->  21322 = 7385 + 13937 $$ 
 
-
-```{r}
-1.000*21322
-```
-
-
+$$ E_s = aE_t   -> 13937=a*21322   ->   13937/21322=a $$
 ```{r}
 13937/21322
 ```
 
 
+$$ a=0.6536441 $$
+
+$$ E_t(1-a) = \bar{E}_b -> 21322(1-0.6536441)=\bar{E}_b $$
+```{r}
+21322*(1-0.6536441)
+```
+$$ 7385=\bar{E}_b $$
+
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6536441}=basemultiplikator $$
+```{r}
+1/(1-0.6536441)
+```
+$$ basemultiplikator = 2.887204 $$
+
+
 ## 2014: 
-$$ 22190 = 8254 + 13936 $$ 
+$$ E_t = E_b + E_s   ->  22190 = 8254 + 13936 $$ 
+
+$$ 13936 = aE_t   -> 13936=a*22190   ->   13936/22190=a $$
+```{r}
+13936/22190
+```
+
+
+$$ a=0.6280306 $$
+
+$$ E_t(1-a) = \bar{E}_b -> 22190(1-0.6280306)=\bar{E}_b $$
+```{r}
+22190*(1-0.6280306)
+```
+$$ 8254.001=\bar{E}_b $$
+
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6280306}=basemultiplikator $$
+```{r}
+1/(1-0.6280306)
+```
+$$ basemultiplikator = 2.688393 $$
 ## 2019
 
 $$ 21429 = 7600 + 13829 $$
