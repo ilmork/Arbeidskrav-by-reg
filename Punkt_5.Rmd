@@ -18,7 +18,7 @@ Hoyts modell er en modell for byens økonomiske vekst, og formelen er følgende:
 
 $$ E_t = E_b + E_s  $$ 
 
-$$ E_s = aE_r $$
+$$ E_s = aE_t $$
 
 $$ 0 < a < 1 $$
 
@@ -175,6 +175,16 @@ Lokaliseringskvotient: andelen antall arbeidsplasser i bransjen utgjør av samle
 
 ## 2008:
 $$ 21322 = 7385 + 13937 $$ 
+
+
+```{r}
+1.000*21322
+```
+
+
+```{r}
+13937/21322
+```
 
 
 ## 2014: 
