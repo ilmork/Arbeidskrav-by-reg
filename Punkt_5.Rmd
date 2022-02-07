@@ -16,7 +16,7 @@ Industrinæringen som ligger i Karmøy har lokaliseringskvotient i 2008 på 1.40
 
 Hoyts modell er en modell for byens økonomiske vekst, og formelen er følgende: 
 
-$$ E_r = E_b + E_s  $$ 
+$$ E_t = E_b + E_s  $$ 
 
 $$ E_s = aE_r $$
 
@@ -26,17 +26,17 @@ $$ E_b = \bar{E}_b $$
 
 Hvor $ E_r$ er total sysselsetting, $ E_b$ er sysselsetting i basisnæringer og $ E_s$ er sysselsetting i lokalnæringer.
 
-$$ E_r = E_b + E_s $$
+$$ E_t = E_b + E_s $$
 d
-$$ E_s = a * E_r $$
+$$ E_s = a * E_t $$
 
 $$ E_b = \bar{E}_b $$
 
-$$ E_r = \bar{E}_b + aE_r $$
+$$ E_t = \bar{E}_b + aE_r $$
 
-$$ E_r(1-a) = \bar{E}_b $$
+$$ E_t(1-a) = \bar{E}_b $$
 
-$$ E_r = \frac{1}{1-a} * E_b$$
+$$ E_t = \frac{1}{1-a} * E_b$$
 
 og
 
@@ -97,9 +97,9 @@ punkt5_2019 <- mutate(punkt5_2019, Lq_2019_Haugesund=((Haugesund/21429)/(tot_H/4
 Som nevnt er en næring en basisnæring når lokaliseringskvotienten er under 1, og en lokalnæring når den er over 1.
 
 ## 2008
-$ E_r$ total sysselsetting: 21322
+$ E_t$ total sysselsetting: 21322
 $ E_b$ sysselsetting i lokalnæringer:
-```{r Lokalnæringer}
+```{r Basisnæringer 2008}
 3945 + 863 + 405 + 286 + 995 + 1029 + 927 + 4812 + 675
 ```
 $ E_b$ sysselsetting i lokalnæringer:
@@ -108,7 +108,7 @@ $ E_b$ sysselsetting i lokalnæringer:
 ```
 
 ## 2014
-$ E_r$ total sysselsetting: 22190
+$ E_t$ total sysselsetting: 22190
 $ E_b$ sysselsetting i basisnæringer:
 ```{r basisnæringer 2014}
 70+416+2682+1294+1069+915+1733+75
@@ -120,7 +120,7 @@ $ E_s$ sysselsetting i lokalnæringer:
 
 
 ## 2019
-$ E_r$ total sysselsetting: 21429
+$ E_t$ total sysselsetting: 21429
 $ E_b$ sysselsetting i basisnæringer:
 ```{r basisnæringer_2019}
 89+685+2171+1081+993+765+1716+100
