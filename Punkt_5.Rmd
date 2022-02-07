@@ -394,9 +394,11 @@ $$ basemultiplikator = 2.029468 $$
 ```{r}
 punkt5_1 <- read_csv("Data_pkt1/Nas_arbeid_norge_sys.csv")
 ```
+```{r}
+punkt5_1 <- filter (punkt5_1, alder %in% c("15-74 år"))
+```
 
 
-<<<<<<< HEAD
 ```{r}
 punkt5_1 <- rename(punkt5_1,
                    næring = NACE2007,
@@ -424,7 +426,6 @@ punkt5_1_2019 <- filter (punkt5_1, år %in% c("2019"))
 ```{r Total 2019}
 
 ```
-=======
 # Resultat - basemultiplikator
 
 Basemultiplikatoren viser forholdet mellom total sysselsetting og
