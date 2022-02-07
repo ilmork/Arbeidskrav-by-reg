@@ -206,8 +206,135 @@ $$ basemultiplikator = 2.819605 $$
 punkt5_1 <- read_csv("Data_pkt1/Nas_arbeid_norge_sys.csv")
 ```
 
+# Hoyts modell for Karmøy
 
+```{r}
+punkt5K <- Haug_arbeid_punkt2 %>% 
+  select(Naering, Aar, Karmoey, tot_H)
+```
+
+```{r}
+punkt5K <- left_join(punkt5K, Sunn_arbeid_punkt2) 
+punkt5K <- select(punkt5K, Naering, Aar, Karmoey, tot_H)
+punkt5K <- filter(punkt5K, Aar %in% c("2008", "2014", "2019"))
+```
+```{r}
+punkt5K_2008 <- filter(punkt5K, Aar %in% c("2008"))
+punkt5K_2008 <- mutate(punkt5K_2008, Lq_2008_Karmoey = ((Karmoey/15194)/(tot_H/47530)))
+```
+
+```{r}
+punkt5K_2008 <- mutate(punkt5K_2008, Lokalnaering = case_when(Lq_2008_Karmoey > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2008_Karmoey < 1 ~ "1"))
+```
+
+
+```{r}
+punkt5K_2014 <- filter(punkt5K, Aar %in% c("2014"))
+punkt5K_2014 <- mutate(punkt5K_2014,   Lq_2014_Karmoey=((Karmoey/15457)/(tot_H/49518)),
+                      Lokalnaering = case_when(Lq_2014_Karmoey > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2014_Karmoey < 1 ~ "1"))
+```
+
+```{r}
+punkt5K_2019 <- filter(punkt5K, Aar %in% c("2019"))
+punkt5K_2019 <- mutate(punkt5K_2019, Lq_2019_Karmoey=((Karmoey/15978)/(tot_H/49295)),
+                                            Lokalnaering = case_when(Lq_2019_Karmoey > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2019_Karmoey < 1 ~ "1"))
+```
+
+## 2008
+$ E_t$ total sysselsetting: 15194
+$ E_b$ sysselsetting i basisnæringer:
+```{r Basisnæringer 2008}
+472+55+120+2026+267+136+117+420+514+394+2771+371
+```
+$ E_s$ sysselsetting i lokalnæringer:
+```{r lokalnæringer}
+15194-7663
+```
+
+## 2014
+$ E_t$ total sysselsetting: 15457 
+$ E_b$ sysselsetting i basisnæringer:
+```{r basisnæringer 2014}
+15457-10517
+```
+$ E_s$ sysselsetting i lokalnæringer:
+```{r lokalnæringer_2014}
+2353+1907+1495+1244+3162+356
+```
+
+
+## 2019
+$ E_t$ total sysselsetting: 15978
+$ E_b$ sysselsetting i basisnæringer:
+```{r basisnæringer_2019}
+15978-8105
+```
+$ E_s$ sysselsetting i lokalnæringer:
+```{r lokalnæringer_2019}
+2476+1891+1430+861+1318+129
+```
+## 2008 Karmøy:
+
+$$ E_t = E_b + E_s  -> 15194 = 7663 + 7531 $$
+$$ 7531 = aE_t   -> 7531=a*15194   ->   7531/15194=a $$
+```{r}
+7531/15194
+```
+
+$$ a = 0.4956562 $$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.4956562}=basemultiplikator $$
+
+```{r}
+1/(1-0.4956562)
+```
+$$ basemultiplikator = 1.982774 $$
+
+## 2014 Karmøy:
+$$ E_t = E_b + E_s  -> 15457 = 4940 + 10517 $$
+$$ 10517 = aE_t   -> 10517=a*15457   ->   10517/15457=a $$
+```{r}
+10517/15457
+```
+
+$$ a = 0.6804037 $$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6804037}=basemultiplikator $$
+
+```{r}
+1/(1-0.6804037)
+```
+$$ basemultiplikator = 3.128947 $$
+
+## 2019 Karmøy:
+
+$$ E_t = E_b + E_s  -> 15978 = 7873 + 8105 $$
+$$ 8105 = aE_t   -> 8105=a*15978   ->   8105/15978=a $$
+```{r}
+8105/15978
+```
+
+$$ a = 0.50726 $$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.50726}=basemultiplikator $$
+
+```{r}
+1/(1-0.50726)
+```
+$$ basemultiplikator = 2.029468 $$
 
 # Resultat
 
-Etter vi har målt bademulitplikatoren med ulike sektorer for tre ulike år opp i mot regionalt (Haugalandet) kan en se at i år 2008 ligger basemultiplikatoren på 2.887204 som 
+Basemultiplikatoren viser forholdet mellom total sysselsetting og sysselsettingen i basisnæringene og lokalnæringene. Når multiplikatoren er høy betyr det at en høy andel er sysselsatt i lokalnæringer, og det finnes klynger og enkel tilgang på innstasvarer. 
+
+Etter vi har funnet basemulitplikatoren for Haugesund og Karmøy, målt i ulike år og opp i mot regionalt (Haugalandet), ser vi at basemultiklatorne er:
+Haugesund 2008: 2.887204
+Haugesund 2014: 2.688393
+Haugesund 2019: 2.819605
+Karmøy 2008: 1.982774
+Karmøy 2014: 3.128947
+Karmøy 2019: 2.029468
+
