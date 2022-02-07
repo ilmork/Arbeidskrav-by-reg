@@ -670,18 +670,32 @@ $$ basemultiplikator = 1.73844$$
 Basemultiplikatoren viser forholdet mellom total sysselsetting og
 sysselsettingen i basisnæringene og lokalnæringene. Når multiplikatoren
 er høy betyr det at en høy andel er sysselsatt i lokalnæringer, og det
-finnes klynger og enkel tilgang på innstasvarer.
+finnes klynger og enkel tilgang på innsatsvarer.
 
 
 Etter vi har funnet basemulitplikatoren for Haugesund og Karmøy, målt i
 ulike år og opp i mot regionalt (Haugalandet), ser vi at
-basemultiklatorne er: Haugesund 2008: 2.887204 Haugesund 2014: 2.688393
-Haugesund 2019: 2.819605 Karmøy 2008: 1.982774 Karmøy 2014: 3.128947
-Karmøy 2019: 2.029468
+basemultiplklatorne er: 
+- Haugesund 2008: 2.887204 
+- Haugesund 2014: 2.688393
+- Haugesund 2019: 2.819605 
+- Karmøy 2008: 1.982774 
+- Karmøy 2014: 3.128947
+- Karmøy 2019: 2.029468
 
-Som vi kan se her har basemultiplikatoren i Haugesund holdt seg ganske
+Som vi kan se her har basemultiplikatoren i Haugesund holdt seg nok så
 stabil, mens den i større grad har vært i endring på Karmøy. På Karmøy
 ser vi en tydelig "topp" i 2014 hvor basemultiplikatoren var nesten
 dobbelt så høy som i 2008. Dette forteller oss at i 2014 hadde Karmøy
 betydelig flere sysselsatte i lokalnæringer enn i de andre årene, 2008
 og 2019.
+
+Når vi ser på resutlatene fra Haugesund og Karmøy opp i mot nasjonalt, ser basemultiplikatorne slik ut:
+- Haugesund 2008: 2.982098
+- Haugesund 2014: 2.751054
+- Haugesund 2019: 2.478774
+- Karmøy 2008: 2.112919
+- Karmøy 2014: 2.9725
+- Karmøy 2019: 1.73844
+
+Her kan en se at Haugesund er nok så stabilt nasjonalt som i forhold til regionalt. Det vil si at selv målt opp i mot nasjonalt er det er nok så like mange som er sysselsatte i lokalnæringene. En kan se at i 2014 mål opp i mot nasjonalt er noe smått lavere, men utgjør ikke mye. Samme gjelder i 2019 for Karmøy. Det betyr at målt opp i mot nasjoanlt så er det litt færre som er sysselsatt i lokalnæringen enn når en måler tallene opp i mot regionalt. 
