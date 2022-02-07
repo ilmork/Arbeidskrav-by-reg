@@ -98,7 +98,7 @@ Som nevnt er en næring en basisnæring når lokaliseringskvotienten er under 1,
 
 ## 2008
 $ E_t$ total sysselsetting: 21322
-$ E_b$ sysselsetting i lokalnæringer:
+$ E_b$ sysselsetting i basisnæringer:
 ```{r Basisnæringer 2008}
 3945 + 863 + 405 + 286 + 995 + 1029 + 927 + 4812 + 675
 ```
