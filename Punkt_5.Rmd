@@ -250,7 +250,7 @@ $$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6453404}=basemultiplika
 
 $$ basemultiplikator = 2.819605 $$ \# Nasjonalt
 
-## Hoyts modell for Karmøy
+# Hoyts modell for Karmøy
 
 ```{r}
 punkt5K <- Haug_arbeid_punkt2 %>% 
@@ -389,15 +389,15 @@ $$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.50726}=basemultiplikato
 
 $$ basemultiplikator = 2.029468 $$
 
+# Basemultiplikator målt mot nasjonal sysselsetting
 
-## Basemultiplikator målt mot nasjonal sysselsetting 
 ```{r}
 punkt5_1 <- read_csv("Data_pkt1/Nas_arbeid_norge_sys.csv")
 ```
+
 ```{r}
 punkt5_1 <- filter (punkt5_1, alder %in% c("15-74 år"))
 ```
-
 
 ```{r}
 punkt5_1 <- rename(punkt5_1,
@@ -407,15 +407,14 @@ punkt5_1 <- select(punkt5_1, Aar, Naering, total_Norge)
 punkt5_1 <- filter(punkt5_1, Aar %in% c("2008", "2014", "2019"))
 ```
 
-
 ```{r}
 punkt5_1_2008 <- filter (punkt5_1, Aar %in% c("2008"))
 punkt5_1_2014 <- filter (punkt5_1, Aar %in% c("2014"))
 punkt5_1_2019 <- filter (punkt5_1, Aar %in% c("2019"))
 ```
 
+## Haugesund mot nasjonal sysselsetting
 
-# Nasjonalt og Haugesund 
 ```{r}
 punkt5H_1_2008 <- left_join(punkt5_1_2008, punkt5_2008)
 punkt5H_1_2008 <- select(punkt5H_1_2008, Aar, Naering, total_Norge, Haugesund)
@@ -432,7 +431,6 @@ punkt5H_1_2014 <- mutate(punkt5H_1_2014, Lq_2014_H_N=((Haugesund/22190)/(total_N
                           Basisnaering = case_when(Lq_2014_H_N < 1 ~ "1"))
 ```
 
-
 ```{r}
 punkt5H_1_2019 <- left_join(punkt5_1_2019, punkt5_2019)
 punkt5H_1_2019 <- select(punkt5H_1_2019, Aar, Naering, total_Norge, Haugesund)
@@ -441,8 +439,8 @@ punkt5H_1_2019 <- mutate(punkt5H_1_2019, Lq_2019_H_N=((Haugesund/21429)/(total_N
                           Basisnaering = case_when(Lq_2019_H_N < 1 ~ "1"))
 ```
 
+## Karmøy mot nasjonal sysselsetting
 
-# Nasjonalt og Karmøy 
 ```{r 2008}
 punkt5K_1_2008 <- left_join(punkt5_1_2008, punkt5K_2008)
 punkt5K_1_2008 <- select(punkt5K_1_2008, Aar, Naering, total_Norge, Karmoey)
@@ -467,7 +465,6 @@ punkt5K_1_2019 <- mutate(punkt5K_1_2019, Lq_2019_K_N=((Karmoey/15978)/(total_Nor
                           Basisnaering = case_when(Lq_2019_K_N < 1 ~ "1"))
 ```
 
-
 ## Basemultiplikator Haugesund mot nasjonalt 2008:
 
 \$ E_t\$ total sysselsetting: 21322
@@ -484,15 +481,13 @@ punkt5K_1_2019 <- mutate(punkt5K_1_2019, Lq_2019_K_N=((Karmoey/15978)/(total_Nor
 21322-7150
 ```
 
-
 $$  E_t = E_b + E_s <- 21322 = 7150 - 14172$$
+
 ```{r}
 14172/21322
 ```
 
-
-$$ E_s = aE_t   -> 14172=a*21322   ->  14172/21322=a $$
-$$a=0.6646656$$
+$$ E_s = aE_t   -> 14172=a*21322   ->  14172/21322=a $$ $$a=0.6646656$$
 
 $$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6646656}=basemultiplikator $$
 
@@ -518,23 +513,22 @@ $$ basemultiplikator = 2.982098 $$
 22190-8066
 ```
 
-
 $$  E_t = E_b + E_s <- 22190 = 8066- 14124$$
+
 ```{r}
 14124/22190
 ```
 
-
-$$ E_s = aE_t   -> 14124=a*22190   ->   14124/22190=a $$
-$$a=0.6365029$$
+$$ E_s = aE_t   -> 14124=a*22190   ->   14124/22190=a $$ $$a=0.6365029$$
 
 $$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6365029}=basemultiplikator $$
 
 ```{r}
 1/(1-0.6365029)
 ```
-$$ basemultiplikator = 2.751054$$
-## Basemultiplikator Haugesund mot nasjonalt 2019:
+
+$$ basemultiplikator = 2.751054$$ \#\# Basemultiplikator Haugesund mot
+nasjonalt 2019:
 
 \$ E_t\$ total sysselsetting: 21429
 
@@ -550,15 +544,13 @@ $$ basemultiplikator = 2.751054$$
 21429-8645
 ```
 
-
 $$  E_t = E_b + E_s <- 21429 = 8645 - 12784 $$
+
 ```{r}
 12784/21429
 ```
 
-
-$$ E_s = aE_t   -> 12784=a*21429   ->   12784/21429=a $$
-$$a=0.5965747$$
+$$ E_s = aE_t   -> 12784=a*21429   ->   12784/21429=a $$ $$a=0.5965747$$
 
 $$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.5965747}=basemultiplikator $$
 
@@ -566,9 +558,8 @@ $$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.5965747}=basemultiplika
 1/(1-0.5965747)
 ```
 
-$$ basemultiplikator = 2.478774$$
-## Basemultiplikator Karmøy mot najsonalt 2008:
-\$ E_t\$ total sysselsetting: 15194
+$$ basemultiplikator = 2.478774$$ \#\# Basemultiplikator Karmøy mot
+najsonalt 2008: \$ E_t\$ total sysselsetting: 15194
 
 \$ E_b\$ sysselsetting i basisnæringer:
 
@@ -582,15 +573,13 @@ $$ basemultiplikator = 2.478774$$
 15194-7191
 ```
 
-
 $$  E_t = E_b + E_s <- 15194 = 7191 - 8003$$
+
 ```{r}
 8003/15194
 ```
 
-
-$$ E_s = aE_t   -> 8003=a*15194  ->   8003/15194=a $$
-$$a=0.5267211$$
+$$ E_s = aE_t   -> 8003=a*15194  ->   8003/15194=a $$ $$a=0.5267211$$
 
 $$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.5267211}=basemultiplikator $$
 
@@ -598,9 +587,8 @@ $$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.5267211}=basemultiplika
 1/(1-0.5267211)
 ```
 
-$$ basemultiplikator = 2.112919$$
-## Basemultiplikator Karmøy mot najsonalt 2014:
-\$ E_t\$ total sysselsetting:15457
+$$ basemultiplikator = 2.112919$$ \#\# Basemultiplikator Karmøy mot
+najsonalt 2014: \$ E_t\$ total sysselsetting:15457
 
 \$ E_b\$ sysselsetting i basisnæringer:
 
@@ -614,15 +602,13 @@ $$ basemultiplikator = 2.112919$$
 15457-5200
 ```
 
-
 $$  E_t = E_b + E_s <- 15457 = 5200 - 10257$$
+
 ```{r}
  10257/15457
 ```
 
-
-$$ E_s = aE_t   -> 10257=a*15457  ->   10257/15457=a $$
-$$a=0.6635828$$
+$$ E_s = aE_t   -> 10257=a*15457  ->   10257/15457=a $$ $$a=0.6635828$$
 
 $$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6635828}=basemultiplikator $$
 
@@ -633,6 +619,7 @@ $$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6635828}=basemultiplika
 $$ basemultiplikator = 2.9725$$
 
 ## Basemultiplikator Karmøy mot najsonalt 2019:
+
 \$ E_t\$ total sysselsetting: 15978
 
 \$ E_b\$ sysselsetting i basisnæringer:
@@ -647,15 +634,13 @@ $$ basemultiplikator = 2.9725$$
 15978-9191
 ```
 
-
 $$  E_t = E_b + E_s <- 15978 = 9191 - 6787$$
+
 ```{r}
  6787/15978
 ```
 
-
-$$ E_s = aE_t   ->  6787=a*15978  ->    6787/15978=a $$
-$$a=0.4247716$$
+$$ E_s = aE_t   ->  6787=a*15978  ->    6787/15978=a $$ $$a=0.4247716$$
 
 $$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.4247716}=basemultiplikator $$
 
@@ -672,16 +657,11 @@ sysselsettingen i basisnæringene og lokalnæringene. Når multiplikatoren
 er høy betyr det at en høy andel er sysselsatt i lokalnæringer, og det
 finnes klynger og enkel tilgang på innsatsvarer.
 
-
 Etter vi har funnet basemulitplikatoren for Haugesund og Karmøy, målt i
-ulike år og opp i mot regionalt (Haugalandet), ser vi at
-basemultiplklatorne er: 
-- Haugesund 2008: 2.887204 
-- Haugesund 2014: 2.688393
-- Haugesund 2019: 2.819605 
-- Karmøy 2008: 1.982774 
-- Karmøy 2014: 3.128947
-- Karmøy 2019: 2.029468
+ulike år og opp mot regional sysselsetting (Haugalandet), ser vi at
+basemultiplklatorne er: - Haugesund 2008: 2.887204 - Haugesund 2014:
+2.688393 - Haugesund 2019: 2.819605 - Karmøy 2008: 1.982774 - Karmøy
+2014: 3.128947 - Karmøy 2019: 2.029468
 
 Som vi kan se her har basemultiplikatoren i Haugesund holdt seg nok så
 stabil, mens den i større grad har vært i endring på Karmøy. På Karmøy
@@ -690,12 +670,18 @@ dobbelt så høy som i 2008. Dette forteller oss at i 2014 hadde Karmøy
 betydelig flere sysselsatte i lokalnæringer enn i de andre årene, 2008
 og 2019.
 
-Når vi ser på resutlatene fra Haugesund og Karmøy opp i mot nasjonalt, ser basemultiplikatorne slik ut:
-- Haugesund 2008: 2.982098
-- Haugesund 2014: 2.751054
-- Haugesund 2019: 2.478774
-- Karmøy 2008: 2.112919
-- Karmøy 2014: 2.9725
-- Karmøy 2019: 1.73844
+Når vi ser på resultatene fra sysselsetting i Haugesund og på Karmøy
+målt opp mot nasjonal sysselsetting, ser basemultiplikatorne slik ut: -
+Haugesund 2008: 2.982098 - Haugesund 2014: 2.751054 - Haugesund 2019:
+2.478774 - Karmøy 2008: 2.112919 - Karmøy 2014: 2.9725 - Karmøy 2019:
+1.73844
 
-Her kan en se at Haugesund er nok så stabilt nasjonalt som i forhold til regionalt. Det vil si at selv målt opp i mot nasjonalt er det er nok så like mange som er sysselsatte i lokalnæringene. En kan se at i 2014 mål opp i mot nasjonalt er noe smått lavere, men utgjør ikke mye. Samme gjelder i 2019 for Karmøy. Det betyr at målt opp i mot nasjoanlt så er det litt færre som er sysselsatt i lokalnæringen enn når en måler tallene opp i mot regionalt. 
+Her kan en se at Haugesund er nok så stabilt nasjonalt, slik som
+regionalt. Det vil si at selv målt opp mot nasjonal sysselsetting er det
+omtrent like mange som er sysselsatte i lokalnæringene i alle årene. En
+kan se at basemultiplikatoren for 2014 målt opp mot nasjonal
+sysselsetting er noe smått lavere, men dette er ikke mye. Det samme
+gjelder for Karmøy i 2019. Det betyr at målt opp mot den nasjonale
+sysselsettingen, er det litt færre som er sysselsatt i det som blir
+ansett som en lokalnæringen utfra lokasjonskvotienten målt mot nasjonal
+sysselsetting.
