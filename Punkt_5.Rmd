@@ -125,13 +125,13 @@ under 1, og en lokalnæring når den er over 1.
 
 \$ E_b\$ sysselsetting i basisnæringer:
 
-```{r Basisnæringer 2008}
+```{r Basisnæringer_H2008}
 3945 + 863 + 405 + 286 + 995 + 1029 + 927 + 4812 + 675
 ```
 
 \$ E_b\$ sysselsetting i lokalnæringer:
 
-```{r lokalnæringer}
+```{r Lokalnæringer_H2008}
 21322-13937
 ```
 
@@ -141,13 +141,13 @@ under 1, og en lokalnæring når den er over 1.
 
 \$ E_b\$ sysselsetting i basisnæringer:
 
-```{r basisnæringer 2014}
+```{r basisnæringer_H2014}
 70+416+2682+1294+1069+915+1733+75
 ```
 
 \$ E_s\$ sysselsetting i lokalnæringer:
 
-```{r lokalnæringer_2014}
+```{r lokalnæringer_H2014}
 22190-8254
 ```
 
@@ -157,13 +157,13 @@ under 1, og en lokalnæring når den er over 1.
 
 \$ E_b\$ sysselsetting i basisnæringer:
 
-```{r basisnæringer_2019}
+```{r basisnæringer_H2019}
 89+685+2171+1081+993+765+1716+100
 ```
 
 \$ E_s\$ sysselsetting i lokalnæringer:
 
-```{r lokalnæringer_2019}
+```{r lokalnæringer_H2019}
 21429-7600
 ```
 
@@ -292,13 +292,13 @@ punkt5K_2019 <- mutate(punkt5K_2019, Lq_2019_Karmoey=((Karmoey/15978)/(tot_H/492
 \$ E_t\$ total sysselsetting: 15194 \$ E_b\$ sysselsetting i
 basisnæringer:
 
-```{r Basisnæringer 2008}
+```{r Basisnæringer_K2008}
 472+55+120+2026+267+136+117+420+514+394+2771+371
 ```
 
 \$ E_s\$ sysselsetting i lokalnæringer:
 
-```{r lokalnæringer}
+```{r lokalnæringer_K2008}
 15194-7663
 ```
 
@@ -307,13 +307,13 @@ basisnæringer:
 \$ E_t\$ total sysselsetting: 15457 \$ E_b\$ sysselsetting i
 basisnæringer:
 
-```{r basisnæringer 2014}
+```{r basisnæringer_2014_k}
 15457-10517
 ```
 
 \$ E_s\$ sysselsetting i lokalnæringer:
 
-```{r lokalnæringer_2014}
+```{r lokalnæringer_2014_k}
 2353+1907+1495+1244+3162+356
 ```
 
@@ -322,13 +322,13 @@ basisnæringer:
 \$ E_t\$ total sysselsetting: 15978 \$ E_b\$ sysselsetting i
 basisnæringer:
 
-```{r basisnæringer_2019}
+```{r basisnæringer_2019k}
 15978-8105
 ```
 
 \$ E_s\$ sysselsetting i lokalnæringer:
 
-```{r lokalnæringer_2019}
+```{r lokalnæringer_2019k}
 2476+1891+1430+861+1318+129
 ```
 
@@ -414,6 +414,8 @@ punkt5_1_2014 <- filter (punkt5_1, Aar %in% c("2014"))
 punkt5_1_2019 <- filter (punkt5_1, Aar %in% c("2019"))
 ```
 
+
+# Nasjonalt og Haugesund 
 ```{r}
 punkt5H_1_2008 <- left_join(punkt5_1_2008, punkt5_2008)
 punkt5H_1_2008 <- select(punkt5H_1_2008, Aar, Naering, total_Norge, Haugesund)
@@ -422,25 +424,254 @@ punkt5H_1_2008 <- mutate(punkt5H_1_2008, Lq_2008_H_N=((Haugesund/21322)/(total_N
                           Basisnaering = case_when(Lq_2008_H_N < 1 ~ "1"))
 ```
 
-
-```{r total 2008}
-2525000 + 4443277 + 51351
+```{r}
+punkt5H_1_2014 <- left_join(punkt5_1_2014, punkt5_2014)
+punkt5H_1_2014 <- select(punkt5H_1_2014, Aar, Naering, total_Norge, Haugesund)
+punkt5H_1_2014 <- mutate(punkt5H_1_2014, Lq_2014_H_N=((Haugesund/22190)/(total_Norge/2650000)),
+                      Lokalnaering = case_when(Lq_2014_H_N > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2014_H_N < 1 ~ "1"))
 ```
 
-```{r total 2014}
-2650000 + 487505 + 78659
+
+```{r}
+punkt5H_1_2019 <- left_join(punkt5_1_2019, punkt5_2019)
+punkt5H_1_2019 <- select(punkt5H_1_2019, Aar, Naering, total_Norge, Haugesund)
+punkt5H_1_2019 <- mutate(punkt5H_1_2019, Lq_2019_H_N=((Haugesund/21429)/(total_Norge/2710435)),
+                      Lokalnaering = case_when(Lq_2019_H_N > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2019_H_N < 1 ~ "1"))
 ```
 
-```{r Total 2019}
 
+# Nasjonalt og Karmøy 
+```{r 2008}
+punkt5K_1_2008 <- left_join(punkt5_1_2008, punkt5K_2008)
+punkt5K_1_2008 <- select(punkt5K_1_2008, Aar, Naering, total_Norge, Karmoey)
+punkt5K_1_2008 <- mutate(punkt5K_1_2008, Lq_2008_K_N=((Karmoey/15194)/(total_Norge/2525000)),
+                      Lokalnaering = case_when(Lq_2008_K_N > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2008_K_N < 1 ~ "1"))
 ```
+
+```{r 2014}
+punkt5K_1_2014 <- left_join(punkt5_1_2014, punkt5K_2014)
+punkt5K_1_2014 <- select(punkt5K_1_2014, Aar, Naering, total_Norge, Karmoey)
+punkt5K_1_2014 <- mutate(punkt5K_1_2014, Lq_2014_K_N=((Karmoey/15457)/(total_Norge/2650000)),
+                      Lokalnaering = case_when(Lq_2014_K_N > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2014_K_N < 1 ~ "1"))
+```
+
+```{r 2019 }
+punkt5K_1_2019 <- left_join(punkt5_1_2019, punkt5K_2019)
+punkt5K_1_2019 <- select(punkt5K_1_2019, Aar, Naering, total_Norge, Karmoey)
+punkt5K_1_2019 <- mutate(punkt5K_1_2019, Lq_2019_K_N=((Karmoey/15978)/(total_Norge/2710435)),
+                      Lokalnaering = case_when(Lq_2019_K_N > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2019_K_N < 1 ~ "1"))
+```
+
+
+## Basemultiplikator Haugesund mot nasjonalt 2008:
+
+\$ E_t\$ total sysselsetting: 21322
+
+\$ E_b\$ sysselsetting i basisnæringer:
+
+```{r basisnæringer 2008h}
+74 + 1263 + 405 + 286 + 995 + 1029 + 927 + 1422 + 675 + 74
+```
+
+\$ E_s\$ sysselsetting i lokalnæringer:
+
+```{r lokalnæringer_2008h}
+21322-7150
+```
+
+
+$$  E_t = E_b + E_s <- 21322 = 7150 - 14172$$
+```{r}
+14172/21322
+```
+
+
+$$ E_s = aE_t   -> 14172=a*21322   ->  14172/21322=a $$
+$$a=0.6646656$$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6646656}=basemultiplikator $$
+
+```{r}
+1/(1-0.6646656)
+```
+
+$$ basemultiplikator = 2.982098 $$
+
+## Basemultiplikator Haugesund mot nasjonalt 2014:
+
+\$ E_t\$ total sysselsetting: 22190
+
+\$ E_b\$ sysselsetting i basisnæringer:
+
+```{r basisnæringer 2014h}
+70 + 416 + 1294 + 1069 + 477 + 219 + 915 + 1152 + 1733 + 646 + 75 
+```
+
+\$ E_s\$ sysselsetting i lokalnæringer:
+
+```{r lokalnæringer_2014h}
+22190-8066
+```
+
+
+$$  E_t = E_b + E_s <- 22190 = 8066- 14124$$
+```{r}
+14124/22190
+```
+
+
+$$ E_s = aE_t   -> 14124=a*22190   ->   14124/22190=a $$
+$$a=0.6365029$$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6365029}=basemultiplikator $$
+
+```{r}
+1/(1-0.6365029)
+```
+$$ basemultiplikator = 2.751054$$
+## Basemultiplikator Haugesund mot nasjonalt 2019:
+
+\$ E_t\$ total sysselsetting: 21429
+
+\$ E_b\$ sysselsetting i basisnæringer:
+
+```{r basisnæringer 2019h}
+89 + 1081 + 993 + 577 + 172 + 1173 + 765 + 1276 + 1716 +703 + 100 
+```
+
+\$ E_s\$ sysselsetting i lokalnæringer:
+
+```{r lokalnæringer_2019h}
+21429-8645
+```
+
+
+$$  E_t = E_b + E_s <- 21429 = 8645 - 12784 $$
+```{r}
+12784/21429
+```
+
+
+$$ E_s = aE_t   -> 12784=a*21429   ->   12784/21429=a $$
+$$a=0.5965747$$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.5965747}=basemultiplikator $$
+
+```{r}
+1/(1-0.5965747)
+```
+
+$$ basemultiplikator = 2.478774$$
+## Basemultiplikator Karmøy mot najsonalt 2008:
+\$ E_t\$ total sysselsetting: 15194
+
+\$ E_b\$ sysselsetting i basisnæringer:
+
+```{r basisnæringer_2008k}
+55 + 120 + 2026 + 267 + 136 + 117 + 420 + 514 + 394 + 2771 + 371
+```
+
+\$ E_s\$ sysselsetting i lokalnæringer:
+
+```{r lokalnæringer_2008k}
+15194-7191
+```
+
+
+$$  E_t = E_b + E_s <- 15194 = 7191 - 8003$$
+```{r}
+8003/15194
+```
+
+
+$$ E_s = aE_t   -> 8003=a*15194  ->   8003/15194=a $$
+$$a=0.5267211$$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.5267211}=basemultiplikator $$
+
+```{r}
+1/(1-0.5267211)
+```
+
+$$ basemultiplikator = 2.112919$$
+## Basemultiplikator Karmøy mot najsonalt 2014:
+\$ E_t\$ total sysselsetting:15457
+
+\$ E_b\$ sysselsetting i basisnæringer:
+
+```{r basisnæringer_2014k}
+337 + 246 + 112 + 2005 + 343 + 135 + 81 + 495 + 616 + 474 + 356
+```
+
+\$ E_s\$ sysselsetting i lokalnæringer:
+
+```{r lokalnæringer_2014k}
+15457-5200
+```
+
+
+$$  E_t = E_b + E_s <- 15457 = 5200 - 10257$$
+```{r}
+ 10257/15457
+```
+
+
+$$ E_s = aE_t   -> 10257=a*15457  ->   10257/15457=a $$
+$$a=0.6635828$$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6635828}=basemultiplikator $$
+
+```{r}
+1/(1-0.6635828)
+```
+
+$$ basemultiplikator = 2.9725$$
+
+## Basemultiplikator Karmøy mot najsonalt 2019:
+\$ E_t\$ total sysselsetting: 15978
+
+\$ E_b\$ sysselsetting i basisnæringer:
+
+```{r Basisnæringer_2019k}
+329 + 307 + 123 + 1939 + 280 + 186 + 64 + 480 + 476 + 1318 + 3280 + 409
+```
+
+\$ E_s\$ sysselsetting i lokalnæringer:
+
+```{r Lokalnæringer_2019k}
+15978-9191
+```
+
+
+$$  E_t = E_b + E_s <- 15978 = 9191 - 6787$$
+```{r}
+ 6787/15978
+```
+
+
+$$ E_s = aE_t   ->  6787=a*15978  ->    6787/15978=a $$
+$$a=0.4247716$$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.4247716}=basemultiplikator $$
+
+```{r}
+1/(1-0.4247716)
+```
+
+$$ basemultiplikator = 1.73844$$
+
 # Resultat - basemultiplikator
 
 Basemultiplikatoren viser forholdet mellom total sysselsetting og
 sysselsettingen i basisnæringene og lokalnæringene. Når multiplikatoren
 er høy betyr det at en høy andel er sysselsatt i lokalnæringer, og det
 finnes klynger og enkel tilgang på innstasvarer.
->>>>>>> f4515754966a65195c44c03ed8980243b12915da
+
 
 Etter vi har funnet basemulitplikatoren for Haugesund og Karmøy, målt i
 ulike år og opp i mot regionalt (Haugalandet), ser vi at
