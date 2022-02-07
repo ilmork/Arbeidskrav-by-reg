@@ -131,9 +131,9 @@ $ E_s$ sysselsetting i lokalnæringer:
 ```
 
 
-Hvor $ E_r$ er total sysselsetting, $ E_b$ er sysselsetting i basisnæringer og $ E_s$ er sysselsetting i lokalnæringer.
+Hvor $ E_t$ er total sysselsetting, $ E_b$ er sysselsetting i basisnæringer og $ E_s$ er sysselsetting i lokalnæringer.
 
-Total sysselsetting Haugalandet ($ E_r$):
+Total sysselsetting Haugalandet ($ E_t$):
 2008: 47530
 2014: 49518
 2019: 49295
