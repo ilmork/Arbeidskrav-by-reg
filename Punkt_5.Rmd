@@ -1,8 +1,10 @@
 ---
 title: "Punkt 5"
-output: html_notebook
-editor_options: 
-  markdown: 
+output:
+  pdf_document: default
+  html_notebook: default
+editor_options:
+  markdown:
     wrap: 72
 ---
 
@@ -587,8 +589,9 @@ $$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.5267211}=basemultiplika
 1/(1-0.5267211)
 ```
 
-$$ basemultiplikator = 2.112919$$ \#\# Basemultiplikator Karmøy mot
-najsonalt 2014: \$ E_t\$ total sysselsetting:15457
+$$ basemultiplikator = 2.112919$$ \#\# Basemultiplikator Karmøy mot nasjonalt 2014: 
+
+\$ E_t\$ total sysselsetting:15457
 
 \$ E_b\$ sysselsetting i basisnæringer:
 
