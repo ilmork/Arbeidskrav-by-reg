@@ -1,0 +1,38 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(dplyr)
+library(data.table)
+```
+
+
+```{r}
+Haug_arbeid_punkt2 <- read.csv("Haug_arbeid_punkt2.csv")
+```
+
+```{r}
+Sunn_arbeid_punkt2 <- read.csv("sunn_arbeid_punkt2.csv")
+```
+
+```{r}
+Haug_arbeid_punkt4 <- cbind(Haug_arbeid_punkt2, Etne = Sunn_arbeid_punkt2$Etne)
+                      
+```
+
+```{r}
+punkt6<- Haug_arbeid_punkt4%>% 
+  select(Naering, Aar, Haugesund, Vindafjord, Etne,tot_H)
+```
+
+```{r}
+punkt6 <- filter(punkt6, Aar %in% "2019")
+```
+
+```{r}
+Haugesund_2020 <- select(punkt6, Naering, Aar, Haugesund, tot_H)
+Haugesund_2020<- mutate(Haugesund_2020, Lq_Haugesund_2020 = ((Haugesund/20852)/(tot_H/48971)))
+```
+
