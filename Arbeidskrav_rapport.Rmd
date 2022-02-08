@@ -1381,8 +1381,9 @@ $$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6365029}=basemultiplika
 1/(1-0.6365029)
 ```
 
-$$ basemultiplikator = 2.751054$$ \#\# Basemultiplikator Haugesund mot
-nasjonalt 2019:
+$$ basemultiplikator = 2.751054$$ 
+
+### Basemultiplikator Haugesund mot nasjonalt 2019:
 
 \$ E_t\$ total sysselsetting: 21429
 
@@ -1412,8 +1413,10 @@ $$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.5965747}=basemultiplika
 1/(1-0.5965747)
 ```
 
-$$ basemultiplikator = 2.478774$$ \#\# Basemultiplikator Karmøy mot
-najsonalt 2008: \$ E_t\$ total sysselsetting: 15194
+$$ basemultiplikator = 2.478774$$ 
+
+## Basemultiplikator Karmøy mot nasjonalt 2008: 
+\$ E_t\$ total sysselsetting: 15194
 
 \$ E_b\$ sysselsetting i basisnæringer:
 
@@ -1441,9 +1444,11 @@ $$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.5267211}=basemultiplika
 1/(1-0.5267211)
 ```
 
-$$ basemultiplikator = 2.112919$$ \#\# Basemultiplikator Karmøy mot
-najsonalt 2014: \$ E_t\$ total sysselsetting:15457
+$$ basemultiplikator = 2.112919$$ 
 
+### Basemultiplikator Karmøy mot nasjonalt 2014:
+\$ E_t\$ total sysselsetting:15457
+ 
 \$ E_b\$ sysselsetting i basisnæringer:
 
 ```{r basisnæringer_2014k}
