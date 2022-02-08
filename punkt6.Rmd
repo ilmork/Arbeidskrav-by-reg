@@ -8,7 +8,6 @@ library(dplyr)
 library(data.table)
 ```
 
-
 ```{r}
 Haug_arbeid_punkt2 <- read.csv("Haug_arbeid_punkt2.csv")
 ```
@@ -23,16 +22,197 @@ Haug_arbeid_punkt4 <- cbind(Haug_arbeid_punkt2, Etne = Sunn_arbeid_punkt2$Etne)
 ```
 
 ```{r}
+Haug_arbeid_punkt4 = mutate(Haug_arbeid_punkt4, tot_H = Haugesund+Sauda+Bokn+Tysvaer+Karmoey+Utsira+Vindafjord+Etne)
+makeNAstatus = FALSE
+```
+
+```{r}
 punkt6<- Haug_arbeid_punkt4%>% 
   select(Naering, Aar, Haugesund, Vindafjord, Etne,tot_H)
 ```
 
 ```{r}
-punkt6 <- filter(punkt6, Aar %in% "2019")
+punkt6 <- filter(punkt6, Aar %in% "2020")
 ```
+
+
+## Haugesund 2020
 
 ```{r}
 Haugesund_2020 <- select(punkt6, Naering, Aar, Haugesund, tot_H)
-Haugesund_2020<- mutate(Haugesund_2020, Lq_Haugesund_2020 = ((Haugesund/20852)/(tot_H/48971)))
 ```
+
+```{r}
+Haugesund_2020<- mutate(Haugesund_2020, Lq_Haugesund_2020 = ((Haugesund/20852)/(tot_H/50584)))
+```
+
+```{r}
+Haugesund_2020 <- mutate(Haugesund_2020 , Lokalnaering = case_when(Lq_Haugesund_2020 > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_Haugesund_2020 < 1 ~ "1"))
+```
+
+
+## FÅ SVAR FRA ARNSTEIN FØRST
+
+$E_t$ total sysselsetting: 50584
+
+$E_b$ sysselsetting i basisnæringer:
+
+```{r Basisnæringer_Haug_2020}
+3945 + 863 + 405 + 286 + 995 + 1029 + 927 + 4812 + 675
+```
+
+$E_b$ sysselsetting i lokalnæringer:
+
+```{r Lokalnæringer_Haug_2020}
+50584-13937
+```
+
+## Basemultiplikator Haugesund 2020
+
+$$E_t = E_b + E_s   \rightarrow  21322 = 7385 + 13937$$
+
+$$E_s = aE_t   \rightarrow 13937=a\cdot21322   \rightarrow   13937/21322=a$$
+
+```{r}
+13937/21322
+```
+
+$$a=0.6536441$$
+
+$$E_t(1-a) = \bar{E}_b \rightarrow 21322(1-0.6536441)=\bar{E}_b$$
+
+```{r}
+21322*(1-0.6536441)
+```
+
+$$7385=\bar{E}_b$$
+
+$$\frac{1}{1-a} = basemultiplikatoren   \rightarrow \frac{1}{1-0.6536441}=basemultiplikator$$
+
+```{r}
+1/(1-0.6536441)
+```
+
+$$basemultiplikator = 2.887204$$
+
+
+## Vindafjord 2020
+
+```{r}
+Vindafjord_2020 <- select(punkt6, Naering, Aar, Vindafjord, tot_H)
+```
+
+```{r}
+Vindafjord_2020 <- mutate(Vindafjord_2020, Lq_Vindafjord_2020 = ((Vindafjord/4898)/(tot_H/50584)))
+```
+
+```{r}
+Vindafjord_2020 <- mutate(Vindafjord_2020 , Lokalnaering = case_when(Lq_Vindafjord_2020 > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_Vindafjord_2020 < 1 ~ "1"))
+```
+
+
+$E_t$ total sysselsetting: 50584
+
+$E_b$ sysselsetting i basisnæringer:
+
+```{r Basisnæringer_Vind_2020}
+3945 + 863 + 405 + 286 + 995 + 1029 + 927 + 4812 + 675
+```
+
+$E_b$ sysselsetting i lokalnæringer:
+
+```{r Lokalnæringer_Vind_2020}
+50584-13937
+```
+
+## Basemultiplikator Vindafjord 2020
+
+$$E_t = E_b + E_s   \rightarrow  21322 = 7385 + 13937$$
+
+$$E_s = aE_t   \rightarrow 13937=a\cdot21322   \rightarrow   13937/21322=a$$
+
+```{r}
+13937/21322
+```
+
+$$a=0.6536441$$
+
+$$E_t(1-a) = \bar{E}_b \rightarrow 21322(1-0.6536441)=\bar{E}_b$$
+
+```{r}
+21322*(1-0.6536441)
+```
+
+$$7385=\bar{E}_b$$
+
+$$\frac{1}{1-a} = basemultiplikatoren \rightarrow \frac{1}{1-0.6536441}=basemultiplikator$$
+
+```{r}
+1/(1-0.6536441)
+```
+
+$$basemultiplikator = 2.887204$$
+
+## Etne kommune 2020
+
+```{r}
+Etne_2020 <- select(punkt6, Naering, Aar, Etne, tot_H)
+```
+
+```{r}
+Etne_2020<- mutate(Etne_2020, Lq_Etne_2020 = ((Etne/1613)/(tot_H/50584)))
+```
+
+```{r}
+Etne_2020 <- mutate(Etne_2020 , Lokalnaering = case_when(Lq_Etne_2020 > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_Etne_2020 < 1 ~ "1"))
+```
+
+
+$E_t$ total sysselsetting: 50584
+
+$E_b$ sysselsetting i basisnæringer:
+
+```{r Basisnæringer_Etne_2020}
+3945 + 863 + 405 + 286 + 995 + 1029 + 927 + 4812 + 675
+```
+
+$E_b$ sysselsetting i lokalnæringer:
+
+```{r Lokalnæringer_Etne_2020}
+50584-13937
+```
+
+## Basemultiplikator Etne kommune 2020
+
+$$E_t = E_b + E_s   \rightarrow  21322 = 7385 + 13937$$
+
+$$E_s = aE_t   \rightarrow 13937=a\cdot21322   \rightarrow   13937/21322=a$$
+
+```{r}
+13937/21322
+```
+
+$$a=0.6536441$$
+
+$$E_t(1-a) = \bar{E}_b \rightarrow 21322(1-0.6536441)=\bar{E}_b$$
+
+```{r}
+21322*(1-0.6536441)
+```
+
+$$7385=\bar{E}_b$$
+
+$$\frac{1}{1-a} = basemultiplikatoren   \rightarrow \frac{1}{1-0.6536441}=basemultiplikator$$
+
+```{r}
+1/(1-0.6536441)
+```
+
+$$basemultiplikator = 2.887204$$
+
+
+
 
