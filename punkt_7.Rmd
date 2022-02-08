@@ -29,7 +29,7 @@ Tab_shift_share %>%
   labs(colour = "Region")
 ```
 
-Mix-effekten viser endringen i en spesifikk bransje eller region utover gjennomsnittet for nasjonen. Det vil si hvor mye regionen presterte bedre eller dårligere enn økonomien som helhet på landsbasis.
+Mix-effekten viser endringen i en spesifikk bransje eller region utover gjennomsnittet for nasjonen. Det vil si hvor mye regionen presterte bedre eller dårligere enn økonomien som helhet på landsbasis. Har en region negativ MIX har de en dårlig næringssammensetning for hvordan nasjon gjør det nå. 
 
 På x-aksen viser 2000-2005 tallene for 2005 osv...
 For perioden 2005-2010 så ser vi en markant økning i midtre del av Haugalandet, mens resten av regionen presterer dårligere enn økonomien til nasjonen.
@@ -39,7 +39,7 @@ Perioden 2010-2015 så stiger indre og ytre del av Haugalandet mens midtre synke
 2015-2020 perioden har alle delene av regionen samlet seg og ligger rett under gjennomsnittet for nasjonen. 
 
 
-
+ 
 
 
 ```{r}
