@@ -1,6 +1,8 @@
 ---
 title: "R Notebook"
-output: html_notebook
+output:
+  pdf_document: default
+  html_notebook: default
 ---
 
 ## Et positivt eksogent sjokk i basis-sysselsetting
@@ -269,18 +271,3 @@ Skånevik:505.3245
 
 
 
-```{r}
-Haug_arbeid_punkt_ny <- Haug_arbeid_punkt4 %>% 
-  mutate(Haugesund1=replace_na(Haugesund, as.numeric(0)),
-         Sauda1=replace_na(Sauda, as.numeric(0)),
-         Bokn1=replace_na(Bokn, as.numeric(0)),
-         Tysvaer1=replace_na(Tysvaer, as.numeric(0)),
-         Karmoey1=replace_na(Karmoey, as.numeric(0)),
-         Utsira1=replace_na(Utsira, as.numeric(0)),
-         Vindafjord1=replace_na(Vindafjord, as.numeric(0)),
-         Etne1=replace_na(Etne, as.numeric(0)))
-```
-
-```{r, NA.rm=TRUE}
-Haug_arbeid_punkt_ny = mutate(Haug_arbeid_punkt_ny, tot_H = Haugesund1+Sauda1+Bokn1+Tysvaer1+Karmoey1+Utsira1+Vindafjord1+Etne 1)
-```
