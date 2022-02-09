@@ -252,7 +252,7 @@ rm (arbeid_punkt2_first, Haug_arbeid, Sunn_arbeid)
 df2008 = filter(arbeid_punkt2, Aar == c("2008"))
 ```
 
-```{r 2008}
+```{r2008}
 locq(452, 21322, 1338, 47530, industry.names = Bergverksdrift_utvinning_2008, plot.results = FALSE,
 LQ.method = "m", plot.title = "Localization quotients", 
 bar.col = "lightblue", line.col = "red", arg.size = 1)
@@ -262,7 +262,7 @@ bar.col = "lightblue", line.col = "red", arg.size = 1)
 df2014 = filter(arbeid_punkt2, Aar == c("2014"))
 ```
 
-```{r 2014}
+```{r2014}
 locq(416, 22190, 1521, 49518, industry.names = Bergverksdrift_utvinning_2014, plot.results = FALSE,
 LQ.method = "m", plot.title = "Localization quotients", 
 bar.col = "lightblue", line.col = "red", arg.size = 1)
@@ -272,7 +272,7 @@ bar.col = "lightblue", line.col = "red", arg.size = 1)
 df2019 = filter(arbeid_punkt2, Aar == c("2019"))
 ```
 
-```{r 2019}
+```{r2019}
 locq(685, 21429, 1752, 49295, industry.names = Bergverksdrift_utvinning_2020, plot.results = FALSE,
 LQ.method = "m", plot.title = "Localization quotients", 
 bar.col = "lightblue", line.col = "red", arg.size = 1)
@@ -711,26 +711,25 @@ Under *lokaliseringskvoienter* har vi sett på tre ulike sektorer både på Haug
 *Haugalandet*
 
 Resultatet til sektoren **industri** Haugalandet ble på for årene 2008, 2010 og 2020 ble 
-1.527396811, 1.434975844 og 1.601509868. Alle årene så sier resultatet at det er en lokalnæring  på Haugalandet. Haugesund, Karmøy og Tysvær er de tre største kommunene med flere industri bedrifter, de har for eksempel Aibel, Hydro og Equinor. Disse kan ses også på som basenæringer. 
+1.527396811, 1.434975844 og 1.601509868. Alle årene så sier resultatet at det er en basisnæring på Haugalandet. Haugesund, Karmøy og Tysvær er de tre største kommunene med flere industri bedrifter, de har for eksempel Aibel, Hydro og Equinor. 
 
 **Helse- og sosialtjenester** ble våre resultater for 2008, 2010 og 2020, slik 
-0.9962243996, 0.9816929097 og 1.026935838. For 2008 og 2010 kan en se ut i fra resultatene at det er basefaktor. Hvis en ser på realiteten vil en si er en lokalnæring, som resultatet i 2020 sier. Fordi det er sykehus i haugesund. 
+0.9962243996, 0.9816929097 og 1.026935838. Når det kommer til helse- og sosialtjenester så vil en si her at det er en lokalnæring, dette fordi dem tilbyr å hjelpe menneskene lokalt. 
 
 I **varehandel, reperasjon av motorvogner** ble resultatene for 2008, 2010 og 2020,
-0.9372344155, 0.9562311403 og 0.9144987383. Her vil en se at alle resultatene er nder 1 som tilsvarer at det er en basisnæring. 
+0.9372344155, 0.9562311403 og 0.9144987383. Varehandel, reparasjon av motorvogner vil være en lokalnæring, dette på grunn av at et verksted i nærheten tilbyr tjenester til de lokale.
+ 
 
 
-*Sunnhordaland*
+*Sunnhordland*
 
-For **industri** sektoren i Sunnhordland har vi brukt samme år, og samme aldersgruppe, der våre resultater ble 2.039077786, 2.05242696 og 0. 
-Her fikk vi 0 i 2020 fordi det var mengel på informasjon i år 2020. I de to andre resultatene er tallet mye høyere en 1, vil det si at industri sektoren på Sunnhordalan er en lokalnæring. Her vil det nok være mye mer av lokalt arbeid.
+For **industri** sektoren i Sunnhordland har vi brukt samme år, og samme aldersgruppe, der våre resultater ble 2.039077786, 2.05242696 og 0. Industrien i Sunnhordland vil vi påstå er en basisnæring, for når vi tar Westcon som et eksempel, så gir dem produkter og tjenester til andre folk/bedrifter i andre kommuner eller regioner. 
 
 
 **Helse- og sosialtjenester** ble våre resultater for 2008, 2010 og 2020, slik
-1.8936, 2.2833 og 0 (mangel på informasjon for 2020). Her ser en at i 2008 var det et lavere resultat enn i 2010, men begge årene gir et resultat på over 1 som sier at det er lokalnæring. 
+1.8936, 2.2833 og 0 (mangel på informasjon for 2020). Slik som det er for Haugalandet, så vil helse- og sosialtjenesten være en lokalnæring i Sunnhordland. Dette fordi sykehuser skal hjelpe folkene som er i nærheten, og det er derfor man har et sykehus i de fleste kommuner. 
 
-
-I **varehandel, reperasjon av motorvogner** ble resultatene for 2008, 2010 og 2020 var våre svar 1.104, 1.2475 og 0. Slik som de over er resultatet for 2020 en mangel på. Det er også lokalnæring slik som de andre to sektorene. 
+I **varehandel, reperasjon av motorvogner** ble resultatene for 2008, 2010 og 2020 var våre svar 1.104, 1.2475 og 0. Her tenker vi det samme slik som vi forklarte under Haugalandet, der dette vil bli en lokalnæring.  
 
 
 I den romlige Gini-koeffisienten har vi valgt å se på samme sektorene som vi brukte for å finne lokaliseringskovientene. Da årene 2008, 2010 og 2020. Aldersgruppen er 15-74 år og sektorene er industri, helse- og sosialtjenester og varehandel, reperasjon av motorvogner. Ved måling av Gini-koeffisienten måler vi hvor stor avstanden på "rik" og "fattig" i fylket, tallet skal ligge i mellom 0-1. 0 betyr at det er lik inntekt som formue for alle i landet, og på 1 er det de tlik inntekt og formue for en person. 
@@ -863,6 +862,773 @@ Veinettet forbedres i tillegg til at prisene på eiendom og bolig er rimeligere 
 
 Sveio er et eksempel på hvor pendlestrømmen har økt og bosatt og sysselsatt i kommunen har synket. Sveio er en kommune med store utviklingspotensialet innenfor eiendom og bolig samtidig som avstanden til Haugesund er kort.
 
+# 5. Økonomisk baseteori, og beregning av økonomiske basemultiplikatorer for ulike kommuner og region(er)
+
+I oppgave 2 beregnet vi ut lokaliseringskvotienten for noen forskjellige
+næringer både i Haugesund og Karmøy. For næringen bergverksdrift og
+utvinning i Haugesund så ser man at lokaliseringskvotienten har endret
+seg med tiden. For i 2008 var den 0.7530472, i 2014 var den 0.6103373 og
+i 2019 var den 0.8994094. Dette betyr at bergverksdrift og utvinning i
+Haugesund er i endring. I følge pensum så er det en basisnæring når
+lokaliseringskvotienten er mindre enn 1, og det vil være en lokalnæring
+når den er over 1. Men man kan ikke alltid gå etter den, men også se på
+endringen over tid og andre faktorer. I dette tilfelle stemmer den,
+siden bergverksdrift og utvinning i Haugesund er en basisnæring.
+
+Neste næring som er helse- og sosialtjenesten som også ligger i
+Haugesund. Lokaliseringskvotienten for denne næringen er i 2008 på
+1.117829, i 2014 på 1.090835 og i 2019 er den på 1.167473. Vi kan se på
+lokaliseringskvotienten at den har vært ganske stabil gjennom tidene.
+Siden det har vært ganske stabilt så kan vi definere denne næringen som
+en lokalnæring.
+
+Industrinæringen som ligger i Karmøy har lokaliseringskvotient i 2008 på
+1.401868, i 2014 på 1.113945 og i 2019 på 1.163935. Vi kan se at
+lokaliseringskvotienten over tid har ikke endret seg så mye over tiden,
+og når det ikke endrer seg så mye så vil en påstå at det er en
+lokalnæring, og kvotienten er over 1 så det kan stemme med en
+lokalnæring. Men tenker man med litt skjønn, så vil industrien på Karmøy
+være en basisnæring. For eksempel er Solstad en basisnæring og ikke en
+lokalnæring.
+
+Hoyts modell er en modell for byens økonomiske vekst, og formelen er
+følgende:
+
+$$ E_t = E_b + E_s $$
+
+$$ E_s = aE_t $$
+
+$$ 0 < a < 1 $$
+
+$$ E_b = \bar{E}_b $$
+
+Hvor \$ E_r\$ er total sysselsetting, \$ E_b\$ er sysselsetting i
+basisnæringer og \$ E_s\$ er sysselsetting i lokalnæringer.
+
+$$ E_t = E_b + E_s $$ d $$ E_s = a * E_t $$
+
+$$ E_b = \bar{E}_b $$
+
+$$ E_t = \bar{E}_b + aE_r $$
+
+$$ E_t(1-a) = \bar{E}_b $$
+
+$$ E_t = \frac{1}{1-a} * E_b$$
+
+og
+
+$$ \Delta E_r = \frac{1}{1-a} * \Delta \bar{E}_b $$
+
+$$ \frac{1}{1-a} = basemultiplikatoren $$
+
+## Hoyts modell for Haugesund
+
+For å finne tallene vi skal putte inn i formelen, må vi begynne med å
+lage datasett for de ulike aktuelle årstallene (2008, 2014, 2019) hvor
+lokaliseringskvotienten for de ulike næringene er beregnet.
+
+```{r}
+punkt5 <- select(Haug_arbeid_punkt2, Naering, Aar, Haugesund, tot_H)
+```
+
+```{r}
+Haug_arbeid_punkt2 <- read.csv("Haug_arbeid_punkt2.csv")
+```
+
+```{r}
+punkt5 <- Haug_arbeid_punkt2 %>% 
+  select(Naering, Aar, Haugesund, tot_H)
+```
+
+```{r}
+punkt5 <- left_join(punkt5, Sunn_arbeid_punkt2) 
+punkt5 <- select(punkt5, Naering, Aar, Haugesund, tot_H)
+punkt5 <- filter(punkt5, Aar %in% c("2008", "2014", "2019"))
+```
+
+```{r}
+punkt5_2008 <- filter(punkt5, Aar %in% c("2008"))
+punkt5_2008 <- mutate(punkt5_2008, Lq_2008_Haugesund = ((Haugesund/21322)/(tot_H/47530)))
+```
+
+```{r}
+punkt5_2008 <- mutate(punkt5_2008, Lokalnaering = case_when(Lq_2008_Haugesund > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2008_Haugesund < 1 ~ "1"))
+```
+
+```{r}
+punkt5_2014 <- filter(punkt5, Aar %in% c("2014"))
+punkt5_2014 <- mutate(punkt5_2014,   Lq_2014_Haugesund=((Haugesund/22190)/(tot_H/49518)),
+                      Lokalnaering = case_when(Lq_2014_Haugesund > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2014_Haugesund < 1 ~ "1"))
+```
+
+```{r}
+punkt5_2019 <- filter(punkt5, Aar %in% c("2019"))
+punkt5_2019 <- mutate(punkt5_2019, Lq_2019_Haugesund=((Haugesund/21429)/(tot_H/49295)),
+                                            Lokalnaering = case_when(Lq_2019_Haugesund > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2019_Haugesund < 1 ~ "1"))
+```
+
+Som nevnt er en næring en basisnæring når lokaliseringskvotienten er
+under 1, og en lokalnæring når den er over 1.
+
+### Haugesund 2008
+
+\$ E_t\$ total sysselsetting: 21322
+
+\$ E_b\$ sysselsetting i basisnæringer:
+
+```{r Basisnæringer_H2008}
+3945 + 863 + 405 + 286 + 995 + 1029 + 927 + 4812 + 675
+```
+
+\$ E_b\$ sysselsetting i lokalnæringer:
+
+```{r Lokalnæringer_H2008}
+21322-13937
+```
+
+### Haugesund 2014
+
+\$ E_t\$ total sysselsetting: 22190
+
+\$ E_b\$ sysselsetting i basisnæringer:
+
+```{r basisnæringer_H2014}
+70+416+2682+1294+1069+915+1733+75
+```
+
+\$ E_s\$ sysselsetting i lokalnæringer:
+
+```{r lokalnæringer_H2014}
+22190-8254
+```
+
+### Haugesund 2019
+
+\$ E_t\$ total sysselsetting: 21429
+
+\$ E_b\$ sysselsetting i basisnæringer:
+
+```{r basisnæringer_H2019}
+89+685+2171+1081+993+765+1716+100
+```
+
+\$ E_s\$ sysselsetting i lokalnæringer:
+
+```{r lokalnæringer_H2019}
+21429-7600
+```
+
+#### Basemultiplikator Haugesund 2008
+
+$$ E_t = E_b + E_s   ->  21322 = 7385 + 13937 $$
+
+$$ E_s = aE_t   -> 13937=a*21322   ->   13937/21322=a $$
+
+```{r}
+13937/21322
+```
+
+$$ a=0.6536441 $$
+
+$$ E_t(1-a) = \bar{E}_b -> 21322(1-0.6536441)=\bar{E}_b $$
+
+```{r}
+21322*(1-0.6536441)
+```
+
+$$ 7385=\bar{E}_b $$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6536441}=basemultiplikator $$
+
+```{r}
+1/(1-0.6536441)
+```
+
+$$ basemultiplikator = 2.887204 $$
+
+#### Basemultiplikator Haugesund 2014
+
+$$ E_t = E_b + E_s   ->  22190 = 8254 + 13936 $$
+
+$$ 13936 = aE_t   -> 13936=a*22190   ->   13936/22190=a $$
+
+```{r}
+13936/22190
+```
+
+$$ a=0.6280306 $$
+
+$$ E_t(1-a) = \bar{E}_b -> 22190(1-0.6280306)=\bar{E}_b $$
+
+```{r}
+22190*(1-0.6280306)
+```
+
+$$ 8254.001=\bar{E}_b $$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6280306}=basemultiplikator $$
+
+```{r}
+1/(1-0.6280306)
+```
+
+$$ basemultiplikator = 2.688393 $$
+
+#### Basemultiplikator Haugesund 2019
+
+$$ E_t = E_b + E_s  -> 21429 = 7600 + 13829 $$
+$$ 13829 = aE_t   -> 13829=a*21429   ->   13829/21429=a $$
+
+```{r}
+13829/21429
+```
+
+$$ a = 0.6453404 $$
+
+$$ E_t(1-a) = \bar{E}_b -> 21429(1-0.6453404)=\bar{E}_b $$
+
+```{r}
+21429*(1-0.6453404)
+```
+
+$$ 7600.001=\bar{E}_b $$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6453404}=basemultiplikator $$
+
+```{r}
+1/(1-0.6453404)
+```
+
+$$ basemultiplikator = 2.819605 $$ \# Nasjonalt
+
+## Hoyts modell for Karmøy
+
+```{r}
+punkt5K <- Haug_arbeid_punkt2 %>% 
+  select(Naering, Aar, Karmoey, tot_H)
+```
+
+```{r}
+punkt5K <- left_join(punkt5K, Sunn_arbeid_punkt2) 
+punkt5K <- select(punkt5K, Naering, Aar, Karmoey, tot_H)
+punkt5K <- filter(punkt5K, Aar %in% c("2008", "2014", "2019"))
+```
+
+```{r}
+punkt5K_2008 <- filter(punkt5K, Aar %in% c("2008"))
+punkt5K_2008 <- mutate(punkt5K_2008, Lq_2008_Karmoey = ((Karmoey/15194)/(tot_H/47530)))
+```
+
+```{r}
+punkt5K_2008 <- mutate(punkt5K_2008, Lokalnaering = case_when(Lq_2008_Karmoey > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2008_Karmoey < 1 ~ "1"))
+```
+
+```{r}
+punkt5K_2014 <- filter(punkt5K, Aar %in% c("2014"))
+punkt5K_2014 <- mutate(punkt5K_2014,   Lq_2014_Karmoey=((Karmoey/15457)/(tot_H/49518)),
+                      Lokalnaering = case_when(Lq_2014_Karmoey > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2014_Karmoey < 1 ~ "1"))
+```
+
+```{r}
+punkt5K_2019 <- filter(punkt5K, Aar %in% c("2019"))
+punkt5K_2019 <- mutate(punkt5K_2019, Lq_2019_Karmoey=((Karmoey/15978)/(tot_H/49295)),
+                                            Lokalnaering = case_when(Lq_2019_Karmoey > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2019_Karmoey < 1 ~ "1"))
+```
+
+### Karmøy 2008
+
+\$ E_t\$ total sysselsetting: 15194 \$ E_b\$ sysselsetting i
+basisnæringer:
+
+```{r Basisnæringer_K2008}
+472+55+120+2026+267+136+117+420+514+394+2771+371
+```
+
+\$ E_s\$ sysselsetting i lokalnæringer:
+
+```{r lokalnæringer_K2008}
+15194-7663
+```
+
+### Karmøy 2014
+
+\$ E_t\$ total sysselsetting: 15457 \$ E_b\$ sysselsetting i
+basisnæringer:
+
+```{r basisnæringer_2014_k}
+15457-10517
+```
+
+\$ E_s\$ sysselsetting i lokalnæringer:
+
+```{r lokalnæringer_2014_k}
+2353+1907+1495+1244+3162+356
+```
+
+### Karmøy 2019
+
+\$ E_t\$ total sysselsetting: 15978 \$ E_b\$ sysselsetting i
+basisnæringer:
+
+```{r basisnæringer_2019k}
+15978-8105
+```
+
+\$ E_s\$ sysselsetting i lokalnæringer:
+
+```{r lokalnæringer_2019k}
+2476+1891+1430+861+1318+129
+```
+
+#### Basemultiplikator Karmøy 2008
+
+$$ E_t = E_b + E_s  -> 15194 = 7663 + 7531 $$
+$$ 7531 = aE_t   -> 7531=a*15194   ->   7531/15194=a $$
+
+```{r}
+7531/15194
+```
+
+$$ a = 0.4956562 $$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.4956562}=basemultiplikator $$
+
+```{r}
+1/(1-0.4956562)
+```
+
+$$ basemultiplikator = 1.982774 $$
+
+#### Basemultiplikator Karmøy 2014
+
+$$ E_t = E_b + E_s  -> 15457 = 4940 + 10517 $$
+$$ 10517 = aE_t   -> 10517=a*15457   ->   10517/15457=a $$
+
+```{r}
+10517/15457
+```
+
+$$ a = 0.6804037 $$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6804037}=basemultiplikator $$
+
+```{r}
+1/(1-0.6804037)
+```
+
+$$ basemultiplikator = 3.128947 $$
+
+#### Basemultiplikator Karmøy 2019
+
+$$ E_t = E_b + E_s  -> 15978 = 7873 + 8105 $$
+$$ 8105 = aE_t   -> 8105=a*15978   ->   8105/15978=a $$
+
+```{r}
+8105/15978
+```
+
+$$ a = 0.50726 $$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.50726}=basemultiplikator $$
+
+```{r}
+1/(1-0.50726)
+```
+
+$$ basemultiplikator = 2.029468 $$
+
+#### Basemultiplikator målt mot nasjonal sysselsetting
+
+```{r}
+punkt5_1 <- read_csv("Data_pkt1/Nas_arbeid_norge_sys.csv")
+```
+
+```{r}
+punkt5_1 <- filter (punkt5_1, alder %in% c("15-74 år"))
+```
+
+```{r}
+punkt5_1 <- rename(punkt5_1,
+                   Naering = NACE2007,
+                   total_Norge = sysselsatte)
+punkt5_1 <- select(punkt5_1, Aar, Naering, total_Norge)
+punkt5_1 <- filter(punkt5_1, Aar %in% c("2008", "2014", "2019"))
+```
+
+```{r}
+punkt5_1_2008 <- filter (punkt5_1, Aar %in% c("2008"))
+punkt5_1_2014 <- filter (punkt5_1, Aar %in% c("2014"))
+punkt5_1_2019 <- filter (punkt5_1, Aar %in% c("2019"))
+```
+
+## Haugesund mot nasjonal sysselsetting
+
+```{r}
+punkt5H_1_2008 <- left_join(punkt5_1_2008, punkt5_2008)
+punkt5H_1_2008 <- select(punkt5H_1_2008, Aar, Naering, total_Norge, Haugesund)
+punkt5H_1_2008 <- mutate(punkt5H_1_2008, Lq_2008_H_N=((Haugesund/21322)/(total_Norge/2525000)),
+                      Lokalnaering = case_when(Lq_2008_H_N > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2008_H_N < 1 ~ "1"))
+```
+
+```{r}
+punkt5H_1_2014 <- left_join(punkt5_1_2014, punkt5_2014)
+punkt5H_1_2014 <- select(punkt5H_1_2014, Aar, Naering, total_Norge, Haugesund)
+punkt5H_1_2014 <- mutate(punkt5H_1_2014, Lq_2014_H_N=((Haugesund/22190)/(total_Norge/2650000)),
+                      Lokalnaering = case_when(Lq_2014_H_N > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2014_H_N < 1 ~ "1"))
+```
+
+```{r}
+punkt5H_1_2019 <- left_join(punkt5_1_2019, punkt5_2019)
+punkt5H_1_2019 <- select(punkt5H_1_2019, Aar, Naering, total_Norge, Haugesund)
+punkt5H_1_2019 <- mutate(punkt5H_1_2019, Lq_2019_H_N=((Haugesund/21429)/(total_Norge/2710435)),
+                      Lokalnaering = case_when(Lq_2019_H_N > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2019_H_N < 1 ~ "1"))
+```
+
+## Karmøy mot nasjonal sysselsetting
+
+```{r 2008}
+punkt5K_1_2008 <- left_join(punkt5_1_2008, punkt5K_2008)
+punkt5K_1_2008 <- select(punkt5K_1_2008, Aar, Naering, total_Norge, Karmoey)
+punkt5K_1_2008 <- mutate(punkt5K_1_2008, Lq_2008_K_N=((Karmoey/15194)/(total_Norge/2525000)),
+                      Lokalnaering = case_when(Lq_2008_K_N > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2008_K_N < 1 ~ "1"))
+```
+
+```{r 2014}
+punkt5K_1_2014 <- left_join(punkt5_1_2014, punkt5K_2014)
+punkt5K_1_2014 <- select(punkt5K_1_2014, Aar, Naering, total_Norge, Karmoey)
+punkt5K_1_2014 <- mutate(punkt5K_1_2014, Lq_2014_K_N=((Karmoey/15457)/(total_Norge/2650000)),
+                      Lokalnaering = case_when(Lq_2014_K_N > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2014_K_N < 1 ~ "1"))
+```
+
+```{r 2019 }
+punkt5K_1_2019 <- left_join(punkt5_1_2019, punkt5K_2019)
+punkt5K_1_2019 <- select(punkt5K_1_2019, Aar, Naering, total_Norge, Karmoey)
+punkt5K_1_2019 <- mutate(punkt5K_1_2019, Lq_2019_K_N=((Karmoey/15978)/(total_Norge/2710435)),
+                      Lokalnaering = case_when(Lq_2019_K_N > 1 ~ "1"),
+                          Basisnaering = case_when(Lq_2019_K_N < 1 ~ "1"))
+```
+
+### Basemultiplikator Haugesund mot nasjonalt 2008:
+
+\$ E_t\$ total sysselsetting: 21322
+
+\$ E_b\$ sysselsetting i basisnæringer:
+
+```{r basisnæringer 2008h}
+74 + 1263 + 405 + 286 + 995 + 1029 + 927 + 1422 + 675 + 74
+```
+
+\$ E_s\$ sysselsetting i lokalnæringer:
+
+```{r lokalnæringer_2008h}
+21322-7150
+```
+
+$$  E_t = E_b + E_s <- 21322 = 7150 - 14172$$
+
+```{r}
+14172/21322
+```
+
+$$ E_s = aE_t   -> 14172=a*21322   ->  14172/21322=a $$ $$a=0.6646656$$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6646656}=basemultiplikator $$
+
+```{r}
+1/(1-0.6646656)
+```
+
+$$ basemultiplikator = 2.982098 $$
+
+### Basemultiplikator Haugesund mot nasjonalt 2014:
+
+\$ E_t\$ total sysselsetting: 22190
+
+\$ E_b\$ sysselsetting i basisnæringer:
+
+```{r basisnæringer 2014h}
+70 + 416 + 1294 + 1069 + 477 + 219 + 915 + 1152 + 1733 + 646 + 75 
+```
+
+\$ E_s\$ sysselsetting i lokalnæringer:
+
+```{r lokalnæringer_2014h}
+22190-8066
+```
+
+$$  E_t = E_b + E_s <- 22190 = 8066- 14124$$
+
+```{r}
+14124/22190
+```
+
+$$ E_s = aE_t   -> 14124=a*22190   ->   14124/22190=a $$ $$a=0.6365029$$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6365029}=basemultiplikator $$
+
+```{r}
+1/(1-0.6365029)
+```
+
+$$ basemultiplikator = 2.751054$$ 
+
+### Basemultiplikator Haugesund mot nasjonalt 2019:
+
+\$ E_t\$ total sysselsetting: 21429
+
+\$ E_b\$ sysselsetting i basisnæringer:
+
+```{r basisnæringer 2019h}
+89 + 1081 + 993 + 577 + 172 + 1173 + 765 + 1276 + 1716 +703 + 100 
+```
+
+\$ E_s\$ sysselsetting i lokalnæringer:
+
+```{r lokalnæringer_2019h}
+21429-8645
+```
+
+$$  E_t = E_b + E_s <- 21429 = 8645 - 12784 $$
+
+```{r}
+12784/21429
+```
+
+$$ E_s = aE_t   -> 12784=a*21429   ->   12784/21429=a $$ $$a=0.5965747$$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.5965747}=basemultiplikator $$
+
+```{r}
+1/(1-0.5965747)
+```
+
+$$ basemultiplikator = 2.478774$$ 
+
+## Basemultiplikator Karmøy mot nasjonalt 2008: 
+\$ E_t\$ total sysselsetting: 15194
+
+\$ E_b\$ sysselsetting i basisnæringer:
+
+```{r basisnæringer_2008k}
+55 + 120 + 2026 + 267 + 136 + 117 + 420 + 514 + 394 + 2771 + 371
+```
+
+\$ E_s\$ sysselsetting i lokalnæringer:
+
+```{r lokalnæringer_2008k}
+15194-7191
+```
+
+$$  E_t = E_b + E_s <- 15194 = 7191 - 8003$$
+
+```{r}
+8003/15194
+```
+
+$$ E_s = aE_t   -> 8003=a*15194  ->   8003/15194=a $$ $$a=0.5267211$$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.5267211}=basemultiplikator $$
+
+```{r}
+1/(1-0.5267211)
+```
+
+$$ basemultiplikator = 2.112919$$ 
+
+### Basemultiplikator Karmøy mot nasjonalt 2014:
+\$ E_t\$ total sysselsetting:15457
+ 
+\$ E_b\$ sysselsetting i basisnæringer:
+
+```{r basisnæringer_2014k}
+337 + 246 + 112 + 2005 + 343 + 135 + 81 + 495 + 616 + 474 + 356
+```
+
+\$ E_s\$ sysselsetting i lokalnæringer:
+
+```{r lokalnæringer_2014k}
+15457-5200
+```
+
+$$  E_t = E_b + E_s <- 15457 = 5200 - 10257$$
+
+```{r}
+ 10257/15457
+```
+
+$$ E_s = aE_t   -> 10257=a*15457  ->   10257/15457=a $$ $$a=0.6635828$$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.6635828}=basemultiplikator $$
+
+```{r}
+1/(1-0.6635828)
+```
+
+$$ basemultiplikator = 2.9725$$
+
+### Basemultiplikator Karmøy mot najsonalt 2019:
+
+\$ E_t\$ total sysselsetting: 15978
+
+\$ E_b\$ sysselsetting i basisnæringer:
+
+```{r Basisnæringer_2019k}
+329 + 307 + 123 + 1939 + 280 + 186 + 64 + 480 + 476 + 1318 + 3280 + 409
+```
+
+\$ E_s\$ sysselsetting i lokalnæringer:
+
+```{r Lokalnæringer_2019k}
+15978-9191
+```
+
+$$  E_t = E_b + E_s <- 15978 = 9191 - 6787$$
+
+```{r}
+ 6787/15978
+```
+
+$$ E_s = aE_t   ->  6787=a*15978  ->    6787/15978=a $$ $$a=0.4247716$$
+
+$$ \frac{1}{1-a} = basemultiplikatoren   -> \frac{1}{1-0.4247716}=basemultiplikator $$
+
+```{r}
+1/(1-0.4247716)
+```
+
+$$ basemultiplikator = 1.73844$$
+
+## Resultat - basemultiplikator
+
+Basemultiplikatoren viser forholdet mellom total sysselsetting og
+sysselsettingen i basisnæringene og lokalnæringene. Når multiplikatoren
+er høy betyr det at en høy andel er sysselsatt i lokalnæringer, og det
+finnes klynger og enkel tilgang på innsatsvarer.
+
+Etter vi har funnet basemulitplikatoren for Haugesund og Karmøy, målt i
+ulike år og opp mot regional sysselsetting (Haugalandet), ser vi at
+basemultiplklatorne er: - Haugesund 2008: 2.887204 - Haugesund 2014:
+2.688393 - Haugesund 2019: 2.819605 - Karmøy 2008: 1.982774 - Karmøy
+2014: 3.128947 - Karmøy 2019: 2.029468
+
+Som vi kan se her har basemultiplikatoren i Haugesund holdt seg nok så
+stabil, mens den i større grad har vært i endring på Karmøy. På Karmøy
+ser vi en tydelig "topp" i 2014 hvor basemultiplikatoren var nesten
+dobbelt så høy som i 2008. Dette forteller oss at i 2014 hadde Karmøy
+betydelig flere sysselsatte i lokalnæringer enn i de andre årene, 2008
+og 2019.
+
+Når vi ser på resultatene fra sysselsetting i Haugesund og på Karmøy
+målt opp mot nasjonal sysselsetting, ser basemultiplikatorne slik ut: -
+Haugesund 2008: 2.982098 - Haugesund 2014: 2.751054 - Haugesund 2019:
+2.478774 - Karmøy 2008: 2.112919 - Karmøy 2014: 2.9725 - Karmøy 2019:
+1.73844
+
+Her kan en se at Haugesund er nok så stabilt nasjonalt, slik som
+regionalt. Det vil si at selv målt opp mot nasjonal sysselsetting er det
+omtrent like mange som er sysselsatte i lokalnæringene i alle årene. En
+kan se at basemultiplikatoren for 2014 målt opp mot nasjonal
+sysselsetting er noe smått lavere, men dette er ikke mye. Det samme
+gjelder for Karmøy i 2019. Det betyr at målt opp mot den nasjonale
+sysselsettingen, er det litt færre som er sysselsatt i det som blir
+ansett som en lokalnæringen utfra lokasjonskvotienten målt mot nasjonal
+sysselsetting.
+
+
+
+
+
+# 7. Shift Share Analyse
+```{r}
+Tab_shift_share <- read_excel("Data/Tab_shift_share.xlsx", 
+    col_types = c("text", "text", "numeric", 
+        "numeric", "numeric"))
+View(Tab_shift_share)
+```
+
+
+```{r}
+Tab_shift_share %>%
+  select(År, Region, MIX) %>%
+  filter(År %in%c( "2000-2005", "2005-2010", "2010-2015", "2015-2020"))%>%
+  ggplot(mapping = aes(x = År, y = MIX, colour = Region)) +
+
+  geom_line(aes(group = Region), lwd = 0.6) +
+  theme(legend.position = 'bottom')+
+  xlab("År") +
+  ylab("Mix") +
+  labs(colour = "Region")
+```
+
+Mix-effekten viser endringen i en spesifikk bransje eller region utover gjennomsnittet for nasjonen. Det vil si hvor mye regionen presterte bedre eller dårligere enn økonomien som helhet på landsbasis. Har en region negativ MIX har de en dårlig næringssammensetning for hvordan nasjon gjør det nå. 
+
+På x-aksen viser 2000-2005 tallene for 2005 osv...
+
+For perioden 2005-2010 så ser vi en markant økning i midtre del av Haugalandet, mens resten av regionen presterer dårligere enn økonomien til nasjonen. Gass-annlegget på Kårstø i Tysvær kommune har nok mye av æren for denne økningen. 
+
+Perioden 2010-2015 så stiger indre og ytre del av Haugalandet mens midtre synker. Dette skyldes nok Oljekrisen i 2014. 
+
+2015-2020 perioden har alle delene av regionen samlet seg og ligger rett under gjennomsnittet for nasjonen. 
+
+
+ 
+
+
+```{r}
+Tab_shift_share %>%
+  select(År, Region, DIF) %>%
+  filter(År %in%c( "2000-2005", "2005-2010", "2010-2015", "2015-2020"))%>%
+  ggplot(mapping = aes(x = År, y = DIF, colour = Region)) +
+  geom_line(aes(group = Region), lwd = 0.6) +
+  theme(legend.position = 'bottom')+
+  xlab("År") +
+  ylab("DIF") +
+  labs(colour = "Region")
+```
+
+
+
+Dif forklarer hvordan deler av regionen endret seg i forhold til Norge og den nasjonale sysselsettingen. 
+Den viser andelen av den lokale veksten som kan tilskrives regionens konkurransefortrinn. 
+Dette representerer hvor mye regionen presterte over eller under sammenlignet med landsgjennomsnittet og bransjegjennomsnittet.
+
+I 2005 ser vi at at alle delene av regionen har høyere vekst enn nasjonalt sett. 
+
+For året 2010 har dif-effekten vært størst hos den indre delen av Haugalandet. Vi har lagt inn Vindafjord kommune i indre delen av regionen (kanskje den skulle vært midtre). Vindafjord kommune inneholder Ølen/Ølensvåg, som har store industribedrifter som Westcon og Ølen Betong.
+
+I 2015 synker hele Haugalandet. Dette er på grunn av Olje-krisen for 2014. 
+
+For 2020 tallene ser vi at ytre delen av Haugalandet har stabilisert seg etter olje-krisen i 2014, mens indre og midtre delen av regionen fortsatt faller.
+
+```{r}
+Tab_shift_share %>%
+  select(År, Region, Sum) %>%
+  filter(År %in%c( "2000-2005", "2005-2010", "2010-2015", "2015-2020"))%>%
+  ggplot(mapping = aes(x = År, y = Sum, colour = Region)) +
+  geom_line(aes(group = Region), lwd = 0.6) +
+  theme(legend.position = 'bottom')+
+  xlab("År") +
+  ylab("Sum") +
+  labs(colour = "Region")
+```
+
+Vi ser til slutt at ytre delen av Haugalandet følger Haugalandet tett. Grunnnen til dette er at ytredelen består av Karmøy og Haugesund kommune (og Utsira), og disse to er de største kommunene i Haugalandet.
+Når Dif faller er det tegn til at det ikke er produktiviteten som gjør det og vi får en mer "jobs follow people" tendens på Hauglandet enn at "people follow jobs".
+
+# Kritikk
+
+Vi har her tatt med alle næringene for deler av regionen. Det ville nok gitt bedre resultater å sammenligne ulike sektorer hver for seg og sett dette opp mot mix og dif effektene. For eksempel så er Helse og Undervisning  en del av Shift Share analysen som eg tungt offentlig forvaltet. 
 
 
 
