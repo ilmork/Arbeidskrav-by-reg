@@ -3,9 +3,12 @@ title: "R Notebook"
 output: html_notebook
 ---
 
+## Et positivt eksogent sjokk i basis-sysselsetting
+
 ```{r}
 library(dplyr)
 library(data.table)
+library(tidyverse)
 ```
 
 ```{r}
@@ -22,13 +25,25 @@ Haug_arbeid_punkt4 <- cbind(Haug_arbeid_punkt2, Etne = Sunn_arbeid_punkt2$Etne)
 ```
 
 ```{r}
-Haug_arbeid_punkt4 = mutate(Haug_arbeid_punkt4, tot_H = Haugesund+Sauda+Bokn+Tysvaer+Karmoey+Utsira+Vindafjord+Etne)
-makeNAstatus = FALSE
+Haug_arbeid_punkt_ny <- Haug_arbeid_punkt4 %>% 
+  mutate(Haugesund1=replace_na(Haugesund, as.numeric(0)),
+         Sauda1=replace_na(Sauda, as.numeric(0)),
+         Bokn1=replace_na(Bokn, as.numeric(0)),
+         Tysvaer1=replace_na(Tysvaer, as.numeric(0)),
+         Karmoey1=replace_na(Karmoey, as.numeric(0)),
+         Utsira1=replace_na(Utsira, as.numeric(0)),
+         Vindafjord1=replace_na(Vindafjord, as.numeric(0)),
+         Etne1=replace_na(Etne, as.numeric(0)))
 ```
 
+```{r, NA.rm=TRUE}
+Haug_arbeid_punkt_ny = mutate(Haug_arbeid_punkt_ny, tot_H1 = Haugesund1+Sauda1+Bokn1+Tysvaer1+Karmoey1+Utsira1+Vindafjord1+Etne1)
+```
+
+
 ```{r}
-punkt6<- Haug_arbeid_punkt4%>% 
-  select(Naering, Aar, Haugesund, Vindafjord, Etne,tot_H)
+punkt6<- Haug_arbeid_punkt_ny%>% 
+  select(Naering, Aar, Haugesund1, Vindafjord1, Etne1,tot_H1)
 ```
 
 ```{r}
@@ -36,14 +51,14 @@ punkt6 <- filter(punkt6, Aar %in% "2020")
 ```
 
 
-## Haugesund 2020
+## Haugesund kommune, 2020
 
 ```{r}
-Haugesund_2020 <- select(punkt6, Naering, Aar, Haugesund, tot_H)
+Haugesund_2020 <- select(punkt6, Naering, Aar, Haugesund1, tot_H1)
 ```
 
 ```{r}
-Haugesund_2020<- mutate(Haugesund_2020, Lq_Haugesund_2020 = ((Haugesund/20852)/(tot_H/50584)))
+Haugesund_2020<- mutate(Haugesund_2020, Lq_Haugesund_2020 = ((Haugesund1/20852)/(tot_H1/50584)))
 ```
 
 ```{r}
@@ -52,59 +67,56 @@ Haugesund_2020 <- mutate(Haugesund_2020 , Lokalnaering = case_when(Lq_Haugesund_
 ```
 
 
-## FÅ SVAR FRA ARNSTEIN FØRST
-
-$E_t$ total sysselsetting: 50584
-
-$E_b$ sysselsetting i basisnæringer:
+* $E_t$ total sysselsetting: 50584
+* $E_s$ sysselsetting i basisnæringer:
 
 ```{r Basisnæringer_Haug_2020}
-3945 + 863 + 405 + 286 + 995 + 1029 + 927 + 4812 + 675
+694+425+2879+751+604+166+1098+1157+1720+5713+713
 ```
 
 $E_b$ sysselsetting i lokalnæringer:
 
 ```{r Lokalnæringer_Haug_2020}
-50584-13937
+50584-15920
 ```
 
-## Basemultiplikator Haugesund 2020
+## Basemultiplikator Haugesund kommune, 2020
 
-$$E_t = E_b + E_s   \rightarrow  21322 = 7385 + 13937$$
+$$E_t = E_b + E_s   \rightarrow  50584 = 34664 + 15920$$
 
-$$E_s = aE_t   \rightarrow 13937=a\cdot21322   \rightarrow   13937/21322=a$$
+$$E_s = aE_t   \rightarrow 15920=a\cdot50584   \rightarrow   15920/50584=a$$
 
 ```{r}
-13937/21322
+15920/50584
 ```
 
-$$a=0.6536441$$
+$$a=0.314724$$
 
-$$E_t(1-a) = \bar{E}_b \rightarrow 21322(1-0.6536441)=\bar{E}_b$$
+$$E_t(1-a) = \bar{E}_b \rightarrow 50584(1-0.314724)=\bar{E}_b$$
 
 ```{r}
-21322*(1-0.6536441)
+50584*(1-0.314724)
 ```
 
-$$7385=\bar{E}_b$$
+$$\bar{E}_b=34664$$
 
-$$\frac{1}{1-a} = basemultiplikatoren   \rightarrow \frac{1}{1-0.6536441}=basemultiplikator$$
+$$\frac{1}{1-a} = basemultiplikatoren   \rightarrow \frac{1}{1-0.314724}=basemultiplikator$$
 
 ```{r}
-1/(1-0.6536441)
+1/(1-0.314724)
 ```
 
-$$basemultiplikator = 2.887204$$
+$$basemultiplikator = 1.459266$$
 
 
-## Vindafjord 2020
+## Vindafjord kommune, 2020
 
 ```{r}
-Vindafjord_2020 <- select(punkt6, Naering, Aar, Vindafjord, tot_H)
+Vindafjord_2020 <- select(punkt6, Naering, Aar, Vindafjord1, tot_H1)
 ```
 
 ```{r}
-Vindafjord_2020 <- mutate(Vindafjord_2020, Lq_Vindafjord_2020 = ((Vindafjord/4898)/(tot_H/50584)))
+Vindafjord_2020 <- mutate(Vindafjord_2020, Lq_Vindafjord_2020 = ((Vindafjord1/4898)/(tot_H1/50584)))
 ```
 
 ```{r}
@@ -113,56 +125,56 @@ Vindafjord_2020 <- mutate(Vindafjord_2020 , Lokalnaering = case_when(Lq_Vindafjo
 ```
 
 
-$E_t$ total sysselsetting: 50584
-
-$E_b$ sysselsetting i basisnæringer:
+* $E_t$ total sysselsetting: 50584
+* $E_s$ sysselsetting i basisnæringer:
 
 ```{r Basisnæringer_Vind_2020}
-3945 + 863 + 405 + 286 + 995 + 1029 + 927 + 4812 + 675
+578+887+101+638+149+216+31
 ```
 
 $E_b$ sysselsetting i lokalnæringer:
 
 ```{r Lokalnæringer_Vind_2020}
-50584-13937
+50584-2600
 ```
 
-## Basemultiplikator Vindafjord 2020
+## Basemultiplikator Vindafjord kommune, 2020
 
-$$E_t = E_b + E_s   \rightarrow  21322 = 7385 + 13937$$
+$$E_t = E_b + E_s   \rightarrow  50584 = 47984 + 2600$$
 
-$$E_s = aE_t   \rightarrow 13937=a\cdot21322   \rightarrow   13937/21322=a$$
+$$E_s = aE_t   \rightarrow 2600=a\cdot50584   \rightarrow   2600/50584=a$$
 
 ```{r}
-13937/21322
+2600/50584
 ```
 
-$$a=0.6536441$$
+$$a=0.05139965$$
 
-$$E_t(1-a) = \bar{E}_b \rightarrow 21322(1-0.6536441)=\bar{E}_b$$
+$$E_t(1-a) = \bar{E}_b \rightarrow 50584(1-0.05139965)=\bar{E}_b$$
 
 ```{r}
-21322*(1-0.6536441)
+50584*(1-0.05139965)
 ```
 
-$$7385=\bar{E}_b$$
+$$\bar{E}_b=47984$$
 
-$$\frac{1}{1-a} = basemultiplikatoren \rightarrow \frac{1}{1-0.6536441}=basemultiplikator$$
+$$\frac{1}{1-a} = basemultiplikatoren \rightarrow \frac{1}{1-0.05139965}=basemultiplikator$$
 
 ```{r}
-1/(1-0.6536441)
+1/(1-0.05139965)
 ```
 
-$$basemultiplikator = 2.887204$$
+$$basemultiplikator = 1.054185$$
 
-## Etne kommune 2020
+
+## Etne kommune, 2020
 
 ```{r}
-Etne_2020 <- select(punkt6, Naering, Aar, Etne, tot_H)
+Etne_2020 <- select(punkt6, Naering, Aar, Etne1, tot_H1)
 ```
 
 ```{r}
-Etne_2020<- mutate(Etne_2020, Lq_Etne_2020 = ((Etne/1613)/(tot_H/50584)))
+Etne_2020<- mutate(Etne_2020, Lq_Etne_2020 = ((Etne1/1613)/(tot_H1/50584)))
 ```
 
 ```{r}
@@ -171,48 +183,104 @@ Etne_2020 <- mutate(Etne_2020 , Lokalnaering = case_when(Lq_Etne_2020 > 1 ~ "1")
 ```
 
 
-$E_t$ total sysselsetting: 50584
-
-$E_b$ sysselsetting i basisnæringer:
+* $E_t$ total sysselsetting: 50584
+* $E_s$ sysselsetting i basisnæringer:
 
 ```{r Basisnæringer_Etne_2020}
-3945 + 863 + 405 + 286 + 995 + 1029 + 927 + 4812 + 675
+172+242+51+68
 ```
 
 $E_b$ sysselsetting i lokalnæringer:
 
 ```{r Lokalnæringer_Etne_2020}
-50584-13937
+50584-533
 ```
 
 ## Basemultiplikator Etne kommune 2020
 
-$$E_t = E_b + E_s   \rightarrow  21322 = 7385 + 13937$$
+$$E_t = E_b + E_s   \rightarrow  50584 = 50051 + 533$$
 
-$$E_s = aE_t   \rightarrow 13937=a\cdot21322   \rightarrow   13937/21322=a$$
-
-```{r}
-13937/21322
-```
-
-$$a=0.6536441$$
-
-$$E_t(1-a) = \bar{E}_b \rightarrow 21322(1-0.6536441)=\bar{E}_b$$
+$$E_s = aE_t   \rightarrow 533=a\cdot50584   \rightarrow   533/50584=a$$
 
 ```{r}
-21322*(1-0.6536441)
+533/50584
 ```
 
-$$7385=\bar{E}_b$$
+$$a=0.01053693$$
 
-$$\frac{1}{1-a} = basemultiplikatoren   \rightarrow \frac{1}{1-0.6536441}=basemultiplikator$$
+$$E_t(1-a) = \bar{E}_b \rightarrow 21322(1-0.01053693)=\bar{E}_b$$
 
 ```{r}
-1/(1-0.6536441)
+50584*(1-0.01053693)
 ```
 
-$$basemultiplikator = 2.887204$$
+$$\bar{E}_b=50051$$
+
+$$\frac{1}{1-a} = basemultiplikatoren   \rightarrow \frac{1}{1-0.01053693}=basemultiplikator$$
+
+```{r}
+1/(1-0.01053693)
+```
+
+$$basemultiplikator = 1.010649$$
+
+
+## Et positivt eksogent sjokk i basis-sysselsetting; Haugesund, Ølensvåg og Skånevik
+
+Haugesund: 
+
+$$basemultiplikator \cdot 500 = 1.459266\cdot 500$$
+```{r}
+1.459266*500
+```
+
+Ølensvåg:
+
+$$basemultiplikator\cdot 500 = 1.054185\cdot 500$$
+
+```{r}
+1.054185*500
+```
+
+$$basemultiplikator\cdot 500 = 1.010649\cdot 500$$
+
+```{r}
+1.010649*500
+```
+
+## Forklare
+Haugesund: 729.633
+Ølensvåg:527.0925
+Skånevik:505.3245
+
+## Sammenligne med pendlerinnstrømmingen
+
+## Konklusjon
 
 
 
 
+
+
+
+
+
+
+
+
+
+```{r}
+Haug_arbeid_punkt_ny <- Haug_arbeid_punkt4 %>% 
+  mutate(Haugesund1=replace_na(Haugesund, as.numeric(0)),
+         Sauda1=replace_na(Sauda, as.numeric(0)),
+         Bokn1=replace_na(Bokn, as.numeric(0)),
+         Tysvaer1=replace_na(Tysvaer, as.numeric(0)),
+         Karmoey1=replace_na(Karmoey, as.numeric(0)),
+         Utsira1=replace_na(Utsira, as.numeric(0)),
+         Vindafjord1=replace_na(Vindafjord, as.numeric(0)),
+         Etne1=replace_na(Etne, as.numeric(0)))
+```
+
+```{r, NA.rm=TRUE}
+Haug_arbeid_punkt_ny = mutate(Haug_arbeid_punkt_ny, tot_H = Haugesund1+Sauda1+Bokn1+Tysvaer1+Karmoey1+Utsira1+Vindafjord1+Etne 1)
+```

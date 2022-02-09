@@ -215,122 +215,364 @@ pre code {
 
 
 <!-- rnb-text-begin -->
+<div id="et-positivt-eksogent-sjokk-i-basis-sysselsetting" class="section level2">
+<h2>Et positivt eksogent sjokk i basis-sysselsetting</h2>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcbmxpYnJhcnkoZGF0YS50YWJsZSlcbmxpYnJhcnkodGlkeXZlcnNlKVxuYGBgIn0= -->
+<pre class="r"><code>library(dplyr)
+library(data.table)
+library(tidyverse)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSGF1Z19hcmJlaWRfcHVua3QyIDwtIHJlYWQuY3N2KFwiSGF1Z19hcmJlaWRfcHVua3QyLmNzdlwiKVxuYGBgIn0= -->
+<pre class="r"><code>Haug_arbeid_punkt2 &lt;- read.csv(&quot;Haug_arbeid_punkt2.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3Vubl9hcmJlaWRfcHVua3QyIDwtIHJlYWQuY3N2KFwic3Vubl9hcmJlaWRfcHVua3QyLmNzdlwiKVxuYGBgIn0= -->
+<pre class="r"><code>Sunn_arbeid_punkt2 &lt;- read.csv(&quot;sunn_arbeid_punkt2.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSGF1Z19hcmJlaWRfcHVua3Q0IDwtIGNiaW5kKEhhdWdfYXJiZWlkX3B1bmt0MiwgRXRuZSA9IFN1bm5fYXJiZWlkX3B1bmt0MiRFdG5lKVxuICAgICAgICAgICAgICAgICAgICAgIFxuYGBgIn0= -->
+<pre class="r"><code>Haug_arbeid_punkt4 &lt;- cbind(Haug_arbeid_punkt2, Etne = Sunn_arbeid_punkt2$Etne)
+                      </code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSGF1Z19hcmJlaWRfcHVua3RfbnkgPC0gSGF1Z19hcmJlaWRfcHVua3Q0ICU+JSBcbiAgbXV0YXRlKEhhdWdlc3VuZDE9cmVwbGFjZV9uYShIYXVnZXN1bmQsIGFzLm51bWVyaWMoMCkpLFxuICAgICAgICAgU2F1ZGExPXJlcGxhY2VfbmEoU2F1ZGEsIGFzLm51bWVyaWMoMCkpLFxuICAgICAgICAgQm9rbjE9cmVwbGFjZV9uYShCb2tuLCBhcy5udW1lcmljKDApKSxcbiAgICAgICAgIFR5c3ZhZXIxPXJlcGxhY2VfbmEoVHlzdmFlciwgYXMubnVtZXJpYygwKSksXG4gICAgICAgICBLYXJtb2V5MT1yZXBsYWNlX25hKEthcm1vZXksIGFzLm51bWVyaWMoMCkpLFxuICAgICAgICAgVXRzaXJhMT1yZXBsYWNlX25hKFV0c2lyYSwgYXMubnVtZXJpYygwKSksXG4gICAgICAgICBWaW5kYWZqb3JkMT1yZXBsYWNlX25hKFZpbmRhZmpvcmQsIGFzLm51bWVyaWMoMCkpLFxuICAgICAgICAgRXRuZTE9cmVwbGFjZV9uYShFdG5lLCBhcy5udW1lcmljKDApKSlcbmBgYCJ9 -->
+<pre class="r"><code>Haug_arbeid_punkt_ny &lt;- Haug_arbeid_punkt4 %&gt;% 
+  mutate(Haugesund1=replace_na(Haugesund, as.numeric(0)),
+         Sauda1=replace_na(Sauda, as.numeric(0)),
+         Bokn1=replace_na(Bokn, as.numeric(0)),
+         Tysvaer1=replace_na(Tysvaer, as.numeric(0)),
+         Karmoey1=replace_na(Karmoey, as.numeric(0)),
+         Utsira1=replace_na(Utsira, as.numeric(0)),
+         Vindafjord1=replace_na(Vindafjord, as.numeric(0)),
+         Etne1=replace_na(Etne, as.numeric(0)))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSGF1Z19hcmJlaWRfcHVua3RfbnkgPSBtdXRhdGUoSGF1Z19hcmJlaWRfcHVua3RfbnksIHRvdF9IMSA9IEhhdWdlc3VuZDErU2F1ZGExK0Jva24xK1R5c3ZhZXIxK0thcm1vZXkxK1V0c2lyYTErVmluZGFmam9yZDErRXRuZTEpXG5gYGAifQ== -->
+<pre class="r"><code>Haug_arbeid_punkt_ny = mutate(Haug_arbeid_punkt_ny, tot_H1 = Haugesund1+Sauda1+Bokn1+Tysvaer1+Karmoey1+Utsira1+Vindafjord1+Etne1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHVua3Q2PC0gSGF1Z19hcmJlaWRfcHVua3RfbnklPiUgXG4gIHNlbGVjdChOYWVyaW5nLCBBYXIsIEhhdWdlc3VuZDEsIFZpbmRhZmpvcmQxLCBFdG5lMSx0b3RfSDEpXG5gYGAifQ== -->
+<pre class="r"><code>punkt6&lt;- Haug_arbeid_punkt_ny%&gt;% 
+  select(Naering, Aar, Haugesund1, Vindafjord1, Etne1,tot_H1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<div id="haugesund-2020" class="section level2">
-<h2>Haugesund 2020</h2>
 <!-- rnb-text-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHVua3Q2IDwtIGZpbHRlcihwdW5rdDYsIEFhciAlaW4lIFwiMjAyMFwiKVxuYGBgIn0= -->
+<pre class="r"><code>punkt6 &lt;- filter(punkt6, Aar %in% &quot;2020&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="få-svar-fra-arnstein-først" class="section level2">
-<h2>FÅ SVAR FRA ARNSTEIN FØRST</h2>
-<p><span class="math inline">\(E_t\)</span> total sysselsetting: 50584</p>
-<p><span class="math inline">\(E_b\)</span> sysselsetting i basisnæringer:</p>
+<div id="haugesund-kommune-2020" class="section level2">
+<h2>Haugesund kommune, 2020</h2>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSGF1Z2VzdW5kXzIwMjAgPC0gc2VsZWN0KHB1bmt0NiwgTmFlcmluZywgQWFyLCBIYXVnZXN1bmQxLCB0b3RfSDEpXG5gYGAifQ== -->
+<pre class="r"><code>Haugesund_2020 &lt;- select(punkt6, Naering, Aar, Haugesund1, tot_H1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSGF1Z2VzdW5kXzIwMjA8LSBtdXRhdGUoSGF1Z2VzdW5kXzIwMjAsIExxX0hhdWdlc3VuZF8yMDIwID0gKChIYXVnZXN1bmQxLzIwODUyKS8odG90X0gxLzUwNTg0KSkpXG5gYGAifQ== -->
+<pre class="r"><code>Haugesund_2020&lt;- mutate(Haugesund_2020, Lq_Haugesund_2020 = ((Haugesund1/20852)/(tot_H1/50584)))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSGF1Z2VzdW5kXzIwMjAgPC0gbXV0YXRlKEhhdWdlc3VuZF8yMDIwICwgTG9rYWxuYWVyaW5nID0gY2FzZV93aGVuKExxX0hhdWdlc3VuZF8yMDIwID4gMSB+IFwiMVwiKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgQmFzaXNuYWVyaW5nID0gY2FzZV93aGVuKExxX0hhdWdlc3VuZF8yMDIwIDwgMSB+IFwiMVwiKSlcbmBgYCJ9 -->
+<pre class="r"><code>Haugesund_2020 &lt;- mutate(Haugesund_2020 , Lokalnaering = case_when(Lq_Haugesund_2020 &gt; 1 ~ &quot;1&quot;),
+                          Basisnaering = case_when(Lq_Haugesund_2020 &lt; 1 ~ &quot;1&quot;))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li><span class="math inline">\(E_t\)</span> total sysselsetting: 50584</li>
+<li><span class="math inline">\(E_s\)</span> sysselsetting i basisnæringer:</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuNjk0KzQyNSsyODc5Kzc1MSs2MDQrMTY2KzEwOTgrMTE1NysxNzIwKzU3MTMrNzEzXG5gYGAifQ== -->
+<pre class="r"><code>694+425+2879+751+604+166+1098+1157+1720+5713+713</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p><span class="math inline">\(E_b\)</span> sysselsetting i lokalnæringer:</p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuNTA1ODQtMTU5MjBcbmBgYCJ9 -->
+<pre class="r"><code>50584-15920</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="basemultiplikator-haugesund-2020" class="section level2">
-<h2>Basemultiplikator Haugesund 2020</h2>
-<p><span class="math display">\[E_t = E_b + E_s   \rightarrow  21322 = 7385 + 13937\]</span></p>
-<p><span class="math display">\[E_s = aE_t   \rightarrow 13937=a\cdot21322   \rightarrow   13937/21322=a\]</span></p>
+<div id="basemultiplikator-haugesund-kommune-2020" class="section level2">
+<h2>Basemultiplikator Haugesund kommune, 2020</h2>
+<p><span class="math display">\[E_t = E_b + E_s   \rightarrow  50584 = 34664 + 15920\]</span></p>
+<p><span class="math display">\[E_s = aE_t   \rightarrow 15920=a\cdot50584   \rightarrow   15920/50584=a\]</span></p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMTU5MjAvNTA1ODRcbmBgYCJ9 -->
+<pre class="r"><code>15920/50584</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p><span class="math display">\[a=0.6536441\]</span></p>
-<p><span class="math display">\[E_t(1-a) = \bar{E}_b \rightarrow 21322(1-0.6536441)=\bar{E}_b\]</span></p>
+<p><span class="math display">\[a=0.314724\]</span></p>
+<p><span class="math display">\[E_t(1-a) = \bar{E}_b \rightarrow 50584(1-0.314724)=\bar{E}_b\]</span></p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuNTA1ODQqKDEtMC4zMTQ3MjQpXG5gYGAifQ== -->
+<pre class="r"><code>50584*(1-0.314724)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p><span class="math display">\[7385=\bar{E}_b\]</span></p>
-<p><span class="math display">\[\frac{1}{1-a} = basemultiplikatoren   \rightarrow \frac{1}{1-0.6536441}=basemultiplikator\]</span></p>
+<p><span class="math display">\[\bar{E}_b=34664\]</span></p>
+<p><span class="math display">\[\frac{1}{1-a} = basemultiplikatoren   \rightarrow \frac{1}{1-0.314724}=basemultiplikator\]</span></p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMS8oMS0wLjMxNDcyNClcbmBgYCJ9 -->
+<pre class="r"><code>1/(1-0.314724)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p><span class="math display">\[basemultiplikator = 2.887204\]</span></p>
+<p><span class="math display">\[basemultiplikator = 1.459266\]</span></p>
 </div>
-<div id="vindafjord-2020" class="section level2">
-<h2>Vindafjord 2020</h2>
+<div id="vindafjord-kommune-2020" class="section level2">
+<h2>Vindafjord kommune, 2020</h2>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVmluZGFmam9yZF8yMDIwIDwtIHNlbGVjdChwdW5rdDYsIE5hZXJpbmcsIEFhciwgVmluZGFmam9yZDEsIHRvdF9IMSlcbmBgYCJ9 -->
+<pre class="r"><code>Vindafjord_2020 &lt;- select(punkt6, Naering, Aar, Vindafjord1, tot_H1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVmluZGFmam9yZF8yMDIwIDwtIG11dGF0ZShWaW5kYWZqb3JkXzIwMjAsIExxX1ZpbmRhZmpvcmRfMjAyMCA9ICgoVmluZGFmam9yZDEvNDg5OCkvKHRvdF9IMS81MDU4NCkpKVxuYGBgIn0= -->
+<pre class="r"><code>Vindafjord_2020 &lt;- mutate(Vindafjord_2020, Lq_Vindafjord_2020 = ((Vindafjord1/4898)/(tot_H1/50584)))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVmluZGFmam9yZF8yMDIwIDwtIG11dGF0ZShWaW5kYWZqb3JkXzIwMjAgLCBMb2thbG5hZXJpbmcgPSBjYXNlX3doZW4oTHFfVmluZGFmam9yZF8yMDIwID4gMSB+IFwiMVwiKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgQmFzaXNuYWVyaW5nID0gY2FzZV93aGVuKExxX1ZpbmRhZmpvcmRfMjAyMCA8IDEgfiBcIjFcIikpXG5gYGAifQ== -->
+<pre class="r"><code>Vindafjord_2020 &lt;- mutate(Vindafjord_2020 , Lokalnaering = case_when(Lq_Vindafjord_2020 &gt; 1 ~ &quot;1&quot;),
+                          Basisnaering = case_when(Lq_Vindafjord_2020 &lt; 1 ~ &quot;1&quot;))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p><span class="math inline">\(E_t\)</span> total sysselsetting: 50584</p>
-<p><span class="math inline">\(E_b\)</span> sysselsetting i basisnæringer:</p>
+<ul>
+<li><span class="math inline">\(E_t\)</span> total sysselsetting: 50584</li>
+<li><span class="math inline">\(E_s\)</span> sysselsetting i basisnæringer:</li>
+</ul>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuNTc4Kzg4NysxMDErNjM4KzE0OSsyMTYrMzFcbmBgYCJ9 -->
+<pre class="r"><code>578+887+101+638+149+216+31</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p><span class="math inline">\(E_b\)</span> sysselsetting i lokalnæringer:</p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuNTA1ODQtMjYwMFxuYGBgIn0= -->
+<pre class="r"><code>50584-2600</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="basemultiplikator-vindafjord-2020" class="section level2">
-<h2>Basemultiplikator Vindafjord 2020</h2>
-<p><span class="math display">\[E_t = E_b + E_s   \rightarrow  21322 = 7385 + 13937\]</span></p>
-<p><span class="math display">\[E_s = aE_t   \rightarrow 13937=a\cdot21322   \rightarrow   13937/21322=a\]</span></p>
+<div id="basemultiplikator-vindafjord-kommune-2020" class="section level2">
+<h2>Basemultiplikator Vindafjord kommune, 2020</h2>
+<p><span class="math display">\[E_t = E_b + E_s   \rightarrow  50584 = 47984 + 2600\]</span></p>
+<p><span class="math display">\[E_s = aE_t   \rightarrow 2600=a\cdot50584   \rightarrow   2600/50584=a\]</span></p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMjYwMC81MDU4NFxuYGBgIn0= -->
+<pre class="r"><code>2600/50584</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p><span class="math display">\[a=0.6536441\]</span></p>
-<p><span class="math display">\[E_t(1-a) = \bar{E}_b \rightarrow 21322(1-0.6536441)=\bar{E}_b\]</span></p>
+<p><span class="math display">\[a=0.05139965\]</span></p>
+<p><span class="math display">\[E_t(1-a) = \bar{E}_b \rightarrow 50584(1-0.05139965)=\bar{E}_b\]</span></p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuNTA1ODQqKDEtMC4wNTEzOTk2NSlcbmBgYCJ9 -->
+<pre class="r"><code>50584*(1-0.05139965)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p><span class="math display">\[7385=\bar{E}_b\]</span></p>
-<p><span class="math display">\[\frac{1}{1-a} = basemultiplikatoren \rightarrow \frac{1}{1-0.6536441}=basemultiplikator\]</span></p>
+<p><span class="math display">\[\bar{E}_b=47984\]</span></p>
+<p><span class="math display">\[\frac{1}{1-a} = basemultiplikatoren \rightarrow \frac{1}{1-0.05139965}=basemultiplikator\]</span></p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMS8oMS0wLjA1MTM5OTY1KVxuYGBgIn0= -->
+<pre class="r"><code>1/(1-0.05139965)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p><span class="math display">\[basemultiplikator = 2.887204\]</span></p>
+<p><span class="math display">\[basemultiplikator = 1.054185\]</span></p>
 </div>
 <div id="etne-kommune-2020" class="section level2">
-<h2>Etne kommune 2020</h2>
+<h2>Etne kommune, 2020</h2>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuRXRuZV8yMDIwIDwtIHNlbGVjdChwdW5rdDYsIE5hZXJpbmcsIEFhciwgRXRuZTEsIHRvdF9IMSlcbmBgYCJ9 -->
+<pre class="r"><code>Etne_2020 &lt;- select(punkt6, Naering, Aar, Etne1, tot_H1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuRXRuZV8yMDIwPC0gbXV0YXRlKEV0bmVfMjAyMCwgTHFfRXRuZV8yMDIwID0gKChFdG5lMS8xNjEzKS8odG90X0gxLzUwNTg0KSkpXG5gYGAifQ== -->
+<pre class="r"><code>Etne_2020&lt;- mutate(Etne_2020, Lq_Etne_2020 = ((Etne1/1613)/(tot_H1/50584)))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuRXRuZV8yMDIwIDwtIG11dGF0ZShFdG5lXzIwMjAgLCBMb2thbG5hZXJpbmcgPSBjYXNlX3doZW4oTHFfRXRuZV8yMDIwID4gMSB+IFwiMVwiKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgQmFzaXNuYWVyaW5nID0gY2FzZV93aGVuKExxX0V0bmVfMjAyMCA8IDEgfiBcIjFcIikpXG5gYGAifQ== -->
+<pre class="r"><code>Etne_2020 &lt;- mutate(Etne_2020 , Lokalnaering = case_when(Lq_Etne_2020 &gt; 1 ~ &quot;1&quot;),
+                          Basisnaering = case_when(Lq_Etne_2020 &lt; 1 ~ &quot;1&quot;))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p><span class="math inline">\(E_t\)</span> total sysselsetting: 50584</p>
-<p><span class="math inline">\(E_b\)</span> sysselsetting i basisnæringer:</p>
+<ul>
+<li><span class="math inline">\(E_t\)</span> total sysselsetting: 50584</li>
+<li><span class="math inline">\(E_s\)</span> sysselsetting i basisnæringer:</li>
+</ul>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMTcyKzI0Mis1MSs2OFxuYGBgIn0= -->
+<pre class="r"><code>172+242+51+68</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p><span class="math inline">\(E_b\)</span> sysselsetting i lokalnæringer:</p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuNTA1ODQtNTMzXG5gYGAifQ== -->
+<pre class="r"><code>50584-533</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
 <div id="basemultiplikator-etne-kommune-2020" class="section level2">
 <h2>Basemultiplikator Etne kommune 2020</h2>
-<p><span class="math display">\[E_t = E_b + E_s   \rightarrow  21322 = 7385 + 13937\]</span></p>
-<p><span class="math display">\[E_s = aE_t   \rightarrow 13937=a\cdot21322   \rightarrow   13937/21322=a\]</span></p>
+<p><span class="math display">\[E_t = E_b + E_s   \rightarrow  50584 = 50051 + 533\]</span></p>
+<p><span class="math display">\[E_s = aE_t   \rightarrow 533=a\cdot50584   \rightarrow   533/50584=a\]</span></p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuNTMzLzUwNTg0XG5gYGAifQ== -->
+<pre class="r"><code>533/50584</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p><span class="math display">\[a=0.6536441\]</span></p>
-<p><span class="math display">\[E_t(1-a) = \bar{E}_b \rightarrow 21322(1-0.6536441)=\bar{E}_b\]</span></p>
+<p><span class="math display">\[a=0.01053693\]</span></p>
+<p><span class="math display">\[E_t(1-a) = \bar{E}_b \rightarrow 21322(1-0.01053693)=\bar{E}_b\]</span></p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuNTA1ODQqKDEtMC4wMTA1MzY5MylcbmBgYCJ9 -->
+<pre class="r"><code>50584*(1-0.01053693)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p><span class="math display">\[7385=\bar{E}_b\]</span></p>
-<p><span class="math display">\[\frac{1}{1-a} = basemultiplikatoren   \rightarrow \frac{1}{1-0.6536441}=basemultiplikator\]</span></p>
+<p><span class="math display">\[\bar{E}_b=50051\]</span></p>
+<p><span class="math display">\[\frac{1}{1-a} = basemultiplikatoren   \rightarrow \frac{1}{1-0.01053693}=basemultiplikator\]</span></p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMS8oMS0wLjAxMDUzNjkzKVxuYGBgIn0= -->
+<pre class="r"><code>1/(1-0.01053693)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p><span class="math display">\[basemultiplikator = 2.887204\]</span></p>
+<p><span class="math display">\[basemultiplikator = 1.010649\]</span></p>
+</div>
+<div id="et-positivt-eksogent-sjokk-i-basis-sysselsetting-haugesund-ølensvåg-og-skånevik" class="section level2">
+<h2>Et positivt eksogent sjokk i basis-sysselsetting; Haugesund, Ølensvåg og Skånevik</h2>
+<p>Haugesund:</p>
+<p><span class="math display">\[basemultiplikator \cdot 500 = 1.459266\cdot 500\]</span></p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMS40NTkyNjYqNTAwXG5gYGAifQ== -->
+<pre class="r"><code>1.459266*500</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Ølensvåg:</p>
+<p><span class="math display">\[basemultiplikator\cdot 500 = 1.054185\cdot 500\]</span></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMS4wNTQxODUqNTAwXG5gYGAifQ== -->
+<pre class="r"><code>1.054185*500</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p><span class="math display">\[basemultiplikator\cdot 500 = 1.010649\cdot 500\]</span></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMS4wMTA2NDkqNTAwXG5gYGAifQ== -->
+<pre class="r"><code>1.010649*500</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="forklare" class="section level2">
+<h2>Forklare</h2>
+<p>Haugesund: 729.633 Ølensvåg:527.0925 Skånevik:505.3245</p>
+</div>
+<div id="sammenligne-med-pendlerinnstrømmingen" class="section level2">
+<h2>Sammenligne med pendlerinnstrømmingen</h2>
+</div>
+<div id="konklusjon" class="section level2">
+<h2>Konklusjon</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSGF1Z19hcmJlaWRfcHVua3RfbnkgPC0gSGF1Z19hcmJlaWRfcHVua3Q0ICU+JSBcbiAgbXV0YXRlKEhhdWdlc3VuZDE9cmVwbGFjZV9uYShIYXVnZXN1bmQsIGFzLm51bWVyaWMoMCkpLFxuICAgICAgICAgU2F1ZGExPXJlcGxhY2VfbmEoU2F1ZGEsIGFzLm51bWVyaWMoMCkpLFxuICAgICAgICAgQm9rbjE9cmVwbGFjZV9uYShCb2tuLCBhcy5udW1lcmljKDApKSxcbiAgICAgICAgIFR5c3ZhZXIxPXJlcGxhY2VfbmEoVHlzdmFlciwgYXMubnVtZXJpYygwKSksXG4gICAgICAgICBLYXJtb2V5MT1yZXBsYWNlX25hKEthcm1vZXksIGFzLm51bWVyaWMoMCkpLFxuICAgICAgICAgVXRzaXJhMT1yZXBsYWNlX25hKFV0c2lyYSwgYXMubnVtZXJpYygwKSksXG4gICAgICAgICBWaW5kYWZqb3JkMT1yZXBsYWNlX25hKFZpbmRhZmpvcmQsIGFzLm51bWVyaWMoMCkpLFxuICAgICAgICAgRXRuZTE9cmVwbGFjZV9uYShFdG5lLCBhcy5udW1lcmljKDApKSlcbmBgYCJ9 -->
+<pre class="r"><code>Haug_arbeid_punkt_ny &lt;- Haug_arbeid_punkt4 %&gt;% 
+  mutate(Haugesund1=replace_na(Haugesund, as.numeric(0)),
+         Sauda1=replace_na(Sauda, as.numeric(0)),
+         Bokn1=replace_na(Bokn, as.numeric(0)),
+         Tysvaer1=replace_na(Tysvaer, as.numeric(0)),
+         Karmoey1=replace_na(Karmoey, as.numeric(0)),
+         Utsira1=replace_na(Utsira, as.numeric(0)),
+         Vindafjord1=replace_na(Vindafjord, as.numeric(0)),
+         Etne1=replace_na(Etne, as.numeric(0)))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSGF1Z19hcmJlaWRfcHVua3RfbnkgPSBtdXRhdGUoSGF1Z19hcmJlaWRfcHVua3RfbnksIHRvdF9IID0gSGF1Z2VzdW5kMStTYXVkYTErQm9rbjErVHlzdmFlcjErS2FybW9leTErVXRzaXJhMStWaW5kYWZqb3JkMStFdG5lIDEpXG5gYGAifQ== -->
+<pre class="r"><code>Haug_arbeid_punkt_ny = mutate(Haug_arbeid_punkt_ny, tot_H = Haugesund1+Sauda1+Bokn1+Tysvaer1+Karmoey1+Utsira1+Vindafjord1+Etne 1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7cn0NCmxpYnJhcnkoZHBseXIpDQpsaWJyYXJ5KGRhdGEudGFibGUpDQpgYGANCg0KYGBge3J9DQpIYXVnX2FyYmVpZF9wdW5rdDIgPC0gcmVhZC5jc3YoIkhhdWdfYXJiZWlkX3B1bmt0Mi5jc3YiKQ0KYGBgDQoNCmBgYHtyfQ0KU3Vubl9hcmJlaWRfcHVua3QyIDwtIHJlYWQuY3N2KCJzdW5uX2FyYmVpZF9wdW5rdDIuY3N2IikNCmBgYA0KDQpgYGB7cn0NCkhhdWdfYXJiZWlkX3B1bmt0NCA8LSBjYmluZChIYXVnX2FyYmVpZF9wdW5rdDIsIEV0bmUgPSBTdW5uX2FyYmVpZF9wdW5rdDIkRXRuZSkNCiAgICAgICAgICAgICAgICAgICAgICANCmBgYA0KDQpgYGB7cn0NCkhhdWdfYXJiZWlkX3B1bmt0NCA9IG11dGF0ZShIYXVnX2FyYmVpZF9wdW5rdDQsIHRvdF9IID0gSGF1Z2VzdW5kK1NhdWRhK0Jva24rVHlzdmFlcitLYXJtb2V5K1V0c2lyYStWaW5kYWZqb3JkK0V0bmUpDQptYWtlTkFzdGF0dXMgPSBGQUxTRQ0KYGBgDQoNCmBgYHtyfQ0KcHVua3Q2PC0gSGF1Z19hcmJlaWRfcHVua3Q0JT4lIA0KICBzZWxlY3QoTmFlcmluZywgQWFyLCBIYXVnZXN1bmQsIFZpbmRhZmpvcmQsIEV0bmUsdG90X0gpDQpgYGANCg0KYGBge3J9DQpwdW5rdDYgPC0gZmlsdGVyKHB1bmt0NiwgQWFyICVpbiUgIjIwMjAiKQ0KYGBgDQoNCg0KIyMgSGF1Z2VzdW5kIDIwMjANCg0KYGBge3J9DQpIYXVnZXN1bmRfMjAyMCA8LSBzZWxlY3QocHVua3Q2LCBOYWVyaW5nLCBBYXIsIEhhdWdlc3VuZCwgdG90X0gpDQpgYGANCg0KYGBge3J9DQpIYXVnZXN1bmRfMjAyMDwtIG11dGF0ZShIYXVnZXN1bmRfMjAyMCwgTHFfSGF1Z2VzdW5kXzIwMjAgPSAoKEhhdWdlc3VuZC8yMDg1MikvKHRvdF9ILzUwNTg0KSkpDQpgYGANCg0KYGBge3J9DQpIYXVnZXN1bmRfMjAyMCA8LSBtdXRhdGUoSGF1Z2VzdW5kXzIwMjAgLCBMb2thbG5hZXJpbmcgPSBjYXNlX3doZW4oTHFfSGF1Z2VzdW5kXzIwMjAgPiAxIH4gIjEiKSwNCiAgICAgICAgICAgICAgICAgICAgICAgICAgQmFzaXNuYWVyaW5nID0gY2FzZV93aGVuKExxX0hhdWdlc3VuZF8yMDIwIDwgMSB+ICIxIikpDQpgYGANCg0KDQojIyBGw4UgU1ZBUiBGUkEgQVJOU1RFSU4gRsOYUlNUDQoNCiRFX3QkIHRvdGFsIHN5c3NlbHNldHRpbmc6IDUwNTg0DQoNCiRFX2IkIHN5c3NlbHNldHRpbmcgaSBiYXNpc27DpnJpbmdlcjoNCg0KYGBge3IgQmFzaXNuw6ZyaW5nZXJfSGF1Z18yMDIwfQ0KMzk0NSArIDg2MyArIDQwNSArIDI4NiArIDk5NSArIDEwMjkgKyA5MjcgKyA0ODEyICsgNjc1DQpgYGANCg0KJEVfYiQgc3lzc2Vsc2V0dGluZyBpIGxva2FsbsOmcmluZ2VyOg0KDQpgYGB7ciBMb2thbG7DpnJpbmdlcl9IYXVnXzIwMjB9DQo1MDU4NC0xMzkzNw0KYGBgDQoNCiMjIEJhc2VtdWx0aXBsaWthdG9yIEhhdWdlc3VuZCAyMDIwDQoNCiQkRV90ID0gRV9iICsgRV9zICAgXHJpZ2h0YXJyb3cgIDIxMzIyID0gNzM4NSArIDEzOTM3JCQNCg0KJCRFX3MgPSBhRV90ICAgXHJpZ2h0YXJyb3cgMTM5Mzc9YVxjZG90MjEzMjIgICBccmlnaHRhcnJvdyAgIDEzOTM3LzIxMzIyPWEkJA0KDQpgYGB7cn0NCjEzOTM3LzIxMzIyDQpgYGANCg0KJCRhPTAuNjUzNjQ0MSQkDQoNCiQkRV90KDEtYSkgPSBcYmFye0V9X2IgXHJpZ2h0YXJyb3cgMjEzMjIoMS0wLjY1MzY0NDEpPVxiYXJ7RX1fYiQkDQoNCmBgYHtyfQ0KMjEzMjIqKDEtMC42NTM2NDQxKQ0KYGBgDQoNCiQkNzM4NT1cYmFye0V9X2IkJA0KDQokJFxmcmFjezF9ezEtYX0gPSBiYXNlbXVsdGlwbGlrYXRvcmVuICAgXHJpZ2h0YXJyb3cgXGZyYWN7MX17MS0wLjY1MzY0NDF9PWJhc2VtdWx0aXBsaWthdG9yJCQNCg0KYGBge3J9DQoxLygxLTAuNjUzNjQ0MSkNCmBgYA0KDQokJGJhc2VtdWx0aXBsaWthdG9yID0gMi44ODcyMDQkJA0KDQoNCiMjIFZpbmRhZmpvcmQgMjAyMA0KDQpgYGB7cn0NClZpbmRhZmpvcmRfMjAyMCA8LSBzZWxlY3QocHVua3Q2LCBOYWVyaW5nLCBBYXIsIFZpbmRhZmpvcmQsIHRvdF9IKQ0KYGBgDQoNCmBgYHtyfQ0KVmluZGFmam9yZF8yMDIwIDwtIG11dGF0ZShWaW5kYWZqb3JkXzIwMjAsIExxX1ZpbmRhZmpvcmRfMjAyMCA9ICgoVmluZGFmam9yZC80ODk4KS8odG90X0gvNTA1ODQpKSkNCmBgYA0KDQpgYGB7cn0NClZpbmRhZmpvcmRfMjAyMCA8LSBtdXRhdGUoVmluZGFmam9yZF8yMDIwICwgTG9rYWxuYWVyaW5nID0gY2FzZV93aGVuKExxX1ZpbmRhZmpvcmRfMjAyMCA+IDEgfiAiMSIpLA0KICAgICAgICAgICAgICAgICAgICAgICAgICBCYXNpc25hZXJpbmcgPSBjYXNlX3doZW4oTHFfVmluZGFmam9yZF8yMDIwIDwgMSB+ICIxIikpDQpgYGANCg0KDQokRV90JCB0b3RhbCBzeXNzZWxzZXR0aW5nOiA1MDU4NA0KDQokRV9iJCBzeXNzZWxzZXR0aW5nIGkgYmFzaXNuw6ZyaW5nZXI6DQoNCmBgYHtyIEJhc2lzbsOmcmluZ2VyX1ZpbmRfMjAyMH0NCjM5NDUgKyA4NjMgKyA0MDUgKyAyODYgKyA5OTUgKyAxMDI5ICsgOTI3ICsgNDgxMiArIDY3NQ0KYGBgDQoNCiRFX2IkIHN5c3NlbHNldHRpbmcgaSBsb2thbG7DpnJpbmdlcjoNCg0KYGBge3IgTG9rYWxuw6ZyaW5nZXJfVmluZF8yMDIwfQ0KNTA1ODQtMTM5MzcNCmBgYA0KDQojIyBCYXNlbXVsdGlwbGlrYXRvciBWaW5kYWZqb3JkIDIwMjANCg0KJCRFX3QgPSBFX2IgKyBFX3MgICBccmlnaHRhcnJvdyAgMjEzMjIgPSA3Mzg1ICsgMTM5MzckJA0KDQokJEVfcyA9IGFFX3QgICBccmlnaHRhcnJvdyAxMzkzNz1hXGNkb3QyMTMyMiAgIFxyaWdodGFycm93ICAgMTM5MzcvMjEzMjI9YSQkDQoNCmBgYHtyfQ0KMTM5MzcvMjEzMjINCmBgYA0KDQokJGE9MC42NTM2NDQxJCQNCg0KJCRFX3QoMS1hKSA9IFxiYXJ7RX1fYiBccmlnaHRhcnJvdyAyMTMyMigxLTAuNjUzNjQ0MSk9XGJhcntFfV9iJCQNCg0KYGBge3J9DQoyMTMyMiooMS0wLjY1MzY0NDEpDQpgYGANCg0KJCQ3Mzg1PVxiYXJ7RX1fYiQkDQoNCiQkXGZyYWN7MX17MS1hfSA9IGJhc2VtdWx0aXBsaWthdG9yZW4gXHJpZ2h0YXJyb3cgXGZyYWN7MX17MS0wLjY1MzY0NDF9PWJhc2VtdWx0aXBsaWthdG9yJCQNCg0KYGBge3J9DQoxLygxLTAuNjUzNjQ0MSkNCmBgYA0KDQokJGJhc2VtdWx0aXBsaWthdG9yID0gMi44ODcyMDQkJA0KDQojIyBFdG5lIGtvbW11bmUgMjAyMA0KDQpgYGB7cn0NCkV0bmVfMjAyMCA8LSBzZWxlY3QocHVua3Q2LCBOYWVyaW5nLCBBYXIsIEV0bmUsIHRvdF9IKQ0KYGBgDQoNCmBgYHtyfQ0KRXRuZV8yMDIwPC0gbXV0YXRlKEV0bmVfMjAyMCwgTHFfRXRuZV8yMDIwID0gKChFdG5lLzE2MTMpLyh0b3RfSC81MDU4NCkpKQ0KYGBgDQoNCmBgYHtyfQ0KRXRuZV8yMDIwIDwtIG11dGF0ZShFdG5lXzIwMjAgLCBMb2thbG5hZXJpbmcgPSBjYXNlX3doZW4oTHFfRXRuZV8yMDIwID4gMSB+ICIxIiksDQogICAgICAgICAgICAgICAgICAgICAgICAgIEJhc2lzbmFlcmluZyA9IGNhc2Vfd2hlbihMcV9FdG5lXzIwMjAgPCAxIH4gIjEiKSkNCmBgYA0KDQoNCiRFX3QkIHRvdGFsIHN5c3NlbHNldHRpbmc6IDUwNTg0DQoNCiRFX2IkIHN5c3NlbHNldHRpbmcgaSBiYXNpc27DpnJpbmdlcjoNCg0KYGBge3IgQmFzaXNuw6ZyaW5nZXJfRXRuZV8yMDIwfQ0KMzk0NSArIDg2MyArIDQwNSArIDI4NiArIDk5NSArIDEwMjkgKyA5MjcgKyA0ODEyICsgNjc1DQpgYGANCg0KJEVfYiQgc3lzc2Vsc2V0dGluZyBpIGxva2FsbsOmcmluZ2VyOg0KDQpgYGB7ciBMb2thbG7DpnJpbmdlcl9FdG5lXzIwMjB9DQo1MDU4NC0xMzkzNw0KYGBgDQoNCiMjIEJhc2VtdWx0aXBsaWthdG9yIEV0bmUga29tbXVuZSAyMDIwDQoNCiQkRV90ID0gRV9iICsgRV9zICAgXHJpZ2h0YXJyb3cgIDIxMzIyID0gNzM4NSArIDEzOTM3JCQNCg0KJCRFX3MgPSBhRV90ICAgXHJpZ2h0YXJyb3cgMTM5Mzc9YVxjZG90MjEzMjIgICBccmlnaHRhcnJvdyAgIDEzOTM3LzIxMzIyPWEkJA0KDQpgYGB7cn0NCjEzOTM3LzIxMzIyDQpgYGANCg0KJCRhPTAuNjUzNjQ0MSQkDQoNCiQkRV90KDEtYSkgPSBcYmFye0V9X2IgXHJpZ2h0YXJyb3cgMjEzMjIoMS0wLjY1MzY0NDEpPVxiYXJ7RX1fYiQkDQoNCmBgYHtyfQ0KMjEzMjIqKDEtMC42NTM2NDQxKQ0KYGBgDQoNCiQkNzM4NT1cYmFye0V9X2IkJA0KDQokJFxmcmFjezF9ezEtYX0gPSBiYXNlbXVsdGlwbGlrYXRvcmVuICAgXHJpZ2h0YXJyb3cgXGZyYWN7MX17MS0wLjY1MzY0NDF9PWJhc2VtdWx0aXBsaWthdG9yJCQNCg0KYGBge3J9DQoxLygxLTAuNjUzNjQ0MSkNCmBgYA0KDQokJGJhc2VtdWx0aXBsaWthdG9yID0gMi44ODcyMDQkJA0KDQoNCg0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQojIyBFdCBwb3NpdGl2dCBla3NvZ2VudCBzam9rayBpIGJhc2lzLXN5c3NlbHNldHRpbmcNCg0KYGBge3J9DQpsaWJyYXJ5KGRwbHlyKQ0KbGlicmFyeShkYXRhLnRhYmxlKQ0KbGlicmFyeSh0aWR5dmVyc2UpDQpgYGANCg0KYGBge3J9DQpIYXVnX2FyYmVpZF9wdW5rdDIgPC0gcmVhZC5jc3YoIkhhdWdfYXJiZWlkX3B1bmt0Mi5jc3YiKQ0KYGBgDQoNCmBgYHtyfQ0KU3Vubl9hcmJlaWRfcHVua3QyIDwtIHJlYWQuY3N2KCJzdW5uX2FyYmVpZF9wdW5rdDIuY3N2IikNCmBgYA0KDQpgYGB7cn0NCkhhdWdfYXJiZWlkX3B1bmt0NCA8LSBjYmluZChIYXVnX2FyYmVpZF9wdW5rdDIsIEV0bmUgPSBTdW5uX2FyYmVpZF9wdW5rdDIkRXRuZSkNCiAgICAgICAgICAgICAgICAgICAgICANCmBgYA0KDQpgYGB7cn0NCkhhdWdfYXJiZWlkX3B1bmt0X255IDwtIEhhdWdfYXJiZWlkX3B1bmt0NCAlPiUgDQogIG11dGF0ZShIYXVnZXN1bmQxPXJlcGxhY2VfbmEoSGF1Z2VzdW5kLCBhcy5udW1lcmljKDApKSwNCiAgICAgICAgIFNhdWRhMT1yZXBsYWNlX25hKFNhdWRhLCBhcy5udW1lcmljKDApKSwNCiAgICAgICAgIEJva24xPXJlcGxhY2VfbmEoQm9rbiwgYXMubnVtZXJpYygwKSksDQogICAgICAgICBUeXN2YWVyMT1yZXBsYWNlX25hKFR5c3ZhZXIsIGFzLm51bWVyaWMoMCkpLA0KICAgICAgICAgS2FybW9leTE9cmVwbGFjZV9uYShLYXJtb2V5LCBhcy5udW1lcmljKDApKSwNCiAgICAgICAgIFV0c2lyYTE9cmVwbGFjZV9uYShVdHNpcmEsIGFzLm51bWVyaWMoMCkpLA0KICAgICAgICAgVmluZGFmam9yZDE9cmVwbGFjZV9uYShWaW5kYWZqb3JkLCBhcy5udW1lcmljKDApKSwNCiAgICAgICAgIEV0bmUxPXJlcGxhY2VfbmEoRXRuZSwgYXMubnVtZXJpYygwKSkpDQpgYGANCg0KYGBge3IsIE5BLnJtPVRSVUV9DQpIYXVnX2FyYmVpZF9wdW5rdF9ueSA9IG11dGF0ZShIYXVnX2FyYmVpZF9wdW5rdF9ueSwgdG90X0gxID0gSGF1Z2VzdW5kMStTYXVkYTErQm9rbjErVHlzdmFlcjErS2FybW9leTErVXRzaXJhMStWaW5kYWZqb3JkMStFdG5lMSkNCmBgYA0KDQoNCmBgYHtyfQ0KcHVua3Q2PC0gSGF1Z19hcmJlaWRfcHVua3RfbnklPiUgDQogIHNlbGVjdChOYWVyaW5nLCBBYXIsIEhhdWdlc3VuZDEsIFZpbmRhZmpvcmQxLCBFdG5lMSx0b3RfSDEpDQpgYGANCg0KYGBge3J9DQpwdW5rdDYgPC0gZmlsdGVyKHB1bmt0NiwgQWFyICVpbiUgIjIwMjAiKQ0KYGBgDQoNCg0KIyMgSGF1Z2VzdW5kIGtvbW11bmUsIDIwMjANCg0KYGBge3J9DQpIYXVnZXN1bmRfMjAyMCA8LSBzZWxlY3QocHVua3Q2LCBOYWVyaW5nLCBBYXIsIEhhdWdlc3VuZDEsIHRvdF9IMSkNCmBgYA0KDQpgYGB7cn0NCkhhdWdlc3VuZF8yMDIwPC0gbXV0YXRlKEhhdWdlc3VuZF8yMDIwLCBMcV9IYXVnZXN1bmRfMjAyMCA9ICgoSGF1Z2VzdW5kMS8yMDg1MikvKHRvdF9IMS81MDU4NCkpKQ0KYGBgDQoNCmBgYHtyfQ0KSGF1Z2VzdW5kXzIwMjAgPC0gbXV0YXRlKEhhdWdlc3VuZF8yMDIwICwgTG9rYWxuYWVyaW5nID0gY2FzZV93aGVuKExxX0hhdWdlc3VuZF8yMDIwID4gMSB+ICIxIiksDQogICAgICAgICAgICAgICAgICAgICAgICAgIEJhc2lzbmFlcmluZyA9IGNhc2Vfd2hlbihMcV9IYXVnZXN1bmRfMjAyMCA8IDEgfiAiMSIpKQ0KYGBgDQoNCg0KKiAkRV90JCB0b3RhbCBzeXNzZWxzZXR0aW5nOiA1MDU4NA0KKiAkRV9zJCBzeXNzZWxzZXR0aW5nIGkgYmFzaXNuw6ZyaW5nZXI6DQoNCmBgYHtyIEJhc2lzbsOmcmluZ2VyX0hhdWdfMjAyMH0NCjY5NCs0MjUrMjg3OSs3NTErNjA0KzE2NisxMDk4KzExNTcrMTcyMCs1NzEzKzcxMw0KYGBgDQoNCiRFX2IkIHN5c3NlbHNldHRpbmcgaSBsb2thbG7DpnJpbmdlcjoNCg0KYGBge3IgTG9rYWxuw6ZyaW5nZXJfSGF1Z18yMDIwfQ0KNTA1ODQtMTU5MjANCmBgYA0KDQojIyBCYXNlbXVsdGlwbGlrYXRvciBIYXVnZXN1bmQga29tbXVuZSwgMjAyMA0KDQokJEVfdCA9IEVfYiArIEVfcyAgIFxyaWdodGFycm93ICA1MDU4NCA9IDM0NjY0ICsgMTU5MjAkJA0KDQokJEVfcyA9IGFFX3QgICBccmlnaHRhcnJvdyAxNTkyMD1hXGNkb3Q1MDU4NCAgIFxyaWdodGFycm93ICAgMTU5MjAvNTA1ODQ9YSQkDQoNCmBgYHtyfQ0KMTU5MjAvNTA1ODQNCmBgYA0KDQokJGE9MC4zMTQ3MjQkJA0KDQokJEVfdCgxLWEpID0gXGJhcntFfV9iIFxyaWdodGFycm93IDUwNTg0KDEtMC4zMTQ3MjQpPVxiYXJ7RX1fYiQkDQoNCmBgYHtyfQ0KNTA1ODQqKDEtMC4zMTQ3MjQpDQpgYGANCg0KJCRcYmFye0V9X2I9MzQ2NjQkJA0KDQokJFxmcmFjezF9ezEtYX0gPSBiYXNlbXVsdGlwbGlrYXRvcmVuICAgXHJpZ2h0YXJyb3cgXGZyYWN7MX17MS0wLjMxNDcyNH09YmFzZW11bHRpcGxpa2F0b3IkJA0KDQpgYGB7cn0NCjEvKDEtMC4zMTQ3MjQpDQpgYGANCg0KJCRiYXNlbXVsdGlwbGlrYXRvciA9IDEuNDU5MjY2JCQNCg0KDQojIyBWaW5kYWZqb3JkIGtvbW11bmUsIDIwMjANCg0KYGBge3J9DQpWaW5kYWZqb3JkXzIwMjAgPC0gc2VsZWN0KHB1bmt0NiwgTmFlcmluZywgQWFyLCBWaW5kYWZqb3JkMSwgdG90X0gxKQ0KYGBgDQoNCmBgYHtyfQ0KVmluZGFmam9yZF8yMDIwIDwtIG11dGF0ZShWaW5kYWZqb3JkXzIwMjAsIExxX1ZpbmRhZmpvcmRfMjAyMCA9ICgoVmluZGFmam9yZDEvNDg5OCkvKHRvdF9IMS81MDU4NCkpKQ0KYGBgDQoNCmBgYHtyfQ0KVmluZGFmam9yZF8yMDIwIDwtIG11dGF0ZShWaW5kYWZqb3JkXzIwMjAgLCBMb2thbG5hZXJpbmcgPSBjYXNlX3doZW4oTHFfVmluZGFmam9yZF8yMDIwID4gMSB+ICIxIiksDQogICAgICAgICAgICAgICAgICAgICAgICAgIEJhc2lzbmFlcmluZyA9IGNhc2Vfd2hlbihMcV9WaW5kYWZqb3JkXzIwMjAgPCAxIH4gIjEiKSkNCmBgYA0KDQoNCiogJEVfdCQgdG90YWwgc3lzc2Vsc2V0dGluZzogNTA1ODQNCiogJEVfcyQgc3lzc2Vsc2V0dGluZyBpIGJhc2lzbsOmcmluZ2VyOg0KDQpgYGB7ciBCYXNpc27DpnJpbmdlcl9WaW5kXzIwMjB9DQo1NzgrODg3KzEwMSs2MzgrMTQ5KzIxNiszMQ0KYGBgDQoNCiRFX2IkIHN5c3NlbHNldHRpbmcgaSBsb2thbG7DpnJpbmdlcjoNCg0KYGBge3IgTG9rYWxuw6ZyaW5nZXJfVmluZF8yMDIwfQ0KNTA1ODQtMjYwMA0KYGBgDQoNCiMjIEJhc2VtdWx0aXBsaWthdG9yIFZpbmRhZmpvcmQga29tbXVuZSwgMjAyMA0KDQokJEVfdCA9IEVfYiArIEVfcyAgIFxyaWdodGFycm93ICA1MDU4NCA9IDQ3OTg0ICsgMjYwMCQkDQoNCiQkRV9zID0gYUVfdCAgIFxyaWdodGFycm93IDI2MDA9YVxjZG90NTA1ODQgICBccmlnaHRhcnJvdyAgIDI2MDAvNTA1ODQ9YSQkDQoNCmBgYHtyfQ0KMjYwMC81MDU4NA0KYGBgDQoNCiQkYT0wLjA1MTM5OTY1JCQNCg0KJCRFX3QoMS1hKSA9IFxiYXJ7RX1fYiBccmlnaHRhcnJvdyA1MDU4NCgxLTAuMDUxMzk5NjUpPVxiYXJ7RX1fYiQkDQoNCmBgYHtyfQ0KNTA1ODQqKDEtMC4wNTEzOTk2NSkNCmBgYA0KDQokJFxiYXJ7RX1fYj00Nzk4NCQkDQoNCiQkXGZyYWN7MX17MS1hfSA9IGJhc2VtdWx0aXBsaWthdG9yZW4gXHJpZ2h0YXJyb3cgXGZyYWN7MX17MS0wLjA1MTM5OTY1fT1iYXNlbXVsdGlwbGlrYXRvciQkDQoNCmBgYHtyfQ0KMS8oMS0wLjA1MTM5OTY1KQ0KYGBgDQoNCiQkYmFzZW11bHRpcGxpa2F0b3IgPSAxLjA1NDE4NSQkDQoNCg0KIyMgRXRuZSBrb21tdW5lLCAyMDIwDQoNCmBgYHtyfQ0KRXRuZV8yMDIwIDwtIHNlbGVjdChwdW5rdDYsIE5hZXJpbmcsIEFhciwgRXRuZTEsIHRvdF9IMSkNCmBgYA0KDQpgYGB7cn0NCkV0bmVfMjAyMDwtIG11dGF0ZShFdG5lXzIwMjAsIExxX0V0bmVfMjAyMCA9ICgoRXRuZTEvMTYxMykvKHRvdF9IMS81MDU4NCkpKQ0KYGBgDQoNCmBgYHtyfQ0KRXRuZV8yMDIwIDwtIG11dGF0ZShFdG5lXzIwMjAgLCBMb2thbG5hZXJpbmcgPSBjYXNlX3doZW4oTHFfRXRuZV8yMDIwID4gMSB+ICIxIiksDQogICAgICAgICAgICAgICAgICAgICAgICAgIEJhc2lzbmFlcmluZyA9IGNhc2Vfd2hlbihMcV9FdG5lXzIwMjAgPCAxIH4gIjEiKSkNCmBgYA0KDQoNCiogJEVfdCQgdG90YWwgc3lzc2Vsc2V0dGluZzogNTA1ODQNCiogJEVfcyQgc3lzc2Vsc2V0dGluZyBpIGJhc2lzbsOmcmluZ2VyOg0KDQpgYGB7ciBCYXNpc27DpnJpbmdlcl9FdG5lXzIwMjB9DQoxNzIrMjQyKzUxKzY4DQpgYGANCg0KJEVfYiQgc3lzc2Vsc2V0dGluZyBpIGxva2FsbsOmcmluZ2VyOg0KDQpgYGB7ciBMb2thbG7DpnJpbmdlcl9FdG5lXzIwMjB9DQo1MDU4NC01MzMNCmBgYA0KDQojIyBCYXNlbXVsdGlwbGlrYXRvciBFdG5lIGtvbW11bmUgMjAyMA0KDQokJEVfdCA9IEVfYiArIEVfcyAgIFxyaWdodGFycm93ICA1MDU4NCA9IDUwMDUxICsgNTMzJCQNCg0KJCRFX3MgPSBhRV90ICAgXHJpZ2h0YXJyb3cgNTMzPWFcY2RvdDUwNTg0ICAgXHJpZ2h0YXJyb3cgICA1MzMvNTA1ODQ9YSQkDQoNCmBgYHtyfQ0KNTMzLzUwNTg0DQpgYGANCg0KJCRhPTAuMDEwNTM2OTMkJA0KDQokJEVfdCgxLWEpID0gXGJhcntFfV9iIFxyaWdodGFycm93IDIxMzIyKDEtMC4wMTA1MzY5Myk9XGJhcntFfV9iJCQNCg0KYGBge3J9DQo1MDU4NCooMS0wLjAxMDUzNjkzKQ0KYGBgDQoNCiQkXGJhcntFfV9iPTUwMDUxJCQNCg0KJCRcZnJhY3sxfXsxLWF9ID0gYmFzZW11bHRpcGxpa2F0b3JlbiAgIFxyaWdodGFycm93IFxmcmFjezF9ezEtMC4wMTA1MzY5M309YmFzZW11bHRpcGxpa2F0b3IkJA0KDQpgYGB7cn0NCjEvKDEtMC4wMTA1MzY5MykNCmBgYA0KDQokJGJhc2VtdWx0aXBsaWthdG9yID0gMS4wMTA2NDkkJA0KDQoNCiMjIEV0IHBvc2l0aXZ0IGVrc29nZW50IHNqb2trIGkgYmFzaXMtc3lzc2Vsc2V0dGluZzsgSGF1Z2VzdW5kLCDDmGxlbnN2w6VnIG9nIFNrw6VuZXZpaw0KDQpIYXVnZXN1bmQ6IA0KDQokJGJhc2VtdWx0aXBsaWthdG9yIFxjZG90IDUwMCA9IDEuNDU5MjY2XGNkb3QgNTAwJCQNCmBgYHtyfQ0KMS40NTkyNjYqNTAwDQpgYGANCg0Kw5hsZW5zdsOlZzoNCg0KJCRiYXNlbXVsdGlwbGlrYXRvclxjZG90IDUwMCA9IDEuMDU0MTg1XGNkb3QgNTAwJCQNCg0KYGBge3J9DQoxLjA1NDE4NSo1MDANCmBgYA0KDQokJGJhc2VtdWx0aXBsaWthdG9yXGNkb3QgNTAwID0gMS4wMTA2NDlcY2RvdCA1MDAkJA0KDQpgYGB7cn0NCjEuMDEwNjQ5KjUwMA0KYGBgDQoNCiMjIEZvcmtsYXJlDQpIYXVnZXN1bmQ6IDcyOS42MzMNCsOYbGVuc3bDpWc6NTI3LjA5MjUNClNrw6VuZXZpazo1MDUuMzI0NQ0KDQojIyBTYW1tZW5saWduZSBtZWQgcGVuZGxlcmlubnN0csO4bW1pbmdlbg0KDQojIyBLb25rbHVzam9uDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCmBgYHtyfQ0KSGF1Z19hcmJlaWRfcHVua3RfbnkgPC0gSGF1Z19hcmJlaWRfcHVua3Q0ICU+JSANCiAgbXV0YXRlKEhhdWdlc3VuZDE9cmVwbGFjZV9uYShIYXVnZXN1bmQsIGFzLm51bWVyaWMoMCkpLA0KICAgICAgICAgU2F1ZGExPXJlcGxhY2VfbmEoU2F1ZGEsIGFzLm51bWVyaWMoMCkpLA0KICAgICAgICAgQm9rbjE9cmVwbGFjZV9uYShCb2tuLCBhcy5udW1lcmljKDApKSwNCiAgICAgICAgIFR5c3ZhZXIxPXJlcGxhY2VfbmEoVHlzdmFlciwgYXMubnVtZXJpYygwKSksDQogICAgICAgICBLYXJtb2V5MT1yZXBsYWNlX25hKEthcm1vZXksIGFzLm51bWVyaWMoMCkpLA0KICAgICAgICAgVXRzaXJhMT1yZXBsYWNlX25hKFV0c2lyYSwgYXMubnVtZXJpYygwKSksDQogICAgICAgICBWaW5kYWZqb3JkMT1yZXBsYWNlX25hKFZpbmRhZmpvcmQsIGFzLm51bWVyaWMoMCkpLA0KICAgICAgICAgRXRuZTE9cmVwbGFjZV9uYShFdG5lLCBhcy5udW1lcmljKDApKSkNCmBgYA0KDQpgYGB7ciwgTkEucm09VFJVRX0NCkhhdWdfYXJiZWlkX3B1bmt0X255ID0gbXV0YXRlKEhhdWdfYXJiZWlkX3B1bmt0X255LCB0b3RfSCA9IEhhdWdlc3VuZDErU2F1ZGExK0Jva24xK1R5c3ZhZXIxK0thcm1vZXkxK1V0c2lyYTErVmluZGFmam9yZDErRXRuZSAxKQ0KYGBgDQo=</div>
 
 
 
