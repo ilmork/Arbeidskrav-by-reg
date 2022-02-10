@@ -53,6 +53,16 @@ punkt6 <- filter(punkt6, Aar %in% "2020")
 ```
 
 
+## Oppgave 6 
+
+## Introduksjon 
+
+- hva oppgaven er
+- hva vi skal finne
+- hvordan vi løser det 
+- hva det betyr 
+- presisere at vi finner basemultiplikator for kommunnene og ikke stedene
+
 ## Haugesund kommune, 2020
 
 ```{r}
@@ -70,7 +80,7 @@ Haugesund_2020 <- mutate(Haugesund_2020 , Lokalnaering = case_when(Lq_Haugesund_
 
 
 * $E_t$ total sysselsetting: 50584
-* $E_s$ sysselsetting i basisnæringer:
+* $E_s$ sysselsetting i basisnæringer: 
 
 ```{r Basisnæringer_Haug_2020}
 694+425+2879+751+604+166+1098+1157+1720+5713+713
@@ -251,9 +261,12 @@ $$basemultiplikator\cdot 500 = 1.010649\cdot 500$$
 ```
 
 ## Forklare
-Haugesund: 729.633
-Ølensvåg:527.0925
-Skånevik:505.3245
+
+Resulatene etter å ha multiplisert basemultiplikatoren med 500 nye arbeidstakere, er resultanene som følger:
+
+**Haugesund:** 729.633
+**Ølensvåg:** 527.0925
+**Skånevik:** 505.3245
 
 ## Sammenligne med pendlerinnstrømmingen
 
