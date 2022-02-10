@@ -7,13 +7,14 @@ output:
 
 ## Et positivt eksogent sjokk i basis-sysselsetting
 
-## Introduksjon 
+## Introduksjon
 
-- hva oppgaven er
-- hva vi skal finne
-- hvordan vi løser det 
-- hva det betyr 
-- presisere at vi finner basemultiplikator for kommunnene og ikke stedene
+-   hva oppgaven er
+-   hva vi skal finne
+-   hvordan vi løser det
+-   hva det betyr
+-   presisere at vi finner basemultiplikator for kommunnene og ikke
+    stedene
 
 ```{r}
 library(data.table)
@@ -49,7 +50,6 @@ Haug_arbeid_punkt_ny <- Haug_arbeid_punkt4 %>%
 Haug_arbeid_punkt_ny = mutate(Haug_arbeid_punkt_ny, tot_H1 = Haugesund1+Sauda1+Bokn1+Tysvaer1+Karmoey1+Utsira1+Vindafjord1+Etne1)
 ```
 
-
 ```{r}
 punkt6<- Haug_arbeid_punkt_ny%>% 
   select(Naering, Aar, Haugesund1, Vindafjord1, Etne1,tot_H1)
@@ -58,7 +58,6 @@ punkt6<- Haug_arbeid_punkt_ny%>%
 ```{r}
 punkt6 <- filter(punkt6, Aar %in% "2020")
 ```
-
 
 ## Haugesund kommune, 2020
 
@@ -75,9 +74,8 @@ Haugesund_2020 <- mutate(Haugesund_2020 , Lokalnaering = case_when(Lq_Haugesund_
                           Basisnaering = case_when(Lq_Haugesund_2020 < 1 ~ "1"))
 ```
 
-
-* $E_t$ total sysselsetting: 50584
-* $E_s$ sysselsetting i basisnæringer: 
+-   $E_t$ total sysselsetting: 50584
+-   $E_s$ sysselsetting i basisnæringer:
 
 ```{r Basisnæringer_Haug_2020}
 694+425+2879+751+604+166+1098+1157+1720+5713+713
@@ -117,7 +115,6 @@ $$\frac{1}{1-a} = basemultiplikatoren   \rightarrow \frac{1}{1-0.314724}=basemul
 
 $$basemultiplikator = 1.459266$$
 
-
 ## Vindafjord kommune, 2020
 
 ```{r}
@@ -133,9 +130,8 @@ Vindafjord_2020 <- mutate(Vindafjord_2020 , Lokalnaering = case_when(Lq_Vindafjo
                           Basisnaering = case_when(Lq_Vindafjord_2020 < 1 ~ "1"))
 ```
 
-
-* $E_t$ total sysselsetting: 50584
-* $E_s$ sysselsetting i basisnæringer:
+-   $E_t$ total sysselsetting: 50584
+-   $E_s$ sysselsetting i basisnæringer:
 
 ```{r Basisnæringer_Vind_2020}
 578+887+101+638+149+216+31
@@ -175,7 +171,6 @@ $$\frac{1}{1-a} = basemultiplikatoren \rightarrow \frac{1}{1-0.05139965}=basemul
 
 $$basemultiplikator = 1.054185$$
 
-
 ## Etne kommune, 2020
 
 ```{r}
@@ -191,9 +186,8 @@ Etne_2020 <- mutate(Etne_2020 , Lokalnaering = case_when(Lq_Etne_2020 > 1 ~ "1")
                           Basisnaering = case_when(Lq_Etne_2020 < 1 ~ "1"))
 ```
 
-
-* $E_t$ total sysselsetting: 50584
-* $E_s$ sysselsetting i basisnæringer:
+-   $E_t$ total sysselsetting: 50584
+-   $E_s$ sysselsetting i basisnæringer:
 
 ```{r Basisnæringer_Etne_2020}
 172+242+51+68
@@ -233,12 +227,12 @@ $$\frac{1}{1-a} = basemultiplikatoren   \rightarrow \frac{1}{1-0.01053693}=basem
 
 $$basemultiplikator = 1.010649$$
 
-
 ## Et positivt eksogent sjokk i basis-sysselsetting; Haugesund, Ølensvåg og Skånevik
 
-Haugesund: 
+Haugesund:
 
 $$basemultiplikator \cdot 500 = 1.459266\cdot 500$$
+
 ```{r}
 1.459266*500
 ```
@@ -259,25 +253,30 @@ $$basemultiplikator\cdot 500 = 1.010649\cdot 500$$
 
 ## Forklare
 
-Resulatene etter å ha multiplisert basemultiplikatoren med 500 nye arbeidstakere, er resultanene som følger:
+Etter å ha multiplisert basemultiplikatoren med 500 nye arbeidstakere,
+er resultanene som følger:
 
-**Haugesund:** 729.633
-**Ølensvåg:** 527.0925
+**Haugesund:** 729.633 
+**Ølensvåg:** 527.0925 
 **Skånevik:** 505.3245
+
+Vi har videre tolket resultatene hvor vi har tatt totalen og trukket fra
+500 for å finne hvor stor andel som tilhører basisnæringen og hvor stor
+andel som tilhører lokanæringen.
+
+-   **Haugesund:** 729.633 
+    729.633 - 500 = 229.633
+    500 tilhører basisnæringen og resterende 229.633 ≈ 230 tilhører lokalnæringen.
+    
+-   **Ølensvåg:** 527.0925
+    527.0925 - 500 = 27.0925
+    500 tilhører basisnæringen og resterende 27.0925 ≈ 27 tilhører lokalnæringen. 
+    
+-   **Skånevik:** 505.3245
+    505.3245 - 500 = 5.3245
+    500 tilhører basisnæringen og resterende 5.3245 ≈ 5 tilhører lokalnæringen.
+
 
 ## Sammenligne med pendlerinnstrømmingen
 
 ## Konklusjon
-
-
-
-
-
-
-
-
-
-
-
-
-
