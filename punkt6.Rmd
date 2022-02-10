@@ -7,8 +7,15 @@ output:
 
 ## Et positivt eksogent sjokk i basis-sysselsetting
 
+## Introduksjon 
+
+- hva oppgaven er
+- hva vi skal finne
+- hvordan vi løser det 
+- hva det betyr 
+- presisere at vi finner basemultiplikator for kommunnene og ikke stedene
+
 ```{r}
-library(dplyr)
 library(data.table)
 library(tidyverse)
 ```
@@ -52,16 +59,6 @@ punkt6<- Haug_arbeid_punkt_ny%>%
 punkt6 <- filter(punkt6, Aar %in% "2020")
 ```
 
-
-## Oppgave 6 
-
-## Introduksjon 
-
-- hva oppgaven er
-- hva vi skal finne
-- hvordan vi løser det 
-- hva det betyr 
-- presisere at vi finner basemultiplikator for kommunnene og ikke stedene
 
 ## Haugesund kommune, 2020
 
