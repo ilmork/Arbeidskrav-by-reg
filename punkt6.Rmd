@@ -256,7 +256,7 @@ $$basemultiplikator\cdot 500 = 1.010649\cdot 500$$
 Etter å ha multiplisert basemultiplikatoren med 500 nye arbeidstakere,
 er resultanene som følger:
 
-**Haugesund:** 729.633 
+**Haugesund:** 729.633 samlet lokal sysselsetningsøkning knyttet til etableringen av den nye bedriften
 **Ølensvåg:** 527.0925 
 **Skånevik:** 505.3245
 
@@ -271,6 +271,8 @@ andel som tilhører lokanæringen.
 -   **Ølensvåg:** 527.0925
     527.0925 - 500 = 27.0925
     500 tilhører basisnæringen og resterende 27.0925 ≈ 27 tilhører lokalnæringen. 
+    
+    https://www.vindafjord.kommune.no/vakre-vindafjord/bu-i-vindafjord/bygdene/olensvag/ 
     
 -   **Skånevik:** 505.3245
     505.3245 - 500 = 5.3245
