@@ -283,6 +283,69 @@ andel som tilhører lokanæringen.
 Haugesund er en by som tilhører Haugesund kommune og fungerer som regionsenter for Haugalandet. Byens areal er på 72,68 $km^2$ med et befolkningstall på ca. 37 000 (ekskludert Karmøy). Haugesund er i dag kjent som shipping- og industriby som også byr på kultur, shopping, restauranter og andre lignende opplevelser. Som nevnt tidligere, har Haugesund fått et resultat på 729.633, der av ca. 230 er nye arbeidstakere i lokale bedrifter som følge av etablering av industribedrift. Sammenlignet med Ølensvåg og Skånevik vil det være naturligere at det dannes flere arbeidsplasser i Haugesund med tanke på byens posisjon, rolle og lignende. Men på grunn av pendling, vil ikke alle disse 230 lokale arbeidstakerne tilhøre Haugesund, men også andre nabobyer. Dette blir nærmere forklart under avsnittet "pendling".    
 
 
-## Sammenligne med pendlerinnstrømmingen
+## Pendlere
 
-## Konklusjon
+I denne delen av oppgaven skal vi benytte oss av opplysningene fra tidligere hvor vi fant den samlede sysselsettingsimpulsen for regionen gjennom etableringen av denne vindkraftvirksomheten. Ved en slik etablering vil dette ikke kun påvirke den lokale kommunen, men effekten av et slikt eksogent sjokk vil også smittes videre til nabokommuner, nærmere bestemt gjennom pendlestrømmer. Dermed skal vi i denne delen av oppgaven ta for oss disse nye virkningene på pendlestrømmer og hvordan denne spres mellom kommunene. 
+
+Fra oppgave 4 i dette arbeidskravet fant vi andelen av innpendling i prosent for de bestemte kommunene. Ved et overblikk på grafen ser vi at Haugesund er en av de største innpendling kommunene i regionen Haugalandet, med en jevn og stabil utvikling over tid som har ligget rundt 40%. Denne høye andelen av innpendling til Haugesund kommune kan forklares ved at dette er ansett som regionens senter, og at Haugesund har en relativt lav $b=\frac{P}/{E_r}$, som er antall folk per arbeidsplass, som tilsvarende vil reflektere kommunen sine pendlerstrømmer.
+
+Grafen fra oppgave 4 fremviser også andelen utpendling fra de bestemte kommunene og vi ser utfra denne at kommunene med høyest andel utpendling i prosent er Tysvær og Sveio, som også er nabokommunene til Haugesund. Sveio for eksempel er en typisk utpendlings kommune, siden kommunen innehar relativt få arbeidsplasser i forhold til befolkningen. Kommunen har hatt en stor befolkningsvekst de seneste årene, men denne virkningen vil i hovedsak kunne bli forklar gjennom tilgjengeligheten Sveio har til andre kommuner som Haugesund og Stord, framfor den lokale sysselsettingsveksten innad i kommunen. 
+
+Vi skal i første delen av oppgaven se hvordan dette eksogene sjokket vil påvirke Haugesund og nabokommunene Tysvær og Sveio. Forutsetningene er at 20% av arbeidstakerne vil komme fra Sveio og 10% fra Tysvær kommune. Videre er dette sjokket fordelt ved at 350 av arbeidstakerne kommer fra Haugesund, 100 fra Sveio og 50 fra Tysvær. 
+
+## Basemultiplikator for Haugesund kommune:
+
+$basemultiplikator = 1,459266$
+
+**Haugesund:**
+
+$1,459266*350=510,74\approx 511$
+
+**Sveio:**
+
+$1,459266*100=145,92\approx 146$
+
+**Tysvær:**
+
+$1,459266*50=72,96\approx73$
+
+Tallene fra de tidligere analysene fremvise at den samlede sysselsettingsimpulsen ved etableringen av basisnæringen resulterte i totalt 730 nye arbeidsplasser for regionen. Men fremfor at vi kun ser denne virkningen på lokal kommune, ser vi nå ringvirkningseffektene etableringen har på pendlestrømmene inn til kommunen. 511 av disse arbeidstakerne kommer fra Haugesund, imens de resulterende 146 fra Sveio og 73 fra Tysvær kommer gjennom pendlestrømmer. 
+ 
+## Basemultiplikator for Vindafjord kommune:
+
+$basemultiplikator=1,054185$
+
+**Ølensvåg:**
+
+$1,054185*350=368,96\approx 369$
+
+**Tysvær:**
+
+$1,054185*100=105,42\approx105$
+
+**Etne:**
+
+$1,054185*50=52,71\approx53$
+
+Ved etableringen av basisnæringen på tettstedet Ølensvåg i Vindafjord kommune forventes det en samlet sysselsettingsimpuls på 527. Vi forutsetter at 369 av disse arbeidstakerne kommer fra Ølensvåg, 105 fra Tysvær og 53 fra Etne, som begge er utpendlingskommuner. 
+
+ 
+## Basemultiplikator for Etne kommune:
+
+$basemultiplikator=1,010649$
+
+**Skånevik:**
+
+$1,010649*350=353,73\approx354$
+
+**Vindafjord:**
+
+$1,010649*100=101,06\approx101$
+
+**Tysvær:**
+
+$1,010649*50=50,53\approx50$
+
+Den samlede sysselsettingsimpulsen ved etableringen i Skånevik vil være 505 arbeidsplasser for Etne kommune. Hvorav, 354 av arbeidstakerne kommer fra Skånevik, 101 fra Vindafjord og 50 fra Tysvær kommune. 
+
+
