@@ -266,21 +266,21 @@ andel som tilhører lokanæringen.
 
 -   **Haugesund:** 729.633 
     729.633 - 500 = 229.633
-    500 tilhører basisnæringen og resterende 229.633 ≈ 230 tilhører lokalnæringen.
+    500 tilhører basisnæringen og resterende $229.633 \approx 230$ tilhører lokalnæringen.
     
 -   **Ølensvåg:** 527.0925
     527.0925 - 500 = 27.0925
-    500 tilhører basisnæringen og resterende 27.0925 ≈ 27 tilhører lokalnæringen. 
+    500 tilhører basisnæringen og resterende $27.0925 \approx 27$ tilhører lokalnæringen. 
     
     https://www.vindafjord.kommune.no/vakre-vindafjord/bu-i-vindafjord/bygdene/olensvag/ 
     
 -   **Skånevik:** 505.3245
     505.3245 - 500 = 5.3245
-    500 tilhører basisnæringen og resterende 5.3245 ≈ 5 tilhører lokalnæringen.
+    500 tilhører basisnæringen og resterende $5.3245\approx  5$ tilhører lokalnæringen.
 
 ## Haugesund
 
-Haugesund er en by som tilhører Haugesund kommune og fungerer som regionsenter for Haugalandet. Byens areal er på 72,68$km^2$ med et befolkningstall på ca. 37 000 (ekskludert Karmøy). Haugesund er i dag kjent som shipping- og industriby som også byr på kultur, shopping, restauranter og andre lignende opplevelser. Som nevnt tidligere, har Haugesund fått et resultat på 729.633, der av ca. 230 er nye arbeidstakere i lokale bedrifter som følge av etablering av industribedrift. Sammenlignet med Ølensvåg og Skånevik vil det være naturligere at det dannes flere arbeidsplasser i Haugesund med tanke på byens posisjon, rolle og lignende. Men på grunn av pendling, vil ikke alle disse 230 lokale arbeidstakerne tilhøre Haugesund, men også andre nabobyer. Dette blir nærmere forklart under avsnittet "pendling".    
+Haugesund er en by som tilhører Haugesund kommune og fungerer som regionsenter for Haugalandet. Byens areal er på 72,68 $km^2$ med et befolkningstall på ca. 37 000 (ekskludert Karmøy). Haugesund er i dag kjent som shipping- og industriby som også byr på kultur, shopping, restauranter og andre lignende opplevelser. Som nevnt tidligere, har Haugesund fått et resultat på 729.633, der av ca. 230 er nye arbeidstakere i lokale bedrifter som følge av etablering av industribedrift. Sammenlignet med Ølensvåg og Skånevik vil det være naturligere at det dannes flere arbeidsplasser i Haugesund med tanke på byens posisjon, rolle og lignende. Men på grunn av pendling, vil ikke alle disse 230 lokale arbeidstakerne tilhøre Haugesund, men også andre nabobyer. Dette blir nærmere forklart under avsnittet "pendling".    
 
 
 ## Sammenligne med pendlerinnstrømmingen
