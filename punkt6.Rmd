@@ -9,12 +9,8 @@ output:
 
 ## Introduksjon
 
--   hva oppgaven er
--   hva vi skal finne
--   hvordan vi løser det
--   hva det betyr
--   presisere at vi finner basemultiplikator for kommunnene og ikke
-    stedene
+Vi skal i denne oppgaven bruke den økonomiske basemodellen for å vurdere virkningen av et positivt eksogent sjokk i Skånevik, Ølensvåg og Haugesund. Mer spesifikt skal vi  vurdere effekten av en nyetablering av en vindkraft/industribedrift med 500 arbeidstakere. Oppgaven er bygget opp med utregninger av basemultiplikator per kommune og videre en utredning av pendlerstrømmer for de ulike lokalasjonene. Det er viktig å presisere at basemultiplikatoren viser resultatet for kommunene lokalasjonene tilhører (tall fra 2020), og ikke lokalasjonene isolert.
+
 
 ```{r}
 library(data.table)
@@ -280,7 +276,16 @@ andel som tilhører lokanæringen.
 
 ## Haugesund
 
-Haugesund er en by som tilhører Haugesund kommune og fungerer som regionsenter for Haugalandet. Byens areal er på 72,68 $km^2$ med et befolkningstall på ca. 37 000 (ekskludert Karmøy). Haugesund er i dag kjent som shipping- og industriby som også byr på kultur, shopping, restauranter og andre lignende opplevelser. Som nevnt tidligere, har Haugesund fått et resultat på 729.633, der av ca. 230 er nye arbeidstakere i lokale bedrifter som følge av etablering av industribedrift. Sammenlignet med Ølensvåg og Skånevik vil det være naturligere at det dannes flere arbeidsplasser i Haugesund med tanke på byens posisjon, rolle og lignende. Men på grunn av pendling, vil ikke alle disse 230 lokale arbeidstakerne tilhøre Haugesund, men også andre nabobyer. Dette blir nærmere forklart under avsnittet "pendling".    
+Haugesund er en by som tilhører Haugesund kommune og fungerer som regionsenter for Haugalandet. Byens areal er på 72,68 $km^2$ med et befolkningstall på ca. 37 000 (ekskludert Karmøy). Haugesund er i dag kjent som shipping- og industriby som også byr på kultur, shopping, restauranter og andre lignende opplevelser. Som nevnt tidligere, har Haugesund fått et resultat på 729.633, der av ca. 230 er nye arbeidstakere i lokale bedrifter som følge av etablering av industribedrift. Sammenlignet med Ølensvåg og Skånevik vil det være naturligere at det dannes flere arbeidsplasser i Haugesund med tanke på byens posisjon, rolle og lignende. Men på grunn av pendling, vil ikke alle disse 230 lokale arbeidstakerne tilhøre Haugesund, men også andre nabobyer. Dette blir nærmere forklart under avsnittet "pendling".  
+
+ 
+
+
+## Ølensvåg
+
+Ølensvåg er et tettsted i Vindafjord kommune med rundt 910 innbyggere. Selvom det er et lite tettsted, er Ølensvåg likevel kjent for store bedrifter innenfor industri og entreprenørskap. Store milliardbedrifter som Ølen betong, Westcon og Omega 365 er blant bedriftene. Likevel er felles for alle bedriftene at de er etablerte flere steder i Norge, hvor både Westcon og Omega 365 også er etablert i utlandet. Videre er også fellesnevneren at bedriftene har sitt opphav i Ølensvåg, men flere av firmaenes arbeidsplassene er etablert andre steder i både inn- og utland [@hagevik]. På bakgrunn av tettstedets størrelse vil pendlertallene for tettstedet være relevant. Både fordi tettstedet kun har 910 innbyggere, men også fordi det høyst sannsynlig tiltrekker seg arbeidere ettersom at tettstedet har flere veletablerte bedrifter og er tilbyder av flere
+arbeidsplasser. Vindafjord (Ølensvåg) endte opp med et resulat på 527.0925 etter vi multipliserte basemultiplikator med 500 arbeidsplasser. Dette betyr, som tidligere beskrevet, at 500 tilhører basisnæringen og resterende $27.0925 \approx 27$ tilhører lokalnæringen. Resultatet har ikke tatt høyde for inn- og utpendlere, dette vil bli tatt høyde for i neste del av oppgaven.
+
 
 
 ## Pendlere
