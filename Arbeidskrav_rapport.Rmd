@@ -2204,10 +2204,17 @@ faller er det tegn til at det ikke er produktiviteten som gjør det og vi
 får en mer "jobs follow people" tendens på Hauglandet enn at "people
 follow jobs".
 
-# Kritikk
+## Kritikk
 
 Vi har her tatt med alle næringene for deler av regionen. Det ville nok
 gitt bedre resultater å sammenligne ulike sektorer hver for seg og sett
 dette opp mot mix og dif effektene. For eksempel så er Helse og
 Undervisning en del av Shift Share analysen som eg tungt offentlig
 forvaltet.
+
+## **Referanser**
+
+
+
+
+
